@@ -1,25 +1,23 @@
 ---
 title: "Módulos de Azure Event Hubs para Node.js"
 description: "Referencia de los módulos de Azure Event Hubs para Node.js"
-keywords: Azure,SDK,API,Event Hub, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Event Hub
-ms.openlocfilehash: 5ac6fc3f86419602756c354393078b399a6cba23
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 043c34e5b352a786ebead986d05b18c8216d0c93
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-event-hub-modules-for-nodejs"></a>Módulos de Azure Event Hubs para Node.js
 
-## <a name="overview"></a>Información general
 Azure Event Hubs es una plataforma de streaming de datos y servicio de ingesta de eventos de gran escalabilidad que es capaz de recibir y procesar millones de eventos por segundo. Event Hubs puede procesar y almacenar eventos, datos o telemetría generados por dispositivos y software distribuido. Los datos enviados a un centro de eventos se pueden transformar y almacenar con cualquier proveedor de análisis en tiempo real o adaptadores de procesamiento por lotes y almacenamiento. Con la capacidad para ofrecer competencias de publicación y suscripción con una latencia baja y a gran escala, Event Hubs sirve como una "vía de entrada" para los macrodatos.
 
 ## <a name="management-package"></a>Paquete de administración

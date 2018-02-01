@@ -1,25 +1,23 @@
 ---
 title: "Módulos de Azure Monitor para Node.js"
 description: "Referencia de los módulos de Azure Monitor para Node.js"
-keywords: Azure,SDK,API,Monitor, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
-ms.openlocfilehash: 8d27d837bddaa5258dde47b769cf601f6f5a861f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 37caeb2d7b6d757cbe8bb14b6d4909a7c67a37db
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-monitor-modules-for-nodejs"></a>Módulos de Azure Monitor para Node.js
 
-## <a name="overview"></a>Información general
 Las aplicaciones de nube son complejas y tienen muchas partes móviles. La supervisión proporciona datos para garantizar que la aplicación permanece en funcionamiento en un estado correcto. También ayuda a evitar posibles problemas o a solucionar los existentes. Además, puede usar datos de supervisión para obtener un conocimiento más profundo sobre su aplicación. Este conocimiento puede ayudarle a mejorar el rendimiento o mantenimiento de la aplicación, o a automatizar acciones que de lo contrario requerirían intervención manual.
 
 ## <a name="management-package"></a>Paquete de administración

@@ -1,25 +1,23 @@
 ---
 title: "Módulos de Azure Logic Apps para Node.js"
 description: "Referencia de los módulos de Azure Logic Apps para Node.js"
-keywords: Azure,SDK,API,Logic Apps, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Logic Apps
-ms.openlocfilehash: 70380dbf1fd199ba4909975b05ade72efaa4e0ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 37e485bea316ebd7fb4a064e1919da5501d96eac
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-logic-apps-modules-for-nodejs"></a>Módulos de Azure Logic Apps para Node.js
 
-## <a name="overview"></a>Información general
 Logic Apps es una manera de simplificar e implementar integraciones escalables y flujos de trabajo en la nube. Proporciona un diseñador visual para modelar y automatizar el proceso en una serie de pasos denominada flujo de trabajo. Hay muchos conectores locales y en la nube para la integración rápida en servicios y protocolos. Una aplicación lógica comienza con un desencadenador (como "Cuando se agrega una cuenta a Dynamics CRM") y después la activación puede comenzar muchas combinaciones de acciones, conversiones y lógicas de condiciones.
 
 Algunas ventajas de Logic Apps:

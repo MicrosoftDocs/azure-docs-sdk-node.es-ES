@@ -1,27 +1,24 @@
 ---
 title: "Módulos de Azure IoT Hub para Node.js"
 description: "Referencia de los módulos de Azure IoT Hub para Node.js"
-keywords: Azure,SDK,API,IoT Hub, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
-ms.openlocfilehash: 44d01ceb833d2acbef6f9f22b32d4ad66b1fd5ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 66a0cad731d8e8dfd5cea64bdc910189a23fc6f0
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-iot-hub-modules-for-nodejs"></a>Módulos de Azure IoT Hub para Node.js
 
-## <a name="overview"></a>Información general
-
-El Centro de IoT de Azure es un servicio totalmente administrado que permite la comunicación bidireccional fiable y segura entre millones de dispositivos IoT y un back-end de soluciones. Centro de IoT de Azure:
+Azure IoT Hub es un servicio totalmente administrado que permite la comunicación bidireccional fiable y segura entre millones de dispositivos IoT y un back-end de soluciones. Azure IoT Hub:
 - Proporciona varias opciones de comunicación de dispositivo a la nube y de la nube al dispositivo, como métodos de solicitud y respuesta, mensajería unidireccional y transferencia de archivos.
 - Proporciona enrutamiento de mensajes declarativos integrado a otros servicios de Azure.
 - Proporciona almacenamiento consultable para metadatos del dispositivo e información de estado sincronizada.

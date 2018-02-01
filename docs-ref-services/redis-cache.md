@@ -1,31 +1,28 @@
 ---
 title: "Módulos de Azure Redis Cache para Node.js"
 description: "Referencia de los módulos de Azure Redis Cache para Node.js"
-keywords: Azure,SDK,API,Redis Cache, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Redis Cache
-ms.openlocfilehash: 8a10e522e39461697b740750b63fc82a6cc320ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 5d3a410fefcf6840181701763346fbfe08fe023b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-redis-cache-modules-for-nodejs"></a>Módulos de Azure Redis Cache para Node.js
 
-## <a name="overview"></a>Información general
-
 Azure Redis Cache se basa en el popular proyecto Redis de código abierto. Ofrece acceso a una instancia de Redis segura y dedicada, administrada por Microsoft y accesible desde sus aplicaciones de Azure.
 
-Redis es un avanzado almacén de pares clave-valor, donde las claves pueden contener estructuras de datos tales como cadenas, objetos hash, listas, conjuntos y conjuntos ordenados. Redis admite un conjunto de operaciones atómicas con estos tipos de datos.
+Redis es un almacén de pares clave-valor avanzado, donde las claves pueden contener estructuras de datos tales como cadenas, algoritmos hash, listas, conjuntos y conjuntos ordenados. Redis admite un conjunto de operaciones atómicas con estos tipos de datos.
 
-Aprenda más sobre [Azure Redis Cache](https://docs.microsoft.com/azure/redis-cache/).
+Obtenga más información acerca de [Azure Redis Cache](https://docs.microsoft.com/azure/redis-cache/).
 
 ## <a name="client-package"></a>Paquete del cliente
 

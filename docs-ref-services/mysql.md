@@ -1,25 +1,22 @@
 ---
 title: "Módulos de Azure MySQL para Node.js"
 description: "Referencia de los módulos de Azure MySQL para Node.js"
-keywords: Azure, Node, SDK, API, nodejs, javascript, base de datos, MySQL
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: mysql
-ms.openlocfilehash: 3efc0fcccb7cb01711ad1ce98e9ff9a2d87b77fe
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: c78f61d0f76b6a40ad85ae0e7d9101349666eb0b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-mysql-modules-for-nodejs"></a>Módulos de Azure MySQL para Node.js
-
-## <a name="overview"></a>Información general
 
 La biblioteca de cliente recomendada para acceder a Azure Database for MySQL es la [biblioteca de conexión de Node.js para Azure Database for MySQL](https://github.com/sidorares/node-mysql2) de código abierto. 
 

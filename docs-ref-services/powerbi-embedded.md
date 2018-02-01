@@ -1,25 +1,22 @@
 ---
 title: "Módulos PowerBI Embedded de Azure para Node.js"
 description: "Referencia de los módulos PowerBI Embedded de Azure para Node.js"
-keywords: Azure,SDK,API,PowerBI Embedded, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: PowerBI Embedded
-ms.openlocfilehash: 74e69421d372ff4ccaebf2b811152dd83b9b4e7b
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 5dbe134acb38787916f48277b2114e199601e128
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-powerbi-embedded-modules-for-nodejs"></a>Módulos PowerBI Embedded de Azure para Node.js
-
-## <a name="overview"></a>Información general
 
 Con el servicio Power BI Embedded de Azure, puede integrar informes de Power BI directamente en la aplicación de nodo para crear o editar gráficos e informes.
 

@@ -1,30 +1,27 @@
 ---
 title: "Módulos de Azure Storage para Node.js"
 description: "Referencia de los módulos de Azure Storage para Node.js"
-keywords: Azure, Node, SDK, API, Storage, nodejs, javascript
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: storage
-ms.openlocfilehash: 61d3f3bb49d10e63a353c474067a155223bb6c76
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: b94c6fbb50e656e0dcc542236afe791c7ddc9be4
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-storage-modules-for-nodejs"></a>Módulos de Azure Storage para Node.js
-
-## <a name="overview"></a>Información general
 
 Utilice el módulo de cliente de Azure Storage para:
 
 - Leer y escribir objetos y archivos de [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-nodejs-how-to-use-blob-storage)
-- Enviar y recibir mensajes entre aplicaciones conectadas en la nube con [Azure Queue Storage](https://docs.microsoft.com/azure/storage/storage-nodejs-how-to-use-queues)
+- Envíe y reciba mensajes entre aplicaciones conectadas en la nube con [Azure Queue Storage](https://docs.microsoft.com/azure/storage/storage-nodejs-how-to-use-queues).
 - Leer y escribir datos estructurados grandes con [Azure Table Storage](https://docs.microsoft.com/azure/storage/storage-nodejs-how-to-use-table-storage)
 
 Cree, actualice y administre cuentas y consultas de Azure Storage y vuelva a generar las claves de acceso de las aplicaciones Node.js con los módulos de administración.
