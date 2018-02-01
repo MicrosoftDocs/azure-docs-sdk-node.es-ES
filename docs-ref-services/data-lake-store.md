@@ -1,40 +1,38 @@
 ---
 title: "Módulos de Azure Data Lake Store para Node.js"
 description: "Referencia de los módulos de Azure Data Lake Store para Node.js"
-keywords: Azure,SDK,API,Data Lake Store, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Store
-ms.openlocfilehash: 5885bf8f073e4f4f1ac2be88b8691b092e8a21d3
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: a108cc6d184b72d2d4227f9e60da6b7a535f92ae
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="azure-data-lake-store-modules-for-nodejs"></a><span data-ttu-id="e4192-104">Módulos de Azure Data Lake Store para Node.js</span><span class="sxs-lookup"><span data-stu-id="e4192-104">Azure Data Lake Store modules for Node.js</span></span>
+# <a name="azure-data-lake-store-modules-for-nodejs"></a><span data-ttu-id="f6526-103">Módulos de Azure Data Lake Store para Node.js</span><span class="sxs-lookup"><span data-stu-id="f6526-103">Azure Data Lake Store modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="e4192-105">Información general</span><span class="sxs-lookup"><span data-stu-id="e4192-105">Overview</span></span>
-<span data-ttu-id="e4192-106">El Almacén de Azure Data Lake es un repositorio de gran escala en toda la empresa para cargas de trabajo de análisis de macrodatos.</span><span class="sxs-lookup"><span data-stu-id="e4192-106">Azure Data Lake Store is an enterprise-wide hyper-scale repository for big data analytic workloads.</span></span> <span data-ttu-id="e4192-107">Azure Data Lake permite capturar datos de cualquier tamaño, tipo y velocidad de ingesta en un único lugar para realizar análisis exploratorios y operativos.</span><span class="sxs-lookup"><span data-stu-id="e4192-107">Azure Data Lake enables you to capture data of any size, type, and ingestion speed in one single place for operational and exploratory analytics.</span></span>
+<span data-ttu-id="f6526-104">El Almacén de Azure Data Lake es un repositorio de gran escala en toda la empresa para cargas de trabajo de análisis de macrodatos.</span><span class="sxs-lookup"><span data-stu-id="f6526-104">Azure Data Lake Store is an enterprise-wide hyper-scale repository for big data analytic workloads.</span></span> <span data-ttu-id="f6526-105">Azure Data Lake permite capturar datos de cualquier tamaño, tipo y velocidad de ingesta en un único lugar para realizar análisis exploratorios y operativos.</span><span class="sxs-lookup"><span data-stu-id="f6526-105">Azure Data Lake enables you to capture data of any size, type, and ingestion speed in one single place for operational and exploratory analytics.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="e4192-108">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="e4192-108">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="f6526-106">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="f6526-106">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="e4192-109">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="e4192-109">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="f6526-107">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="f6526-107">Install the npm module</span></span>
 
-<span data-ttu-id="e4192-110">Utilice npm para instalar los módulos de Azure Data Lake Store para Node.js.</span><span class="sxs-lookup"><span data-stu-id="e4192-110">Use npm to install the Azure Data Lake Store modules for Node.js</span></span>
+<span data-ttu-id="f6526-108">Utilice npm para instalar los módulos de Azure Data Lake Store para Node.js.</span><span class="sxs-lookup"><span data-stu-id="f6526-108">Use npm to install the Azure Data Lake Store modules for Node.js</span></span>
 
 ```bash
 npm install azure-arm-datalake-store
 ```
 
-### <a name="example"></a><span data-ttu-id="e4192-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e4192-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="f6526-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f6526-109">Example</span></span>
 
-<span data-ttu-id="e4192-112">En este ejemplo se enumeran todas las cuentas de Data Lake Store en una suscripción de Azure dada.</span><span class="sxs-lookup"><span data-stu-id="e4192-112">This example lists all Data Lake Store accounts within a given Azure subscription</span></span>
+<span data-ttu-id="f6526-110">En este ejemplo se enumeran todas las cuentas de Data Lake Store en una suscripción de Azure dada.</span><span class="sxs-lookup"><span data-stu-id="f6526-110">This example lists all Data Lake Store accounts within a given Azure subscription</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -53,6 +51,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="e4192-113">Muestras</span><span class="sxs-lookup"><span data-stu-id="e4192-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="f6526-111">Muestras</span><span class="sxs-lookup"><span data-stu-id="f6526-111">Samples</span></span>
 
-<span data-ttu-id="e4192-114">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="e4192-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="f6526-112">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="f6526-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
