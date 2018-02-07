@@ -1,21 +1,20 @@
 ---
 title: "Ejemplos de módulos de administración de Azure para aplicaciones web de Node.js"
-description: "Obtenga código de ejemplo para la creación y actualización de aplicaciones web hospedadas en Azure App Service mediante los módulos de administración de Azure para Node.js."
-keywords: Azure, Node, SDK, API, Web Apps, App Service
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "Ejemplos de código de Node.js para los módulos de administración de Azure App Service"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 6fb01ecef079530bacd551bd7bbc73aba61f9466
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 1e67b03d352b6877c5090d80571c6c396f334a53
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="azure-management-modules-for-nodejs-samples-for-web-apps"></a>Ejemplos de módulos de administración de Azure para Node.js para aplicaciones web
+# <a name="nodejs-code-samples-for-azure-app-service-management-modules"></a>Ejemplos de código de Node.js para los módulos de administración de Azure App Service
 
 [!INCLUDE [node-appservice-samples](../docs-ref-conceptual/includes/appservice-samples.md)]

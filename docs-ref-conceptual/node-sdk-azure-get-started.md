@@ -1,26 +1,25 @@
 ---
 title: "Introducción a los módulos de Azure para Node.js"
-description: "Adéntrese en el uso básico de los módulos de Azure para Node.js con su propia suscripción de Azure."
-keywords: "Azure, Node, SDK, API, introducción, node.js"
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "Empezar a trabajar con la autenticación y la administración de recursos con los módulos de Azure para Node.js"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Introducción a los módulos de Azure para Node.js
 
 Esta guía le ayudará a instalar los módulos de Node.js de Azure, a autenticarse en Azure con una entidad de servicio y a ejecutar código de ejemplo que cree recursos en su suscripción de Azure y permita conectarse a los servicios en la nube de Azure.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>requisitos previos
 
 - Una cuenta de Azure. Si no tiene una, [obtenga una versión de evaluación gratuita](https://azure.microsoft.com/free/).
 - [Node.js](https://nodejs.org)
@@ -258,13 +257,13 @@ Elimine el grupo de recursos para quitar los recursos creados en esta guía.
 az group delete --name myResourceGroup
 ```
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>pasos siguientes
 
 Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.
 
 ## <a name="reference"></a>Referencia 
 
-Hay una [referencia](/nodejs/api/overview/azure/?view=azure-node-2.0.0) disponible para todos los paquetes.
+Hay una [referencia](/javascript/api/overview/azure/) disponible para todos los paquetes.
 
 ## <a name="get-help-and-give-feedback"></a>Obtener ayuda y proporcionar comentarios
 

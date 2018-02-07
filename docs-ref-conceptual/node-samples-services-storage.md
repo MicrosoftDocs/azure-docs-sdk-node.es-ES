@@ -1,22 +1,22 @@
 ---
-title: "Código de ejemplo para el uso de Azure Storage con Node.js"
-description: "Código de ejemplo que muestra el uso de Azure Storage con Node.js"
-author: tomarcher
-manager: douge
+title: "Ejemplos de código de Azure Storage con Node.js"
+description: "Código de ejemplo que muestra el uso de Azure Storage con Node.js."
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: b8bb35016f229b12326ad0667ebdbba63614cb4e
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 70a30d92dba7c18b7f85127ba7359d94711b570a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-storage-with-nodejs"></a>Código de ejemplo para el uso de Azure Storage con Node.js
+# <a name="azure-storage-with-nodejs-code-samples"></a>Ejemplos de código de Azure Storage con Node.js
 
-El código de ejemplo siguiente muestra el uso de Azure Storage con Node.js.
+El siguiente código de ejemplo muestra cómo utilizar Azure Storage con Node.js.
 
 Si se necesita código para otras tareas, puede examinar la lista completa de [ejemplos de Node.js de Azure](https://azure.microsoft.com/resources/samples/?term=nodejs).
 
