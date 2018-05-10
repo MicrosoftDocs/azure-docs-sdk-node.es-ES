@@ -1,6 +1,6 @@
 ---
-title: "Módulos de Azure MySQL para Node.js"
-description: "Referencia de los módulos de Azure MySQL para Node.js"
+title: Módulos de Azure MySQL para Node.js
+description: Referencia de los módulos de Azure MySQL para Node.js
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -10,11 +10,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: mysql
-ms.openlocfilehash: c78f61d0f76b6a40ad85ae0e7d9101349666eb0b
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 21b98aeba1e21ec1d9f7da4a115110fffe05b2b8
+ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="azure-mysql-modules-for-nodejs"></a>Módulos de Azure MySQL para Node.js
 
@@ -57,8 +57,8 @@ connection.query(query, (err, res) =>
 connection.end();
 ```
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
-[!INCLUDE [node-storage-samples](../docs-ref-conceptual/includes/mysql-samples.md)]
+[!INCLUDE [node-mysql-samples](../docs-ref-conceptual/includes/mysql-samples.md)]
 
 Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.
