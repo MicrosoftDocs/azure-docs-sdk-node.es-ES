@@ -1,6 +1,6 @@
 ---
-title: "Módulos de Azure Cognitive Services para Node.js"
-description: "Referencia de los módulos de Azure Cognitive Services para Node.js"
+title: Módulos de Azure Cognitive Services para Node.js
+description: Referencia de los módulos de Azure Cognitive Services para Node.js
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -10,52 +10,182 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: df6ea913ca69341fbbb730b75f547ce9c10bd45f
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 9f567092b6f0155a31388542039ffb7c3bc0a8b4
+ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="azure-cognitive-services-modules-for-nodejs"></a>Módulos de Azure Cognitive Services para Node.js
+# <a name="javascript-azure-cognitive-services-modules"></a>Módulos de Azure Cognitive Services para JavaScript
 
-Azure Cognitive Services es un conjunto de API, SDK y servicios disponibles para que los desarrolladores creen aplicaciones más inteligentes, interesantes y fáciles de encontrar. Microsoft Cognitive Services se expande en una cartera en constante evolución de Microsoft de API de aprendizaje automático y permite a los desarrolladores agregar fácilmente características inteligentes (como detección de vídeo y emociones; reconocimiento facial, de voz y de visión; y comprensión del habla y del lenguaje) en sus aplicaciones. Nuestra visión está orientada a ofrecer experiencias informáticas más personales y a una productividad mejorada asistida por sistemas que cada vez más pueden ver, oír, hablar, comprender e incluso empezar a razonar.
+## <a name="vision-modules"></a>Módulos de visión
 
-## <a name="management-package"></a>Paquete de administración
+### <a name="computer-vision"></a>Computer Vision 
 
-### <a name="install-the-npm-module"></a>Instalación del módulo npm
+Devuelve información sobre el contenido visual encontrado en una imagen:
 
-Instale el módulo npm de Azure Cognitive Services.
+- Use etiquetado, descripciones y modelos específicos del dominio para identificar el contenido y etiquetarlo con confianza.
+- Aplique la configuración para adultos para habilitar la restricción automatizada de contenido adulto.
+- Identifique los tipos y los esquemas de color de las imágenes.
 
-```bash
-npm install azure-arm-cognitiveservices
-```
+[Pruebe Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) de forma gratuita en su explorador.
 
-### <a name="example"></a>Ejemplo
-
-En este ejemplo se enumeran todas las cuentas de Cognitive Services.
-
-```javascript
-const msRestAzure = require('ms-rest-azure');
-const cognitiveServicesManagementClient = require('azure-arm-cognitiveservices');
-
-const subscriptionId = 'your-subscription-id';
-
-msRestAzure
-  .interactiveLogin()
-  .then(credentials => {
-    const cognitiveServicesClient = new cognitiveServicesManagementClient(
-      credentials,
-      subscriptionId
-    );
-    return cognitiveServicesClient.cognitiveServicesAccounts.list();
-  })
-  .then(cognitiveServicesAccounts => {
-    console.log('List of accounts:');
-    console.dir(cognitiveServicesAccounts, { depth: null, colors: true });    
-  });
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```
+npm install azure-cognitiveservices-computervision
+```
 
-## <a name="samples"></a>Muestras
+[Obtenga más información](/azure/cognitive-services/computer-vision/home) acerca de Computer Vision API y empiece a trabajar con la [guía de inicio rápido para JavaScript de Computer Vision API](/azure/cognitive-services/computer-vision/quickstarts/javascript).
+
+### <a name="content-moderator"></a>Content Moderator
+
+Moderación de texto, vídeo e imágenes asistida por máquina, mejorada con herramientas de revisión humanas.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-contentmoderator
+```
+
+[Obtenga más información](/azure/cognitive-services/content-moderator/overview) acerca del servicio Content Moderator.
+
+### <a name="face-api"></a>Face API
+
+Detecte, identifique, analice, organice y etiquete las caras en las fotos. 
+
+[Pruebe Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) en su explorador.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-face
+```
+
+[Obtenga más información](/azure/cognitive-services/face/overview) acerca de Face API y empiece a trabajar con la [guía de inicio rápido para JavaScript de Face API](/azure/cognitive-services/Face/quickstarts/javascript).
+
+## <a name="search-modules"></a>Módulos de búsqueda
+
+### <a name="web-search"></a>Búsqueda web
+
+Recupere documentos web indexados por Bing Web Search API y limite los resultados según el tipo, la actualidad y muchos otros criterios. 
+
+[Pruebe Web Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) en su explorador.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-websearch
+```
+
+[Obtenga más información](/azure/cognitive-services/bing-web-search/overview) acerca de Bing Web Search API y empiece a trabajar con la [guía de inicio rápido para Node.js de Web Search API](/azure/cognitive-services/bing-web-search/quickstarts/nodejs).
+
+### <a name="image-search"></a>Búsqueda de imágenes
+
+Busque imágenes y obtenga vistas en miniatura, direcciones URL completas de imágenes, metadatos de imagen y mucho más en los resultados.
+
+[Pruebe Image Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) en su explorador.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-imagesearch
+```
+
+[Obtenga más información](/azure/cognitive-services/bing-image-search/overview) acerca de Bing Image Search API y empiece a trabajar con la [guía de inicio rápido para Node.js de Image Search API](/azure/cognitive-services/bing-image-search/quickstarts/nodejs).
+
+
+### <a name="entity-search"></a>Búsqueda de entidades
+
+Busque la entidad más pertinente (lugar, persona o cosa) para un término de búsqueda o una ubicación determinados.
+
+[Pruebe Entity Search API](https://azure.microsoft.com/services/cognitive-services/bing-entity-search-api/) en su explorador.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-entitysearch
+```
+
+[Obtenga más información](/azure/cognitive-services/bing-entities-search/search-the-web) acerca de Bing Entity Search API y empiece a trabajar con la [guía de inicio rápido para Node.js de Entity Search API](/azure/cognitive-services/bing-entities-search/quickstarts/nodejs).
+
+### <a name="custom-search"></a>Búsqueda personalizada
+
+Cree una búsqueda web personalizada que cumpla los requisitos específicos de su dominio de búsqueda.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-customsearch
+```
+
+[Obtenga más información](/azure/cognitive-services/bing-custom-search/) acerca del servicio Bing Custom Search y empiece a trabajar con consultas sobre su búsqueda personalizada desde sus aplicaciones con la [guía de inicio rápido para Node.js de Custom Search API](/azure/cognitive-services/bing-custom-search/call-endpoint-nodejs).
+
+### <a name="video-search"></a>Búsqueda de vídeos
+
+Busque vídeos en Internet y obtenga resultados con metadatos del creador, codificación, duración y número de visualizaciones.
+
+[Pruebe Video Search API](https://azure.microsoft.com/services/cognitive-services/bing-video-search-api/) en su explorador.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-videosearch
+```
+
+[Obtenga más información](/azure/cognitive-services/bing-video-search/search-the-web) acerca del servicio Bing Video Search y empiece a trabajar con la [guía de inicio rápido para Node.js de Video Search API](/azure/cognitive-services/bing-video-search/nodejs).
+
+
+### <a name="news-search"></a>Búsqueda de noticias
+
+Busque en Internet artículos de noticias y trabaje con los metadatos del artículo, noticias relacionadas, imágenes e información del proveedor.
+
+[Pruebe News Search API](https://azure.microsoft.com/services/cognitive-services/bing-news-search-api/) en su explorador.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-newssearch
+```
+
+[Obtenga más información](/azure/cognitive-services/bing-news-search/search-the-web) acerca del servicio Bing News Search y empiece a trabajar con la [guía de inicio rápido para JavaScript de News Search API](/azure/cognitive-services/bing-news-search/nodejs).
+
+
+## <a name="language-modules"></a>Modelo de lenguaje
+
+### <a name="text-analytics"></a>Text Analytics 
+
+Text Analytics API es un servicio en la nube que realiza el procesamiento del lenguaje natural en textos sin formato. La API incluye tres funciones principales:
+
+- análisis de opiniones
+- Extracción de la frase clave
+- Detección de idiomas
+
+[Pruebe Text Analytics API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) en su explorador.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-textanalytics
+```
+
+[Obtenga más información](/azure/cognitive-services/text-analytics/overview) acerca de Text Analytics API y empiece a trabajar con la [guía de inicio rápido para Node.js de Text Analytics API](/azure/cognitive-services/text-analytics/quickstarts/nodejs).
+
+
+### <a name="spell-check"></a>Corrector ortográfico
+
+Compruebe la gramática y la ortografía en contexto con Bing Spell Check API.
+
+[Pruebe Spell Check API](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) en su explorador.
+
+Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```
+npm install azure-cognitiveservices-spellcheck
+```
+
+[Obtenga más información](/azure/cognitive-services/bing-spell-check/proof-text) acerca de Spell Check API y empiece a trabajar con la [guía de inicio rápido para Node.js de Spell Check API](/azure/cognitive-services/bing-spell-check/quickstarts/nodejs).
+
+## <a name="samples"></a>Ejemplos
 
 Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.
