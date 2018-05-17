@@ -1,4 +1,4 @@
 | | |
 |---|---|
-| **Administración de máquinas virtuales** ||
-| [Ejemplo de administración de Azure Virtual Machines con Node.js](https://github.com/Azure-Samples/compute-node-manage-vm) | Muestra cómo crear, enumerar, reiniciar y eliminar máquinas virtuales. |
+| <span data-ttu-id="ac2f1-101">**Administración de máquinas virtuales**</span><span class="sxs-lookup"><span data-stu-id="ac2f1-101">**Virtual machine management**</span></span> ||
+| [<span data-ttu-id="ac2f1-102">Ejemplo de administración de Azure Virtual Machines con Node.js</span><span class="sxs-lookup"><span data-stu-id="ac2f1-102">Azure virtual machines management sample with Node.js</span></span>](https://github.com/Azure-Samples/compute-node-manage-vm) | <span data-ttu-id="ac2f1-103">Muestra cómo crear, enumerar, reiniciar y eliminar máquinas virtuales.</span><span class="sxs-lookup"><span data-stu-id="ac2f1-103">Demonstrates how to create, list, restart, and delete virtual machines.</span></span> |
