@@ -1,19 +1,19 @@
 ---
-title: "Introducción a los módulos de Azure para Node.js"
-description: "Empezar a trabajar con la autenticación y la administración de recursos con los módulos de Azure para Node.js"
-author: craigshoemaker
+title: Introducción a los módulos de Azure para Node.js
+description: Empezar a trabajar con la autenticación y la administración de recursos con los módulos de Azure para Node.js
+author: rloutlaw
 manager: routlaw
-ms.author: cshoe
+ms.author: routlaw
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 072574c70b658806cd998dc0af8a81be3ea56bb4
+ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Introducción a los módulos de Azure para Node.js
 
@@ -257,7 +257,7 @@ Elimine el grupo de recursos para quitar los recursos creados en esta guía.
 az group delete --name myResourceGroup
 ```
 
-## <a name="next-steps"></a>pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.
 
