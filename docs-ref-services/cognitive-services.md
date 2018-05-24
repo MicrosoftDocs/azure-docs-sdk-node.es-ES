@@ -1,191 +1,191 @@
 ---
 title: Módulos de Azure Cognitive Services para Node.js
 description: Referencia de los módulos de Azure Cognitive Services para Node.js
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+author: brapel
+ms.author: v-brapel
+manager: ehansen
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: 9f567092b6f0155a31388542039ffb7c3bc0a8b4
-ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
+ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="javascript-azure-cognitive-services-modules"></a><span data-ttu-id="29ca3-103">Módulos de Azure Cognitive Services para JavaScript</span><span class="sxs-lookup"><span data-stu-id="29ca3-103">JavaScript Azure Cognitive Services modules</span></span>
+# <a name="javascript-azure-cognitive-services-modules"></a><span data-ttu-id="2b16d-103">Módulos de Azure Cognitive Services para JavaScript</span><span class="sxs-lookup"><span data-stu-id="2b16d-103">JavaScript Azure Cognitive Services modules</span></span>
 
-## <a name="vision-modules"></a><span data-ttu-id="29ca3-104">Módulos de visión</span><span class="sxs-lookup"><span data-stu-id="29ca3-104">Vision modules</span></span>
+## <a name="vision-modules"></a><span data-ttu-id="2b16d-104">Módulos de visión</span><span class="sxs-lookup"><span data-stu-id="2b16d-104">Vision modules</span></span>
 
-### <a name="computer-vision"></a><span data-ttu-id="29ca3-105">Computer Vision</span><span class="sxs-lookup"><span data-stu-id="29ca3-105">Computer Vision</span></span> 
+### <a name="computer-vision"></a><span data-ttu-id="2b16d-105">Computer Vision</span><span class="sxs-lookup"><span data-stu-id="2b16d-105">Computer Vision</span></span> 
 
-<span data-ttu-id="29ca3-106">Devuelve información sobre el contenido visual encontrado en una imagen:</span><span class="sxs-lookup"><span data-stu-id="29ca3-106">Returns information about visual content found in an image:</span></span>
+<span data-ttu-id="2b16d-106">Devuelve información sobre el contenido visual encontrado en una imagen:</span><span class="sxs-lookup"><span data-stu-id="2b16d-106">Returns information about visual content found in an image:</span></span>
 
-- <span data-ttu-id="29ca3-107">Use etiquetado, descripciones y modelos específicos del dominio para identificar el contenido y etiquetarlo con confianza.</span><span class="sxs-lookup"><span data-stu-id="29ca3-107">Use tagging, descriptions, and domain-specific models to identify content and label it with confidence.</span></span>
-- <span data-ttu-id="29ca3-108">Aplique la configuración para adultos para habilitar la restricción automatizada de contenido adulto.</span><span class="sxs-lookup"><span data-stu-id="29ca3-108">Apply adult/racy settings to enable automated restriction of adult content.</span></span>
-- <span data-ttu-id="29ca3-109">Identifique los tipos y los esquemas de color de las imágenes.</span><span class="sxs-lookup"><span data-stu-id="29ca3-109">Identify image types and color schemes in pictures.</span></span>
+- <span data-ttu-id="2b16d-107">Use etiquetado, descripciones y modelos específicos del dominio para identificar el contenido y etiquetarlo con confianza.</span><span class="sxs-lookup"><span data-stu-id="2b16d-107">Use tagging, descriptions, and domain-specific models to identify content and label it with confidence.</span></span>
+- <span data-ttu-id="2b16d-108">Aplique la configuración para adultos para habilitar la restricción automatizada de contenido adulto.</span><span class="sxs-lookup"><span data-stu-id="2b16d-108">Apply adult/racy settings to enable automated restriction of adult content.</span></span>
+- <span data-ttu-id="2b16d-109">Identifique los tipos y los esquemas de color de las imágenes.</span><span class="sxs-lookup"><span data-stu-id="2b16d-109">Identify image types and color schemes in pictures.</span></span>
 
-<span data-ttu-id="29ca3-110">[Pruebe Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) de forma gratuita en su explorador.</span><span class="sxs-lookup"><span data-stu-id="29ca3-110">[Try Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) for free in your browser.</span></span>
+<span data-ttu-id="2b16d-110">[Pruebe Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) de forma gratuita en su explorador.</span><span class="sxs-lookup"><span data-stu-id="2b16d-110">[Try Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) for free in your browser.</span></span>
 
-<span data-ttu-id="29ca3-111">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-111">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-111">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-111">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-computervision
 ```
 
-<span data-ttu-id="29ca3-112">[Obtenga más información](/azure/cognitive-services/computer-vision/home) acerca de Computer Vision API y empiece a trabajar con la [guía de inicio rápido para JavaScript de Computer Vision API](/azure/cognitive-services/computer-vision/quickstarts/javascript).</span><span class="sxs-lookup"><span data-stu-id="29ca3-112">[Learn more](/azure/cognitive-services/computer-vision/home) about the Computer Vision API and get started with the [Computer Vision API JavaScript quickstart](/azure/cognitive-services/computer-vision/quickstarts/javascript).</span></span>
+<span data-ttu-id="2b16d-112">[Obtenga más información](/azure/cognitive-services/computer-vision/home) acerca de Computer Vision API y empiece a trabajar con la [guía de inicio rápido para JavaScript de Computer Vision API](/azure/cognitive-services/computer-vision/quickstarts/javascript).</span><span class="sxs-lookup"><span data-stu-id="2b16d-112">[Learn more](/azure/cognitive-services/computer-vision/home) about the Computer Vision API and get started with the [Computer Vision API JavaScript quickstart](/azure/cognitive-services/computer-vision/quickstarts/javascript).</span></span>
 
-### <a name="content-moderator"></a><span data-ttu-id="29ca3-113">Content Moderator</span><span class="sxs-lookup"><span data-stu-id="29ca3-113">Content Moderator</span></span>
+### <a name="content-moderator"></a><span data-ttu-id="2b16d-113">Content Moderator</span><span class="sxs-lookup"><span data-stu-id="2b16d-113">Content Moderator</span></span>
 
-<span data-ttu-id="29ca3-114">Moderación de texto, vídeo e imágenes asistida por máquina, mejorada con herramientas de revisión humanas.</span><span class="sxs-lookup"><span data-stu-id="29ca3-114">Machine-assisted moderation of text, video and images, augmented with human review tools.</span></span>
+<span data-ttu-id="2b16d-114">Moderación de texto, vídeo e imágenes asistida por máquina, mejorada con herramientas de revisión humanas.</span><span class="sxs-lookup"><span data-stu-id="2b16d-114">Machine-assisted moderation of text, video and images, augmented with human review tools.</span></span>
 
-<span data-ttu-id="29ca3-115">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-115">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-115">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-115">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-contentmoderator
 ```
 
-<span data-ttu-id="29ca3-116">[Obtenga más información](/azure/cognitive-services/content-moderator/overview) acerca del servicio Content Moderator.</span><span class="sxs-lookup"><span data-stu-id="29ca3-116">[Learn more](/azure/cognitive-services/content-moderator/overview) about the Content Moderator service.</span></span>
+<span data-ttu-id="2b16d-116">[Obtenga más información](/azure/cognitive-services/content-moderator/overview) acerca del servicio Content Moderator.</span><span class="sxs-lookup"><span data-stu-id="2b16d-116">[Learn more](/azure/cognitive-services/content-moderator/overview) about the Content Moderator service.</span></span>
 
-### <a name="face-api"></a><span data-ttu-id="29ca3-117">Face API</span><span class="sxs-lookup"><span data-stu-id="29ca3-117">Face API</span></span>
+### <a name="face-api"></a><span data-ttu-id="2b16d-117">Face API</span><span class="sxs-lookup"><span data-stu-id="2b16d-117">Face API</span></span>
 
-<span data-ttu-id="29ca3-118">Detecte, identifique, analice, organice y etiquete las caras en las fotos.</span><span class="sxs-lookup"><span data-stu-id="29ca3-118">Detect, identify, analyze, organize, and tag faces in photos.</span></span> 
+<span data-ttu-id="2b16d-118">Detecte, identifique, analice, organice y etiquete las caras en las fotos.</span><span class="sxs-lookup"><span data-stu-id="2b16d-118">Detect, identify, analyze, organize, and tag faces in photos.</span></span> 
 
-<span data-ttu-id="29ca3-119">[Pruebe Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="29ca3-119">[Try the Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) in your browser.</span></span>
+<span data-ttu-id="2b16d-119">[Pruebe Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="2b16d-119">[Try the Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) in your browser.</span></span>
 
-<span data-ttu-id="29ca3-120">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-120">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-120">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-120">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-face
 ```
 
-<span data-ttu-id="29ca3-121">[Obtenga más información](/azure/cognitive-services/face/overview) acerca de Face API y empiece a trabajar con la [guía de inicio rápido para JavaScript de Face API](/azure/cognitive-services/Face/quickstarts/javascript).</span><span class="sxs-lookup"><span data-stu-id="29ca3-121">[Learn more](/azure/cognitive-services/face/overview) about the Face API and get started with the [Face API JavaScript quickstart](/azure/cognitive-services/Face/quickstarts/javascript).</span></span>
+<span data-ttu-id="2b16d-121">[Obtenga más información](/azure/cognitive-services/face/overview) acerca de Face API y empiece a trabajar con la [guía de inicio rápido para JavaScript de Face API](/azure/cognitive-services/Face/quickstarts/javascript).</span><span class="sxs-lookup"><span data-stu-id="2b16d-121">[Learn more](/azure/cognitive-services/face/overview) about the Face API and get started with the [Face API JavaScript quickstart](/azure/cognitive-services/Face/quickstarts/javascript).</span></span>
 
-## <a name="search-modules"></a><span data-ttu-id="29ca3-122">Módulos de búsqueda</span><span class="sxs-lookup"><span data-stu-id="29ca3-122">Search modules</span></span>
+## <a name="search-modules"></a><span data-ttu-id="2b16d-122">Módulos de búsqueda</span><span class="sxs-lookup"><span data-stu-id="2b16d-122">Search modules</span></span>
 
-### <a name="web-search"></a><span data-ttu-id="29ca3-123">Búsqueda web</span><span class="sxs-lookup"><span data-stu-id="29ca3-123">Web search</span></span>
+### <a name="web-search"></a><span data-ttu-id="2b16d-123">Búsqueda web</span><span class="sxs-lookup"><span data-stu-id="2b16d-123">Web search</span></span>
 
-<span data-ttu-id="29ca3-124">Recupere documentos web indexados por Bing Web Search API y limite los resultados según el tipo, la actualidad y muchos otros criterios.</span><span class="sxs-lookup"><span data-stu-id="29ca3-124">Retrieve web documents indexed by the Bing Web Search API and narrow down the results by result type, freshness and more.</span></span> 
+<span data-ttu-id="2b16d-124">Recupere documentos web indexados por Bing Web Search API y limite los resultados según el tipo, la actualidad y muchos otros criterios.</span><span class="sxs-lookup"><span data-stu-id="2b16d-124">Retrieve web documents indexed by the Bing Web Search API and narrow down the results by result type, freshness and more.</span></span> 
 
-<span data-ttu-id="29ca3-125">[Pruebe Web Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="29ca3-125">[Try the Web Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) in your browser.</span></span>
+<span data-ttu-id="2b16d-125">[Pruebe Web Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="2b16d-125">[Try the Web Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) in your browser.</span></span>
 
-<span data-ttu-id="29ca3-126">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-126">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-126">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-126">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-websearch
 ```
 
-<span data-ttu-id="29ca3-127">[Obtenga más información](/azure/cognitive-services/bing-web-search/overview) acerca de Bing Web Search API y empiece a trabajar con la [guía de inicio rápido para Node.js de Web Search API](/azure/cognitive-services/bing-web-search/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="29ca3-127">[Learn more](/azure/cognitive-services/bing-web-search/overview) about the Bing Web Search API and get started with the [Web Search API Node.js quickstart](/azure/cognitive-services/bing-web-search/quickstarts/nodejs).</span></span>
+<span data-ttu-id="2b16d-127">[Obtenga más información](/azure/cognitive-services/bing-web-search/overview) acerca de Bing Web Search API y empiece a trabajar con la [guía de inicio rápido para Node.js de Web Search API](/azure/cognitive-services/bing-web-search/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="2b16d-127">[Learn more](/azure/cognitive-services/bing-web-search/overview) about the Bing Web Search API and get started with the [Web Search API Node.js quickstart](/azure/cognitive-services/bing-web-search/quickstarts/nodejs).</span></span>
 
-### <a name="image-search"></a><span data-ttu-id="29ca3-128">Búsqueda de imágenes</span><span class="sxs-lookup"><span data-stu-id="29ca3-128">Image search</span></span>
+### <a name="image-search"></a><span data-ttu-id="2b16d-128">Búsqueda de imágenes</span><span class="sxs-lookup"><span data-stu-id="2b16d-128">Image search</span></span>
 
-<span data-ttu-id="29ca3-129">Busque imágenes y obtenga vistas en miniatura, direcciones URL completas de imágenes, metadatos de imagen y mucho más en los resultados.</span><span class="sxs-lookup"><span data-stu-id="29ca3-129">Search for images and get thumbnails, full image URLs, image metadata and more in your results.</span></span>
+<span data-ttu-id="2b16d-129">Busque imágenes y obtenga vistas en miniatura, direcciones URL completas de imágenes, metadatos de imagen y mucho más en los resultados.</span><span class="sxs-lookup"><span data-stu-id="2b16d-129">Search for images and get thumbnails, full image URLs, image metadata and more in your results.</span></span>
 
-<span data-ttu-id="29ca3-130">[Pruebe Image Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="29ca3-130">[Try the Image Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) in your browser.</span></span>
+<span data-ttu-id="2b16d-130">[Pruebe Image Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="2b16d-130">[Try the Image Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) in your browser.</span></span>
 
-<span data-ttu-id="29ca3-131">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-131">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-131">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-131">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-imagesearch
 ```
 
-<span data-ttu-id="29ca3-132">[Obtenga más información](/azure/cognitive-services/bing-image-search/overview) acerca de Bing Image Search API y empiece a trabajar con la [guía de inicio rápido para Node.js de Image Search API](/azure/cognitive-services/bing-image-search/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="29ca3-132">[Learn more](/azure/cognitive-services/bing-image-search/overview) about the Bing Image Search API and get started with the [Image Search API Node.js quickstart](/azure/cognitive-services/bing-image-search/quickstarts/nodejs).</span></span>
+<span data-ttu-id="2b16d-132">[Obtenga más información](/azure/cognitive-services/bing-image-search/overview) acerca de Bing Image Search API y empiece a trabajar con la [guía de inicio rápido para Node.js de Image Search API](/azure/cognitive-services/bing-image-search/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="2b16d-132">[Learn more](/azure/cognitive-services/bing-image-search/overview) about the Bing Image Search API and get started with the [Image Search API Node.js quickstart](/azure/cognitive-services/bing-image-search/quickstarts/nodejs).</span></span>
 
 
-### <a name="entity-search"></a><span data-ttu-id="29ca3-133">Búsqueda de entidades</span><span class="sxs-lookup"><span data-stu-id="29ca3-133">Entity search</span></span>
+### <a name="entity-search"></a><span data-ttu-id="2b16d-133">Búsqueda de entidades</span><span class="sxs-lookup"><span data-stu-id="2b16d-133">Entity search</span></span>
 
-<span data-ttu-id="29ca3-134">Busque la entidad más pertinente (lugar, persona o cosa) para un término de búsqueda o una ubicación determinados.</span><span class="sxs-lookup"><span data-stu-id="29ca3-134">Search for the most relevant entity (place, person, or thing) for a given search term or location.</span></span>
+<span data-ttu-id="2b16d-134">Busque la entidad más pertinente (lugar, persona o cosa) para un término de búsqueda o una ubicación determinados.</span><span class="sxs-lookup"><span data-stu-id="2b16d-134">Search for the most relevant entity (place, person, or thing) for a given search term or location.</span></span>
 
-<span data-ttu-id="29ca3-135">[Pruebe Entity Search API](https://azure.microsoft.com/services/cognitive-services/bing-entity-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="29ca3-135">[Try the Entity Search API](https://azure.microsoft.com/services/cognitive-services/bing-entity-search-api/) in your browser.</span></span>
+<span data-ttu-id="2b16d-135">[Pruebe Entity Search API](https://azure.microsoft.com/services/cognitive-services/bing-entity-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="2b16d-135">[Try the Entity Search API](https://azure.microsoft.com/services/cognitive-services/bing-entity-search-api/) in your browser.</span></span>
 
-<span data-ttu-id="29ca3-136">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-136">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-136">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-136">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-entitysearch
 ```
 
-<span data-ttu-id="29ca3-137">[Obtenga más información](/azure/cognitive-services/bing-entities-search/search-the-web) acerca de Bing Entity Search API y empiece a trabajar con la [guía de inicio rápido para Node.js de Entity Search API](/azure/cognitive-services/bing-entities-search/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="29ca3-137">[Learn more](/azure/cognitive-services/bing-entities-search/search-the-web) about the Bing Entity Search API and get started with the [Entity Search API Node.js quickstart](/azure/cognitive-services/bing-entities-search/quickstarts/nodejs).</span></span>
+<span data-ttu-id="2b16d-137">[Obtenga más información](/azure/cognitive-services/bing-entities-search/search-the-web) acerca de Bing Entity Search API y empiece a trabajar con la [guía de inicio rápido para Node.js de Entity Search API](/azure/cognitive-services/bing-entities-search/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="2b16d-137">[Learn more](/azure/cognitive-services/bing-entities-search/search-the-web) about the Bing Entity Search API and get started with the [Entity Search API Node.js quickstart](/azure/cognitive-services/bing-entities-search/quickstarts/nodejs).</span></span>
 
-### <a name="custom-search"></a><span data-ttu-id="29ca3-138">Búsqueda personalizada</span><span class="sxs-lookup"><span data-stu-id="29ca3-138">Custom search</span></span>
+### <a name="custom-search"></a><span data-ttu-id="2b16d-138">Búsqueda personalizada</span><span class="sxs-lookup"><span data-stu-id="2b16d-138">Custom search</span></span>
 
-<span data-ttu-id="29ca3-139">Cree una búsqueda web personalizada que cumpla los requisitos específicos de su dominio de búsqueda.</span><span class="sxs-lookup"><span data-stu-id="29ca3-139">Build and a custom web search that meets your specific search domain.</span></span>
+<span data-ttu-id="2b16d-139">Cree una búsqueda web personalizada que cumpla los requisitos específicos de su dominio de búsqueda.</span><span class="sxs-lookup"><span data-stu-id="2b16d-139">Build and a custom web search that meets your specific search domain.</span></span>
 
-<span data-ttu-id="29ca3-140">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-140">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-140">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-140">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-customsearch
 ```
 
-<span data-ttu-id="29ca3-141">[Obtenga más información](/azure/cognitive-services/bing-custom-search/) acerca del servicio Bing Custom Search y empiece a trabajar con consultas sobre su búsqueda personalizada desde sus aplicaciones con la [guía de inicio rápido para Node.js de Custom Search API](/azure/cognitive-services/bing-custom-search/call-endpoint-nodejs).</span><span class="sxs-lookup"><span data-stu-id="29ca3-141">[Learn more](/azure/cognitive-services/bing-custom-search/) about the Bing Custom Search service and get started with querying your custom search from your apps with the [Custom Search API Node.js quickstart](/azure/cognitive-services/bing-custom-search/call-endpoint-nodejs).</span></span>
+<span data-ttu-id="2b16d-141">[Obtenga más información](/azure/cognitive-services/bing-custom-search/) acerca del servicio Bing Custom Search y empiece a trabajar con consultas sobre su búsqueda personalizada desde sus aplicaciones con la [guía de inicio rápido para Node.js de Custom Search API](/azure/cognitive-services/bing-custom-search/call-endpoint-nodejs).</span><span class="sxs-lookup"><span data-stu-id="2b16d-141">[Learn more](/azure/cognitive-services/bing-custom-search/) about the Bing Custom Search service and get started with querying your custom search from your apps with the [Custom Search API Node.js quickstart](/azure/cognitive-services/bing-custom-search/call-endpoint-nodejs).</span></span>
 
-### <a name="video-search"></a><span data-ttu-id="29ca3-142">Búsqueda de vídeos</span><span class="sxs-lookup"><span data-stu-id="29ca3-142">Video search</span></span>
+### <a name="video-search"></a><span data-ttu-id="2b16d-142">Búsqueda de vídeos</span><span class="sxs-lookup"><span data-stu-id="2b16d-142">Video search</span></span>
 
-<span data-ttu-id="29ca3-143">Busque vídeos en Internet y obtenga resultados con metadatos del creador, codificación, duración y número de visualizaciones.</span><span class="sxs-lookup"><span data-stu-id="29ca3-143">Find videos across the web and get results with creator, encoding, length, and view count metadata.</span></span>
+<span data-ttu-id="2b16d-143">Busque vídeos en Internet y obtenga resultados con metadatos del creador, codificación, duración y número de visualizaciones.</span><span class="sxs-lookup"><span data-stu-id="2b16d-143">Find videos across the web and get results with creator, encoding, length, and view count metadata.</span></span>
 
-<span data-ttu-id="29ca3-144">[Pruebe Video Search API](https://azure.microsoft.com/services/cognitive-services/bing-video-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="29ca3-144">[Try the Video Search API](https://azure.microsoft.com/services/cognitive-services/bing-video-search-api/) in your browser.</span></span>
+<span data-ttu-id="2b16d-144">[Pruebe Video Search API](https://azure.microsoft.com/services/cognitive-services/bing-video-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="2b16d-144">[Try the Video Search API](https://azure.microsoft.com/services/cognitive-services/bing-video-search-api/) in your browser.</span></span>
 
-<span data-ttu-id="29ca3-145">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-145">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-145">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-145">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-videosearch
 ```
 
-<span data-ttu-id="29ca3-146">[Obtenga más información](/azure/cognitive-services/bing-video-search/search-the-web) acerca del servicio Bing Video Search y empiece a trabajar con la [guía de inicio rápido para Node.js de Video Search API](/azure/cognitive-services/bing-video-search/nodejs).</span><span class="sxs-lookup"><span data-stu-id="29ca3-146">[Learn more](/azure/cognitive-services/bing-video-search/search-the-web) about the Bing Video Search service and get started with the [Video Search API Node.js quickstart](/azure/cognitive-services/bing-video-search/nodejs).</span></span>
+<span data-ttu-id="2b16d-146">[Obtenga más información](/azure/cognitive-services/bing-video-search/search-the-web) acerca del servicio Bing Video Search y empiece a trabajar con la [guía de inicio rápido para Node.js de Video Search API](/azure/cognitive-services/bing-video-search/nodejs).</span><span class="sxs-lookup"><span data-stu-id="2b16d-146">[Learn more](/azure/cognitive-services/bing-video-search/search-the-web) about the Bing Video Search service and get started with the [Video Search API Node.js quickstart](/azure/cognitive-services/bing-video-search/nodejs).</span></span>
 
 
-### <a name="news-search"></a><span data-ttu-id="29ca3-147">Búsqueda de noticias</span><span class="sxs-lookup"><span data-stu-id="29ca3-147">News search</span></span>
+### <a name="news-search"></a><span data-ttu-id="2b16d-147">Búsqueda de noticias</span><span class="sxs-lookup"><span data-stu-id="2b16d-147">News search</span></span>
 
-<span data-ttu-id="29ca3-148">Busque en Internet artículos de noticias y trabaje con los metadatos del artículo, noticias relacionadas, imágenes e información del proveedor.</span><span class="sxs-lookup"><span data-stu-id="29ca3-148">Search the web for news articles and work with article, related news, images, and provider info metadata.</span></span>
+<span data-ttu-id="2b16d-148">Busque en Internet artículos de noticias y trabaje con los metadatos del artículo, noticias relacionadas, imágenes e información del proveedor.</span><span class="sxs-lookup"><span data-stu-id="2b16d-148">Search the web for news articles and work with article, related news, images, and provider info metadata.</span></span>
 
-<span data-ttu-id="29ca3-149">[Pruebe News Search API](https://azure.microsoft.com/services/cognitive-services/bing-news-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="29ca3-149">[Try the News Search API](https://azure.microsoft.com/services/cognitive-services/bing-news-search-api/) in your browser.</span></span>
+<span data-ttu-id="2b16d-149">[Pruebe News Search API](https://azure.microsoft.com/services/cognitive-services/bing-news-search-api/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="2b16d-149">[Try the News Search API](https://azure.microsoft.com/services/cognitive-services/bing-news-search-api/) in your browser.</span></span>
 
-<span data-ttu-id="29ca3-150">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-150">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-150">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-150">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-newssearch
 ```
 
-<span data-ttu-id="29ca3-151">[Obtenga más información](/azure/cognitive-services/bing-news-search/search-the-web) acerca del servicio Bing News Search y empiece a trabajar con la [guía de inicio rápido para JavaScript de News Search API](/azure/cognitive-services/bing-news-search/nodejs).</span><span class="sxs-lookup"><span data-stu-id="29ca3-151">[Learn more](/azure/cognitive-services/bing-news-search/search-the-web) about the Bing News Search service and get started with the [News Search API JavaScript quickstart](/azure/cognitive-services/bing-news-search/nodejs).</span></span>
+<span data-ttu-id="2b16d-151">[Obtenga más información](/azure/cognitive-services/bing-news-search/search-the-web) acerca del servicio Bing News Search y empiece a trabajar con la [guía de inicio rápido para JavaScript de News Search API](/azure/cognitive-services/bing-news-search/nodejs).</span><span class="sxs-lookup"><span data-stu-id="2b16d-151">[Learn more](/azure/cognitive-services/bing-news-search/search-the-web) about the Bing News Search service and get started with the [News Search API JavaScript quickstart](/azure/cognitive-services/bing-news-search/nodejs).</span></span>
 
 
-## <a name="language-modules"></a><span data-ttu-id="29ca3-152">Modelo de lenguaje</span><span class="sxs-lookup"><span data-stu-id="29ca3-152">Language modules</span></span>
+## <a name="language-modules"></a><span data-ttu-id="2b16d-152">Modelo de lenguaje</span><span class="sxs-lookup"><span data-stu-id="2b16d-152">Language modules</span></span>
 
-### <a name="text-analytics"></a><span data-ttu-id="29ca3-153">Text Analytics</span><span class="sxs-lookup"><span data-stu-id="29ca3-153">Text Analytics</span></span> 
+### <a name="text-analytics"></a><span data-ttu-id="2b16d-153">Text Analytics</span><span class="sxs-lookup"><span data-stu-id="2b16d-153">Text Analytics</span></span> 
 
-<span data-ttu-id="29ca3-154">Text Analytics API es un servicio en la nube que realiza el procesamiento del lenguaje natural en textos sin formato.</span><span class="sxs-lookup"><span data-stu-id="29ca3-154">The Text Analytics API is a cloud-based service that provides  natural language processing over raw text.</span></span> <span data-ttu-id="29ca3-155">La API incluye tres funciones principales:</span><span class="sxs-lookup"><span data-stu-id="29ca3-155">The API includes three main functions:</span></span>
+<span data-ttu-id="2b16d-154">Text Analytics API es un servicio en la nube que realiza el procesamiento del lenguaje natural en textos sin formato.</span><span class="sxs-lookup"><span data-stu-id="2b16d-154">The Text Analytics API is a cloud-based service that provides  natural language processing over raw text.</span></span> <span data-ttu-id="2b16d-155">La API incluye tres funciones principales:</span><span class="sxs-lookup"><span data-stu-id="2b16d-155">The API includes three main functions:</span></span>
 
-- <span data-ttu-id="29ca3-156">análisis de opiniones</span><span class="sxs-lookup"><span data-stu-id="29ca3-156">Sentiment analysis</span></span>
-- <span data-ttu-id="29ca3-157">Extracción de la frase clave</span><span class="sxs-lookup"><span data-stu-id="29ca3-157">Key phrase extraction</span></span>
-- <span data-ttu-id="29ca3-158">Detección de idiomas</span><span class="sxs-lookup"><span data-stu-id="29ca3-158">Language detection</span></span>
+- <span data-ttu-id="2b16d-156">análisis de opiniones</span><span class="sxs-lookup"><span data-stu-id="2b16d-156">Sentiment analysis</span></span>
+- <span data-ttu-id="2b16d-157">Extracción de la frase clave</span><span class="sxs-lookup"><span data-stu-id="2b16d-157">Key phrase extraction</span></span>
+- <span data-ttu-id="2b16d-158">Detección de idiomas</span><span class="sxs-lookup"><span data-stu-id="2b16d-158">Language detection</span></span>
 
-<span data-ttu-id="29ca3-159">[Pruebe Text Analytics API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="29ca3-159">[Try the Text Analytics API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) in your browser.</span></span>
+<span data-ttu-id="2b16d-159">[Pruebe Text Analytics API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="2b16d-159">[Try the Text Analytics API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) in your browser.</span></span>
 
-<span data-ttu-id="29ca3-160">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-160">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-160">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-160">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-textanalytics
 ```
 
-<span data-ttu-id="29ca3-161">[Obtenga más información](/azure/cognitive-services/text-analytics/overview) acerca de Text Analytics API y empiece a trabajar con la [guía de inicio rápido para Node.js de Text Analytics API](/azure/cognitive-services/text-analytics/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="29ca3-161">[Learn more](/azure/cognitive-services/text-analytics/overview) about the Text Analytics API and get started with the [Text Analytics API Node.js quickstart](/azure/cognitive-services/text-analytics/quickstarts/nodejs).</span></span>
+<span data-ttu-id="2b16d-161">[Obtenga más información](/azure/cognitive-services/text-analytics/overview) acerca de Text Analytics API y empiece a trabajar con la [guía de inicio rápido para Node.js de Text Analytics API](/azure/cognitive-services/text-analytics/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="2b16d-161">[Learn more](/azure/cognitive-services/text-analytics/overview) about the Text Analytics API and get started with the [Text Analytics API Node.js quickstart](/azure/cognitive-services/text-analytics/quickstarts/nodejs).</span></span>
 
 
-### <a name="spell-check"></a><span data-ttu-id="29ca3-162">Corrector ortográfico</span><span class="sxs-lookup"><span data-stu-id="29ca3-162">Spell Check</span></span>
+### <a name="spell-check"></a><span data-ttu-id="2b16d-162">Corrector ortográfico</span><span class="sxs-lookup"><span data-stu-id="2b16d-162">Spell Check</span></span>
 
-<span data-ttu-id="29ca3-163">Compruebe la gramática y la ortografía en contexto con Bing Spell Check API.</span><span class="sxs-lookup"><span data-stu-id="29ca3-163">Perform contextual grammar and spell checking with the Bing Spell Check API.</span></span>
+<span data-ttu-id="2b16d-163">Compruebe la gramática y la ortografía en contexto con Bing Spell Check API.</span><span class="sxs-lookup"><span data-stu-id="2b16d-163">Perform contextual grammar and spell checking with the Bing Spell Check API.</span></span>
 
-<span data-ttu-id="29ca3-164">[Pruebe Spell Check API](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="29ca3-164">[Try the Spell Check API](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) in your browser.</span></span>
+<span data-ttu-id="2b16d-164">[Pruebe Spell Check API](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) en su explorador.</span><span class="sxs-lookup"><span data-stu-id="2b16d-164">[Try the Spell Check API](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) in your browser.</span></span>
 
-<span data-ttu-id="29ca3-165">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="29ca3-165">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
+<span data-ttu-id="2b16d-165">Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span><span class="sxs-lookup"><span data-stu-id="2b16d-165">Get the JavaScript module with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):</span></span>
 
 ```
 npm install azure-cognitiveservices-spellcheck
 ```
 
-<span data-ttu-id="29ca3-166">[Obtenga más información](/azure/cognitive-services/bing-spell-check/proof-text) acerca de Spell Check API y empiece a trabajar con la [guía de inicio rápido para Node.js de Spell Check API](/azure/cognitive-services/bing-spell-check/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="29ca3-166">[Learn more](/azure/cognitive-services/bing-spell-check/proof-text) about the Spell Check API and get started with the [Spell Check API Node.js quickstart](/azure/cognitive-services/bing-spell-check/quickstarts/nodejs).</span></span>
+<span data-ttu-id="2b16d-166">[Obtenga más información](/azure/cognitive-services/bing-spell-check/proof-text) acerca de Spell Check API y empiece a trabajar con la [guía de inicio rápido para Node.js de Spell Check API](/azure/cognitive-services/bing-spell-check/quickstarts/nodejs).</span><span class="sxs-lookup"><span data-stu-id="2b16d-166">[Learn more](/azure/cognitive-services/bing-spell-check/proof-text) about the Spell Check API and get started with the [Spell Check API Node.js quickstart](/azure/cognitive-services/bing-spell-check/quickstarts/nodejs).</span></span>
 
-## <a name="samples"></a><span data-ttu-id="29ca3-167">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="29ca3-167">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="2b16d-167">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="2b16d-167">Samples</span></span>
 
-<span data-ttu-id="29ca3-168">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="29ca3-168">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="2b16d-168">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="2b16d-168">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
