@@ -1,20 +1,20 @@
 ---
-title: "Módulos PowerBI Embedded de Azure para Node.js"
-description: "Referencia de los módulos PowerBI Embedded de Azure para Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Módulos PowerBI Embedded de Azure para Node.js
+description: Referencia de los módulos PowerBI Embedded de Azure para Node.js
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: PowerBI Embedded
-ms.openlocfilehash: 5dbe134acb38787916f48277b2114e199601e128
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 4d0a1ebf75591a9a3575172f325309ddbac7885c
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-powerbi-embedded-modules-for-nodejs"></a>Módulos PowerBI Embedded de Azure para Node.js
 
@@ -73,6 +73,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.

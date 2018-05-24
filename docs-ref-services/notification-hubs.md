@@ -1,20 +1,20 @@
 ---
-title: "Módulos de Azure Notification Hubs para Node.js"
-description: "Referencia de los módulos de Azure Notification Hubs para Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Módulos de Azure Notification Hubs para Node.js
+description: Referencia de los módulos de Azure Notification Hubs para Node.js
+author: rloutlaw
+ms.author: ROutlaw
+manager: angrobe
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Notification Hubs
-ms.openlocfilehash: c353bdc0fff7784881b5cd4f1d3b4dda5268f1ea
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 30b8caa07111f9ceb5fa58f92649e4670aa6bee6
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-notification-hubs-modules-for-nodejs"></a>Módulos de Azure Notification Hubs para Node.js
 
@@ -59,7 +59,7 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 * [App Service Mobile completed quickstart for Node.js backend](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/) (Inicio rápido a App Service Mobile completo para back-end de Node.js)
 * [Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/) (Anomalías de vibración de tweets detectadas por los servicios Azure IoT en los datos de un Intel Edison que ejecuta Node.js)

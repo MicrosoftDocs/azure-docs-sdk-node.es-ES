@@ -1,20 +1,20 @@
 ---
-title: "Módulos de Azure IoT Hub para Node.js"
-description: "Referencia de los módulos de Azure IoT Hub para Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Módulos de Azure IoT Hub para Node.js
+description: Referencia de los módulos de Azure IoT Hub para Node.js
+author: dominicbetts
+ms.author: dobett
+manager: timlt
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
-ms.openlocfilehash: 66a0cad731d8e8dfd5cea64bdc910189a23fc6f0
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 77dd4c30da43af7cace048b43b7997fb1952abf1
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-iot-hub-modules-for-nodejs"></a>Módulos de Azure IoT Hub para Node.js
 
@@ -100,7 +100,7 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 - [Get started with the Raspberry Pi Azure IoT Starter Kit](https://azure.microsoft.com/resources/samples/iot-remote-monitoring-node-raspberrypi-getstartedkit/) (Introducción a Starter Kit de IoT de Azure de Raspberry Pi)
 - [Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/) (Anomalías de vibración de tweets detectadas por los servicios Azure IoT en los datos de un Intel Edison que ejecuta Node.js)

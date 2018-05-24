@@ -1,20 +1,20 @@
 ---
-title: "Módulos de Azure Traffic Manager para Node.js"
-description: "Referencia de los módulos de Azure Traffic Manager para Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Módulos de Azure Traffic Manager para Node.js
+description: Referencia de los módulos de Azure Traffic Manager para Node.js
+author: KumudD
+ms.author: kumud
+manager: jeconnoc
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Traffic Manager
-ms.openlocfilehash: cf0834a0eadc67868efb165d60d39c681d4435eb
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 904a6693f557b90f5a1eeeea2367b56f8dfe3ff1
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-traffic-manager-modules-for-nodejs"></a>Módulos de Azure Traffic Manager para Node.js
 
@@ -55,6 +55,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.

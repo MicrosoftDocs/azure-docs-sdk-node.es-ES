@@ -1,20 +1,20 @@
 ---
-title: "Módulos de Azure DNS para Node.js"
-description: "Referencia de los módulos de Azure DNS para Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Módulos de Azure DNS para Node.js
+description: Referencia de los módulos de Azure DNS para Node.js
+author: KumudD
+ms.author: kumud
+manager: jeconnoc
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DNS
-ms.openlocfilehash: c1ffacb3dd6b836303c5fcb2c18d7d68d2390ec7
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 610bc878acba978b7be25ea2caee4000cef3b452
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-dns-modules-for-nodejs"></a>Módulos de Azure DNS para Node.js
 
@@ -50,6 +50,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.
