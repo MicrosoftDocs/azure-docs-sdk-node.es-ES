@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34261974"
 ---
 # <a name="azure-operational-insights-modules-for-nodejs"></a><span data-ttu-id="4c353-103">Módulos de Azure Operational Insights para Node.js</span><span class="sxs-lookup"><span data-stu-id="4c353-103">Azure Operational Insights Modules for Node.js</span></span>
 

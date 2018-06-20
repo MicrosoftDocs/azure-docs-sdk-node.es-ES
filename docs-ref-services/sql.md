@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259450"
 ---
 # <a name="azure-sql-modules-for-nodejs"></a><span data-ttu-id="745f0-103">Módulos de Azure SQL para Node.js</span><span class="sxs-lookup"><span data-stu-id="745f0-103">Azure SQL modules for Node.js</span></span>
 

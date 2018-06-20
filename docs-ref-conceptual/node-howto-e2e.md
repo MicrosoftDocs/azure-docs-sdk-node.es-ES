@@ -1,6 +1,6 @@
 ---
 title: Desarrollo de Node.js con Visual Studio Code y Azure
-description: "Completo tutorial que ilustra cómo crear, incluir en un contenedor Docker e implementar en Azure una aplicación Node.js."
+description: Completo tutorial que ilustra cómo crear, incluir en un contenedor Docker e implementar en Azure una aplicación Node.js.
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908145"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a><span data-ttu-id="f2984-103">Desarrollo de Node.js con Visual Studio Code y Azure</span><span class="sxs-lookup"><span data-stu-id="f2984-103">Node.js development with Visual Studio Code and Azure</span></span>
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 08/17/2017
 
 1. <span data-ttu-id="f2984-141">Escriba `.js` para mostrar todos los archivos JavaScript/JSON en el proyecto junto con el directorio principal de cada archivo.</span><span class="sxs-lookup"><span data-stu-id="f2984-141">Enter `.js` to display all the JavaScript/JSON files in the project along with each file's parent directory</span></span> 
 
-    ![Mostrar todos los archivos .js*](./media/node-howto-e2e/git-output.png)
+    ![Mostrar todos los archivos .js\*](./media/node-howto-e2e/git-output.png)
 
 1. <span data-ttu-id="f2984-143">Seleccione `server.js`, que es el script de inicio de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="f2984-143">Select `server.js`, which is the startup script for the app.</span></span> 
 

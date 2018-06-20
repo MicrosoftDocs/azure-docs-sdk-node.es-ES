@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220477"
 ---
 # <a name="azure-storage-with-nodejs-tutorials"></a><span data-ttu-id="57032-103">Tutoriales de Azure Storage con Node.js</span><span class="sxs-lookup"><span data-stu-id="57032-103">Azure storage with Node.js tutorials</span></span>
 

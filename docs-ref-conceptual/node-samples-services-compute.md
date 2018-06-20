@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220557"
 ---
 # <a name="azure-compute-with-nodejs-code-samples"></a><span data-ttu-id="9549d-103">Ejemplos de código de Azure Compute con Node.js</span><span class="sxs-lookup"><span data-stu-id="9549d-103">Azure Compute with Node.js code samples</span></span>
 

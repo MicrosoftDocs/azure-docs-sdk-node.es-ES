@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220537"
 ---
 # <a name="azure-modules-for-nodejs"></a><span data-ttu-id="9a03f-103">Módulos de Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="9a03f-103">Azure modules for Node.js</span></span>
 
