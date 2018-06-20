@@ -1,6 +1,6 @@
 ---
-title: "Ejemplos de código de Azure Billing para Node.js"
-description: "Código de ejemplo que muestra cómo agregar la funcionalidad Azure Billing con Node.js."
+title: Ejemplos de código de Azure Billing para Node.js
+description: Código de ejemplo que muestra cómo agregar la funcionalidad Azure Billing con Node.js.
 author: ityer
 manager: limorl
 ms.devlang: nodejs
@@ -13,6 +13,7 @@ ms.sourcegitcommit: 37edf026ed6d21abd1cf45a65b3b0329a8bdf18d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29781781"
 ---
 # <a name="azure-billing-with-nodejs-code-samples"></a>Ejemplos de código de Azure Billing con Node.js
 

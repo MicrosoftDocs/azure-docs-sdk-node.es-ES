@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259308"
 ---
 # <a name="azure-monitor-modules-for-nodejs"></a>Módulos de Azure Monitor para Node.js
 
