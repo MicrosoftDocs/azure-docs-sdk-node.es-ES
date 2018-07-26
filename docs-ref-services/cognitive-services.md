@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7941d3850ef6c3518ff0ab13fe1b1ea239ab1828
+ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259974"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39189001"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>Módulos de Azure Cognitive Services para JavaScript
 
@@ -29,7 +29,7 @@ Devuelve información sobre el contenido visual encontrado en una imagen:
 - Aplique la configuración para adultos para habilitar la restricción automatizada de contenido adulto.
 - Identifique los tipos y los esquemas de color de las imágenes.
 
-[Pruebe Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) de forma gratuita en su explorador.
+[Pruebe Computer Vision](https://azure.microsoft.com/services/cognitive-services/computer-vision/) de forma gratuita en su explorador.
 
 Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -55,7 +55,7 @@ npm install azure-cognitiveservices-contentmoderator
 
 Detecte, identifique, analice, organice y etiquete las caras en las fotos. 
 
-[Pruebe Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) en su explorador.
+[Pruebe Face API](https://azure.microsoft.com/services/cognitive-services/face/) en su explorador.
 
 Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -71,7 +71,7 @@ npm install azure-cognitiveservices-face
 
 Recupere documentos web indexados por Bing Web Search API y limite los resultados según el tipo, la actualidad y muchos otros criterios. 
 
-[Pruebe Web Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) en su explorador.
+[Pruebe Web Search API](https://azure.microsoft.com/services/cognitive-services/bing-web-search-api/) en su explorador.
 
 Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -85,7 +85,7 @@ npm install azure-cognitiveservices-websearch
 
 Busque imágenes y obtenga vistas en miniatura, direcciones URL completas de imágenes, metadatos de imagen y mucho más en los resultados.
 
-[Pruebe Image Search API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) en su explorador.
+[Pruebe Image Search API](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/) en su explorador.
 
 Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -162,7 +162,7 @@ Text Analytics API es un servicio en la nube que realiza el procesamiento del le
 - Extracción de la frase clave
 - Detección de idiomas
 
-[Pruebe Text Analytics API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) en su explorador.
+[Pruebe Text Analytics API](https://azure.microsoft.com/services/cognitive-services/text-analytics/) en su explorador.
 
 Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -177,7 +177,7 @@ npm install azure-cognitiveservices-textanalytics
 
 Compruebe la gramática y la ortografía en contexto con Bing Spell Check API.
 
-[Pruebe Spell Check API](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) en su explorador.
+[Pruebe Spell Check API](https://azure.microsoft.com/services/cognitive-services/spell-check/) en su explorador.
 
 Obtención del módulo de JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
