@@ -1,0 +1,403 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 93c9390372163dce12b8539afbad4c7434f676d1
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072263"
+items:
+- uid: ms-rest.ServiceClient
+  id: ms-rest.ServiceClient
+  name: ServiceClient
+  summary: Inicializa una nueva instancia de la clase ServiceClient.
+  fullName: ms-rest.ServiceClient
+  type: Class
+  children:
+  - ms-rest.ServiceClient.#ctor
+  - ms-rest.ServiceClient#addFilter
+  - ms-rest.ServiceClient#sendRequest
+  - ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  - ms-rest.ServiceClient#addUserAgentInfo
+  - ms-rest.ServiceClient#getPackageJsonInfo
+  langs:
+  - js
+- id: ms-rest.ServiceClient.#ctor
+  uid: ms-rest.ServiceClient.#ctor
+  parent: ms-rest.ServiceClient
+  name: ServiceClient(credentials, options)
+  fullName: ms-rest.ServiceClient.ServiceClient(credentials, options)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - object
+      description: Objeto BasicAuthenticationCredentials o TokenCredentials utilizado para la autenticación.
+      optional: true
+    - id: options
+      type:
+      - object
+      description: Las opciones de parámetro
+      optional: true
+    - id: options.filters
+      type:
+      - Array
+      description: Filtros que se agregarán a la canalización de solicitudes
+      optional: true
+    - id: options.requestOptions
+      type:
+      - object
+      description: Opciones para el objeto de solicitud [doc opciones](https://github.com/request/request#requestoptions-callback)
+      optional: true
+    - id: options.noRetryPolicy
+      type:
+      - undefinedbool
+      description: Si establece en true, desactive la opción de directiva de reintentos predeterminada
+      optional: true
+    - id: options.rpRegistrationRetryTimeout
+      type:
+      - number
+      description: El tiempo de espera de reintento en segundos para AutomaticRPRegistration. El valor predeterminado es 30.
+      optional: true
+    content: new ServiceClient(credentials, options)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#addFilter
+  id: ms-rest.ServiceClient#addFilter
+  parent: ms-rest.ServiceClient
+  name: addFilter(filter)
+  summary: >-
+    Asociar este ServiceClient una operación de filtrado. Las operaciones de filtrado pueden incluir registros, reintentos automáticos, etc. Las operaciones de filtro son funciones de la firma:
+
+        "function (requestOptions, next, callback)".
+
+    Después de realizar el preprocesamiento en las opciones de solicitud, el método debe llamar a "next" pasando las opciones actuales y una devolución de llamada con la firma siguiente:
+
+        "function (error, result, response, body)"
+
+    En esta devolución de llamada y después de procesar el resultado o la respuesta, la devolución de llamada debe invocar el original que se pasa en la devolución de llamada para continuar procesando otros filtros y finalizar la invocación del servicio.
+  fullName: ms-rest.ServiceClient.addFilter(filter)
+  type: Function
+  syntax:
+    parameters:
+    - id: filter
+      type:
+      - function
+      description: El nuevo objeto de filtro.
+    return:
+      type:
+      - ms-rest.QueueService
+      description: Un nuevo cliente de servicio con el filtro aplicado.
+    content: function addFilter(filter)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#sendRequest
+  id: ms-rest.ServiceClient#sendRequest
+  parent: ms-rest.ServiceClient
+  name: sendRequest(options, optionalCallback)
+  summary: Envía la solicitud y devuelve la respuesta.
+  fullName: ms-rest.ServiceClient.sendRequest(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{result} - The parsed (JSON.parse()) responseBody.'
+    value: '{result} - The parsed (JSON.parse()) responseBody.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error}  - The error object.'
+    value: '{Error}  - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      - ms-rest.WebResource
+      description: Las opciones de solicitud que deben usarse para enviar una solicitud correctamente. Puede ser un objeto de opciones (un objeto json simple) o el objeto de WebResource con todos establecido las propiedades necesarias para realizar una solicitud.
+    - id: options.method
+      type:
+      - string
+      description: El método de solicitud HTTP. Los valores válidos son 'GET', 'PUT', 'Principal', 'DELETE', 'OPTIONS', 'POST', 'PATCH'.
+    - id: options.url
+      type:
+      - string
+      description: La solicitud de dirección url. Puede o no se puede tener parámetros de consulta en ella. Proporcione la "url" o proporcionar 'pathTemplate' en el objeto de opciones. Ambas opciones son mutuamente excluyentes.
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "Un diccionario de parámetros de consulta que se debe anexar a la dirección url, donde el 'key' es 'consulta-parameter-name' y el elemento 'value' es 'consulta-parámetro-value'. Puede ser 'Consulta-parámetro-value' de tipo 'string' o puede ser de tipo 'object'. Cuando desea omitir la codificación de direcciones url, debe usarse el formato de 'object'. Al usar el formato de objeto, el objeto debe tener una propiedad denominada valor que proporciona el elemento 'consulta-parámetro-value'.\nEjemplo: \n   - parámetro-Query-value en formato de 'object': {'nombre de parámetro de consulta': {valor: skipUrlEncoding \"consulta-parámetro-value\": true}}\n   - parámetro-Query-value en formato 'string': {'nombre de parámetro de consulta': 'valor de parámetro de consulta'}.\nNota: ' Si options.url ya tiene algunos parámetros de consulta, a continuación, el valor proporcionado en options.queryParameters se anexará a la dirección url."
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        La plantilla de ruta de acceso de la solicitud de dirección url. Proporcione la "url" o proporcionar 'pathTemplate' en el objeto de opciones. Ambas opciones son mutuamente excluyentes.
+
+        Ejemplo: ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: "La dirección url base de la solicitud. Valor predeterminado es: 'https://management.azure.com'. Esto es aplicable únicamente con options.pathTemplate. Si va a proporcionar options.url se espera que proporcione la dirección url completa."
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "Un diccionario de parámetros de ruta de acceso que deben reemplazarse por valores reales en el pathTemplate.\nAquí la clave es 'ruta de acceso-parameter-name' y el valor es 'ruta de acceso-parámetro-value'. Puede ser 'Ruta de acceso-parámetro-value' de tipo 'string' o puede ser de tipo 'object'.\nCuando desea omitir la codificación de direcciones url, debe usarse el formato de 'object'. Al usar el formato de objeto, el objeto debe tener una propiedad denominada valor que proporciona el elemento 'ruta de acceso-parámetro-value'.\nEjemplo: \n   - parámetro-Path-value en formato de 'object': {'nombre de parámetro de ruta de acceso': {valor: 'ruta de acceso-parámetro-value' skipUrlEncoding: true}}\n   - ruta de acceso-parámetro-value en formato 'string': {'nombre de parámetro de ruta de acceso': 'valor de parámetro de ruta de acceso'}."
+      optional: true
+    - id: options.formData
+      type:
+      - object
+      description: >-
+        Un diccionario de pares de clave y valor para el objeto formData.
+
+        Si el esperado "Content-Type' debe establecerse es" application/x--www-form-urlencoded", a continuación, establézcala en el objeto options.headers else que se establecerá el encabezado"Content-Type"en 'multipart/form-data'.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        Un diccionario de encabezados de solicitud que se deben aplicar a la solicitud.
+
+        Aquí la clave es el 'nombre de encabezado' y el valor es el "valor de encabezado'. El valor del encabezado debe ser de tipo cadena.
+         - ContentType debe proporcionarse con el nombre de clave como "Content-Type". Valor predeterminado ' application/json; charset = utf-8'.
+         - 'Transfer-Encoding' se establece en "fragmentada" de forma predeterminada si 'options.bodyIsStream' está establecida en true.
+         - "Content-Type" se establece en "application/octet-stream" de forma predeterminada si 'options.bodyIsStream' está establecida en true.
+         - 'accept-language' de forma predeterminada se establece en "en-US"
+         - 'x-ms-client-request-id"de forma predeterminada se establece en un nuevo Guid. Para no generar un guid para la solicitud, establezca options.disableClientRequestId en true
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: Cuando se establece en true, indica al cliente que no establece el encabezado 'x-ms-client-request-id' en una nueva Guid().
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: Cuerpo de la solicitud. Puede ser de cualquier tipo. Este método le JSON.stringify () en el cuerpo de solicitud.
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: Proporciona información sobre cómo serializar el cuerpo de solicitud.
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: Proporciona información sobre cómo deserializar el cuerpo de respuesta.
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: 'Cuando establece en true, este método no se aplicará `JSON.stringify()` al cuerpo de solicitud. Valor predeterminado: false.'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: Indica si el cuerpo de solicitud es una secuencia (útil para escenarios de carga de archivos).
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: La devolución de llamada opcional.
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        Si se ha pasado una devolución de llamada como el último parámetro, a continuación, devuelve que la devolución de llamada else devuelve una promesa.
+
+            {function} optionalCallback(err, result, request, response)
+
+                         {Error}  err      - The Error object if an error occurred, null otherwise.
+
+                         {object} result   - The parsed (JSON.parse()) responseBody
+
+                         {object} request  - The HTTP Request object.
+
+                         {stream} response - The raw HTTP Response stream.
+
+            {Promise} A promise is returned.
+    content: function sendRequest(options, optionalCallback)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  id: ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  parent: ms-rest.ServiceClient
+  name: sendRequestWithHttpOperationResponse(options, optionalCallback)
+  summary: Envía la solicitud y devuelve la respuesta.
+  fullName: ms-rest.ServiceClient.sendRequestWithHttpOperationResponse(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<T>} - The HttpOperationResponse which contains the raw request, response and the parsed (JSON.parse) response body'
+    value: '{HttpOperationResponse<T>} - The HttpOperationResponse which contains the raw request, response and the parsed (JSON.parse) response body'
+  - originalTitle: reject
+    title: reject
+    text: '{Error}  - The error object.'
+    value: '{Error}  - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      - ms-rest.WebResource
+      description: Las opciones de solicitud que deben usarse para enviar una solicitud correctamente. Puede ser un objeto de opciones (un objeto json simple) o el objeto de WebResource con todos establecido las propiedades necesarias para realizar una solicitud.
+    - id: options.method
+      type:
+      - string
+      description: El método de solicitud HTTP. Los valores válidos son 'GET', 'PUT', 'Principal', 'DELETE', 'OPTIONS', 'POST', 'PATCH'.
+    - id: options.url
+      type:
+      - string
+      description: La solicitud de dirección url. Puede o no se puede tener parámetros de consulta en ella. Proporcione la "url" o proporcionar 'pathTemplate' en el objeto de opciones. Ambas opciones son mutuamente excluyentes.
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "Un diccionario de parámetros de consulta que se debe anexar a la dirección url, donde el 'key' es 'consulta-parameter-name' y el elemento 'value' es 'consulta-parámetro-value'. Puede ser 'Consulta-parámetro-value' de tipo 'string' o puede ser de tipo 'object'. Cuando desea omitir la codificación de direcciones url, debe usarse el formato de 'object'. Al usar el formato de objeto, el objeto debe tener una propiedad denominada valor que proporciona el elemento 'consulta-parámetro-value'.\nEjemplo: \n   - parámetro-Query-value en formato de 'object': {'nombre de parámetro de consulta': {valor: skipUrlEncoding \"consulta-parámetro-value\": true}}\n   - parámetro-Query-value en formato 'string': {'nombre de parámetro de consulta': 'valor de parámetro de consulta'}.\nNota: ' Si options.url ya tiene algunos parámetros de consulta, a continuación, el valor proporcionado en options.queryParameters se anexará a la dirección url."
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        La plantilla de ruta de acceso de la solicitud de dirección url. Proporcione la "url" o proporcionar 'pathTemplate' en el objeto de opciones. Ambas opciones son mutuamente excluyentes.
+
+        Ejemplo: ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: "La dirección url base de la solicitud. Valor predeterminado es: 'https://management.azure.com'. Esto es aplicable únicamente con options.pathTemplate. Si va a proporcionar options.url se espera que proporcione la dirección url completa."
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "Un diccionario de parámetros de ruta de acceso que deben reemplazarse por valores reales en el pathTemplate.\nAquí la clave es 'ruta de acceso-parameter-name' y el valor es 'ruta de acceso-parámetro-value'. Puede ser 'Ruta de acceso-parámetro-value' de tipo 'string' o puede ser de tipo 'object'.\nCuando desea omitir la codificación de direcciones url, debe usarse el formato de 'object'. Al usar el formato de objeto, el objeto debe tener una propiedad denominada valor que proporciona el elemento 'ruta de acceso-parámetro-value'.\nEjemplo: \n   - parámetro-Path-value en formato de 'object': {'nombre de parámetro de ruta de acceso': {valor: 'ruta de acceso-parámetro-value' skipUrlEncoding: true}}\n   - ruta de acceso-parámetro-value en formato 'string': {'nombre de parámetro de ruta de acceso': 'valor de parámetro de ruta de acceso'}."
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        Un diccionario de encabezados de solicitud que se deben aplicar a la solicitud.
+
+        Aquí la clave es el 'nombre de encabezado' y el valor es el "valor de encabezado'. El valor del encabezado debe ser de tipo cadena.
+         - ContentType debe proporcionarse con el nombre de clave como "Content-Type". Valor predeterminado ' application/json; charset = utf-8'.
+         - 'Transfer-Encoding' se establece en "fragmentada" de forma predeterminada si 'options.bodyIsStream' está establecida en true.
+         - "Content-Type" se establece en "application/octet-stream" de forma predeterminada si 'options.bodyIsStream' está establecida en true.
+         - 'accept-language' de forma predeterminada se establece en "en-US"
+         - 'x-ms-client-request-id"de forma predeterminada se establece en un nuevo Guid. Para no generar un guid para la solicitud, establezca options.disableClientRequestId en true
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: Cuando se establece en true, indica al cliente que no establece el encabezado 'x-ms-client-request-id' en una nueva Guid().
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: Cuerpo de la solicitud. Puede ser de cualquier tipo. Este método le JSON.stringify () en el cuerpo de solicitud.
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: Cuerpo de la solicitud. Puede ser de cualquier tipo. Este método le JSON.stringify () en el cuerpo de solicitud.
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: Proporciona información sobre cómo serializar el cuerpo de solicitud.
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: Proporciona información sobre cómo deserializar el cuerpo de respuesta.
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: 'Cuando establece en true, este método no se aplicará `JSON.stringify()` al cuerpo de solicitud. Valor predeterminado: false.'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: Indica si el cuerpo de solicitud es una secuencia (útil para escenarios de carga de archivos).
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: La devolución de llamada opcional.
+      optional: true
+    return:
+      type:
+      - Promise
+      description: Se devuelve una promesa.
+    content: function sendRequestWithHttpOperationResponse(options, optionalCallback)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#addUserAgentInfo
+  id: ms-rest.ServiceClient#addUserAgentInfo
+  parent: ms-rest.ServiceClient
+  name: addUserAgentInfo(additionalUserAgentInfo)
+  summary: Agrega información personalizada al encabezado user-agent
+  fullName: ms-rest.ServiceClient.addUserAgentInfo(additionalUserAgentInfo)
+  type: Function
+  syntax:
+    parameters:
+    - id: additionalUserAgentInfo
+      type:
+      - ms-rest.any
+      description: información que se agregará al encabezado user-agent, como cadena.
+    content: function addUserAgentInfo(additionalUserAgentInfo)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#getPackageJsonInfo
+  id: ms-rest.ServiceClient#getPackageJsonInfo
+  parent: ms-rest.ServiceClient
+  name: getPackageJsonInfo(managementClientDir)
+  summary: >-
+    Intenta encontrar package.json para el paquete de nodejs de azure determinada.
+
+    Si se encuentra, devuelve el nombre y la versión del paquete, lea el archivo package.json si package.json no se encuentra, devuelve un valor predeterminado.
+  fullName: ms-rest.ServiceClient.getPackageJsonInfo(managementClientDir)
+  type: Function
+  syntax:
+    parameters:
+    - id: managementClientDir
+      type:
+      - string
+      description: pase el directorio del cliente de administración de azure específica.
+    return:
+      type:
+      - object
+      description: packageJsonInfo - "name" y "version" del paquete deseado.
+    content: function getPackageJsonInfo(managementClientDir)
+  langs:
+  - js
+references:
+- uid: ms-rest.WebResource
+  name: WebResource
+  fullName: ms-rest.WebResource
+  isExternal: false

@@ -1,0 +1,297 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b1b639bf4cfb4408fcf6bcf53c7cc5cf81a00250
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072255"
+items:
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations
+  summary: >-
+    Operaciones para administrar planes bajo la suscripción de hospedaje web.
+
+    __Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [WebSiteManagementClient] {@link WebSiteManagementClient ~ WebSiteManagementClient}.
+
+    Consulte [webHostingPlans] {@link WebSiteManagementClient ~ WebSiteManagementClient #webHostingPlans}.
+
+    Inicializa una nueva instancia de la clase WebHostingPlanOperations.
+  fullName: azure-asm-website.WebHostingPlanOperations
+  type: Class
+  children:
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  langs:
+  - js
+- id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations(client)
+  fullName: azure-asm-website.WebHostingPlanOperations.WebHostingPlanOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedWebSiteManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new WebHostingPlanOperations(client)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: create(webSpaceName, parameters, callback)
+  summary: Crea un nuevo Plan de hospedaje Web.  (consulte http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ para obtener más información)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.create(webSpaceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanCreateParameters
+      description: Parámetros de Plan de hospedaje Web.
+    - id: parameters.name
+      type:
+      - string
+      description: Nombre del plan de hospedaje Web.
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: El número solicitado de los trabajadores.
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: SKU del plan de hospedaje Web.
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        El tamaño del trabajo.
+
+        Los valores posibles son pequeño, mediano y grande. Para JSON, los equivalentes son 0 = pequeño, 1 = medio y 2 = grande.
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: El sitio de administración. El sitio de administración se usa para implementar las extensiones de sitio o contenidos compartidos por todos los sitios en el plan.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function create(webSpaceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: deleteMethod(webSpaceName, webHostingPlanName, callback)
+  summary: Elimina un Plan de hospedaje Web (consulte http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ para obtener más información)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.deleteMethod(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webHostingPlanName
+      type:
+      - string
+      description: El nombre del plan de hospedaje web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function deleteMethod(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: get(webSpaceName, webHostingPlanName, callback)
+  summary: Obtiene los detalles de una existente Plan de hospedaje Web (consulte http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ para obtener más información)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.get(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webHostingPlanName
+      type:
+      - string
+      description: El nombre del plan de hospedaje web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function get(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: Puede recuperar métricas históricas de uso para un sitio emitiendo una solicitud HTTP GET.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166964.aspx para obtener más información)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webHostingPlanName
+      type:
+      - string
+      description: El nombre del plan de hospedaje web.
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanGetHistoricalUsageMetricsParameters
+      description: Parámetros proporcionados al Obtenga históricos uso las métricas de hospedaje Web operación de plan.
+    - id: parameters.metricNames
+      type:
+      - array
+      description: Especifica una lista separada por comas de los nombres de las métricas para devolver. Si no se especifica el parámetro de nombres, se devuelven todas las métricas disponibles.
+      optional: true
+    - id: parameters.startTime
+      type:
+      - date
+      description: Hora de inicio de las métricas para devolver. Si no se especifica este parámetro, se usa el principio de la hora actual.
+      optional: true
+    - id: parameters.endTime
+      type:
+      - date
+      description: Hora de finalización de las métricas para devolver. Si no se especifica este parámetro, se usa la hora actual.
+      optional: true
+    - id: parameters.timeGrain
+      type:
+      - string
+      description: El nivel de detalle en el que se devuelven las métricas. Los valores admitidos son PT1M (minuto), PT1H (hora), P1D (día).
+      optional: true
+    - id: parameters.includeInstanceBreakdown
+      type:
+      - boolean
+      description: >-
+        Marca que especifica si se deben incluidas las métricas para cada instancia de máquina.
+
+        Para los sitios que se ejecutan en más de una máquina, esto puede resultar útil para identificar una máquina incorrecta.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: list(webSpaceName, callback)
+  summary: Puede enumerar los espacios web bajo la suscripción actual emitiendo una solicitud GET.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166961.aspx para obtener más información)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.list(webSpaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function list(webSpaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: update(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: Actualiza una existente Plan de hospedaje Web.  (consulte http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ para obtener más información)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.update(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webHostingPlanName
+      type:
+      - string
+      description: El nombre del plan de hospedaje web.
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanUpdateParameters
+      description: Parámetros proporcionados a la operación de actualización Plan de hospedaje Web.
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: El número solicitado de los trabajadores.
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: SKU del plan de hospedaje Web.
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        El tamaño del trabajo.
+
+        Los valores posibles son pequeño, mediano y grande. Para JSON, los equivalentes son 0 = pequeño, 1 = medio y 2 = grande.
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: El sitio de administración. El sitio de administración se usa para implementar las extensiones de sitio o contenidos compartidos por todos los sitios en el plan.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function update(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js

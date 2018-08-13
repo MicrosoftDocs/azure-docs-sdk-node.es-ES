@@ -1,0 +1,1641 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e6575e41a8870bf1793e55a28ec0a3c4b935fae6
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072270"
+items:
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: WebSiteOperations
+  summary: >-
+    Operaciones para administrar los sitios web en un espacio web.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166981.aspx para obtener más información) __Nota__: se crea automáticamente una instancia de esta clase para una instancia de la [WebSiteManagementClient] {@link WebSiteManagementClient ~ WebSiteManagementClient}.
+
+    Consulte [sitios Web] {@link WebSiteManagementClient ~ WebSiteManagementClient #webSites}.
+
+    Inicializa una nueva instancia de la clase WebSiteOperations.
+  fullName: azure-asm-website.WebSiteOperations
+  type: Class
+  children:
+  - azure-asm-website.WebSiteOperations~WebSiteOperations.#ctor
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#applySlotConfiguration
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#backup
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#beginSwappingSlots
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#create
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#createHybridConnection
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#createRepository
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#deleteMethod
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#deleteHybridConnection
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#deleteRepository
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#discover
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#generatePassword
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#get
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#getBackupConfiguration
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#getConfiguration
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#getHybridConnection
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#getInstanceIds
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#getPublishProfile
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#getRepository
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#getSlotConfigNames
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#getUsageMetrics
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#isHostnameAvailable
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#listBackups
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#listHybridConnections
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#resetSlotConfiguration
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#restart
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#restore
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#swapSlots
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#syncRepository
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#update
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#updateBackupConfiguration
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#updateConfiguration
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#updateHybridConnection
+  - azure-asm-website.WebSiteOperations~WebSiteOperations#updateSlotConfigNames
+  langs:
+  - js
+- id: azure-asm-website.WebSiteOperations~WebSiteOperations.#ctor
+  uid: azure-asm-website.WebSiteOperations~WebSiteOperations.#ctor
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: WebSiteOperations(client)
+  fullName: azure-asm-website.WebSiteOperations.WebSiteOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedWebSiteManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new WebSiteOperations(client)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#applySlotConfiguration
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#applySlotConfiguration
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: applySlotConfiguration(webSpaceName, webSiteName, targetSwapSlot, callback)
+  summary: ''
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.applySlotConfiguration(webSpaceName, webSiteName, targetSwapSlot, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: targetSwapSlot
+      type:
+      - string
+      description: El nombre de la ranura de destino que se intercambie con.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function applySlotConfiguration(webSpaceName, webSiteName, targetSwapSlot, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#backup
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#backup
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: backup(webSpaceName, webSiteName, backupRequest, callback)
+  summary: Copias de seguridad de un sitio y a petición.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.backup(webSpaceName, webSiteName, backupRequest, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: backupRequest
+      type:
+      - azure-asm-website.BackupRequest
+      description: Una especificación de la copia de seguridad.
+    - id: backupRequest.backupSchedule
+      type:
+      - azure-asm-website.BackupSchedule
+      description: La estructura programar copia de seguridad - válida sólo al configurar una programación. Debe ser Null para las copias de seguridad y a petición.
+      optional: true
+    - id: backupRequest.backupSchedule.frequencyInterval
+      type:
+      - number
+      description: La frecuencia de copias de seguridad.
+      optional: true
+    - id: backupRequest.backupSchedule.frequencyUnit
+      type:
+      - azure-asm-website.FrequencyUnit
+      description: Unidades para FrequencyInterval - por ejemplo, día o una hora
+      optional: true
+    - id: backupRequest.backupSchedule.keepAtLeastOneBackup
+      type:
+      - boolean
+      description: Directiva de retención elimina las copias de seguridad después de un número predefinido de días. Si es true, habrá siempre al menos una copia de seguridad izquierda. independientemente de la directiva. Si es false, se pueden eliminar todas las copias de seguridad.
+      optional: true
+    - id: backupRequest.backupSchedule.lastExecutionTime
+      type:
+      - date
+      description: La última vez en cuando esta programación inicia una copia de seguridad, Null en caso no inició nada todavía.
+      optional: true
+    - id: backupRequest.backupSchedule.retentionPeriodInDays
+      type:
+      - number
+      description: Las copias de seguridad más N días (definida por este valor de N) se eliminarán automáticamente.
+      optional: true
+    - id: backupRequest.backupSchedule.startTime
+      type:
+      - date
+      description: Cuando esta programación debe comenzar la copia de seguridad del sitio. NULL significa inmediatamente.
+      optional: true
+    - id: backupRequest.databases
+      type:
+      - azure-asm-website.IEnumerable
+      description: Configuración de base de datos de copia de seguridad.
+      optional: true
+    - id: backupRequest.enabled
+      type:
+      - boolean
+      description: Válido solo para una programación de copia de seguridad (puede ser Null para las copias de seguridad y a petición). True si se habilita; False si deshabilita (no se realizará ninguna copia de seguridad).
+      optional: true
+    - id: backupRequest.name
+      type:
+      - string
+      description: 'El nombre de esta copia de seguridad: se utilizará para generar un nombre de blob.'
+      optional: true
+    - id: backupRequest.storageAccountUrl
+      type:
+      - string
+      description: >-
+        Dirección URL de SAS para un contenedor en una cuenta de almacenamiento. Por ejemplo,
+
+        https://NAME.blob.core.windows.net/CONTAINERNAME/?sv=2012-02-12&st=2013-12-05T19%3A30%3A45Z&se=2017-12-04T19%3A30%3A45Z&sr=c&sp=rwdl&sig=abcdefABCDEFabcdef0123456789
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function backup(webSpaceName, webSiteName, backupRequest, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#beginSwappingSlots
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#beginSwappingSlots
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: beginSwappingSlots(webSpaceName, webSiteName, sourceSlotName, targetSlotName, callback)
+  summary: Puede intercambiar un sitio web de una ranura a otra ranura.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.beginSwappingSlots(webSpaceName, webSiteName, sourceSlotName, targetSlotName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: sourceSlotName
+      type:
+      - string
+      description: El nombre de la primera ranura de sitio web para el intercambio (origen).
+    - id: targetSlotName
+      type:
+      - string
+      description: El nombre de la segunda ranura de sitio web para intercambiarla (destino).
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function beginSwappingSlots(webSpaceName, webSiteName, sourceSlotName, targetSlotName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#create
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#create
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: create(webSpaceName, parameters, callback)
+  summary: Puede crear un sitio web mediante el uso de una solicitud POST que incluye el nombre del sitio web y otra información en el cuerpo de solicitud.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166986.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.create(webSpaceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: parameters
+      type:
+      - azure-asm-website.WebSiteCreateParameters
+      description: Parámetros proporcionados a la operación de crear un sitio Web.
+    - id: parameters.name
+      type:
+      - string
+      description: El nombre del sitio web. Debe coincidir con el nombre de host en el dominio predeterminado.
+    - id: parameters.serverFarm
+      type:
+      - string
+      description: >-
+        El nombre de la granja de servidores (Plan de hospedaje Web) asociado con este sitio web. Se trata de un valor requerido.
+
+        Granja de servidores ya debe existir.
+    - id: parameters.webSpace
+      type:
+      - azure-asm-website.WebSpaceDetails
+      description: Información sobre el espacio web para crear.
+      optional: true
+    - id: parameters.webSpace.geoRegion
+      type:
+      - string
+      description: La región geográfica del espacio web que va a crear.
+      optional: true
+    - id: parameters.webSpace.name
+      type:
+      - string
+      description: El nombre del espacio web.
+      optional: true
+    - id: parameters.webSpace.plan
+      type:
+      - string
+      description: El plan de espacio web. Este valor debe ser VirtualDedicatedPlan.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function create(webSpaceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#createHybridConnection
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#createHybridConnection
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: createHybridConnection(webSpaceName, siteName, parameters, callback)
+  summary: Crea una asociación con una conexión híbrida para un sitio web.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.createHybridConnection(webSpaceName, siteName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: siteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: parameters
+      type:
+      - azure-asm-website.HybridConnectionCreateParameters
+      description: Parámetros proporcionados a la operación crear conexión híbrida.
+    - id: parameters.biztalkUri
+      type:
+      - string
+      description: El uri de recurso del servicio de biztalk. Este campo puede dejarse vacío; Sin él, el Portal de Azure no podrá mostrar correctamente el servicio de biztalk para esta conexión.
+    - id: parameters.entityConnectionString
+      type:
+      - string
+      description: La cadena de conexión de la aplicación de biztalk para esta conexión
+    - id: parameters.entityName
+      type:
+      - string
+      description: El nombre único para esta conexión
+    - id: parameters.hostname
+      type:
+      - string
+      description: El nombre de host del recurso de destino local
+    - id: parameters.port
+      type:
+      - number
+      description: El puerto del recurso de destino local
+    - id: parameters.resourceConnectionString
+      type:
+      - string
+      description: Reservado para uso futuro. La cadena de conexión para el recurso. Este campo puede dejarse vacío.
+    - id: parameters.resourceType
+      type:
+      - string
+      description: Reservado para uso futuro. El tipo de recurso que va a conectar. Este campo puede dejarse vacío.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function createHybridConnection(webSpaceName, siteName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#createRepository
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#createRepository
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: createRepository(webSpaceName, webSiteName, callback)
+  summary: Un repositorio de sitio web es esencialmente un repositorio de Git que puede usar para administrar el contenido del sitio web. Mediante el uso de herramientas de control de código fuente de Git, puede insertar o extraer los cambios controlados por versión del sitio. Esta API ejecuta un repositorio de la operación de creación.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166967.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.createRepository(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function createRepository(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#deleteMethod
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#deleteMethod
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: deleteMethod(webSpaceName, webSiteName, parameters, callback)
+  summary: Puede eliminar un sitio web emitiendo una solicitud HTTP DELETE. Si el sitio web que se va a eliminar es el único sitio restantes en una granja de servidores, también puede eliminar la granja de servidores también mediante el parámetro deleteEmptyServerFarm.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn236430.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.deleteMethod(webSpaceName, webSiteName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: parameters
+      type:
+      - azure-asm-website.WebSiteDeleteParameters
+      description: Parámetros proporcionados a la operación Eliminar sitio Web.
+    - id: parameters.deleteEmptyServerFarm
+      type:
+      - boolean
+      description: Indica si se debe eliminar la granja de servidores. Puede eliminar la granja de servidores si el sitio web que se va a eliminar es el último sitio web en una granja de servidores.
+    - id: parameters.deleteMetrics
+      type:
+      - boolean
+      description: Indica si se deben eliminar las métricas para el sitio web.
+    - id: parameters.deleteAllSlots
+      type:
+      - boolean
+      description: Indica si se deben eliminar todas las ranuras para el sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function deleteMethod(webSpaceName, webSiteName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#deleteHybridConnection
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#deleteHybridConnection
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: deleteHybridConnection(webSpaceName, webSiteName, hybridConnectionName, callback)
+  summary: Elimina una conexión híbrida en un sitio específico.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.deleteHybridConnection(webSpaceName, webSiteName, hybridConnectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: hybridConnectionName
+      type:
+      - string
+      description: El nombre de la entidad de la conexión híbrida
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function deleteHybridConnection(webSpaceName, webSiteName, hybridConnectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#deleteRepository
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#deleteRepository
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: deleteRepository(webSpaceName, webSiteName, callback)
+  summary: Un repositorio de sitio web es esencialmente un repositorio de Git que puede usar para administrar el contenido del sitio web. Mediante el uso de herramientas de control de código fuente de Git, puede insertar o extraer los cambios controlados por versión del sitio. Esta API ejecuta una operación de eliminación del repositorio.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166967.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.deleteRepository(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function deleteRepository(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#discover
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#discover
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: discover(webSpaceName, webSiteName, restoreRequest, callback)
+  summary: Examina una copia de seguridad en una cuenta de almacenamiento y devuelve información de la base de datos etcetera. Debe llamarse antes de llamar a la restauración para detectar qué parámetros son necesarios para la operación de restauración.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.discover(webSpaceName, webSiteName, restoreRequest, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: restoreRequest
+      type:
+      - azure-asm-website.RestoreRequest
+      description: Una solicitud de restauración.
+    - id: restoreRequest.adjustConnectionStrings
+      type:
+      - boolean
+      description: Si la operación de restauración también restaura una base de datos junto con el sitio Web y la base de datos está en un servidor distinto al original del sitio h
+      optional: true
+    - id: restoreRequest.blobName
+      type:
+      - string
+      description: El nombre del blob donde se almacena la copia de seguridad. Por ejemplo, mysite1_20140203.zip
+      optional: true
+    - id: restoreRequest.databases
+      type:
+      - azure-asm-website.IEnumerable
+      description: Configuración de base de datos de copia de seguridad.
+      optional: true
+    - id: restoreRequest.ignoreConflictingHostNames
+      type:
+      - boolean
+      description: Al restaurar un sitio, dominios personalizados pueden entrar en conflicto con otro sitio en el mismo centro de datos. Si este valor es true, se omitirá estos nombres de host durante la restauración. Si es false, se producirá un error en la operación de restauración en conflicto de este tipo.
+      optional: true
+    - id: restoreRequest.overwrite
+      type:
+      - boolean
+      description: True si la operación de restauración que se usará para sobrescribir un sitio existente; False en caso contrario.
+      optional: true
+    - id: restoreRequest.storageAccountUrl
+      type:
+      - string
+      description: >-
+        Dirección URL de SAS para un contenedor en una cuenta de almacenamiento. Por ejemplo,
+
+        https://NAME.blob.core.windows.net/CONTAINERNAME/?sv=2012-02-12&st=2013-12-05T19%3A30%3A45Z&se=2017-12-04T19%3A30%3A45Z&sr=c&sp=rwdl&sig=abcdefABCDEFabcdef0123456789
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function discover(webSpaceName, webSiteName, restoreRequest, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#generatePassword
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#generatePassword
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: generatePassword(webSpaceName, webSiteName, callback)
+  summary: 'Puede generar una nueva contraseña aleatoria para publicar un sitio emitiendo una solicitud HTTP POST. Sugerencia: Si desea comprobar que ha cambiado la contraseña de publicación, emitir una solicitud HTTP GET en /publishxml antes de llamar a /newpassword. En el código XML de publicación, tenga en cuenta el valor de hash en el atributo ContraseñaDeUsuario. Después de llamar a /newpassword, vuelve a llamar al /publishxml. A continuación, puede comparar el nuevo valor de ContraseñaDeUsuario en el XML de publicación con el que anotó anteriormente.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn236428.aspx para obtener más información)'
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.generatePassword(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function generatePassword(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#get
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#get
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: get(webSpaceName, webSiteName, parametersOrCallback, callback)
+  summary: >-
+    Puede recuperar los detalles de un sitio web emitiendo una solicitud HTTP GET.
+
+    (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn167007.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.get(webSpaceName, webSiteName, parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: parametersOrCallback
+      type:
+      - azure-asm-website.WebSiteGetParameters
+      description: Parámetros proporcionados a la operación Get de sitio Web.
+      optional: true
+    - id: parametersOrCallback.propertiesToInclude
+      type:
+      - array
+      description: Especifica una lista de los nombres de los parámetros adicionales que se va a devolver.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function get(webSpaceName, webSiteName, parametersOrCallback, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#getBackupConfiguration
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#getBackupConfiguration
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: getBackupConfiguration(webSpaceName, webSiteName, callback)
+  summary: Obtiene una configuración de programación para copias de seguridad del sitio.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.getBackupConfiguration(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getBackupConfiguration(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#getConfiguration
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#getConfiguration
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: getConfiguration(webSpaceName, webSiteName, callback)
+  summary: Puede recuperar los valores de configuración para un sitio web emitiendo una solicitud HTTP GET.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166985.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.getConfiguration(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getConfiguration(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#getHistoricalUsageMetrics
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: getHistoricalUsageMetrics(webSpaceName, webSiteName, parameters, callback)
+  summary: Puede recuperar métricas históricas de uso para un sitio emitiendo una solicitud HTTP GET.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166964.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.getHistoricalUsageMetrics(webSpaceName, webSiteName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: parameters
+      type:
+      - azure-asm-website.WebSiteGetHistoricalUsageMetricsParameters
+      description: Parámetros proporcionados a la operación obtener históricos sitio de Web de las métricas de uso.
+    - id: parameters.metricNames
+      type:
+      - array
+      description: Especifica una lista separada por comas de los nombres de las métricas para devolver. Si no se especifica el parámetro de nombres, se devuelven todas las métricas disponibles.
+      optional: true
+    - id: parameters.startTime
+      type:
+      - date
+      description: Hora de inicio de las métricas para devolver. Si no se especifica este parámetro, se usa el principio de la hora actual.
+      optional: true
+    - id: parameters.endTime
+      type:
+      - date
+      description: Hora de finalización de las métricas para devolver. Si no se especifica este parámetro, se usa la hora actual.
+      optional: true
+    - id: parameters.timeGrain
+      type:
+      - string
+      description: El nivel de detalle en el que se devuelven las métricas. Los valores admitidos son PT1M (minuto), PT1H (hora), P1D (día).
+      optional: true
+    - id: parameters.includeInstanceBreakdown
+      type:
+      - boolean
+      description: >-
+        Marca que especifica si se deben incluidas las métricas para cada instancia de máquina.
+
+        Para los sitios que se ejecutan en más de una máquina, esto puede resultar útil para identificar una máquina incorrecta.
+      optional: true
+    - id: parameters.slotView
+      type:
+      - boolean
+      description: 'Marca que especifica si se devuelven las métricas debe reflejar los intercambios de ranura. Veamos por ejemplo las siguientes casos: si la ranura de producción tiene el nombre de host www.contos.com e intercambiar el tráfico de take durante 12 horas y versiones posteriores con la ranura de ensayo. Obtención de métricas con SlotView = false, que reflejará el intercambio: por ejemplo, habrá un aumento en las métricas de ranura de ensayo después de pase a producción. Si SlotView = true se usa mostrará las métricas para el www.contoso.com independientemente de qué ranura se que actúa en este momento.'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getHistoricalUsageMetrics(webSpaceName, webSiteName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#getHybridConnection
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#getHybridConnection
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: getHybridConnection(webSpaceName, webSiteName, hybridConnectionName, callback)
+  summary: Recupera una conexión híbrida determinada que pertenece a un sitio específico.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.getHybridConnection(webSpaceName, webSiteName, hybridConnectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: hybridConnectionName
+      type:
+      - string
+      description: El nombre de la entidad de la conexión híbrida
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getHybridConnection(webSpaceName, webSiteName, hybridConnectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#getInstanceIds
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#getInstanceIds
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: getInstanceIds(webSpaceName, webSiteName, callback)
+  summary: Puede recuperar la lista de instancias activas por identificadores para un sitio web emitiendo una solicitud HTTP GET.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166981.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.getInstanceIds(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getInstanceIds(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#getPublishProfile
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#getPublishProfile
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: getPublishProfile(webSpaceName, webSiteName, callback)
+  summary: Puede recuperar la información de configuración de publicación para un sitio web emitiendo una solicitud HTTP GET.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166996.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.getPublishProfile(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getPublishProfile(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#getRepository
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#getRepository
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: getRepository(webSpaceName, webSiteName, callback)
+  summary: Un repositorio de sitio web es esencialmente un repositorio de Git que puede usar para administrar el contenido del sitio web. Mediante el uso de herramientas de control de código fuente de Git, puede insertar o extraer los cambios controlados por versión del sitio. Esta API ejecuta una operación get del repositorio.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166967.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.getRepository(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getRepository(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#getSlotConfigNames
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#getSlotConfigNames
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: getSlotConfigNames(webSpaceName, webSiteName, callback)
+  summary: ''
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.getSlotConfigNames(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getSlotConfigNames(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#getUsageMetrics
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#getUsageMetrics
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: getUsageMetrics(webSpaceName, webSiteName, callback)
+  summary: 'Puede recuperar las métricas de uso actuales para un sitio emitiendo una solicitud HTTP GET. Las métricas devuelven incluye el tiempo de CPU, datos de entrada, datos de salida, Bytes locales leídos, Bytes locales escritos, Bytes leídos de red, red de Bytes escritos, WP detener solicitudes, uso de memoria, tiempo de CPU: límite en minutos y almacenamiento del sistema de archivos.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166991.aspx para obtener más información)'
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.getUsageMetrics(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function getUsageMetrics(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#isHostnameAvailable
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#isHostnameAvailable
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: isHostnameAvailable(webSiteName, callback)
+  summary: Determina si un nombre de host está disponible.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.isHostnameAvailable(webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function isHostnameAvailable(webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#listBackups
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#listBackups
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: listBackups(webSpaceName, webSiteName, callback)
+  summary: Devuelve una lista de todas las copias de seguridad que se realiza un seguimiento por el sistema.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.listBackups(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function listBackups(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#listHybridConnections
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#listHybridConnections
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: listHybridConnections(webSpaceName, webSiteName, callback)
+  summary: Recupera una lista de todas las conexiones híbridas en un sitio web específico.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.listHybridConnections(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function listHybridConnections(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#resetSlotConfiguration
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#resetSlotConfiguration
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: resetSlotConfiguration(webSpaceName, webSiteName, callback)
+  summary: ''
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.resetSlotConfiguration(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function resetSlotConfiguration(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#restart
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#restart
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: restart(webSpaceName, webSiteName, callback)
+  summary: Puede reiniciar un sitio web emitiendo una solicitud HTTP POST.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn236425.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.restart(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function restart(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#restore
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#restore
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: restore(webSpaceName, webSiteName, restoreRequest, callback)
+  summary: Restaura un sitio a un sitio nuevo o un sitio existente (marca de sobrescritura tiene que establecerse en true para eso).
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.restore(webSpaceName, webSiteName, restoreRequest, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: restoreRequest
+      type:
+      - azure-asm-website.RestoreRequest
+      description: Una solicitud de restauración.
+    - id: restoreRequest.adjustConnectionStrings
+      type:
+      - boolean
+      description: Si la operación de restauración también restaura una base de datos junto con el sitio Web y la base de datos está en un servidor distinto al original del sitio h
+      optional: true
+    - id: restoreRequest.blobName
+      type:
+      - string
+      description: El nombre del blob donde se almacena la copia de seguridad. Por ejemplo, mysite1_20140203.zip
+      optional: true
+    - id: restoreRequest.databases
+      type:
+      - azure-asm-website.IEnumerable
+      description: Configuración de base de datos de copia de seguridad.
+      optional: true
+    - id: restoreRequest.ignoreConflictingHostNames
+      type:
+      - boolean
+      description: Al restaurar un sitio, dominios personalizados pueden entrar en conflicto con otro sitio en el mismo centro de datos. Si este valor es true, se omitirá estos nombres de host durante la restauración. Si es false, se producirá un error en la operación de restauración en conflicto de este tipo.
+      optional: true
+    - id: restoreRequest.overwrite
+      type:
+      - boolean
+      description: True si la operación de restauración que se usará para sobrescribir un sitio existente; False en caso contrario.
+      optional: true
+    - id: restoreRequest.storageAccountUrl
+      type:
+      - string
+      description: >-
+        Dirección URL de SAS para un contenedor en una cuenta de almacenamiento. Por ejemplo,
+
+        https://NAME.blob.core.windows.net/CONTAINERNAME/?sv=2012-02-12&st=2013-12-05T19%3A30%3A45Z&se=2017-12-04T19%3A30%3A45Z&sr=c&sp=rwdl&sig=abcdefABCDEFabcdef0123456789
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function restore(webSpaceName, webSiteName, restoreRequest, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#swapSlots
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#swapSlots
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: swapSlots(webSpaceName, webSiteName, sourceSlotName, targetSlotName, callback)
+  summary: Puede intercambiar un sitio web de una ranura a otra ranura.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.swapSlots(webSpaceName, webSiteName, sourceSlotName, targetSlotName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: sourceSlotName
+      type:
+      - string
+      description: El nombre de la primera ranura de sitio web para el intercambio (origen).
+    - id: targetSlotName
+      type:
+      - string
+      description: El nombre de la segunda ranura de sitio web para intercambiarla (destino).
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function swapSlots(webSpaceName, webSiteName, sourceSlotName, targetSlotName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#syncRepository
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#syncRepository
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: syncRepository(webSpaceName, webSiteName, callback)
+  summary: Un repositorio de sitio web es esencialmente un repositorio de Git que puede usar para administrar el contenido del sitio web. Mediante el uso de herramientas de control de código fuente de Git, puede insertar o extraer los cambios controlados por versión del sitio. Esta API ejecuta una operación de sincronización de repositorio.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166967.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.syncRepository(webSpaceName, webSiteName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function syncRepository(webSpaceName, webSiteName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#update
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#update
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: update(webSpaceName, webSiteName, parameters, callback)
+  summary: Puede actualizar la configuración de un sitio web mediante el método HTTP PUT y especificando la configuración en el cuerpo de solicitud.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn167005.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.update(webSpaceName, webSiteName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: parameters
+      type:
+      - azure-asm-website.WebSiteUpdateParameters
+      description: Parámetros proporcionados a la operación Update Web Site.
+    - id: parameters.hostNameSslStates
+      type:
+      - array
+      description: Estados SSL de los nombres de host enlazados al sitio web.
+      optional: true
+    - id: parameters.hostNames
+      type:
+      - array
+      description: >-
+        Una matriz de cadenas que contiene los nombres de host pública para el sitio web, incluidos los dominios personalizados.
+
+        Importante: Al agregar un dominio personalizado en una operación PUT, no olvide incluir cada nombre de host que desee para el sitio web. Para eliminar un nombre de dominio personalizado en una operación PUT, incluya todos los nombres de host para el sitio web que desea mantener, pero omita el que desea eliminar.
+      optional: true
+    - id: parameters.serverFarm
+      type:
+      - string
+      description: Cadena que especifica dónde colocar el sitio de la granja de servidores (Plan de hospedaje Web). Granja de servidores debe existir.
+      optional: true
+    - id: parameters.state
+      type:
+      - string
+      description: Una cadena que describe el estado del sitio web. Los valores posibles incluyen QuotaExceeded, ejecución o detenido.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function update(webSpaceName, webSiteName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#updateBackupConfiguration
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#updateBackupConfiguration
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: updateBackupConfiguration(webSpaceName, webSiteName, backupRequest, callback)
+  summary: Actualiza una programación de copia de seguridad para un sitio.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.updateBackupConfiguration(webSpaceName, webSiteName, backupRequest, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: backupRequest
+      type:
+      - azure-asm-website.BackupRequest
+      description: Una especificación de la programación de copia de seguridad.
+    - id: backupRequest.backupSchedule
+      type:
+      - azure-asm-website.BackupSchedule
+      description: La estructura programar copia de seguridad - válida sólo al configurar una programación. Debe ser Null para las copias de seguridad y a petición.
+      optional: true
+    - id: backupRequest.backupSchedule.frequencyInterval
+      type:
+      - number
+      description: La frecuencia de copias de seguridad.
+      optional: true
+    - id: backupRequest.backupSchedule.frequencyUnit
+      type:
+      - azure-asm-website.FrequencyUnit
+      description: Unidades para FrequencyInterval - por ejemplo, día o una hora
+      optional: true
+    - id: backupRequest.backupSchedule.keepAtLeastOneBackup
+      type:
+      - boolean
+      description: Directiva de retención elimina las copias de seguridad después de un número predefinido de días. Si es true, habrá siempre al menos una copia de seguridad izquierda. independientemente de la directiva. Si es false, se pueden eliminar todas las copias de seguridad.
+      optional: true
+    - id: backupRequest.backupSchedule.lastExecutionTime
+      type:
+      - date
+      description: La última vez en cuando esta programación inicia una copia de seguridad, Null en caso no inició nada todavía.
+      optional: true
+    - id: backupRequest.backupSchedule.retentionPeriodInDays
+      type:
+      - number
+      description: Las copias de seguridad más N días (definida por este valor de N) se eliminarán automáticamente.
+      optional: true
+    - id: backupRequest.backupSchedule.startTime
+      type:
+      - date
+      description: Cuando esta programación debe comenzar la copia de seguridad del sitio. NULL significa inmediatamente.
+      optional: true
+    - id: backupRequest.databases
+      type:
+      - azure-asm-website.IEnumerable
+      description: Configuración de base de datos de copia de seguridad.
+      optional: true
+    - id: backupRequest.enabled
+      type:
+      - boolean
+      description: Válido solo para una programación de copia de seguridad (puede ser Null para las copias de seguridad y a petición). True si se habilita; False si deshabilita (no se realizará ninguna copia de seguridad).
+      optional: true
+    - id: backupRequest.name
+      type:
+      - string
+      description: 'El nombre de esta copia de seguridad: se utilizará para generar un nombre de blob.'
+      optional: true
+    - id: backupRequest.storageAccountUrl
+      type:
+      - string
+      description: >-
+        Dirección URL de SAS para un contenedor en una cuenta de almacenamiento. Por ejemplo,
+
+        https://NAME.blob.core.windows.net/CONTAINERNAME/?sv=2012-02-12&st=2013-12-05T19%3A30%3A45Z&se=2017-12-04T19%3A30%3A45Z&sr=c&sp=rwdl&sig=abcdefABCDEFabcdef0123456789
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function updateBackupConfiguration(webSpaceName, webSiteName, backupRequest, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#updateConfiguration
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#updateConfiguration
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: updateConfiguration(webSpaceName, webSiteName, parameters, callback)
+  summary: Puede actualizar los valores de configuración para un sitio web emitiendo un HTTP PUT con un cuerpo de solicitud que contiene la configuración actualizada.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166985.aspx para obtener más información)
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.updateConfiguration(webSpaceName, webSiteName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: parameters
+      type:
+      - azure-asm-website.WebSiteUpdateConfigurationParameters
+      description: Parámetros proporcionados a la operación del sitio Web de configuración de actualización.
+    - id: parameters.appSettings
+      type:
+      - object
+      description: Un conjunto de pares de nombre-valor que contienen la configuración de la aplicación para un sitio web.
+      optional: true
+    - id: parameters.connectionStrings
+      type:
+      - array
+      description: Las cadenas de conexión de base de datos y otros recursos externos.
+      optional: true
+    - id: parameters.defaultDocuments
+      type:
+      - array
+      description: Uno o varios elementos de cadena que muestran, en orden de preferencia, el nombre del archivo que un sitio web que se devuelve cuando se solicita el nombre de dominio del sitio web por sí mismo. Por ejemplo, si el valor predeterminado de documento para http://contoso.com es default.htm, la página http://www.contoso.com/default.htm se devuelve cuando el explorador apunta a http://www.contoso.com.
+      optional: true
+    - id: parameters.detailedErrorLoggingEnabled
+      type:
+      - boolean
+      description: Indica si el registro de errores detallado está habilitado.
+      optional: true
+    - id: parameters.documentRoot
+      type:
+      - string
+      description: La raíz del documento.
+      optional: true
+    - id: parameters.handlerMappings
+      type:
+      - array
+      description: Especifica los programas ejecutables personalizados para controlar las solicitudes de extensiones de nombre de archivo específico.
+      optional: true
+    - id: parameters.httpLoggingEnabled
+      type:
+      - boolean
+      description: Indica si está habilitado el registro de errores HTTP.
+      optional: true
+    - id: parameters.logsDirectorySizeLimit
+      type:
+      - number
+      description: El límite de tamaño del directorio de registros.
+      optional: true
+    - id: parameters.managedPipelineMode
+      type:
+      - azure-asm-website.ManagedPipelineMode
+      description: El modo de canalización administrada.
+      optional: true
+    - id: parameters.metadata
+      type:
+      - object
+      description: Pares nombre-valor para el control de código fuente u otra información.
+      optional: true
+    - id: parameters.netFrameworkVersion
+      type:
+      - string
+      description: La versión de .NET Framework. Los valores admitidos son v2.0 y v4.0.
+      optional: true
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: >-
+        El número de trabajos web asignados al sitio web. Si el modo del sitio web es gratuito, este valor es 1.
+
+        Si se comparte el modo del sitio web, este valor puede comprendido entre 1 y 6. Si el modo del sitio web estándar, este valor puede comprendido entre 1 y 10.
+      optional: true
+    - id: parameters.phpVersion
+      type:
+      - string
+      description: >-
+        La versión de PHP del sitio web.
+
+        Los valores admitidos son una cadena vacía (una cadena vacía deshabilita PHP), 5.3 y 5.4.
+      optional: true
+    - id: parameters.remoteDebuggingEnabled
+      type:
+      - boolean
+      description: Indica si está habilitada la depuración remota.
+      optional: true
+    - id: parameters.remoteDebuggingVersion
+      type:
+      - string
+      description: La versión de depuración remota.
+      optional: true
+    - id: parameters.requestTracingEnabled
+      type:
+      - boolean
+      description: Indica si está habilitado el seguimiento de solicitudes.
+      optional: true
+    - id: parameters.requestTracingExpirationTime
+      type:
+      - date
+      description: Tiempo restante hasta que expire el seguimiento de solicitudes.
+      optional: true
+    - id: parameters.scmType
+      type:
+      - string
+      description: El método de control de origen que usa el sitio web (por ejemplo, Git Local). Si no se ha configurado la implementación desde control de código fuente para el sitio web, este valor es None.
+      optional: true
+    - id: parameters.use32BitWorkerProcess
+      type:
+      - boolean
+      description: Indica si está habilitado el modo de 32 bits.
+      optional: true
+    - id: parameters.webSocketsEnabled
+      type:
+      - boolean
+      description: Indica si están habilitados los Sockets Web.
+      optional: true
+    - id: parameters.alwaysOn
+      type:
+      - boolean
+      description: Indica si la característica Always On del sitio habilitado.
+      optional: true
+    - id: parameters.routingRules
+      type:
+      - array
+      description: Lista de reglas de enrutamiento para el sitio Web.
+      optional: true
+    - id: parameters.javaVersion
+      type:
+      - string
+      description: >-
+        La versión JDK del sitio web.
+
+        Los valores admitidos son una cadena vacía (una cadena vacía deshabilita Java), 1.7.0_51
+      optional: true
+    - id: parameters.javaContainer
+      type:
+      - string
+      description: >-
+        El sitio web del contenedor de Java.
+
+        Los valores admitidos son TOMCAT, JETTY
+      optional: true
+    - id: parameters.javaContainerVersion
+      type:
+      - string
+      description: El sitio web de Java versión del contenedor. Los valores admitidos son 7.0.50 si el contenedor de Java es TOMCAT y 9.1.0.20131115 si el contenedor de Java JETTY
+      optional: true
+    - id: parameters.autoSwapSlotName
+      type:
+      - string
+      description: Establece el nombre del espacio de intercambio con tras una implementación correcta.
+      optional: true
+    - id: parameters.siteAuthEnabled
+      type:
+      - boolean
+      description: Obtiene o establece un valor que indica si el sitio 's autenticación / autorización característica está habilitada.
+      optional: true
+    - id: parameters.siteAuthSettings
+      type:
+      - azure-asm-website.SiteAuthSettings
+      description: Obtiene o establece la autenticación / configuración de autorización de un sitio web.
+      optional: true
+    - id: parameters.siteAuthSettings.aADClientId
+      type:
+      - string
+      description: Obtiene o establece el valor de client_id conexión OpenID para el sitio web.
+      optional: true
+    - id: parameters.siteAuthSettings.openIdIssuer
+      type:
+      - string
+      description: Obtiene o establece al emisor de OpenID Connect de valor de dirección URL para el sitio web.
+      optional: true
+    - id: parameters.limits
+      type:
+      - azure-asm-website.SiteLimits
+      description: Los límites de sitio por.
+      optional: true
+    - id: parameters.limits.maxPercentageCpu
+      type:
+      - number
+      description: El nombre del par.
+      optional: true
+    - id: parameters.limits.maxMemoryInMb
+      type:
+      - number
+      description: Memoria máxima permitida en MB
+      optional: true
+    - id: parameters.limits.maxDiskSizeInMb
+      type:
+      - number
+      description: Tamaño de disco máximo permitido en MB
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function updateConfiguration(webSpaceName, webSiteName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#updateHybridConnection
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#updateHybridConnection
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: updateHybridConnection(webSpaceName, siteName, parameters, callback)
+  summary: Actualiza una asociación a una conexión híbrida para un sitio web.
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.updateHybridConnection(webSpaceName, siteName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: siteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: parameters
+      type:
+      - azure-asm-website.HybridConnectionUpdateParameters
+      description: Parámetros proporcionados a la operación crear conexión híbrida.
+    - id: parameters.biztalkUri
+      type:
+      - string
+      description: El uri de recurso del servicio de biztalk. Este campo puede dejarse vacío; Sin él, el Portal de Azure no podrá mostrar correctamente el servicio de biztalk para esta conexión.
+      optional: true
+    - id: parameters.entityConnectionString
+      type:
+      - string
+      description: La cadena de conexión de la aplicación de biztalk para esta conexión
+      optional: true
+    - id: parameters.entityName
+      type:
+      - string
+      description: El nombre único para esta conexión
+    - id: parameters.hostname
+      type:
+      - string
+      description: El nombre de host del recurso de destino local
+      optional: true
+    - id: parameters.port
+      type:
+      - number
+      description: El puerto del recurso de destino local
+      optional: true
+    - id: parameters.resourceConnectionString
+      type:
+      - string
+      description: Reservado para uso futuro. La cadena de conexión para el recurso. Este campo puede dejarse vacío.
+      optional: true
+    - id: parameters.resourceType
+      type:
+      - string
+      description: Reservado para uso futuro. El tipo de recurso que va a conectar. Este campo puede dejarse vacío.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function updateHybridConnection(webSpaceName, siteName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteOperations~WebSiteOperations#updateSlotConfigNames
+  id: azure-asm-website.WebSiteOperations~WebSiteOperations#updateSlotConfigNames
+  parent: azure-asm-website.WebSiteOperations~WebSiteOperations
+  name: updateSlotConfigNames(webSpaceName, webSiteName, parameters, callback)
+  summary: ''
+  fullName: azure-asm-website.WebSiteOperations~WebSiteOperations.updateSlotConfigNames(webSpaceName, webSiteName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: El nombre del espacio web.
+    - id: webSiteName
+      type:
+      - string
+      description: El nombre del sitio web.
+    - id: parameters
+      type:
+      - azure-asm-website.SlotConfigNamesUpdate
+      description: Los parámetros.
+    - id: parameters.connectionStringNames
+      type:
+      - array
+      description: Uno o más elementos de cadena que indique el nombre de la configuración de la cadena de conexión que no mueven durig intercambio del sitio. Por ejemplo, si ranura denominada ensayo tiene conexión UsersDatabase que apunta a la base de datos de prueba de almacenamiento provisional, no se puede mover al intercambiar el espacio de producción pero debe tomar el valor actual de producción.
+      optional: true
+    - id: parameters.appSettingNames
+      type:
+      - array
+      description: Uno o más elementos de cadena que indique el nombre de la configuración de aplicación que no mueven durig intercambio del sitio. Por ejemplo, si ranura denominada almacenamiento provisional tiene que establecer EnableVerboseLogging = 1, no se puede mover al intercambiar el espacio de producción, pero debe tomar el valor actual de producción.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: La secuencia de respuesta.
+    content: function updateSlotConfigNames(webSpaceName, webSiteName, parameters, callback)
+  langs:
+  - js
