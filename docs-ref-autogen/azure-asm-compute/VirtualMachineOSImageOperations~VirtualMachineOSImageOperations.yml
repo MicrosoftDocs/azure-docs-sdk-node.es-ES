@@ -1,0 +1,519 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0fa91a962ed248c95b5964118e06e0fda3ca6528
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071662"
+items:
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: VirtualMachineOSImageOperations
+  summary: >-
+    <span data-ttu-id="8e232-101">La API de administración de servicios incluye operaciones para administrar las imágenes de sistema operativo en su suscripción.</span><span class="sxs-lookup"><span data-stu-id="8e232-101">The Service Management API includes operations for managing the OS images in your subscription.</span></span>  <span data-ttu-id="8e232-102">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157175.aspx para obtener más información) __Nota__: se crea automáticamente una instancia de esta clase para una instancia de la [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="8e232-102">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157175.aspx for more information) __NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="8e232-103">Consulte [virtualMachineOSImages] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachineOSImages}.</span><span class="sxs-lookup"><span data-stu-id="8e232-103">See [virtualMachineOSImages] {@link ComputeManagementClient~ComputeManagementClient#virtualMachineOSImages}.</span></span>
+
+    <span data-ttu-id="8e232-104">Inicializa una nueva instancia de la clase VirtualMachineOSImageOperations.</span><span class="sxs-lookup"><span data-stu-id="8e232-104">Initializes a new instance of the VirtualMachineOSImageOperations class.</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.#ctor
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: VirtualMachineOSImageOperations(client)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations.VirtualMachineOSImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="8e232-105">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="8e232-105">Reference to the service client.</span></span>
+    content: new VirtualMachineOSImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: beginSharing(imageName, permission, callback)
+  summary: <span data-ttu-id="8e232-106">Compartir una imagen de sistema operativo ya replicada.</span><span class="sxs-lookup"><span data-stu-id="8e232-106">Share an already replicated OS image.</span></span> <span data-ttu-id="8e232-107">Esta operación es solo para los publicadores.</span><span class="sxs-lookup"><span data-stu-id="8e232-107">This operation is only for publishers.</span></span> <span data-ttu-id="8e232-108">Tiene que estar registrado como publicador de la imagen con Windows Azure para poder llamar a este método.</span><span class="sxs-lookup"><span data-stu-id="8e232-108">You have to be registered as image publisher with Windows Azure to be able to call this.</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.beginSharing(imageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: <span data-ttu-id="8e232-109">El nombre de la imagen de máquina virtual para compartir.</span><span class="sxs-lookup"><span data-stu-id="8e232-109">The name of the virtual machine image to share.</span></span>
+    - id: permission
+      type:
+      - string
+      description: '<span data-ttu-id="8e232-110">El permiso de uso compartido: public, msdn o private.</span><span class="sxs-lookup"><span data-stu-id="8e232-110">The sharing permission: public, msdn, or private.</span></span>'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-111">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-111">The response stream.</span></span>
+    content: function beginSharing(imageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: beginUnreplicating(imageName, callback)
+  summary: '<span data-ttu-id="8e232-112">Unreplicate una imagen de SO en varias ubicaciones de destino.</span><span class="sxs-lookup"><span data-stu-id="8e232-112">Unreplicate an OS image to multiple target locations.</span></span> <span data-ttu-id="8e232-113">Esta operación es solo para los publicadores.</span><span class="sxs-lookup"><span data-stu-id="8e232-113">This operation is only for publishers.</span></span> <span data-ttu-id="8e232-114">Tiene que estar registrado como publicador de la imagen con Windows Azure para poder llamar a este método.</span><span class="sxs-lookup"><span data-stu-id="8e232-114">You have to be registered as image publisher with Windows Azure to be able to call this.</span></span> <span data-ttu-id="8e232-115">Nota: La operación elimina las copias publicadas de la imagen del sistema operativo del usuario.</span><span class="sxs-lookup"><span data-stu-id="8e232-115">Note: The operation removes the published copies of the user OS Image.</span></span> <span data-ttu-id="8e232-116">No se quita la imagen del sistema operativo del usuario real.</span><span class="sxs-lookup"><span data-stu-id="8e232-116">It does not remove the actual user OS Image.</span></span> <span data-ttu-id="8e232-117">Para quitar la imagen de sistema operativo del usuario real, el publicador tendrá que llamar a eliminar la imagen de sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-117">To remove the actual user OS Image, the publisher will have to call Delete OS Image.</span></span>'
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.beginUnreplicating(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: '<span data-ttu-id="8e232-118">El nombre de la imagen de máquina virtual para replicar.</span><span class="sxs-lookup"><span data-stu-id="8e232-118">The name of the virtual machine image to replicate.</span></span> <span data-ttu-id="8e232-119">Nota: El nombre de la imagen del sistema operativo debe ser la imagen de sistema operativo, no el nombre publicado de la imagen de sistema operativo del usuario.</span><span class="sxs-lookup"><span data-stu-id="8e232-119">Note: The OS Image Name should be the user OS Image, not the published name of the OS Image.</span></span>'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-120">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-120">The response stream.</span></span>
+    content: function beginUnreplicating(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: create(parameters, callback)
+  summary: >-
+    <span data-ttu-id="8e232-121">La operación de crear la imagen de sistema operativo, agrega una imagen de sistema operativo que se almacena en una cuenta de almacenamiento y está disponible en el repositorio de imágenes.</span><span class="sxs-lookup"><span data-stu-id="8e232-121">The Create OS Image operation adds an operating system image that is stored in a storage account and is available from the image repository.</span></span>
+
+    <span data-ttu-id="8e232-122">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157192.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="8e232-122">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157192.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineOSImageCreateParameters
+      description: <span data-ttu-id="8e232-123">Parámetros proporcionados a la operación de creación de imagen de máquina Virtual.</span><span class="sxs-lookup"><span data-stu-id="8e232-123">Parameters supplied to the Create Virtual Machine Image operation.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="8e232-124">Especifica el nombre descriptivo de la imagen.</span><span class="sxs-lookup"><span data-stu-id="8e232-124">Specifies the friendly name of the image.</span></span>
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: '<span data-ttu-id="8e232-125">Especifica la ubicación del blob en almacenamiento de Azure.</span><span class="sxs-lookup"><span data-stu-id="8e232-125">Specifies the location of the blob in Azure storage.</span></span> <span data-ttu-id="8e232-126">La ubicación del blob debe pertenecer a una cuenta de almacenamiento en la suscripción especificada por el valor de SubscriptionId en la llamada de operación.</span><span class="sxs-lookup"><span data-stu-id="8e232-126">The blob location must belong to a storage account in the subscription specified by the SubscriptionId value in the operation call.</span></span> <span data-ttu-id="8e232-127">Ejemplo: http://example.blob.core.windows.net/disks/mydisk.vhd.</span><span class="sxs-lookup"><span data-stu-id="8e232-127">Example: http://example.blob.core.windows.net/disks/mydisk.vhd.</span></span>'
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="8e232-128">Especifica un nombre que Azure usa para identificar la imagen al crear una o más máquinas virtuales.</span><span class="sxs-lookup"><span data-stu-id="8e232-128">Specifies a name that Azure uses to identify the image when creating one or more virtual machines.</span></span>
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: '<span data-ttu-id="8e232-129">El tipo de sistema operativo de la imagen de sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-129">The operating system type of the OS image.</span></span> <span data-ttu-id="8e232-130">Los valores posibles son: Linux o Windows.</span><span class="sxs-lookup"><span data-stu-id="8e232-130">Possible values are: Linux or Windows.</span></span>'
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="8e232-131">Especifica el contrato de licencia de usuario final que está asociado con la imagen.</span><span class="sxs-lookup"><span data-stu-id="8e232-131">Specifies the End User License Agreement that is associated with the image.</span></span> <span data-ttu-id="8e232-132">El valor de este elemento es una cadena, pero se recomienda que el valor sea una dirección URL que apunte al CLUF.</span><span class="sxs-lookup"><span data-stu-id="8e232-132">The value for this element is a string, but it is recommended that the value be a URL that points to a EULA.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="8e232-133">Especifica la descripción de la imagen de sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-133">Specifies the description of the OS image.</span></span>
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: <span data-ttu-id="8e232-134">Especifica un valor que puede utilizarse para agrupar imágenes del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-134">Specifies a value that can be used to group OS images.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="8e232-135">Especifica la fecha cuando la imagen del SO se agregó al repositorio de imágenes.</span><span class="sxs-lookup"><span data-stu-id="8e232-135">Specifies the date when the OS image was added to the image repository.</span></span>
+      optional: true
+    - id: parameters.isPremium
+      type:
+      - boolean
+      description: <span data-ttu-id="8e232-136">Indica si la imagen contiene software o servicios asociados que supondrán al precio básico para la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="8e232-136">Indicates if the image contains software or associated services that will incur charges above the core price for the virtual machine.</span></span>
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: <span data-ttu-id="8e232-137">Especifica si la imagen debe aparecer en la Galería de imágenes.</span><span class="sxs-lookup"><span data-stu-id="8e232-137">Specifies whether the image should appear in the image gallery.</span></span>
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: <span data-ttu-id="8e232-138">Especifica el URI que señala a un documento que contiene la directiva de privacidad relacionada con la imagen de sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-138">Specifies the URI that points to a document that contains the privacy policy related to the OS image.</span></span>
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: <span data-ttu-id="8e232-139">Especifica el URI del icono que se muestra en la imagen en el Portal de administración.</span><span class="sxs-lookup"><span data-stu-id="8e232-139">Specifies the URI to the icon that is displayed for the image in the Management Portal.</span></span>
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: <span data-ttu-id="8e232-140">Especifica el tamaño que se usará para la máquina virtual que se crea a partir de la imagen de sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-140">Specifies the size to use for the virtual machine that is created from the OS image.</span></span>
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: <span data-ttu-id="8e232-141">Especifica el URI del icono pequeño que se muestra cuando se presenta la imagen en el Portal de administración de Azure.</span><span class="sxs-lookup"><span data-stu-id="8e232-141">Specifies the URI to the small icon that is displayed when the image is presented in the Azure Management Portal.</span></span> <span data-ttu-id="8e232-142">El elemento SmallIconUri solo está disponible con la versión 2013-03-01 o posterior.</span><span class="sxs-lookup"><span data-stu-id="8e232-142">The SmallIconUri element is only available using version 2013-03-01 or higher.</span></span>
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="8e232-143">Especifica el idioma de la imagen.</span><span class="sxs-lookup"><span data-stu-id="8e232-143">Specifies the language of the image.</span></span>
+
+        <span data-ttu-id="8e232-144">El elemento de lenguaje solo está disponible con la versión 2013-03-01 o posterior.</span><span class="sxs-lookup"><span data-stu-id="8e232-144">The Language element is only available using version 2013-03-01 or higher.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-145">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-145">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: deleteMethod(imageName, deleteFromStorage, callback)
+  summary: <span data-ttu-id="8e232-146">La operación Eliminar imagen de sistema operativo, elimina la imagen de sistema operativo especificada del repositorio de imágenes.</span><span class="sxs-lookup"><span data-stu-id="8e232-146">The Delete OS Image operation deletes the specified OS image from your image repository.</span></span>  <span data-ttu-id="8e232-147">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157203.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="8e232-147">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157203.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.deleteMethod(imageName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: <span data-ttu-id="8e232-148">El nombre de la imagen que desea eliminar.</span><span class="sxs-lookup"><span data-stu-id="8e232-148">The name of the image to delete.</span></span>
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: <span data-ttu-id="8e232-149">Especifica que el blob de origen para la imagen también debe eliminarse del almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="8e232-149">Specifies that the source blob for the image should also be deleted from storage.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-150">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-150">The response stream.</span></span>
+    content: function deleteMethod(imageName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: get(imageName, callback)
+  summary: <span data-ttu-id="8e232-151">La operación de obtener la imagen de sistema operativo recupera los detalles de una imagen de sistema operativo desde el repositorio de imágenes.</span><span class="sxs-lookup"><span data-stu-id="8e232-151">The Get OS Image operation retrieves the details for an operating system image from the image repository.</span></span>  <span data-ttu-id="8e232-152">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="8e232-152">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.get(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: <span data-ttu-id="8e232-153">El nombre de la imagen de sistema operativo para recuperar.</span><span class="sxs-lookup"><span data-stu-id="8e232-153">The name of the OS image to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-154">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-154">The response stream.</span></span>
+    content: function get(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: getDetails(imageName, callback)
+  summary: <span data-ttu-id="8e232-155">Obtiene las propiedades de la imagen de sistema operativo y sus detalles de la replicación.</span><span class="sxs-lookup"><span data-stu-id="8e232-155">Gets OS Image's properties and its replication details.</span></span> <span data-ttu-id="8e232-156">Esta operación es solo para los publicadores.</span><span class="sxs-lookup"><span data-stu-id="8e232-156">This operation is only for publishers.</span></span> <span data-ttu-id="8e232-157">Tiene que estar registrado como publicador de la imagen con Windows Azure para poder llamar a este método.</span><span class="sxs-lookup"><span data-stu-id="8e232-157">You have to be registered as image publisher with Windows Azure to be able to call this.</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.getDetails(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: <span data-ttu-id="8e232-158">El nombre de la imagen de máquina virtual para replicar.</span><span class="sxs-lookup"><span data-stu-id="8e232-158">The name of the virtual machine image to replicate.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-159">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-159">The response stream.</span></span>
+    content: function getDetails(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: list(callback)
+  summary: <span data-ttu-id="8e232-160">La operación de lista de imágenes de sistema operativo recupera una lista de imágenes del sistema operativo desde el repositorio de imágenes.</span><span class="sxs-lookup"><span data-stu-id="8e232-160">The List OS Images operation retrieves a list of the operating system images from the image repository.</span></span>  <span data-ttu-id="8e232-161">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="8e232-161">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-162">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-162">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: replicate(imageName, parameters, callback)
+  summary: <span data-ttu-id="8e232-163">Replicación de una imagen de SO en varias ubicaciones de destino.</span><span class="sxs-lookup"><span data-stu-id="8e232-163">Replicate an OS image to multiple target locations.</span></span> <span data-ttu-id="8e232-164">Esta operación es solo para los publicadores.</span><span class="sxs-lookup"><span data-stu-id="8e232-164">This operation is only for publishers.</span></span> <span data-ttu-id="8e232-165">Tiene que estar registrado como publicador de la imagen con Windows Azure para poder llamar a este método.</span><span class="sxs-lookup"><span data-stu-id="8e232-165">You have to be registered as image publisher with Windows Azure to be able to call this.</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.replicate(imageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: <span data-ttu-id="8e232-166">El nombre de la imagen de máquina virtual del sistema operativo para replicar.</span><span class="sxs-lookup"><span data-stu-id="8e232-166">The name of the virtual machine OS image to replicate.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineOSImageReplicateParameters
+      description: <span data-ttu-id="8e232-167">Parámetros proporcionados a la operación de replicación de la imagen de máquina Virtual.</span><span class="sxs-lookup"><span data-stu-id="8e232-167">Parameters supplied to the Replicate Virtual Machine Image operation.</span></span>
+    - id: parameters.targetLocations
+      type:
+      - array
+      description: '<span data-ttu-id="8e232-168">Las ubicaciones de regional de destino de replicación. Nota: Las regiones en el cuerpo de solicitud no son aditivas.</span><span class="sxs-lookup"><span data-stu-id="8e232-168">The replication target regional locations.Note: The regions in the request body are not additive.</span></span> <span data-ttu-id="8e232-169">Si una imagen de sistema operativo ya se han replicado en las regiones A, B y C y se realiza una solicitud para replicar en las regiones A y D, la imagen de máquina virtual permanecerá en la región A, se replicarán en la región D y será no replicados desde las regiones de B y C.</span><span class="sxs-lookup"><span data-stu-id="8e232-169">If an OS Image has already been replicated to Regions A, B, and C, and a request is made to replicate to Regions A and D, the VM Image will remain in Region A, will be replicated in Region D, and will be unreplicated from Regions B and C.</span></span>'
+      optional: true
+    - id: parameters.computeImageAttributes
+      type:
+      - azure-asm-compute.ComputeImageAttributes
+      description: <span data-ttu-id="8e232-170">Los atributos de imagen de proceso.</span><span class="sxs-lookup"><span data-stu-id="8e232-170">The compute image attributes.</span></span> <span data-ttu-id="8e232-171">Los metadatos que es necesario para esta imagen se useablein la combinación de Microsoft.Compute Provider.The de valores proporcionada para la oferta, Sku y versión deben ser único para un publicador.</span><span class="sxs-lookup"><span data-stu-id="8e232-171">Metadata which is required for this image to be useablein the Microsoft.Compute Provider.The combination of values provided for Offer, Sku, and Verison must be unique for a publisher.</span></span>
+    - id: parameters.computeImageAttributes.offer
+      type:
+      - string
+      description: <span data-ttu-id="8e232-172">Obtiene o establece el nombre definido por el publicador de la oferta. Los caracteres permitidos son letras mayúsculas o minúsculas, dígitos, hypen(-), punto (.). La longitud máxima permitida es de 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="8e232-172">Gets or sets the publisher defined name of the offer.The allowed characters are uppercase or lowercase letters, digit, hypen(-), period (.).The maximum allowed length is 64 characters.</span></span>
+    - id: parameters.computeImageAttributes.sku
+      type:
+      - string
+      description: <span data-ttu-id="8e232-173">Obtiene o establece el nombre definido por el publicador de la Sku.</span><span class="sxs-lookup"><span data-stu-id="8e232-173">Gets or sets the publisher defined name of the Sku.</span></span> <span data-ttu-id="8e232-174">Los caracteres permitidos son letras mayúsculas o minúsculas, dígitos, hypen(-), punto (.).</span><span class="sxs-lookup"><span data-stu-id="8e232-174">The allowed characters are uppercase or lowercase letters, digit, hypen(-), period (.).</span></span> <span data-ttu-id="8e232-175">La longitud máxima permitida es de 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="8e232-175">The maximum allowed length is 64 characters.</span></span>
+    - id: parameters.computeImageAttributes.version
+      type:
+      - string
+      description: "<span data-ttu-id=\"8e232-176\">Obtiene o establece la versión del publicador definido de la imagen.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8e232-176\">Gets or sets the publisher defined version of the image.</span></span> <span data-ttu-id=\"8e232-177\">Los caracteres permitidos son dígitos y el período.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8e232-177\">The allowed characters are digit and period.</span></span> <span data-ttu-id=\"8e232-178\">Formato: <MajorVersion>.<MinorVersion>.<Patch>Ejemplo: \"1.0.0\" o \"1.1.0\" 3 el número de versión para seguir el estándar de la mayoría de los RPs.See http://semver.org/.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8e232-178\">Format: <MajorVersion>.<MinorVersion>.<Patch>Example: '1.0.0' or '1.1.0' The 3 version number to follow standard of most of the RPs.See http://semver.org/.</span></span>"
+    - id: parameters.marketplaceImageAttributes
+      type:
+      - azure-asm-compute.MarketplaceImageAttributes
+      description: <span data-ttu-id="8e232-179">Los atributos de imagen de Marketplace. Los metadatos que es necesario para el catálogo de máquinas virtuales con origen imagesto ser utilizable en el proveedor de Microsoft.Compute.</span><span class="sxs-lookup"><span data-stu-id="8e232-179">The market place image attributes.Metadata which is required for VM Marketplace sourced imagesto be useable in the Microsoft.Compute Provider.</span></span>
+      optional: true
+    - id: parameters.marketplaceImageAttributes.publisherId
+      type:
+      - string
+      description: <span data-ttu-id="8e232-180">Obtiene o establece el Id. de publicador Este es el nombre del proveedor de Microsoft.Compute publicador que se usará para la imagen.</span><span class="sxs-lookup"><span data-stu-id="8e232-180">Gets or sets the publisher Id. This is the Microsoft.Compute Provider publisher name to use for image.</span></span>
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan
+      type:
+      - azure-asm-compute.Plan
+      description: <span data-ttu-id="8e232-181">Obtiene o establece el contexto de la compra de cualquier artefacto parte 3ª.</span><span class="sxs-lookup"><span data-stu-id="8e232-181">Gets or sets the purchase context of any 3rd party artifact.</span></span>
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.name
+      type:
+      - string
+      description: <span data-ttu-id="8e232-182">Obtiene o establece un nombre definido por el usuario del artefacto 3ª parte que se aprovisione a través.</span><span class="sxs-lookup"><span data-stu-id="8e232-182">Gets or sets a user defined name of the 3rd party artifact that is being procured.</span></span>
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.publisher
+      type:
+      - string
+      description: <span data-ttu-id="8e232-183">Obtiene o establece el publicador del artefacto 3ª parte que se va a bought.E.g.</span><span class="sxs-lookup"><span data-stu-id="8e232-183">Gets or sets the publisher of the 3rd party artifact that is being bought.E.g.</span></span> <span data-ttu-id="8e232-184">Contoso.</span><span class="sxs-lookup"><span data-stu-id="8e232-184">Contoso.</span></span>
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.product
+      type:
+      - string
+      description: <span data-ttu-id="8e232-185">Obtiene o establece el artefacto 3ª parte que se va a procured.E.g.</span><span class="sxs-lookup"><span data-stu-id="8e232-185">Gets or sets the 3rd party artifact that is being procured.E.g.</span></span> <span data-ttu-id="8e232-186">Northwind.</span><span class="sxs-lookup"><span data-stu-id="8e232-186">Northwind.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-187">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-187">The response stream.</span></span>
+    content: function replicate(imageName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: share(imageName, permission, callback)
+  summary: <span data-ttu-id="8e232-188">Compartir una imagen de sistema operativo ya replicada.</span><span class="sxs-lookup"><span data-stu-id="8e232-188">Share an already replicated OS image.</span></span> <span data-ttu-id="8e232-189">Esta operación es solo para los publicadores.</span><span class="sxs-lookup"><span data-stu-id="8e232-189">This operation is only for publishers.</span></span> <span data-ttu-id="8e232-190">Tiene que estar registrado como publicador de la imagen con Windows Azure para poder llamar a este método.</span><span class="sxs-lookup"><span data-stu-id="8e232-190">You have to be registered as image publisher with Windows Azure to be able to call this.</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.share(imageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: <span data-ttu-id="8e232-191">El nombre de la imagen de máquina virtual para compartir.</span><span class="sxs-lookup"><span data-stu-id="8e232-191">The name of the virtual machine image to share.</span></span>
+    - id: permission
+      type:
+      - string
+      description: '<span data-ttu-id="8e232-192">El permiso de uso compartido: public, msdn o private.</span><span class="sxs-lookup"><span data-stu-id="8e232-192">The sharing permission: public, msdn, or private.</span></span>'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-193">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-193">The response stream.</span></span>
+    content: function share(imageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: unreplicate(imageName, callback)
+  summary: '<span data-ttu-id="8e232-194">Unreplicate una imagen de SO en varias ubicaciones de destino.</span><span class="sxs-lookup"><span data-stu-id="8e232-194">Unreplicate an OS image to multiple target locations.</span></span> <span data-ttu-id="8e232-195">Esta operación es solo para los publicadores.</span><span class="sxs-lookup"><span data-stu-id="8e232-195">This operation is only for publishers.</span></span> <span data-ttu-id="8e232-196">Tiene que estar registrado como publicador de la imagen con Windows Azure para poder llamar a este método.</span><span class="sxs-lookup"><span data-stu-id="8e232-196">You have to be registered as image publisher with Windows Azure to be able to call this.</span></span> <span data-ttu-id="8e232-197">Nota: La operación elimina las copias publicadas de la imagen del sistema operativo del usuario.</span><span class="sxs-lookup"><span data-stu-id="8e232-197">Note: The operation removes the published copies of the user OS Image.</span></span> <span data-ttu-id="8e232-198">No se quita la imagen del sistema operativo del usuario real.</span><span class="sxs-lookup"><span data-stu-id="8e232-198">It does not remove the actual user OS Image.</span></span> <span data-ttu-id="8e232-199">Para quitar la imagen de sistema operativo del usuario real, el publicador tendrá que llamar a eliminar la imagen de sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-199">To remove the actual user OS Image, the publisher will have to call Delete OS Image.</span></span>'
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.unreplicate(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: '<span data-ttu-id="8e232-200">El nombre de la imagen de máquina virtual para replicar.</span><span class="sxs-lookup"><span data-stu-id="8e232-200">The name of the virtual machine image to replicate.</span></span> <span data-ttu-id="8e232-201">Nota: El nombre de la imagen del sistema operativo debe ser la imagen de sistema operativo, no el nombre publicado de la imagen de sistema operativo del usuario.</span><span class="sxs-lookup"><span data-stu-id="8e232-201">Note: The OS Image Name should be the user OS Image, not the published name of the OS Image.</span></span>'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-202">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-202">The response stream.</span></span>
+    content: function unreplicate(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: update(imageName, parameters, callback)
+  summary: <span data-ttu-id="8e232-203">Las actualizaciones de la operación de actualización de imagen de sistema operativo un sistema operativo de la imagen en el repositorio de imágenes.</span><span class="sxs-lookup"><span data-stu-id="8e232-203">The Update OS Image operation updates an OS image that in your image repository.</span></span>  <span data-ttu-id="8e232-204">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157198.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="8e232-204">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157198.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.update(imageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: <span data-ttu-id="8e232-205">El nombre de la imagen de máquina virtual que se puede actualizar.</span><span class="sxs-lookup"><span data-stu-id="8e232-205">The name of the virtual machine image to be updated.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineOSImageUpdateParameters
+      description: <span data-ttu-id="8e232-206">Parámetros proporcionados a la operación de actualización de imagen de máquina Virtual.</span><span class="sxs-lookup"><span data-stu-id="8e232-206">Parameters supplied to the Update Virtual Machine Image operation.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="8e232-207">Especifica el nombre descriptivo de la imagen que se puede actualizar.</span><span class="sxs-lookup"><span data-stu-id="8e232-207">Specifies the friendly name of the image to be updated.</span></span> <span data-ttu-id="8e232-208">No se puede utilizar esta operación para actualizar las imágenes proporcionadas por la plataforma Azure.</span><span class="sxs-lookup"><span data-stu-id="8e232-208">You cannot use this operation to update images provided by the Azure platform.</span></span>
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="8e232-209">Especifica el contrato de licencia de usuario final que está asociado con la imagen.</span><span class="sxs-lookup"><span data-stu-id="8e232-209">Specifies the End User License Agreement that is associated with the image.</span></span> <span data-ttu-id="8e232-210">El valor de este elemento es una cadena, pero se recomienda que el valor sea una dirección URL que apunte al CLUF.</span><span class="sxs-lookup"><span data-stu-id="8e232-210">The value for this element is a string, but it is recommended that the value be a URL that points to a EULA.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="8e232-211">Especifica la descripción de la imagen de sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-211">Specifies the description of the OS image.</span></span>
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: <span data-ttu-id="8e232-212">Especifica un valor que puede utilizarse para agrupar imágenes del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-212">Specifies a value that can be used to group OS images.</span></span>
+      optional: true
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: <span data-ttu-id="8e232-213">Cuando se publica, esta imagen aparecerán en la Galería de imágenes de azure de windows o no.</span><span class="sxs-lookup"><span data-stu-id="8e232-213">When published, should this image show up in the windows azure image gallery or not.</span></span> <span data-ttu-id="8e232-214">True de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="8e232-214">True by default.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="8e232-215">Especifica la fecha cuando la imagen del SO se agregó al repositorio de imágenes.</span><span class="sxs-lookup"><span data-stu-id="8e232-215">Specifies the date when the OS image was added to the image repository.</span></span>
+      optional: true
+    - id: parameters.isPremium
+      type:
+      - boolean
+      description: <span data-ttu-id="8e232-216">Indica si la imagen contiene software o servicios asociados que supondrán al precio básico para la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="8e232-216">Indicates if the image contains software or associated services that will incur charges above the core price for the virtual machine.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: <span data-ttu-id="8e232-217">Especifica el URI que señala a un documento que contiene la directiva de privacidad relacionada con la imagen de sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-217">Specifies the URI that points to a document that contains the privacy policy related to the OS image.</span></span>
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: <span data-ttu-id="8e232-218">Especifica el URI del icono que se muestra en la imagen en el Portal de administración.</span><span class="sxs-lookup"><span data-stu-id="8e232-218">Specifies the URI to the icon that is displayed for the image in the Management Portal.</span></span>
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: <span data-ttu-id="8e232-219">Especifica el tamaño que se usará para la máquina virtual que se crea a partir de la imagen de sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8e232-219">Specifies the size to use for the virtual machine that is created from the OS image.</span></span>
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: <span data-ttu-id="8e232-220">Especifica el URI del icono pequeño que se muestra cuando se presenta la imagen en el Portal de administración de Azure.</span><span class="sxs-lookup"><span data-stu-id="8e232-220">Specifies the URI to the small icon that is displayed when the image is presented in the Azure Management Portal.</span></span> <span data-ttu-id="8e232-221">El elemento SmallIconUri solo está disponible con la versión 2013-03-01 o posterior.</span><span class="sxs-lookup"><span data-stu-id="8e232-221">The SmallIconUri element is only available using version 2013-03-01 or higher.</span></span>
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="8e232-222">Especifica el idioma de la imagen.</span><span class="sxs-lookup"><span data-stu-id="8e232-222">Specifies the language of the image.</span></span>
+
+        <span data-ttu-id="8e232-223">El elemento de lenguaje solo está disponible con la versión 2013-03-01 o posterior.</span><span class="sxs-lookup"><span data-stu-id="8e232-223">The Language element is only available using version 2013-03-01 or higher.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="8e232-224">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="8e232-224">The response stream.</span></span>
+    content: function update(imageName, parameters, callback)
+  langs:
+  - js
