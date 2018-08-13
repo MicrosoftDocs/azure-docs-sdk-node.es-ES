@@ -1,0 +1,340 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 37ddc1e2aec0bc5e91277b29c1213e334719b23c
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40072830"
+items:
+- uid: azure-arm-apimanagement.QuotaByCounterKeys
+  name: QuotaByCounterKeys
+  fullName: QuotaByCounterKeys
+  children:
+  - azure-arm-apimanagement.QuotaByCounterKeys.listByService
+  - azure-arm-apimanagement.QuotaByCounterKeys.listByService_1
+  - azure-arm-apimanagement.QuotaByCounterKeys.listByService_2
+  - azure-arm-apimanagement.QuotaByCounterKeys.listByServiceWithHttpOperationResponse
+  - azure-arm-apimanagement.QuotaByCounterKeys.update
+  - azure-arm-apimanagement.QuotaByCounterKeys.update_1
+  - azure-arm-apimanagement.QuotaByCounterKeys.update_2
+  - azure-arm-apimanagement.QuotaByCounterKeys.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.listByService
+  name: listByService
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2e6b1-101">Enumera una colección de períodos de contador de cuota actual asociado con la clave de compensación configurada en la directiva en la instancia de servicio especificado.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-101">Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance.</span></span> <span data-ttu-id="2e6b1-102">La api no admite la paginación aún.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-102">The api does not support paging yet.</span></span>
+  syntax:
+    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-103">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-103">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-104">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-104">The name of the API Management service.</span></span>
+    - id: quotaCounterKey
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-105">Identificador de clave de contador de cuota. Esto es el resultado de la expresión definida en el atributo clave a la izquierda de la directiva de cuota por clave. Por ejemplo, si especifica el contador de clave = "boo" en la directiva, es accesible mediante la clave para el contador "boo".</span><span class="sxs-lookup"><span data-stu-id="2e6b1-105">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="2e6b1-106">Sin embargo, si está definido como counter-key="@("b"+"a")" estará accesible por clave "ba"</span><span class="sxs-lookup"><span data-stu-id="2e6b1-106">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.QuotaCounterCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.listByService_1
+  name: listByService
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2e6b1-107">Enumera una colección de períodos de contador de cuota actual asociado con la clave de compensación configurada en la directiva en la instancia de servicio especificado.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-107">Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance.</span></span> <span data-ttu-id="2e6b1-108">La api no admite la paginación aún.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-108">The api does not support paging yet.</span></span>
+  syntax:
+    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, callback: ServiceCallback<QuotaCounterCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: quotaCounterKey
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.QuotaCounterCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.QuotaCounterCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.listByService_2
+  name: listByService
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2e6b1-109">Enumera una colección de períodos de contador de cuota actual asociado con la clave de compensación configurada en la directiva en la instancia de servicio especificado.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-109">Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance.</span></span> <span data-ttu-id="2e6b1-110">La api no admite la paginación aún.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-110">The api does not support paging yet.</span></span>
+  syntax:
+    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options: function, callback: ServiceCallback<QuotaCounterCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: quotaCounterKey
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.QuotaCounterCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.QuotaCounterCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.listByServiceWithHttpOperationResponse
+  name: listByServiceWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2e6b1-111">Enumera una colección de períodos de contador de cuota actual asociado con la clave de compensación configurada en la directiva en la instancia de servicio especificado.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-111">Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance.</span></span> <span data-ttu-id="2e6b1-112">La api no admite la paginación aún.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-112">The api does not support paging yet.</span></span>
+  syntax:
+    content: 'function listByServiceWithHttpOperationResponse(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-113">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-113">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-114">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-114">The name of the API Management service.</span></span>
+    - id: quotaCounterKey
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-115">Identificador de clave de contador de cuota. Esto es el resultado de la expresión definida en el atributo clave a la izquierda de la directiva de cuota por clave. Por ejemplo, si especifica el contador de clave = "boo" en la directiva, es accesible mediante la clave para el contador "boo".</span><span class="sxs-lookup"><span data-stu-id="2e6b1-115">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="2e6b1-116">Sin embargo, si está definido como counter-key="@("b"+"a")" estará accesible por clave "ba"</span><span class="sxs-lookup"><span data-stu-id="2e6b1-116">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-apimanagement.QuotaCounterCollection>>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2e6b1-117">Actualiza todos los valores del contador de cuota especificados con la clave de contador de cuota existente en un valor en la instancia de servicio especificada.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-117">Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance.</span></span> <span data-ttu-id="2e6b1-118">Esto se debe usar para el restablecimiento de los valores de contador de cuota.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-118">This should be used for reset of the quota counter values.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-119">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-119">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-120">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-120">The name of the API Management service.</span></span>
+    - id: quotaCounterKey
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-121">Identificador de clave de contador de cuota. Esto es el resultado de la expresión definida en el atributo clave a la izquierda de la directiva de cuota por clave. Por ejemplo, si especifica el contador de clave = "boo" en la directiva, es accesible mediante la clave para el contador "boo".</span><span class="sxs-lookup"><span data-stu-id="2e6b1-121">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="2e6b1-122">Sin embargo, si está definido como counter-key="@("b"+"a")" estará accesible por clave "ba"</span><span class="sxs-lookup"><span data-stu-id="2e6b1-122">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.QuotaCounterValueContractProperties
+      description: >
+        <span data-ttu-id="2e6b1-123">El valor del contador de cuota que se aplicará a todos los períodos de contador de cuota.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-123">The value of the quota counter to be applied to all quota counter periods.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.update_1
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2e6b1-124">Actualiza todos los valores del contador de cuota especificados con la clave de contador de cuota existente en un valor en la instancia de servicio especificada.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-124">Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance.</span></span> <span data-ttu-id="2e6b1-125">Esto se debe usar para el restablecimiento de los valores de contador de cuota.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-125">This should be used for reset of the quota counter values.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: quotaCounterKey
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.QuotaCounterValueContractProperties
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.update_2
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2e6b1-126">Actualiza todos los valores del contador de cuota especificados con la clave de contador de cuota existente en un valor en la instancia de servicio especificada.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-126">Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance.</span></span> <span data-ttu-id="2e6b1-127">Esto se debe usar para el restablecimiento de los valores de contador de cuota.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-127">This should be used for reset of the quota counter values.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: quotaCounterKey
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.QuotaCounterValueContractProperties
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.QuotaByCounterKeys.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2e6b1-128">Actualiza todos los valores del contador de cuota especificados con la clave de contador de cuota existente en un valor en la instancia de servicio especificada.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-128">Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance.</span></span> <span data-ttu-id="2e6b1-129">Esto se debe usar para el restablecimiento de los valores de contador de cuota.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-129">This should be used for reset of the quota counter values.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-130">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-130">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-131">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-131">The name of the API Management service.</span></span>
+    - id: quotaCounterKey
+      type:
+      - string
+      description: >
+        <span data-ttu-id="2e6b1-132">Identificador de clave de contador de cuota. Esto es el resultado de la expresión definida en el atributo clave a la izquierda de la directiva de cuota por clave. Por ejemplo, si especifica el contador de clave = "boo" en la directiva, es accesible mediante la clave para el contador "boo".</span><span class="sxs-lookup"><span data-stu-id="2e6b1-132">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="2e6b1-133">Sin embargo, si está definido como counter-key="@("b"+"a")" estará accesible por clave "ba"</span><span class="sxs-lookup"><span data-stu-id="2e6b1-133">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.QuotaCounterValueContractProperties
+      description: >
+        <span data-ttu-id="2e6b1-134">El valor del contador de cuota que se aplicará a todos los períodos de contador de cuota.</span><span class="sxs-lookup"><span data-stu-id="2e6b1-134">The value of the quota counter to be applied to all quota counter periods.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-apimanagement
+references:
+- uid: Promise<azure-arm-apimanagement.QuotaCounterCollection>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: QuotaCounterCollection
+    fullName: QuotaCounterCollection
+    uid: azure-arm-apimanagement.QuotaCounterCollection
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-apimanagement.QuotaCounterCollection>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: QuotaCounterCollection
+    fullName: QuotaCounterCollection
+    uid: azure-arm-apimanagement.QuotaCounterCollection
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-apimanagement.QuotaCounterCollection>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: QuotaCounterCollection
+    fullName: QuotaCounterCollection
+    uid: azure-arm-apimanagement.QuotaCounterCollection
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-apimanagement.QuotaCounterValueContractProperties
+  spec.typeScript:
+  - name: QuotaCounterValueContractProperties
+    fullName: QuotaCounterValueContractProperties
+    uid: azure-arm-apimanagement.QuotaCounterValueContractProperties

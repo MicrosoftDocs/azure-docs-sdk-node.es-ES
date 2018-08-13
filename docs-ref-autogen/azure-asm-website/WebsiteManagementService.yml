@@ -1,0 +1,619 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5efb8a7b946da712ef31453d6d1493aa72a5d4c8
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072262"
+items:
+- uid: azure-asm-website.WebsiteManagementService
+  id: azure-asm-website.WebsiteManagementService
+  name: WebsiteManagementService
+  summary: <span data-ttu-id="b72b2-101">El objeto WebsiteManagementService permite realizar operaciones de administración de sitios Web de Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="b72b2-101">The WebsiteManagementService object allows you to perform management operations on Microsoft Azure Web Sites.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService
+  type: Class
+  children:
+  - azure-asm-website.WebsiteManagementService.#ctor
+  - azure-asm-website.WebsiteManagementService#listWebspaces
+  - azure-asm-website.WebsiteManagementService#listGeoRegions
+  - azure-asm-website.WebsiteManagementService#listPublishingUsers
+  - azure-asm-website.WebsiteManagementService#listDNSSuffix
+  - azure-asm-website.WebsiteManagementService#createPublishingUser
+  - azure-asm-website.WebsiteManagementService#listSites
+  - azure-asm-website.WebsiteManagementService#getSite
+  - azure-asm-website.WebsiteManagementService#createSite
+  - azure-asm-website.WebsiteManagementService#deleteSite
+  - azure-asm-website.WebsiteManagementService#updateSite
+  - azure-asm-website.WebsiteManagementService#getSiteConfiguration
+  - azure-asm-website.WebsiteManagementService#updateSiteConfiguration
+  - azure-asm-website.WebsiteManagementService#createServerFarm
+  - azure-asm-website.WebsiteManagementService#updateServerFarm
+  - azure-asm-website.WebsiteManagementService#getServerFarm
+  - azure-asm-website.WebsiteManagementService#createSiteRepository
+  - azure-asm-website.WebsiteManagementService#deleteSiteRepository
+  - azure-asm-website.WebsiteManagementService#syncSiteRepository
+  langs:
+  - js
+- id: azure-asm-website.WebsiteManagementService.#ctor
+  uid: azure-asm-website.WebsiteManagementService.#ctor
+  parent: azure-asm-website.WebsiteManagementService
+  name: WebsiteManagementService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-website.WebsiteManagementService.WebsiteManagementService(configOrSubscriptionId, authentication, hostOptions)
+  summary: <span data-ttu-id="b72b2-102">Crea un nuevo objeto WebsiteManagementService.</span><span class="sxs-lookup"><span data-stu-id="b72b2-102">Creates a new WebsiteManagementService object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-103">Información de configuración, Id. de suscripción para la cuenta o la cadena de conexión</span><span class="sxs-lookup"><span data-stu-id="b72b2-103">Configuration information, subscription ID for the account or the connection string</span></span>
+    - id: authentication
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="b72b2-104">El objeto de autenticación del cliente.</span><span class="sxs-lookup"><span data-stu-id="b72b2-104">The authentication object for the client.</span></span>
+
+        <span data-ttu-id="b72b2-105">Debe usar certfile/keyfile o keyvalue/certvalue para proporcionar un certificado de administración para autenticar las solicitudes de servicio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-105">You must use either keyfile/certfile or keyvalue/certvalue to provide a management certificate to authenticate service requests.</span></span>
+    - id: authentication.keyfile
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-106">La ruta de acceso a un archivo que contiene el PEM codificado clave</span><span class="sxs-lookup"><span data-stu-id="b72b2-106">The path to a file that contains the PEM encoded key</span></span>
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-107">Certificado codificado en la ruta de acceso a un archivo que contiene el PEM</span><span class="sxs-lookup"><span data-stu-id="b72b2-107">The path to a file that contains the PEM encoded certificate</span></span>
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-108">Una cadena que contiene el PEM codificado por clave</span><span class="sxs-lookup"><span data-stu-id="b72b2-108">A string that contains the PEM encoded key</span></span>
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-109">Certificado codificado en una cadena que contiene el PEM</span><span class="sxs-lookup"><span data-stu-id="b72b2-109">A string that contains the PEM encoded certificate</span></span>
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-110">Las opciones de host para invalidar los valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="b72b2-110">The host options to override defaults.</span></span>
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-111">El extremo de administración.</span><span class="sxs-lookup"><span data-stu-id="b72b2-111">The management endpoint.</span></span>
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-112">La versión de API que se usará.</span><span class="sxs-lookup"><span data-stu-id="b72b2-112">The API vesion to be used.</span></span>
+      optional: true
+    content: new WebsiteManagementService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listWebspaces
+  id: azure-asm-website.WebsiteManagementService#listWebspaces
+  parent: azure-asm-website.WebsiteManagementService
+  name: listWebspaces(callback)
+  summary: <span data-ttu-id="b72b2-113">Se enumeran los espacios Web disponibles.</span><span class="sxs-lookup"><span data-stu-id="b72b2-113">Lists the available webspaces.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.listWebspaces(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="b72b2-114">`error` contendrá información si se produce un error; en caso contrario `results` contendrá la lista de los espacios Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-114">`error` will contain information if an error occurs; otherwise `results` will contain the list of webspaces.</span></span>
+                                                              <span data-ttu-id="b72b2-115">`response` contiene información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-115">`response` will contain information related to this operation.</span></span>
+    content: function listWebspaces(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listGeoRegions
+  id: azure-asm-website.WebsiteManagementService#listGeoRegions
+  parent: azure-asm-website.WebsiteManagementService
+  name: listGeoRegions(callback)
+  summary: <span data-ttu-id="b72b2-116">Se enumeran las regiones geográficas disponibles que están disponibles para hospedar sitios web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-116">Lists the available geographic regions that are available for hosting web sites.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.listGeoRegions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="b72b2-117">`error` contendrá información si se produce un error; en caso contrario `results` contendrá la lista de regiones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-117">`error` will contain information if an error occurs; otherwise `results` will contain the list of regions.</span></span>
+                                                              <span data-ttu-id="b72b2-118">`response` contiene información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-118">`response` will contain information related to this operation.</span></span>
+    content: function listGeoRegions(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listPublishingUsers
+  id: azure-asm-website.WebsiteManagementService#listPublishingUsers
+  parent: azure-asm-website.WebsiteManagementService
+  name: listPublishingUsers(callback)
+  summary: <span data-ttu-id="b72b2-119">Enumera los usuarios de publicación disponibles.</span><span class="sxs-lookup"><span data-stu-id="b72b2-119">Lists the available publishing users.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.listPublishingUsers(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="b72b2-120">`error` contendrá información si se produce un error; en caso contrario `results` contendrá la lista de usuarios.</span><span class="sxs-lookup"><span data-stu-id="b72b2-120">`error` will contain information if an error occurs; otherwise `results` will contain the list of users.</span></span>
+                                                              <span data-ttu-id="b72b2-121">`response` contiene información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-121">`response` will contain information related to this operation.</span></span>
+    content: function listPublishingUsers(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listDNSSuffix
+  id: azure-asm-website.WebsiteManagementService#listDNSSuffix
+  parent: azure-asm-website.WebsiteManagementService
+  name: listDNSSuffix(callback)
+  summary: <span data-ttu-id="b72b2-122">Muestra el sufijo DNS.</span><span class="sxs-lookup"><span data-stu-id="b72b2-122">lists the DNS suffix.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.listDNSSuffix(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="b72b2-123">`error` contendrá información si se produce un error; en caso contrario `results` contendrá la información de sufijo DNS.</span><span class="sxs-lookup"><span data-stu-id="b72b2-123">`error` will contain information if an error occurs; otherwise `results` will contain the DNS suffix information.</span></span>
+                                                              <span data-ttu-id="b72b2-124">`response` contiene información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-124">`response` will contain information related to this operation.</span></span>
+    content: function listDNSSuffix(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#createPublishingUser
+  id: azure-asm-website.WebsiteManagementService#createPublishingUser
+  parent: azure-asm-website.WebsiteManagementService
+  name: createPublishingUser(username, password, options, callback)
+  summary: <span data-ttu-id="b72b2-125">Crea un nuevo usuario de publicación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-125">Creates a new publishing user.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.createPublishingUser(username, password, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: username
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-126">El nombre de usuario de publicación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-126">The publishing user username.</span></span>
+    - id: password
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-127">La contraseña de usuario de publicación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-127">The publishing user password.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-128">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-128">The options.</span></span>
+      optional: true
+    - id: options.name
+      type:
+      - azure-asm-website.int
+      description: <span data-ttu-id="b72b2-129">El nombre de usuario de publicación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-129">The publishing user name.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b72b2-130">`error` contendrá información si se produce un error; en caso contrario `response` contendrá información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-130">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function createPublishingUser(username, password, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listSites
+  id: azure-asm-website.WebsiteManagementService#listSites
+  parent: azure-asm-website.WebsiteManagementService
+  name: listSites(webspaceName, options, callback)
+  summary: <span data-ttu-id="b72b2-131">Recupera los sitios Web existentes.</span><span class="sxs-lookup"><span data-stu-id="b72b2-131">Retrieves the existing websites.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.listSites(webspaceName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-132">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-132">The webspace name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-133">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-133">The options.</span></span>
+      optional: true
+    - id: options.propertiesToInclude
+      type:
+      - array
+      description: <span data-ttu-id="b72b2-134">Las propiedades para incluir.</span><span class="sxs-lookup"><span data-stu-id="b72b2-134">The properties to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="b72b2-135">`error` contendrá información si se produce un error; en caso contrario `results` contendrá la lista de sitios web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-135">`error` will contain information if an error occurs; otherwise `results` will contain the list of web sites.</span></span>
+                                                                    <span data-ttu-id="b72b2-136">`response` contiene información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-136">`response` will contain information related to this operation.</span></span>
+    content: function listSites(webspaceName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#getSite
+  id: azure-asm-website.WebsiteManagementService#getSite
+  parent: azure-asm-website.WebsiteManagementService
+  name: getSite(webspaceName, siteName, options, callback)
+  summary: <span data-ttu-id="b72b2-137">Recupera el sitio web existente.</span><span class="sxs-lookup"><span data-stu-id="b72b2-137">Retrieves the existing web site.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.getSite(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-138">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-138">The webspace name.</span></span>
+    - id: siteName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-139">El nombre del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-139">The site name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-140">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-140">The options.</span></span>
+      optional: true
+    - id: options.propertiesToInclude
+      type:
+      - array
+      description: <span data-ttu-id="b72b2-141">Las propiedades para incluir.</span><span class="sxs-lookup"><span data-stu-id="b72b2-141">The properties to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="b72b2-142">`error` contendrá información si se produce un error; en caso contrario `results` contendrá la información del sitio web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-142">`error` will contain information if an error occurs; otherwise `results` will contain the the web site information.</span></span>
+                                                                              <span data-ttu-id="b72b2-143">`response` contiene información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-143">`response` will contain information related to this operation.</span></span>
+    content: function getSite(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#createSite
+  id: azure-asm-website.WebsiteManagementService#createSite
+  parent: azure-asm-website.WebsiteManagementService
+  name: createSite(webspaceName, siteName, options, callback)
+  summary: <span data-ttu-id="b72b2-144">Crea un nuevo sitio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-144">Creates a new website.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.createSite(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-145">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-145">The webspace name.</span></span>
+    - id: siteName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-146">El nombre del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-146">The site name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-147">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-147">The options.</span></span>
+      optional: true
+    - id: options.propertiesToInclude
+      type:
+      - array
+      description: <span data-ttu-id="b72b2-148">Las propiedades para incluir.</span><span class="sxs-lookup"><span data-stu-id="b72b2-148">The properties to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="b72b2-149">`error` contendrá información si se produce un error; en caso contrario `results` contendrá la nueva información del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-149">`error` will contain information if an error occurs; otherwise `results` will contain the new site information.</span></span>
+                                                                    <span data-ttu-id="b72b2-150">`response` contiene información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-150">`response` will contain information related to this operation.</span></span>
+    content: function createSite(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#deleteSite
+  id: azure-asm-website.WebsiteManagementService#deleteSite
+  parent: azure-asm-website.WebsiteManagementService
+  name: deleteSite(webspaceName, siteName, options, callback)
+  summary: <span data-ttu-id="b72b2-151">Elimina un sitio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-151">Deletes a website.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.deleteSite(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-152">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-152">The webspace name.</span></span>
+    - id: siteName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-153">El nombre del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-153">The site name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-154">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-154">The options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b72b2-155">`error` contendrá información si se produce un error; en caso contrario `response` contendrá información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-155">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function deleteSite(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#updateSite
+  id: azure-asm-website.WebsiteManagementService#updateSite
+  parent: azure-asm-website.WebsiteManagementService
+  name: updateSite(webspaceName, siteName, options, callback)
+  summary: <span data-ttu-id="b72b2-156">Actualiza un sitio web existente.</span><span class="sxs-lookup"><span data-stu-id="b72b2-156">Updates an existing web site.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.updateSite(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-157">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-157">The webspace name.</span></span>
+    - id: siteName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-158">El nombre del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-158">The site name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-159">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-159">The options.</span></span>
+      optional: true
+    - id: options.propertiesToInclude
+      type:
+      - array
+      description: <span data-ttu-id="b72b2-160">Las propiedades para incluir.</span><span class="sxs-lookup"><span data-stu-id="b72b2-160">The properties to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="b72b2-161">`error` contendrá información si se produce un error; en caso contrario `results` contendrá la información del sitio web actualizado.</span><span class="sxs-lookup"><span data-stu-id="b72b2-161">`error` will contain information if an error occurs; otherwise `results` will contain the updated web site information.</span></span>
+                                                                    <span data-ttu-id="b72b2-162">`response` contiene información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-162">`response` will contain information related to this operation.</span></span>
+    content: function updateSite(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#getSiteConfiguration
+  id: azure-asm-website.WebsiteManagementService#getSiteConfiguration
+  parent: azure-asm-website.WebsiteManagementService
+  name: getSiteConfiguration(webspaceName, siteName, options, callback)
+  summary: <span data-ttu-id="b72b2-163">Recupera la configuración de un sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-163">Retrieves a site configuration.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.getSiteConfiguration(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-164">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-164">The webspace name.</span></span>
+    - id: siteName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-165">El nombre del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-165">The site name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-166">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-166">The options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="b72b2-167">`error` contendrá información si se produce un error; en caso contrario `results` contendrá la configuración del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-167">`error` will contain information if an error occurs; otherwise `results` will contain the site configuration.</span></span>
+                                                              <span data-ttu-id="b72b2-168">`response` contiene información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-168">`response` will contain information related to this operation.</span></span>
+    content: function getSiteConfiguration(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#updateSiteConfiguration
+  id: azure-asm-website.WebsiteManagementService#updateSiteConfiguration
+  parent: azure-asm-website.WebsiteManagementService
+  name: updateSiteConfiguration(webspaceName, siteName, options, callback)
+  summary: <span data-ttu-id="b72b2-169">Actualiza una configuración de sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-169">Updates a site configuration.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.updateSiteConfiguration(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-170">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-170">The webspace name.</span></span>
+    - id: siteName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-171">El nombre del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-171">The site name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-172">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-172">The options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b72b2-173">`error` contendrá información si se produce un error; en caso contrario `response` contendrá información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-173">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function updateSiteConfiguration(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#createServerFarm
+  id: azure-asm-website.WebsiteManagementService#createServerFarm
+  parent: azure-asm-website.WebsiteManagementService
+  name: createServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  summary: <span data-ttu-id="b72b2-174">Crea una nueva granja de servidores.</span><span class="sxs-lookup"><span data-stu-id="b72b2-174">Creates a new server farm.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.createServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-175">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-175">The webspace name.</span></span>
+    - id: serverFarmName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-176">El nombre de la granja de servidores.</span><span class="sxs-lookup"><span data-stu-id="b72b2-176">The server farm name.</span></span>
+    - id: numberOfWorkers
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-177">El número de trabajadores.</span><span class="sxs-lookup"><span data-stu-id="b72b2-177">The number of workers.</span></span>
+    - id: workerSize
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-178">El tamaño del trabajo.</span><span class="sxs-lookup"><span data-stu-id="b72b2-178">The worker size.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-179">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-179">The options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b72b2-180">`error` contendrá información si se produce un error; en caso contrario `response` contendrá información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-180">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function createServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#updateServerFarm
+  id: azure-asm-website.WebsiteManagementService#updateServerFarm
+  parent: azure-asm-website.WebsiteManagementService
+  name: updateServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  summary: <span data-ttu-id="b72b2-181">Actualiza una granja de servidores.</span><span class="sxs-lookup"><span data-stu-id="b72b2-181">Updates a server farm.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.updateServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-182">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-182">The webspace name.</span></span>
+    - id: serverFarmName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-183">El nombre de la granja de servidores.</span><span class="sxs-lookup"><span data-stu-id="b72b2-183">The server farm name.</span></span>
+    - id: numberOfWorkers
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-184">El número de trabajadores.</span><span class="sxs-lookup"><span data-stu-id="b72b2-184">The number of workers.</span></span>
+    - id: workerSize
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-185">El tamaño del trabajo.</span><span class="sxs-lookup"><span data-stu-id="b72b2-185">The worker size.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-186">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-186">The options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b72b2-187">`error` contendrá información si se produce un error; en caso contrario `response` contendrá información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-187">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function updateServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#getServerFarm
+  id: azure-asm-website.WebsiteManagementService#getServerFarm
+  parent: azure-asm-website.WebsiteManagementService
+  name: getServerFarm(webspaceName, serverFarmName, options, callback)
+  summary: <span data-ttu-id="b72b2-188">Recupera una granja de servidores.</span><span class="sxs-lookup"><span data-stu-id="b72b2-188">Retrieves a server farm.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.getServerFarm(webspaceName, serverFarmName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-189">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-189">The webspace name.</span></span>
+    - id: serverFarmName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-190">El nombre de la granja de servidores.</span><span class="sxs-lookup"><span data-stu-id="b72b2-190">The server farm name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-191">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-191">The options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b72b2-192">`error` contendrá información si se produce un error; en caso contrario `response` contendrá información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-192">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function getServerFarm(webspaceName, serverFarmName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#createSiteRepository
+  id: azure-asm-website.WebsiteManagementService#createSiteRepository
+  parent: azure-asm-website.WebsiteManagementService
+  name: createSiteRepository(webspaceName, siteName, options, callback)
+  summary: <span data-ttu-id="b72b2-193">Crea un repositorio del sitio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-193">Creates a website repository.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.createSiteRepository(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-194">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-194">The webspace name.</span></span>
+    - id: siteName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-195">El nombre del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-195">The site name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-196">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-196">The options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b72b2-197">`error` contendrá información si se produce un error; en caso contrario `response` contendrá información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-197">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function createSiteRepository(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#deleteSiteRepository
+  id: azure-asm-website.WebsiteManagementService#deleteSiteRepository
+  parent: azure-asm-website.WebsiteManagementService
+  name: deleteSiteRepository(webspaceName, siteName, options, callback)
+  summary: <span data-ttu-id="b72b2-198">Elimina un repositorio del sitio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-198">Deletes a website repository.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.deleteSiteRepository(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-199">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-199">The webspace name.</span></span>
+    - id: siteName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-200">El nombre del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-200">The site name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-201">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-201">The options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b72b2-202">`error` contendrá información si se produce un error; en caso contrario `response` contendrá información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-202">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function deleteSiteRepository(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#syncSiteRepository
+  id: azure-asm-website.WebsiteManagementService#syncSiteRepository
+  parent: azure-asm-website.WebsiteManagementService
+  name: syncSiteRepository(webspaceName, siteName, options, callback)
+  summary: <span data-ttu-id="b72b2-203">Sincronizar un repositorio del sitio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-203">Sync a website repository.</span></span>
+  fullName: azure-asm-website.WebsiteManagementService.syncSiteRepository(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-204">El nombre del espacio Web.</span><span class="sxs-lookup"><span data-stu-id="b72b2-204">The webspace name.</span></span>
+    - id: siteName
+      type:
+      - string
+      description: <span data-ttu-id="b72b2-205">El nombre del sitio.</span><span class="sxs-lookup"><span data-stu-id="b72b2-205">The site name.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b72b2-206">Las opciones.</span><span class="sxs-lookup"><span data-stu-id="b72b2-206">The options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b72b2-207">`error` contendrá información si se produce un error; en caso contrario `response` contendrá información relacionada con esta operación.</span><span class="sxs-lookup"><span data-stu-id="b72b2-207">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function syncSiteRepository(webspaceName, siteName, options, callback)
+  langs:
+  - js

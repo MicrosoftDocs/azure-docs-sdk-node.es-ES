@@ -1,0 +1,482 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b4e03fb52861a9bc6680bace6ed9e9af650863db
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072258"
+items:
+- uid: ms-rest
+  name: ms-rest
+  langs:
+  - js
+  type: package
+  summary: ''
+  children:
+  - ms-rest.WebResource
+  - ms-rest.ServiceClient
+  - ms-rest.HttpOperationResponse
+  - ms-rest.SystemErrorRetryPolicyFilter
+  - ms-rest.ExponentialRetryPolicyFilter
+  - ms-rest.TokenCredentials
+  - ms-rest.BasicAuthenticationCredentials
+  - ms-rest.ApiKeyCredentials
+  - ms-rest.create
+  - ms-rest.setAgent
+  - ms-rest.checkRPNotRegisteredError
+  - ms-rest.extractSubscriptionUrl
+  - ms-rest.registerRP
+  - ms-rest.getRegistrationStatus
+  - ms-rest.createWithSink
+  - ms-rest.createCompositeFilter
+  - ms-rest.interimStream
+  - ms-rest.serializeObject
+  - ms-rest.serialize
+  - ms-rest.deserialize
+  - ms-rest.urlIsHTTPS
+  - ms-rest.objectIsNull
+  - ms-rest.encodeUri
+  - ms-rest.stripResponse
+  - ms-rest.stripRequest
+  - ms-rest.isValidUuid
+  - ms-rest.objectValues
+  - ms-rest.generateUuid
+  - ms-rest.homeDir
+- uid: ms-rest.create
+  id: ms-rest.create
+  name: create()
+  summary: formDataFilter - resposnsible para establecer la propiedad form en el objeto de solicitud si el encabezado Content-Type es "application/x--www-form-urlencoded" de este filtro es
+  fullName: ms-rest.create()
+  type: Function
+  syntax:
+    content: function create()
+  langs:
+  - js
+- uid: ms-rest.setAgent
+  id: ms-rest.setAgent
+  name: setAgent(resouce, proxy)
+  summary: Conjunto el agente que se usará para el resultado de la solicitud depende de protocolo y la configuración de proxy
+  fullName: ms-rest.setAgent(resouce, proxy)
+  type: Function
+  syntax:
+    parameters:
+    - id: resouce
+      type:
+      - object
+      description: Opciones de solicitud de la solicitud.
+    - id: proxy
+      type:
+      - object
+      description: dirección url analizado para el proxy.
+    content: function setAgent(resouce, proxy)
+  langs:
+  - js
+- uid: ms-rest.checkRPNotRegisteredError
+  id: ms-rest.checkRPNotRegisteredError
+  name: checkRPNotRegisteredError(body)
+  summary: Valida el código de error y el mensaje asociado con el código de estado de respuesta 409. Si coincide con el de RP no registrado, a continuación, devuelve que el nombre del proveedor de recursos else devuelve undefined.
+  fullName: ms-rest.checkRPNotRegisteredError(body)
+  type: Function
+  syntax:
+    parameters:
+    - id: body
+      type:
+      - string
+      description: El cuerpo de respuesta recibido tras realizar la solicitud original.
+    return:
+      type:
+      - string
+      description: El nombre del proveedor de recursos del resultado si se cumple la condición else no definido.
+    content: function checkRPNotRegisteredError(body)
+  langs:
+  - js
+- uid: ms-rest.extractSubscriptionUrl
+  id: ms-rest.extractSubscriptionUrl
+  name: extractSubscriptionUrl(url)
+  summary: 'Extrae la primera parte de la dirección URL, justo después de la suscripción: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/'
+  fullName: ms-rest.extractSubscriptionUrl(url)
+  type: Function
+  syntax:
+    parameters:
+    - id: url
+      type:
+      - string
+      description: Dirección url de solicitud original
+    return:
+      type:
+      - string
+      description: urlPrefix el prefijo de dirección url como se explicó anteriormente.
+    content: function extractSubscriptionUrl(url)
+  langs:
+  - js
+- uid: ms-rest.registerRP
+  id: ms-rest.registerRP
+  name: registerRP(urlPrefix, provider, originalRequest, callback)
+  summary: Registra el proveedor especificado.
+  fullName: ms-rest.registerRP(urlPrefix, provider, originalRequest, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: urlPrefix
+      type:
+      - string
+      description: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/
+    - id: provider
+      type:
+      - string
+      description: El nombre del proveedor que se registrarán.
+    - id: originalRequest
+      type:
+      - object
+      description: La solicitud original enviada por el usuario que devuelven una respuesta con un mensaje que no está registrado el proveedor 409.
+    - id: callback
+      type:
+      - ms-rest.registrationCallback
+      description: La devolución de llamada que controla el registro RP
+    content: function registerRP(urlPrefix, provider, originalRequest, callback)
+  langs:
+  - js
+- uid: ms-rest.getRegistrationStatus
+  id: ms-rest.getRegistrationStatus
+  name: getRegistrationStatus(url, originalRequest, callback)
+  summary: >-
+    Sondea el estado de registro del proveedor que se registró. Se produce un sondeo en un intervalo de 30 segundos.
+
+    Sondeo se realizará hasta que la propiedad registrationState del cuerpo de respuesta se 'registra'.
+  fullName: ms-rest.getRegistrationStatus(url, originalRequest, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: url
+      type:
+      - string
+      description: La solicitud de dirección url de sondeo
+    - id: originalRequest
+      type:
+      - object
+      description: La solicitud original enviada por el usuario que devuelven una respuesta con un mensaje que no está registrado el proveedor 409.
+    - id: callback
+      type:
+      - ms-rest.registrationCallback
+      description: La devolución de llamada que controla el registro RP.
+    content: function getRegistrationStatus(url, originalRequest, callback)
+  langs:
+  - js
+- uid: ms-rest.createWithSink
+  id: ms-rest.createWithSink
+  name: createWithSink()
+  summary: crear una nueva canalización de cliente http que termina con una llamada a la biblioteca de solicitud mediante la función de receptores especificada para llevar a cabo la solicitud http.
+  fullName: ms-rest.createWithSink()
+  type: Function
+  syntax:
+    return:
+      description: función (la solicitud, la devolución de llamada) - función para realizar una solicitud.
+    content: function createWithSink()
+  langs:
+  - js
+- uid: ms-rest.createCompositeFilter
+  id: ms-rest.createCompositeFilter
+  name: createCompositeFilter(filters)
+  summary: Crear un filtro nuevo que es una combinación de todos los filtros proporcionados en la lista de argumentos.
+  fullName: ms-rest.createCompositeFilter(filters)
+  type: Function
+  syntax:
+    parameters:
+    - id: filters
+      type:
+      - ms-rest.varargs
+      description: 'Para ejecutar. Primer filtro en la lista es más cercana al receptor, por lo tanto por última vez para ejecutar antes de la solicitud, primero se ejecute en la respuesta: exactamente igual como si llama a pipeline.add o pasa la lista a pipeline.create.'
+    return:
+      description: el nuevo filtro.
+    content: function createCompositeFilter(filters)
+  langs:
+  - js
+- uid: ms-rest.interimStream
+  id: ms-rest.interimStream
+  name: interimStream(setPipe)
+  summary: Crea un flujo provisional que puede devolverse al autor de llamada de forma sincrónica, para que las operaciones asincrónicas pueden aún enlazar a la salida de transmisión por secuencias posteriormente. Se utiliza cuando los filtros que necesite realizar trabajo asincrónico antes de que puede llamar el resto de la canalización.
+  fullName: ms-rest.interimStream(setPipe)
+  type: Function
+  syntax:
+    parameters:
+    - id: setPipe
+      description: >-
+        función (entrada, salida) se invoca de forma sincrónica, esta función para pasar los dos flujos subyacentes. entrada debe redireccionarse al resultado del filtro siguiente. Se debe canalizar el resultado de la siguiente a la salida.
+
+        Es habitual en pausa para evitar la pérdida de datos antes de devolver realmente el flujo real enlazar con el flujo de entrada.
+    return:
+      description: una secuencia de dúplex que escribe en el flujo de entrada y genera datos de la secuencia de salida.
+    content: function interimStream(setPipe)
+  langs:
+  - js
+- uid: ms-rest.serializeObject
+  id: ms-rest.serializeObject
+  name: serializeObject(toSerialize)
+  summary: Serializa el objeto JSON. Serializa el objeto de búfer a un '' cadena codificada en base64 y un objeto de fecha en una cadena compatible con el formato ISO8601.
+  fullName: ms-rest.serializeObject(toSerialize)
+  type: Function
+  syntax:
+    parameters:
+    - id: toSerialize
+      type:
+      - Object
+      description: ''
+    return:
+      type:
+      - Object
+      description: serializedObject
+    content: function serializeObject(toSerialize)
+  langs:
+  - js
+- uid: ms-rest.serialize
+  id: ms-rest.serialize
+  name: serialize(mapper, object, objectName)
+  summary: Serializar el objeto especificado en función de sus metadatos definidos en el asignador
+  fullName: ms-rest.serialize(mapper, object, objectName)
+  type: Function
+  syntax:
+    parameters:
+    - id: mapper
+      type:
+      - object
+      description: El asignador que define los metadatos del objeto serializable
+    - id: object
+      type:
+      - object
+      - string
+      - Array
+      - number
+      - boolean
+      - Date
+      - ms-rest.stream
+      description: Un objeto de Javascript válido va a serializar
+    - id: objectName
+      type:
+      - string
+      description: Nombre del objeto serializado
+    return:
+      type:
+      - object
+      - string
+      - Array
+      - number
+      - boolean
+      - Date
+      - ms-rest.stream
+      description: Un objeto serializado válido de Javascript
+    content: function serialize(mapper, object, objectName)
+  langs:
+  - js
+- uid: ms-rest.deserialize
+  id: ms-rest.deserialize
+  name: deserialize(mapper, responseBody, objectName)
+  summary: Deserializar el objeto determinado en función de sus metadatos definidos en el asignador
+  fullName: ms-rest.deserialize(mapper, responseBody, objectName)
+  type: Function
+  syntax:
+    parameters:
+    - id: mapper
+      type:
+      - object
+      description: El asignador que define los metadatos del objeto serializable
+    - id: responseBody
+      type:
+      - object
+      - string
+      - Array
+      - number
+      - boolean
+      - Date
+      - ms-rest.stream
+      description: Una entidad válida de Javascript que se deserializará
+    - id: objectName
+      type:
+      - string
+      description: Nombre del objeto deserializado
+    return:
+      type:
+      - object
+      - string
+      - Array
+      - number
+      - boolean
+      - Date
+      - ms-rest.stream
+      description: Un objeto Javascript deserializado válido
+    content: function deserialize(mapper, responseBody, objectName)
+  langs:
+  - js
+- uid: ms-rest.urlIsHTTPS
+  id: ms-rest.urlIsHTTPS
+  name: urlIsHTTPS(urlToCheck)
+  summary: Comprueba si una dirección URL analizada es HTTPS
+  fullName: ms-rest.urlIsHTTPS(urlToCheck)
+  type: Function
+  syntax:
+    parameters:
+    - id: urlToCheck
+      type:
+      - object
+      description: La dirección url para comprobar
+    return:
+      type:
+      - ms-rest.bool
+      description: True si la dirección URL es HTTPS. False en caso contrario.
+    content: function urlIsHTTPS(urlToCheck)
+  langs:
+  - js
+- uid: ms-rest.objectIsNull
+  id: ms-rest.objectIsNull
+  name: objectIsNull(value)
+  summary: Comprueba si un valor es null o undefined.
+  fullName: ms-rest.objectIsNull(value)
+  type: Function
+  syntax:
+    parameters:
+    - id: value
+      type:
+      - object
+      description: El valor para que busque null o undefined.
+    return:
+      type:
+      - ms-rest.bool
+      description: True si el valor es null o undefined, false en caso contrario.
+    content: function objectIsNull(value)
+  langs:
+  - js
+- uid: ms-rest.encodeUri
+  id: ms-rest.encodeUri
+  name: encodeUri(uri)
+  summary: Codifica un identificador URI.
+  fullName: ms-rest.encodeUri(uri)
+  type: Function
+  syntax:
+    parameters:
+    - id: uri
+      type:
+      - string
+      description: El URI que se desea codificar.
+    return:
+      type:
+      - string
+      description: El identificador URI codificado.
+    content: function encodeUri(uri)
+  langs:
+  - js
+- uid: ms-rest.stripResponse
+  id: ms-rest.stripResponse
+  name: stripResponse(response)
+  summary: Devuelve una versión eliminada de la respuesta Http que contiene solo el cuerpo, los encabezados y el código de estado.
+  fullName: ms-rest.stripResponse(response)
+  type: Function
+  syntax:
+    parameters:
+    - id: response
+      type:
+      - ms-rest.stream
+      description: La respuesta Http
+    return:
+      type:
+      - object
+      description: strippedResponse - la versión eliminada de la respuesta Http.
+    content: function stripResponse(response)
+  langs:
+  - js
+- uid: ms-rest.stripRequest
+  id: ms-rest.stripRequest
+  name: stripRequest(request)
+  summary: Devuelve una versión eliminada de la solicitud Http que no contiene el encabezado de autorización.
+  fullName: ms-rest.stripRequest(request)
+  type: Function
+  syntax:
+    parameters:
+    - id: request
+      type:
+      - object
+      description: El objeto de solicitud Http
+    return:
+      type:
+      - object
+      description: strippedRequest - la versión eliminada de la solicitud Http.
+    content: function stripRequest(request)
+  langs:
+  - js
+- uid: ms-rest.isValidUuid
+  id: ms-rest.isValidUuid
+  name: isValidUuid(uuid)
+  summary: Valida el uuid especificado como una cadena
+  fullName: ms-rest.isValidUuid(uuid)
+  type: Function
+  syntax:
+    parameters:
+    - id: uuid
+      type:
+      - string
+      description: El uuid como una cadena que necesita ser validada
+    return:
+      type:
+      - boolean
+      description: como resultado - True si el uuid es válido; False en caso contrario.
+    content: function isValidUuid(uuid)
+  langs:
+  - js
+- uid: ms-rest.objectValues
+  id: ms-rest.objectValues
+  name: objectValues(obj)
+  summary: "Proporciona una matriz de valores de un objeto. Por ejemplo, para un objeto determinado {\"a\": 'foo', 'b': 'bar'}, el método devuelve ['foo', 'bar']."
+  fullName: ms-rest.objectValues(obj)
+  type: Function
+  syntax:
+    parameters:
+    - id: obj
+      type:
+      - object
+      description: Se puede proporcionar un objeto cuyas propiedades deben mostrarse de manera que tenga valores como una matriz
+    return:
+      type:
+      - array
+      description: 'resultado: una matriz de valores del objeto especificado.'
+    content: function objectValues(obj)
+  langs:
+  - js
+- uid: ms-rest.generateUuid
+  id: ms-rest.generateUuid
+  name: generateUuid()
+  summary: UUID generado
+  fullName: ms-rest.generateUuid()
+  type: Function
+  syntax:
+    return:
+      type:
+      - string
+      description: UUID de v4 RFC4122.
+    content: function generateUuid()
+  langs:
+  - js
+- uid: ms-rest.homeDir
+  id: ms-rest.homeDir
+  name: homeDir()
+  summary: Proporciona la ruta de acceso al directorio particular.
+  fullName: ms-rest.homeDir()
+  type: Function
+  syntax:
+    content: function homeDir()
+  langs:
+  - js
+references:
+- uid: ms-rest.WebResource
+  name: WebResource
+- uid: ms-rest.ServiceClient
+  name: ServiceClient
+- uid: ms-rest.HttpOperationResponse
+  name: HttpOperationResponse
+- uid: ms-rest.SystemErrorRetryPolicyFilter
+  name: SystemErrorRetryPolicyFilter
+- uid: ms-rest.ExponentialRetryPolicyFilter
+  name: ExponentialRetryPolicyFilter
+- uid: ms-rest.TokenCredentials
+  name: TokenCredentials
+- uid: ms-rest.BasicAuthenticationCredentials
+  name: BasicAuthenticationCredentials
+- uid: ms-rest.ApiKeyCredentials
+  name: ApiKeyCredentials

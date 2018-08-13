@@ -1,0 +1,297 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b1b639bf4cfb4408fcf6bcf53c7cc5cf81a00250
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072255"
+items:
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations
+  summary: >-
+    <span data-ttu-id="f393e-101">Operaciones para administrar planes bajo la suscripción de hospedaje web.</span><span class="sxs-lookup"><span data-stu-id="f393e-101">Operations for managing web hosting plans beneath your subscription.</span></span>
+
+    <span data-ttu-id="f393e-102">__Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [WebSiteManagementClient] {@link WebSiteManagementClient ~ WebSiteManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="f393e-102">__NOTE__: An instance of this class is automatically created for an instance of the [WebSiteManagementClient] {@link WebSiteManagementClient~WebSiteManagementClient}.</span></span>
+
+    <span data-ttu-id="f393e-103">Consulte [webHostingPlans] {@link WebSiteManagementClient ~ WebSiteManagementClient #webHostingPlans}.</span><span class="sxs-lookup"><span data-stu-id="f393e-103">See [webHostingPlans] {@link WebSiteManagementClient~WebSiteManagementClient#webHostingPlans}.</span></span>
+
+    <span data-ttu-id="f393e-104">Inicializa una nueva instancia de la clase WebHostingPlanOperations.</span><span class="sxs-lookup"><span data-stu-id="f393e-104">Initializes a new instance of the WebHostingPlanOperations class.</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations
+  type: Class
+  children:
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  langs:
+  - js
+- id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations(client)
+  fullName: azure-asm-website.WebHostingPlanOperations.WebHostingPlanOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedWebSiteManagementClient
+      description: <span data-ttu-id="f393e-105">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="f393e-105">Reference to the service client.</span></span>
+    content: new WebHostingPlanOperations(client)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: create(webSpaceName, parameters, callback)
+  summary: <span data-ttu-id="f393e-106">Crea un nuevo Plan de hospedaje Web.</span><span class="sxs-lookup"><span data-stu-id="f393e-106">Creates a new Web Hosting Plan.</span></span>  <span data-ttu-id="f393e-107">(consulte http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="f393e-107">(see http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.create(webSpaceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-108">El nombre del espacio web.</span><span class="sxs-lookup"><span data-stu-id="f393e-108">The name of the web space.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanCreateParameters
+      description: <span data-ttu-id="f393e-109">Parámetros de Plan de hospedaje Web.</span><span class="sxs-lookup"><span data-stu-id="f393e-109">Web Hosting Plan Parameters.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="f393e-110">Nombre del plan de hospedaje Web.</span><span class="sxs-lookup"><span data-stu-id="f393e-110">Name of the Web hosting plan.</span></span>
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: <span data-ttu-id="f393e-111">El número solicitado de los trabajadores.</span><span class="sxs-lookup"><span data-stu-id="f393e-111">The requested number of workers.</span></span>
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: <span data-ttu-id="f393e-112">SKU del plan de hospedaje Web.</span><span class="sxs-lookup"><span data-stu-id="f393e-112">SKU of the Web hosting plan.</span></span>
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        <span data-ttu-id="f393e-113">El tamaño del trabajo.</span><span class="sxs-lookup"><span data-stu-id="f393e-113">The worker size.</span></span>
+
+        <span data-ttu-id="f393e-114">Los valores posibles son pequeño, mediano y grande.</span><span class="sxs-lookup"><span data-stu-id="f393e-114">Possible values are Small, Medium, and Large.</span></span> <span data-ttu-id="f393e-115">Para JSON, los equivalentes son 0 = pequeño, 1 = medio y 2 = grande.</span><span class="sxs-lookup"><span data-stu-id="f393e-115">For JSON, the equivalents are 0 = Small, 1 = Medium, and 2 = Large.</span></span>
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-116">El sitio de administración.</span><span class="sxs-lookup"><span data-stu-id="f393e-116">The admin site.</span></span> <span data-ttu-id="f393e-117">El sitio de administración se usa para implementar las extensiones de sitio o contenidos compartidos por todos los sitios en el plan.</span><span class="sxs-lookup"><span data-stu-id="f393e-117">The admin site is used to deploy site extensions or contents shared by all site in the plan.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="f393e-118">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="f393e-118">The response stream.</span></span>
+    content: function create(webSpaceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: deleteMethod(webSpaceName, webHostingPlanName, callback)
+  summary: <span data-ttu-id="f393e-119">Elimina un Plan de hospedaje Web (consulte http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="f393e-119">Deletes a Web Hosting Plan  (see http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.deleteMethod(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-120">El nombre del espacio web.</span><span class="sxs-lookup"><span data-stu-id="f393e-120">The name of the web space.</span></span>
+    - id: webHostingPlanName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-121">El nombre del plan de hospedaje web.</span><span class="sxs-lookup"><span data-stu-id="f393e-121">The name of the web hosting plan.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="f393e-122">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="f393e-122">The response stream.</span></span>
+    content: function deleteMethod(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: get(webSpaceName, webHostingPlanName, callback)
+  summary: <span data-ttu-id="f393e-123">Obtiene los detalles de una existente Plan de hospedaje Web (consulte http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="f393e-123">Gets details of an existing Web Hosting Plan  (see http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.get(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-124">El nombre del espacio web.</span><span class="sxs-lookup"><span data-stu-id="f393e-124">The name of the web space.</span></span>
+    - id: webHostingPlanName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-125">El nombre del plan de hospedaje web.</span><span class="sxs-lookup"><span data-stu-id="f393e-125">The name of the web hosting plan.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="f393e-126">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="f393e-126">The response stream.</span></span>
+    content: function get(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: <span data-ttu-id="f393e-127">Puede recuperar métricas históricas de uso para un sitio emitiendo una solicitud HTTP GET.</span><span class="sxs-lookup"><span data-stu-id="f393e-127">You can retrieve historical usage metrics for a site by issuing an HTTP GET request.</span></span>  <span data-ttu-id="f393e-128">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166964.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="f393e-128">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn166964.aspx for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-129">El nombre del espacio web.</span><span class="sxs-lookup"><span data-stu-id="f393e-129">The name of the web space.</span></span>
+    - id: webHostingPlanName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-130">El nombre del plan de hospedaje web.</span><span class="sxs-lookup"><span data-stu-id="f393e-130">The name of the web hosting plan.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanGetHistoricalUsageMetricsParameters
+      description: <span data-ttu-id="f393e-131">Parámetros proporcionados al Obtenga históricos uso las métricas de hospedaje Web operación de plan.</span><span class="sxs-lookup"><span data-stu-id="f393e-131">Parameters supplied to the Get Historical Usage Metrics Web hosting plan operation.</span></span>
+    - id: parameters.metricNames
+      type:
+      - array
+      description: <span data-ttu-id="f393e-132">Especifica una lista separada por comas de los nombres de las métricas para devolver.</span><span class="sxs-lookup"><span data-stu-id="f393e-132">Specifies a comma-separated list of the names of the metrics to return.</span></span> <span data-ttu-id="f393e-133">Si no se especifica el parámetro de nombres, se devuelven todas las métricas disponibles.</span><span class="sxs-lookup"><span data-stu-id="f393e-133">If the names parameter is not specified, then all available metrics are returned.</span></span>
+      optional: true
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="f393e-134">Hora de inicio de las métricas para devolver.</span><span class="sxs-lookup"><span data-stu-id="f393e-134">The starting time of the metrics to return.</span></span> <span data-ttu-id="f393e-135">Si no se especifica este parámetro, se usa el principio de la hora actual.</span><span class="sxs-lookup"><span data-stu-id="f393e-135">If this parameter is not specified, the beginning of the current hour is used.</span></span>
+      optional: true
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="f393e-136">Hora de finalización de las métricas para devolver.</span><span class="sxs-lookup"><span data-stu-id="f393e-136">The ending time of the metrics to return.</span></span> <span data-ttu-id="f393e-137">Si no se especifica este parámetro, se usa la hora actual.</span><span class="sxs-lookup"><span data-stu-id="f393e-137">If this parameter is not specified, the current time is used.</span></span>
+      optional: true
+    - id: parameters.timeGrain
+      type:
+      - string
+      description: <span data-ttu-id="f393e-138">El nivel de detalle en el que se devuelven las métricas.</span><span class="sxs-lookup"><span data-stu-id="f393e-138">The grain at which the metrics are returned.</span></span> <span data-ttu-id="f393e-139">Los valores admitidos son PT1M (minuto), PT1H (hora), P1D (día).</span><span class="sxs-lookup"><span data-stu-id="f393e-139">Supported values are PT1M (minute), PT1H (hour), P1D (day).</span></span>
+      optional: true
+    - id: parameters.includeInstanceBreakdown
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="f393e-140">Marca que especifica si se deben incluidas las métricas para cada instancia de máquina.</span><span class="sxs-lookup"><span data-stu-id="f393e-140">Flag which specifies if the metrics for each machine instance should be included.</span></span>
+
+        <span data-ttu-id="f393e-141">Para los sitios que se ejecutan en más de una máquina, esto puede resultar útil para identificar una máquina incorrecta.</span><span class="sxs-lookup"><span data-stu-id="f393e-141">For sites that run on more than one machine this could be useful to identify a bad machine.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="f393e-142">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="f393e-142">The response stream.</span></span>
+    content: function getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: list(webSpaceName, callback)
+  summary: <span data-ttu-id="f393e-143">Puede enumerar los espacios web bajo la suscripción actual emitiendo una solicitud GET.</span><span class="sxs-lookup"><span data-stu-id="f393e-143">You can list the web spaces under the current subscription by issuing a GET request.</span></span>  <span data-ttu-id="f393e-144">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn166961.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="f393e-144">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn166961.aspx for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.list(webSpaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-145">El nombre del espacio web.</span><span class="sxs-lookup"><span data-stu-id="f393e-145">The name of the web space.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="f393e-146">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="f393e-146">The response stream.</span></span>
+    content: function list(webSpaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: update(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: <span data-ttu-id="f393e-147">Actualiza una existente Plan de hospedaje Web.</span><span class="sxs-lookup"><span data-stu-id="f393e-147">Updates an existing Web Hosting Plan.</span></span>  <span data-ttu-id="f393e-148">(consulte http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="f393e-148">(see http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ for more information)</span></span>
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.update(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-149">El nombre del espacio web.</span><span class="sxs-lookup"><span data-stu-id="f393e-149">The name of the web space.</span></span>
+    - id: webHostingPlanName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-150">El nombre del plan de hospedaje web.</span><span class="sxs-lookup"><span data-stu-id="f393e-150">The name of the web hosting plan.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanUpdateParameters
+      description: <span data-ttu-id="f393e-151">Parámetros proporcionados a la operación de actualización Plan de hospedaje Web.</span><span class="sxs-lookup"><span data-stu-id="f393e-151">Parameters supplied to the Update Web Hosting Plan operation.</span></span>
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: <span data-ttu-id="f393e-152">El número solicitado de los trabajadores.</span><span class="sxs-lookup"><span data-stu-id="f393e-152">The requested number of workers.</span></span>
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: <span data-ttu-id="f393e-153">SKU del plan de hospedaje Web.</span><span class="sxs-lookup"><span data-stu-id="f393e-153">SKU of the Web hosting plan.</span></span>
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        <span data-ttu-id="f393e-154">El tamaño del trabajo.</span><span class="sxs-lookup"><span data-stu-id="f393e-154">The worker size.</span></span>
+
+        <span data-ttu-id="f393e-155">Los valores posibles son pequeño, mediano y grande.</span><span class="sxs-lookup"><span data-stu-id="f393e-155">Possible values are Small, Medium, and Large.</span></span> <span data-ttu-id="f393e-156">Para JSON, los equivalentes son 0 = pequeño, 1 = medio y 2 = grande.</span><span class="sxs-lookup"><span data-stu-id="f393e-156">For JSON, the equivalents are 0 = Small, 1 = Medium, and 2 = Large.</span></span>
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: <span data-ttu-id="f393e-157">El sitio de administración.</span><span class="sxs-lookup"><span data-stu-id="f393e-157">The admin site.</span></span> <span data-ttu-id="f393e-158">El sitio de administración se usa para implementar las extensiones de sitio o contenidos compartidos por todos los sitios en el plan.</span><span class="sxs-lookup"><span data-stu-id="f393e-158">The admin site is used to deploy site extensions or contents shared by all site in the plan.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: <span data-ttu-id="f393e-159">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="f393e-159">The response stream.</span></span>
+    content: function update(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js

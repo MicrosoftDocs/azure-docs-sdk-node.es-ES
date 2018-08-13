@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 670db3bbc0e71ca83fb9757b1cad6632610557f1
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40072406"
+items:
+- uid: azure-iot-provisioning-device.ProvisioningDeviceClient
+  name: ProvisioningDeviceClient
+  fullName: ProvisioningDeviceClient
+  children:
+  - azure-iot-provisioning-device.ProvisioningDeviceClient.create
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="751e5-101">Objeto de cliente utilizado para comunicarse con el servicio de aprovisionamiento de dispositivos de Azure IoT Hub.</span><span class="sxs-lookup"><span data-stu-id="751e5-101">Client object used to communicate with the Azure IoT Hub Device Provisioning Service.</span></span>
+  package: azure-iot-provisioning-device
+- uid: azure-iot-provisioning-device.ProvisioningDeviceClient.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="751e5-102">Construya un objeto de cliente que se puede usar para comunicarse con el servicio Azure Device Provisioning.</span><span class="sxs-lookup"><span data-stu-id="751e5-102">Construct a client object which can be used to communicate with the Azure Device Provisioning Service.</span></span>
+  syntax:
+    content: 'static function create(provisioningHost: string, idScope: string, transport: X509ProvisioningTransport | TpmProvisioningTransport, securityClient: X509SecurityClient | TpmSecurityClient)'
+    parameters:
+    - id: provisioningHost
+      type:
+      - string
+      description: <span data-ttu-id="751e5-103">Host que ejecuta el servicio Device Provisioning.</span><span class="sxs-lookup"><span data-stu-id="751e5-103">Host running the Device Provisioning Service.</span></span>  <span data-ttu-id="751e5-104">Puede encontrarse en el portal de Azure en la sección "Información esencial" de la pestaña "Información general" como la cadena 'punto de conexión Global del dispositivo'</span><span class="sxs-lookup"><span data-stu-id="751e5-104">Can be found in the Azure portal in the 'Essentials' section of the 'Overview' tab as the string 'Global device endpoint'</span></span>
+    - id: idScope
+      type:
+      - string
+      description: <span data-ttu-id="751e5-105">Ámbito de identificadores para el servicio Device Provisioning.</span><span class="sxs-lookup"><span data-stu-id="751e5-105">Scope of IDs for the Device Provisioning Service.</span></span>  <span data-ttu-id="751e5-106">Puede encontrarse en el portal de Azure en la sección "Información esencial" de la pestaña "Información general" como la cadena 'Ámbito de Id.'</span><span class="sxs-lookup"><span data-stu-id="751e5-106">Can be found in the Azure portal in the 'Essentials' section of the 'Overview' tab as the string 'ID Scope'</span></span>
+    - id: transport
+      type:
+      - X509ProvisioningTransport | TpmProvisioningTransport
+      description: '<span data-ttu-id="751e5-107">Función constructora para el aprovisionamiento para utilizar el transporte.</span><span class="sxs-lookup"><span data-stu-id="751e5-107">Constructor function for provisioning transport to use.</span></span>  <span data-ttu-id="751e5-108">Puede ser uno de los siguientes: [azure-iot-provisioning-dispositivo-http. HTTP](xref:azure-iot-provisioning-device-http.Http) [azure-iot-provisioning-device-amqp. Amqp](xref:azure-iot-provisioning-device-amqp.Amqp) [azure-iot-provisioning-device-amqp. AmqpWs](xref:azure-iot-provisioning-device-amqp.AmqpWs) [azure-iot-provisioning-device-mqtt. Mqtt](xref:azure-iot-provisioning-device-mqtt.Mqtt) [azure-iot-provisioning-device-mqtt. MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)</span><span class="sxs-lookup"><span data-stu-id="751e5-108">Can be one of the following: [azure-iot-provisioning-device-http.Http](xref:azure-iot-provisioning-device-http.Http) [azure-iot-provisioning-device-amqp.Amqp](xref:azure-iot-provisioning-device-amqp.Amqp) [azure-iot-provisioning-device-amqp.AmqpWs](xref:azure-iot-provisioning-device-amqp.AmqpWs) [azure-iot-provisioning-device-mqtt.Mqtt](xref:azure-iot-provisioning-device-mqtt.Mqtt) [azure-iot-provisioning-device-mqtt.MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)</span></span>'
+    - id: securityClient
+      type:
+      - azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient
+      description: >
+        <span data-ttu-id="751e5-109">Instancia de objeto de cliente de seguridad que implementa ya sea el [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) o [TpmSecurityClient](xref:azure-iot-provisioning-device%3ATpmSecurityClient) interfaz.</span><span class="sxs-lookup"><span data-stu-id="751e5-109">Instance of Scurity client object implementing either the [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) or the [TpmSecurityClient](xref:azure-iot-provisioning-device%3ATpmSecurityClient) interface.</span></span>
+
+        <span data-ttu-id="751e5-110">Sugiere las implementaciones de estas interfaces incluyen [X509Security](xref:azure-iot-security-x509.X509Security) o [TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient)</span><span class="sxs-lookup"><span data-stu-id="751e5-110">Suggested implementations of these interfaces include [X509Security](xref:azure-iot-security-x509.X509Security) or [TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient)</span></span>
+    return:
+      type:
+      - azure-iot-provisioning-device.RegistrationClient
+  package: azure-iot-provisioning-device
+references:
+- uid: azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient
+  spec.typeScript:
+  - name: X509SecurityClient
+    fullName: X509SecurityClient
+    uid: azure-iot-provisioning-device.X509SecurityClient
+  - name: " | TpmSecurityClient"
+    fullName: " | TpmSecurityClient"
+- uid: azure-iot-provisioning-device.RegistrationClient
+  spec.typeScript:
+  - name: RegistrationClient
+    fullName: RegistrationClient
+    uid: azure-iot-provisioning-device.RegistrationClient
