@@ -1,0 +1,283 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 835bcd8155995b68ec858110637230050a0cdec2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071754"
+items:
+- uid: azure-asm-sql.DacOperations~DacOperations
+  id: azure-asm-sql.DacOperations~DacOperations
+  name: DacOperations
+  summary: >-
+    <span data-ttu-id="b26f3-101">Incluye las operaciones de importación y exportación de bases de datos de Azure SQL dentro y fuera de almacenamiento de blobs de Azure.</span><span class="sxs-lookup"><span data-stu-id="b26f3-101">Includes operations for importing and exporting Azure SQL Databases into and out of Azure blob storage.</span></span>
+
+    <span data-ttu-id="b26f3-102">__Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="b26f3-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="b26f3-103">Consulte [dac] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23dac>.</span><span class="sxs-lookup"><span data-stu-id="b26f3-103">See [dac] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23dac>.</span></span>
+
+    <span data-ttu-id="b26f3-104">Inicializa una nueva instancia de la clase DacOperations.</span><span class="sxs-lookup"><span data-stu-id="b26f3-104">Initializes a new instance of the DacOperations class.</span></span>
+  fullName: azure-asm-sql.DacOperations
+  type: Class
+  children:
+  - azure-asm-sql.DacOperations~DacOperations.#ctor
+  - azure-asm-sql.DacOperations~DacOperations#exportMethod
+  - azure-asm-sql.DacOperations~DacOperations#getStatus
+  - azure-asm-sql.DacOperations~DacOperations#getStatusPost
+  - azure-asm-sql.DacOperations~DacOperations#importMethod
+  langs:
+  - js
+- id: azure-asm-sql.DacOperations~DacOperations.#ctor
+  uid: azure-asm-sql.DacOperations~DacOperations.#ctor
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: DacOperations(client)
+  fullName: azure-asm-sql.DacOperations.DacOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="b26f3-105">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="b26f3-105">Reference to the service client.</span></span>
+    content: new DacOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#exportMethod
+  id: azure-asm-sql.DacOperations~DacOperations#exportMethod
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: exportMethod(serverName, parametersOrCallback, callback)
+  summary: <span data-ttu-id="b26f3-106">Exporta una base de datos de SQL Azure en un archivo DACPAC en Azure Blob Storage.</span><span class="sxs-lookup"><span data-stu-id="b26f3-106">Exports an Azure SQL Database into a DACPAC file in Azure Blob Storage.</span></span>
+  fullName: azure-asm-sql.DacOperations~DacOperations.exportMethod(serverName, parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-107">El nombre del servidor de base de datos de SQL Azure en el que reside la base de datos para exportar.</span><span class="sxs-lookup"><span data-stu-id="b26f3-107">The name of the Azure SQL Database Server in which the database to export resides.</span></span>
+    - id: parametersOrCallback
+      type:
+      - azure-asm-sql.DacExportParameters
+      description: <span data-ttu-id="b26f3-108">Los parámetros necesarios para iniciar la solicitud de exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-108">The parameters needed to initiate the export request.</span></span>
+      optional: true
+    - id: parametersOrCallback.blobCredentials
+      type:
+      - azure-asm-sql.BlobCredentialsParameter
+      description: <span data-ttu-id="b26f3-109">Obtiene o establece la información de credenciales necesaria para la configuración en el archivo DACPAC se exportarán en Azure Blob Storage.</span><span class="sxs-lookup"><span data-stu-id="b26f3-109">Gets or sets the credentials information needed for setting where the DACPAC file will be exported to in Azure Blob Storage.</span></span>
+      optional: true
+    - id: parametersOrCallback.blobCredentials.uri
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-110">Obtiene o establece el URI de donde se debe almacenar el archivo DACPAC en Azure Blob Storage.</span><span class="sxs-lookup"><span data-stu-id="b26f3-110">Gets or sets the URI of where the DACPAC file should be stored in Azure Blob Storage.</span></span>
+      optional: true
+    - id: parametersOrCallback.blobCredentials.storageAccessKey
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-111">Obtiene o establece la clave de acceso para la cuenta de almacenamiento de Azure.</span><span class="sxs-lookup"><span data-stu-id="b26f3-111">Gets or sets the access key for the Azure Storage account.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo
+      type:
+      - azure-asm-sql.ConnectionInfoParameter
+      description: <span data-ttu-id="b26f3-112">Obtiene o establece la información de conexión necesaria para la base de datos de SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="b26f3-112">Gets or sets the connection information needed for the Azure SQL Database.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo.databaseName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-113">Obtiene o establece el nombre de la base de datos que se exportarán.</span><span class="sxs-lookup"><span data-stu-id="b26f3-113">Gets or sets the name of the database to be exported.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo.password
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-114">Obtiene o establece la contraseña del usuario de administrador de base de datos.</span><span class="sxs-lookup"><span data-stu-id="b26f3-114">Gets or sets the password for the database administrator user.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo.serverName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-115">Obtiene o establece el nombre del servidor de base de datos SQL de Azure donde reside la base de datos.</span><span class="sxs-lookup"><span data-stu-id="b26f3-115">Gets or sets the Azure SQL Database Server name where the database resides.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo.userName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-116">Obtiene o establece el nombre de usuario del usuario de administrador de base de datos.</span><span class="sxs-lookup"><span data-stu-id="b26f3-116">Gets or sets the username of the database administrator user.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="b26f3-117">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="b26f3-117">The response stream.</span></span>
+    content: function exportMethod(serverName, parametersOrCallback, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#getStatus
+  id: azure-asm-sql.DacOperations~DacOperations#getStatus
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: getStatus(serverName, fullyQualifiedServerName, username, password, requestId, callback)
+  summary: <span data-ttu-id="b26f3-118">Obtiene el estado de la operación de importación o exportación en el servidor especificado con el identificador de solicitud correspondiente.</span><span class="sxs-lookup"><span data-stu-id="b26f3-118">Gets the status of the import or export operation in the specified server with the corresponding request ID.</span></span>  <span data-ttu-id="b26f3-119">El identificador de solicitud se proporciona en las respuestas de la operación de importación o exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-119">The request ID is provided in the responses of the import or export operation.</span></span>
+  fullName: azure-asm-sql.DacOperations~DacOperations.getStatus(serverName, fullyQualifiedServerName, username, password, requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-120">El nombre del servidor en el que está realizando la operación de importación o exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-120">The name of the server in which the import or export operation is taking place.</span></span>
+    - id: fullyQualifiedServerName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="b26f3-121">El nombre de dominio completo del servidor de base de datos de SQL de Azure donde tiene lugar la operación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-121">The fully qualified domain name of the Azure SQL Database Server where the operation is taking place.</span></span>
+
+        <span data-ttu-id="b26f3-122">Ejemplo: a9s7f7s9d3.database.windows.net</span><span class="sxs-lookup"><span data-stu-id="b26f3-122">Example: a9s7f7s9d3.database.windows.net</span></span>
+    - id: username
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-123">El nombre de usuario de administrador para el servidor de base de datos de SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="b26f3-123">The administrator username for the Azure SQL Database Server.</span></span>
+    - id: password
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-124">La contraseña de administrador para el servidor de base de datos de SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="b26f3-124">The administrator password for the Azure SQL Database Server.</span></span>
+    - id: requestId
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="b26f3-125">El identificador de solicitud de la operación que se está consultando.</span><span class="sxs-lookup"><span data-stu-id="b26f3-125">The request ID of the operation being queried.</span></span>
+
+        <span data-ttu-id="b26f3-126">Se obtiene el identificador de solicitud de las respuestas de las operaciones de importación y exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-126">The request ID is obtained from the responses of the import and export operations.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="b26f3-127">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="b26f3-127">The response stream.</span></span>
+    content: function getStatus(serverName, fullyQualifiedServerName, username, password, requestId, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#getStatusPost
+  id: azure-asm-sql.DacOperations~DacOperations#getStatusPost
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: getStatusPost(serverName, parameters, callback)
+  summary: <span data-ttu-id="b26f3-128">Obtiene el estado de la operación de importación o exportación en el servidor especificado con el identificador de solicitud correspondiente.</span><span class="sxs-lookup"><span data-stu-id="b26f3-128">Gets the status of the import or export operation in the specified server with the corresponding request ID.</span></span>  <span data-ttu-id="b26f3-129">El identificador de solicitud se proporciona en las respuestas de la operación de importación o exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-129">The request ID is provided in the responses of the import or export operation.</span></span>
+  fullName: azure-asm-sql.DacOperations~DacOperations.getStatusPost(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-130">El nombre del servidor en el que está realizando la operación de importación o exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-130">The name of the server in which the import or export operation is taking place.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DacGetStatusParameters
+      description: <span data-ttu-id="b26f3-131">Los parámetros necesitan para obtener el estado de una importación o la operación de exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-131">The parameters needed to get the status of an import or export operation.</span></span>
+    - id: parameters.serverName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-132">Obtiene o establece el nombre completo del servidor de base de datos de SQL de Azure donde se está produciendo la operación de importación o exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-132">Gets or sets the fully qualified name of the Azure SQL Database server where the import or export operation is occurring.</span></span>
+    - id: parameters.userName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-133">Obtiene o establece el nombre de usuario para el servidor de base de datos de SQL de Azure donde se está produciendo la operación de importación o exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-133">Gets or sets the username for the Azure SQL Database server where the import or export operation is occurring.</span></span>
+    - id: parameters.password
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-134">Obtiene o establece la contraseña para el servidor de base de datos de SQL de Azure donde se está produciendo la operación de importación o exportación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-134">Gets or sets the password for the Azure SQL Database server where the import or export operation is occurring.</span></span>
+    - id: parameters.requestId
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-135">Obtiene o establece el identificador para la operación de importación o exportación de que se va a consultar el estado.</span><span class="sxs-lookup"><span data-stu-id="b26f3-135">Gets or sets the Id for the import or export operation of which to query the status.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="b26f3-136">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="b26f3-136">The response stream.</span></span>
+    content: function getStatusPost(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#importMethod
+  id: azure-asm-sql.DacOperations~DacOperations#importMethod
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: importMethod(serverName, parametersOrCallback, callback)
+  summary: <span data-ttu-id="b26f3-137">Inicia una importación de un archivo DACPAC de Azure Blob Storage en una base de datos de SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="b26f3-137">Initiates an Import of a DACPAC file from Azure Blob Storage into a Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.DacOperations~DacOperations.importMethod(serverName, parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-138">El nombre del servidor de base de datos de SQL Azure en la que se va a importar la base de datos.</span><span class="sxs-lookup"><span data-stu-id="b26f3-138">The name of the Azure SQL Database Server into which the database is being imported.</span></span>
+    - id: parametersOrCallback
+      type:
+      - azure-asm-sql.DacImportParameters
+      description: <span data-ttu-id="b26f3-139">Los parámetros necesarios para que se inició la solicitud de importación.</span><span class="sxs-lookup"><span data-stu-id="b26f3-139">The parameters needed to initiated the Import request.</span></span>
+      optional: true
+    - id: parametersOrCallback.azureEdition
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-140">Obtiene o establece la edición de la base de datos que se crearán al importar.</span><span class="sxs-lookup"><span data-stu-id="b26f3-140">Gets or sets the edition for the database that will be created upon import.</span></span>
+      optional: true
+    - id: parametersOrCallback.blobCredentials
+      type:
+      - azure-asm-sql.BlobCredentialsParameter
+      description: <span data-ttu-id="b26f3-141">Obtiene o establece las credenciales para recuperar el DACPAC de Azure Blob Storage.</span><span class="sxs-lookup"><span data-stu-id="b26f3-141">Gets or sets the credentials for retrieving the DACPAC from Azure Blob Storage.</span></span>
+      optional: true
+    - id: parametersOrCallback.blobCredentials.uri
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-142">Obtiene o establece el URI del archivo DACPAC almacenado en Azure Blob Storage que desea importar.</span><span class="sxs-lookup"><span data-stu-id="b26f3-142">Gets or sets the URI of the DACPAC file stored in Azure Blob Storage to be imported.</span></span>
+      optional: true
+    - id: parametersOrCallback.blobCredentials.storageAccessKey
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-143">Obtiene o establece la clave de acceso para la cuenta de Azure Blob Storage donde se almacena el archivo DACPAC.</span><span class="sxs-lookup"><span data-stu-id="b26f3-143">Gets or sets the access key for the Azure Blob Storage account where the DACPAC file is stored.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo
+      type:
+      - azure-asm-sql.ConnectionInfoParameter
+      description: <span data-ttu-id="b26f3-144">Obtiene o establece la información de conexión necesaria para conectarse a SQL Azure y crear una base de datos para importar.</span><span class="sxs-lookup"><span data-stu-id="b26f3-144">Gets or sets the connection information needed for connecting to SQL Azure and creating a database to import into.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo.databaseName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-145">Obtiene o establece el nombre de la base de datos en el que se importará el archivo DACPAC.</span><span class="sxs-lookup"><span data-stu-id="b26f3-145">Gets or sets the name of the database into which the DACPAC file will be imported.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo.password
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-146">Obtiene o establece la contraseña para el administrador del servidor.</span><span class="sxs-lookup"><span data-stu-id="b26f3-146">Gets or sets the password for the server administrator.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo.serverName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-147">Obtiene o establece el nombre del servidor de base de datos SQL de Azure donde se creará la base de datos importado.</span><span class="sxs-lookup"><span data-stu-id="b26f3-147">Gets or sets the Azure SQL Database Server name where the imported database will be created.</span></span>
+      optional: true
+    - id: parametersOrCallback.connectionInfo.userName
+      type:
+      - string
+      description: <span data-ttu-id="b26f3-148">Obtiene o establece el nombre de usuario de la administración de servidor.</span><span class="sxs-lookup"><span data-stu-id="b26f3-148">Gets or sets the username of the server administration.</span></span>
+      optional: true
+    - id: parametersOrCallback.databaseSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="b26f3-149">Obtiene o establece el tamaño de la base de datos que se crearán al importar.</span><span class="sxs-lookup"><span data-stu-id="b26f3-149">Gets or sets the size for the database that will be created upon import.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="b26f3-150">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="b26f3-150">The response stream.</span></span>
+    content: function importMethod(serverName, parametersOrCallback, callback)
+  langs:
+  - js

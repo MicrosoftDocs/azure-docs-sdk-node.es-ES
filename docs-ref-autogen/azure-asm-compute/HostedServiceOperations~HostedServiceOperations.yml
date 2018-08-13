@@ -1,0 +1,649 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d38827acb2346617b73ae6afad4c40d4452cd82
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071668"
+items:
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations
+  summary: >-
+    <span data-ttu-id="abdfe-101">La API de administración de servicios incluye operaciones para administrar los servicios hospedados bajo la suscripción.</span><span class="sxs-lookup"><span data-stu-id="abdfe-101">The Service Management API includes operations for managing the hosted services beneath your subscription.</span></span>  <span data-ttu-id="abdfe-102">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460812.aspx para obtener más información) __Nota__: se crea automáticamente una instancia de esta clase para una instancia de la [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="abdfe-102">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460812.aspx for more information) __NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="abdfe-103">Consulte [hostedServices] {@link ComputeManagementClient ~ ComputeManagementClient #hostedServices}.</span><span class="sxs-lookup"><span data-stu-id="abdfe-103">See [hostedServices] {@link ComputeManagementClient~ComputeManagementClient#hostedServices}.</span></span>
+
+    <span data-ttu-id="abdfe-104">Inicializa una nueva instancia de la clase HostedServiceOperations.</span><span class="sxs-lookup"><span data-stu-id="abdfe-104">Initializes a new instance of the HostedServiceOperations class.</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations
+  type: Class
+  children:
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations(client)
+  fullName: azure-asm-compute.HostedServiceOperations.HostedServiceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="abdfe-105">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="abdfe-105">Reference to the service client.</span></span>
+    content: new HostedServiceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: addExtension(serviceName, parameters, callback)
+  summary: >-
+    <span data-ttu-id="abdfe-106">La operación de agregar la extensión agrega una extensión disponible para su servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-106">The Add Extension operation adds an available extension to your cloud service.</span></span> <span data-ttu-id="abdfe-107">En Azure, puede ejecutar un proceso como una extensión de un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-107">In Azure, a process can run as an extension of a cloud service.</span></span>
+
+    <span data-ttu-id="abdfe-108">Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-108">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span> <span data-ttu-id="abdfe-109">Puede encontrar la extensión disponible mediante el uso de la operación enumerar extensiones disponibles.</span><span class="sxs-lookup"><span data-stu-id="abdfe-109">You can find the available extension by using the List Available Extensions operation.</span></span>  <span data-ttu-id="abdfe-110">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-110">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.addExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-111">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-111">The name of the cloud service.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: <span data-ttu-id="abdfe-112">Parámetros proporcionados a la operación de agregar la extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-112">Parameters supplied to the Add Extension operation.</span></span>
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-113">El espacio de nombres del proveedor de la extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-113">The provider namespace of the extension.</span></span> <span data-ttu-id="abdfe-114">El espacio de nombres de proveedor para las extensiones de Azure es Microsoft.Windows.Azure.Extensions.</span><span class="sxs-lookup"><span data-stu-id="abdfe-114">The provider namespace for Azure extensions is Microsoft.Windows.Azure.Extensions.</span></span>
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-115">El tipo de la extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-115">The type of the extension.</span></span>
+    - id: parameters.id
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-116">El identificador de la extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-116">The identifier of the extension.</span></span>
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-117">La huella digital del certificado que se usa para cifrar la configuración especificada en PrivateConfiguration.</span><span class="sxs-lookup"><span data-stu-id="abdfe-117">The thumbprint of the certificate that is used to encrypt the configuration specified in PrivateConfiguration.</span></span> <span data-ttu-id="abdfe-118">Si no se especifica este elemento, se puede genera automáticamente un certificado y agregado al servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-118">If this element is not specified, a certificate may be automatically generated and added to the cloud service.</span></span>
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-119">El algoritmo de huella digital del certificado que se usa para cifrar la configuración especificada en PrivateConfiguration.</span><span class="sxs-lookup"><span data-stu-id="abdfe-119">The thumbprint algorithm of the certificate that is used to encrypt the configuration specified in PrivateConfiguration.</span></span>
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-120">La configuración pública definida con el esquema devuelto por la operación enumerar extensiones disponibles.</span><span class="sxs-lookup"><span data-stu-id="abdfe-120">The public configuration that is defined using the schema returned by the List Available Extensions operation.</span></span>
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-121">La configuración privada definida con el esquema devuelto por la operación enumerar extensiones disponibles.</span><span class="sxs-lookup"><span data-stu-id="abdfe-121">The private configuration that is defined using the schema returned by the List Available Extensions operation.</span></span>
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-122">Especifica la versión de la extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-122">Specifies the version of the extension.</span></span> <span data-ttu-id="abdfe-123">Si no se especifica este elemento o un asterisco (*) se utiliza como valor, la versión más reciente de la extensión se usa. Si se especifica el valor con un número de versión principal y un asterisco como el número de versión secundaria (X.*), se selecciona la versión secundaria más reciente de la versión principal especificada.</span><span class="sxs-lookup"><span data-stu-id="abdfe-123">If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.*), the latest minor version of the specified major version is selected.</span></span> <span data-ttu-id="abdfe-124">Si se especifican un número de versión principal y un número de versión secundaria (X.Y), se selecciona la versión de extensión específica.</span><span class="sxs-lookup"><span data-stu-id="abdfe-124">If a major version number and a minor version number are specified (X.Y), the specific extension version is selected.</span></span> <span data-ttu-id="abdfe-125">Si se especifica una versión, se realiza una actualización automática en la instancia de rol.</span><span class="sxs-lookup"><span data-stu-id="abdfe-125">If a version is specified, an auto-upgrade is performed on the role instance.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-126">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-126">The response stream.</span></span>
+    content: function addExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginAddingExtension(serviceName, parameters, callback)
+  summary: >-
+    <span data-ttu-id="abdfe-127">La operación de empezar a Agregar extensión agrega una extensión disponible para su servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-127">The Begin Adding Extension operation adds an available extension to your cloud service.</span></span> <span data-ttu-id="abdfe-128">En Azure, puede ejecutar un proceso como una extensión de un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-128">In Azure, a process can run as an extension of a cloud service.</span></span> <span data-ttu-id="abdfe-129">Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-129">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span> <span data-ttu-id="abdfe-130">Puede encontrar la extensión disponible mediante el uso de la operación enumerar extensiones disponibles.</span><span class="sxs-lookup"><span data-stu-id="abdfe-130">You can find the available extension by using the List Available Extensions operation.</span></span>
+
+    <span data-ttu-id="abdfe-131">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-131">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginAddingExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-132">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-132">The name of the cloud service.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: <span data-ttu-id="abdfe-133">Parámetros proporcionados a la operación de empezar a Agregar extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-133">Parameters supplied to the Begin Adding Extension operation.</span></span>
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-134">El espacio de nombres del proveedor de la extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-134">The provider namespace of the extension.</span></span> <span data-ttu-id="abdfe-135">El espacio de nombres de proveedor para las extensiones de Azure es Microsoft.Windows.Azure.Extensions.</span><span class="sxs-lookup"><span data-stu-id="abdfe-135">The provider namespace for Azure extensions is Microsoft.Windows.Azure.Extensions.</span></span>
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-136">El tipo de la extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-136">The type of the extension.</span></span>
+    - id: parameters.id
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-137">El identificador de la extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-137">The identifier of the extension.</span></span>
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-138">La huella digital del certificado que se usa para cifrar la configuración especificada en PrivateConfiguration.</span><span class="sxs-lookup"><span data-stu-id="abdfe-138">The thumbprint of the certificate that is used to encrypt the configuration specified in PrivateConfiguration.</span></span> <span data-ttu-id="abdfe-139">Si no se especifica este elemento, se puede genera automáticamente un certificado y agregado al servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-139">If this element is not specified, a certificate may be automatically generated and added to the cloud service.</span></span>
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-140">El algoritmo de huella digital del certificado que se usa para cifrar la configuración especificada en PrivateConfiguration.</span><span class="sxs-lookup"><span data-stu-id="abdfe-140">The thumbprint algorithm of the certificate that is used to encrypt the configuration specified in PrivateConfiguration.</span></span>
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-141">La configuración pública definida con el esquema devuelto por la operación enumerar extensiones disponibles.</span><span class="sxs-lookup"><span data-stu-id="abdfe-141">The public configuration that is defined using the schema returned by the List Available Extensions operation.</span></span>
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-142">La configuración privada definida con el esquema devuelto por la operación enumerar extensiones disponibles.</span><span class="sxs-lookup"><span data-stu-id="abdfe-142">The private configuration that is defined using the schema returned by the List Available Extensions operation.</span></span>
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-143">Especifica la versión de la extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-143">Specifies the version of the extension.</span></span> <span data-ttu-id="abdfe-144">Si no se especifica este elemento o un asterisco (*) se utiliza como valor, la versión más reciente de la extensión se usa. Si se especifica el valor con un número de versión principal y un asterisco como el número de versión secundaria (X.*), se selecciona la versión secundaria más reciente de la versión principal especificada.</span><span class="sxs-lookup"><span data-stu-id="abdfe-144">If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.*), the latest minor version of the specified major version is selected.</span></span> <span data-ttu-id="abdfe-145">Si se especifican un número de versión principal y un número de versión secundaria (X.Y), se selecciona la versión de extensión específica.</span><span class="sxs-lookup"><span data-stu-id="abdfe-145">If a major version number and a minor version number are specified (X.Y), the specific extension version is selected.</span></span> <span data-ttu-id="abdfe-146">Si se especifica una versión, se realiza una actualización automática en la instancia de rol.</span><span class="sxs-lookup"><span data-stu-id="abdfe-146">If a version is specified, an auto-upgrade is performed on the role instance.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-147">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-147">The response stream.</span></span>
+    content: function beginAddingExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingAll(serviceName, callback)
+  summary: <span data-ttu-id="abdfe-148">La operación del servicio hospedado de DeleteAll elimina el servicio en la nube especificado como disco del sistema operativo, discos de datos conectados y los blobs de origen para los discos de almacenamiento de Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="abdfe-148">The DeleteAll Hosted Service operation deletes the specified cloud service as well as operating system disk, attached data disks, and the source blobs for the disks from storage from Microsoft Azure.</span></span> <span data-ttu-id="abdfe-149">(vea 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-149">(see 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-150">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-150">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-151">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-151">The response stream.</span></span>
+    content: function beginDeletingAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingExtension(serviceName, extensionId, callback)
+  summary: <span data-ttu-id="abdfe-152">La operación de extensión de eliminación de empezar a elimina la extensión especificada de un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-152">The Begin Deleting Extension operation deletes the specified extension from a cloud service.</span></span>  <span data-ttu-id="abdfe-153">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-153">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-154">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-154">The name of the cloud service.</span></span>
+    - id: extensionId
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-155">El identificador que se asignó a la extensión cuando se agregó al servicio de nube</span><span class="sxs-lookup"><span data-stu-id="abdfe-155">The identifier that was assigned to the extension when it was added to the cloud service</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-156">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-156">The response stream.</span></span>
+    content: function beginDeletingExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: checkNameAvailability(serviceName, callback)
+  summary: <span data-ttu-id="abdfe-157">La operación Comprobar disponibilidad de nombre de servicio hospedado comprueba la disponibilidad del nombre del servicio de nube especificado.</span><span class="sxs-lookup"><span data-stu-id="abdfe-157">The Check Hosted Service Name Availability operation checks for the availability of the specified cloud service name.</span></span>  <span data-ttu-id="abdfe-158">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154116.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-158">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154116.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.checkNameAvailability(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-159">El nombre del servicio en la nube que le gustaría utilizar.</span><span class="sxs-lookup"><span data-stu-id="abdfe-159">The cloud service name that you would like to use.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-160">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-160">The response stream.</span></span>
+    content: function checkNameAvailability(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: create(parameters, callback)
+  summary: >-
+    <span data-ttu-id="abdfe-161">La operación crear servicio hospedado, crea un nuevo servicio en la nube en Azure.</span><span class="sxs-lookup"><span data-stu-id="abdfe-161">The Create Hosted Service operation creates a new cloud service in Azure.</span></span>
+
+    <span data-ttu-id="abdfe-162">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/gg441304.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-162">(see http://msdn.microsoft.com/en-us/library/windowsazure/gg441304.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceCreateParameters
+      description: <span data-ttu-id="abdfe-163">Parámetros proporcionados a la operación crear servicio hospedado.</span><span class="sxs-lookup"><span data-stu-id="abdfe-163">Parameters supplied to the Create Hosted Service operation.</span></span>
+    - id: parameters.serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-164">Un nombre para el servicio en la nube que es único dentro de Azure.</span><span class="sxs-lookup"><span data-stu-id="abdfe-164">A name for the cloud service that is unique within Azure.</span></span> <span data-ttu-id="abdfe-165">Este nombre es el nombre del prefijo DNS y se puede usar para tener acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="abdfe-165">This name is the DNS prefix name and can be used to access the service.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-166">Un nombre para el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-166">A name for the cloud service.</span></span> <span data-ttu-id="abdfe-167">El nombre puede ser de hasta 100 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="abdfe-167">The name can be up to 100 characters in length.</span></span> <span data-ttu-id="abdfe-168">El nombre puede utilizarse para identificar la cuenta de almacenamiento para fines de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="abdfe-168">The name can be used to identify the storage account for your tracking purposes.</span></span>
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-169">Una descripción para el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-169">A description for the cloud service.</span></span> <span data-ttu-id="abdfe-170">La descripción puede tener hasta 1024 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="abdfe-170">The description can be up to 1024 characters in length.</span></span>
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-171">La ubicación donde se creará el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-171">The location where the cloud service will be created.</span></span> <span data-ttu-id="abdfe-172">Obligatorio si no se especifica AffinityGroup.</span><span class="sxs-lookup"><span data-stu-id="abdfe-172">Required if AffinityGroup is not specified.</span></span> <span data-ttu-id="abdfe-173">Especifique la ubicación o grupo, pero no ambos.</span><span class="sxs-lookup"><span data-stu-id="abdfe-173">Specify either Location or AffinityGroup, but not both.</span></span> <span data-ttu-id="abdfe-174">Para enumerar las ubicaciones disponibles, use la operación de ubicaciones de la lista.</span><span class="sxs-lookup"><span data-stu-id="abdfe-174">To list available locations, use the List Locations operation.</span></span>
+      optional: true
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-175">El nombre de un grupo de afinidad existente asociado a esta suscripción.</span><span class="sxs-lookup"><span data-stu-id="abdfe-175">The name of an existing affinity group associated with this subscription.</span></span> <span data-ttu-id="abdfe-176">Requerido si no se especifica la ubicación.</span><span class="sxs-lookup"><span data-stu-id="abdfe-176">Required if Location is not specified.</span></span> <span data-ttu-id="abdfe-177">Este nombre es un GUID y se puede recuperar examinando el elemento name del cuerpo de respuesta devuelto por la operación enumerar grupos de afinidad.</span><span class="sxs-lookup"><span data-stu-id="abdfe-177">This name is a GUID and can be retrieved by examining the name element of the response body returned by the List Affinity Groups operation.</span></span> <span data-ttu-id="abdfe-178">Especifique la ubicación o grupo, pero no ambos.</span><span class="sxs-lookup"><span data-stu-id="abdfe-178">Specify either Location or AffinityGroup, but not both.</span></span> <span data-ttu-id="abdfe-179">Para obtener una lista de grupos de afinidad disponibles, utilice la operación enumerar grupos de afinidad.</span><span class="sxs-lookup"><span data-stu-id="abdfe-179">To list available affinity groups, use the List Affinity Groups operation.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="abdfe-180">Representa el nombre de una propiedad de servicio en la nube extendida.</span><span class="sxs-lookup"><span data-stu-id="abdfe-180">Represents the name of an extended cloud service property.</span></span> <span data-ttu-id="abdfe-181">Cada propiedad extendida debe tener un nombre definido y un valor.</span><span class="sxs-lookup"><span data-stu-id="abdfe-181">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="abdfe-182">Puede tener un máximo de 50 pares de nombre y valor de propiedad extendidos.</span><span class="sxs-lookup"><span data-stu-id="abdfe-182">You can have a maximum of 50 extended property name and value pairs.</span></span> <span data-ttu-id="abdfe-183">La longitud máxima del elemento name es de 64 caracteres, solo caracteres alfanuméricos y caracteres de subrayado son válidos en el nombre y debe comenzar con una letra.</span><span class="sxs-lookup"><span data-stu-id="abdfe-183">The maximum length of the name element is 64 characters, only alphanumeric characters and underscores are valid in the name, and it must start with a letter.</span></span> <span data-ttu-id="abdfe-184">Al intentar utilizar otros caracteres, empezando con un carácter no alfanumérico, o escribir un nombre que es idéntico a la que de otra propiedad extendida propiedad el mismo servicio se producirá en un estado código (error 400 Solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="abdfe-184">Attempting to use other characters, starting with a non-letter character, or entering a name that is identical to that of another extended property owned by the same service will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="abdfe-185">Cada valor de propiedad extendido tiene una longitud máxima de 255 caracteres.</span><span class="sxs-lookup"><span data-stu-id="abdfe-185">Each extended property value has a maximum length of 255 characters.</span></span>
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-186">Dirección de DNS que dirección IP del servicio de nube resuelve cuando consulta mediante una consulta Dns inversa.</span><span class="sxs-lookup"><span data-stu-id="abdfe-186">Dns address to which the cloud service's IP address resolves when queried using a reverse Dns query.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-187">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-187">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteMethod(serviceName, callback)
+  summary: <span data-ttu-id="abdfe-188">La operación de eliminación de un servicio hospedado, elimina el servicio especificado en la nube de Azure.</span><span class="sxs-lookup"><span data-stu-id="abdfe-188">The Delete Hosted Service operation deletes the specified cloud service from Azure.</span></span>  <span data-ttu-id="abdfe-189">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-189">(see http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteMethod(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-190">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-190">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-191">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-191">The response stream.</span></span>
+    content: function deleteMethod(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteAll(serviceName, callback)
+  summary: <span data-ttu-id="abdfe-192">La operación del servicio hospedado de DeleteAll elimina el servicio en la nube especificado como disco del sistema operativo, discos de datos conectados y los blobs de origen para los discos de almacenamiento de Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="abdfe-192">The DeleteAll Hosted Service operation deletes the specified cloud service as well as operating system disk, attached data disks, and the source blobs for the disks from storage from Microsoft Azure.</span></span> <span data-ttu-id="abdfe-193">(vea 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-193">(see 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-194">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-194">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-195">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-195">The response stream.</span></span>
+    content: function deleteAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteExtension(serviceName, extensionId, callback)
+  summary: <span data-ttu-id="abdfe-196">La operación Eliminar extensión elimina la extensión especificada de un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-196">The Delete Extension operation deletes the specified extension from a cloud service.</span></span>  <span data-ttu-id="abdfe-197">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-197">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-198">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-198">The name of the cloud service.</span></span>
+    - id: extensionId
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-199">El identificador que se asignó a la extensión cuando se agregó al servicio de nube</span><span class="sxs-lookup"><span data-stu-id="abdfe-199">The identifier that was assigned to the extension when it was added to the cloud service</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-200">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-200">The response stream.</span></span>
+    content: function deleteExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: get(serviceName, callback)
+  summary: >-
+    <span data-ttu-id="abdfe-201">La operación obtener propiedades del servicio hospedado recupera las propiedades del sistema para el servicio en la nube especificado.</span><span class="sxs-lookup"><span data-stu-id="abdfe-201">The Get Hosted Service Properties operation retrieves system properties for the specified cloud service.</span></span> <span data-ttu-id="abdfe-202">Estas propiedades incluyen el nombre del servicio y el tipo de servicio; y el nombre del grupo de afinidad al que pertenece el servicio o su ubicación si no forma parte de un grupo de afinidad.</span><span class="sxs-lookup"><span data-stu-id="abdfe-202">These properties include the service name and service type; and the name of the affinity group to which the service belongs, or its location if it is not part of an affinity group.</span></span>
+
+    <span data-ttu-id="abdfe-203">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-203">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.get(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-204">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-204">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-205">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-205">The response stream.</span></span>
+    content: function get(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getDetailed(serviceName, callback)
+  summary: <span data-ttu-id="abdfe-206">La operación obtener propiedades del servicio detallada hospedada recupera las propiedades del sistema para el servicio en la nube especificado.</span><span class="sxs-lookup"><span data-stu-id="abdfe-206">The Get Detailed Hosted Service Properties operation retrieves system properties for the specified cloud service.</span></span> <span data-ttu-id="abdfe-207">Estas propiedades incluyen el nombre del servicio y el tipo de servicio; el nombre del grupo de afinidad al que pertenece el servicio o su ubicación si no forma parte de un grupo de afinidad e información sobre las implementaciones del servicio.</span><span class="sxs-lookup"><span data-stu-id="abdfe-207">These properties include the service name and service type; the name of the affinity group to which the service belongs, or its location if it is not part of an affinity group; and information on the deployments of the service.</span></span>  <span data-ttu-id="abdfe-208">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-208">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getDetailed(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-209">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-209">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-210">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-210">The response stream.</span></span>
+    content: function getDetailed(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getExtension(serviceName, extensionId, callback)
+  summary: <span data-ttu-id="abdfe-211">La operación Get Extension recupera información sobre una extensión especificada que se ha agregado a un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-211">The Get Extension operation retrieves information about a specified extension that was added to a cloud service.</span></span>  <span data-ttu-id="abdfe-212">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169557.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-212">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169557.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-213">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-213">The name of the cloud service.</span></span>
+    - id: extensionId
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-214">El identificador que se asignó a la extensión cuando se agregó al servicio de nube</span><span class="sxs-lookup"><span data-stu-id="abdfe-214">The identifier that was assigned to the extension when it was added to the cloud service</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-215">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-215">The response stream.</span></span>
+    content: function getExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: list(callback)
+  summary: <span data-ttu-id="abdfe-216">La operación List Hosted Services enumera los servicios de nube disponibles bajo la suscripción actual.</span><span class="sxs-lookup"><span data-stu-id="abdfe-216">The List Hosted Services operation lists the cloud services available under the current subscription.</span></span>  <span data-ttu-id="abdfe-217">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460781.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-217">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460781.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-218">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-218">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listAvailableExtensions(callback)
+  summary: <span data-ttu-id="abdfe-219">La operación enumerar extensiones disponibles enumera las extensiones que están disponibles para agregar a su servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-219">The List Available Extensions operation lists the extensions that are available to add to your cloud service.</span></span> <span data-ttu-id="abdfe-220">En Windows Azure, puede ejecutar un proceso como una extensión de un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-220">In Windows Azure, a process can run as an extension of a cloud service.</span></span> <span data-ttu-id="abdfe-221">Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-221">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span>  <span data-ttu-id="abdfe-222">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-222">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listAvailableExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-223">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-223">The response stream.</span></span>
+    content: function listAvailableExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensions(serviceName, callback)
+  summary: <span data-ttu-id="abdfe-224">La operación enumerar extensiones enumera todas las extensiones que se agregaron a un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-224">The List Extensions operation lists all of the extensions that were added to a cloud service.</span></span>  <span data-ttu-id="abdfe-225">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169561.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-225">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169561.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensions(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-226">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-226">The name of the cloud service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-227">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-227">The response stream.</span></span>
+    content: function listExtensions(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensionVersions(providerNamespace, extensionType, callback)
+  summary: >-
+    <span data-ttu-id="abdfe-228">La operación List Versions de extensión enumera las versiones de una extensión que están disponibles para agregar a un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-228">The List Extension Versions operation lists the versions of an extension that are available to add to a cloud service.</span></span> <span data-ttu-id="abdfe-229">En Azure, puede ejecutar un proceso como una extensión de un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-229">In Azure, a process can run as an extension of a cloud service.</span></span> <span data-ttu-id="abdfe-230">Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-230">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span>
+
+    <span data-ttu-id="abdfe-231">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn495437.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-231">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn495437.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensionVersions(providerNamespace, extensionType, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-232">El espacio de nombres del proveedor.</span><span class="sxs-lookup"><span data-stu-id="abdfe-232">The provider namespace.</span></span>
+    - id: extensionType
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-233">El nombre de tipo de extensión.</span><span class="sxs-lookup"><span data-stu-id="abdfe-233">The extension type name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-234">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-234">The response stream.</span></span>
+    content: function listExtensionVersions(providerNamespace, extensionType, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listPublisherExtensions(callback)
+  summary: <span data-ttu-id="abdfe-235">La operación enumerar extensiones disponibles enumera las extensiones que están disponibles para agregar a su servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-235">The List Available Extensions operation lists the extensions that are available to add to your cloud service.</span></span> <span data-ttu-id="abdfe-236">En Windows Azure, puede ejecutar un proceso como una extensión de un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-236">In Windows Azure, a process can run as an extension of a cloud service.</span></span> <span data-ttu-id="abdfe-237">Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-237">For example, Remote Desktop Access or the Azure Diagnostics Agent can run as extensions to the cloud service.</span></span>  <span data-ttu-id="abdfe-238">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-238">(see http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listPublisherExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-239">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-239">The response stream.</span></span>
+    content: function listPublisherExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: update(serviceName, parameters, callback)
+  summary: <span data-ttu-id="abdfe-240">Puede actualizar la operación de actualización de servicio hospedado en la etiqueta o la descripción de un servicio en la nube en Azure.</span><span class="sxs-lookup"><span data-stu-id="abdfe-240">The Update Hosted Service operation can update the label or description of a cloud service in Azure.</span></span>  <span data-ttu-id="abdfe-241">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/gg441303.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="abdfe-241">(see http://msdn.microsoft.com/en-us/library/windowsazure/gg441303.aspx for more information)</span></span>
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.update(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-242">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-242">The name of the cloud service.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceUpdateParameters
+      description: <span data-ttu-id="abdfe-243">Parámetros proporcionados a la operación de servicio de actualización hospedado.</span><span class="sxs-lookup"><span data-stu-id="abdfe-243">Parameters supplied to the Update Hosted Service operation.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-244">Un nombre para el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-244">A name for the cloud service.</span></span> <span data-ttu-id="abdfe-245">El nombre puede ser de hasta 100 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="abdfe-245">The name may be up to 100 characters in length.</span></span> <span data-ttu-id="abdfe-246">Debe especificar un valor para al menos una etiqueta o descripción.</span><span class="sxs-lookup"><span data-stu-id="abdfe-246">You must specify a value for at least one of Label or Description.</span></span> <span data-ttu-id="abdfe-247">Se recomienda que la etiqueta sea único dentro de la suscripción.</span><span class="sxs-lookup"><span data-stu-id="abdfe-247">It is recommended that the label be unique within the subscription.</span></span> <span data-ttu-id="abdfe-248">Se puede usar el nombre de identificar el servicio para fines de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="abdfe-248">The name can be used identify the service for your tracking purposes.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-249">Una descripción para el servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="abdfe-249">A description for the cloud service.</span></span> <span data-ttu-id="abdfe-250">La descripción puede tener hasta 1024 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="abdfe-250">The description may be up to 1024 characters in length.</span></span> <span data-ttu-id="abdfe-251">Debe especificar un valor para al menos una etiqueta o descripción.</span><span class="sxs-lookup"><span data-stu-id="abdfe-251">You must specify a value for at least one of Label or Description.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="abdfe-252">Representa el nombre de una propiedad de servicio en la nube extendida.</span><span class="sxs-lookup"><span data-stu-id="abdfe-252">Represents the name of an extended cloud service property.</span></span> <span data-ttu-id="abdfe-253">Cada propiedad extendida debe tener un nombre definido y un valor.</span><span class="sxs-lookup"><span data-stu-id="abdfe-253">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="abdfe-254">Puede tener un máximo de 50 pares de nombre y valor de propiedad extendidos.</span><span class="sxs-lookup"><span data-stu-id="abdfe-254">You can have a maximum of 50 extended property name and value pairs.</span></span> <span data-ttu-id="abdfe-255">La longitud máxima del elemento name es de 64 caracteres, solo caracteres alfanuméricos y caracteres de subrayado son válidos en el nombre y debe comenzar con una letra.</span><span class="sxs-lookup"><span data-stu-id="abdfe-255">The maximum length of the name element is 64 characters, only alphanumeric characters and underscores are valid in the name, and it must start with a letter.</span></span> <span data-ttu-id="abdfe-256">Al intentar utilizar otros caracteres, empezando con un carácter no alfanumérico, o escribir un nombre que es idéntico a la que de otra propiedad extendida propiedad el mismo servicio se producirá en un estado código (error 400 Solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="abdfe-256">Attempting to use other characters, starting with a non-letter character, or entering a name that is identical to that of another extended property owned by the same service will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="abdfe-257">Cada valor de propiedad extendido tiene una longitud máxima de 255 caracteres.</span><span class="sxs-lookup"><span data-stu-id="abdfe-257">Each extended property value has a maximum length of 255 characters.</span></span>
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: <span data-ttu-id="abdfe-258">Dirección de DNS que dirección IP del servicio de nube resuelve cuando consulta mediante una consulta Dns inversa.</span><span class="sxs-lookup"><span data-stu-id="abdfe-258">Dns address to which the cloud service's IP address resolves when queried using a reverse Dns query.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="abdfe-259">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="abdfe-259">The response stream.</span></span>
+    content: function update(serviceName, parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,504 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 57224e72fed5742b00b47d14fd7204fa9fa44ef8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071659"
+items:
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: JobCollectionOperations
+  summary: >-
+    <span data-ttu-id="25a14-101">__Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [SchedulerManagementClient] {@link SchedulerManagementClient ~ SchedulerManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="25a14-101">__NOTE__: An instance of this class is automatically created for an instance of the [SchedulerManagementClient] {@link SchedulerManagementClient~SchedulerManagementClient}.</span></span>
+
+    <span data-ttu-id="25a14-102">Consulte [jobCollections] {@link SchedulerManagementClient ~ SchedulerManagementClient #jobCollections}.</span><span class="sxs-lookup"><span data-stu-id="25a14-102">See [jobCollections] {@link SchedulerManagementClient~SchedulerManagementClient#jobCollections}.</span></span>
+
+    <span data-ttu-id="25a14-103">Inicializa una nueva instancia de la clase JobCollectionOperations.</span><span class="sxs-lookup"><span data-stu-id="25a14-103">Initializes a new instance of the JobCollectionOperations class.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations
+  type: Class
+  children:
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  langs:
+  - js
+- id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: JobCollectionOperations(client)
+  fullName: azure-asm-scheduler.JobCollectionOperations.JobCollectionOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSchedulerManagementClient
+      description: <span data-ttu-id="25a14-104">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="25a14-104">Reference to the service client.</span></span>
+    content: new JobCollectionOperations(client)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: <span data-ttu-id="25a14-105">Crear una colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-105">Create a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-106">Nombre del servicio en la nube que contiene la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-106">The name of the cloud service containing the job collection.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-107">El nombre de la colección de trabajos para crear.</span><span class="sxs-lookup"><span data-stu-id="25a14-107">The name of the job collection to create.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionCreateParameters
+      description: <span data-ttu-id="25a14-108">Parámetros proporcionados a la operación de creación de la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-108">Parameters supplied to the Create Job Collection operation.</span></span>
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: <span data-ttu-id="25a14-109">La versión de las propiedades intrínsecas para el recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-109">The version of the Intrinsic Properties for your Resource.</span></span> <span data-ttu-id="25a14-110">Si no se especifica, debe ajustarse a la versión de recursos de contrato que registra como predeterminada.</span><span class="sxs-lookup"><span data-stu-id="25a14-110">If not specified, you must conform to the contract resource version you registered as default.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="25a14-111">Etiqueta para el recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-111">Label for the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: <span data-ttu-id="25a14-112">Configuración intrínseca para colecciones de trabajos de programador.</span><span class="sxs-lookup"><span data-stu-id="25a14-112">Intrinsic settings for the scheduler job collections.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: <span data-ttu-id="25a14-113">El plan del recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-113">The plan of the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: <span data-ttu-id="25a14-114">Configuración de cuota para la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-114">Quota settings for the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: <span data-ttu-id="25a14-115">Número máximo de trabajos que se pueden crear en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-115">Maximum number of jobs that can be created in this job collection.</span></span> <span data-ttu-id="25a14-116">Valor máximo es depende del plan.</span><span class="sxs-lookup"><span data-stu-id="25a14-116">Maximum value is dependent on the plan.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: <span data-ttu-id="25a14-117">Número máximo de repeticiones de todos los trabajos en la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-117">Maximum number of occurrences for all jobs in the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: <span data-ttu-id="25a14-118">Define las repeticiones máximas que se pueden especificar en cualquier trabajo en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-118">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: <span data-ttu-id="25a14-119">Define las repeticiones máximas que se pueden especificar en cualquier trabajo en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-119">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="25a14-120">Define el intervalo.</span><span class="sxs-lookup"><span data-stu-id="25a14-120">Defines the interval.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="25a14-121">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="25a14-121">The response stream.</span></span>
+    content: function beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginDeleting(cloudServiceName, jobCollectionName, callback)
+  summary: <span data-ttu-id="25a14-122">Elimina una colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-122">Deletes a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginDeleting(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-123">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="25a14-123">The name of the cloud service.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-124">El nombre de la colección de trabajos para eliminación.</span><span class="sxs-lookup"><span data-stu-id="25a14-124">The name of the job collection to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="25a14-125">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="25a14-125">The response stream.</span></span>
+    content: function beginDeleting(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: <span data-ttu-id="25a14-126">Actualizar una colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-126">Update a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-127">Nombre del servicio en la nube que contiene la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-127">The name of the cloud service containing the job collection.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-128">El nombre de la colección de trabajos para actualizar.</span><span class="sxs-lookup"><span data-stu-id="25a14-128">The name of the job collection to update.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionUpdateParameters
+      description: <span data-ttu-id="25a14-129">Parámetros proporcionados a la operación de la colección de trabajos de actualización.</span><span class="sxs-lookup"><span data-stu-id="25a14-129">Parameters supplied to the Update Job Collection operation.</span></span>
+    - id: parameters.eTag
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="25a14-130">El valor ETag de la colección de trabajos para actualizar.</span><span class="sxs-lookup"><span data-stu-id="25a14-130">The ETag of the job collection to update.</span></span>
+
+        <span data-ttu-id="25a14-131">La actualización se producirá un error Siel que ETag no coincide.</span><span class="sxs-lookup"><span data-stu-id="25a14-131">The update will fail ifthe ETag doesn't match.</span></span>
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: <span data-ttu-id="25a14-132">La versión de las propiedades intrínsecas para el recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-132">The version of the Intrinsic Properties for your Resource.</span></span> <span data-ttu-id="25a14-133">Si no se especifica, debe ajustarse a la versión de recursos de contrato que registra como predeterminada.</span><span class="sxs-lookup"><span data-stu-id="25a14-133">If not specified, you must conform to the contract resource version you registered as default.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="25a14-134">Etiqueta para el recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-134">Label for the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: <span data-ttu-id="25a14-135">Configuración intrínseca para colecciones de trabajos de programador.</span><span class="sxs-lookup"><span data-stu-id="25a14-135">Intrinsic settings for the scheduler job collections.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: <span data-ttu-id="25a14-136">El plan del recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-136">The plan of the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: <span data-ttu-id="25a14-137">Configuración de cuota para la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-137">Quota settings for the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: <span data-ttu-id="25a14-138">Número máximo de trabajos que se pueden crear en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-138">Maximum number of jobs that can be created in this job collection.</span></span> <span data-ttu-id="25a14-139">Valor máximo es depende del plan.</span><span class="sxs-lookup"><span data-stu-id="25a14-139">Maximum value is dependent on the plan.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: <span data-ttu-id="25a14-140">Número máximo de repeticiones de todos los trabajos en la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-140">Maximum number of occurrences for all jobs in the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: <span data-ttu-id="25a14-141">Define las repeticiones máximas que se pueden especificar en cualquier trabajo en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-141">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: <span data-ttu-id="25a14-142">Define las repeticiones máximas que se pueden especificar en cualquier trabajo en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-142">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="25a14-143">Define el intervalo.</span><span class="sxs-lookup"><span data-stu-id="25a14-143">Defines the interval.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="25a14-144">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="25a14-144">The response stream.</span></span>
+    content: function beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  summary: >-
+    <span data-ttu-id="25a14-145">Determinar si el nombre de JobCollection está disponible para usarse.</span><span class="sxs-lookup"><span data-stu-id="25a14-145">Determine if the JobCollection name is available to be used.</span></span>
+
+    <span data-ttu-id="25a14-146">Nombres de JobCollection deben ser únicos dentro de un servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="25a14-146">JobCollection names must be unique within a cloud-service.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-147">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="25a14-147">The name of the cloud service.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-148">Un nombre para el JobCollection.</span><span class="sxs-lookup"><span data-stu-id="25a14-148">A name for the JobCollection.</span></span> <span data-ttu-id="25a14-149">El nombre debe ser único como el ámbito de CloudService.</span><span class="sxs-lookup"><span data-stu-id="25a14-149">The name must be unique as scoped within the CloudService.</span></span>  <span data-ttu-id="25a14-150">El nombre puede ser de hasta 100 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="25a14-150">The name can be up to 100 characters in length.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="25a14-151">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="25a14-151">The response stream.</span></span>
+    content: function checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: create(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: <span data-ttu-id="25a14-152">Crear una colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-152">Create a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.create(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-153">Nombre del servicio en la nube que contiene la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-153">The name of the cloud service containing the job collection.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-154">El nombre de la colección de trabajos para crear.</span><span class="sxs-lookup"><span data-stu-id="25a14-154">The name of the job collection to create.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionCreateParameters
+      description: <span data-ttu-id="25a14-155">Parámetros proporcionados a la operación de creación de la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-155">Parameters supplied to the Create Job Collection operation.</span></span>
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: <span data-ttu-id="25a14-156">La versión de las propiedades intrínsecas para el recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-156">The version of the Intrinsic Properties for your Resource.</span></span> <span data-ttu-id="25a14-157">Si no se especifica, debe ajustarse a la versión de recursos de contrato que registra como predeterminada.</span><span class="sxs-lookup"><span data-stu-id="25a14-157">If not specified, you must conform to the contract resource version you registered as default.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="25a14-158">Etiqueta para el recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-158">Label for the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: <span data-ttu-id="25a14-159">Configuración intrínseca para colecciones de trabajos de programador.</span><span class="sxs-lookup"><span data-stu-id="25a14-159">Intrinsic settings for the scheduler job collections.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: <span data-ttu-id="25a14-160">El plan del recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-160">The plan of the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: <span data-ttu-id="25a14-161">Configuración de cuota para la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-161">Quota settings for the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: <span data-ttu-id="25a14-162">Número máximo de trabajos que se pueden crear en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-162">Maximum number of jobs that can be created in this job collection.</span></span> <span data-ttu-id="25a14-163">Valor máximo es depende del plan.</span><span class="sxs-lookup"><span data-stu-id="25a14-163">Maximum value is dependent on the plan.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: <span data-ttu-id="25a14-164">Número máximo de repeticiones de todos los trabajos en la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-164">Maximum number of occurrences for all jobs in the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: <span data-ttu-id="25a14-165">Define las repeticiones máximas que se pueden especificar en cualquier trabajo en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-165">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: <span data-ttu-id="25a14-166">Define las repeticiones máximas que se pueden especificar en cualquier trabajo en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-166">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="25a14-167">Define el intervalo.</span><span class="sxs-lookup"><span data-stu-id="25a14-167">Defines the interval.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="25a14-168">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="25a14-168">The response stream.</span></span>
+    content: function create(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: deleteMethod(cloudServiceName, jobCollectionName, callback)
+  summary: <span data-ttu-id="25a14-169">Elimina una colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-169">Deletes a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.deleteMethod(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-170">El nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="25a14-170">The name of the cloud service.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-171">El nombre de la colección de trabajos para eliminación.</span><span class="sxs-lookup"><span data-stu-id="25a14-171">The name of the job collection to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="25a14-172">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="25a14-172">The response stream.</span></span>
+    content: function deleteMethod(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: get(cloudServiceName, jobCollectionName, callback)
+  summary: <span data-ttu-id="25a14-173">Recuperar una colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-173">Retreive a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.get(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-174">Nombre del servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="25a14-174">Name of the cloud service.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-175">Nombre de la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-175">Name of the job collection.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="25a14-176">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="25a14-176">The response stream.</span></span>
+    content: function get(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: update(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: <span data-ttu-id="25a14-177">Actualizar una colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-177">Update a job collection.</span></span>
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.update(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-178">Nombre del servicio en la nube que contiene la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-178">The name of the cloud service containing the job collection.</span></span>
+    - id: jobCollectionName
+      type:
+      - string
+      description: <span data-ttu-id="25a14-179">El nombre de la colección de trabajos para actualizar.</span><span class="sxs-lookup"><span data-stu-id="25a14-179">The name of the job collection to update.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionUpdateParameters
+      description: <span data-ttu-id="25a14-180">Parámetros proporcionados a la operación de la colección de trabajos de actualización.</span><span class="sxs-lookup"><span data-stu-id="25a14-180">Parameters supplied to the Update Job Collection operation.</span></span>
+    - id: parameters.eTag
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="25a14-181">El valor ETag de la colección de trabajos para actualizar.</span><span class="sxs-lookup"><span data-stu-id="25a14-181">The ETag of the job collection to update.</span></span>
+
+        <span data-ttu-id="25a14-182">La actualización se producirá un error Siel que ETag no coincide.</span><span class="sxs-lookup"><span data-stu-id="25a14-182">The update will fail ifthe ETag doesn't match.</span></span>
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: <span data-ttu-id="25a14-183">La versión de las propiedades intrínsecas para el recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-183">The version of the Intrinsic Properties for your Resource.</span></span> <span data-ttu-id="25a14-184">Si no se especifica, debe ajustarse a la versión de recursos de contrato que registra como predeterminada.</span><span class="sxs-lookup"><span data-stu-id="25a14-184">If not specified, you must conform to the contract resource version you registered as default.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="25a14-185">Etiqueta para el recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-185">Label for the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: <span data-ttu-id="25a14-186">Configuración intrínseca para colecciones de trabajos de programador.</span><span class="sxs-lookup"><span data-stu-id="25a14-186">Intrinsic settings for the scheduler job collections.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: <span data-ttu-id="25a14-187">El plan del recurso.</span><span class="sxs-lookup"><span data-stu-id="25a14-187">The plan of the resource.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: <span data-ttu-id="25a14-188">Configuración de cuota para la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-188">Quota settings for the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: <span data-ttu-id="25a14-189">Número máximo de trabajos que se pueden crear en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-189">Maximum number of jobs that can be created in this job collection.</span></span> <span data-ttu-id="25a14-190">Valor máximo es depende del plan.</span><span class="sxs-lookup"><span data-stu-id="25a14-190">Maximum value is dependent on the plan.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: <span data-ttu-id="25a14-191">Número máximo de repeticiones de todos los trabajos en la colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-191">Maximum number of occurrences for all jobs in the job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: <span data-ttu-id="25a14-192">Define las repeticiones máximas que se pueden especificar en cualquier trabajo en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-192">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: <span data-ttu-id="25a14-193">Define las repeticiones máximas que se pueden especificar en cualquier trabajo en esta colección de trabajos.</span><span class="sxs-lookup"><span data-stu-id="25a14-193">Defines the maximum recurrences that can be specified in any job in this job collection.</span></span>
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="25a14-194">Define el intervalo.</span><span class="sxs-lookup"><span data-stu-id="25a14-194">Defines the interval.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: <span data-ttu-id="25a14-195">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="25a14-195">The response stream.</span></span>
+    content: function update(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js

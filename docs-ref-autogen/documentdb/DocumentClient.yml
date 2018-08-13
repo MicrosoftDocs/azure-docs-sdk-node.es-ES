@@ -1,0 +1,2524 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 99d34b9f67f4793f59a448d80cf88796f9b44ae1
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071928"
+items:
+- uid: documentdb.DocumentClient
+  id: documentdb.DocumentClient
+  name: DocumentClient
+  summary: >-
+    <span data-ttu-id="c5254-101">Proporciona una representación lógica del lado cliente de la cuenta de base de datos de Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="c5254-101">Provides a client-side logical representation of the Azure Cosmos DB database account.</span></span>
+
+    <span data-ttu-id="c5254-102">Este cliente se usa para configurar y ejecutar solicitudes en el servicio de base de datos de Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="c5254-102">This client is used to configure and execute requests in the Azure Cosmos DB database service.</span></span>
+  fullName: documentdb.DocumentClient
+  type: Class
+  children:
+  - documentdb.DocumentClient.#ctor
+  - documentdb.DocumentClient#getWriteEndpoint
+  - documentdb.DocumentClient#getReadEndpoint
+  - documentdb.DocumentClient#createDatabase
+  - documentdb.DocumentClient#createCollection
+  - documentdb.DocumentClient#createDocument
+  - documentdb.DocumentClient#createAttachment
+  - documentdb.DocumentClient#createUser
+  - documentdb.DocumentClient#createPermission
+  - documentdb.DocumentClient#createTrigger
+  - documentdb.DocumentClient#createUserDefinedFunction
+  - documentdb.DocumentClient#createStoredProcedure
+  - documentdb.DocumentClient#createAttachmentAndUploadMedia
+  - documentdb.DocumentClient#readDatabase
+  - documentdb.DocumentClient#readCollection
+  - documentdb.DocumentClient#readDocument
+  - documentdb.DocumentClient#readAttachment
+  - documentdb.DocumentClient#readUser
+  - documentdb.DocumentClient#readPermission
+  - documentdb.DocumentClient#readTrigger
+  - documentdb.DocumentClient#readUserDefinedFunction
+  - documentdb.DocumentClient#readStoredProcedure
+  - documentdb.DocumentClient#readConflict
+  - documentdb.DocumentClient#readDatabases
+  - documentdb.DocumentClient#readCollections
+  - documentdb.DocumentClient#readDocuments
+  - documentdb.DocumentClient#readPartitionKeyRanges
+  - documentdb.DocumentClient#readAttachments
+  - documentdb.DocumentClient#readUsers
+  - documentdb.DocumentClient#readPermissions
+  - documentdb.DocumentClient#readTriggers
+  - documentdb.DocumentClient#readUserDefinedFunctions
+  - documentdb.DocumentClient#readStoredProcedures
+  - documentdb.DocumentClient#readConflicts
+  - documentdb.DocumentClient#queryDatabases
+  - documentdb.DocumentClient#queryCollections
+  - documentdb.DocumentClient#queryDocuments
+  - documentdb.DocumentClient#queryPartitionKeyRanges
+  - documentdb.DocumentClient#queryAttachments
+  - documentdb.DocumentClient#queryUsers
+  - documentdb.DocumentClient#queryPermissions
+  - documentdb.DocumentClient#queryTriggers
+  - documentdb.DocumentClient#queryUserDefinedFunctions
+  - documentdb.DocumentClient#queryStoredProcedures
+  - documentdb.DocumentClient#queryConflicts
+  - documentdb.DocumentClient#deleteDatabase
+  - documentdb.DocumentClient#deleteCollection
+  - documentdb.DocumentClient#deleteDocument
+  - documentdb.DocumentClient#deleteAttachment
+  - documentdb.DocumentClient#deleteUser
+  - documentdb.DocumentClient#deletePermission
+  - documentdb.DocumentClient#deleteTrigger
+  - documentdb.DocumentClient#deleteUserDefinedFunction
+  - documentdb.DocumentClient#deleteStoredProcedure
+  - documentdb.DocumentClient#deleteConflict
+  - documentdb.DocumentClient#replaceCollection
+  - documentdb.DocumentClient#replaceDocument
+  - documentdb.DocumentClient#replaceAttachment
+  - documentdb.DocumentClient#replaceUser
+  - documentdb.DocumentClient#replacePermission
+  - documentdb.DocumentClient#replaceTrigger
+  - documentdb.DocumentClient#replaceUserDefinedFunction
+  - documentdb.DocumentClient#replaceStoredProcedure
+  - documentdb.DocumentClient#upsertDocument
+  - documentdb.DocumentClient#upsertAttachment
+  - documentdb.DocumentClient#upsertUser
+  - documentdb.DocumentClient#upsertPermission
+  - documentdb.DocumentClient#upsertTrigger
+  - documentdb.DocumentClient#upsertUserDefinedFunction
+  - documentdb.DocumentClient#upsertStoredProcedure
+  - documentdb.DocumentClient#upsertAttachmentAndUploadMedia
+  - documentdb.DocumentClient#readMedia
+  - documentdb.DocumentClient#updateMedia
+  - documentdb.DocumentClient#executeStoredProcedure
+  - documentdb.DocumentClient#replaceOffer
+  - documentdb.DocumentClient#readOffer
+  - documentdb.DocumentClient#readOffers
+  - documentdb.DocumentClient#queryOffers
+  - documentdb.DocumentClient#getDatabaseAccount
+  - documentdb.DocumentClient#getSessionToken
+  langs:
+  - js
+- id: documentdb.DocumentClient.#ctor
+  uid: documentdb.DocumentClient.#ctor
+  parent: documentdb.DocumentClient
+  name: DocumentClient(urlConnection, auth, connectionPolicy, consistencyLevel)
+  fullName: documentdb.DocumentClient.DocumentClient(urlConnection, auth, connectionPolicy, consistencyLevel)
+  summary: >-
+    <span data-ttu-id="c5254-103">Proporciona una representación lógica del lado cliente de la cuenta de base de datos de Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="c5254-103">Provides a client-side logical representation of the Azure Cosmos DB database account.</span></span>
+
+    <span data-ttu-id="c5254-104">Este cliente se usa para configurar y ejecutar solicitudes en el servicio de base de datos de Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="c5254-104">This client is used to configure and execute requests in the Azure Cosmos DB database service.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: urlConnection
+      type:
+      - string
+      description: <span data-ttu-id="c5254-105">Extremo de servicio que se va a usar para crear al cliente.</span><span class="sxs-lookup"><span data-stu-id="c5254-105">The service endpoint to use to create the client.</span></span>
+    - id: auth
+      type:
+      - object
+      description: <span data-ttu-id="c5254-106">Un objeto que se usa para autenticar las solicitudes y debe contiene una de las opciones</span><span class="sxs-lookup"><span data-stu-id="c5254-106">An object that is used for authenticating requests and must contains one of the options</span></span>
+    - id: auth.masterKey
+      type:
+      - string
+      description: <span data-ttu-id="c5254-107">La clave maestra de autorización se usa para crear al cliente.</span><span class="sxs-lookup"><span data-stu-id="c5254-107">The authorization master key to use to create the client.</span></span>
+      optional: true
+    - id: auth.resourceTokens
+      type:
+      - Object
+      description: <span data-ttu-id="c5254-108">Un objeto que contiene los tokens de recursos.</span><span class="sxs-lookup"><span data-stu-id="c5254-108">An object that contains resources tokens.</span></span> <span data-ttu-id="c5254-109">Las claves del objeto son identificadores de recursos y los valores son los tokens de recursos.</span><span class="sxs-lookup"><span data-stu-id="c5254-109">Keys for the object are resource Ids and values are the resource tokens.</span></span>
+      optional: true
+    - id: auth.permissionFeed
+      type:
+      - Array
+      description: <span data-ttu-id="c5254-110">Una matriz de <xref:Permission> objetos.</span><span class="sxs-lookup"><span data-stu-id="c5254-110">An array of <xref:Permission> objects.</span></span>
+      optional: true
+    - id: connectionPolicy
+      type:
+      - object
+      description: <span data-ttu-id="c5254-111">Una instancia de <xref:ConnectionPolicy> clase.</span><span class="sxs-lookup"><span data-stu-id="c5254-111">An instance of <xref:ConnectionPolicy> class.</span></span> <span data-ttu-id="c5254-112">Este parámetro es opcional y si se omite, se usará el valor predeterminado connectionPolicy.</span><span class="sxs-lookup"><span data-stu-id="c5254-112">This parameter is optional and the default connectionPolicy will be used if omitted.</span></span>
+      optional: true
+    - id: consistencyLevel
+      type:
+      - string
+      description: <span data-ttu-id="c5254-113">Un parámetro opcional que representa el nivel de coherencia.</span><span class="sxs-lookup"><span data-stu-id="c5254-113">An optional parameter that represents the consistency level.</span></span> <span data-ttu-id="c5254-114">Puede tomar cualquier valor de <xref:ConsistencyLevel>.</span><span class="sxs-lookup"><span data-stu-id="c5254-114">It can take any value from <xref:ConsistencyLevel>.</span></span>
+      optional: true
+    content: new DocumentClient(urlConnection, auth, connectionPolicy, consistencyLevel)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#getWriteEndpoint
+  id: documentdb.DocumentClient#getWriteEndpoint
+  parent: documentdb.DocumentClient
+  name: getWriteEndpoint(callback)
+  summary: <span data-ttu-id="c5254-115">Obtiene el extremo de escritura actual de una cuenta de base de datos con replicación geográfica.</span><span class="sxs-lookup"><span data-stu-id="c5254-115">Gets the curent write endpoint for a geo-replicated database account.</span></span>
+  fullName: documentdb.DocumentClient.getWriteEndpoint(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="c5254-116">La función de devolución de llamada que toma endpoint(string) como argumento.</span><span class="sxs-lookup"><span data-stu-id="c5254-116">The callback function which takes endpoint(string) as an argument.</span></span>
+    content: function getWriteEndpoint(callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#getReadEndpoint
+  id: documentdb.DocumentClient#getReadEndpoint
+  parent: documentdb.DocumentClient
+  name: getReadEndpoint(callback)
+  summary: <span data-ttu-id="c5254-117">Obtiene el curent leer el punto de conexión para una cuenta de base de datos con replicación geográfica.</span><span class="sxs-lookup"><span data-stu-id="c5254-117">Gets the curent read endpoint for a geo-replicated database account.</span></span>
+  fullName: documentdb.DocumentClient.getReadEndpoint(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="c5254-118">La función de devolución de llamada que toma endpoint(string) como argumento.</span><span class="sxs-lookup"><span data-stu-id="c5254-118">The callback function which takes endpoint(string) as an argument.</span></span>
+    content: function getReadEndpoint(callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createDatabase
+  id: documentdb.DocumentClient#createDatabase
+  parent: documentdb.DocumentClient
+  name: createDatabase(body, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-119">Envíe una solicitud para crear una base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-119">Send a request for creating a database.</span></span>
+
+    <p>
+     <span data-ttu-id="c5254-120">Una base de datos administra los usuarios, permisos y un conjunto de colecciones.</span><span class="sxs-lookup"><span data-stu-id="c5254-120">A database manages users, permissions and a set of collections.</span></span>  <br>
+     <span data-ttu-id="c5254-121">Cada cuenta de base de datos de Azure Cosmos DB es capaz de admitir varias independientes con el nombre de las bases de datos, con la base de datos que se va a un contenedor lógico para los datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-121">Each Azure Cosmos DB Database Account is able to support multiple independent named databases, with the database being the logical container for data.</span></span> <br>
+     <span data-ttu-id="c5254-122">Cada base de datos consta de una o varias recopilaciones, cada uno de los cuales a su vez contienen uno o varios documentos.</span><span class="sxs-lookup"><span data-stu-id="c5254-122">Each Database consists of one or more collections, each of which in turn contain one or more documents.</span></span> <span data-ttu-id="c5254-123">Puesto que las bases de datos son un un recurso administrativo, la clave maestra de servicio será necesaria con el fin de obtener acceso y completar correctamente todas las acciones mediante las API de usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-123">Since databases are an an administrative resource, the Service Master Key will be required in order to access and successfully complete any action using the User APIs.</span></span> <br>
+    </p>
+  fullName: documentdb.DocumentClient.createDatabase(body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: body
+      type:
+      - Object
+      description: <span data-ttu-id="c5254-124">Un objeto json que representa la base de datos que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="c5254-124">A json object that represents The database to be created.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-125">El identificador de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-125">The id of the database.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-126">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-126">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-127">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-127">The callback for the request.</span></span>
+    content: function createDatabase(body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createCollection
+  id: documentdb.DocumentClient#createCollection
+  parent: documentdb.DocumentClient
+  name: createCollection(databaseLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-128">Crea una colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-128">Creates a collection.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-129">Una colección es un contenedor lógico con nombre para los documentos.</span><span class="sxs-lookup"><span data-stu-id="c5254-129">A collection is a named logical container for documents.</span></span> <br>
+
+    <span data-ttu-id="c5254-130">Una base de datos puede contener cero o más colecciones con nombre y cada colección se compone de cero o más documentos JSON.</span><span class="sxs-lookup"><span data-stu-id="c5254-130">A database may contain zero or more named collections and each collection consists of zero or more JSON documents.</span></span> <br>
+
+    <span data-ttu-id="c5254-131">Los documentos en una colección que se va a esquemas, no es necesario compartir la misma estructura o campos.</span><span class="sxs-lookup"><span data-stu-id="c5254-131">Being schema-free, the documents in a collection do not need to share the same structure or fields.</span></span> <br>
+
+    <span data-ttu-id="c5254-132">Puesto que las colecciones son recursos de la aplicación, pueden autorizar mediante la clave maestra o claves de recurso.</span><span class="sxs-lookup"><span data-stu-id="c5254-132">Since collections are application resources, they can be authorized using either the master key or resource keys.</span></span> <br>
+
+    </p>
+  fullName: documentdb.DocumentClient.createCollection(databaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-133">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-133">The self-link of the database.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="c5254-134">Representa el cuerpo de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-134">Represents the body of the collection.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-135">El identificador de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-135">The id of the collection.</span></span>
+    - id: body.indexingPolicy
+      type:
+      - documentdb.IndexingPolicy
+      description: <span data-ttu-id="c5254-136">La directiva de indexación asociada a la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-136">The indexing policy associated with the collection.</span></span>
+    - id: body.defaultTtl
+      type:
+      - number
+      description: <span data-ttu-id="c5254-137">El tiempo predeterminado para activarse en segundos para los documentos de una colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-137">The default time to live in seconds for documents in a collection.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-138">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-138">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-139">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-139">The callback for the request.</span></span>
+    content: function createCollection(databaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createDocument
+  id: documentdb.DocumentClient#createDocument
+  parent: documentdb.DocumentClient
+  name: createDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-140">Crear un documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-140">Create a document.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-141">No hay ningún esquema de conjunto de documentos JSON.</span><span class="sxs-lookup"><span data-stu-id="c5254-141">There is no set schema for JSON documents.</span></span> <span data-ttu-id="c5254-142">Pueden contener cualquier número de propiedades personalizadas, así como una lista opcional de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-142">They may contain any number of custom properties as well as an optional list of attachments.</span></span> <br>
+
+    <span data-ttu-id="c5254-143">Un documento es un recurso de aplicación y se puede autorizar mediante la clave maestra o claves de recurso</span><span class="sxs-lookup"><span data-stu-id="c5254-143">A Document is an application resource and can be authorized using the master key or resource keys</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.createDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentsFeedOrDatabaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-144">Los vínculos de la colección o base de datos si usa a una resolución de partición</span><span class="sxs-lookup"><span data-stu-id="c5254-144">The collection link or database link if using a partition resolver</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="c5254-145">Representa el cuerpo del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-145">Represents the body of the document.</span></span> <span data-ttu-id="c5254-146">Puede contener cualquier número de propiedades definidas por el usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-146">Can contain any number of user defined properties.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-147">El identificador del documento, debe ser único para cada documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-147">The id of the document, MUST be unique for each document.</span></span>
+      optional: true
+    - id: body.ttl
+      type:
+      - number
+      description: <span data-ttu-id="c5254-148">El período de vida en segundos del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-148">The time to live in seconds of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-149">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-149">The request options.</span></span>
+      optional: true
+    - id: options.disableAutomaticIdGeneration
+      type:
+      - boolean
+      description: <span data-ttu-id="c5254-150">Deshabilita la generación automática de identificador.</span><span class="sxs-lookup"><span data-stu-id="c5254-150">Disables the automatic id generation.</span></span> <span data-ttu-id="c5254-151">Si falta el Id. en el cuerpo y esta opción es true, se devolverá un error.</span><span class="sxs-lookup"><span data-stu-id="c5254-151">If id is missing in the body and this option is true, an error will be returned.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-152">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-152">The callback for the request.</span></span>
+    content: function createDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createAttachment
+  id: documentdb.DocumentClient#createAttachment
+  parent: documentdb.DocumentClient
+  name: createAttachment(documentLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-153">Cree un archivo adjunto para el objeto de documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-153">Create an attachment for the document object.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-154">Cada documento puede contener cero o varios archivos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-154">Each document may contain zero or more attachments.</span></span> <span data-ttu-id="c5254-155">Los datos adjuntos pueden ser de cualquier tipo MIME: texto, imágenes, datos binarios.</span><span class="sxs-lookup"><span data-stu-id="c5254-155">Attachments can be of any MIME type - text, image, binary data.</span></span> <br>
+
+    <span data-ttu-id="c5254-156">Se almacenan externamente en Azure Blob storage.</span><span class="sxs-lookup"><span data-stu-id="c5254-156">These are stored externally in Azure Blob storage.</span></span> <span data-ttu-id="c5254-157">Los datos adjuntos se eliminan automáticamente cuando se elimina el documento primario.</span><span class="sxs-lookup"><span data-stu-id="c5254-157">Attachments are automatically deleted when the parent document is deleted.</span></span>
+
+    </P>
+  fullName: documentdb.DocumentClient.createAttachment(documentLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-158">La vinculación automática del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-158">The self-link of the document.</span></span>
+    - id: body
+      type:
+      - Object
+      description: <span data-ttu-id="c5254-159">Los metadatos de la define el medio adjunto como media, contentType.</span><span class="sxs-lookup"><span data-stu-id="c5254-159">The metadata the defines the attachment media like media, contentType.</span></span> <span data-ttu-id="c5254-160">Puede incluir otras propiedades como parte de los metadatos.</span><span class="sxs-lookup"><span data-stu-id="c5254-160">It can include any other properties as part of the metedata.</span></span>
+    - id: body.contentType
+      type:
+      - string
+      description: <span data-ttu-id="c5254-161">El tipo de contenido MIME de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-161">The MIME contentType of the attachment.</span></span>
+    - id: body.media
+      type:
+      - string
+      description: <span data-ttu-id="c5254-162">Vínculo de multimedia asociada con el contenido de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-162">Media link associated with the attachment content.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-163">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-163">The request options.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-164">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-164">The callback for the request.</span></span>
+    content: function createAttachment(documentLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createUser
+  id: documentdb.DocumentClient#createUser
+  parent: documentdb.DocumentClient
+  name: createUser(databaseLink, body, options, callback)
+  summary: <span data-ttu-id="c5254-165">Creación de un usuario de base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-165">Create a database user.</span></span>
+  fullName: documentdb.DocumentClient.createUser(databaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-166">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-166">The self-link of the database.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="c5254-167">Representa el cuerpo del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-167">Represents the body of the user.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-168">El identificador del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-168">The id of the user.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-169">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-169">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-170">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-170">The callback for the request.</span></span>
+    content: function createUser(databaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createPermission
+  id: documentdb.DocumentClient#createPermission
+  parent: documentdb.DocumentClient
+  name: createPermission(userLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-171">Crear un permiso.</span><span class="sxs-lookup"><span data-stu-id="c5254-171">Create a permission.</span></span>
+
+    <p> <span data-ttu-id="c5254-172">Un permiso representa un permiso de acceso a un recurso específico, por ejemplo, documento o colección por usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-172">A permission represents a per-User Permission to access a specific resource e.g. Document or Collection.</span></span>  </p>
+  fullName: documentdb.DocumentClient.createPermission(userLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-173">La vinculación automática del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-173">The self-link of the user.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="c5254-174">Representa el cuerpo del permiso.</span><span class="sxs-lookup"><span data-stu-id="c5254-174">Represents the body of the permission.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-175">El identificador del permiso</span><span class="sxs-lookup"><span data-stu-id="c5254-175">The id of the permission</span></span>
+    - id: body.permissionMode
+      type:
+      - string
+      description: <span data-ttu-id="c5254-176">El modo de permiso, debe ser un valor de <xref:documentdb.PermissionMode></span><span class="sxs-lookup"><span data-stu-id="c5254-176">The mode of the permission, must be a value of <xref:documentdb.PermissionMode></span></span>
+    - id: body.resource
+      type:
+      - string
+      description: <span data-ttu-id="c5254-177">El vínculo del recurso al que se aplicará el permiso a.</span><span class="sxs-lookup"><span data-stu-id="c5254-177">The link of the resource that the permission will be applied to.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-178">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-178">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-179">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-179">The callback for the request.</span></span>
+    content: function createPermission(userLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createTrigger
+  id: documentdb.DocumentClient#createTrigger
+  parent: documentdb.DocumentClient
+  name: createTrigger(collectionLink, trigger, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-180">Crear un desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-180">Create a trigger.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-181">Azure Cosmos DB admite pre y post los desencadenadores definidos en JavaScript que se ejecuta en crea, actualizaciones y eliminaciones.</span><span class="sxs-lookup"><span data-stu-id="c5254-181">Azure Cosmos DB supports pre and post triggers defined in JavaScript to be executed on creates, updates and deletes.</span></span> <br>
+
+    <span data-ttu-id="c5254-182">Para obtener más información, consulte la documentación de API de JavaScript del lado servidor.</span><span class="sxs-lookup"><span data-stu-id="c5254-182">For additional details, refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.createTrigger(collectionLink, trigger, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-183">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-183">The self-link of the collection.</span></span>
+    - id: trigger
+      type:
+      - object
+      description: <span data-ttu-id="c5254-184">Representa el cuerpo del desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-184">Represents the body of the trigger.</span></span>
+    - id: trigger.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-185">El identificador del desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-185">The id of the trigger.</span></span>
+    - id: trigger.triggerType
+      type:
+      - string
+      description: <span data-ttu-id="c5254-186">El tipo del desencadenador, debe ser uno de los valores de <xref:documentdb.TriggerType>.</span><span class="sxs-lookup"><span data-stu-id="c5254-186">The type of the trigger, should be one of the values of <xref:documentdb.TriggerType>.</span></span>
+    - id: trigger.triggerOperation
+      type:
+      - string
+      description: <span data-ttu-id="c5254-187">La operación del desencadenador, debe ser uno de los valores de <xref:documentdb.TriggerOperation>.</span><span class="sxs-lookup"><span data-stu-id="c5254-187">The trigger operation, should be one of the values of <xref:documentdb.TriggerOperation>.</span></span>
+    - id: trigger.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="c5254-188">El cuerpo del desencadenador, se puede pasar como han convertido en cadenas demasiado.</span><span class="sxs-lookup"><span data-stu-id="c5254-188">The body of the trigger, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-189">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-189">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-190">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-190">The callback for the request.</span></span>
+    content: function createTrigger(collectionLink, trigger, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createUserDefinedFunction
+  id: documentdb.DocumentClient#createUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: createUserDefinedFunction(collectionLink, udf, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-191">Cree un UserDefinedFunction.</span><span class="sxs-lookup"><span data-stu-id="c5254-191">Create a UserDefinedFunction.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-192">Azure Cosmos DB admite las UDF de JavaScript que se puede usar dentro de las consultas, procedimientos almacenados y desencadenadores.</span><span class="sxs-lookup"><span data-stu-id="c5254-192">Azure Cosmos DB supports JavaScript UDFs which can be used inside queries, stored procedures and triggers.</span></span> <br>
+
+    <span data-ttu-id="c5254-193">Para obtener más información, consulte la documentación de API de JavaScript del lado servidor.</span><span class="sxs-lookup"><span data-stu-id="c5254-193">For additional details, refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.createUserDefinedFunction(collectionLink, udf, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-194">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-194">The self-link of the collection.</span></span>
+    - id: udf
+      type:
+      - object
+      description: <span data-ttu-id="c5254-195">Representa el cuerpo de userDefinedFunction.</span><span class="sxs-lookup"><span data-stu-id="c5254-195">Represents the body of the userDefinedFunction.</span></span>
+    - id: udf.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-196">El identificador de la udf.</span><span class="sxs-lookup"><span data-stu-id="c5254-196">The id of the udf.</span></span>
+    - id: udf.userDefinedFunctionType
+      type:
+      - string
+      description: <span data-ttu-id="c5254-197">El tipo de la udf, debe ser uno de los valores de <xref:documentdb.UserDefinedFunctionType></span><span class="sxs-lookup"><span data-stu-id="c5254-197">The type of the udf, it should be one of the values of <xref:documentdb.UserDefinedFunctionType></span></span>
+    - id: udf.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="c5254-198">Representa el cuerpo de la udf, se puede pasar como han convertido en cadenas demasiado.</span><span class="sxs-lookup"><span data-stu-id="c5254-198">Represents the body of the udf, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-199">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-199">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-200">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-200">The callback for the request.</span></span>
+    content: function createUserDefinedFunction(collectionLink, udf, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createStoredProcedure
+  id: documentdb.DocumentClient#createStoredProcedure
+  parent: documentdb.DocumentClient
+  name: createStoredProcedure(collectionLink, sproc, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-201">Crear un procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-201">Create a StoredProcedure.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-202">Azure Cosmos DB permite que los procedimientos almacenados se ejecuten en la capa de almacenamiento directamente en una colección de documentos.</span><span class="sxs-lookup"><span data-stu-id="c5254-202">Azure Cosmos DB allows stored procedures to be executed in the storage tier, directly against a document collection.</span></span> <span data-ttu-id="c5254-203">La secuencia de comandos</span><span class="sxs-lookup"><span data-stu-id="c5254-203">The script</span></span> <br>
+
+    <span data-ttu-id="c5254-204">se ejecuta en las transacciones ACID en la partición del almacenamiento principal de la colección especificada.</span><span class="sxs-lookup"><span data-stu-id="c5254-204">gets executed under ACID transactions on the primary storage partition of the specified collection.</span></span> <span data-ttu-id="c5254-205">Para obtener más información,</span><span class="sxs-lookup"><span data-stu-id="c5254-205">For additional details,</span></span> <br>
+
+    <span data-ttu-id="c5254-206">Consulte la documentación de API de JavaScript del lado servidor.</span><span class="sxs-lookup"><span data-stu-id="c5254-206">refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.createStoredProcedure(collectionLink, sproc, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-207">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-207">The self-link of the collection.</span></span>
+    - id: sproc
+      type:
+      - object
+      description: <span data-ttu-id="c5254-208">Representa el cuerpo del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-208">Represents the body of the stored procedure.</span></span>
+    - id: sproc.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-209">El Id. del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-209">The id of the stored procedure.</span></span>
+    - id: sproc.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="c5254-210">El cuerpo del procedimiento almacenado, se puede pasar como han convertido en cadenas demasiado.</span><span class="sxs-lookup"><span data-stu-id="c5254-210">The body of the stored procedure, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-211">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-211">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-212">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-212">The callback for the request.</span></span>
+    content: function createStoredProcedure(collectionLink, sproc, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createAttachmentAndUploadMedia
+  id: documentdb.DocumentClient#createAttachmentAndUploadMedia
+  parent: documentdb.DocumentClient
+  name: createAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  summary: <span data-ttu-id="c5254-213">Cree un archivo adjunto para el objeto de documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-213">Create an attachment for the document object.</span></span>
+  fullName: documentdb.DocumentClient.createAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-214">La vinculación automática del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-214">The self-link of the document.</span></span>
+    - id: readableStream
+      type:
+      - documentdb.stream.Readable
+      description: <span data-ttu-id="c5254-215">la secuencia que representa el propio medio que debe cargarse.</span><span class="sxs-lookup"><span data-stu-id="c5254-215">the stream that represents the media itself that needs to be uploaded.</span></span>
+    - id: options
+      type:
+      - documentdb.MediaOptions
+      description: <span data-ttu-id="c5254-216">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-216">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-217">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-217">The callback for the request.</span></span>
+    content: function createAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readDatabase
+  id: documentdb.DocumentClient#readDatabase
+  parent: documentdb.DocumentClient
+  name: readDatabase(databaseLink, options, callback)
+  summary: <span data-ttu-id="c5254-218">Lee una base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-218">Reads a database.</span></span>
+  fullName: documentdb.DocumentClient.readDatabase(databaseLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-219">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-219">The self-link of the database.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-220">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-220">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-221">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-221">The callback for the request.</span></span>
+    content: function readDatabase(databaseLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readCollection
+  id: documentdb.DocumentClient#readCollection
+  parent: documentdb.DocumentClient
+  name: readCollection(collectionLink, options, callback)
+  summary: <span data-ttu-id="c5254-222">Lee una colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-222">Reads a collection.</span></span>
+  fullName: documentdb.DocumentClient.readCollection(collectionLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-223">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-223">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-224">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-224">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-225">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-225">The callback for the request.</span></span>
+    content: function readCollection(collectionLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readDocument
+  id: documentdb.DocumentClient#readDocument
+  parent: documentdb.DocumentClient
+  name: readDocument(documentLink, options, callback)
+  summary: <span data-ttu-id="c5254-226">Lee un documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-226">Reads a document.</span></span>
+  fullName: documentdb.DocumentClient.readDocument(documentLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-227">La vinculación automática del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-227">The self-link of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-228">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-228">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-229">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-229">The callback for the request.</span></span>
+    content: function readDocument(documentLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readAttachment
+  id: documentdb.DocumentClient#readAttachment
+  parent: documentdb.DocumentClient
+  name: readAttachment(attachmentLink, options, callback)
+  summary: <span data-ttu-id="c5254-230">Lee un objeto de datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-230">Reads an Attachment object.</span></span>
+  fullName: documentdb.DocumentClient.readAttachment(attachmentLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: attachmentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-231">La vinculación automática de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-231">The self-link of the attachment.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-232">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-232">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-233">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-233">The callback for the request.</span></span>
+    content: function readAttachment(attachmentLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readUser
+  id: documentdb.DocumentClient#readUser
+  parent: documentdb.DocumentClient
+  name: readUser(userLink, options, callback)
+  summary: <span data-ttu-id="c5254-234">Lee un usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-234">Reads a user.</span></span>
+  fullName: documentdb.DocumentClient.readUser(userLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-235">La vinculación automática del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-235">The self-link of the user.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-236">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-236">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-237">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-237">The callback for the request.</span></span>
+    content: function readUser(userLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readPermission
+  id: documentdb.DocumentClient#readPermission
+  parent: documentdb.DocumentClient
+  name: readPermission(permissionLink, options, callback)
+  summary: <span data-ttu-id="c5254-238">Lee un permiso.</span><span class="sxs-lookup"><span data-stu-id="c5254-238">Reads a permission.</span></span>
+  fullName: documentdb.DocumentClient.readPermission(permissionLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: permissionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-239">La vinculación automática del permiso.</span><span class="sxs-lookup"><span data-stu-id="c5254-239">The self-link of the permission.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-240">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-240">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-241">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-241">The callback for the request.</span></span>
+    content: function readPermission(permissionLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readTrigger
+  id: documentdb.DocumentClient#readTrigger
+  parent: documentdb.DocumentClient
+  name: readTrigger(triggerLink, options, callback)
+  summary: <span data-ttu-id="c5254-242">Lee un objeto desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-242">Reads a trigger object.</span></span>
+  fullName: documentdb.DocumentClient.readTrigger(triggerLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: triggerLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-243">La vinculación automática del desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-243">The self-link of the trigger.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-244">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-244">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-245">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-245">The callback for the request.</span></span>
+    content: function readTrigger(triggerLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readUserDefinedFunction
+  id: documentdb.DocumentClient#readUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: readUserDefinedFunction(udfLink, options, callback)
+  summary: <span data-ttu-id="c5254-246">Lee un objeto de udf.</span><span class="sxs-lookup"><span data-stu-id="c5254-246">Reads a udf object.</span></span>
+  fullName: documentdb.DocumentClient.readUserDefinedFunction(udfLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: udfLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-247">Función definida por el Self-link del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-247">The self-link of the user defined function.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-248">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-248">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-249">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-249">The callback for the request.</span></span>
+    content: function readUserDefinedFunction(udfLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readStoredProcedure
+  id: documentdb.DocumentClient#readStoredProcedure
+  parent: documentdb.DocumentClient
+  name: readStoredProcedure(sprocLink, options, callback)
+  summary: <span data-ttu-id="c5254-250">Lee un objeto StoredProcedure.</span><span class="sxs-lookup"><span data-stu-id="c5254-250">Reads a StoredProcedure object.</span></span>
+  fullName: documentdb.DocumentClient.readStoredProcedure(sprocLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sprocLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-251">La vinculación automática del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-251">The self-link of the stored procedure.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-252">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-252">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-253">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-253">The callback for the request.</span></span>
+    content: function readStoredProcedure(sprocLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readConflict
+  id: documentdb.DocumentClient#readConflict
+  parent: documentdb.DocumentClient
+  name: readConflict(conflictLink, options, callback)
+  summary: <span data-ttu-id="c5254-254">Lee un conflicto.</span><span class="sxs-lookup"><span data-stu-id="c5254-254">Reads a conflict.</span></span>
+  fullName: documentdb.DocumentClient.readConflict(conflictLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: conflictLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-255">La vinculación automática del conflicto.</span><span class="sxs-lookup"><span data-stu-id="c5254-255">The self-link of the conflict.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-256">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-256">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-257">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-257">The callback for the request.</span></span>
+    content: function readConflict(conflictLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readDatabases
+  id: documentdb.DocumentClient#readDatabases
+  parent: documentdb.DocumentClient
+  name: readDatabases(options)
+  summary: <span data-ttu-id="c5254-258">Enumera todas las bases de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-258">Lists all databases.</span></span>
+  fullName: documentdb.DocumentClient.readDatabases(options)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-259">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-259">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-260">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-260">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readDatabases(options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readCollections
+  id: documentdb.DocumentClient#readCollections
+  parent: documentdb.DocumentClient
+  name: readCollections(databaseLink, options)
+  summary: <span data-ttu-id="c5254-261">Obtener todas las colecciones en esta base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-261">Get all collections in this database.</span></span>
+  fullName: documentdb.DocumentClient.readCollections(databaseLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-262">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-262">The self-link of the database.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-263">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-263">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-264">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-264">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readCollections(databaseLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readDocuments
+  id: documentdb.DocumentClient#readDocuments
+  parent: documentdb.DocumentClient
+  name: readDocuments(collectionLink, options)
+  summary: <span data-ttu-id="c5254-265">Obtener todos los documentos de esta colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-265">Get all documents in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readDocuments(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-266">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-266">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-267">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-267">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-268">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-268">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readDocuments(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readPartitionKeyRanges
+  id: documentdb.DocumentClient#readPartitionKeyRanges
+  parent: documentdb.DocumentClient
+  name: readPartitionKeyRanges(collectionLink, options)
+  summary: <span data-ttu-id="c5254-269">Obtener la partición de todos los intervalos de clave de esta colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-269">Get all Partition key Ranges in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readPartitionKeyRanges(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-270">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-270">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-271">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-271">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-272">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-272">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readPartitionKeyRanges(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readAttachments
+  id: documentdb.DocumentClient#readAttachments
+  parent: documentdb.DocumentClient
+  name: readAttachments(documentLink, options)
+  summary: <span data-ttu-id="c5254-273">Obtener todos los datos adjuntos de este documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-273">Get all attachments for this document.</span></span>
+  fullName: documentdb.DocumentClient.readAttachments(documentLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-274">La vinculación automática del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-274">The self-link of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-275">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-275">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-276">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-276">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readAttachments(documentLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readUsers
+  id: documentdb.DocumentClient#readUsers
+  parent: documentdb.DocumentClient
+  name: readUsers(databaseLink, feedOptions)
+  summary: <span data-ttu-id="c5254-277">Obtener todos los usuarios en esta base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-277">Get all users in this database.</span></span>
+  fullName: documentdb.DocumentClient.readUsers(databaseLink, feedOptions)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-278">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-278">The self-link of the database.</span></span>
+    - id: feedOptions
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-279">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-279">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-280">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-280">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readUsers(databaseLink, feedOptions)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readPermissions
+  id: documentdb.DocumentClient#readPermissions
+  parent: documentdb.DocumentClient
+  name: readPermissions(userLink, feedOptions)
+  summary: <span data-ttu-id="c5254-281">Obtener todos los permisos para este usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-281">Get all permissions for this user.</span></span>
+  fullName: documentdb.DocumentClient.readPermissions(userLink, feedOptions)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-282">La vinculación automática del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-282">The self-link of the user.</span></span>
+    - id: feedOptions
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-283">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-283">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-284">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-284">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readPermissions(userLink, feedOptions)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readTriggers
+  id: documentdb.DocumentClient#readTriggers
+  parent: documentdb.DocumentClient
+  name: readTriggers(collectionLink, options)
+  summary: <span data-ttu-id="c5254-285">Obtener todos los desencadenadores en esta colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-285">Get all triggers in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readTriggers(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-286">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-286">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-287">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-287">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-288">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-288">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readTriggers(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readUserDefinedFunctions
+  id: documentdb.DocumentClient#readUserDefinedFunctions
+  parent: documentdb.DocumentClient
+  name: readUserDefinedFunctions(collectionLink, options)
+  summary: <span data-ttu-id="c5254-289">Obtener todos los UserDefinedFunctions en esta colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-289">Get all UserDefinedFunctions in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readUserDefinedFunctions(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-290">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-290">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-291">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-291">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-292">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-292">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readUserDefinedFunctions(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readStoredProcedures
+  id: documentdb.DocumentClient#readStoredProcedures
+  parent: documentdb.DocumentClient
+  name: readStoredProcedures(collectionLink, options)
+  summary: <span data-ttu-id="c5254-293">Obtener todos los StoredProcedures en esta colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-293">Get all StoredProcedures in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readStoredProcedures(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-294">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-294">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-295">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-295">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-296">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-296">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readStoredProcedures(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readConflicts
+  id: documentdb.DocumentClient#readConflicts
+  parent: documentdb.DocumentClient
+  name: readConflicts(collectionLink, options)
+  summary: <span data-ttu-id="c5254-297">Obtener todos los conflictos de esta colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-297">Get all conflicts in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readConflicts(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-298">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-298">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-299">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-299">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-300">Una instancia de QueryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-300">An instance of QueryIterator to handle reading feed.</span></span>'
+    content: function readConflicts(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryDatabases
+  id: documentdb.DocumentClient#queryDatabases
+  parent: documentdb.DocumentClient
+  name: queryDatabases(query, options)
+  summary: <span data-ttu-id="c5254-301">Enumera todas las bases de datos que satisfacen una consulta.</span><span class="sxs-lookup"><span data-stu-id="c5254-301">Lists all databases that satisfy a query.</span></span>
+  fullName: documentdb.DocumentClient.queryDatabases(query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-302">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-302">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-303">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-303">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-304">Una instancia de QueryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-304">An instance of QueryIterator to handle reading feed.</span></span>'
+    content: function queryDatabases(query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryCollections
+  id: documentdb.DocumentClient#queryCollections
+  parent: documentdb.DocumentClient
+  name: queryCollections(databaseLink, query, options)
+  summary: <span data-ttu-id="c5254-305">Consultar las colecciones de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-305">Query the collections for the database.</span></span>
+  fullName: documentdb.DocumentClient.queryCollections(databaseLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-306">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-306">The self-link of the database.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-307">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-307">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-308">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-308">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-309">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-309">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryCollections(databaseLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryDocuments
+  id: documentdb.DocumentClient#queryDocuments
+  parent: documentdb.DocumentClient
+  name: queryDocuments(documentsFeedOrDatabaseLink, query, options)
+  summary: <span data-ttu-id="c5254-310">Consultar los documentos de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-310">Query the documents for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryDocuments(documentsFeedOrDatabaseLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentsFeedOrDatabaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-311">Los vínculos de la colección o base de datos si usa a una resolución de partición</span><span class="sxs-lookup"><span data-stu-id="c5254-311">The collection link or database link if using a partition resolver</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-312">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-312">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-313">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-313">Represents the feed options.</span></span>
+      optional: true
+    - id: options.partitionKey
+      type:
+      - object
+      description: <span data-ttu-id="c5254-314">Clave de partición opcional que se usará con la resolución de partición</span><span class="sxs-lookup"><span data-stu-id="c5254-314">Optional partition key to be used with the partition resolver</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-315">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-315">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryDocuments(documentsFeedOrDatabaseLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryPartitionKeyRanges
+  id: documentdb.DocumentClient#queryPartitionKeyRanges
+  parent: documentdb.DocumentClient
+  name: queryPartitionKeyRanges(databaseLink, query, options)
+  summary: <span data-ttu-id="c5254-316">Consultar los intervalos de clave de partición</span><span class="sxs-lookup"><span data-stu-id="c5254-316">Query the partition key ranges</span></span>
+  fullName: documentdb.DocumentClient.queryPartitionKeyRanges(databaseLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-317">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-317">The self-link of the database.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-318">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-318">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-319">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-319">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-320">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-320">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryPartitionKeyRanges(databaseLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryAttachments
+  id: documentdb.DocumentClient#queryAttachments
+  parent: documentdb.DocumentClient
+  name: queryAttachments(documentLink, query, options)
+  summary: <span data-ttu-id="c5254-321">Consultar los datos adjuntos del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-321">Query the attachments for the document.</span></span>
+  fullName: documentdb.DocumentClient.queryAttachments(documentLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-322">La vinculación automática del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-322">The self-link of the document.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-323">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-323">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-324">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-324">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-325">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-325">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryAttachments(documentLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryUsers
+  id: documentdb.DocumentClient#queryUsers
+  parent: documentdb.DocumentClient
+  name: queryUsers(databaseLink, query, options)
+  summary: <span data-ttu-id="c5254-326">Consultas a los usuarios de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-326">Query the users for the database.</span></span>
+  fullName: documentdb.DocumentClient.queryUsers(databaseLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-327">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-327">The self-link of the database.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-328">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-328">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-329">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-329">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-330">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-330">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryUsers(databaseLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryPermissions
+  id: documentdb.DocumentClient#queryPermissions
+  parent: documentdb.DocumentClient
+  name: queryPermissions(userLink, query, options)
+  summary: <span data-ttu-id="c5254-331">Consultar el permiso del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-331">Query the permission for the user.</span></span>
+  fullName: documentdb.DocumentClient.queryPermissions(userLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-332">La vinculación automática del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-332">The self-link of the user.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-333">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-333">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-334">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-334">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-335">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-335">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryPermissions(userLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryTriggers
+  id: documentdb.DocumentClient#queryTriggers
+  parent: documentdb.DocumentClient
+  name: queryTriggers(collectionLink, query, options)
+  summary: <span data-ttu-id="c5254-336">Consultar los desencadenadores de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-336">Query the triggers for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryTriggers(collectionLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-337">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-337">The self-link of the collection.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-338">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-338">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-339">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-339">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-340">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-340">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryTriggers(collectionLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryUserDefinedFunctions
+  id: documentdb.DocumentClient#queryUserDefinedFunctions
+  parent: documentdb.DocumentClient
+  name: queryUserDefinedFunctions(collectionLink, query, options)
+  summary: <span data-ttu-id="c5254-341">Consulta el usuario define las funciones de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-341">Query the user defined functions for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryUserDefinedFunctions(collectionLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-342">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-342">The self-link of the collection.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-343">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-343">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-344">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-344">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-345">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-345">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryUserDefinedFunctions(collectionLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryStoredProcedures
+  id: documentdb.DocumentClient#queryStoredProcedures
+  parent: documentdb.DocumentClient
+  name: queryStoredProcedures(collectionLink, query, options)
+  summary: <span data-ttu-id="c5254-346">Consultar el storedProcedures para la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-346">Query the storedProcedures for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryStoredProcedures(collectionLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-347">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-347">The self-link of the collection.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-348">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-348">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-349">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-349">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-350">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-350">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryStoredProcedures(collectionLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryConflicts
+  id: documentdb.DocumentClient#queryConflicts
+  parent: documentdb.DocumentClient
+  name: queryConflicts(collectionLink, query, options)
+  summary: <span data-ttu-id="c5254-351">Consultar los conflictos relativos a la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-351">Query the conflicts for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryConflicts(collectionLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-352">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-352">The self-link of the collection.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-353">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-353">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-354">Representa las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-354">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-355">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-355">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryConflicts(collectionLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteDatabase
+  id: documentdb.DocumentClient#deleteDatabase
+  parent: documentdb.DocumentClient
+  name: deleteDatabase(databaseLink, options, callback)
+  summary: <span data-ttu-id="c5254-356">Elimine el objeto de base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-356">Delete the database object.</span></span>
+  fullName: documentdb.DocumentClient.deleteDatabase(databaseLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-357">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-357">The self-link of the database.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-358">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-358">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-359">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-359">The callback for the request.</span></span>
+    content: function deleteDatabase(databaseLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteCollection
+  id: documentdb.DocumentClient#deleteCollection
+  parent: documentdb.DocumentClient
+  name: deleteCollection(collectionLink, options, callback)
+  summary: <span data-ttu-id="c5254-360">Eliminar el objeto de colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-360">Delete the collection object.</span></span>
+  fullName: documentdb.DocumentClient.deleteCollection(collectionLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-361">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-361">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-362">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-362">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-363">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-363">The callback for the request.</span></span>
+    content: function deleteCollection(collectionLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteDocument
+  id: documentdb.DocumentClient#deleteDocument
+  parent: documentdb.DocumentClient
+  name: deleteDocument(documentLink, options, callback)
+  summary: <span data-ttu-id="c5254-364">Elimine el objeto de documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-364">Delete the document object.</span></span>
+  fullName: documentdb.DocumentClient.deleteDocument(documentLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-365">La vinculación automática del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-365">The self-link of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-366">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-366">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-367">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-367">The callback for the request.</span></span>
+    content: function deleteDocument(documentLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteAttachment
+  id: documentdb.DocumentClient#deleteAttachment
+  parent: documentdb.DocumentClient
+  name: deleteAttachment(attachmentLink, options, callback)
+  summary: <span data-ttu-id="c5254-368">Elimine el objeto de datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-368">Delete the attachment object.</span></span>
+  fullName: documentdb.DocumentClient.deleteAttachment(attachmentLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: attachmentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-369">La vinculación automática de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-369">The self-link of the attachment.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-370">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-370">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-371">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-371">The callback for the request.</span></span>
+    content: function deleteAttachment(attachmentLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteUser
+  id: documentdb.DocumentClient#deleteUser
+  parent: documentdb.DocumentClient
+  name: deleteUser(userLink, options, callback)
+  summary: <span data-ttu-id="c5254-372">Eliminar el objeto de usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-372">Delete the user object.</span></span>
+  fullName: documentdb.DocumentClient.deleteUser(userLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-373">La vinculación automática del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-373">The self-link of the user.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-374">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-374">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-375">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-375">The callback for the request.</span></span>
+    content: function deleteUser(userLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deletePermission
+  id: documentdb.DocumentClient#deletePermission
+  parent: documentdb.DocumentClient
+  name: deletePermission(permissionLink, options, callback)
+  summary: <span data-ttu-id="c5254-376">Eliminar el objeto de permiso.</span><span class="sxs-lookup"><span data-stu-id="c5254-376">Delete the permission object.</span></span>
+  fullName: documentdb.DocumentClient.deletePermission(permissionLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: permissionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-377">La vinculación automática del permiso.</span><span class="sxs-lookup"><span data-stu-id="c5254-377">The self-link of the permission.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-378">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-378">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-379">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-379">The callback for the request.</span></span>
+    content: function deletePermission(permissionLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteTrigger
+  id: documentdb.DocumentClient#deleteTrigger
+  parent: documentdb.DocumentClient
+  name: deleteTrigger(triggerLink, options, callback)
+  summary: <span data-ttu-id="c5254-380">Elimine el objeto desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-380">Delete the trigger object.</span></span>
+  fullName: documentdb.DocumentClient.deleteTrigger(triggerLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: triggerLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-381">La vinculación automática del desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-381">The self-link of the trigger.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-382">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-382">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-383">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-383">The callback for the request.</span></span>
+    content: function deleteTrigger(triggerLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteUserDefinedFunction
+  id: documentdb.DocumentClient#deleteUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: deleteUserDefinedFunction(udfLink, options, callback)
+  summary: <span data-ttu-id="c5254-384">Elimine el objeto UserDefinedFunction.</span><span class="sxs-lookup"><span data-stu-id="c5254-384">Delete the UserDefinedFunction object.</span></span>
+  fullName: documentdb.DocumentClient.deleteUserDefinedFunction(udfLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: udfLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-385">Función definida por el Self-link del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-385">The self-link of the user defined function.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-386">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-386">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-387">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-387">The callback for the request.</span></span>
+    content: function deleteUserDefinedFunction(udfLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteStoredProcedure
+  id: documentdb.DocumentClient#deleteStoredProcedure
+  parent: documentdb.DocumentClient
+  name: deleteStoredProcedure(sprocLink, options, callback)
+  summary: <span data-ttu-id="c5254-388">Elimine el objeto StoredProcedure.</span><span class="sxs-lookup"><span data-stu-id="c5254-388">Delete the StoredProcedure object.</span></span>
+  fullName: documentdb.DocumentClient.deleteStoredProcedure(sprocLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sprocLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-389">La vinculación automática del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-389">The self-link of the stored procedure.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-390">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-390">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-391">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-391">The callback for the request.</span></span>
+    content: function deleteStoredProcedure(sprocLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteConflict
+  id: documentdb.DocumentClient#deleteConflict
+  parent: documentdb.DocumentClient
+  name: deleteConflict(conflictLink, options, callback)
+  summary: <span data-ttu-id="c5254-392">Elimine el objeto de conflicto.</span><span class="sxs-lookup"><span data-stu-id="c5254-392">Delete the conflict object.</span></span>
+  fullName: documentdb.DocumentClient.deleteConflict(conflictLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: conflictLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-393">La vinculación automática del conflicto.</span><span class="sxs-lookup"><span data-stu-id="c5254-393">The self-link of the conflict.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-394">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-394">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-395">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-395">The callback for the request.</span></span>
+    content: function deleteConflict(conflictLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceCollection
+  id: documentdb.DocumentClient#replaceCollection
+  parent: documentdb.DocumentClient
+  name: replaceCollection(collectionLink, collection, options, callback)
+  summary: <span data-ttu-id="c5254-396">Reemplazar la colección de documentos.</span><span class="sxs-lookup"><span data-stu-id="c5254-396">Replace the document collection.</span></span>
+  fullName: documentdb.DocumentClient.replaceCollection(collectionLink, collection, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-397">La vinculación automática de la colección de documentos.</span><span class="sxs-lookup"><span data-stu-id="c5254-397">The self-link of the document collection.</span></span>
+    - id: collection
+      type:
+      - object
+      description: <span data-ttu-id="c5254-398">Representa el nuevo cuerpo de la colección de documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-398">Represent the new document collection body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-399">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-399">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-400">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-400">The callback for the request.</span></span>
+    content: function replaceCollection(collectionLink, collection, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceDocument
+  id: documentdb.DocumentClient#replaceDocument
+  parent: documentdb.DocumentClient
+  name: replaceDocument(documentLink, document, options, callback)
+  summary: <span data-ttu-id="c5254-401">Reemplace el objeto de documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-401">Replace the document object.</span></span>
+  fullName: documentdb.DocumentClient.replaceDocument(documentLink, document, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-402">La vinculación automática del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-402">The self-link of the document.</span></span>
+    - id: document
+      type:
+      - object
+      description: <span data-ttu-id="c5254-403">Representa el cuerpo del documento nuevo.</span><span class="sxs-lookup"><span data-stu-id="c5254-403">Represent the new document body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-404">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-404">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-405">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-405">The callback for the request.</span></span>
+    content: function replaceDocument(documentLink, document, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceAttachment
+  id: documentdb.DocumentClient#replaceAttachment
+  parent: documentdb.DocumentClient
+  name: replaceAttachment(attachmentLink, attachment, options, callback)
+  summary: <span data-ttu-id="c5254-406">Reemplace el objeto de datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-406">Replace the attachment object.</span></span>
+  fullName: documentdb.DocumentClient.replaceAttachment(attachmentLink, attachment, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: attachmentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-407">La vinculación automática de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-407">The self-link of the attachment.</span></span>
+    - id: attachment
+      type:
+      - object
+      description: <span data-ttu-id="c5254-408">Representa el nuevo cuerpo de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-408">Represent the new attachment body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-409">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-409">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-410">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-410">The callback for the request.</span></span>
+    content: function replaceAttachment(attachmentLink, attachment, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceUser
+  id: documentdb.DocumentClient#replaceUser
+  parent: documentdb.DocumentClient
+  name: replaceUser(userLink, user, options, callback)
+  summary: <span data-ttu-id="c5254-411">Reemplace el objeto de usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-411">Replace the user object.</span></span>
+  fullName: documentdb.DocumentClient.replaceUser(userLink, user, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-412">La vinculación automática del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-412">The self-link of the user.</span></span>
+    - id: user
+      type:
+      - object
+      description: <span data-ttu-id="c5254-413">Representa el cuerpo de usuario nuevo.</span><span class="sxs-lookup"><span data-stu-id="c5254-413">Represent the new user body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-414">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-414">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-415">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-415">The callback for the request.</span></span>
+    content: function replaceUser(userLink, user, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replacePermission
+  id: documentdb.DocumentClient#replacePermission
+  parent: documentdb.DocumentClient
+  name: replacePermission(permissionLink, permission, options, callback)
+  summary: <span data-ttu-id="c5254-416">Reemplace el objeto de permiso.</span><span class="sxs-lookup"><span data-stu-id="c5254-416">Replace the permission object.</span></span>
+  fullName: documentdb.DocumentClient.replacePermission(permissionLink, permission, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: permissionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-417">La vinculación automática del permiso.</span><span class="sxs-lookup"><span data-stu-id="c5254-417">The self-link of the permission.</span></span>
+    - id: permission
+      type:
+      - object
+      description: <span data-ttu-id="c5254-418">Representa el cuerpo de permiso nuevo.</span><span class="sxs-lookup"><span data-stu-id="c5254-418">Represent the new permission body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-419">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-419">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-420">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-420">The callback for the request.</span></span>
+    content: function replacePermission(permissionLink, permission, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceTrigger
+  id: documentdb.DocumentClient#replaceTrigger
+  parent: documentdb.DocumentClient
+  name: replaceTrigger(triggerLink, trigger, options, callback)
+  summary: <span data-ttu-id="c5254-421">Reemplace el objeto desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-421">Replace the trigger object.</span></span>
+  fullName: documentdb.DocumentClient.replaceTrigger(triggerLink, trigger, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: triggerLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-422">La vinculación automática del desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-422">The self-link of the trigger.</span></span>
+    - id: trigger
+      type:
+      - object
+      description: <span data-ttu-id="c5254-423">Representa el cuerpo del desencadenador nuevo.</span><span class="sxs-lookup"><span data-stu-id="c5254-423">Represent the new trigger body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-424">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-424">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-425">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-425">The callback for the request.</span></span>
+    content: function replaceTrigger(triggerLink, trigger, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceUserDefinedFunction
+  id: documentdb.DocumentClient#replaceUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: replaceUserDefinedFunction(udfLink, udf, options, callback)
+  summary: <span data-ttu-id="c5254-426">Reemplace el objeto UserDefinedFunction.</span><span class="sxs-lookup"><span data-stu-id="c5254-426">Replace the UserDefinedFunction object.</span></span>
+  fullName: documentdb.DocumentClient.replaceUserDefinedFunction(udfLink, udf, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: udfLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-427">Función definida por el Self-link del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-427">The self-link of the user defined function.</span></span>
+    - id: udf
+      type:
+      - object
+      description: <span data-ttu-id="c5254-428">Representa el nuevo cuerpo de la udf.</span><span class="sxs-lookup"><span data-stu-id="c5254-428">Represent the new udf body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-429">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-429">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-430">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-430">The callback for the request.</span></span>
+    content: function replaceUserDefinedFunction(udfLink, udf, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceStoredProcedure
+  id: documentdb.DocumentClient#replaceStoredProcedure
+  parent: documentdb.DocumentClient
+  name: replaceStoredProcedure(sprocLink, sproc, options, callback)
+  summary: <span data-ttu-id="c5254-431">Reemplace el objeto StoredProcedure.</span><span class="sxs-lookup"><span data-stu-id="c5254-431">Replace the StoredProcedure object.</span></span>
+  fullName: documentdb.DocumentClient.replaceStoredProcedure(sprocLink, sproc, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sprocLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-432">La vinculación automática del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-432">The self-link of the stored procedure.</span></span>
+    - id: sproc
+      type:
+      - object
+      description: <span data-ttu-id="c5254-433">Representa el cuerpo del procedimiento almacenado nuevo.</span><span class="sxs-lookup"><span data-stu-id="c5254-433">Represent the new sproc body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-434">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-434">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-435">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-435">The callback for the request.</span></span>
+    content: function replaceStoredProcedure(sprocLink, sproc, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertDocument
+  id: documentdb.DocumentClient#upsertDocument
+  parent: documentdb.DocumentClient
+  name: upsertDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-436">Un documento de Upsert.</span><span class="sxs-lookup"><span data-stu-id="c5254-436">Upsert a document.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-437">No hay ningún esquema de conjunto de documentos JSON.</span><span class="sxs-lookup"><span data-stu-id="c5254-437">There is no set schema for JSON documents.</span></span> <span data-ttu-id="c5254-438">Pueden contener cualquier número de propiedades personalizadas, así como una lista opcional de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-438">They may contain any number of custom properties as well as an optional list of attachments.</span></span> <br>
+
+    <span data-ttu-id="c5254-439">Un documento es un recurso de aplicación y se puede autorizar mediante la clave maestra o claves de recurso</span><span class="sxs-lookup"><span data-stu-id="c5254-439">A Document is an application resource and can be authorized using the master key or resource keys</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.upsertDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentsFeedOrDatabaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-440">Los vínculos de la colección o base de datos si usa a una resolución de partición</span><span class="sxs-lookup"><span data-stu-id="c5254-440">The collection link or database link if using a partition resolver</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="c5254-441">Representa el cuerpo del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-441">Represents the body of the document.</span></span> <span data-ttu-id="c5254-442">Puede contener cualquier número de propiedades definidas por el usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-442">Can contain any number of user defined properties.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-443">El identificador del documento, debe ser único para cada documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-443">The id of the document, MUST be unique for each document.</span></span>
+      optional: true
+    - id: body.ttl
+      type:
+      - number
+      description: <span data-ttu-id="c5254-444">El período de vida en segundos del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-444">The time to live in seconds of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-445">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-445">The request options.</span></span>
+      optional: true
+    - id: options.disableAutomaticIdGeneration
+      type:
+      - boolean
+      description: <span data-ttu-id="c5254-446">Deshabilita la generación automática de identificador.</span><span class="sxs-lookup"><span data-stu-id="c5254-446">Disables the automatic id generation.</span></span> <span data-ttu-id="c5254-447">Si falta el Id. en el cuerpo y esta opción es true, se devolverá un error.</span><span class="sxs-lookup"><span data-stu-id="c5254-447">If id is missing in the body and this option is true, an error will be returned.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-448">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-448">The callback for the request.</span></span>
+    content: function upsertDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertAttachment
+  id: documentdb.DocumentClient#upsertAttachment
+  parent: documentdb.DocumentClient
+  name: upsertAttachment(documentLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-449">Datos adjuntos para el objeto de documento de Upsert.</span><span class="sxs-lookup"><span data-stu-id="c5254-449">Upsert an attachment for the document object.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-450">Cada documento puede contener cero o varios archivos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-450">Each document may contain zero or more attachments.</span></span> <span data-ttu-id="c5254-451">Los datos adjuntos pueden ser de cualquier tipo MIME: texto, imágenes, datos binarios.</span><span class="sxs-lookup"><span data-stu-id="c5254-451">Attachments can be of any MIME type - text, image, binary data.</span></span> <br>
+
+    <span data-ttu-id="c5254-452">Se almacenan externamente en Azure Blob storage.</span><span class="sxs-lookup"><span data-stu-id="c5254-452">These are stored externally in Azure Blob storage.</span></span> <span data-ttu-id="c5254-453">Los datos adjuntos se eliminan automáticamente cuando se elimina el documento primario.</span><span class="sxs-lookup"><span data-stu-id="c5254-453">Attachments are automatically deleted when the parent document is deleted.</span></span>
+
+    </P>
+  fullName: documentdb.DocumentClient.upsertAttachment(documentLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-454">La vinculación automática del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-454">The self-link of the document.</span></span>
+    - id: body
+      type:
+      - Object
+      description: <span data-ttu-id="c5254-455">Los metadatos de la define el medio adjunto como media, contentType.</span><span class="sxs-lookup"><span data-stu-id="c5254-455">The metadata the defines the attachment media like media, contentType.</span></span> <span data-ttu-id="c5254-456">Puede incluir otras propiedades como parte de los metadatos.</span><span class="sxs-lookup"><span data-stu-id="c5254-456">It can include any other properties as part of the metedata.</span></span>
+    - id: body.contentType
+      type:
+      - string
+      description: <span data-ttu-id="c5254-457">El tipo de contenido MIME de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-457">The MIME contentType of the attachment.</span></span>
+    - id: body.media
+      type:
+      - string
+      description: <span data-ttu-id="c5254-458">Vínculo de multimedia asociada con el contenido de los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-458">Media link associated with the attachment content.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-459">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-459">The request options.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-460">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-460">The callback for the request.</span></span>
+    content: function upsertAttachment(documentLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertUser
+  id: documentdb.DocumentClient#upsertUser
+  parent: documentdb.DocumentClient
+  name: upsertUser(databaseLink, body, options, callback)
+  summary: <span data-ttu-id="c5254-461">Un usuario de base de datos de Upsert.</span><span class="sxs-lookup"><span data-stu-id="c5254-461">Upsert a database user.</span></span>
+  fullName: documentdb.DocumentClient.upsertUser(databaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-462">La vinculación automática de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-462">The self-link of the database.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="c5254-463">Representa el cuerpo del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-463">Represents the body of the user.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-464">El identificador del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-464">The id of the user.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-465">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-465">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-466">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-466">The callback for the request.</span></span>
+    content: function upsertUser(databaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertPermission
+  id: documentdb.DocumentClient#upsertPermission
+  parent: documentdb.DocumentClient
+  name: upsertPermission(userLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-467">Un permiso de Upsert.</span><span class="sxs-lookup"><span data-stu-id="c5254-467">Upsert a permission.</span></span>
+
+    <p> <span data-ttu-id="c5254-468">Un permiso representa un permiso de acceso a un recurso específico, por ejemplo, documento o colección por usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-468">A permission represents a per-User Permission to access a specific resource e.g. Document or Collection.</span></span>  </p>
+  fullName: documentdb.DocumentClient.upsertPermission(userLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-469">La vinculación automática del usuario.</span><span class="sxs-lookup"><span data-stu-id="c5254-469">The self-link of the user.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="c5254-470">Representa el cuerpo del permiso.</span><span class="sxs-lookup"><span data-stu-id="c5254-470">Represents the body of the permission.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-471">El identificador del permiso</span><span class="sxs-lookup"><span data-stu-id="c5254-471">The id of the permission</span></span>
+    - id: body.permissionMode
+      type:
+      - string
+      description: <span data-ttu-id="c5254-472">El modo de permiso, debe ser un valor de <xref:documentdb.PermissionMode></span><span class="sxs-lookup"><span data-stu-id="c5254-472">The mode of the permission, must be a value of <xref:documentdb.PermissionMode></span></span>
+    - id: body.resource
+      type:
+      - string
+      description: <span data-ttu-id="c5254-473">El vínculo del recurso al que se aplicará el permiso a.</span><span class="sxs-lookup"><span data-stu-id="c5254-473">The link of the resource that the permission will be applied to.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-474">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-474">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-475">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-475">The callback for the request.</span></span>
+    content: function upsertPermission(userLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertTrigger
+  id: documentdb.DocumentClient#upsertTrigger
+  parent: documentdb.DocumentClient
+  name: upsertTrigger(collectionLink, trigger, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-476">Un desencadenador de Upsert.</span><span class="sxs-lookup"><span data-stu-id="c5254-476">Upsert a trigger.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-477">Azure Cosmos DB admite pre y post los desencadenadores definidos en JavaScript que se ejecuta en crea, actualizaciones y eliminaciones.</span><span class="sxs-lookup"><span data-stu-id="c5254-477">Azure Cosmos DB supports pre and post triggers defined in JavaScript to be executed on creates, updates and deletes.</span></span> <br>
+
+    <span data-ttu-id="c5254-478">Para obtener más información, consulte la documentación de API de JavaScript del lado servidor.</span><span class="sxs-lookup"><span data-stu-id="c5254-478">For additional details, refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.upsertTrigger(collectionLink, trigger, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-479">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-479">The self-link of the collection.</span></span>
+    - id: trigger
+      type:
+      - object
+      description: <span data-ttu-id="c5254-480">Representa el cuerpo del desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-480">Represents the body of the trigger.</span></span>
+    - id: trigger.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-481">El identificador del desencadenador.</span><span class="sxs-lookup"><span data-stu-id="c5254-481">The id of the trigger.</span></span>
+    - id: trigger.triggerType
+      type:
+      - string
+      description: <span data-ttu-id="c5254-482">El tipo del desencadenador, debe ser uno de los valores de <xref:documentdb.TriggerType>.</span><span class="sxs-lookup"><span data-stu-id="c5254-482">The type of the trigger, should be one of the values of <xref:documentdb.TriggerType>.</span></span>
+    - id: trigger.triggerOperation
+      type:
+      - string
+      description: <span data-ttu-id="c5254-483">La operación del desencadenador, debe ser uno de los valores de <xref:documentdb.TriggerOperation>.</span><span class="sxs-lookup"><span data-stu-id="c5254-483">The trigger operation, should be one of the values of <xref:documentdb.TriggerOperation>.</span></span>
+    - id: trigger.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="c5254-484">El cuerpo del desencadenador, se puede pasar como han convertido en cadenas demasiado.</span><span class="sxs-lookup"><span data-stu-id="c5254-484">The body of the trigger, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-485">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-485">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-486">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-486">The callback for the request.</span></span>
+    content: function upsertTrigger(collectionLink, trigger, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertUserDefinedFunction
+  id: documentdb.DocumentClient#upsertUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: upsertUserDefinedFunction(collectionLink, udf, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-487">Upsert UserDefinedFunction.</span><span class="sxs-lookup"><span data-stu-id="c5254-487">Upsert a UserDefinedFunction.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-488">Azure Cosmos DB admite las UDF de JavaScript que se puede usar dentro de las consultas, procedimientos almacenados y desencadenadores.</span><span class="sxs-lookup"><span data-stu-id="c5254-488">Azure Cosmos DB supports JavaScript UDFs which can be used inside queries, stored procedures and triggers.</span></span> <br>
+
+    <span data-ttu-id="c5254-489">Para obtener más información, consulte la documentación de API de JavaScript del lado servidor.</span><span class="sxs-lookup"><span data-stu-id="c5254-489">For additional details, refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.upsertUserDefinedFunction(collectionLink, udf, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-490">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-490">The self-link of the collection.</span></span>
+    - id: udf
+      type:
+      - object
+      description: <span data-ttu-id="c5254-491">Representa el cuerpo de userDefinedFunction.</span><span class="sxs-lookup"><span data-stu-id="c5254-491">Represents the body of the userDefinedFunction.</span></span>
+    - id: udf.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-492">El identificador de la udf.</span><span class="sxs-lookup"><span data-stu-id="c5254-492">The id of the udf.</span></span>
+    - id: udf.userDefinedFunctionType
+      type:
+      - string
+      description: <span data-ttu-id="c5254-493">El tipo de la udf, debe ser uno de los valores de <xref:documentdb.UserDefinedFunctionType></span><span class="sxs-lookup"><span data-stu-id="c5254-493">The type of the udf, it should be one of the values of <xref:documentdb.UserDefinedFunctionType></span></span>
+    - id: udf.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="c5254-494">Representa el cuerpo de la udf, se puede pasar como han convertido en cadenas demasiado.</span><span class="sxs-lookup"><span data-stu-id="c5254-494">Represents the body of the udf, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-495">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-495">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-496">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-496">The callback for the request.</span></span>
+    content: function upsertUserDefinedFunction(collectionLink, udf, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertStoredProcedure
+  id: documentdb.DocumentClient#upsertStoredProcedure
+  parent: documentdb.DocumentClient
+  name: upsertStoredProcedure(collectionLink, sproc, options, callback)
+  summary: >-
+    <span data-ttu-id="c5254-497">Un procedimiento almacenado de Upsert.</span><span class="sxs-lookup"><span data-stu-id="c5254-497">Upsert a StoredProcedure.</span></span>
+
+    <p>
+
+    <span data-ttu-id="c5254-498">Azure Cosmos DB permite que los procedimientos almacenados se ejecuten en la capa de almacenamiento directamente en una colección de documentos.</span><span class="sxs-lookup"><span data-stu-id="c5254-498">Azure Cosmos DB allows stored procedures to be executed in the storage tier, directly against a document collection.</span></span> <span data-ttu-id="c5254-499">La secuencia de comandos</span><span class="sxs-lookup"><span data-stu-id="c5254-499">The script</span></span> <br>
+
+    <span data-ttu-id="c5254-500">se ejecuta en las transacciones ACID en la partición del almacenamiento principal de la colección especificada.</span><span class="sxs-lookup"><span data-stu-id="c5254-500">gets executed under ACID transactions on the primary storage partition of the specified collection.</span></span> <span data-ttu-id="c5254-501">Para obtener más información,</span><span class="sxs-lookup"><span data-stu-id="c5254-501">For additional details,</span></span> <br>
+
+    <span data-ttu-id="c5254-502">Consulte la documentación de API de JavaScript del lado servidor.</span><span class="sxs-lookup"><span data-stu-id="c5254-502">refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.upsertStoredProcedure(collectionLink, sproc, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-503">La vinculación automática de la colección.</span><span class="sxs-lookup"><span data-stu-id="c5254-503">The self-link of the collection.</span></span>
+    - id: sproc
+      type:
+      - object
+      description: <span data-ttu-id="c5254-504">Representa el cuerpo del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-504">Represents the body of the stored procedure.</span></span>
+    - id: sproc.id
+      type:
+      - string
+      description: <span data-ttu-id="c5254-505">El Id. del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-505">The id of the stored procedure.</span></span>
+    - id: sproc.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="c5254-506">El cuerpo del procedimiento almacenado, se puede pasar como han convertido en cadenas demasiado.</span><span class="sxs-lookup"><span data-stu-id="c5254-506">The body of the stored procedure, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="c5254-507">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-507">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-508">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-508">The callback for the request.</span></span>
+    content: function upsertStoredProcedure(collectionLink, sproc, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertAttachmentAndUploadMedia
+  id: documentdb.DocumentClient#upsertAttachmentAndUploadMedia
+  parent: documentdb.DocumentClient
+  name: upsertAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  summary: <span data-ttu-id="c5254-509">Datos adjuntos para el objeto de documento de Upsert.</span><span class="sxs-lookup"><span data-stu-id="c5254-509">Upsert an attachment for the document object.</span></span>
+  fullName: documentdb.DocumentClient.upsertAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-510">La vinculación automática del documento.</span><span class="sxs-lookup"><span data-stu-id="c5254-510">The self-link of the document.</span></span>
+    - id: readableStream
+      type:
+      - documentdb.stream.Readable
+      description: <span data-ttu-id="c5254-511">la secuencia que representa el propio medio que debe cargarse.</span><span class="sxs-lookup"><span data-stu-id="c5254-511">the stream that represents the media itself that needs to be uploaded.</span></span>
+    - id: options
+      type:
+      - documentdb.MediaOptions
+      description: <span data-ttu-id="c5254-512">Las opciones de solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-512">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-513">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-513">The callback for the request.</span></span>
+    content: function upsertAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readMedia
+  id: documentdb.DocumentClient#readMedia
+  parent: documentdb.DocumentClient
+  name: readMedia(mediaLink, callback)
+  summary: <span data-ttu-id="c5254-514">Leer el archivo para el objeto de datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-514">Read the media for the attachment object.</span></span>
+  fullName: documentdb.DocumentClient.readMedia(mediaLink, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-515">El vínculo de multimedia de los medios en los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-515">The media link of the media in the attachment.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-516">La devolución de llamada para la solicitud, el parámetro de resultado puede ser un búfer o una secuencia según el valor de <xref:documentdb.MediaReadMode>.</span><span class="sxs-lookup"><span data-stu-id="c5254-516">The callback for the request, the result parameter can be a buffer or a stream depending on the value of <xref:documentdb.MediaReadMode>.</span></span>
+    content: function readMedia(mediaLink, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#updateMedia
+  id: documentdb.DocumentClient#updateMedia
+  parent: documentdb.DocumentClient
+  name: updateMedia(mediaLink, readableStream, options, callback)
+  summary: <span data-ttu-id="c5254-517">Actualización de media de los datos adjuntos</span><span class="sxs-lookup"><span data-stu-id="c5254-517">Update media for the attachment</span></span>
+  fullName: documentdb.DocumentClient.updateMedia(mediaLink, readableStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-518">El vínculo de multimedia de los medios en los datos adjuntos.</span><span class="sxs-lookup"><span data-stu-id="c5254-518">The media link of the media in the attachment.</span></span>
+    - id: readableStream
+      type:
+      - documentdb.stream.Readable
+      description: <span data-ttu-id="c5254-519">La secuencia que representa el propio medio que debe cargarse.</span><span class="sxs-lookup"><span data-stu-id="c5254-519">The stream that represents the media itself that needs to be uploaded.</span></span>
+    - id: options
+      type:
+      - documentdb.MediaOptions
+      description: <span data-ttu-id="c5254-520">opciones para los medios</span><span class="sxs-lookup"><span data-stu-id="c5254-520">options for the media</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-521">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-521">The callback for the request.</span></span>
+    content: function updateMedia(mediaLink, readableStream, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#executeStoredProcedure
+  id: documentdb.DocumentClient#executeStoredProcedure
+  parent: documentdb.DocumentClient
+  name: executeStoredProcedure(sprocLink, params, options, callback)
+  summary: <span data-ttu-id="c5254-522">Ejecute el procedimiento almacenado representado por el objeto con la clave de partición.</span><span class="sxs-lookup"><span data-stu-id="c5254-522">Execute the StoredProcedure represented by the object with partition key.</span></span>
+  fullName: documentdb.DocumentClient.executeStoredProcedure(sprocLink, params, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sprocLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-523">La vinculación automática del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-523">The self-link of the stored procedure.</span></span>
+    - id: params
+      type:
+      - Array
+      description: <span data-ttu-id="c5254-524">representan los parámetros del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="c5254-524">represent the parameters of the stored procedure.</span></span>
+      optional: true
+    - id: options
+      type:
+      - Object
+      description: <span data-ttu-id="c5254-525">clave de partición</span><span class="sxs-lookup"><span data-stu-id="c5254-525">partition key</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-526">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-526">The callback for the request.</span></span>
+    content: function executeStoredProcedure(sprocLink, params, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceOffer
+  id: documentdb.DocumentClient#replaceOffer
+  parent: documentdb.DocumentClient
+  name: replaceOffer(offerLink, offer, callback)
+  summary: <span data-ttu-id="c5254-527">Reemplace el objeto de la oferta.</span><span class="sxs-lookup"><span data-stu-id="c5254-527">Replace the offer object.</span></span>
+  fullName: documentdb.DocumentClient.replaceOffer(offerLink, offer, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: offerLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-528">La vinculación automática de la oferta.</span><span class="sxs-lookup"><span data-stu-id="c5254-528">The self-link of the offer.</span></span>
+    - id: offer
+      type:
+      - object
+      description: <span data-ttu-id="c5254-529">Representa el cuerpo de la nueva oferta.</span><span class="sxs-lookup"><span data-stu-id="c5254-529">Represent the new offer body.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-530">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-530">The callback for the request.</span></span>
+    content: function replaceOffer(offerLink, offer, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readOffer
+  id: documentdb.DocumentClient#readOffer
+  parent: documentdb.DocumentClient
+  name: readOffer(offerLink, callback)
+  summary: <span data-ttu-id="c5254-531">Lee una oferta.</span><span class="sxs-lookup"><span data-stu-id="c5254-531">Reads an offer.</span></span>
+  fullName: documentdb.DocumentClient.readOffer(offerLink, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: offerLink
+      type:
+      - string
+      description: <span data-ttu-id="c5254-532">La vinculación automática de la oferta.</span><span class="sxs-lookup"><span data-stu-id="c5254-532">The self-link of the offer.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-533">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-533">The callback for the request.</span></span>
+    content: function readOffer(offerLink, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readOffers
+  id: documentdb.DocumentClient#readOffers
+  parent: documentdb.DocumentClient
+  name: readOffers(options)
+  summary: <span data-ttu-id="c5254-534">Enumera todas las ofertas.</span><span class="sxs-lookup"><span data-stu-id="c5254-534">Lists all offers.</span></span>
+  fullName: documentdb.DocumentClient.readOffers(options)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-535">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-535">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-536">Una instancia de queryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-536">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readOffers(options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryOffers
+  id: documentdb.DocumentClient#queryOffers
+  parent: documentdb.DocumentClient
+  name: queryOffers(query, options)
+  summary: <span data-ttu-id="c5254-537">Enumera todas las ofertas que satisfacen una consulta.</span><span class="sxs-lookup"><span data-stu-id="c5254-537">Lists all offers that satisfy a query.</span></span>
+  fullName: documentdb.DocumentClient.queryOffers(query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="c5254-538">Una consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="c5254-538">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="c5254-539">Las opciones de fuente.</span><span class="sxs-lookup"><span data-stu-id="c5254-539">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="c5254-540">Una instancia de QueryIterator para controlar la fuente de lectura.</span><span class="sxs-lookup"><span data-stu-id="c5254-540">An instance of QueryIterator to handle reading feed.</span></span>'
+    content: function queryOffers(query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#getDatabaseAccount
+  id: documentdb.DocumentClient#getDatabaseAccount
+  parent: documentdb.DocumentClient
+  name: getDatabaseAccount(callback)
+  summary: <span data-ttu-id="c5254-541">Obtiene la información de cuenta de base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-541">Gets the Database account information.</span></span>
+  fullName: documentdb.DocumentClient.getDatabaseAccount(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options.urlConnection
+      type:
+      - string
+      description: <span data-ttu-id="c5254-542">La dirección url del extremo es necesario recuperar cuya cuenta de base de datos.</span><span class="sxs-lookup"><span data-stu-id="c5254-542">The endpoint url whose database account needs to be retrieved.</span></span> <span data-ttu-id="c5254-543">Si no se usará la dirección url está presente, actual del cliente.</span><span class="sxs-lookup"><span data-stu-id="c5254-543">If not present, current client's url will be used.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="c5254-544">La devolución de llamada para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="c5254-544">The callback for the request.</span></span> <span data-ttu-id="c5254-545">El segundo parámetro de devolución de llamada será de tipo <xref:documentdb.DatabaseAccount>.</span><span class="sxs-lookup"><span data-stu-id="c5254-545">The second parameter of the callback will be of type <xref:documentdb.DatabaseAccount>.</span></span>
+    content: function getDatabaseAccount(callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#getSessionToken
+  id: documentdb.DocumentClient#getSessionToken
+  parent: documentdb.DocumentClient
+  name: getSessionToken(collectionLink)
+  summary: <span data-ttu-id="c5254-546">Obtiene el SessionToken para un determinado collectionLink</span><span class="sxs-lookup"><span data-stu-id="c5254-546">Gets the SessionToken for a given collectionLink</span></span>
+  fullName: documentdb.DocumentClient.getSessionToken(collectionLink)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      description: <span data-ttu-id="c5254-547">El vínculo de la colección para el que se necesita el token de sesión</span><span class="sxs-lookup"><span data-stu-id="c5254-547">The link of the collection for which the session token is needed</span></span>
+    content: function getSessionToken(collectionLink)
+  langs:
+  - js
+references:
+- uid: documentdb.QueryIterator
+  name: QueryIterator
+  fullName: documentdb.QueryIterator
+  isExternal: false

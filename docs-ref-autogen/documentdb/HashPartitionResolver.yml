@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 76b5fc35171b1f148eb1e97caafb1901c5a2bc43
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071903"
+items:
+- uid: documentdb.HashPartitionResolver
+  id: documentdb.HashPartitionResolver
+  name: HashPartitionResolver
+  summary: <span data-ttu-id="ae294-101">HashPartitionResolver implementa la creación de particiones en función del valor de una función hash, lo que le permite distribuir uniformemente las solicitudes y datos en un número de particiones para el servicio de base de datos de Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="ae294-101">HashPartitionResolver implements partitioning based on the value of a hash function, allowing you to evenly distribute requests and data across a number of partitions for the Azure Cosmos DB database service.</span></span>
+  fullName: documentdb.HashPartitionResolver
+  type: Class
+  children:
+  - documentdb.HashPartitionResolver.#ctor
+  - documentdb.HashPartitionResolver#getPartitionKey
+  - documentdb.HashPartitionResolver#resolveForRead
+  - documentdb.HashPartitionResolver#resolveForCreate
+  langs:
+  - js
+- id: documentdb.HashPartitionResolver.#ctor
+  uid: documentdb.HashPartitionResolver.#ctor
+  parent: documentdb.HashPartitionResolver
+  name: HashPartitionResolver(partitionKeyExtractor)
+  fullName: documentdb.HashPartitionResolver.HashPartitionResolver(partitionKeyExtractor)
+  summary: <span data-ttu-id="ae294-102">HashPartitionResolver implementa la creación de particiones en función del valor de una función hash, lo que le permite distribuir uniformemente las solicitudes y datos en un número de particiones para el servicio de base de datos de Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="ae294-102">HashPartitionResolver implements partitioning based on the value of a hash function, allowing you to evenly distribute requests and data across a number of partitions for the Azure Cosmos DB database service.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: partitionKeyExtractor
+      type:
+      - string
+      - function
+      description: >-
+        <span data-ttu-id="ae294-103">Si partitionKeyExtractor es una cadena, debe ser el nombre de la propiedad en el documento que se va a ejecutar el hash en.</span><span class="sxs-lookup"><span data-stu-id="ae294-103">If partitionKeyExtractor is a string, it should be the name of the property in the document to execute the hashing on.</span></span>
+
+        <span data-ttu-id="ae294-104">Si partitionKeyExtractor es una función, debe ser una función para extraer la clave de partición de un objeto.</span><span class="sxs-lookup"><span data-stu-id="ae294-104">If partitionKeyExtractor is a function, it should be a function to extract the partition key from an object.</span></span>
+    content: new HashPartitionResolver(partitionKeyExtractor)
+  langs:
+  - js
+- uid: documentdb.HashPartitionResolver#getPartitionKey
+  id: documentdb.HashPartitionResolver#getPartitionKey
+  parent: documentdb.HashPartitionResolver
+  name: getPartitionKey(document)
+  summary: <span data-ttu-id="ae294-105">Extrae la clave de partición del documento especificado utilizando el partitionKeyExtractor</span><span class="sxs-lookup"><span data-stu-id="ae294-105">Extracts the partition key from the specified document using the partitionKeyExtractor</span></span>
+  fullName: documentdb.HashPartitionResolver.getPartitionKey(document)
+  type: Function
+  syntax:
+    parameters:
+    - id: document
+      type:
+      - object
+      description: <span data-ttu-id="ae294-106">El documento del que extraer la clave de partición.</span><span class="sxs-lookup"><span data-stu-id="ae294-106">The document from which to extract the partition key.</span></span>
+    return:
+      type:
+      - object
+      description: ''
+    content: function getPartitionKey(document)
+  langs:
+  - js
+- uid: documentdb.HashPartitionResolver#resolveForRead
+  id: documentdb.HashPartitionResolver#resolveForRead
+  parent: documentdb.HashPartitionResolver
+  name: resolveForRead(partitionKey)
+  summary: <span data-ttu-id="ae294-107">Dada una clave de partición, devuelve una lista de vínculos de la colección para leer desde.</span><span class="sxs-lookup"><span data-stu-id="ae294-107">Given a partition key, returns a list of collection links to read from.</span></span>
+  fullName: documentdb.HashPartitionResolver.resolveForRead(partitionKey)
+  type: Function
+  syntax:
+    parameters:
+    - id: partitionKey
+      type:
+      - documentdb.any
+      description: <span data-ttu-id="ae294-108">La clave de partición que se usa para determinar la recopilación de destino para la consulta</span><span class="sxs-lookup"><span data-stu-id="ae294-108">The partition key used to determine the target collection for query</span></span>
+    content: function resolveForRead(partitionKey)
+  langs:
+  - js
+- uid: documentdb.HashPartitionResolver#resolveForCreate
+  id: documentdb.HashPartitionResolver#resolveForCreate
+  parent: documentdb.HashPartitionResolver
+  name: resolveForCreate(partitionKey)
+  summary: <span data-ttu-id="ae294-109">Dada una clave, devuelve de partición el vínculo de colección correcto para la creación de un documento.</span><span class="sxs-lookup"><span data-stu-id="ae294-109">Given a partition key, returns the correct collection link for creating a document.</span></span>
+  fullName: documentdb.HashPartitionResolver.resolveForCreate(partitionKey)
+  type: Function
+  syntax:
+    parameters:
+    - id: partitionKey
+      type:
+      - documentdb.any
+      description: <span data-ttu-id="ae294-110">La clave de partición que se usa para determinar la recopilación de destino para crear</span><span class="sxs-lookup"><span data-stu-id="ae294-110">The partition key used to determine the target collection for create</span></span>
+    return:
+      type:
+      - string
+      description: '- <span data-ttu-id="ae294-111">El vínculo de la colección de destino que se usará para la creación de documentos.</span><span class="sxs-lookup"><span data-stu-id="ae294-111">The target collection link that will be used for document creation.</span></span>'
+    content: function resolveForCreate(partitionKey)
+  langs:
+  - js

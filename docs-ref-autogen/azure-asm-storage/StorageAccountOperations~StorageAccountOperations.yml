@@ -1,0 +1,533 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 205aa019bf97d2699ccdd3695309082a90514a54
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071757"
+items:
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: StorageAccountOperations
+  summary: >-
+    <span data-ttu-id="03ae5-101">La API de administración de servicios incluye operaciones para administrar las cuentas de almacenamiento bajo la suscripción.</span><span class="sxs-lookup"><span data-stu-id="03ae5-101">The Service Management API includes operations for managing the storage accounts beneath your subscription.</span></span>  <span data-ttu-id="03ae5-102">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx para obtener más información) __Nota__: se crea automáticamente una instancia de esta clase para una instancia de la [StorageManagementClient] {@link StorageManagementClient ~ StorageManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="03ae5-102">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx for more information) __NOTE__: An instance of this class is automatically created for an instance of the [StorageManagementClient] {@link StorageManagementClient~StorageManagementClient}.</span></span>
+
+    <span data-ttu-id="03ae5-103">Consulte [storageAccounts] {@link StorageManagementClient ~ StorageManagementClient #storageAccounts}.</span><span class="sxs-lookup"><span data-stu-id="03ae5-103">See [storageAccounts] {@link StorageManagementClient~StorageManagementClient#storageAccounts}.</span></span>
+
+    <span data-ttu-id="03ae5-104">Inicializa una nueva instancia de la clase StorageAccountOperations.</span><span class="sxs-lookup"><span data-stu-id="03ae5-104">Initializes a new instance of the StorageAccountOperations class.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations
+  type: Class
+  children:
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  langs:
+  - js
+- id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: StorageAccountOperations(client)
+  fullName: azure-asm-storage.StorageAccountOperations.StorageAccountOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedStorageManagementClient
+      description: <span data-ttu-id="03ae5-105">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="03ae5-105">Reference to the service client.</span></span>
+    content: new StorageAccountOperations(client)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: abortMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="03ae5-106">Anular la migración de cuenta de almacenamiento api valida y anula la cuenta de almacenamiento especificada para la IaaS clásica a la migración de ARM.</span><span class="sxs-lookup"><span data-stu-id="03ae5-106">Abort storage account migration api validates and aborts the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.abortMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-107">Nombre de cuenta de almacenamiento que desea migrar.</span><span class="sxs-lookup"><span data-stu-id="03ae5-107">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-108">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-108">The response stream.</span></span>
+    content: function abortMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginAbortMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="03ae5-109">Anular la migración de cuenta de almacenamiento api valida y anula la cuenta de almacenamiento especificada para la IaaS clásica a la migración de ARM.</span><span class="sxs-lookup"><span data-stu-id="03ae5-109">Abort storage account migration api validates and aborts the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginAbortMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-110">Nombre de cuenta de almacenamiento que desea migrar.</span><span class="sxs-lookup"><span data-stu-id="03ae5-110">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-111">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-111">The response stream.</span></span>
+    content: function beginAbortMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginCommitMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="03ae5-112">Confirmar migración de cuentas de almacenamiento api valida y confirma la cuenta de almacenamiento especificada para la IaaS clásica a la migración de ARM.</span><span class="sxs-lookup"><span data-stu-id="03ae5-112">Commit storage account migration api validates and commits the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginCommitMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-113">Nombre de cuenta de almacenamiento que desea migrar.</span><span class="sxs-lookup"><span data-stu-id="03ae5-113">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-114">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-114">The response stream.</span></span>
+    content: function beginCommitMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginCreating(parameters, callback)
+  summary: <span data-ttu-id="03ae5-115">La operación comenzar creando cuenta de almacenamiento, crea una nueva cuenta de almacenamiento en Azure.</span><span class="sxs-lookup"><span data-stu-id="03ae5-115">The Begin Creating Storage Account operation creates a new storage account in Azure.</span></span>  <span data-ttu-id="03ae5-116">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="03ae5-116">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountCreateParameters
+      description: <span data-ttu-id="03ae5-117">Parámetros proporcionados a la operación comenzar creando cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-117">Parameters supplied to the Begin Creating Storage Account operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: '<span data-ttu-id="03ae5-118">Un nombre para la cuenta de almacenamiento, que es único dentro de Azure.</span><span class="sxs-lookup"><span data-stu-id="03ae5-118">A name for the storage account, unique within Azure.</span></span> <span data-ttu-id="03ae5-119">Los nombres de cuenta de almacenamiento deben tener entre 3 y 24 caracteres de longitud y deben usar números y letras minúsculas solamente.</span><span class="sxs-lookup"><span data-stu-id="03ae5-119">Storage account names must be between 3 and 24 characters in length, and must use numbers and lower-case letters only.</span></span> <span data-ttu-id="03ae5-120">Este nombre es el nombre del prefijo DNS y se puede usar para tener acceso a blobs, colas y tablas de la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-120">This name is the DNS prefix name and can be used to access blobs, queues, and tables in the storage account.</span></span> <span data-ttu-id="03ae5-121">Por ejemplo: http://ServiceName.blob.core.windows.net/mycontainer/.</span><span class="sxs-lookup"><span data-stu-id="03ae5-121">For example: http://ServiceName.blob.core.windows.net/mycontainer/.</span></span>'
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-122">Una descripción para la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-122">A description for the storage account.</span></span> <span data-ttu-id="03ae5-123">La descripción puede tener hasta 1024 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="03ae5-123">The description may be up to 1024 characters in length.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-124">Un nombre para la cuenta de almacenamiento especificado como cadena codificada en abase64.</span><span class="sxs-lookup"><span data-stu-id="03ae5-124">A name for the storage account, specified as abase64-encoded string.</span></span> <span data-ttu-id="03ae5-125">El nombre puede ser de hasta 100 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="03ae5-125">The name may be up to 100 characters in length.</span></span> <span data-ttu-id="03ae5-126">Se puede usar el nombre de identificar la cuenta de almacenamiento para fines de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-126">The name can be used identify the storage account for your tracking purposes.</span></span>
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-127">El nombre de un grupo de afinidad existente en la suscripción especificada.</span><span class="sxs-lookup"><span data-stu-id="03ae5-127">The name of an existing affinity group in the specified subscription.</span></span> <span data-ttu-id="03ae5-128">Requerido si no se especifica la ubicación.</span><span class="sxs-lookup"><span data-stu-id="03ae5-128">Required if Location is not specified.</span></span> <span data-ttu-id="03ae5-129">Puede incluir el elemento de una ubicación o el grupo en el cuerpo de solicitud, pero no ambos.</span><span class="sxs-lookup"><span data-stu-id="03ae5-129">You can include either a Location or AffinityGroup element in the request body, but not both.</span></span> <span data-ttu-id="03ae5-130">Para obtener una lista de grupos de afinidad disponibles, utilice la operación enumerar grupos de afinidad.</span><span class="sxs-lookup"><span data-stu-id="03ae5-130">To list available affinity groups, use the List Affinity Groups operation.</span></span>
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-131">La ubicación donde se crea la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-131">The location where the storage account is created.</span></span> <span data-ttu-id="03ae5-132">Obligatorio si no se especifica AffinityGroup.</span><span class="sxs-lookup"><span data-stu-id="03ae5-132">Required if AffinityGroup is not specified.</span></span> <span data-ttu-id="03ae5-133">Puede incluir el elemento de una ubicación o el grupo en el cuerpo de solicitud, pero no ambos.</span><span class="sxs-lookup"><span data-stu-id="03ae5-133">You can include either a Location or AffinityGroup element in the request body, but not both.</span></span> <span data-ttu-id="03ae5-134">Para enumerar las ubicaciones disponibles, use la operación de ubicaciones de la lista.</span><span class="sxs-lookup"><span data-stu-id="03ae5-134">To list available locations, use the List Locations operation.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="03ae5-135">Representa el nombre de una propiedad de la cuenta de almacenamiento extendida.</span><span class="sxs-lookup"><span data-stu-id="03ae5-135">Represents the name of an extended storage account property.</span></span> <span data-ttu-id="03ae5-136">Cada propiedad extendida debe tener un nombre definido y un valor.</span><span class="sxs-lookup"><span data-stu-id="03ae5-136">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="03ae5-137">Puede tener un máximo de 50 propiedades extendidas de pares nombre/valor.</span><span class="sxs-lookup"><span data-stu-id="03ae5-137">You can have a maximum of 50 extended property name/value pairs.</span></span> <span data-ttu-id="03ae5-138">La longitud máxima del elemento Name es de 64 caracteres, solo caracteres alfanuméricos y caracteres de subrayado son válidos en el nombre y el nombre debe empezar por una letra.</span><span class="sxs-lookup"><span data-stu-id="03ae5-138">The maximum length of the Name element is 64 characters, only alphanumeric characters and underscores are valid in the Name, and the name must start with a letter.</span></span> <span data-ttu-id="03ae5-139">Intentar utilizar otros caracteres, empezando el nombre con un carácter no alfanumérico o escribir un nombre idéntico de otra propiedad extendida propiedad de la misma cuenta de almacenamiento dará como resultado en un estado código (error 400 Solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="03ae5-139">Attempting to use other characters, starting the Name with a non-letter character, or entering a name that is identical to that of another extended property owned by the same storage account will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="03ae5-140">Cada valor de propiedad extendido tiene una longitud máxima de 255 caracteres.</span><span class="sxs-lookup"><span data-stu-id="03ae5-140">Each extended property value has a maximum length of 255 characters.</span></span>
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "<span data-ttu-id=\"03ae5-141\">Especifica si la cuenta admite almacenamiento con redundancia local, almacenamiento con redundancia geográfica, almacenamiento con redundancia de zona o almacenamiento con redundancia geográfica de acceso de lectura.</span><span class=\"sxs-lookup\"><span data-stu-id=\"03ae5-141\">Specifies whether the account supports locally-redundant storage, geo-redundant storage, zone-redundant storage, or read access geo-redundant storage.</span></span> <span data-ttu-id=\"03ae5-142\">Los valores posibles son: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS' y 'Standard_RAGRS'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"03ae5-142\">Possible values are:'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', and 'Standard_RAGRS'.</span></span>"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-143">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-143">The response stream.</span></span>
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginPrepareMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="03ae5-144">Preparar la cuenta de almacenamiento de migración de api se valida y prepara la cuenta de almacenamiento especificada para la IaaS clásica a la migración de ARM.</span><span class="sxs-lookup"><span data-stu-id="03ae5-144">Prepare storage account migration api validates and prepares the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginPrepareMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-145">Nombre de cuenta de almacenamiento que desea migrar.</span><span class="sxs-lookup"><span data-stu-id="03ae5-145">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-146">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-146">The response stream.</span></span>
+    content: function beginPrepareMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: checkNameAvailability(accountName, callback)
+  summary: <span data-ttu-id="03ae5-147">La operación Comprobar disponibilidad del nombre comprueba si un nombre de cuenta de almacenamiento está disponible para su uso en Azure.</span><span class="sxs-lookup"><span data-stu-id="03ae5-147">The Check Name Availability operation checks if a storage account name is available for use in Azure.</span></span>  <span data-ttu-id="03ae5-148">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="03ae5-148">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.checkNameAvailability(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-149">El nombre de la cuenta de almacenamiento deseada para comprobar la disponibilidad.</span><span class="sxs-lookup"><span data-stu-id="03ae5-149">The desired storage account name to check for availability.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-150">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-150">The response stream.</span></span>
+    content: function checkNameAvailability(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: commitMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="03ae5-151">Confirmar migración de cuentas de almacenamiento api valida y confirma la cuenta de almacenamiento especificada para la IaaS clásica a la migración de ARM.</span><span class="sxs-lookup"><span data-stu-id="03ae5-151">Commit storage account migration api validates and commits the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.commitMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-152">Nombre de cuenta de almacenamiento que desea migrar.</span><span class="sxs-lookup"><span data-stu-id="03ae5-152">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-153">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-153">The response stream.</span></span>
+    content: function commitMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: create(parameters, callback)
+  summary: <span data-ttu-id="03ae5-154">La operación crear cuenta de almacenamiento, crea una nueva cuenta de almacenamiento en Azure.</span><span class="sxs-lookup"><span data-stu-id="03ae5-154">The Create Storage Account operation creates a new storage account in Azure.</span></span>  <span data-ttu-id="03ae5-155">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="03ae5-155">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountCreateParameters
+      description: <span data-ttu-id="03ae5-156">Parámetros proporcionados a la operación crear cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-156">Parameters supplied to the Create Storage Account operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: '<span data-ttu-id="03ae5-157">Un nombre para la cuenta de almacenamiento, que es único dentro de Azure.</span><span class="sxs-lookup"><span data-stu-id="03ae5-157">A name for the storage account, unique within Azure.</span></span> <span data-ttu-id="03ae5-158">Los nombres de cuenta de almacenamiento deben tener entre 3 y 24 caracteres de longitud y deben usar números y letras minúsculas solamente.</span><span class="sxs-lookup"><span data-stu-id="03ae5-158">Storage account names must be between 3 and 24 characters in length, and must use numbers and lower-case letters only.</span></span> <span data-ttu-id="03ae5-159">Este nombre es el nombre del prefijo DNS y se puede usar para tener acceso a blobs, colas y tablas de la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-159">This name is the DNS prefix name and can be used to access blobs, queues, and tables in the storage account.</span></span> <span data-ttu-id="03ae5-160">Por ejemplo: http://ServiceName.blob.core.windows.net/mycontainer/.</span><span class="sxs-lookup"><span data-stu-id="03ae5-160">For example: http://ServiceName.blob.core.windows.net/mycontainer/.</span></span>'
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-161">Una descripción para la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-161">A description for the storage account.</span></span> <span data-ttu-id="03ae5-162">La descripción puede tener hasta 1024 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="03ae5-162">The description may be up to 1024 characters in length.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-163">Un nombre para la cuenta de almacenamiento especificado como cadena codificada en abase64.</span><span class="sxs-lookup"><span data-stu-id="03ae5-163">A name for the storage account, specified as abase64-encoded string.</span></span> <span data-ttu-id="03ae5-164">El nombre puede ser de hasta 100 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="03ae5-164">The name may be up to 100 characters in length.</span></span> <span data-ttu-id="03ae5-165">Se puede usar el nombre de identificar la cuenta de almacenamiento para fines de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-165">The name can be used identify the storage account for your tracking purposes.</span></span>
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-166">El nombre de un grupo de afinidad existente en la suscripción especificada.</span><span class="sxs-lookup"><span data-stu-id="03ae5-166">The name of an existing affinity group in the specified subscription.</span></span> <span data-ttu-id="03ae5-167">Requerido si no se especifica la ubicación.</span><span class="sxs-lookup"><span data-stu-id="03ae5-167">Required if Location is not specified.</span></span> <span data-ttu-id="03ae5-168">Puede incluir el elemento de una ubicación o el grupo en el cuerpo de solicitud, pero no ambos.</span><span class="sxs-lookup"><span data-stu-id="03ae5-168">You can include either a Location or AffinityGroup element in the request body, but not both.</span></span> <span data-ttu-id="03ae5-169">Para obtener una lista de grupos de afinidad disponibles, utilice la operación enumerar grupos de afinidad.</span><span class="sxs-lookup"><span data-stu-id="03ae5-169">To list available affinity groups, use the List Affinity Groups operation.</span></span>
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-170">La ubicación donde se crea la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-170">The location where the storage account is created.</span></span> <span data-ttu-id="03ae5-171">Obligatorio si no se especifica AffinityGroup.</span><span class="sxs-lookup"><span data-stu-id="03ae5-171">Required if AffinityGroup is not specified.</span></span> <span data-ttu-id="03ae5-172">Puede incluir el elemento de una ubicación o el grupo en el cuerpo de solicitud, pero no ambos.</span><span class="sxs-lookup"><span data-stu-id="03ae5-172">You can include either a Location or AffinityGroup element in the request body, but not both.</span></span> <span data-ttu-id="03ae5-173">Para enumerar las ubicaciones disponibles, use la operación de ubicaciones de la lista.</span><span class="sxs-lookup"><span data-stu-id="03ae5-173">To list available locations, use the List Locations operation.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="03ae5-174">Representa el nombre de una propiedad de la cuenta de almacenamiento extendida.</span><span class="sxs-lookup"><span data-stu-id="03ae5-174">Represents the name of an extended storage account property.</span></span> <span data-ttu-id="03ae5-175">Cada propiedad extendida debe tener un nombre definido y un valor.</span><span class="sxs-lookup"><span data-stu-id="03ae5-175">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="03ae5-176">Puede tener un máximo de 50 propiedades extendidas de pares nombre/valor.</span><span class="sxs-lookup"><span data-stu-id="03ae5-176">You can have a maximum of 50 extended property name/value pairs.</span></span> <span data-ttu-id="03ae5-177">La longitud máxima del elemento Name es de 64 caracteres, solo caracteres alfanuméricos y caracteres de subrayado son válidos en el nombre y el nombre debe empezar por una letra.</span><span class="sxs-lookup"><span data-stu-id="03ae5-177">The maximum length of the Name element is 64 characters, only alphanumeric characters and underscores are valid in the Name, and the name must start with a letter.</span></span> <span data-ttu-id="03ae5-178">Intentar utilizar otros caracteres, empezando el nombre con un carácter no alfanumérico o escribir un nombre idéntico de otra propiedad extendida propiedad de la misma cuenta de almacenamiento dará como resultado en un estado código (error 400 Solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="03ae5-178">Attempting to use other characters, starting the Name with a non-letter character, or entering a name that is identical to that of another extended property owned by the same storage account will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="03ae5-179">Cada valor de propiedad extendido tiene una longitud máxima de 255 caracteres.</span><span class="sxs-lookup"><span data-stu-id="03ae5-179">Each extended property value has a maximum length of 255 characters.</span></span>
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "<span data-ttu-id=\"03ae5-180\">Especifica si la cuenta admite almacenamiento con redundancia local, almacenamiento con redundancia geográfica, almacenamiento con redundancia de zona o almacenamiento con redundancia geográfica de acceso de lectura.</span><span class=\"sxs-lookup\"><span data-stu-id=\"03ae5-180\">Specifies whether the account supports locally-redundant storage, geo-redundant storage, zone-redundant storage, or read access geo-redundant storage.</span></span> <span data-ttu-id=\"03ae5-181\">Los valores posibles son: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS' y 'Standard_RAGRS'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"03ae5-181\">Possible values are:'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', and 'Standard_RAGRS'.</span></span>"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-182">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-182">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: deleteMethod(accountName, callback)
+  summary: <span data-ttu-id="03ae5-183">La operación Eliminar cuenta de almacenamiento, elimina la cuenta de almacenamiento especificada de Azure.</span><span class="sxs-lookup"><span data-stu-id="03ae5-183">The Delete Storage Account operation deletes the specified storage account from Azure.</span></span>  <span data-ttu-id="03ae5-184">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="03ae5-184">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.deleteMethod(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-185">El nombre de la cuenta de almacenamiento que se puede eliminar.</span><span class="sxs-lookup"><span data-stu-id="03ae5-185">The name of the storage account to be deleted.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-186">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-186">The response stream.</span></span>
+    content: function deleteMethod(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: get(accountName, callback)
+  summary: <span data-ttu-id="03ae5-187">La operación Get Storage Account Properties devuelve las propiedades del sistema para la cuenta de almacenamiento especificada.</span><span class="sxs-lookup"><span data-stu-id="03ae5-187">The Get Storage Account Properties operation returns system properties for the specified storage account.</span></span>  <span data-ttu-id="03ae5-188">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="03ae5-188">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.get(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-189">Nombre de la cuenta de almacenamiento a obtener propiedades.</span><span class="sxs-lookup"><span data-stu-id="03ae5-189">Name of the storage account to get properties for.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-190">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-190">The response stream.</span></span>
+    content: function get(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: getKeys(accountName, callback)
+  summary: <span data-ttu-id="03ae5-191">La operación obtener claves de almacenamiento devuelve las claves de acceso principal y secundaria para la cuenta de almacenamiento especificada.</span><span class="sxs-lookup"><span data-stu-id="03ae5-191">The Get Storage Keys operation returns the primary and secondary access keys for the specified storage account.</span></span>  <span data-ttu-id="03ae5-192">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="03ae5-192">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.getKeys(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-193">El nombre de la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-193">The name of the desired storage account.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-194">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-194">The response stream.</span></span>
+    content: function getKeys(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: list(callback)
+  summary: <span data-ttu-id="03ae5-195">La operación enumerar cuentas de almacenamiento enumera las cuentas de almacenamiento disponibles bajo la suscripción actual.</span><span class="sxs-lookup"><span data-stu-id="03ae5-195">The List Storage Accounts operation lists the storage accounts available under the current subscription.</span></span>  <span data-ttu-id="03ae5-196">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="03ae5-196">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-197">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-197">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: prepareMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="03ae5-198">Preparar la cuenta de almacenamiento de migración de api se valida y prepara la cuenta de almacenamiento especificada para la IaaS clásica a la migración de ARM.</span><span class="sxs-lookup"><span data-stu-id="03ae5-198">Prepare storage account migration api validates and prepares the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.prepareMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-199">Nombre de cuenta de almacenamiento que desea migrar.</span><span class="sxs-lookup"><span data-stu-id="03ae5-199">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-200">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-200">The response stream.</span></span>
+    content: function prepareMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: regenerateKeys(parameters, callback)
+  summary: <span data-ttu-id="03ae5-201">La operación de volver a generar las claves regenera la clave de acceso principal o secundaria para la cuenta de almacenamiento especificada.</span><span class="sxs-lookup"><span data-stu-id="03ae5-201">The Regenerate Keys operation regenerates the primary or secondary access key for the specified storage account.</span></span>  <span data-ttu-id="03ae5-202">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="03ae5-202">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.regenerateKeys(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountRegenerateKeysParameters
+      description: <span data-ttu-id="03ae5-203">Parámetros proporcionados a la operación de volver a generar las claves.</span><span class="sxs-lookup"><span data-stu-id="03ae5-203">Parameters supplied to the Regenerate Keys operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-204">El nombre de la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-204">The name of the desired storage account.</span></span>
+    - id: parameters.keyType
+      type:
+      - azure-asm-storage.StorageKeyType
+      description: <span data-ttu-id="03ae5-205">Especifica la clave que desea volver a generar.</span><span class="sxs-lookup"><span data-stu-id="03ae5-205">Specifies which key to regenerate.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-206">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-206">The response stream.</span></span>
+    content: function regenerateKeys(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: update(accountName, parameters, callback)
+  summary: <span data-ttu-id="03ae5-207">La operación de la cuenta de almacenamiento de información de actualización actualiza la etiqueta y la descripción y habilita o deshabilita el estado de replicación geográfica para una cuenta de almacenamiento de Azure.</span><span class="sxs-lookup"><span data-stu-id="03ae5-207">The Update Storage Account operation updates the label and the description, and enables or disables the geo-replication status for a storage account in Azure.</span></span>  <span data-ttu-id="03ae5-208">(consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx para obtener más información)</span><span class="sxs-lookup"><span data-stu-id="03ae5-208">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.update(accountName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-209">Nombre de la cuenta de almacenamiento para la actualización.</span><span class="sxs-lookup"><span data-stu-id="03ae5-209">Name of the storage account to update.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountUpdateParameters
+      description: <span data-ttu-id="03ae5-210">Parámetros proporcionados a la operación de actualizar la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-210">Parameters supplied to the Update Storage Account operation.</span></span>
+    - id: parameters.description
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-211">Un nombre para la cuenta de almacenamiento, con codificación base64.</span><span class="sxs-lookup"><span data-stu-id="03ae5-211">A name for the storage account, base64-encoded.</span></span> <span data-ttu-id="03ae5-212">El nombre puede ser de hasta 100 caracteres de longitud.</span><span class="sxs-lookup"><span data-stu-id="03ae5-212">The name may be up to 100 characters in length.</span></span> <span data-ttu-id="03ae5-213">Se puede usar el nombre de identificar la cuenta de almacenamiento para fines de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="03ae5-213">The name can be used identify the storage account for your tracking purposes.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="03ae5-214">Representa el nombre de una propiedad de la cuenta de almacenamiento extendida.</span><span class="sxs-lookup"><span data-stu-id="03ae5-214">Represents the name of an extended storage account property.</span></span> <span data-ttu-id="03ae5-215">Cada propiedad extendida debe tener un nombre definido y un valor.</span><span class="sxs-lookup"><span data-stu-id="03ae5-215">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="03ae5-216">Puede tener un máximo de 50 propiedades extendidas de pares nombre/valor.</span><span class="sxs-lookup"><span data-stu-id="03ae5-216">You can have a maximum of 50 extended property name/value pairs.</span></span> <span data-ttu-id="03ae5-217">La longitud máxima del elemento Name es de 64 caracteres, solo caracteres alfanuméricos y caracteres de subrayado son válidos en el nombre y el nombre debe empezar por una letra.</span><span class="sxs-lookup"><span data-stu-id="03ae5-217">The maximum length of the Name element is 64 characters, only alphanumeric characters and underscores are valid in the Name, and the name must start with a letter.</span></span> <span data-ttu-id="03ae5-218">Intentar utilizar otros caracteres, empezando el nombre con un carácter no alfanumérico o escribir un nombre idéntico de otra propiedad extendida propiedad de la misma cuenta de almacenamiento dará como resultado en un estado código (error 400 Solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="03ae5-218">Attempting to use other characters, starting the Name with a non-letter character, or entering a name that is identical to that of another extended property owned by the same storage account will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="03ae5-219">Cada valor de propiedad extendido tiene una longitud máxima de 255 caracteres.</span><span class="sxs-lookup"><span data-stu-id="03ae5-219">Each extended property value has a maximum length of 255 characters.</span></span> <span data-ttu-id="03ae5-220">Puede eliminar una propiedad extendida estableciendo el valor NULL.</span><span class="sxs-lookup"><span data-stu-id="03ae5-220">You can delete an extended property by setting the value to NULL.</span></span>
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "<span data-ttu-id=\"03ae5-221\">Especifica si la cuenta admite almacenamiento con redundancia local, almacenamiento con redundancia geográfica, almacenamiento con redundancia de zona o almacenamiento con redundancia geográfica de acceso de lectura.</span><span class=\"sxs-lookup\"><span data-stu-id=\"03ae5-221\">Specifies whether the account supports locally-redundant storage, geo-redundant storage, zone-redundant storage, or read access geo-redundant storage.</span></span> <span data-ttu-id=\"03ae5-222\">Los valores posibles son: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS' y 'Standard_RAGRS'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"03ae5-222\">Possible values are:'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', and 'Standard_RAGRS'.</span></span>"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-223">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-223">The response stream.</span></span>
+    content: function update(accountName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: validateMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="03ae5-224">Validar migración de cuentas de almacenamiento api valida la cuenta de almacenamiento especificada para la IaaS clásica a la migración de ARM.</span><span class="sxs-lookup"><span data-stu-id="03ae5-224">Validate storage account migration api validates the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.validateMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="03ae5-225">Nombre de cuenta de almacenamiento que desea migrar.</span><span class="sxs-lookup"><span data-stu-id="03ae5-225">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="03ae5-226">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="03ae5-226">The response stream.</span></span>
+    content: function validateMigration(storageAccountName, callback)
+  langs:
+  - js

@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bf6aedf3528cf423db94b2360bafd8ed15b181d3
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071741"
+items:
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: RecoverableDatabaseOperations
+  summary: >-
+    <span data-ttu-id="aeabb-101">Contiene operaciones para obtener las bases de datos de SQL de Azure que se pueden recuperar.</span><span class="sxs-lookup"><span data-stu-id="aeabb-101">Contains operations for getting Azure SQL Databases that can be recovered.</span></span>
+
+    <span data-ttu-id="aeabb-102">__Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="aeabb-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="aeabb-103">Consulte [recoverableDatabases] {@link SqlManagementClient ~ SqlManagementClient #recoverableDatabases}.</span><span class="sxs-lookup"><span data-stu-id="aeabb-103">See [recoverableDatabases] {@link SqlManagementClient~SqlManagementClient#recoverableDatabases}.</span></span>
+
+    <span data-ttu-id="aeabb-104">Inicializa una nueva instancia de la clase RecoverableDatabaseOperations.</span><span class="sxs-lookup"><span data-stu-id="aeabb-104">Initializes a new instance of the RecoverableDatabaseOperations class.</span></span>
+  fullName: azure-asm-sql.RecoverableDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: RecoverableDatabaseOperations(client)
+  fullName: azure-asm-sql.RecoverableDatabaseOperations.RecoverableDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="aeabb-105">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="aeabb-105">Reference to the service client.</span></span>
+    content: new RecoverableDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: get(serverName, databaseName, callback)
+  summary: <span data-ttu-id="aeabb-106">Devuelve información acerca de una base de datos de SQL Azure recuperable.</span><span class="sxs-lookup"><span data-stu-id="aeabb-106">Returns information about a recoverable Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.get(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="aeabb-107">El nombre del servidor de base de datos de SQL Azure en el que se hospeda la base de datos.</span><span class="sxs-lookup"><span data-stu-id="aeabb-107">The name of the Azure SQL Database Server on which the database was hosted.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="aeabb-108">El nombre de la base de datos de SQL Azure recuperable va a obtener.</span><span class="sxs-lookup"><span data-stu-id="aeabb-108">The name of the recoverable Azure SQL Database to be obtained.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="aeabb-109">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="aeabb-109">The response stream.</span></span>
+    content: function get(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: list(serverName, callback)
+  summary: <span data-ttu-id="aeabb-110">Devuelve una colección de bases de datos que se pueden recuperar desde el servidor especificado.</span><span class="sxs-lookup"><span data-stu-id="aeabb-110">Returns a collection of databases that can be recovered from a specified server.</span></span>
+  fullName: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="aeabb-111">El nombre del servidor de base de datos de SQL Azure en el que se hospedaban las bases de datos.</span><span class="sxs-lookup"><span data-stu-id="aeabb-111">The name of the Azure SQL Database Server on which the databases were hosted.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="aeabb-112">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="aeabb-112">The response stream.</span></span>
+    content: function list(serverName, callback)
+  langs:
+  - js

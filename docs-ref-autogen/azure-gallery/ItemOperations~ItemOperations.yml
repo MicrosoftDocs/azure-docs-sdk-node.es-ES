@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9764605e49c643fe252a6477f697ccd077eaf1e0
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071798"
+items:
+- uid: azure-gallery.ItemOperations~ItemOperations
+  id: azure-gallery.ItemOperations~ItemOperations
+  name: ItemOperations
+  summary: >-
+    <span data-ttu-id="db951-101">Operaciones para trabajar con elementos de la galería.</span><span class="sxs-lookup"><span data-stu-id="db951-101">Operations for working with gallery items.</span></span>
+
+    <span data-ttu-id="db951-102">__Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [GalleryClient] <xref:azure-gallery.GalleryClient~GalleryClient>.</span><span class="sxs-lookup"><span data-stu-id="db951-102">__NOTE__: An instance of this class is automatically created for an instance of the [GalleryClient] <xref:azure-gallery.GalleryClient~GalleryClient>.</span></span>
+
+    <span data-ttu-id="db951-103">Consulte [elementos] <xref:azure-gallery.GalleryClient~GalleryClient%23items>.</span><span class="sxs-lookup"><span data-stu-id="db951-103">See [items] <xref:azure-gallery.GalleryClient~GalleryClient%23items>.</span></span>
+
+    <span data-ttu-id="db951-104">Inicializa una nueva instancia de la clase ItemOperations.</span><span class="sxs-lookup"><span data-stu-id="db951-104">Initializes a new instance of the ItemOperations class.</span></span>
+  fullName: azure-gallery.ItemOperations
+  type: Class
+  children:
+  - azure-gallery.ItemOperations~ItemOperations.#ctor
+  - azure-gallery.ItemOperations~ItemOperations#get
+  - azure-gallery.ItemOperations~ItemOperations#list
+  langs:
+  - js
+- id: azure-gallery.ItemOperations~ItemOperations.#ctor
+  uid: azure-gallery.ItemOperations~ItemOperations.#ctor
+  parent: azure-gallery.ItemOperations~ItemOperations
+  name: ItemOperations(client)
+  fullName: azure-gallery.ItemOperations.ItemOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedGalleryClient
+      description: <span data-ttu-id="db951-105">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="db951-105">Reference to the service client.</span></span>
+    content: new ItemOperations(client)
+  langs:
+  - js
+- uid: azure-gallery.ItemOperations~ItemOperations#get
+  id: azure-gallery.ItemOperations~ItemOperations#get
+  parent: azure-gallery.ItemOperations~ItemOperations
+  name: get(itemIdentity, callback)
+  summary: <span data-ttu-id="db951-106">Obtiene una galería de elementos.</span><span class="sxs-lookup"><span data-stu-id="db951-106">Gets a gallery items.</span></span>
+  fullName: azure-gallery.ItemOperations~ItemOperations.get(itemIdentity, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: itemIdentity
+      type:
+      - string
+      description: <span data-ttu-id="db951-107">Identidad del elemento de galería.</span><span class="sxs-lookup"><span data-stu-id="db951-107">Gallery item identity.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-gallery.Stream
+      description: <span data-ttu-id="db951-108">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="db951-108">The response stream.</span></span>
+    content: function get(itemIdentity, callback)
+  langs:
+  - js
+- uid: azure-gallery.ItemOperations~ItemOperations#list
+  id: azure-gallery.ItemOperations~ItemOperations#list
+  parent: azure-gallery.ItemOperations~ItemOperations
+  name: list(parametersOrCallback, callback)
+  summary: <span data-ttu-id="db951-109">Obtiene la colección de elementos de la galería.</span><span class="sxs-lookup"><span data-stu-id="db951-109">Gets collection of gallery items.</span></span>
+  fullName: azure-gallery.ItemOperations~ItemOperations.list(parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parametersOrCallback
+      type:
+      - azure-gallery.ItemListParameters
+      description: <span data-ttu-id="db951-110">Parámetros de consulta.</span><span class="sxs-lookup"><span data-stu-id="db951-110">Query parameters.</span></span> <span data-ttu-id="db951-111">Si se pasa null devuelve todos los elementos de la galería.</span><span class="sxs-lookup"><span data-stu-id="db951-111">If null is passed returns all gallery items.</span></span>
+      optional: true
+    - id: parametersOrCallback.filter
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="db951-112">Obtiene o establece el filtro de OData.</span><span class="sxs-lookup"><span data-stu-id="db951-112">Gets or sets OData filter.</span></span>
+
+        <span data-ttu-id="db951-113">Opcional.</span><span class="sxs-lookup"><span data-stu-id="db951-113">Optional.</span></span>
+      optional: true
+    - id: parametersOrCallback.top
+      type:
+      - number
+      description: >-
+        <span data-ttu-id="db951-114">Número de elementos que se va a devolver.</span><span class="sxs-lookup"><span data-stu-id="db951-114">Number of items to return.</span></span>
+
+        <span data-ttu-id="db951-115">Opcional.</span><span class="sxs-lookup"><span data-stu-id="db951-115">Optional.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-gallery.Stream
+      description: <span data-ttu-id="db951-116">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="db951-116">The response stream.</span></span>
+    content: function list(parametersOrCallback, callback)
+  langs:
+  - js

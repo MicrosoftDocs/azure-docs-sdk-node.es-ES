@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4aa36e85e5813f72e46523bfff4befffc8ec2bc6
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071753"
+items:
+- uid: azure-asm-store.AddOnOperations~AddOnOperations
+  id: azure-asm-store.AddOnOperations~AddOnOperations
+  name: AddOnOperations
+  summary: >-
+    <span data-ttu-id="bd354-101">Proporciona operaciones REST para trabajar con complementos Store desde el servicio de almacenamiento de Windows Azure.</span><span class="sxs-lookup"><span data-stu-id="bd354-101">Provides REST operations for working with Store add-ins from the Windows Azure store service.</span></span>
+
+    <span data-ttu-id="bd354-102">__Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [StoreManagementClient] {@link StoreManagementClient ~ StoreManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="bd354-102">__NOTE__: An instance of this class is automatically created for an instance of the [StoreManagementClient] {@link StoreManagementClient~StoreManagementClient}.</span></span>
+
+    <span data-ttu-id="bd354-103">Consulte [addOns] <xref:azure-asm-store.StoreManagementClient~StoreManagementClient%23addOns>.</span><span class="sxs-lookup"><span data-stu-id="bd354-103">See [addOns] <xref:azure-asm-store.StoreManagementClient~StoreManagementClient%23addOns>.</span></span>
+
+    <span data-ttu-id="bd354-104">Inicializa una nueva instancia de la clase AddOnOperations.</span><span class="sxs-lookup"><span data-stu-id="bd354-104">Initializes a new instance of the AddOnOperations class.</span></span>
+  fullName: azure-asm-store.AddOnOperations
+  type: Class
+  children:
+  - azure-asm-store.AddOnOperations~AddOnOperations.#ctor
+  - azure-asm-store.AddOnOperations~AddOnOperations#beginCreating
+  - azure-asm-store.AddOnOperations~AddOnOperations#beginDeleting
+  - azure-asm-store.AddOnOperations~AddOnOperations#create
+  - azure-asm-store.AddOnOperations~AddOnOperations#deleteMethod
+  - azure-asm-store.AddOnOperations~AddOnOperations#update
+  langs:
+  - js
+- id: azure-asm-store.AddOnOperations~AddOnOperations.#ctor
+  uid: azure-asm-store.AddOnOperations~AddOnOperations.#ctor
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: AddOnOperations(client)
+  fullName: azure-asm-store.AddOnOperations.AddOnOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedStoreManagementClient
+      description: <span data-ttu-id="bd354-105">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="bd354-105">Reference to the service client.</span></span>
+    content: new AddOnOperations(client)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#beginCreating
+  id: azure-asm-store.AddOnOperations~AddOnOperations#beginCreating
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: beginCreating(cloudServiceName, resourceName, addOnName, parameters, callback)
+  summary: <span data-ttu-id="bd354-106">La operación Crear elemento de Store crea entradas de Windows Azure Store en una suscripción a Windows Azure.</span><span class="sxs-lookup"><span data-stu-id="bd354-106">The Create Store Item operation creates Windows Azure Store entries in a Windows Azure subscription.</span></span>
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.beginCreating(cloudServiceName, resourceName, addOnName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-107">El nombre del servicio de nube a la que se asignará este elemento del almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-107">The name of the cloud service to which this store item will be assigned.</span></span>
+    - id: resourceName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-108">El nombre de este recurso.</span><span class="sxs-lookup"><span data-stu-id="bd354-108">The name of this resource.</span></span>
+    - id: addOnName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-109">La adición de nombre.</span><span class="sxs-lookup"><span data-stu-id="bd354-109">The add on name.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-store.AddOnCreateParameters
+      description: <span data-ttu-id="bd354-110">Parámetros utilizados para especificar cómo funcionará el procedimiento de creación.</span><span class="sxs-lookup"><span data-stu-id="bd354-110">Parameters used to specify how the Create procedure will function.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="bd354-111">El tipo de elemento del almacén que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="bd354-111">The type of store item to be created.</span></span>
+    - id: parameters.plan
+      type:
+      - string
+      description: <span data-ttu-id="bd354-112">El plan seleccionado para este complemento de almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-112">The selected plan for this store addon.</span></span>
+    - id: parameters.promotionCode
+      type:
+      - string
+      description: <span data-ttu-id="bd354-113">El código de promoción para este complemento de almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-113">The promotion code for this store addon.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: <span data-ttu-id="bd354-114">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="bd354-114">The response stream.</span></span>
+    content: function beginCreating(cloudServiceName, resourceName, addOnName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#beginDeleting
+  id: azure-asm-store.AddOnOperations~AddOnOperations#beginDeleting
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: beginDeleting(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  summary: <span data-ttu-id="bd354-115">La operación de eliminar el elemento de Store elimina las entradas de Windows Azure Store re aprovisionado para una suscripción.</span><span class="sxs-lookup"><span data-stu-id="bd354-115">The Delete Store Item operation deletes Windows Azure Store entries that re provisioned for a subscription.</span></span>
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.beginDeleting(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-116">El nombre del servicio de nube a la que se asignará este elemento del almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-116">The name of the cloud service to which this store item will be assigned.</span></span>
+    - id: resourceProviderNamespace
+      type:
+      - string
+      description: <span data-ttu-id="bd354-117">El espacio de nombres en el que reside este elemento del almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-117">The namespace in which this store item resides.</span></span>
+    - id: resourceProviderType
+      type:
+      - string
+      description: <span data-ttu-id="bd354-118">El tipo de elemento de almacén que se eliminará.</span><span class="sxs-lookup"><span data-stu-id="bd354-118">The type of store item to be deleted.</span></span>
+    - id: resourceProviderName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-119">El nombre de este proveedor de recursos.</span><span class="sxs-lookup"><span data-stu-id="bd354-119">The name of this resource provider.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: <span data-ttu-id="bd354-120">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="bd354-120">The response stream.</span></span>
+    content: function beginDeleting(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#create
+  id: azure-asm-store.AddOnOperations~AddOnOperations#create
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: create(cloudServiceName, resourceName, addOnName, parameters, callback)
+  summary: <span data-ttu-id="bd354-121">La operación Crear elemento de Store crea entradas de Windows Azure Store en una suscripción a Windows Azure.</span><span class="sxs-lookup"><span data-stu-id="bd354-121">The Create Store Item operation creates Windows Azure Store entries in a Windows Azure subscription.</span></span>
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.create(cloudServiceName, resourceName, addOnName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-122">El nombre del servicio de nube a la que se asignará este elemento del almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-122">The name of the cloud service to which this store item will be assigned.</span></span>
+    - id: resourceName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-123">El nombre de este recurso.</span><span class="sxs-lookup"><span data-stu-id="bd354-123">The name of this resource.</span></span>
+    - id: addOnName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-124">La adición de nombre.</span><span class="sxs-lookup"><span data-stu-id="bd354-124">The add on name.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-store.AddOnCreateParameters
+      description: <span data-ttu-id="bd354-125">Parámetros utilizados para especificar cómo funcionará el procedimiento de creación.</span><span class="sxs-lookup"><span data-stu-id="bd354-125">Parameters used to specify how the Create procedure will function.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="bd354-126">El tipo de elemento del almacén que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="bd354-126">The type of store item to be created.</span></span>
+    - id: parameters.plan
+      type:
+      - string
+      description: <span data-ttu-id="bd354-127">El plan seleccionado para este complemento de almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-127">The selected plan for this store addon.</span></span>
+    - id: parameters.promotionCode
+      type:
+      - string
+      description: <span data-ttu-id="bd354-128">El código de promoción para este complemento de almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-128">The promotion code for this store addon.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: <span data-ttu-id="bd354-129">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="bd354-129">The response stream.</span></span>
+    content: function create(cloudServiceName, resourceName, addOnName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#deleteMethod
+  id: azure-asm-store.AddOnOperations~AddOnOperations#deleteMethod
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: deleteMethod(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  summary: <span data-ttu-id="bd354-130">La operación de eliminar el elemento de Store elimina Windows Azure Storeentries aprovisionados para una suscripción.</span><span class="sxs-lookup"><span data-stu-id="bd354-130">The Delete Store Item operation deletes Windows Azure Storeentries that are provisioned for a subscription.</span></span>
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.deleteMethod(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-131">El nombre del servicio de nube a la que se asignará este elemento del almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-131">The name of the cloud service to which this store item will be assigned.</span></span>
+    - id: resourceProviderNamespace
+      type:
+      - string
+      description: <span data-ttu-id="bd354-132">El espacio de nombres en el que reside este elemento del almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-132">The namespace in which this store item resides.</span></span>
+    - id: resourceProviderType
+      type:
+      - string
+      description: <span data-ttu-id="bd354-133">El tipo de elemento de almacén que se eliminará.</span><span class="sxs-lookup"><span data-stu-id="bd354-133">The type of store item to be deleted.</span></span>
+    - id: resourceProviderName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-134">El nombre de este proveedor de recursos.</span><span class="sxs-lookup"><span data-stu-id="bd354-134">The name of this resource provider.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: <span data-ttu-id="bd354-135">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="bd354-135">The response stream.</span></span>
+    content: function deleteMethod(cloudServiceName, resourceProviderNamespace, resourceProviderType, resourceProviderName, callback)
+  langs:
+  - js
+- uid: azure-asm-store.AddOnOperations~AddOnOperations#update
+  id: azure-asm-store.AddOnOperations~AddOnOperations#update
+  parent: azure-asm-store.AddOnOperations~AddOnOperations
+  name: update(cloudServiceName, resourceName, addOnName, parameters, callback)
+  summary: <span data-ttu-id="bd354-136">La operación de actualización de elemento Store crea entradas de Windows Azure Store en una suscripción a Windows Azure.</span><span class="sxs-lookup"><span data-stu-id="bd354-136">The Update Store Item operation creates Windows Azure Store entries in a Windows Azure subscription.</span></span>
+  fullName: azure-asm-store.AddOnOperations~AddOnOperations.update(cloudServiceName, resourceName, addOnName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-137">El nombre del servicio de nube a la que se asignará este elemento del almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-137">The name of the cloud service to which this store item will be assigned.</span></span>
+    - id: resourceName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-138">El nombre de este recurso.</span><span class="sxs-lookup"><span data-stu-id="bd354-138">The name of this resource.</span></span>
+    - id: addOnName
+      type:
+      - string
+      description: <span data-ttu-id="bd354-139">El nombre del complemento.</span><span class="sxs-lookup"><span data-stu-id="bd354-139">The addon name.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-store.AddOnUpdateParameters
+      description: <span data-ttu-id="bd354-140">Parámetros utilizados para especificar cómo funcionará el procedimiento de creación.</span><span class="sxs-lookup"><span data-stu-id="bd354-140">Parameters used to specify how the Create procedure will function.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="bd354-141">El tipo de elemento del almacén que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="bd354-141">The type of store item to be created.</span></span>
+    - id: parameters.plan
+      type:
+      - string
+      description: <span data-ttu-id="bd354-142">El plan seleccionado para este complemento de almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-142">The selected plan for this store addon.</span></span>
+    - id: parameters.promotionCode
+      type:
+      - string
+      description: <span data-ttu-id="bd354-143">El código de promoción para este complemento de almacén.</span><span class="sxs-lookup"><span data-stu-id="bd354-143">The promotion code for this store addon.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: <span data-ttu-id="bd354-144">La secuencia de respuesta.</span><span class="sxs-lookup"><span data-stu-id="bd354-144">The response stream.</span></span>
+    content: function update(cloudServiceName, resourceName, addOnName, parameters, callback)
+  langs:
+  - js
