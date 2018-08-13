@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b4a3fb9b551ea7ff8291a7c44c6d4958b18851cc
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071736"
+items:
+- uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  id: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: RestoreDatabaseOperations
+  summary: >-
+    Contiene la operación para crear solicitudes de restauración para bases de datos de SQL Azure.
+
+    __Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Consulte [restoreDatabaseOperations] {@link SqlManagementClient ~ SqlManagementClient #restoreDatabaseOperations}.
+
+    Inicializa una nueva instancia de la clase RestoreDatabaseOperations.
+  fullName: azure-asm-sql.RestoreDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.#ctor
+  - azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations#create
+  langs:
+  - js
+- id: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.#ctor
+  uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.#ctor
+  parent: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: RestoreDatabaseOperations(client)
+  fullName: azure-asm-sql.RestoreDatabaseOperations.RestoreDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new RestoreDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations#create
+  id: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations#create
+  parent: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: create(sourceServerName, parameters, callback)
+  summary: Emite una solicitud de restauración de una base de datos de SQL Azure.
+  fullName: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.create(sourceServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sourceServerName
+      type:
+      - string
+      description: El nombre de Azure SQL Database Server donde está la base de datos de origen o, hospedado.
+    - id: parameters
+      type:
+      - azure-asm-sql.RestoreDatabaseOperationCreateParameters
+      description: Parámetros adicionales para la solicitud de creación de operación de Restaurar base de datos.
+    - id: parameters.sourceDatabaseName
+      type:
+      - string
+      description: Obtiene o establece el nombre del origen de la base de datos de SQL Azure.
+    - id: parameters.sourceDatabaseDeletionDate
+      type:
+      - date
+      description: Obtiene o establece la fecha de eliminación del origen de la base de datos de SQL Azure.
+      optional: true
+    - id: parameters.targetServerName
+      type:
+      - string
+      description: Obtiene o establece el nombre del servidor de base de datos SQL de Azure de destino.
+      optional: true
+    - id: parameters.targetDatabaseName
+      type:
+      - string
+      description: Obtiene o establece el nombre de la base de datos de SQL Azure de destino.
+    - id: parameters.pointInTime
+      type:
+      - date
+      description: Obtiene o establece el punto en el tiempo para restaurar.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: La secuencia de respuesta.
+    content: function create(sourceServerName, parameters, callback)
+  langs:
+  - js

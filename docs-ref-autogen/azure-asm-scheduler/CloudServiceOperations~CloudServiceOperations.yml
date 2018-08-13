@@ -1,0 +1,233 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5e442ed31a49c012dbf1f415cf14bed8148a249d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071641"
+items:
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: CloudServiceOperations
+  summary: >-
+    __Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [CloudServiceManagementClient] {@link CloudServiceManagementClient ~ CloudServiceManagementClient}.
+
+    Consulte [cloudServices] {@link CloudServiceManagementClient ~ CloudServiceManagementClient #cloudServices}.
+
+    Inicializa una nueva instancia de la clase CloudServiceOperations.
+  fullName: azure-asm-scheduler.CloudServiceOperations
+  type: Class
+  children:
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.#ctor
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginCreating
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginDeleting
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#create
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#delete
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#get
+  - azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#list
+  langs:
+  - js
+- id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.#ctor
+  uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.#ctor
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: CloudServiceOperations(client)
+  fullName: azure-asm-scheduler.CloudServiceOperations.CloudServiceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedCloudServiceManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new CloudServiceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginCreating
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginCreating
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: beginCreating(cloudServiceName, parameters, callback)
+  summary: Crear un servicio en la nube.
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.beginCreating(cloudServiceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: parameters
+      type:
+      - azure-asm-scheduler.CloudServiceCreateParameters
+      description: Parámetros proporcionados a la operación de servicio de creación en la nube.
+    - id: parameters.label
+      type:
+      - string
+      description: Etiqueta de servicio en la nube.
+    - id: parameters.description
+      type:
+      - string
+      description: Descripción del servicio de nube.
+    - id: parameters.geoRegion
+      type:
+      - string
+      description: >-
+        La región del servicio de nube.
+
+        Este campo no puede actualizarse después de crear el servicio en la nube.
+    - id: parameters.email
+      type:
+      - string
+      description: Dirección de correo electrónico opcional para asociar con el servicio.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: La secuencia de respuesta.
+    content: function beginCreating(cloudServiceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginDeleting
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#beginDeleting
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: beginDeleting(cloudServiceName, callback)
+  summary: Eliminar un servicio en la nube.
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.beginDeleting(cloudServiceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: La secuencia de respuesta.
+    content: function beginDeleting(cloudServiceName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#create
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#create
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: create(cloudServiceName, parameters, callback)
+  summary: Crear un servicio en la nube.
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.create(cloudServiceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: parameters
+      type:
+      - azure-asm-scheduler.CloudServiceCreateParameters
+      description: Parámetros proporcionados a la operación de servicio de creación en la nube.
+    - id: parameters.label
+      type:
+      - string
+      description: Etiqueta de servicio en la nube.
+    - id: parameters.description
+      type:
+      - string
+      description: Descripción del servicio de nube.
+    - id: parameters.geoRegion
+      type:
+      - string
+      description: >-
+        La región del servicio de nube.
+
+        Este campo no puede actualizarse después de crear el servicio en la nube.
+    - id: parameters.email
+      type:
+      - string
+      description: Dirección de correo electrónico opcional para asociar con el servicio.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: La secuencia de respuesta.
+    content: function create(cloudServiceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#delete
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#delete
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: delete(cloudServiceName, callback)
+  summary: Eliminar un servicio en la nube.
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.delete(cloudServiceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: La secuencia de respuesta.
+    content: function delete(cloudServiceName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#get
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#get
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: get(cloudServiceName, callback)
+  summary: Recuperar un servicio en la nube.
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.get(cloudServiceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: La secuencia de respuesta.
+    content: function get(cloudServiceName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#list
+  id: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations#list
+  parent: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations
+  name: list(callback)
+  summary: La operación List Cloud Services enumera los servicios que se ha aprovisionado para una suscripción.
+  fullName: azure-asm-scheduler.CloudServiceOperations~CloudServiceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: La secuencia de respuesta.
+    content: function list(callback)
+  langs:
+  - js

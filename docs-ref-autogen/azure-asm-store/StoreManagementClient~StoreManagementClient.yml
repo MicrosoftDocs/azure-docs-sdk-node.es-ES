@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 540efab116adae8a2df4839b7061663cacba7907
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071734"
+items:
+- uid: azure-asm-store.StoreManagementClient~StoreManagementClient
+  id: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: StoreManagementClient
+  summary: La API de Windows Azure Store es una API de REST para administrar los complementos de Windows Azure Store. Inicializa una nueva instancia de la clase StoreManagementClient.
+  fullName: azure-asm-store.StoreManagementClient
+  type: Class
+  children:
+  - azure-asm-store.StoreManagementClient~StoreManagementClient.#ctor
+  - azure-asm-store.StoreManagementClient~StoreManagementClient#addOns
+  - azure-asm-store.StoreManagementClient~StoreManagementClient#cloudServices
+  - azure-asm-store.StoreManagementClient~StoreManagementClient#getOperationStatus
+  langs:
+  - js
+- id: azure-asm-store.StoreManagementClient~StoreManagementClient.#ctor
+  uid: azure-asm-store.StoreManagementClient~StoreManagementClient.#ctor
+  parent: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: StoreManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-store.StoreManagementClient.StoreManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: Obtiene las credenciales de suscripción que identifican de suscripción de Microsoft Azure. El identificador de suscripción forma parte del URI para cada llamada al servicio.
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: Obtiene el URI usado como base para todas las solicitudes de servicio en la nube.
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new StoreManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-store.StoreManagementClient~StoreManagementClient#addOns
+  id: azure-asm-store.StoreManagementClient~StoreManagementClient#addOns
+  parent: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: addOns
+  summary: Proporciona una instancia de la [AddOnOperations](-AddOnOperations.html) objeto.
+  fullName: azure-asm-store.StoreManagementClient~StoreManagementClient.addOns
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: addOns
+  langs:
+  - js
+- uid: azure-asm-store.StoreManagementClient~StoreManagementClient#cloudServices
+  id: azure-asm-store.StoreManagementClient~StoreManagementClient#cloudServices
+  parent: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: cloudServices
+  summary: Proporciona una instancia de la [CloudServiceOperations](-CloudServiceOperations.html) objeto.
+  fullName: azure-asm-store.StoreManagementClient~StoreManagementClient.cloudServices
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: cloudServices
+  langs:
+  - js
+- uid: azure-asm-store.StoreManagementClient~StoreManagementClient#getOperationStatus
+  id: azure-asm-store.StoreManagementClient~StoreManagementClient#getOperationStatus
+  parent: azure-asm-store.StoreManagementClient~StoreManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: La operación Get Operation Status devuelve el estado de operación thespecified. Después de llamar a una operación asincrónica, puede llamar a Get Operation Status para determinar si la operación ha tenido éxito, error o aún está en curso.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx para obtener más información)
+  fullName: azure-asm-store.StoreManagementClient~StoreManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: El identificador de solicitud para la solicitud que desea realizar un seguimiento. El identificador de solicitud se devuelve en el encabezado de respuesta x-ms-request-id para cada solicitud.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-store.Stream
+      description: La secuencia de respuesta.
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js

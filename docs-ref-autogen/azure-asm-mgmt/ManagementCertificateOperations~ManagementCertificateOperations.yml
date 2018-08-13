@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ef1453429407ca3e3ebea6b93b11c0054bdc3c0b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071652"
+items:
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: ManagementCertificateOperations
+  summary: >-
+    Puede usar certificados de administración, que son también conocido como certificados de la suscripción, para autenticar a los clientes que intentan conectarse a los recursos asociados a su suscripción de Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154124.aspx para obtener más información) __Nota__: se crea automáticamente una instancia de esta clase para una instancia de la [ManagementClient] {@link ManagementClient ~ ManagementClient}.
+
+    Consulte [managementCertificates] {@link ManagementClient ~ ManagementClient #managementCertificates}.
+
+    Inicializa una nueva instancia de la clase ManagementCertificateOperations.
+  fullName: azure-asm-mgmt.ManagementCertificateOperations
+  type: Class
+  children:
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  langs:
+  - js
+- id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: ManagementCertificateOperations(client)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations.ManagementCertificateOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new ManagementCertificateOperations(client)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: create(parameters, callback)
+  summary: La operación de crear el certificado de administración agrega un certificado a la lista de certificados de administración. Certificados de administración, que son también conocido como certificados de la suscripción, autentican a los clientes que intentan conectarse a los recursos asociados a su suscripción de Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154123.aspx para obtener más información)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-mgmt.ManagementCertificateCreateParameters
+      description: Parámetros proporcionados a la operación de crear el certificado de administración.
+    - id: parameters.publicKey
+      type:
+      - azure-asm-mgmt.buffer
+      description: Una base-64-representación de la clave pública del certificado de administración.
+      optional: true
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: La huella digital que identifica de forma única el certificado de administración.
+      optional: true
+    - id: parameters.data
+      type:
+      - azure-asm-mgmt.buffer
+      description: Los datos del certificado sin procesar en formato cer codificado en base 64.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: La secuencia de respuesta.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: deleteMethod(thumbprint, callback)
+  summary: La operación de eliminar el certificado de administración elimina un certificado de la lista de certificados de administración. Certificados de administración, que son también conocido como certificados de la suscripción, autentican a los clientes que intentan conectarse a los recursos asociados a su suscripción de Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154127.aspx para obtener más información)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.deleteMethod(thumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: thumbprint
+      type:
+      - string
+      description: El valor de huella digital del certificado que se va a eliminar.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: La secuencia de respuesta.
+    content: function deleteMethod(thumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: get(thumbprint, callback)
+  summary: La operación obtener certificado de administración recupera información sobre el certificado de administración con la huella digital especificada. Certificados de administración, que son también conocido como certificados de la suscripción, autentican a los clientes que intentan conectarse a los recursos asociados a su suscripción de Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154131.aspx para obtener más información)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.get(thumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: thumbprint
+      type:
+      - string
+      description: El valor de huella digital del certificado para recuperar información sobre.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: La secuencia de respuesta.
+    content: function get(thumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: list(callback)
+  summary: La operación de certificados de administración de la lista se enumera y devuelve información básica sobre todos los certificados de administración asociados con la suscripción especificada. Certificados de administración, que son también conocido como certificados de la suscripción, autentican a los clientes que intentan conectarse a los recursos asociados a su suscripción de Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx para obtener más información)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: La secuencia de respuesta.
+    content: function list(callback)
+  langs:
+  - js

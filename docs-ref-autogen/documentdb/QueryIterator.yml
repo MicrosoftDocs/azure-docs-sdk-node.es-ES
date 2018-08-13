@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 206ea465fcf79f45867e775391f443f5bdec86d4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071913"
+items:
+- uid: documentdb.QueryIterator
+  id: documentdb.QueryIterator
+  name: QueryIterator
+  summary: Representa un objeto QueryIterator un implmenetation de respuesta de consulta o la fuente que permite el recorrido y recorrer en iteración la respuesta en el servicio de base de datos de Azure Cosmos DB.
+  fullName: documentdb.QueryIterator
+  type: Class
+  children:
+  - documentdb.QueryIterator.#ctor
+  - documentdb.QueryIterator#forEach
+  - documentdb.QueryIterator#nextItem
+  - documentdb.QueryIterator#current
+  - documentdb.QueryIterator#hasMoreResults
+  - documentdb.QueryIterator#toArray
+  - documentdb.QueryIterator#executeNext
+  - documentdb.QueryIterator#reset
+  langs:
+  - js
+- id: documentdb.QueryIterator.#ctor
+  uid: documentdb.QueryIterator.#ctor
+  parent: documentdb.QueryIterator
+  name: QueryIterator(documentclient, query, options, fetchFunctions, resourceLink)
+  fullName: documentdb.QueryIterator.QueryIterator(documentclient, query, options, fetchFunctions, resourceLink)
+  summary: Representa un objeto QueryIterator un implmenetation de respuesta de consulta o la fuente que permite el recorrido y recorrer en iteración la respuesta en el servicio de base de datos de Azure Cosmos DB.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: documentclient
+      type:
+      - object
+      description: El objeto documentclient.
+    - id: query
+      type:
+      - undefinedSqlQuerySpec
+      - string
+      description: Una consulta SQL.
+    - id: options
+      type:
+      - undefinedFeedOptions
+      description: Representa las opciones de fuente.
+    - id: fetchFunctions
+      type:
+      - undefinedcallback
+      - undefinedArray.<callback>
+      description: Una función para recuperar cada página de datos. Una matriz de funciones puede utilizarse para consultar más de una partición.
+    - id: resourceLink
+      type:
+      - string
+      description: Un parámetro opcional que representa el resourceLink (se utilizará en la consulta top/orderby/paralelo)
+      optional: true
+    content: new QueryIterator(documentclient, query, options, fetchFunctions, resourceLink)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#forEach
+  id: documentdb.QueryIterator#forEach
+  parent: documentdb.QueryIterator
+  name: forEach(callback)
+  summary: Ejecutar una función una vez por elemento de fuente proporcionada.
+  fullName: documentdb.QueryIterator.forEach(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: >-
+        Función que se ejecute para cada elemento. la función toma dos parámetros error, el elemento.
+
+        Nota: el último elemento de la devolución de llamada que se llamará en quedará sin definir.
+
+        Si la devolución de llamada explícitamente devuelve false, obtiene detuvo el bucle.
+    content: function forEach(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#nextItem
+  id: documentdb.QueryIterator#nextItem
+  parent: documentdb.QueryIterator
+  name: nextItem(callback)
+  summary: Ejecutar una función proporcionada en el elemento siguiente en el QueryIterator.
+  fullName: documentdb.QueryIterator.nextItem(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: Función que se ejecute para cada elemento. la función toma dos parámetros error, el elemento.
+    content: function nextItem(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#current
+  id: documentdb.QueryIterator#current
+  parent: documentdb.QueryIterator
+  name: current(callback)
+  summary: Recuperar el elemento actual en el QueryIterator.
+  fullName: documentdb.QueryIterator.current(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: Función que se ejecute para el elemento actual. la función toma dos parámetros error, el elemento.
+    content: function current(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#hasMoreResults
+  id: documentdb.QueryIterator#hasMoreResults
+  parent: documentdb.QueryIterator
+  name: hasMoreResults()
+  summary: ''
+  fullName: documentdb.QueryIterator.hasMoreResults()
+  type: Function
+  syntax:
+    return:
+      type:
+      - Boolean
+      description: True si hay otros elementos que se va a procesar en el QueryIterator.
+    content: function hasMoreResults()
+  langs:
+  - js
+- uid: documentdb.QueryIterator#toArray
+  id: documentdb.QueryIterator#toArray
+  parent: documentdb.QueryIterator
+  name: toArray(callback)
+  summary: Recuperar todos los elementos de la fuente y pasar como una matriz a una función
+  fullName: documentdb.QueryIterator.toArray(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: Función ejecutar en la respuesta de la fuente, tiene dos errores de parámetros, resourcesList
+    content: function toArray(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#executeNext
+  id: documentdb.QueryIterator#executeNext
+  parent: documentdb.QueryIterator
+  name: executeNext(callback)
+  summary: Recuperar el siguiente lote de la fuente y pasar como una matriz a una función
+  fullName: documentdb.QueryIterator.executeNext(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: Función ejecutar en la respuesta de la fuente, tiene dos errores de parámetros, resourcesList
+    content: function executeNext(callback)
+  langs:
+  - js
+- uid: documentdb.QueryIterator#reset
+  id: documentdb.QueryIterator#reset
+  parent: documentdb.QueryIterator
+  name: reset()
+  summary: Restablezca el QueryIterator al principio y borre todos los recursos dentro de él
+  fullName: documentdb.QueryIterator.reset()
+  type: Function
+  syntax:
+    content: function reset()
+  langs:
+  - js

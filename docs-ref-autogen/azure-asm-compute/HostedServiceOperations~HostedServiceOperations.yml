@@ -1,0 +1,649 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d38827acb2346617b73ae6afad4c40d4452cd82
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071668"
+items:
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations
+  summary: >-
+    La API de administración de servicios incluye operaciones para administrar los servicios hospedados bajo la suscripción.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460812.aspx para obtener más información) __Nota__: se crea automáticamente una instancia de esta clase para una instancia de la [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    Consulte [hostedServices] {@link ComputeManagementClient ~ ComputeManagementClient #hostedServices}.
+
+    Inicializa una nueva instancia de la clase HostedServiceOperations.
+  fullName: azure-asm-compute.HostedServiceOperations
+  type: Class
+  children:
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations(client)
+  fullName: azure-asm-compute.HostedServiceOperations.HostedServiceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new HostedServiceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: addExtension(serviceName, parameters, callback)
+  summary: >-
+    La operación de agregar la extensión agrega una extensión disponible para su servicio en la nube. En Azure, puede ejecutar un proceso como una extensión de un servicio en la nube.
+
+    Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube. Puede encontrar la extensión disponible mediante el uso de la operación enumerar extensiones disponibles.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.addExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: Parámetros proporcionados a la operación de agregar la extensión.
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: El espacio de nombres del proveedor de la extensión. El espacio de nombres de proveedor para las extensiones de Azure es Microsoft.Windows.Azure.Extensions.
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: El tipo de la extensión.
+    - id: parameters.id
+      type:
+      - string
+      description: El identificador de la extensión.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: La huella digital del certificado que se usa para cifrar la configuración especificada en PrivateConfiguration. Si no se especifica este elemento, se puede genera automáticamente un certificado y agregado al servicio en la nube.
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: El algoritmo de huella digital del certificado que se usa para cifrar la configuración especificada en PrivateConfiguration.
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: La configuración pública definida con el esquema devuelto por la operación enumerar extensiones disponibles.
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: La configuración privada definida con el esquema devuelto por la operación enumerar extensiones disponibles.
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: Especifica la versión de la extensión. Si no se especifica este elemento o un asterisco (*) se utiliza como valor, la versión más reciente de la extensión se usa. Si se especifica el valor con un número de versión principal y un asterisco como el número de versión secundaria (X.*), se selecciona la versión secundaria más reciente de la versión principal especificada. Si se especifican un número de versión principal y un número de versión secundaria (X.Y), se selecciona la versión de extensión específica. Si se especifica una versión, se realiza una actualización automática en la instancia de rol.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function addExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginAddingExtension(serviceName, parameters, callback)
+  summary: >-
+    La operación de empezar a Agregar extensión agrega una extensión disponible para su servicio en la nube. En Azure, puede ejecutar un proceso como una extensión de un servicio en la nube. Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube. Puede encontrar la extensión disponible mediante el uso de la operación enumerar extensiones disponibles.
+
+    (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginAddingExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: Parámetros proporcionados a la operación de empezar a Agregar extensión.
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: El espacio de nombres del proveedor de la extensión. El espacio de nombres de proveedor para las extensiones de Azure es Microsoft.Windows.Azure.Extensions.
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: El tipo de la extensión.
+    - id: parameters.id
+      type:
+      - string
+      description: El identificador de la extensión.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: La huella digital del certificado que se usa para cifrar la configuración especificada en PrivateConfiguration. Si no se especifica este elemento, se puede genera automáticamente un certificado y agregado al servicio en la nube.
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: El algoritmo de huella digital del certificado que se usa para cifrar la configuración especificada en PrivateConfiguration.
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: La configuración pública definida con el esquema devuelto por la operación enumerar extensiones disponibles.
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: La configuración privada definida con el esquema devuelto por la operación enumerar extensiones disponibles.
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: Especifica la versión de la extensión. Si no se especifica este elemento o un asterisco (*) se utiliza como valor, la versión más reciente de la extensión se usa. Si se especifica el valor con un número de versión principal y un asterisco como el número de versión secundaria (X.*), se selecciona la versión secundaria más reciente de la versión principal especificada. Si se especifican un número de versión principal y un número de versión secundaria (X.Y), se selecciona la versión de extensión específica. Si se especifica una versión, se realiza una actualización automática en la instancia de rol.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginAddingExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingAll(serviceName, callback)
+  summary: La operación del servicio hospedado de DeleteAll elimina el servicio en la nube especificado como disco del sistema operativo, discos de datos conectados y los blobs de origen para los discos de almacenamiento de Microsoft Azure. (vea 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginDeletingAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingExtension(serviceName, extensionId, callback)
+  summary: La operación de extensión de eliminación de empezar a elimina la extensión especificada de un servicio en la nube.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: extensionId
+      type:
+      - string
+      description: El identificador que se asignó a la extensión cuando se agregó al servicio de nube
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginDeletingExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: checkNameAvailability(serviceName, callback)
+  summary: La operación Comprobar disponibilidad de nombre de servicio hospedado comprueba la disponibilidad del nombre del servicio de nube especificado.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154116.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.checkNameAvailability(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube que le gustaría utilizar.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function checkNameAvailability(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: create(parameters, callback)
+  summary: >-
+    La operación crear servicio hospedado, crea un nuevo servicio en la nube en Azure.
+
+    (consulte http://msdn.microsoft.com/en-us/library/windowsazure/gg441304.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceCreateParameters
+      description: Parámetros proporcionados a la operación crear servicio hospedado.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Un nombre para el servicio en la nube que es único dentro de Azure. Este nombre es el nombre del prefijo DNS y se puede usar para tener acceso al servicio.
+    - id: parameters.label
+      type:
+      - string
+      description: Un nombre para el servicio en la nube. El nombre puede ser de hasta 100 caracteres de longitud. El nombre puede utilizarse para identificar la cuenta de almacenamiento para fines de seguimiento.
+    - id: parameters.description
+      type:
+      - string
+      description: Una descripción para el servicio en la nube. La descripción puede tener hasta 1024 caracteres de longitud.
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: La ubicación donde se creará el servicio en la nube. Obligatorio si no se especifica AffinityGroup. Especifique la ubicación o grupo, pero no ambos. Para enumerar las ubicaciones disponibles, use la operación de ubicaciones de la lista.
+      optional: true
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: El nombre de un grupo de afinidad existente asociado a esta suscripción. Requerido si no se especifica la ubicación. Este nombre es un GUID y se puede recuperar examinando el elemento name del cuerpo de respuesta devuelto por la operación enumerar grupos de afinidad. Especifique la ubicación o grupo, pero no ambos. Para obtener una lista de grupos de afinidad disponibles, utilice la operación enumerar grupos de afinidad.
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: Representa el nombre de una propiedad de servicio en la nube extendida. Cada propiedad extendida debe tener un nombre definido y un valor. Puede tener un máximo de 50 pares de nombre y valor de propiedad extendidos. La longitud máxima del elemento name es de 64 caracteres, solo caracteres alfanuméricos y caracteres de subrayado son válidos en el nombre y debe comenzar con una letra. Al intentar utilizar otros caracteres, empezando con un carácter no alfanumérico, o escribir un nombre que es idéntico a la que de otra propiedad extendida propiedad el mismo servicio se producirá en un estado código (error 400 Solicitud incorrecta). Cada valor de propiedad extendido tiene una longitud máxima de 255 caracteres.
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: Dirección de DNS que dirección IP del servicio de nube resuelve cuando consulta mediante una consulta Dns inversa.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteMethod(serviceName, callback)
+  summary: La operación de eliminación de un servicio hospedado, elimina el servicio especificado en la nube de Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteMethod(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function deleteMethod(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteAll(serviceName, callback)
+  summary: La operación del servicio hospedado de DeleteAll elimina el servicio en la nube especificado como disco del sistema operativo, discos de datos conectados y los blobs de origen para los discos de almacenamiento de Microsoft Azure. (vea 'http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx' para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function deleteAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteExtension(serviceName, extensionId, callback)
+  summary: La operación Eliminar extensión elimina la extensión especificada de un servicio en la nube.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: extensionId
+      type:
+      - string
+      description: El identificador que se asignó a la extensión cuando se agregó al servicio de nube
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function deleteExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: get(serviceName, callback)
+  summary: >-
+    La operación obtener propiedades del servicio hospedado recupera las propiedades del sistema para el servicio en la nube especificado. Estas propiedades incluyen el nombre del servicio y el tipo de servicio; y el nombre del grupo de afinidad al que pertenece el servicio o su ubicación si no forma parte de un grupo de afinidad.
+
+    (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.get(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function get(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getDetailed(serviceName, callback)
+  summary: La operación obtener propiedades del servicio detallada hospedada recupera las propiedades del sistema para el servicio en la nube especificado. Estas propiedades incluyen el nombre del servicio y el tipo de servicio; el nombre del grupo de afinidad al que pertenece el servicio o su ubicación si no forma parte de un grupo de afinidad e información sobre las implementaciones del servicio.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getDetailed(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function getDetailed(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getExtension(serviceName, extensionId, callback)
+  summary: La operación Get Extension recupera información sobre una extensión especificada que se ha agregado a un servicio en la nube.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169557.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: extensionId
+      type:
+      - string
+      description: El identificador que se asignó a la extensión cuando se agregó al servicio de nube
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function getExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: list(callback)
+  summary: La operación List Hosted Services enumera los servicios de nube disponibles bajo la suscripción actual.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460781.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listAvailableExtensions(callback)
+  summary: La operación enumerar extensiones disponibles enumera las extensiones que están disponibles para agregar a su servicio en la nube. En Windows Azure, puede ejecutar un proceso como una extensión de un servicio en la nube. Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listAvailableExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function listAvailableExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensions(serviceName, callback)
+  summary: La operación enumerar extensiones enumera todas las extensiones que se agregaron a un servicio en la nube.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169561.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensions(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function listExtensions(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensionVersions(providerNamespace, extensionType, callback)
+  summary: >-
+    La operación List Versions de extensión enumera las versiones de una extensión que están disponibles para agregar a un servicio en la nube. En Azure, puede ejecutar un proceso como una extensión de un servicio en la nube. Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube.
+
+    (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn495437.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensionVersions(providerNamespace, extensionType, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: El espacio de nombres del proveedor.
+    - id: extensionType
+      type:
+      - string
+      description: El nombre de tipo de extensión.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function listExtensionVersions(providerNamespace, extensionType, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listPublisherExtensions(callback)
+  summary: La operación enumerar extensiones disponibles enumera las extensiones que están disponibles para agregar a su servicio en la nube. En Windows Azure, puede ejecutar un proceso como una extensión de un servicio en la nube. Por ejemplo, acceso a Escritorio remoto o el agente de diagnósticos de Azure puede ejecutar como extensiones en el servicio en la nube.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listPublisherExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function listPublisherExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: update(serviceName, parameters, callback)
+  summary: Puede actualizar la operación de actualización de servicio hospedado en la etiqueta o la descripción de un servicio en la nube en Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/gg441303.aspx para obtener más información)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.update(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio en la nube.
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceUpdateParameters
+      description: Parámetros proporcionados a la operación de servicio de actualización hospedado.
+    - id: parameters.label
+      type:
+      - string
+      description: Un nombre para el servicio en la nube. El nombre puede ser de hasta 100 caracteres de longitud. Debe especificar un valor para al menos una etiqueta o descripción. Se recomienda que la etiqueta sea único dentro de la suscripción. Se puede usar el nombre de identificar el servicio para fines de seguimiento.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Una descripción para el servicio en la nube. La descripción puede tener hasta 1024 caracteres de longitud. Debe especificar un valor para al menos una etiqueta o descripción.
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: Representa el nombre de una propiedad de servicio en la nube extendida. Cada propiedad extendida debe tener un nombre definido y un valor. Puede tener un máximo de 50 pares de nombre y valor de propiedad extendidos. La longitud máxima del elemento name es de 64 caracteres, solo caracteres alfanuméricos y caracteres de subrayado son válidos en el nombre y debe comenzar con una letra. Al intentar utilizar otros caracteres, empezando con un carácter no alfanumérico, o escribir un nombre que es idéntico a la que de otra propiedad extendida propiedad el mismo servicio se producirá en un estado código (error 400 Solicitud incorrecta). Cada valor de propiedad extendido tiene una longitud máxima de 255 caracteres.
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: Dirección de DNS que dirección IP del servicio de nube resuelve cuando consulta mediante una consulta Dns inversa.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function update(serviceName, parameters, callback)
+  langs:
+  - js

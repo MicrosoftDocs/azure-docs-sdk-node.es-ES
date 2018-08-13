@@ -1,0 +1,820 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 58107b458c3ade33556cab3851a672621000f8a8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071823"
+items:
+- uid: azure-sb.WnsService
+  id: azure-sb.WnsService
+  name: WnsService
+  summary: Crea un nuevo objeto WnsService.
+  fullName: azure-sb.WnsService
+  type: Class
+  children:
+  - azure-sb.WnsService.#ctor
+  - azure-sb.WnsService#sendBadge
+  - azure-sb.WnsService#sendTile*
+  - azure-sb.WnsService#sendToast*
+  - azure-sb.WnsService#sendRaw
+  - azure-sb.WnsService#send
+  - azure-sb.WnsService#createNativeRegistration
+  - azure-sb.WnsService#createOrUpdateNativeRegistration
+  - azure-sb.WnsService#createTile*Registration
+  - azure-sb.WnsService#createToast*Registration
+  - azure-sb.WnsService#createRawTemplateRegistration
+  - azure-sb.WnsService#createOrUpdateRawTemplateRegistration
+  - azure-sb.WnsService#updateTile*Registration
+  - azure-sb.WnsService#updateToast*Registration
+  - azure-sb.WnsService#updatesRawTemplateRegistration
+  - azure-sb.WnsService#listRegistrationsByChannel
+  langs:
+  - js
+- id: azure-sb.WnsService.#ctor
+  uid: azure-sb.WnsService.#ctor
+  parent: azure-sb.WnsService
+  name: WnsService(notificationHubService)
+  fullName: azure-sb.WnsService.WnsService(notificationHubService)
+  summary: Crea un nuevo objeto WnsService.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: El servicio del centro de notificaciones.
+    content: new WnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendBadge
+  id: azure-sb.WnsService#sendBadge
+  parent: azure-sb.WnsService
+  name: sendBadge(tags, value, optionsOrCallback, callback)
+  summary: Envía una notificación WNS de wns/badge.
+  fullName: azure-sb.WnsService.sendBadge(tags, value, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - array
+      - string
+      description: Lista separada por comas o matriz de identificadores de etiqueta.
+    - id: value
+      type:
+      - object
+      - string
+      description: >-
+        Un valor numérico o un valor de cadena que especifica un glifo distintivo predefinido. Numéricamente, este valor puede aceptar un número entero válido. Un valor de 0 borra el distintivo, los valores de 1 y 99 se muestran tal como se indica y cualquier valor mayor que 99 se muestran como más de 99.
+
+        Consulte http://msdn.microsoft.com/en-us/library/windowsazure/br212849.aspx para obtener más detalles.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: La función de devolución de llamada o de las opciones de solicitud.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Los encabezados wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendBadge(tags, value, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendTile*
+  id: azure-sb.WnsService#sendTile*
+  parent: azure-sb.WnsService
+  name: sendTile*(tags, payload, options, callback)
+  summary: Envía una notificación de mosaico. Hay un método para cada plantilla de mosaico en vea http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx (p. ej. sendTileSquarePeekImageAndText01).
+  fullName: azure-sb.WnsService.sendTile*(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Una sola etiqueta o expresión de etiqueta.
+    - id: payload
+      type:
+      - object
+      description: Carga del mensaje. Se pueden pasar varios parámetros de carga.
+    - id: payload.text{1..n}
+      type:
+      - string
+      description: Valor del elemento de texto con el identificador especificado (por ejemplo, Texto1). El número de propiedades de texto depende del tipo de icono.
+    - id: payload.image{1..n}src
+      type:
+      - string
+      description: Valor del atributo src del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: payload.image{1..n}alt
+      type:
+      - string
+      description: Valor del atributo alt del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: payload.lang
+      type:
+      - string
+      description: El valor del lenguaje del elemento de enlace.
+    - id: payload.type
+      type:
+      - string
+      description: Se utiliza en el método sendTile general.
+    - id: options
+      type:
+      - object
+      description: Las opciones de solicitud.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Los encabezados wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTile*(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendToast*
+  id: azure-sb.WnsService#sendToast*
+  parent: azure-sb.WnsService
+  name: sendToast*(tags, payload, options, callback)
+  summary: Envía una notificación del sistema. Hay un método para cada plantilla de mosaico en vea http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx (p. ej. sendToastText01).
+  fullName: azure-sb.WnsService.sendToast*(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Una sola etiqueta o expresión de etiqueta.
+    - id: payload
+      type:
+      - object
+      description: Carga del mensaje.
+    - id: payload.text{1..n}
+      type:
+      - string
+      description: Valor del elemento de texto con el identificador especificado (por ejemplo, Texto1). El número de propiedades de texto depende del tipo de icono.
+    - id: payload.image{1..n}src
+      type:
+      - string
+      description: Valor del atributo src del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: payload.image{1..n}alt
+      type:
+      - string
+      description: Valor del atributo alt del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: payload.lang
+      type:
+      - string
+      description: El valor del lenguaje del elemento de enlace.
+    - id: options
+      type:
+      - object
+      description: Las opciones de solicitud.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Los encabezados wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendToast*(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendRaw
+  id: azure-sb.WnsService#sendRaw
+  parent: azure-sb.WnsService
+  name: sendRaw(tags, payload, optionsOrCallback, callback)
+  summary: Envía una notificación WNS de wns/raw.
+  fullName: azure-sb.WnsService.sendRaw(tags, payload, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - array
+      - string
+      description: Lista separada por comas o matriz de identificadores de etiqueta.
+    - id: payload
+      type:
+      - object
+      - string
+      description: La carga sin procesar.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: La función de devolución de llamada o de las opciones de solicitud.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Los encabezados wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendRaw(tags, payload, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#send
+  id: azure-sb.WnsService#send
+  parent: azure-sb.WnsService
+  name: send(tags, payload, type, optionsOrCallback, callback)
+  summary: Envía una notificación WNS personalizada. Utilice este método si desea tener control total sobre la carga.
+  fullName: azure-sb.WnsService.send(tags, payload, type, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - array
+      - string
+      description: Lista separada por comas o matriz de identificadores de etiqueta.
+    - id: payload
+      type:
+      - string
+      description: Carga XML del mensaje.
+    - id: type
+      type:
+      - string
+      description: 'El tipo de mensaje. Corresponde al encabezado X-WNS-Type (las opciones son: wns/raw, wns/mosaico y un toast/wns).'
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: La función de devolución de llamada o de las opciones de solicitud.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Los encabezados wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function send(tags, payload, type, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createNativeRegistration
+  id: azure-sb.WnsService#createNativeRegistration
+  parent: azure-sb.WnsService
+  name: createNativeRegistration(channel, tags, optionsOrCallback, callback)
+  summary: Crea un registro WNS nativo.
+  fullName: azure-sb.WnsService.createNativeRegistration(channel, tags, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: El uri de canal de dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Las etiquetas.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: La función de devolución de llamada o de las opciones de solicitud.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNativeRegistration(channel, tags, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createOrUpdateNativeRegistration
+  id: azure-sb.WnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.WnsService
+  name: createOrUpdateNativeRegistration(registrationId, channel, tags, optionsOrCallback, callback)
+  summary: Crea o actualiza un registro WNS nativo.
+  fullName: azure-sb.WnsService.createOrUpdateNativeRegistration(registrationId, channel, tags, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Identificador del registro.
+    - id: channel
+      type:
+      - string
+      description: El uri de canal de dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Las etiquetas.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: La función de devolución de llamada o de las opciones de solicitud.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateNativeRegistration(registrationId, channel, tags, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createTile*Registration
+  id: azure-sb.WnsService#createTile*Registration
+  parent: azure-sb.WnsService
+  name: createTile*Registration(channel, tags, template, options, callback)
+  summary: Crea un nuevo registro con una plantilla de mosaico. Hay un método para cada plantilla de mosaico en vea http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx (p. ej. createTileSquarePeekImageAndText01Registration).
+  fullName: azure-sb.WnsService.createTile*Registration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: El uri de canal de dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Las etiquetas.
+    - id: template
+      type:
+      - object
+      description: La plantilla de cuerpo del registro.
+    - id: template.text{1..n}
+      type:
+      - string
+      description: Valor del elemento de texto con el identificador especificado (por ejemplo, Texto1). El número de propiedades de texto depende del tipo de icono.
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: Valor del atributo src del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: Valor del atributo alt del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: template.lang
+      type:
+      - string
+      description: El valor del lenguaje del elemento de enlace.
+    - id: options
+      type:
+      - object
+      description: Las opciones de solicitud.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Los encabezados wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTile*Registration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createToast*Registration
+  id: azure-sb.WnsService#createToast*Registration
+  parent: azure-sb.WnsService
+  name: createToast*Registration(channel, tags, template, options, callback)
+  summary: Crea un nuevo registro con una plantilla de notificación. Hay un método para cada plantilla de mosaico en vea http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx (p. ej. createToastText01Registration).
+  fullName: azure-sb.WnsService.createToast*Registration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: El uri de canal de dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Las etiquetas.
+    - id: template
+      type:
+      - object
+      description: La plantilla de cuerpo del registro.
+    - id: template.text{1..n}
+      type:
+      - string
+      description: Valor del elemento de texto con el identificador especificado (por ejemplo, Texto1). El número de propiedades de texto depende del tipo de icono.
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: Valor del atributo src del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: Valor del atributo alt del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: template.lang
+      type:
+      - string
+      description: El valor del lenguaje del elemento de enlace.
+    - id: options
+      type:
+      - object
+      description: Las opciones de solicitud.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Los encabezados wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createToast*Registration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createRawTemplateRegistration
+  id: azure-sb.WnsService#createRawTemplateRegistration
+  parent: azure-sb.WnsService
+  name: createRawTemplateRegistration(channel, tags, template, optionsOrCallback, callback)
+  summary: 'Crea un registro de plantilla personalizada. Use este método para tener control total sobre el formato de plantilla. Recuerde que tiene que especificar el encabezado X-WNS-Type (los valores posibles: toast/wns, wns/mosaico, wns/badge, wns/raw).'
+  fullName: azure-sb.WnsService.createRawTemplateRegistration(channel, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: El uri de canal de dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Las etiquetas.
+    - id: template
+      type:
+      - string
+      description: La plantilla del registro.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: La función de devolución de llamada o de las opciones de solicitud.
+      optional: true
+    - id: optionsOrCallback.pnsCredentialName
+      type:
+      - object
+      - function
+      description: Para usar las credenciales del pns.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Para incluir los encabezados de wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRawTemplateRegistration(channel, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createOrUpdateRawTemplateRegistration
+  id: azure-sb.WnsService#createOrUpdateRawTemplateRegistration
+  parent: azure-sb.WnsService
+  name: createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  summary: 'Crea un registro de plantilla personalizada. Use este método para tener control total sobre el formato de plantilla. Recuerde que tiene que especificar el encabezado X-WNS-Type (los valores posibles: toast/wns, wns/mosaico, wns/badge, wns/raw).'
+  fullName: azure-sb.WnsService.createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Identificador del registro.
+    - id: channel
+      type:
+      - string
+      description: El uri de canal de dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Las etiquetas.
+    - id: template
+      type:
+      - string
+      description: La plantilla del registro.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: La función de devolución de llamada o de las opciones de solicitud.
+      optional: true
+    - id: optionsOrCallback.pnsCredentialName
+      type:
+      - object
+      - function
+      description: Para usar las credenciales del pns.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Para incluir los encabezados de wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#updateTile*Registration
+  id: azure-sb.WnsService#updateTile*Registration
+  parent: azure-sb.WnsService
+  name: updateTile*Registration(registrationId, channel, tags, template, options, callback)
+  summary: Actualiza un registro nuevo con una plantilla de mosaico. Hay un método para cada plantilla de mosaico en vea http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx (p. ej. createTileSquarePeekImageAndText01Registration).
+  fullName: azure-sb.WnsService.updateTile*Registration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Identificador del registro.
+    - id: channel
+      type:
+      - string
+      description: El uri de canal de dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Las etiquetas.
+    - id: template
+      type:
+      - object
+      description: La plantilla de cuerpo del registro.
+    - id: template.text{1..n}
+      type:
+      - string
+      description: Valor del elemento de texto con el identificador especificado (por ejemplo, Texto1). El número de propiedades de texto depende del tipo de icono.
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: Valor del atributo src del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: Valor del atributo alt del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: template.lang
+      type:
+      - string
+      description: El valor del lenguaje del elemento de enlace.
+    - id: options
+      type:
+      - object
+      description: Las opciones de solicitud.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Los encabezados wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateTile*Registration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#updateToast*Registration
+  id: azure-sb.WnsService#updateToast*Registration
+  parent: azure-sb.WnsService
+  name: updateToast*Registration(registrationId, channel, tags, template, options, callback)
+  summary: Actualiza un registro nuevo con una plantilla de notificación. Hay un método para cada plantilla de mosaico en vea http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx (p. ej. updateToastText01Registration).
+  fullName: azure-sb.WnsService.updateToast*Registration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Identificador del registro.
+    - id: channel
+      type:
+      - string
+      description: El uri de canal de dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Las etiquetas.
+    - id: template
+      type:
+      - object
+      description: La plantilla de cuerpo del registro.
+    - id: template.text{1..n}
+      type:
+      - string
+      description: Valor del elemento de texto con el identificador especificado (por ejemplo, Texto1). El número de propiedades de texto depende del tipo de icono.
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: Valor del atributo src del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: Valor del atributo alt del elemento de imagen con el identificador especificado (por ejemplo, image1). El número de propiedades de imagen depende del tipo de icono.
+    - id: template.lang
+      type:
+      - string
+      description: El valor del lenguaje del elemento de enlace.
+    - id: options
+      type:
+      - object
+      description: Las opciones de solicitud.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Los encabezados wns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateToast*Registration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#updatesRawTemplateRegistration
+  id: azure-sb.WnsService#updatesRawTemplateRegistration
+  parent: azure-sb.WnsService
+  name: updatesRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  summary: Actualiza un registro de plantilla sin procesar.
+  fullName: azure-sb.WnsService.updatesRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Identificador del registro.
+    - id: channel
+      type:
+      - string
+      description: El uri de canal de dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Las etiquetas.
+    - id: template
+      type:
+      - string
+      description: La plantilla del registro.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: La función de devolución de llamada o de las opciones de solicitud.
+      optional: true
+    - id: optionsOrCallback.pnsCredentialName
+      type:
+      - object
+      - function
+      description: Para usar las credenciales del pns.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Para incluir los encabezados de wns.
+      optional: true
+    - id: optionsOrCallback.etag
+      type:
+      - object
+      - function
+      description: El valor etag para incluir.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#listRegistrationsByChannel
+  id: azure-sb.WnsService#listRegistrationsByChannel
+  parent: azure-sb.WnsService
+  name: listRegistrationsByChannel(channel, optionsOrCallback, callback)
+  summary: Recupera un registro por canal.
+  fullName: azure-sb.WnsService.listRegistrationsByChannel(channel, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Identificador del registro.
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: La función de devolución de llamada o de las opciones de solicitud. Propiedades adicionales se pasarán como encabezados.
+      optional: true
+    - id: optionsOrCallback.top
+      type:
+      - object
+      - function
+      description: Especifica el número máximo de registros que se obtiene de la llamada.
+      optional: true
+    - id: optionsOrCallback.skip
+      type:
+      - object
+      - function
+      description: Especifica el número de registros que se omiten en la llamada.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: La función de devolución de llamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRegistrationsByChannel(channel, optionsOrCallback, callback)
+  langs:
+  - js

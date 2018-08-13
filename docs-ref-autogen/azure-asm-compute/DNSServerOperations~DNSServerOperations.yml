@@ -1,0 +1,287 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 63f6d420f14e145be93264194c93b21fbf5288eb
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071655"
+items:
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: DNSServerOperations
+  summary: >-
+    La API de administración de proceso incluye operaciones para administrar los servidores dns de su suscripción.
+
+    __Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    Consulte [servidorDNS] {@link ComputeManagementClient ~ ComputeManagementClient #dnsServer}.
+
+    Inicializa una nueva instancia de la clase DNSServerOperations.
+  fullName: azure-asm-compute.DNSServerOperations
+  type: Class
+  children:
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  langs:
+  - js
+- id: azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  uid: azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: DNSServerOperations(client)
+  fullName: azure-asm-compute.DNSServerOperations.DNSServerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new DNSServerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: addDNSServer(serviceName, deploymentName, parameters, callback)
+  summary: Agregue una definición para un servidor DNS a una implementación existente. La máquina virtual en esta implementación se programarán para usar este servidor DNS para todas las resoluciones DNS
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.addDNSServer(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nombre de la implementación.
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSAddParameters
+      description: Parámetros proporcionados a la operación de agregar servidor DNS.
+    - id: parameters.name
+      type:
+      - string
+      description: Nombre del servidor DNS.
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: Dirección IP del servidor DNS
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function addDNSServer(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  summary: Agregue una definición para un servidor DNS a una implementación existente. La máquina virtual en esta implementación se programarán para usar este servidor DNS para todas las resoluciones DNS
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nombre de la implementación.
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSAddParameters
+      description: Parámetros proporcionados a la operación de agregar servidor DNS.
+    - id: parameters.name
+      type:
+      - string
+      description: Nombre del servidor DNS.
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: Dirección IP del servidor DNS
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  summary: Elimina una definición para un servidor DNS existente de la implementación
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nombre de la implementación.
+    - id: dnsServerName
+      type:
+      - string
+      description: El nombre del servidor dns.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  summary: Actualiza una definición para un servidor DNS existente. Las actualizaciones de dirección es el único cambio permitido. No se puede cambiar el nombre del servidor DNS
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nombre de la implementación.
+    - id: dnsServerName
+      type:
+      - string
+      description: El nombre del servidor dns.
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSUpdateParameters
+      description: Parámetros proporcionados a la operación del servidor de actualización DNS.
+    - id: parameters.name
+      type:
+      - string
+      description: Nombre del servidor DNS.
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: Dirección IP del servidor DNS
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  summary: Elimina una definición para un servidor DNS existente de la implementación
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nombre de la implementación.
+    - id: dnsServerName
+      type:
+      - string
+      description: El nombre del servidor dns.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  summary: Actualiza una definición para un servidor DNS existente. Las actualizaciones de dirección es el único cambio permitido. No se puede cambiar el nombre del servidor DNS
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del servicio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nombre de la implementación.
+    - id: dnsServerName
+      type:
+      - string
+      description: El nombre del servidor dns.
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSUpdateParameters
+      description: Parámetros proporcionados a la operación del servidor de actualización DNS.
+    - id: parameters.name
+      type:
+      - string
+      description: Nombre del servidor DNS.
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: Dirección IP del servidor DNS
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  langs:
+  - js

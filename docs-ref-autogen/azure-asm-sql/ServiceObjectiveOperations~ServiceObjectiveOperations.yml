@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 40daf86560c1ab196e064a59d536ef2a11f14760
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071739"
+items:
+- uid: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  id: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  name: ServiceObjectiveOperations
+  summary: >-
+    Esta clase proporciona métodos para obtener un objetivo de servicio específica mediante su identificador o lista de todos los objetivos de servicio en un servidor.
+
+    __Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Consulte [serviceObjectives] {@link SqlManagementClient ~ SqlManagementClient #serviceObjectives}.
+
+    Inicializa una nueva instancia de la clase ServiceObjectiveOperations.
+  fullName: azure-asm-sql.ServiceObjectiveOperations
+  type: Class
+  children:
+  - azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.#ctor
+  - azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#get
+  - azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.#ctor
+  uid: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.#ctor
+  parent: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  name: ServiceObjectiveOperations(client)
+  fullName: azure-asm-sql.ServiceObjectiveOperations.ServiceObjectiveOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new ServiceObjectiveOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#get
+  id: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#get
+  parent: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  name: get(serverName, serviceObjectiveId, callback)
+  summary: Devuelve información acerca de un determinado objetivo de servicio con un identificador específico.
+  fullName: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.get(serverName, serviceObjectiveId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: El nombre del servidor de base de datos SQL de Azure van a consultar.
+    - id: serviceObjectiveId
+      type:
+      - string
+      description: El identificador del objetivo de servicio va a obtener.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: La secuencia de respuesta.
+    content: function get(serverName, serviceObjectiveId, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#list
+  id: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations#list
+  parent: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  name: list(serverName, callback)
+  summary: Devuelve información acerca de todos los objetivos de servicio en un servidor de base de datos de SQL Azure.
+  fullName: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: El nombre del servidor de base de datos SQL de Azure van a consultar.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: La secuencia de respuesta.
+    content: function list(serverName, callback)
+  langs:
+  - js

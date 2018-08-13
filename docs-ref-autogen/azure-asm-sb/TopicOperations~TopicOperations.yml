@@ -1,0 +1,457 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 234c7d4787f94e746b51b21ae9c34f399226b55e
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071661"
+items:
+- uid: azure-asm-sb.TopicOperations~TopicOperations
+  id: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations
+  summary: >-
+    La API de administración de Service Bus incluye operaciones para administrar temas del Bus de servicio para un espacio de nombres.
+
+    __Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}.
+
+    Consulte [temas] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #topics}.
+
+    Inicializa una nueva instancia de la clase TopicOperations.
+  fullName: azure-asm-sb.TopicOperations
+  type: Class
+  children:
+  - azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  - azure-asm-sb.TopicOperations~TopicOperations#create
+  - azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  - azure-asm-sb.TopicOperations~TopicOperations#get
+  - azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  - azure-asm-sb.TopicOperations~TopicOperations#list
+  - azure-asm-sb.TopicOperations~TopicOperations#update
+  langs:
+  - js
+- id: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  uid: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations(client)
+  fullName: azure-asm-sb.TopicOperations.TopicOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new TopicOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#create
+  id: azure-asm-sb.TopicOperations~TopicOperations#create
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: create(namespaceName, topic, callback)
+  summary: Crea un nuevo tema. Una vez creado, este manifiesto de recurso del tema es inmutable. Esta operación no es idempotente. Si se repite la llamada de creación después de un tema con el mismo nombre se ha creado correctamente, se producirá un mensaje de error de conflicto 409.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh780728.aspx para obtener más información)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.create(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: El espacio de nombres.
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: El tema de Service Bus.
+    - id: topic.name
+      type:
+      - string
+      description: El nombre del tema.
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        Determina cuánto tiempo un mensaje que se encuentra en las suscripciones asociadas. Las suscripciones heredan el TTL del tema a menos que se crean explícitamente con un TTL menor.
+
+        En función de si está habilitado de mensajes fallidos, un mensaje que haya expirado se moverá a la DeadLtterQueue asociada la suscripción o se eliminarán permanentemente. Los valores siguientes son configurables en el momento de creación de tema: * intervalo: 1 segundo - TimeSpan.MaxValue* predeterminado: TimeSpan.MaxValue
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: 'Especifica el tamaño máximo del tema en megabytes. Cualquier intento de poner en cola un mensaje que hará que el tema supere este valor se producirá un error. Todos los mensajes que se almacenan en el tema o cualquiera de sus suscripciones cuentan para este valor. Varias copias de un mensaje que residen en una o varias suscripciones cuentan como un único mensaje. Por ejemplo, si existe una vez mensaje m en suscripción s1 y dos veces en la suscripción s2, m se cuenta como un único mensaje. Este parámetro solo se puede establecer en el momento de creación de tema con los valores siguientes: * intervalo: 1-5*1024 MB* predeterminado: 1 * 1024'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 'Si está habilitada, el tema detectará los mensajes duplicados dentro del intervalo de tiempo especificado por la propiedad DuplicateDetectionHistoryTimeWindow. Configurable solo en el tema Creación tiempo.* predeterminado: false'
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Especifica el intervalo de tiempo durante el cual el Bus de servicio detectará el mensaje duplication.* intervalo: 1 segundo - 7 días * predeterminado: 10 minutos'
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: Habilita o deshabilita el comportamiento por lotes cuando se realizan operaciones en la cola especificada en el servicio. Cuando se habilita, el bus de servicio se recopilar/varias operaciones por lotes para el back-end para que tenga una conexión más eficaz. Si el usuario desea una menor latencia de operación, a continuación, puede deshabilitar esta característica.
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: 'Refleja los bytes reales en la cuota del tema que ocupan los mensajes en el tema. (solo lectura) * intervalo: 0 - MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: Obtiene o establece si se deben filtrar los mensajes antes de la publicación.
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: Obtiene si se permite el acceso anónimo.
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: Obtiene las reglas de autorización para la descripción.
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: Obtiene o establece el estado actual del tema (habilitada o deshabilitada). Cuando se desactiva un tema, ese tema no se puede enviar o recibir mensajes.
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: La hora en que se creó la cola.
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: La hora en que se actualizó por última vez la cola.
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: La hora de último acceso a la cola.
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: Obtiene o establece si los temas se pueden ordenar.
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: Estadísticas de cola actual.
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: El número actual de mensajes activos.
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: El número actual de problemas de entrega.
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: El número actual de los mensajes programados.
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: El número actual de transferencia de entrega.
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: El número actual de mensajes de transferencia.
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: El número actual de las suscripciones al tema.
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: Implementa.
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: El estado de disponibilidad actual del tema.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: La secuencia de respuesta.
+    content: function create(namespaceName, topic, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  id: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: deleteMethod(namespaceName, topicName, callback)
+  summary: Elimina un tema existente. Esta operación también quitará todos los Estados asociados, incluidas las suscripciones asociadas.  (consulte http://msdn.microsoft.com/en-us/library/hh780721.aspx para obtener más información)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.deleteMethod(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: El espacio de nombres.
+    - id: topicName
+      type:
+      - string
+      description: El tema.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: La secuencia de respuesta.
+    content: function deleteMethod(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#get
+  id: azure-asm-sb.TopicOperations~TopicOperations#get
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: get(namespaceName, topicName, callback)
+  summary: La descripción del tema es un documento AtomPub XML que define la semántica deseada para un tema. La descripción del tema contiene las siguientes propiedades. Para obtener más información, vea el tema de las propiedades de TopicDescription.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh780749.aspx para obtener más información)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.get(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: El espacio de nombres.
+    - id: topicName
+      type:
+      - string
+      description: El tema.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: La secuencia de respuesta.
+    content: function get(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  id: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: getConnectionDetails(namespaceName, topicName, callback)
+  summary: Obtiene el conjunto de cadenas de conexión para un tema.
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.getConnectionDetails(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: El espacio de nombres.
+    - id: topicName
+      type:
+      - string
+      description: El tema.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: La secuencia de respuesta.
+    content: function getConnectionDetails(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#list
+  id: azure-asm-sb.TopicOperations~TopicOperations#list
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: list(namespaceName, callback)
+  summary: Enumera los temas en el espacio de nombres de servicio. Se devuelve una fuente vacía si no existe ningún tema en el espacio de nombres de servicio.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh780744.aspx para obtener más información)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.list(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: El espacio de nombres.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: La secuencia de respuesta.
+    content: function list(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#update
+  id: azure-asm-sb.TopicOperations~TopicOperations#update
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: update(namespaceName, topic, callback)
+  summary: Actualiza un tema.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj839740.aspx para obtener más información)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.update(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: El espacio de nombres.
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: El tema de Service Bus.
+    - id: topic.name
+      type:
+      - string
+      description: El nombre del tema.
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        Determina cuánto tiempo un mensaje que se encuentra en las suscripciones asociadas. Las suscripciones heredan el TTL del tema a menos que se crean explícitamente con un TTL menor.
+
+        En función de si está habilitado de mensajes fallidos, un mensaje que haya expirado se moverá a la DeadLtterQueue asociada la suscripción o se eliminarán permanentemente. Los valores siguientes son configurables en el momento de creación de tema: * intervalo: 1 segundo - TimeSpan.MaxValue* predeterminado: TimeSpan.MaxValue
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: 'Especifica el tamaño máximo del tema en megabytes. Cualquier intento de poner en cola un mensaje que hará que el tema supere este valor se producirá un error. Todos los mensajes que se almacenan en el tema o cualquiera de sus suscripciones cuentan para este valor. Varias copias de un mensaje que residen en una o varias suscripciones cuentan como un único mensaje. Por ejemplo, si existe una vez mensaje m en suscripción s1 y dos veces en la suscripción s2, m se cuenta como un único mensaje. Este parámetro solo se puede establecer en el momento de creación de tema con los valores siguientes: * intervalo: 1-5*1024 MB* predeterminado: 1 * 1024'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 'Si está habilitada, el tema detectará los mensajes duplicados dentro del intervalo de tiempo especificado por la propiedad DuplicateDetectionHistoryTimeWindow. Configurable solo en el tema Creación tiempo.* predeterminado: false'
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Especifica el intervalo de tiempo durante el cual el Bus de servicio detectará el mensaje duplication.* intervalo: 1 segundo - 7 días * predeterminado: 10 minutos'
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: Habilita o deshabilita el comportamiento por lotes cuando se realizan operaciones en la cola especificada en el servicio. Cuando se habilita, el bus de servicio se recopilar/varias operaciones por lotes para el back-end para que tenga una conexión más eficaz. Si el usuario desea una menor latencia de operación, a continuación, puede deshabilitar esta característica.
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: 'Refleja los bytes reales en la cuota del tema que ocupan los mensajes en el tema. (solo lectura) * intervalo: 0 - MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: Obtiene o establece si se deben filtrar los mensajes antes de la publicación.
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: Obtiene si se permite el acceso anónimo.
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: Obtiene las reglas de autorización para la descripción.
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: Obtiene o establece el estado actual del tema (habilitada o deshabilitada). Cuando se desactiva un tema, ese tema no se puede enviar o recibir mensajes.
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: La hora en que se creó la cola.
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: La hora en que se actualizó por última vez la cola.
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: La hora de último acceso a la cola.
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: Obtiene o establece si los temas se pueden ordenar.
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: Estadísticas de cola actual.
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: El número actual de mensajes activos.
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: El número actual de problemas de entrega.
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: El número actual de los mensajes programados.
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: El número actual de transferencia de entrega.
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: El número actual de mensajes de transferencia.
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: El número actual de las suscripciones al tema.
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: Implementa.
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: El estado de disponibilidad actual del tema.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: La secuencia de respuesta.
+    content: function update(namespaceName, topic, callback)
+  langs:
+  - js

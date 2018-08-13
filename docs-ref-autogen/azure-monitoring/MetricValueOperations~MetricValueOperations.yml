@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: cf3bdfc5b6306b16e367aae954b28649f09a5308
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071808"
+items:
+- uid: azure-monitoring.MetricValueOperations~MetricValueOperations
+  id: azure-monitoring.MetricValueOperations~MetricValueOperations
+  name: MetricValueOperations
+  summary: >-
+    __Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [MetricsClient] <xref:azure-monitoring.MetricsClient~MetricsClient>.
+
+    Consulte [metricValues] <xref:azure-monitoring.MetricsClient~MetricsClient%23metricValues>.
+
+    Inicializa una nueva instancia de la clase MetricValueOperations.
+  fullName: azure-monitoring.MetricValueOperations
+  type: Class
+  children:
+  - azure-monitoring.MetricValueOperations~MetricValueOperations.#ctor
+  - azure-monitoring.MetricValueOperations~MetricValueOperations#list
+  langs:
+  - js
+- id: azure-monitoring.MetricValueOperations~MetricValueOperations.#ctor
+  uid: azure-monitoring.MetricValueOperations~MetricValueOperations.#ctor
+  parent: azure-monitoring.MetricValueOperations~MetricValueOperations
+  name: MetricValueOperations(client)
+  fullName: azure-monitoring.MetricValueOperations.MetricValueOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedMetricsClient
+      description: Referencia para el cliente del servicio.
+    content: new MetricValueOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.MetricValueOperations~MetricValueOperations#list
+  id: azure-monitoring.MetricValueOperations~MetricValueOperations#list
+  parent: azure-monitoring.MetricValueOperations~MetricValueOperations
+  name: list(resourceId, metricNames, metricNamespace, timeGrain, startTime, endTime, callback)
+  summary: La operación de valor de métrica de la lista enumera los conjuntos de valor de métrica para las métricas de recursos.
+  fullName: azure-monitoring.MetricValueOperations~MetricValueOperations.list(resourceId, metricNames, metricNamespace, timeGrain, startTime, endTime, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: El identificador del recurso.
+    - id: metricNames
+      type:
+      - Array
+      description: Los nombres de las métricas.
+    - id: metricNamespace
+      type:
+      - string
+      description: El espacio de nombres de las métricas.
+      optional: true
+    - id: timeGrain
+      type:
+      - azure-monitoring.TimeSpan
+      description: El intervalo de agregación de las métricas.
+    - id: startTime
+      type:
+      - Date
+      description: La hora de inicio (en UTC) de las métricas.
+    - id: endTime
+      type:
+      - Date
+      description: La hora de finalización (en UTC) de las métricas.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: La secuencia de respuesta.
+    content: function list(resourceId, metricNames, metricNamespace, timeGrain, startTime, endTime, callback)
+  langs:
+  - js

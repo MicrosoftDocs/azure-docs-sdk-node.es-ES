@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: da3e7585cc8649d17699a945508b1a30766024a0
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071651"
+items:
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: ServiceCertificateOperations
+  summary: >-
+    Operaciones para administrar certificados de servicio para la suscripción.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee795178.aspx para obtener más información) __Nota__: se crea automáticamente una instancia de esta clase para una instancia de la [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    Consulte [serviceCertificates] {@link ComputeManagementClient ~ ComputeManagementClient #serviceCertificates}.
+
+    Inicializa una nueva instancia de la clase ServiceCertificateOperations.
+  fullName: azure-asm-compute.ServiceCertificateOperations
+  type: Class
+  children:
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  langs:
+  - js
+- id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: ServiceCertificateOperations(client)
+  fullName: azure-asm-compute.ServiceCertificateOperations.ServiceCertificateOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new ServiceCertificateOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: beginCreating(serviceName, parameters, callback)
+  summary: La operación de empezar a crear certificado de servicio agrega un certificado a un servicio hospedado. Esta operación es una operación asincrónica. Para determinar si el servicio de administración ha terminado de procesar la solicitud, llame a Get Operation Status.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx para obtener más información)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.beginCreating(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del prefijo DNS del servicio.
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateCreateParameters
+      description: Parámetros proporcionados a la operación de empezar a crear certificado de servicio.
+    - id: parameters.data
+      type:
+      - azure-asm-compute.buffer
+      description: El archivo pfx o cer.
+    - id: parameters.certificateFormat
+      type:
+      - azure-asm-compute.CertificateFormat
+      description: El formato del certificado de servicio. Azure admite los formatos de archivo pfx y cer.
+    - id: parameters.password
+      type:
+      - string
+      description: >-
+        La contraseña de un certificado pfx.
+
+        Un certificado cer no requiere una contraseña.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginCreating(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: beginDeleting(parameters, callback)
+  summary: La operación de empezar a eliminar certificado de servicio elimina un certificado de servicio del almacén de certificados de un servicio hospedado. Esta operación es una operación asincrónica. Para determinar si el servicio de administración ha terminado de procesar la solicitud, llame a Get Operation Status.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx para obtener más información)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.beginDeleting(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateDeleteParameters
+      description: Parámetros proporcionados a la operación de empezar a eliminar certificado de servicio.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: El nombre del prefijo DNS del servicio.
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: El algoritmo de huella digital del certificado.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: La representación hexadecimal de la huella digital.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginDeleting(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: create(serviceName, parameters, callback)
+  summary: La operación de crear el certificado de servicio agrega un certificado a un servicio hospedado. Esta operación es una operación asincrónica. Para determinar si el servicio de administración ha terminado de procesar la solicitud, llame a Get Operation Status.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx para obtener más información)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.create(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del prefijo DNS del servicio.
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateCreateParameters
+      description: Parámetros proporcionados a la operación de crear el certificado de servicio.
+    - id: parameters.data
+      type:
+      - azure-asm-compute.buffer
+      description: El archivo pfx o cer.
+    - id: parameters.certificateFormat
+      type:
+      - azure-asm-compute.CertificateFormat
+      description: El formato del certificado de servicio. Azure admite los formatos de archivo pfx y cer.
+    - id: parameters.password
+      type:
+      - string
+      description: >-
+        La contraseña de un certificado pfx.
+
+        Un certificado cer no requiere una contraseña.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function create(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: deleteMethod(parameters, callback)
+  summary: La operación de eliminar el certificado de servicio elimina un certificado de servicio del almacén de certificados de un servicio hospedado. Esta operación es una operación asincrónica. Para determinar si el servicio de administración ha terminado de procesar la solicitud, llame a Get Operation Status.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx para obtener más información)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.deleteMethod(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateDeleteParameters
+      description: Parámetros proporcionados a la operación de eliminar el certificado de servicio.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: El nombre del prefijo DNS del servicio.
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: El algoritmo de huella digital del certificado.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: La representación hexadecimal de la huella digital.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function deleteMethod(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: get(parameters, callback)
+  summary: La operación de obtener el certificado de servicio devuelve datos públicos para el certificado X.509 especificado asociado a un servicio hospedado.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460792.aspx para obtener más información)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.get(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateGetParameters
+      description: Parámetros proporcionados a la operación de obtener el certificado de servicio.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: El nombre del prefijo DNS del servicio.
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: El algoritmo de huella digital del certificado.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: La representación hexadecimal de la huella digital.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function get(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: list(serviceName, callback)
+  summary: La operación de certificados de servicio de lista muestra todos los certificados de servicio asociados con el servicio hospedado especificado.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx para obtener más información)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.list(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: El nombre del prefijo DNS del servicio hospedado.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function list(serviceName, callback)
+  langs:
+  - js

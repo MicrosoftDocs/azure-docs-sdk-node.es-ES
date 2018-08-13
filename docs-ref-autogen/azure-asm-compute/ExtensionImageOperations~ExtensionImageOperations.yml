@@ -1,0 +1,929 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ac1e20f410103a7d8236e85e78387bc84acda4ef
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40071673"
+items:
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations
+  summary: >-
+    La API de administración de servicios incluye operaciones para administrar el servicio y las imágenes de la extensión de máquina virtual en la suscripción del publicador.
+
+    __Tenga en cuenta__: se crea automáticamente una instancia de esta clase para una instancia de la [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    Consulte [extensionImages] {@link ComputeManagementClient ~ ComputeManagementClient #extensionImages}.
+
+    Inicializa una nueva instancia de la clase ExtensionImageOperations.
+  fullName: azure-asm-compute.ExtensionImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations(client)
+  fullName: azure-asm-compute.ExtensionImageOperations.ExtensionImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Referencia para el cliente del servicio.
+    content: new ExtensionImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginRegistering(parameters, callback)
+  summary: Registrar una nueva extensión. Una extensión se identifica mediante la combinación de sus ProviderNamespace y el tipo (cadena distingue mayúsculas de minúsculas). No se permite para registrar una extensión con la misma identidad (es decir, la combinación de ProviderNamespace y tipo) de una extensión ya registrado. Para registrar la nueva versión de una extensión existente, debe usarse la API de extensión de la actualización.
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginRegistering(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: Parámetros proporcionados a la operación de registro de imagen de extensión de máquina Virtual.
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: Necesario. El espacio de nombres del proveedor de la extensión.
+    - id: parameters.type
+      type:
+      - string
+      description: Necesario. El tipo de la extensión.
+    - id: parameters.version
+      type:
+      - string
+      description: Necesario. La versión de la extensión.
+    - id: parameters.label
+      type:
+      - string
+      description: Necesario. Una etiqueta de una línea de la extensión.
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        Necesario. Los recursos de hospedaje compatibles. Debe contener 'WebRole' o 'WorkerRole'. Por ejemplo,
+
+        ' WebRole | WorkerRole' o ' WebRole | WorkerRole | Rol de máquina virtual '.
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: Necesario. Cadena URI que apunta al paquete ZIP de la extensión. El paquete ZIP debe incluir la extensión de archivo ejecutable y otros archivos auxiliares y el manifiesto PluginManifest.xml. Valor de MediaLink debe apuntar a una dirección URL (Http o Https) en un almacenamiento de blobs de Azure y descargable. Windows Azure copiará el paquete de extensión desde esta ubicación de origen y replicarla en todas las regiones. Tiempo para completar la replicación típico es de 20 minutos.
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: Opcional. Parámetros del certificado para cifrar los datos de configuración privada. Admitidas en WebRole o WorkerRole, pero VmRole omitido en.
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: Se requiere para la declaración de certificado. La ubicación del almacén de certificados de Windows para instalar el certificado para el cifrado, si es necesario. Su valor debe ser 'LocalMachine' Si está presente.
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: Opcional. El nombre del almacén de certificados de Windows para instalar el certificado para el cifrado, si es necesario. Su valor debe ser 'My' Si está presente.
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        Opcional.
+
+        Si se requiere para el certificado para el cifrado de huella digital o no.
+
+        Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: Opcional. El algoritmo de huella digital del certificado para el cifrado, si es necesario. Su valor debe ser "sha1" Si está presente.
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: Opcional. Declara los puntos de conexión para agregar automáticamente a cada implementación con esta extensión agregada.
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: Opcional. Una lista de extremos de entrada requeridos por esta extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada extremo de entrada se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        Opcional.
+
+        Una lista de puntos de conexión internos requeridos por esta extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada punto de conexión interno se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        Opcional. Una lista de extremos de entrada de instancia requeridos por esta extensión.
+
+        Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada extremo de entrada de instancia se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: Opcional. El esquema XSD de datos de configuración pública.
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: Opcional. El esquema XSD de datos de configuración privada.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Necesario. Descripción detallada de la extensión.
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: Opcional. Texto de nombre del publicador.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Publicador puede establecerlo en cualquier fecha arbitrario, y esto es solo con fines de presentación. Si no se especifica por publicador, Azure asignará automáticamente la hora UTC cuando se recibió la solicitud de extensión.
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: Declarado dentro de la máquina virtual invitada usando la extensión de recursos locales. Opcional.
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: Opcional. Su valor debe ser 'verdadero' o 'false' (distingue mayúsculas de minúsculas) cuando se establece en 'true', el inicio del rol se bloquearán hasta que se complete la instalación de la extensión. Esta marca debe establecerse en 'true' cuando el rol no se puede iniciar sin la extensión está instalada. Si se establece en 'false' (valor predeterminado), el rol se iniciará sin esperar a que finalice la instalación de extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en.
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', la extensión no está visible para uso público, es decir, que se devuelven desde la API de lista. Se puede acceder sigue haciendo referencia a la combinación ProviderNamespace, tipo y versión. Por lo tanto, una extensión interna está pensada solo para fines de prueba. Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: Opcional. Un ejemplo de configuración para la extensión. Los usuarios pueden descargar y el usuario puede reemplazar con parámetros de entrada personalizados. La configuración del ejemplo debe ser lo suficientemente comentada. Si los datos de configuración están en formato XML, a continuación, el elemento de nivel de documento XML debe ser 'Configuración' y los datos de configuración pública opcional corresponden a un elemento secundario de 'PublicConfig' y los datos de configuración privada opcional corresponden a un elemento secundario elemento de 'PrivateConfig'. El publicador deben validar los datos de configuración de ejemplo en el esquema de configuración pública y privada.
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: Indica si esta versión de extensión se haya replicado en todas las regiones o no. Si es true, la versión de extensión determinado puede utilizarse en crear o actualizar las implementaciones. En caso contrario, la versión de extensión determinado podría provocar errores crear o actualizar las implementaciones. El tiempo típico es de 20 minutos para una extensión recién registrados o actualizado recientemente replicar completamente por Azure.
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: Opcional. Cadena de dirección URL que apunte a los términos de licencia (contrato de licencia de usuario final) de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Windows Azure de terceros. Si el software requiere que cualquier CLUF adicional, se debe proporcionar un vínculo a los términos de licencia.
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        Opcional. Cadena de dirección URL que apunta al documento de privacidad de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Azure de terceros.
+
+        Si el software recopila los datos y transferencias de la máquina virtual invitada, podría ser necesario un documento de privacidad adicional.
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: Opcional. Cadena de dirección URL que apunta a la página principal de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Azure de terceros. La página principal debe tener información de uso y la información de contacto de soporte al cliente.
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', la extensión se espera para recibir la configuración basada en JSON. Si se establece en 'false' la extensión se espera para recibir la configuración basada en XML. Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', que la versión de extensión no se puede actualizar a desde otras versiones principales en implementaciones activas. Si el valor es 'false' o ni está presente, se puede actualizar a la versión de extensión desde cualquier otra versión. No se admite la degradación. El valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: Propiedad de cadena que indica el sistema operativo que es compatible con la extensión. Los valores actuales son 'Windows' o 'Linux'.
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: Propiedad de cadena que contiene el nombre de la empresa u organización que publica la extensión.
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: Propiedad de cadena que contiene el nombre de las regiones necesarias para el segmento.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginRegistering(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUnregistering(providerNamespace, type, version, callback)
+  summary: >-
+    Anular el registro de una versión de una extensión que se registró previamente con la extensión de registrar o las API de extensión de actualización. Una versión de extensión se identifica mediante la combinación de sus ProviderNamespace, tipo y versión que se especifican al registrar la extensión.
+
+    Al anular el registro solo se permiten para extensiones internas, es decir, las extensiones para el que el campo Esextensióninterna se establece en 'true' durante el registro o durante una actualización. Hay una cuota (15) en el número de extensiones que se pueden registrar por suscripción. Si la suscripción se ejecuta fuera de la cuota, se casos la necesidad de anular el registro de algunas de las extensiones internas o póngase en contacto con Azure (mismo correo electrónico usado para convertirse en anunciante) para aumentar la cuota.
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUnregistering(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: El espacio de nombres del proveedor de la imagen de la extensión para anular el registro.
+    - id: type
+      type:
+      - string
+      description: El tipo de la imagen de la extensión para anular el registro.
+    - id: version
+      type:
+      - string
+      description: La versión de la imagen de la extensión para anular el registro.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginUnregistering(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUpdating(parameters, callback)
+  summary: Actualizar una extensión de nuevo. Se permite actualizar una extensión que ya registrada con la misma identidad (es decir, la combinación de ProviderNamespace y tipo), pero con otra versión. Se producirá un error si la extensión para actualizar tiene una identidad que no se registró antes o ya hay una extensión con la misma identidad y la misma versión.
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUpdating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: Parámetros proporcionados a la operación de actualización de imagen de extensión de máquina Virtual.
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: Necesario. El espacio de nombres del proveedor de la extensión.
+    - id: parameters.type
+      type:
+      - string
+      description: Necesario. El tipo de la extensión.
+    - id: parameters.version
+      type:
+      - string
+      description: Necesario. La versión de la extensión.
+    - id: parameters.label
+      type:
+      - string
+      description: Necesario. Una etiqueta de una línea de la extensión.
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        Necesario. Los recursos de hospedaje compatibles. Debe contener 'WebRole' o 'WorkerRole'. Por ejemplo,
+
+        ' WebRole | WorkerRole' o ' WebRole | WorkerRole | Rol de máquina virtual '.
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: Necesario. Cadena URI que apunta al paquete ZIP de la extensión. El paquete ZIP debe incluir la extensión de archivo ejecutable y otros archivos auxiliares y el manifiesto PluginManifest.xml. Valor de MediaLink debe apuntar a una dirección URL (Http o Https) en un almacenamiento de blobs de Azure y descargable. Windows Azure copiará el paquete de extensión desde esta ubicación de origen y replicarla en todas las regiones. Tiempo para completar la replicación típico es de 20 minutos.
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: Opcional. Parámetros del certificado para cifrar los datos de configuración privada. Admitidas en WebRole o WorkerRole, pero VmRole omitido en.
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: Se requiere para la declaración de certificado. La ubicación del almacén de certificados de Windows para instalar el certificado para el cifrado, si es necesario. Su valor debe ser 'LocalMachine' Si está presente.
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: Opcional. El nombre del almacén de certificados de Windows para instalar el certificado para el cifrado, si es necesario. Su valor debe ser 'My' Si está presente.
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        Opcional.
+
+        Si se requiere para el certificado para el cifrado de huella digital o no.
+
+        Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: Opcional. El algoritmo de huella digital del certificado para el cifrado, si es necesario. Su valor debe ser "sha1" Si está presente.
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: Opcional. Declara los puntos de conexión para agregar automáticamente a cada implementación con esta extensión agregada.
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: Opcional. Una lista de extremos de entrada requeridos por esta extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada extremo de entrada se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        Opcional.
+
+        Una lista de puntos de conexión internos requeridos por esta extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada punto de conexión interno se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        Opcional. Una lista de extremos de entrada de instancia requeridos por esta extensión.
+
+        Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada extremo de entrada de instancia se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: Opcional. El esquema XSD de datos de configuración pública.
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: Opcional. El esquema XSD de datos de configuración privada.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Necesario. Descripción detallada de la extensión.
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: Opcional. Texto de nombre del publicador.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Publicador puede establecerlo en cualquier fecha arbitrario, y esto es solo con fines de presentación. Si no se especifica por publicador, Azure asignará automáticamente la hora UTC cuando se recibió la solicitud de extensión.
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: Declarado dentro de la máquina virtual invitada usando la extensión de recursos locales. Opcional.
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: Opcional. Su valor debe ser 'verdadero' o 'false' (distingue mayúsculas de minúsculas) cuando se establece en 'true', el inicio del rol se bloquearán hasta que se complete la instalación de la extensión. Esta marca debe establecerse en 'true' cuando el rol no se puede iniciar sin la extensión está instalada. Si se establece en 'false' (valor predeterminado), el rol se iniciará sin esperar a que finalice la instalación de extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en.
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', la extensión no está visible para uso público, es decir, que se devuelven desde la API de lista. Se puede acceder sigue haciendo referencia a la combinación ProviderNamespace, tipo y versión. Por lo tanto, una extensión interna está pensada solo para fines de prueba. Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: Opcional. Un ejemplo de configuración para la extensión. Los usuarios pueden descargar y el usuario puede reemplazar con parámetros de entrada personalizados. La configuración del ejemplo debe ser lo suficientemente comentada. Si los datos de configuración están en formato XML, a continuación, el elemento de nivel de documento XML debe ser 'Configuración' y los datos de configuración pública opcional corresponden a un elemento secundario de 'PublicConfig' y los datos de configuración privada opcional corresponden a un elemento secundario elemento de 'PrivateConfig'. El publicador deben validar los datos de configuración de ejemplo en el esquema de configuración pública y privada.
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: Indica si esta versión de extensión se haya replicado en todas las regiones o no. Si es true, la versión de extensión determinado puede utilizarse en crear o actualizar las implementaciones. En caso contrario, la versión de extensión determinado podría provocar errores crear o actualizar las implementaciones. El tiempo típico es de 20 minutos para una extensión recién registrados o actualizado recientemente replicar completamente por Azure.
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: Opcional. Cadena de dirección URL que apunte a los términos de licencia (contrato de licencia de usuario final) de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Windows Azure de terceros. Si el software requiere que cualquier CLUF adicional, se debe proporcionar un vínculo a los términos de licencia.
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        Opcional. Cadena de dirección URL que apunta al documento de privacidad de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Azure de terceros.
+
+        Si el software recopila los datos y transferencias de la máquina virtual invitada, podría ser necesario un documento de privacidad adicional.
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: Opcional. Cadena de dirección URL que apunta a la página principal de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Azure de terceros. La página principal debe tener información de uso y la información de contacto de soporte al cliente.
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', la extensión se espera para recibir la configuración basada en JSON. Si se establece en 'false' la extensión se espera para recibir la configuración basada en XML. Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', que la versión de extensión no se puede actualizar a desde otras versiones principales en implementaciones activas. Si el valor es 'false' o ni está presente, se puede actualizar a la versión de extensión desde cualquier otra versión. No se admite la degradación. El valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: Propiedad de cadena que indica el sistema operativo que es compatible con la extensión. Los valores actuales son 'Windows' o 'Linux'.
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: Propiedad de cadena que contiene el nombre de la empresa u organización que publica la extensión.
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: Propiedad de cadena que contiene el nombre de las regiones necesarias para el segmento.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function beginUpdating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: register(parameters, callback)
+  summary: Registrar una nueva extensión. Una extensión se identifica mediante la combinación de sus ProviderNamespace y el tipo (cadena distingue mayúsculas de minúsculas). No se permite para registrar una extensión con la misma identidad (es decir, la combinación de ProviderNamespace y tipo) de una extensión ya registrado. Para registrar la nueva versión de una extensión existente, debe usarse la API de extensión de la actualización.
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.register(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: Parámetros proporcionados a la operación de registro de imagen de extensión de máquina Virtual.
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: Necesario. El espacio de nombres del proveedor de la extensión.
+    - id: parameters.type
+      type:
+      - string
+      description: Necesario. El tipo de la extensión.
+    - id: parameters.version
+      type:
+      - string
+      description: Necesario. La versión de la extensión.
+    - id: parameters.label
+      type:
+      - string
+      description: Necesario. Una etiqueta de una línea de la extensión.
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        Necesario. Los recursos de hospedaje compatibles. Debe contener 'WebRole' o 'WorkerRole'. Por ejemplo,
+
+        ' WebRole | WorkerRole' o ' WebRole | WorkerRole | Rol de máquina virtual '.
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: Necesario. Cadena URI que apunta al paquete ZIP de la extensión. El paquete ZIP debe incluir la extensión de archivo ejecutable y otros archivos auxiliares y el manifiesto PluginManifest.xml. Valor de MediaLink debe apuntar a una dirección URL (Http o Https) en un almacenamiento de blobs de Azure y descargable. Windows Azure copiará el paquete de extensión desde esta ubicación de origen y replicarla en todas las regiones. Tiempo para completar la replicación típico es de 20 minutos.
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: Opcional. Parámetros del certificado para cifrar los datos de configuración privada. Admitidas en WebRole o WorkerRole, pero VmRole omitido en.
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: Se requiere para la declaración de certificado. La ubicación del almacén de certificados de Windows para instalar el certificado para el cifrado, si es necesario. Su valor debe ser 'LocalMachine' Si está presente.
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: Opcional. El nombre del almacén de certificados de Windows para instalar el certificado para el cifrado, si es necesario. Su valor debe ser 'My' Si está presente.
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        Opcional.
+
+        Si se requiere para el certificado para el cifrado de huella digital o no.
+
+        Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: Opcional. El algoritmo de huella digital del certificado para el cifrado, si es necesario. Su valor debe ser "sha1" Si está presente.
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: Opcional. Declara los puntos de conexión para agregar automáticamente a cada implementación con esta extensión agregada.
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: Opcional. Una lista de extremos de entrada requeridos por esta extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada extremo de entrada se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        Opcional.
+
+        Una lista de puntos de conexión internos requeridos por esta extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada punto de conexión interno se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        Opcional. Una lista de extremos de entrada de instancia requeridos por esta extensión.
+
+        Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada extremo de entrada de instancia se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: Opcional. El esquema XSD de datos de configuración pública.
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: Opcional. El esquema XSD de datos de configuración privada.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Necesario. Descripción detallada de la extensión.
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: Opcional. Texto de nombre del publicador.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Publicador puede establecerlo en cualquier fecha arbitrario, y esto es solo con fines de presentación. Si no se especifica por publicador, Azure asignará automáticamente la hora UTC cuando se recibió la solicitud de extensión.
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: Declarado dentro de la máquina virtual invitada usando la extensión de recursos locales. Opcional.
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: Opcional. Su valor debe ser 'verdadero' o 'false' (distingue mayúsculas de minúsculas) cuando se establece en 'true', el inicio del rol se bloquearán hasta que se complete la instalación de la extensión. Esta marca debe establecerse en 'true' cuando el rol no se puede iniciar sin la extensión está instalada. Si se establece en 'false' (valor predeterminado), el rol se iniciará sin esperar a que finalice la instalación de extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en.
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', la extensión no está visible para uso público, es decir, que se devuelven desde la API de lista. Se puede acceder sigue haciendo referencia a la combinación ProviderNamespace, tipo y versión. Por lo tanto, una extensión interna está pensada solo para fines de prueba. Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: Opcional. Un ejemplo de configuración para la extensión. Los usuarios pueden descargar y el usuario puede reemplazar con parámetros de entrada personalizados. La configuración del ejemplo debe ser lo suficientemente comentada. Si los datos de configuración están en formato XML, a continuación, el elemento de nivel de documento XML debe ser 'Configuración' y los datos de configuración pública opcional corresponden a un elemento secundario de 'PublicConfig' y los datos de configuración privada opcional corresponden a un elemento secundario elemento de 'PrivateConfig'. El publicador deben validar los datos de configuración de ejemplo en el esquema de configuración pública y privada.
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: Indica si esta versión de extensión se haya replicado en todas las regiones o no. Si es true, la versión de extensión determinado puede utilizarse en crear o actualizar las implementaciones. En caso contrario, la versión de extensión determinado podría provocar errores crear o actualizar las implementaciones. El tiempo típico es de 20 minutos para una extensión recién registrados o actualizado recientemente replicar completamente por Azure.
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: Opcional. Cadena de dirección URL que apunte a los términos de licencia (contrato de licencia de usuario final) de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Windows Azure de terceros. Si el software requiere que cualquier CLUF adicional, se debe proporcionar un vínculo a los términos de licencia.
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        Opcional. Cadena de dirección URL que apunta al documento de privacidad de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Azure de terceros.
+
+        Si el software recopila los datos y transferencias de la máquina virtual invitada, podría ser necesario un documento de privacidad adicional.
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: Opcional. Cadena de dirección URL que apunta a la página principal de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Azure de terceros. La página principal debe tener información de uso y la información de contacto de soporte al cliente.
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', la extensión se espera para recibir la configuración basada en JSON. Si se establece en 'false' la extensión se espera para recibir la configuración basada en XML. Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', que la versión de extensión no se puede actualizar a desde otras versiones principales en implementaciones activas. Si el valor es 'false' o ni está presente, se puede actualizar a la versión de extensión desde cualquier otra versión. No se admite la degradación. El valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: Propiedad de cadena que indica el sistema operativo que es compatible con la extensión. Los valores actuales son 'Windows' o 'Linux'.
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: Propiedad de cadena que contiene el nombre de la empresa u organización que publica la extensión.
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: Propiedad de cadena que contiene el nombre de las regiones necesarias para el segmento.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function register(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: unregister(providerNamespace, type, version, callback)
+  summary: >-
+    Anular el registro de una versión de una extensión que se registró previamente con la extensión de registrar o las API de extensión de actualización. Una versión de extensión se identifica mediante la combinación de sus ProviderNamespace, tipo y versión que se especifican al registrar la extensión.
+
+    Al anular el registro solo se permiten para extensiones internas, es decir, las extensiones para el que el campo Esextensióninterna se establece en 'true' durante el registro o durante una actualización. Hay una cuota (15) en el número de extensiones que se pueden registrar por suscripción. Si la suscripción se ejecuta fuera de la cuota, se casos la necesidad de anular el registro de algunas de las extensiones internas o póngase en contacto con Azure (mismo correo electrónico usado para convertirse en anunciante) para aumentar la cuota.
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.unregister(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: El espacio de nombres del proveedor de la imagen de la extensión para anular el registro.
+    - id: type
+      type:
+      - string
+      description: El tipo de la imagen de la extensión para anular el registro.
+    - id: version
+      type:
+      - string
+      description: La versión de la imagen de la extensión para anular el registro.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function unregister(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: update(parameters, callback)
+  summary: Actualizar una extensión de nuevo. Se permite actualizar una extensión que ya registrada con la misma identidad (es decir, la combinación de ProviderNamespace y tipo), pero con otra versión. Se producirá un error si la extensión para actualizar tiene una identidad que no se registró antes o ya hay una extensión con la misma identidad y la misma versión.
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.update(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: Parámetros proporcionados a la operación de actualización de imagen de extensión de máquina Virtual.
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: Necesario. El espacio de nombres del proveedor de la extensión.
+    - id: parameters.type
+      type:
+      - string
+      description: Necesario. El tipo de la extensión.
+    - id: parameters.version
+      type:
+      - string
+      description: Necesario. La versión de la extensión.
+    - id: parameters.label
+      type:
+      - string
+      description: Necesario. Una etiqueta de una línea de la extensión.
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        Necesario. Los recursos de hospedaje compatibles. Debe contener 'WebRole' o 'WorkerRole'. Por ejemplo,
+
+        ' WebRole | WorkerRole' o ' WebRole | WorkerRole | Rol de máquina virtual '.
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: Necesario. Cadena URI que apunta al paquete ZIP de la extensión. El paquete ZIP debe incluir la extensión de archivo ejecutable y otros archivos auxiliares y el manifiesto PluginManifest.xml. Valor de MediaLink debe apuntar a una dirección URL (Http o Https) en un almacenamiento de blobs de Azure y descargable. Windows Azure copiará el paquete de extensión desde esta ubicación de origen y replicarla en todas las regiones. Tiempo para completar la replicación típico es de 20 minutos.
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: Opcional. Parámetros del certificado para cifrar los datos de configuración privada. Admitidas en WebRole o WorkerRole, pero VmRole omitido en.
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: Se requiere para la declaración de certificado. La ubicación del almacén de certificados de Windows para instalar el certificado para el cifrado, si es necesario. Su valor debe ser 'LocalMachine' Si está presente.
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: Opcional. El nombre del almacén de certificados de Windows para instalar el certificado para el cifrado, si es necesario. Su valor debe ser 'My' Si está presente.
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        Opcional.
+
+        Si se requiere para el certificado para el cifrado de huella digital o no.
+
+        Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: Opcional. El algoritmo de huella digital del certificado para el cifrado, si es necesario. Su valor debe ser "sha1" Si está presente.
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: Opcional. Declara los puntos de conexión para agregar automáticamente a cada implementación con esta extensión agregada.
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: Opcional. Una lista de extremos de entrada requeridos por esta extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada extremo de entrada se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        Opcional.
+
+        Una lista de puntos de conexión internos requeridos por esta extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada punto de conexión interno se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        Opcional. Una lista de extremos de entrada de instancia requeridos por esta extensión.
+
+        Admitidas en WebRole o WorkerRole, pero VmRole omitido en. Cada extremo de entrada de instancia se agregarán automáticamente a la definición de servicio de la implementación mediante esta extensión.
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: Opcional. El esquema XSD de datos de configuración pública.
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: Opcional. El esquema XSD de datos de configuración privada.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Necesario. Descripción detallada de la extensión.
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: Opcional. Texto de nombre del publicador.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Publicador puede establecerlo en cualquier fecha arbitrario, y esto es solo con fines de presentación. Si no se especifica por publicador, Azure asignará automáticamente la hora UTC cuando se recibió la solicitud de extensión.
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: Declarado dentro de la máquina virtual invitada usando la extensión de recursos locales. Opcional.
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: Opcional. Su valor debe ser 'verdadero' o 'false' (distingue mayúsculas de minúsculas) cuando se establece en 'true', el inicio del rol se bloquearán hasta que se complete la instalación de la extensión. Esta marca debe establecerse en 'true' cuando el rol no se puede iniciar sin la extensión está instalada. Si se establece en 'false' (valor predeterminado), el rol se iniciará sin esperar a que finalice la instalación de extensión. Admitidas en WebRole o WorkerRole, pero VmRole omitido en.
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', la extensión no está visible para uso público, es decir, que se devuelven desde la API de lista. Se puede acceder sigue haciendo referencia a la combinación ProviderNamespace, tipo y versión. Por lo tanto, una extensión interna está pensada solo para fines de prueba. Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: Opcional. Un ejemplo de configuración para la extensión. Los usuarios pueden descargar y el usuario puede reemplazar con parámetros de entrada personalizados. La configuración del ejemplo debe ser lo suficientemente comentada. Si los datos de configuración están en formato XML, a continuación, el elemento de nivel de documento XML debe ser 'Configuración' y los datos de configuración pública opcional corresponden a un elemento secundario de 'PublicConfig' y los datos de configuración privada opcional corresponden a un elemento secundario elemento de 'PrivateConfig'. El publicador deben validar los datos de configuración de ejemplo en el esquema de configuración pública y privada.
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: Indica si esta versión de extensión se haya replicado en todas las regiones o no. Si es true, la versión de extensión determinado puede utilizarse en crear o actualizar las implementaciones. En caso contrario, la versión de extensión determinado podría provocar errores crear o actualizar las implementaciones. El tiempo típico es de 20 minutos para una extensión recién registrados o actualizado recientemente replicar completamente por Azure.
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: Opcional. Cadena de dirección URL que apunte a los términos de licencia (contrato de licencia de usuario final) de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Windows Azure de terceros. Si el software requiere que cualquier CLUF adicional, se debe proporcionar un vínculo a los términos de licencia.
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        Opcional. Cadena de dirección URL que apunta al documento de privacidad de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Azure de terceros.
+
+        Si el software recopila los datos y transferencias de la máquina virtual invitada, podría ser necesario un documento de privacidad adicional.
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: Opcional. Cadena de dirección URL que apunta a la página principal de esta versión de extensión. Opcionalmente, esto se especifica mediante la publicación de la extensión en lugar de Azure de terceros. La página principal debe tener información de uso y la información de contacto de soporte al cliente.
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', la extensión se espera para recibir la configuración basada en JSON. Si se establece en 'false' la extensión se espera para recibir la configuración basada en XML. Su valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: Opcional. Si se establece en 'true', que la versión de extensión no se puede actualizar a desde otras versiones principales en implementaciones activas. Si el valor es 'false' o ni está presente, se puede actualizar a la versión de extensión desde cualquier otra versión. No se admite la degradación. El valor debe ser 'true' o 'false' (distingue mayúsculas de minúsculas) si está presente.
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: Propiedad de cadena que indica el sistema operativo que es compatible con la extensión. Los valores actuales son 'Windows' o 'Linux'.
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: Propiedad de cadena que contiene el nombre de la empresa u organización que publica la extensión.
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: Propiedad de cadena que contiene el nombre de las regiones necesarias para el segmento.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: La secuencia de respuesta.
+    content: function update(parameters, callback)
+  langs:
+  - js
