@@ -1,0 +1,200 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 79b5459a632a8e81929c58850cf576b0f722ed7c
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074170"
+items:
+- uid: azure-event-hubs.EventHubSender
+  name: EventHubSender
+  fullName: EventHubSender
+  children:
+  - azure-event-hubs.EventHubSender.close
+  - azure-event-hubs.EventHubSender.create
+  - azure-event-hubs.EventHubSender.detached
+  - azure-event-hubs.EventHubSender.constructor
+  - azure-event-hubs.EventHubSender.isOpen
+  - azure-event-hubs.EventHubSender.send
+  - azure-event-hubs.EventHubSender.sendBatch
+  - azure-event-hubs.EventHubSender.senderLock
+  langs:
+  - typeScript
+  type: class
+  summary: Describe el EventHubSender que enviará datos de eventos al centro de eventos.
+  extends:
+    name: azure-event-hubs.LinkEntity
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: "\"Desvincular\" este remitente, el vínculo de cierre y resolver cuando esa operación completada.\nDeja abierta la conexión subyacente."
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Si no está presente en el contexto o devuelve el presente en el contexto se crea un nuevo remitente al centro de eventos determinado y, opcionalmente, una partición determinada.
+  syntax:
+    content: 'static function create(context: ConnectionContext, partitionId?: string | number)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: ''
+    - id: partitionId
+      type:
+      - string | number
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventHubSender
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.detached
+  name: detached
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Se volverá a conectar el vínculo del remitente si es necesario.
+  syntax:
+    content: 'function detached(senderError?: AmqpError | Error)'
+    parameters:
+    - id: senderError
+      type:
+      - AmqpError | Error
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.constructor
+  name: EventHubSender
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Crea una nueva instancia de EventHubSender.
+  syntax:
+    content: 'new EventHubSender(context: ConnectionContext, partitionId?: string | number, name?: string)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: El contexto de conexión.
+    - id: partitionId
+      type:
+      - string | number
+      description: ''
+      optional: true
+    - id: name
+      type:
+      - string
+      description: ''
+      optional: true
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.isOpen
+  name: isOpen
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Determina si el vínculo del remitente AMQP está abierto. Si está abierta, a continuación, devuelve true else, se devuelve false.
+  syntax:
+    content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.send
+  name: send
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Envía el mensaje especificado, con las opciones especificadas en este vínculo
+  syntax:
+    content: 'function send(data: EventData)'
+    parameters:
+    - id: data
+      type:
+      - azure-event-hubs.EventData
+      description: Mensaje que se enviará.  Se enviará como cadena JSON con codificación UTF8.
+    return:
+      type:
+      - Promise<Delivery>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.sendBatch
+  name: sendBatch
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Enviar un lote de EventData para el centro de eventos. El "message_annotations", "application_properties" y "propiedades" del primer mensaje se establecerá como el de la envoltura (mensaje de lote).
+  syntax:
+    content: 'function sendBatch(datas: EventData[])'
+    parameters:
+    - id: datas
+      type:
+      - azure-event-hubs.EventData[]
+      description: Una matriz de objetos EventData para enviarlo en un mensaje por lotes.
+    return:
+      type:
+      - Promise<Delivery>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubSender.senderLock
+  name: senderLock
+  fullName: senderLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'senderLock: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.LinkEntity
+  spec.typeScript:
+  - name: LinkEntity
+    fullName: LinkEntity
+    uid: azure-event-hubs.LinkEntity
+- uid: azure-event-hubs.ConnectionContext
+  spec.typeScript:
+  - name: ConnectionContext
+    fullName: ConnectionContext
+    uid: azure-event-hubs.ConnectionContext
+- uid: azure-event-hubs.EventData
+  spec.typeScript:
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+- uid: azure-event-hubs.EventData[]
+  spec.typeScript:
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-event-hubs.EventHubSender
+  spec.typeScript:
+  - name: EventHubSender
+    fullName: EventHubSender
+    uid: azure-event-hubs.EventHubSender

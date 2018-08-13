@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: fc9b23253ca4ce2e6ab56c856509d5e5dd75f750
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074343"
+items:
+- uid: azure-event-hubs.retry
+  name: retry
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: Intentará linealmente vuelva a intentar una operación especificada número de veces con un retraso entre cada reintento especificado. Los reintentos se realizará solo si el error es recuperable.
+  syntax:
+    content: 'function retry<T>(operation: () => Promise<T>, times?: number, delayInSeconds?: number)'
+    parameters:
+    - id: operation
+      type:
+      - () => Promise<T>
+      description: La operación que se debe volver a intentarlo.
+    - id: times
+      type:
+      - number
+      description: ''
+      optional: true
+    - id: delayInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<T>
+  package: azure-event-hubs

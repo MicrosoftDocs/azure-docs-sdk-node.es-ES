@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c243adc0c4629aeae4e673c28644ca2761fd80f2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074263"
+items:
+- uid: azure-iot-common.RetryOperation
+  name: RetryOperation
+  fullName: RetryOperation
+  children:
+  - azure-iot-common.RetryOperation.retry
+  - azure-iot-common.RetryOperation.constructor
+  langs:
+  - typeScript
+  type: class
+  summary: Implementa la lógica necesaria para volver a intentar operaciones como conectar, recibir mensajes C2D, enviar telemetría, las actualizaciones de gemelos, etcetera.
+  package: azure-iot-common
+- uid: azure-iot-common.RetryOperation.retry
+  name: retry
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ejecuta una operación y vuelve a intentar si se produce un error y lo permite la directiva de reintentos.
+  syntax:
+    content: 'function retry(operation: (opCallback: (err?: Error, result?: any, response?: any) => void) => void, finalCallback: (err?: Error, result?: any, response?: any) => void)'
+    parameters:
+    - id: operation
+      type:
+      - '(opCallback: (err?: Error, result?: any, response?: any) => void) => void'
+      description: La operación se ejecute.
+    - id: finalCallback
+      type:
+      - '(err?: Error, result?: any, response?: any) => void'
+      description: >
+        La devolución de llamada con el final del error o el resultado, después de reintentos si es necesario.
+  package: azure-iot-common
+- uid: azure-iot-common.RetryOperation.constructor
+  name: RetryOperation
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Crea una instancia de <xref:azure-iot-common.RetryOperation.>
+  syntax:
+    content: 'new RetryOperation(policy: RetryPolicy, maxTimeout: number)'
+    parameters:
+    - id: policy
+      type:
+      - azure-iot-common.RetryPolicy
+      description: La directiva de reintentos que se usa para esta operación, que determina qué tipo de error es "reintentable" o no y a qué velocidad para volver a intentar.
+    - id: maxTimeout
+      type:
+      - number
+      description: >
+        El tiempo de espera máximo para esta operación, después del cual no se intentará ningún reintento.
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.RetryPolicy
+  spec.typeScript:
+  - name: RetryPolicy
+    fullName: RetryPolicy
+    uid: azure-iot-common.RetryPolicy

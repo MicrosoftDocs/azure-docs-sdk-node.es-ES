@@ -1,0 +1,345 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 62975cd56b2bf89e7158907fce365b3a6cebdf51
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40073559"
+items:
+- uid: azure-iothub.Client
+  name: Client
+  fullName: Client
+  children:
+  - azure-iothub.Client.Callback
+  - azure-iothub.Client.close
+  - azure-iothub.Client.fromConnectionString
+  - azure-iothub.Client.fromSharedAccessSignature
+  - azure-iothub.Client.getFeedbackReceiver
+  - azure-iothub.Client.getFileNotificationReceiver
+  - azure-iothub.Client.invokeDeviceMethod
+  - azure-iothub.Client.invokeDeviceMethod_1
+  - azure-iothub.Client.open
+  - azure-iothub.Client.send
+  - azure-iothub.Client.setRetryPolicy
+  - azure-iothub.Client.TransportCtor
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    El cliente del servicio IoT Hub se utiliza para comunicarse con dispositivos a través de un centro de IoT de Azure.
+
+    Permite que el usuario SDK:
+      - enviar el dispositivo a nube (también conocido como comandos) a los dispositivos: los comandos están en cola en IoT Hub y entregados de forma asincrónica solo cuando el dispositivo está conectado. Solo 50 comandos se pueden poner en cola por dispositivo.
+      - invocar métodos directos en dispositivos (que sólo funcionará si el dispositivo está conectado actualmente: es una manera sincrónica de la comunicación con el dispositivo)
+      - escuchar mensajes de comentarios enviados por los dispositivos para los comandos anteriores.
+      - escuchar las notificaciones de carga de archivos desde dispositivos.
+    Los usuarios deben crear nuevos <xref:azure-iothub.Client> instancias llamando a uno de los métodos de fábrica, [fromConnectionString](xref:azure-iothub.Client.fromConnectionString) o [fromSharedAccessSignature](xref:azure-iothub.Client.fromSharedAccessSignature), para crear un cliente de servicio de IoT Hub.
+  extends:
+    name: EventEmitter
+  package: azure-iothub
+- uid: azure-iothub.Client.Callback
+  name: Callback
+  fullName: Callback<T>
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+- uid: azure-iothub.Client.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Cierra la conexión a IoT hub.
+  syntax:
+    content: 'function close(done?: Callback<Disconnected>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<Disconnected>
+      description: >
+        Función que llama una vez completada la operación. `done` se pasará a un argumento de objeto de Error, que será null si la operación se completó correctamente.
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea a un cliente del servicio IoT Hub de la cadena de conexión determinado mediante el transporte predeterminado (Amqp) o el especificado en el segundo argumento.
+  syntax:
+    content: 'static function fromConnectionString(connStr: string, transportCtor?: Client.TransportCtor)'
+    parameters:
+    - id: connStr
+      type:
+      - string
+      description: Una cadena de conexión que encapsula permisos de "conexión de dispositivo" en un centro de IoT.
+    - id: transportCtor
+      type:
+      - azure-iothub.Client.TransportCtor
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-iothub.Client
+  package: azure-iothub
+- uid: azure-iothub.Client.fromSharedAccessSignature
+  name: fromSharedAccessSignature
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea a un cliente del servicio IoT Hub de la firma de acceso compartido determinado mediante el transporte predeterminado (Amqp) o con el especificado en el segundo argumento.
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string, transportCtor?: Client.TransportCtor)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: Una firma de acceso compartido que encapsula permisos de "conexión de servicio" en un centro de IoT.
+    - id: transportCtor
+      type:
+      - azure-iothub.Client.TransportCtor
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-iothub.Client
+  package: azure-iothub
+- uid: azure-iothub.Client.getFeedbackReceiver
+  name: getFeedbackReceiver
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Devuelve un objeto AmqpReceiver que emite eventos cuando se reciben nuevos mensajes de comentarios por el cliente.
+  syntax:
+    content: 'function getFeedbackReceiver(done: Callback<ServiceReceiver>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<azure-iothub.Client.ServiceReceiver>
+      description: >
+        Función que llama una vez completada la operación. `done` se llamará con dos argumentos: un objeto de Error (puede ser null) y un objeto AmqpReceiver.
+  package: azure-iothub
+- uid: azure-iothub.Client.getFileNotificationReceiver
+  name: getFileNotificationReceiver
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Devuelve un objeto AmqpReceiver que emite eventos cuando se reciben nuevas notificaciones de carga de archivo por el cliente.
+  syntax:
+    content: 'function getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<azure-iothub.Client.ServiceReceiver>
+      description: >
+        Función que llama una vez completada la operación. `done` se llamará con dos argumentos: un objeto de Error (puede ser null) y un objeto AmqpReceiver.
+  package: azure-iothub
+- uid: azure-iothub.Client.invokeDeviceMethod
+  name: invokeDeviceMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Invoca un método en un determinado dispositivo o módulo.
+  syntax:
+    content: 'function invokeDeviceMethod(deviceId: string, methodParams: DeviceMethodParams, done?: Callback<any>)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: El identificador de una identidad de dispositivo existente.
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<any>
+      description: >
+        La devolución de llamada con el resultado de la ejecución del método.
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.invokeDeviceMethod_1
+  name: invokeDeviceMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Invoca un método en un determinado dispositivo o módulo.
+  syntax:
+    content: 'function invokeDeviceMethod(deviceId: string, moduleId: string, methodParams: DeviceMethodParams, done?: Callback<any>)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: ''
+    - id: moduleId
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<any>
+      description: ''
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.open
+  name: open
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Se abre la conexión a IoT hub.
+  syntax:
+    content: 'function open(done?: Callback<Connected>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<Connected>
+      description: >
+        Función que llama una vez completada la operación. `done` se pasará a un argumento de objeto de Error, que será null si la operación se completó correctamente.
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.send
+  name: send
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Envía un mensaje a un dispositivo.
+  syntax:
+    content: 'function send(deviceId: string, message: Message | Message.BufferConvertible, done?: Callback<MessageEnqueued>)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: El identificador de una identidad de dispositivo existente.
+    - id: message
+      type:
+      - Message | Message.BufferConvertible
+      description: >-
+        Cuerpo del mensaje que se enviará al dispositivo.
+
+        Si `message` no es de tipo [mensaje](xref:azure-iot-common.Message), se convertirá.
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<MessageEnqueued>
+      description: >
+        Función que llama una vez completada la operación. `done` se llamará con dos argumentos: un objeto de Error (puede ser null) y un objeto de respuesta específica del transporte útil para la depuración o de registro.
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.setRetryPolicy
+  name: setRetryPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Establecer la directiva utilizada por el cliente para volver a intentar las operaciones de red.
+  syntax:
+    content: 'function setRetryPolicy(policy: RetryPolicy)'
+    parameters:
+    - id: policy
+      type:
+      - RetryPolicy
+      description: >
+        directiva utilizada para reintentar las operaciones (p ej. Abrir, enviar, etcetera.).
+
+        El SDK incluye 2 directivas "integradas": ExponentialBackoffWithJitter (valor predeterminado) y NoRetry (para cancelar cualquier forma de reintento). El usuario también puede pasar su propio objeto siempre que lo implemente 2 métodos:-shouldRetry(err: Error): booleano: indica si se debe reintentar una operación en función del tipo de error - nextRetryTimeout (retryCount: número de limitado: un valor booleano): número: devuelve el tiempo de espera (en milisegundos) antes de reintentar se basa en el pasado número de intentos (retryCount) y el hecho de que el error es un error de limitación o no.
+  package: azure-iothub
+- uid: azure-iothub.Client.TransportCtor
+  name: TransportCtor
+  fullName: TransportCtor
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+references:
+- uid: azure-iothub.Client.Callback<MessageAbandoned>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <MessageAbandoned>
+    fullName: <MessageAbandoned>
+- uid: azure-iothub.Client.Callback<MessageCompleted>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <MessageCompleted>
+    fullName: <MessageCompleted>
+- uid: azure-iothub.Client.Callback<MessageRejected>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <MessageRejected>
+    fullName: <MessageRejected>
+- uid: azure-iothub.Client.Callback<Connected>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <Connected>
+    fullName: <Connected>
+- uid: azure-iothub.Client.Callback<Disconnected>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <Disconnected>
+    fullName: <Disconnected>
+- uid: azure-iothub.Client.Callback<azure-iothub.Client.ServiceReceiver>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <
+    fullName: <
+  - name: ServiceReceiver
+    fullName: ServiceReceiver
+    uid: azure-iothub.Client.ServiceReceiver
+  - name: '>'
+    fullName: '>'
+- uid: azure-iothub.Client.Callback<MessageEnqueued>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <MessageEnqueued>
+    fullName: <MessageEnqueued>
+- uid: azure-iothub.DeviceMethodParams
+  spec.typeScript:
+  - name: DeviceMethodParams
+    fullName: DeviceMethodParams
+    uid: azure-iothub.DeviceMethodParams
+- uid: azure-iothub.Client.Callback<any>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <any>
+    fullName: <any>
+- uid: azure-iothub.Client.TransportCtor
+  spec.typeScript:
+  - name: TransportCtor
+    fullName: TransportCtor
+    uid: azure-iothub.Client.TransportCtor
+- uid: azure-iothub.Client
+  spec.typeScript:
+  - name: Client
+    fullName: Client
+    uid: azure-iothub.Client

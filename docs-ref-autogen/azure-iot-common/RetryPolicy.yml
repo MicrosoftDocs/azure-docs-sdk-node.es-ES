@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6bdf12f37e564aaac17b43d3d18abd4acfc689ad
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074254"
+items:
+- uid: azure-iot-common.RetryPolicy
+  name: RetryPolicy
+  fullName: RetryPolicy
+  children:
+  - azure-iot-common.RetryPolicy.nextRetryTimeout
+  - azure-iot-common.RetryPolicy.shouldRetry
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    Interfaz que describe un objeto de directiva de reintento.
+
+    Directivas de reintento se componen de 2 elementos
+
+    - Un algoritmo que calcula la próxima vez que vuelva a intentar según el número actual o los reintentos.
+
+    - Un filtro de error que decida, según el tipo de error recibido, si un reintento debe realizarse o no.
+
+    Ocultan 2 esos componentes detrás 2 llamadas a método que se describe en esta interfaz.
+  package: azure-iot-common
+- uid: azure-iot-common.RetryPolicy.nextRetryTimeout
+  name: nextRetryTimeout
+  fullName: nextRetryTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Calcula el intervalo de espera antes de reintentar en cada nuevo intento provisional.
+  syntax:
+    content: 'nextRetryTimeout: (retryCount: number, isThrottled: boolean) => number'
+    return:
+      type:
+      - '(retryCount: number, isThrottled: boolean) => number'
+  package: azure-iot-common
+- uid: azure-iot-common.RetryPolicy.shouldRetry
+  name: shouldRetry
+  fullName: shouldRetry
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: En función del error que se pasa como argumento, determina si un error es transitorio y se debe reintentar la operación o no.
+  syntax:
+    content: 'shouldRetry: (error: Error) => boolean'
+    return:
+      type:
+      - '(error: Error) => boolean'
+  package: azure-iot-common

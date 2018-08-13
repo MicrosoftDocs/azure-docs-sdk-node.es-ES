@@ -1,0 +1,197 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4e858f4b2ca5615a468b64d2e2270f9d2cb1f94c
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40072487"
+items:
+- uid: azure-iot-device.Client
+  name: Client
+  fullName: Client
+  children:
+  - azure-iot-device.Client.constructor
+  - azure-iot-device.Client.close
+  - azure-iot-device.Client.fromAuthenticationProvider
+  - azure-iot-device.Client.fromConnectionString
+  - azure-iot-device.Client.fromSharedAccessSignature
+  - azure-iot-device.Client.onDeviceMethod
+  - azure-iot-device.Client.uploadToBlob
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    Cliente de dispositivo de IoT Hub usada para conectar un dispositivo con Azure IoT hub.
+
+    Los usuarios del SDK deben llamar a uno de los métodos de fábrica, [fromConnectionString](xref:azure-iot-device.Client.fromConnectionString) o [fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) para crear un cliente de dispositivo de IoT Hub.
+  extends:
+    name: InternalClient
+  package: azure-iot-device
+- uid: azure-iot-device.Client.constructor
+  name: Client
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new Client(transport: DeviceTransport, connStr?: string, blobUploadClient?: BlobUploadClient)'
+    parameters:
+    - id: transport
+      type:
+      - azure-iot-device.DeviceTransport
+      description: Un objeto que implementa la interfaz esperada de un objeto de transporte, por ejemplo, [Http](xref:azure-iot-device-http.Http).
+    - id: connStr
+      type:
+      - string
+      description: 'Una cadena de conexión (opcional: cuando no se proporciona, se debe llamar a updateSharedAccessSignature para establecer el token SharedAccessSignature directamente).'
+      optional: true
+    - id: blobUploadClient
+      type:
+      - BlobUploadClient
+      description: >
+        Objeto que es capaz de cargar una secuencia en un blob.
+      optional: true
+  package: azure-iot-device
+- uid: azure-iot-device.Client.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Cierra la conexión de transporte y destruye los recursos del cliente.
+
+    *Nota: Después de llamar a este método en el cliente de objeto no se puede reutilizar.*
+  syntax:
+    content: 'function close(closeCallback?: (err?: Error, result?: Disconnected) => void)'
+    parameters:
+    - id: closeCallback
+      type:
+      - '(err?: Error, result?: Disconnected) => void'
+      description: >
+        Función que se llama una vez que el transporte está desconectado y el cliente cierran.
+      optional: true
+  package: azure-iot-device
+- uid: azure-iot-device.Client.fromAuthenticationProvider
+  name: fromAuthenticationProvider
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea a un cliente de dispositivo de IoT Hub desde el método de autenticación especificado y usa el tipo de transporte determinado.
+  syntax:
+    content: 'static function fromAuthenticationProvider(authenticationProvider: AuthenticationProvider, transportCtor: any)'
+    parameters:
+    - id: authenticationProvider
+      type:
+      - AuthenticationProvider
+      description: Objeto utilizado para obtener los parámetros de autenticación para el centro de IoT.
+    - id: transportCtor
+      type:
+      - any
+      description: >
+        Transporte de protocolo que se usa para conectarse a IoT hub.
+    return:
+      type:
+      - any
+  package: azure-iot-device
+- uid: azure-iot-device.Client.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea a un cliente de dispositivo de IoT Hub de la cadena de conexión determinado mediante el tipo de transporte determinado.
+  syntax:
+    content: 'static function fromConnectionString(connStr: string, transportCtor: any)'
+    parameters:
+    - id: connStr
+      type:
+      - string
+      description: Una cadena de conexión que encapsula permisos de "conexión de dispositivo" en un centro de IoT.
+    - id: transportCtor
+      type:
+      - any
+      description: >
+        Un constructor de transporte.
+    return:
+      type:
+      - any
+  package: azure-iot-device
+- uid: azure-iot-device.Client.fromSharedAccessSignature
+  name: fromSharedAccessSignature
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea a un cliente de dispositivo de IoT Hub de la firma de acceso compartido dada con el tipo de transporte determinado.
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string, transportCtor: any)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: Una firma de acceso compartido que encapsula permisos de "conexión de dispositivo" en un centro de IoT.
+    - id: transportCtor
+      type:
+      - any
+      description: ''
+    return:
+      type:
+      - any
+  package: azure-iot-device
+- uid: azure-iot-device.Client.onDeviceMethod
+  name: onDeviceMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Registra una devolución de llamada para un método denominado `methodName`.
+  syntax:
+    content: 'function onDeviceMethod(methodName: string, callback: (request: DeviceMethodRequest, response: DeviceMethodResponse) => void)'
+    parameters:
+    - id: methodName
+      type:
+      - string
+      description: Nombre del método que controlará la devolución de llamada
+    - id: callback
+      type:
+      - '(request: DeviceMethodRequest, response: DeviceMethodResponse) => void'
+      description: >
+        Función que se llamará siempre que una solicitud del método para el método llamado `methodName` se recibe.
+  package: azure-iot-device
+- uid: azure-iot-device.Client.uploadToBlob
+  name: uploadToBlob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: El `uploadToBlob` método carga un flujo en un blob.
+  syntax:
+    content: 'function uploadToBlob(blobName: string, stream: Stream, streamLength: number, done: (err?: Error) => void)'
+    parameters:
+    - id: blobName
+      type:
+      - string
+      description: El nombre que se usará para el blob que se creará con el contenido de la secuencia.
+    - id: stream
+      type:
+      - Stream
+      description: Los datos a la se deben cargar en el blob.
+    - id: streamLength
+      type:
+      - number
+      description: El tamaño de los datos a la se debe cargar en el blob.
+    - id: done
+      type:
+      - '(err?: Error) => void'
+      description: >
+        La devolución de llamada una vez completada la carga.
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.DeviceTransport
+  spec.typeScript:
+  - name: DeviceTransport
+    fullName: DeviceTransport
+    uid: azure-iot-device.DeviceTransport

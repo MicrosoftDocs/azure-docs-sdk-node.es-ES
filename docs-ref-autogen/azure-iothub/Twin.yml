@@ -1,0 +1,195 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 73f78523bc9d6043fd2f037ef98f58f71c167428
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40076655"
+items:
+- uid: azure-iothub.Twin
+  name: Twin
+  fullName: Twin
+  children:
+  - azure-iothub.Twin.deviceId
+  - azure-iothub.Twin.etag
+  - azure-iothub.Twin.get
+  - azure-iothub.Twin.moduleId
+  - azure-iothub.Twin.properties
+  - azure-iothub.Twin.tags
+  - azure-iothub.Twin.toJSON
+  - azure-iothub.Twin.constructor
+  - azure-iothub.Twin.update
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    Un dispositivo gemelo es el documento que describe el estado de un dispositivo que se almacena mediante un centro de IoT de Azure y está disponible incluso si el dispositivo está desconectado.
+
+    Se basa aproximadamente 3 secciones:
+      - Etiquetas: pares de clave/valor solo es accesible desde el lado del servicio
+      - Las propiedades deseadas: actualiza un servicio y recibidos por el dispositivo
+      - Las propiedades notificadas: actualiza el dispositivo y recibidos por el servicio.
+    Tenga en cuenta que aunque es una posibilidad, las propiedades deseadas y notificadas no deben coincidir y que la lógica para sincronizar estas dos colecciones, si es necesario, se deja al usuario SDK de.
+
+
+    Para obtener más información, consulte [descripción dispositivos gemelos](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins).
+
+
+    El método recomendado para obtener un <xref:azure-iothub.Twin> para un dispositivo específico es usar el <xref:azure-iothub.Registry.getTwin> método.
+  package: azure-iothub
+- uid: azure-iothub.Twin.deviceId
+  name: deviceId
+  fullName: deviceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Identificador único de la identidad del dispositivo asociada con el gemelo, tal como existe en el registro de identidad de dispositivo.
+  syntax:
+    content: 'deviceId: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Twin.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Etiqueta usada en la simultaneidad optimista para evitar varias ediciones paralelas del dispositivo gemelo.
+  syntax:
+    content: 'etag: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Twin.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Obtiene la versión más reciente de este dispositivo gemelo desde el servicio IoT Hub.
+  syntax:
+    content: 'function get(done: Callback<Twin>)'
+    parameters:
+    - id: done
+      type:
+      - Callback<azure-iothub.Twin>
+      description: >
+        Función que llama una vez completada la operación. `done` se llamará con tres argumentos: un objeto de Error (puede ser null), un [gemelo](xref:azure-iothub.Twin) objeto que representa la identidad del dispositivo creada y un objeto de respuesta específica del transporte útil para la depuración o de registro.
+  package: azure-iothub
+- uid: azure-iothub.Twin.moduleId
+  name: moduleId
+  fullName: moduleId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Identificador de módulo para el módulo asociado con el gemelo, tal como existe en el registro de identidad de dispositivo.
+  optional: true
+  syntax:
+    content: 'moduleId?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Twin.properties
+  name: properties
+  fullName: properties
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Las propiedades deseadas y notificadas de dictionnaries (respectivamente en `properties.desired` y `properties.reported`).
+  syntax:
+    content: 'properties: function'
+    return:
+      type:
+      - function
+  package: azure-iothub
+- uid: azure-iothub.Twin.tags
+  name: tags
+  fullName: tags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Colección de pares clave/valor que solo está disponible en el lado del servicio y puede usarse en las consultas para encontrar dispositivos específicos.
+  syntax:
+    content: 'tags: function'
+    return:
+      type:
+      - function
+  package: azure-iothub
+- uid: azure-iothub.Twin.toJSON
+  name: toJSON
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: function toJSON()
+    parameters: []
+    return:
+      type:
+      - object
+  package: azure-iothub
+- uid: azure-iothub.Twin.constructor
+  name: Twin
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Crea una instancia de un nuevo <xref:azure-iothub.Twin>. La manera recomendada para obtener un nuevo <xref:azure-iothub.Twin> objeto consiste en usar el <xref:azure-iothub.Registry.getTwin> método.
+  syntax:
+    content: 'new Twin(device: DeviceIdentity | string, registryClient: Registry)'
+    parameters:
+    - id: device
+      type:
+      - DeviceIdentity | string
+      description: Una cadena de identificador de dispositivo o un objeto que describe el dispositivo. Si un objeto, debe contener una propiedad deviceId.
+    - id: registryClient
+      type:
+      - azure-iothub.Registry
+      description: >
+        El cliente del registro HTTP utilizado para ejecutar llamadas API de REST.
+  package: azure-iothub
+- uid: azure-iothub.Twin.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Actualizar al dispositivo gemelo con la revisión proporcionada como argumento.
+  syntax:
+    content: 'function update(patch: any, done: Callback<Twin>)'
+    parameters:
+    - id: patch
+      type:
+      - any
+      description: Objeto que contiene los nuevos valores se aplican a este dispositivo gemelo.
+    - id: done
+      type:
+      - Callback<azure-iothub.Twin>
+      description: >
+        Función que llama una vez completada la operación. `done` se llamará con tres argumentos: un objeto de Error (puede ser null), un [gemelo](xref:azure-iothub.Twin) objeto que representa la identidad del dispositivo creada y un objeto de respuesta específica del transporte útil para la depuración o de registro.
+  package: azure-iothub
+references:
+- uid: azure-iothub.Registry
+  spec.typeScript:
+  - name: Registry
+    fullName: Registry
+    uid: azure-iothub.Registry
+- uid: Callback<azure-iothub.Twin>
+  spec.typeScript:
+  - name: Callback<
+    fullName: Callback<
+  - name: Twin
+    fullName: Twin
+    uid: azure-iothub.Twin
+  - name: '>'
+    fullName: '>'
