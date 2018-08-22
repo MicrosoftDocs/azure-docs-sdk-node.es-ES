@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 75afaedf2f5e76f076c1167cc227823ca7dc934f
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: dfe387c4c0834e967a5a71690638b3abffd6b6ff
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40075223"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41683964"
 items:
 - uid: azure-arm-datalake-store.FileSystem
   name: FileSystem
@@ -111,7 +111,7 @@ items:
   - typeScript
   summary: 'Utilizado para la serie se anexa al archivo especificado. Nota: El destino no puede contener datos agregados por ConcurrentAppend. No se puede utilizar indistintamente; ConcurrentAppend y anexar una vez que se ha modificado un archivo de destino utilizando cualquiera de estas opciones de anexar, la otra opción de anexar no se puede usar en el archivo de destino.'
   syntax:
-    content: 'function append(accountName: string, path: string, streamContents: stream.Readable, options?: function)'
+    content: 'function append(accountName: string, path: string, streamContents: stream.Readable, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -130,7 +130,7 @@ items:
         El contenido del archivo para incluir cuando se anexan al archivo.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -175,7 +175,7 @@ items:
   - typeScript
   summary: 'Utilizado para la serie se anexa al archivo especificado. Nota: El destino no puede contener datos agregados por ConcurrentAppend. No se puede utilizar indistintamente; ConcurrentAppend y anexar una vez que se ha modificado un archivo de destino utilizando cualquiera de estas opciones de anexar, la otra opción de anexar no se puede usar en el archivo de destino.'
   syntax:
-    content: 'function append(accountName: string, path: string, streamContents: stream.Readable, options: function, callback: ServiceCallback<void>)'
+    content: 'function append(accountName: string, path: string, streamContents: stream.Readable, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -191,7 +191,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -209,7 +209,7 @@ items:
   - typeScript
   summary: 'Utilizado para la serie se anexa al archivo especificado. Nota: El destino no puede contener datos agregados por ConcurrentAppend. No se puede utilizar indistintamente; ConcurrentAppend y anexar una vez que se ha modificado un archivo de destino utilizando cualquiera de estas opciones de anexar, la otra opción de anexar no se puede usar en el archivo de destino.'
   syntax:
-    content: 'function appendWithHttpOperationResponse(accountName: string, path: string, streamContents: stream.Readable, options?: function)'
+    content: 'function appendWithHttpOperationResponse(accountName: string, path: string, streamContents: stream.Readable, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -228,7 +228,7 @@ items:
         El contenido del archivo para incluir cuando se anexan al archivo.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -243,7 +243,7 @@ items:
   - typeScript
   summary: Comprueba si el acceso especificado está disponible en la ruta de acceso dada.
   syntax:
-    content: 'function checkAccess(accountName: string, path: string, fsaction: string, options?: function)'
+    content: 'function checkAccess(accountName: string, path: string, fsaction: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -262,7 +262,7 @@ items:
         Archivo del sistema operación lectura/escritura/ejecución en forma de cadena, que coincida con el patrón de expresión regular ' rwx-{3}'
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -307,7 +307,7 @@ items:
   - typeScript
   summary: Comprueba si el acceso especificado está disponible en la ruta de acceso dada.
   syntax:
-    content: 'function checkAccess(accountName: string, path: string, fsaction: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function checkAccess(accountName: string, path: string, fsaction: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -323,7 +323,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -341,7 +341,7 @@ items:
   - typeScript
   summary: Comprueba si el acceso especificado está disponible en la ruta de acceso dada.
   syntax:
-    content: 'function checkAccessWithHttpOperationResponse(accountName: string, path: string, fsaction: string, options?: function)'
+    content: 'function checkAccessWithHttpOperationResponse(accountName: string, path: string, fsaction: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -360,7 +360,7 @@ items:
         Archivo del sistema operación lectura/escritura/ejecución en forma de cadena, que coincida con el patrón de expresión regular ' rwx-{3}'
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -405,7 +405,7 @@ items:
   - typeScript
   summary: Concatena la lista de archivos de origen en el archivo de destino, quita todos los archivos de origen cuando se realiza correctamente.
   syntax:
-    content: 'function concat(accountName: string, path: string, sources: string[], options?: function)'
+    content: 'function concat(accountName: string, path: string, sources: string[], options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -424,7 +424,7 @@ items:
         Una lista de coma separada por las rutas de acceso de Data Lake Store (a partir de '/') de los archivos que se va a concatenar, en el orden en el que debe estar concatenados.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -439,7 +439,7 @@ items:
   - typeScript
   summary: Concatena la lista de archivos de origen en el archivo de destino, quita todos los archivos de origen cuando se realiza correctamente.
   syntax:
-    content: 'function concat(accountName: string, path: string, sources: string[], options: function, callback: ServiceCallback<void>)'
+    content: 'function concat(accountName: string, path: string, sources: string[], options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -455,7 +455,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -473,7 +473,7 @@ items:
   - typeScript
   summary: Concatena la lista de archivos de origen en el archivo de destino, quita todos los archivos de origen cuando se realiza correctamente.
   syntax:
-    content: 'function concatWithHttpOperationResponse(accountName: string, path: string, sources: string[], options?: function)'
+    content: 'function concatWithHttpOperationResponse(accountName: string, path: string, sources: string[], options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -492,7 +492,7 @@ items:
         Una lista de coma separada por las rutas de acceso de Data Lake Store (a partir de '/') de los archivos que se va a concatenar, en el orden en el que debe estar concatenados.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -510,7 +510,7 @@ items:
 
     Nota: El destino no puede contener datos agregados por Create o normal Append (serie). No se puede utilizar indistintamente; ConcurrentAppend y anexar una vez que se ha modificado un archivo de destino utilizando cualquiera de estas opciones de anexar, la otra opción de anexar no se puede usar en el archivo de destino. ConcurrentAppend no garantiza el orden y puede dar lugar a los datos duplicados de aterrizaje en el archivo de destino.
   syntax:
-    content: 'function concurrentAppend(accountName: string, path: string, streamContents: stream.Readable, options?: function)'
+    content: 'function concurrentAppend(accountName: string, path: string, streamContents: stream.Readable, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -529,7 +529,7 @@ items:
         El contenido del archivo para incluir cuando se anexan al archivo.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -580,7 +580,7 @@ items:
 
     Nota: El destino no puede contener datos agregados por Create o normal Append (serie). No se puede utilizar indistintamente; ConcurrentAppend y anexar una vez que se ha modificado un archivo de destino utilizando cualquiera de estas opciones de anexar, la otra opción de anexar no se puede usar en el archivo de destino. ConcurrentAppend no garantiza el orden y puede dar lugar a los datos duplicados de aterrizaje en el archivo de destino.
   syntax:
-    content: 'function concurrentAppend(accountName: string, path: string, streamContents: stream.Readable, options: function, callback: ServiceCallback<void>)'
+    content: 'function concurrentAppend(accountName: string, path: string, streamContents: stream.Readable, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -596,7 +596,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -617,7 +617,7 @@ items:
 
     Nota: El destino no puede contener datos agregados por Create o normal Append (serie). No se puede utilizar indistintamente; ConcurrentAppend y anexar una vez que se ha modificado un archivo de destino utilizando cualquiera de estas opciones de anexar, la otra opción de anexar no se puede usar en el archivo de destino. ConcurrentAppend no garantiza el orden y puede dar lugar a los datos duplicados de aterrizaje en el archivo de destino.
   syntax:
-    content: 'function concurrentAppendWithHttpOperationResponse(accountName: string, path: string, streamContents: stream.Readable, options?: function)'
+    content: 'function concurrentAppendWithHttpOperationResponse(accountName: string, path: string, streamContents: stream.Readable, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -636,7 +636,7 @@ items:
         El contenido del archivo para incluir cuando se anexan al archivo.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -651,7 +651,7 @@ items:
   - typeScript
   summary: 'Crea un archivo con el contenido especificado opcionalmente. Nota: Si se proporciona el contenido, el archivo resultante no se puede modificar mediante ConcurrentAppend.'
   syntax:
-    content: 'function create(accountName: string, path: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function create(accountName: string, path: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -663,7 +663,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -681,7 +681,7 @@ items:
   - typeScript
   summary: 'Crea un archivo con el contenido especificado opcionalmente. Nota: Si se proporciona el contenido, el archivo resultante no se puede modificar mediante ConcurrentAppend.'
   syntax:
-    content: 'function create(accountName: string, path: string, options?: function)'
+    content: 'function create(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -695,7 +695,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo que se va a crear.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -736,7 +736,7 @@ items:
   - typeScript
   summary: 'Crea un archivo con el contenido especificado opcionalmente. Nota: Si se proporciona el contenido, el archivo resultante no se puede modificar mediante ConcurrentAppend.'
   syntax:
-    content: 'function createWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function createWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -750,7 +750,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo que se va a crear.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -765,7 +765,7 @@ items:
   - typeScript
   summary: Elimina el archivo solicitado o directorio, opcionalmente recursivamente.
   syntax:
-    content: 'function deleteMethod(accountName: string, path: string, options?: function)'
+    content: 'function deleteMethod(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -779,7 +779,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio va a eliminar.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -820,7 +820,7 @@ items:
   - typeScript
   summary: Elimina el archivo solicitado o directorio, opcionalmente recursivamente.
   syntax:
-    content: 'function deleteMethod(accountName: string, path: string, options: function, callback: ServiceCallback<FileOperationResult>)'
+    content: 'function deleteMethod(accountName: string, path: string, options: Object, callback: ServiceCallback<FileOperationResult>)'
     parameters:
     - id: accountName
       type:
@@ -832,7 +832,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -850,7 +850,7 @@ items:
   - typeScript
   summary: Elimina el archivo solicitado o directorio, opcionalmente recursivamente.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -864,7 +864,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio va a eliminar.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -905,7 +905,7 @@ items:
   - typeScript
   summary: Obtiene las entradas de la lista de Control de acceso (ACL) para el archivo o directorio especificado.
   syntax:
-    content: 'function getAclStatus(accountName: string, path: string, options?: function)'
+    content: 'function getAclStatus(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -919,7 +919,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio para el que se va a obtener la ACL.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -934,7 +934,7 @@ items:
   - typeScript
   summary: Obtiene las entradas de la lista de Control de acceso (ACL) para el archivo o directorio especificado.
   syntax:
-    content: 'function getAclStatus(accountName: string, path: string, options: function, callback: ServiceCallback<AclStatusResult>)'
+    content: 'function getAclStatus(accountName: string, path: string, options: Object, callback: ServiceCallback<AclStatusResult>)'
     parameters:
     - id: accountName
       type:
@@ -946,7 +946,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -964,7 +964,7 @@ items:
   - typeScript
   summary: Obtiene las entradas de la lista de Control de acceso (ACL) para el archivo o directorio especificado.
   syntax:
-    content: 'function getAclStatusWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function getAclStatusWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -978,7 +978,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio para el que se va a obtener la ACL.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -993,7 +993,7 @@ items:
   - typeScript
   summary: Obtiene el objeto de resumen de archivo contenido especificado por la ruta de acceso de archivo.
   syntax:
-    content: 'function getContentSummary(accountName: string, path: string, options?: function)'
+    content: 'function getContentSummary(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1007,7 +1007,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo que se va a recuperar el resumen.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1022,7 +1022,7 @@ items:
   - typeScript
   summary: Obtiene el objeto de resumen de archivo contenido especificado por la ruta de acceso de archivo.
   syntax:
-    content: 'function getContentSummary(accountName: string, path: string, options: function, callback: ServiceCallback<ContentSummaryResult>)'
+    content: 'function getContentSummary(accountName: string, path: string, options: Object, callback: ServiceCallback<ContentSummaryResult>)'
     parameters:
     - id: accountName
       type:
@@ -1034,7 +1034,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1078,7 +1078,7 @@ items:
   - typeScript
   summary: Obtiene el objeto de resumen de archivo contenido especificado por la ruta de acceso de archivo.
   syntax:
-    content: 'function getContentSummaryWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function getContentSummaryWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1092,7 +1092,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo que se va a recuperar el resumen.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1107,7 +1107,7 @@ items:
   - typeScript
   summary: Obtiene el objeto de estado de archivo especificado por la ruta de acceso de archivo.
   syntax:
-    content: 'function getFileStatus(accountName: string, path: string, options?: function)'
+    content: 'function getFileStatus(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1121,7 +1121,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio para el que se va a recuperar el estado.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1162,7 +1162,7 @@ items:
   - typeScript
   summary: Obtiene el objeto de estado de archivo especificado por la ruta de acceso de archivo.
   syntax:
-    content: 'function getFileStatus(accountName: string, path: string, options: function, callback: ServiceCallback<FileStatusResult>)'
+    content: 'function getFileStatus(accountName: string, path: string, options: Object, callback: ServiceCallback<FileStatusResult>)'
     parameters:
     - id: accountName
       type:
@@ -1174,7 +1174,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1192,7 +1192,7 @@ items:
   - typeScript
   summary: Obtiene el objeto de estado de archivo especificado por la ruta de acceso de archivo.
   syntax:
-    content: 'function getFileStatusWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function getFileStatusWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1206,7 +1206,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio para el que se va a recuperar el estado.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1247,7 +1247,7 @@ items:
   - typeScript
   summary: Obtiene la lista de objetos de estado de archivo especificado en la ruta de acceso de archivo, con los parámetros de paginación opcional
   syntax:
-    content: 'function listFileStatus(accountName: string, path: string, options: function, callback: ServiceCallback<FileStatusesResult>)'
+    content: 'function listFileStatus(accountName: string, path: string, options: Object, callback: ServiceCallback<FileStatusesResult>)'
     parameters:
     - id: accountName
       type:
@@ -1259,7 +1259,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1277,7 +1277,7 @@ items:
   - typeScript
   summary: Obtiene la lista de objetos de estado de archivo especificado en la ruta de acceso de archivo, con los parámetros de paginación opcional
   syntax:
-    content: 'function listFileStatus(accountName: string, path: string, options?: function)'
+    content: 'function listFileStatus(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1291,7 +1291,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del directorio a la lista.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1306,7 +1306,7 @@ items:
   - typeScript
   summary: Obtiene la lista de objetos de estado de archivo especificado en la ruta de acceso de archivo, con los parámetros de paginación opcional
   syntax:
-    content: 'function listFileStatusWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function listFileStatusWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1320,7 +1320,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del directorio a la lista.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1335,7 +1335,7 @@ items:
   - typeScript
   summary: Crea un directorio.
   syntax:
-    content: 'function mkdirs(accountName: string, path: string, options?: function)'
+    content: 'function mkdirs(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1349,7 +1349,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del directorio que se va a crear.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1390,7 +1390,7 @@ items:
   - typeScript
   summary: Crea un directorio.
   syntax:
-    content: 'function mkdirs(accountName: string, path: string, options: function, callback: ServiceCallback<FileOperationResult>)'
+    content: 'function mkdirs(accountName: string, path: string, options: Object, callback: ServiceCallback<FileOperationResult>)'
     parameters:
     - id: accountName
       type:
@@ -1402,7 +1402,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1420,7 +1420,7 @@ items:
   - typeScript
   summary: Crea un directorio.
   syntax:
-    content: 'function mkdirsWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function mkdirsWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1434,7 +1434,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del directorio que se va a crear.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1449,7 +1449,7 @@ items:
   - typeScript
   summary: Modifica las entradas de lista de Control de acceso (ACL) existentes en un archivo o carpeta.
   syntax:
-    content: 'function modifyAclEntries(accountName: string, path: string, aclspec: string, options?: function)'
+    content: 'function modifyAclEntries(accountName: string, path: string, aclspec: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1468,7 +1468,7 @@ items:
         La especificación de ACL que se incluyen en las operaciones de modificación de ACL en el formato "[predeterminado:] usuario | grupo | otros:: r |-w |-x |-'
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1513,7 +1513,7 @@ items:
   - typeScript
   summary: Modifica las entradas de lista de Control de acceso (ACL) existentes en un archivo o carpeta.
   syntax:
-    content: 'function modifyAclEntries(accountName: string, path: string, aclspec: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function modifyAclEntries(accountName: string, path: string, aclspec: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -1529,7 +1529,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1547,7 +1547,7 @@ items:
   - typeScript
   summary: Modifica las entradas de lista de Control de acceso (ACL) existentes en un archivo o carpeta.
   syntax:
-    content: 'function modifyAclEntriesWithHttpOperationResponse(accountName: string, path: string, aclspec: string, options?: function)'
+    content: 'function modifyAclEntriesWithHttpOperationResponse(accountName: string, path: string, aclspec: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1566,7 +1566,7 @@ items:
         La especificación de ACL que se incluyen en las operaciones de modificación de ACL en el formato "[predeterminado:] usuario | grupo | otros:: r |-w |-x |-'
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1581,7 +1581,7 @@ items:
   - typeScript
   summary: Concatena la lista de archivos de origen en el archivo de destino, eliminar todos los archivos de origen cuando se realiza correctamente. Este método acepta más rutas de acceso de archivo de origen que el método Concat. Este método y los parámetros que se acepte están sujetos a cambios para su uso en una próxima versión.
   syntax:
-    content: 'function msConcat(accountName: string, path: string, streamContents: stream.Readable, options?: function)'
+    content: 'function msConcat(accountName: string, path: string, streamContents: stream.Readable, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1600,7 +1600,7 @@ items:
         Una lista de rutas de acceso de Data Lake Store (a partir de '/') de los archivos de origen. Debe ser una lista separada por comas de ruta de acceso en el formato: sources=/file/path/1.txt,/file/path/2.txt,/file/path/lastfile.csv
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1615,7 +1615,7 @@ items:
   - typeScript
   summary: Concatena la lista de archivos de origen en el archivo de destino, eliminar todos los archivos de origen cuando se realiza correctamente. Este método acepta más rutas de acceso de archivo de origen que el método Concat. Este método y los parámetros que se acepte están sujetos a cambios para su uso en una próxima versión.
   syntax:
-    content: 'function msConcat(accountName: string, path: string, streamContents: stream.Readable, options: function, callback: ServiceCallback<void>)'
+    content: 'function msConcat(accountName: string, path: string, streamContents: stream.Readable, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -1631,7 +1631,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1679,7 +1679,7 @@ items:
   - typeScript
   summary: Concatena la lista de archivos de origen en el archivo de destino, eliminar todos los archivos de origen cuando se realiza correctamente. Este método acepta más rutas de acceso de archivo de origen que el método Concat. Este método y los parámetros que se acepte están sujetos a cambios para su uso en una próxima versión.
   syntax:
-    content: 'function msConcatWithHttpOperationResponse(accountName: string, path: string, streamContents: stream.Readable, options?: function)'
+    content: 'function msConcatWithHttpOperationResponse(accountName: string, path: string, streamContents: stream.Readable, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1698,7 +1698,7 @@ items:
         Una lista de rutas de acceso de Data Lake Store (a partir de '/') de los archivos de origen. Debe ser una lista separada por comas de ruta de acceso en el formato: sources=/file/path/1.txt,/file/path/2.txt,/file/path/lastfile.csv
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1713,7 +1713,7 @@ items:
   - typeScript
   summary: Se abre y lee el archivo especificado.
   syntax:
-    content: 'function open(accountName: string, path: string, options?: function)'
+    content: 'function open(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1727,7 +1727,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo que se abra.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1742,7 +1742,7 @@ items:
   - typeScript
   summary: Se abre y lee el archivo especificado.
   syntax:
-    content: 'function open(accountName: string, path: string, options: function, callback: ServiceCallback<stream.Readable>)'
+    content: 'function open(accountName: string, path: string, options: Object, callback: ServiceCallback<stream.Readable>)'
     parameters:
     - id: accountName
       type:
@@ -1754,7 +1754,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1798,7 +1798,7 @@ items:
   - typeScript
   summary: Se abre y lee el archivo especificado.
   syntax:
-    content: 'function openWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function openWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1812,7 +1812,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo que se abra.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1853,7 +1853,7 @@ items:
   - typeScript
   summary: Quita la lista de Control de acceso (ACL) existentes del archivo o directorio especificado.
   syntax:
-    content: 'function removeAcl(accountName: string, path: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function removeAcl(accountName: string, path: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -1865,7 +1865,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1883,7 +1883,7 @@ items:
   - typeScript
   summary: Quita la lista de Control de acceso (ACL) existentes del archivo o directorio especificado.
   syntax:
-    content: 'function removeAcl(accountName: string, path: string, options?: function)'
+    content: 'function removeAcl(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1897,7 +1897,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio con la ACL que se va a quitar.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1912,7 +1912,7 @@ items:
   - typeScript
   summary: Quita las entradas de la lista de Control de acceso (ACL) para un archivo o carpeta de existente.
   syntax:
-    content: 'function removeAclEntries(accountName: string, path: string, aclspec: string, options?: function)'
+    content: 'function removeAclEntries(accountName: string, path: string, aclspec: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -1931,7 +1931,7 @@ items:
         La especificación ACL incluida en las operaciones de eliminación de ACL en el formato "[predeterminado:] usuario | grupo | otros '
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1946,7 +1946,7 @@ items:
   - typeScript
   summary: Quita las entradas de la lista de Control de acceso (ACL) para un archivo o carpeta de existente.
   syntax:
-    content: 'function removeAclEntries(accountName: string, path: string, aclspec: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function removeAclEntries(accountName: string, path: string, aclspec: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -1962,7 +1962,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2010,7 +2010,7 @@ items:
   - typeScript
   summary: Quita las entradas de la lista de Control de acceso (ACL) para un archivo o carpeta de existente.
   syntax:
-    content: 'function removeAclEntriesWithHttpOperationResponse(accountName: string, path: string, aclspec: string, options?: function)'
+    content: 'function removeAclEntriesWithHttpOperationResponse(accountName: string, path: string, aclspec: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2029,7 +2029,7 @@ items:
         La especificación ACL incluida en las operaciones de eliminación de ACL en el formato "[predeterminado:] usuario | grupo | otros '
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2044,7 +2044,7 @@ items:
   - typeScript
   summary: Quita la lista de Control de acceso (ACL) existentes del archivo o directorio especificado.
   syntax:
-    content: 'function removeAclWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function removeAclWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2058,7 +2058,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio con la ACL que se va a quitar.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2073,7 +2073,7 @@ items:
   - typeScript
   summary: Quita el existente predeterminado Access Control de lista (ACL) del directorio especificado.
   syntax:
-    content: 'function removeDefaultAcl(accountName: string, path: string, options?: function)'
+    content: 'function removeDefaultAcl(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2087,7 +2087,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del directorio con el valor predeterminado ACL que se va a quitar.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2128,7 +2128,7 @@ items:
   - typeScript
   summary: Quita el existente predeterminado Access Control de lista (ACL) del directorio especificado.
   syntax:
-    content: 'function removeDefaultAcl(accountName: string, path: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function removeDefaultAcl(accountName: string, path: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -2140,7 +2140,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2158,7 +2158,7 @@ items:
   - typeScript
   summary: Quita el existente predeterminado Access Control de lista (ACL) del directorio especificado.
   syntax:
-    content: 'function removeDefaultAclWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function removeDefaultAclWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2172,7 +2172,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del directorio con el valor predeterminado ACL que se va a quitar.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2187,7 +2187,7 @@ items:
   - typeScript
   summary: Cambiar el nombre de un archivo o directorio.
   syntax:
-    content: 'function rename(accountName: string, path: string, destination: string, options?: function)'
+    content: 'function rename(accountName: string, path: string, destination: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2206,7 +2206,7 @@ items:
         Mover/cambiar nombres de archivo o carpeta a la ruta de acceso
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2221,7 +2221,7 @@ items:
   - typeScript
   summary: Cambiar el nombre de un archivo o directorio.
   syntax:
-    content: 'function rename(accountName: string, path: string, destination: string, options: function, callback: ServiceCallback<FileOperationResult>)'
+    content: 'function rename(accountName: string, path: string, destination: string, options: Object, callback: ServiceCallback<FileOperationResult>)'
     parameters:
     - id: accountName
       type:
@@ -2237,7 +2237,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2285,7 +2285,7 @@ items:
   - typeScript
   summary: Cambiar el nombre de un archivo o directorio.
   syntax:
-    content: 'function renameWithHttpOperationResponse(accountName: string, path: string, destination: string, options?: function)'
+    content: 'function renameWithHttpOperationResponse(accountName: string, path: string, destination: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2304,7 +2304,7 @@ items:
         Mover/cambiar nombres de archivo o carpeta a la ruta de acceso
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2319,7 +2319,7 @@ items:
   - typeScript
   summary: Establece la lista de Control de acceso (ACL) para un archivo o carpeta.
   syntax:
-    content: 'function setAcl(accountName: string, path: string, aclspec: string, options?: function)'
+    content: 'function setAcl(accountName: string, path: string, aclspec: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2338,7 +2338,7 @@ items:
         La especificación ACL incluida en las operaciones de creación de ACL en el formato "[predeterminado:] usuario | grupo | otros:: r |-w |-x |-'
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2383,7 +2383,7 @@ items:
   - typeScript
   summary: Establece la lista de Control de acceso (ACL) para un archivo o carpeta.
   syntax:
-    content: 'function setAcl(accountName: string, path: string, aclspec: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function setAcl(accountName: string, path: string, aclspec: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -2399,7 +2399,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2417,7 +2417,7 @@ items:
   - typeScript
   summary: Establece la lista de Control de acceso (ACL) para un archivo o carpeta.
   syntax:
-    content: 'function setAclWithHttpOperationResponse(accountName: string, path: string, aclspec: string, options?: function)'
+    content: 'function setAclWithHttpOperationResponse(accountName: string, path: string, aclspec: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2436,7 +2436,7 @@ items:
         La especificación ACL incluida en las operaciones de creación de ACL en el formato "[predeterminado:] usuario | grupo | otros:: r |-w |-x |-'
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2451,7 +2451,7 @@ items:
   - typeScript
   summary: Establece o quita la hora de expiración en el archivo especificado. Esta operación solo se puede ejecutar en archivos. No se admiten las carpetas.
   syntax:
-    content: 'function setFileExpiry(accountName: string, path: string, expiryOption: string, options?: function)'
+    content: 'function setFileExpiry(accountName: string, path: string, expiryOption: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2470,7 +2470,7 @@ items:
         Indica el tipo de expiración que se usará para el archivo: 1. NeverExpire: ExpireTime se omite. 2. RelativeToNow: ExpireTime es un entero en milisegundos, que representa la fecha de vencimiento relativo a cuando se actualiza la expiración de archivos. 3. RelativeToCreationDate: ExpireTime es un entero en milisegundos, que representa la fecha de expiración en relación con la creación de archivos. 4. Absoluta: ExpireTime es un entero en milisegundos, como una marca de tiempo Unix en relación con 1/1/1970 00:00:00. Los valores posibles son: 'NeverExpire', 'RelativeToNow', 'RelativeToCreationDate', 'Absoluto'
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2515,7 +2515,7 @@ items:
   - typeScript
   summary: Establece o quita la hora de expiración en el archivo especificado. Esta operación solo se puede ejecutar en archivos. No se admiten las carpetas.
   syntax:
-    content: 'function setFileExpiry(accountName: string, path: string, expiryOption: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function setFileExpiry(accountName: string, path: string, expiryOption: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -2531,7 +2531,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2549,7 +2549,7 @@ items:
   - typeScript
   summary: Establece o quita la hora de expiración en el archivo especificado. Esta operación solo se puede ejecutar en archivos. No se admiten las carpetas.
   syntax:
-    content: 'function setFileExpiryWithHttpOperationResponse(accountName: string, path: string, expiryOption: string, options?: function)'
+    content: 'function setFileExpiryWithHttpOperationResponse(accountName: string, path: string, expiryOption: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2568,7 +2568,7 @@ items:
         Indica el tipo de expiración que se usará para el archivo: 1. NeverExpire: ExpireTime se omite. 2. RelativeToNow: ExpireTime es un entero en milisegundos, que representa la fecha de vencimiento relativo a cuando se actualiza la expiración de archivos. 3. RelativeToCreationDate: ExpireTime es un entero en milisegundos, que representa la fecha de expiración en relación con la creación de archivos. 4. Absoluta: ExpireTime es un entero en milisegundos, como una marca de tiempo Unix en relación con 1/1/1970 00:00:00. Los valores posibles son: 'NeverExpire', 'RelativeToNow', 'RelativeToCreationDate', 'Absoluto'
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2583,7 +2583,7 @@ items:
   - typeScript
   summary: Establece el propietario de un archivo o directorio.
   syntax:
-    content: 'function setOwner(accountName: string, path: string, options?: function)'
+    content: 'function setOwner(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2597,7 +2597,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio para el que se va a establecer el propietario.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2638,7 +2638,7 @@ items:
   - typeScript
   summary: Establece el propietario de un archivo o directorio.
   syntax:
-    content: 'function setOwner(accountName: string, path: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function setOwner(accountName: string, path: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -2650,7 +2650,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2668,7 +2668,7 @@ items:
   - typeScript
   summary: Establece el propietario de un archivo o directorio.
   syntax:
-    content: 'function setOwnerWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function setOwnerWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2682,7 +2682,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio para el que se va a establecer el propietario.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2697,7 +2697,7 @@ items:
   - typeScript
   summary: Establece el permiso del archivo o carpeta.
   syntax:
-    content: 'function setPermission(accountName: string, path: string, options?: function)'
+    content: 'function setPermission(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2711,7 +2711,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio para el que se va a establecer el permiso.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2752,7 +2752,7 @@ items:
   - typeScript
   summary: Establece el permiso del archivo o carpeta.
   syntax:
-    content: 'function setPermission(accountName: string, path: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function setPermission(accountName: string, path: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: accountName
       type:
@@ -2764,7 +2764,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2782,7 +2782,7 @@ items:
   - typeScript
   summary: Establece el permiso del archivo o carpeta.
   syntax:
-    content: 'function setPermissionWithHttpOperationResponse(accountName: string, path: string, options?: function)'
+    content: 'function setPermissionWithHttpOperationResponse(accountName: string, path: string, options?: Object)'
     parameters:
     - id: accountName
       type:
@@ -2796,7 +2796,7 @@ items:
         La ruta de acceso de Data Lake Store (a partir de '/') del archivo o directorio para el que se va a establecer el permiso.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
