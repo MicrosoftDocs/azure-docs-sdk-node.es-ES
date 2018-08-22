@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: e46a5a038ac1b40706d5d7c5d49f04bec86c3f84
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 7b391204b3338bd7ab834710fdf32cc8f2752b1e
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40074982"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41690467"
 items:
 - uid: azure-event-hubs.EventHubClient
   name: EventHubClient
@@ -15,6 +15,7 @@ items:
   - azure-event-hubs.EventHubClient.createFromAadTokenCredentials
   - azure-event-hubs.EventHubClient.createFromConnectionString
   - azure-event-hubs.EventHubClient.createFromIotHubConnectionString
+  - azure-event-hubs.EventHubClient.createFromTokenProvider
   - azure-event-hubs.EventHubClient.constructor
   - azure-event-hubs.EventHubClient.getHubRuntimeInformation
   - azure-event-hubs.EventHubClient.getPartitionIds
@@ -34,7 +35,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-101">Cierra la conexión de AMQP con el centro de eventos para este cliente, devolver una promesa que se resolverán cuando se complete la desconexión.</span><span class="sxs-lookup"><span data-stu-id="db4e1-101">Closes the AMQP connection to the Event Hub for this client, returning a promise that will be resolved when disconnection is completed.</span></span>
+  summary: <span data-ttu-id="92251-101">Cierra la conexión de AMQP con el centro de eventos para este cliente, devolver una promesa que se resolverán cuando se complete la desconexión.</span><span class="sxs-lookup"><span data-stu-id="92251-101">Closes the AMQP connection to the Event Hub for this client, returning a promise that will be resolved when disconnection is completed.</span></span>
   syntax:
     content: function close()
     parameters: []
@@ -49,7 +50,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="92251-102">{cadena} [connectionId] El identificador de conexión de amqp que identifica la conexión dentro de un proceso.</span><span class="sxs-lookup"><span data-stu-id="92251-102">{string} [connectionId] The amqp connection id that uniquely identifies the connection within a process.</span></span>
   optional: true
   syntax:
     content: 'connectionId?: string'
@@ -63,26 +64,26 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-102">Crea a un cliente de centro de eventos de AADTokenCredentials.</span><span class="sxs-lookup"><span data-stu-id="db4e1-102">Creates an EventHub Client from AADTokenCredentials.</span></span>
+  summary: <span data-ttu-id="92251-103">Crea a un cliente de centro de eventos de AADTokenCredentials.</span><span class="sxs-lookup"><span data-stu-id="92251-103">Creates an EventHub Client from AADTokenCredentials.</span></span>
   syntax:
     content: 'static function createFromAadTokenCredentials(host: string, entityPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: ClientOptionsBase)'
     parameters:
     - id: host
       type:
       - string
-      description: <span data-ttu-id="db4e1-103">Nombre de dominio completo para Event Hubs.</span><span class="sxs-lookup"><span data-stu-id="db4e1-103">Fully qualified domain name for Event Hubs.</span></span> <span data-ttu-id="db4e1-104">Probablemente, {yournamespace}. servicebus.windows. NET</span><span class="sxs-lookup"><span data-stu-id="db4e1-104">Most likely, {yournamespace}.servicebus.windows.net</span></span>
+      description: <span data-ttu-id="92251-104">Nombre de dominio completo para Event Hubs.</span><span class="sxs-lookup"><span data-stu-id="92251-104">Fully qualified domain name for Event Hubs.</span></span> <span data-ttu-id="92251-105">Probablemente, <yournamespace>. servicebus.windows.net</span><span class="sxs-lookup"><span data-stu-id="92251-105">Most likely, <yournamespace>.servicebus.windows.net</span></span>
     - id: entityPath
       type:
       - string
-      description: <span data-ttu-id="db4e1-105">Ruta de acceso del centro de eventos del formulario 'Mi-event-hub-name'</span><span class="sxs-lookup"><span data-stu-id="db4e1-105">EventHub path of the form 'my-event-hub-name'</span></span>
+      description: <span data-ttu-id="92251-106">Ruta de acceso del centro de eventos del formulario 'Mi-event-hub-name'</span><span class="sxs-lookup"><span data-stu-id="92251-106">EventHub path of the form 'my-event-hub-name'</span></span>
     - id: credentials
       type:
       - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
-      description: '<span data-ttu-id="db4e1-106">Las credenciales de Token de AAD.</span><span class="sxs-lookup"><span data-stu-id="db4e1-106">The AAD Token credentials.</span></span> <span data-ttu-id="db4e1-107">Puede ser uno de los siguientes: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span><span class="sxs-lookup"><span data-stu-id="db4e1-107">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
+      description: '<span data-ttu-id="92251-107">Las credenciales de Token de AAD.</span><span class="sxs-lookup"><span data-stu-id="92251-107">The AAD Token credentials.</span></span> <span data-ttu-id="92251-108">Puede ser uno de los siguientes: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span><span class="sxs-lookup"><span data-stu-id="92251-108">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
     - id: options
       type:
       - azure-event-hubs.ClientOptionsBase
-      description: <span data-ttu-id="db4e1-108">Las opciones que se pueden usar durante la creación del cliente.</span><span class="sxs-lookup"><span data-stu-id="db4e1-108">The options that can be provided during client creation.</span></span>
+      description: <span data-ttu-id="92251-109">Las opciones que se pueden usar durante la creación del cliente.</span><span class="sxs-lookup"><span data-stu-id="92251-109">The options that can be provided during client creation.</span></span>
       optional: true
     return:
       type:
@@ -94,14 +95,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-109">Crea a un cliente de centro de eventos de cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="db4e1-109">Creates an EventHub Client from connection string.</span></span>
+  summary: <span data-ttu-id="92251-110">Crea a un cliente de centro de eventos de cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="92251-110">Creates an EventHub Client from connection string.</span></span>
   syntax:
     content: 'static function createFromConnectionString(connectionString: string, path?: string, options?: ClientOptions)'
     parameters:
     - id: connectionString
       type:
       - string
-      description: <span data-ttu-id="db4e1-110">Cadena de conexión de la forma ' Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName = my-SA-name; SharedAccessKey = my-SA-key'</span><span class="sxs-lookup"><span data-stu-id="db4e1-110">Connection string of the form 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+      description: <span data-ttu-id="92251-111">Cadena de conexión de la forma ' Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName = my-SA-name; SharedAccessKey = my-SA-key'</span><span class="sxs-lookup"><span data-stu-id="92251-111">Connection string of the form 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
     - id: path
       type:
       - string
@@ -122,14 +123,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-111">Crea a un cliente de centro de eventos de cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="db4e1-111">Creates an EventHub Client from connection string.</span></span>
+  summary: <span data-ttu-id="92251-112">Crea a un cliente de centro de eventos de cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="92251-112">Creates an EventHub Client from connection string.</span></span>
   syntax:
     content: 'static function createFromIotHubConnectionString(iothubConnectionString: string, options?: ClientOptions)'
     parameters:
     - id: iothubConnectionString
       type:
       - string
-      description: <span data-ttu-id="db4e1-112">Cadena de conexión de la forma ' nombre de host = host-iot-name; SharedAccessKeyName = my-SA-name; SharedAccessKey = my-SA-key'</span><span class="sxs-lookup"><span data-stu-id="db4e1-112">Connection string of the form 'HostName=iot-host-name;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+      description: <span data-ttu-id="92251-113">Cadena de conexión de la forma ' nombre de host = host-iot-name; SharedAccessKeyName = my-SA-name; SharedAccessKey = my-SA-key'</span><span class="sxs-lookup"><span data-stu-id="92251-113">Connection string of the form 'HostName=iot-host-name;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
     - id: options
       type:
       - azure-event-hubs.ClientOptions
@@ -139,25 +140,56 @@ items:
       type:
       - Promise<azure-event-hubs.EventHubClient>
   package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.createFromTokenProvider
+  name: createFromTokenProvider
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="92251-114">Crea a un cliente de centro de eventos desde un proveedor de tokens genérico.</span><span class="sxs-lookup"><span data-stu-id="92251-114">Creates an EventHub Client from a generic token provider.</span></span>
+  syntax:
+    content: 'static function createFromTokenProvider(host: string, entityPath: string, tokenProvider: TokenProvider, options?: ClientOptionsBase)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="92251-115">Nombre de dominio completo para Event Hubs.</span><span class="sxs-lookup"><span data-stu-id="92251-115">Fully qualified domain name for Event Hubs.</span></span> <span data-ttu-id="92251-116">Probablemente, <yournamespace>. servicebus.windows.net</span><span class="sxs-lookup"><span data-stu-id="92251-116">Most likely, <yournamespace>.servicebus.windows.net</span></span>
+    - id: entityPath
+      type:
+      - string
+      description: <span data-ttu-id="92251-117">Ruta de acceso del centro de eventos del formulario 'Mi-event-hub-name'</span><span class="sxs-lookup"><span data-stu-id="92251-117">EventHub path of the form 'my-event-hub-name'</span></span>
+    - id: tokenProvider
+      type:
+      - azure-event-hubs.TokenProvider
+      description: <span data-ttu-id="92251-118">El proveedor de tokens que implementa la interfaz TokenProvider.</span><span class="sxs-lookup"><span data-stu-id="92251-118">Your token provider that implements the TokenProvider interface.</span></span>
+    - id: options
+      type:
+      - azure-event-hubs.ClientOptionsBase
+      description: <span data-ttu-id="92251-119">Las opciones que se pueden usar durante la creación del cliente.</span><span class="sxs-lookup"><span data-stu-id="92251-119">The options that can be provided during client creation.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventHubClient
+  package: azure-event-hubs
 - uid: azure-event-hubs.EventHubClient.constructor
   name: EventHubClient
   children: []
   type: constructor
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-113">Crea una instancia de un cliente que apunte al centro de eventos proporcionado por esta configuración.</span><span class="sxs-lookup"><span data-stu-id="db4e1-113">Instantiates a client pointing to the Event Hub given by this configuration.</span></span>
+  summary: <span data-ttu-id="92251-120">Crea una instancia de un cliente que apunte al centro de eventos proporcionado por esta configuración.</span><span class="sxs-lookup"><span data-stu-id="92251-120">Instantiates a client pointing to the Event Hub given by this configuration.</span></span>
   syntax:
     content: 'new EventHubClient(config: ConnectionConfig, options?: ClientOptions)'
     parameters:
     - id: config
       type:
       - azure-event-hubs.ConnectionConfig
-      description: <span data-ttu-id="db4e1-114">La configuración de conexión para crear al cliente de centro de eventos.</span><span class="sxs-lookup"><span data-stu-id="db4e1-114">The connection configuration to create the EventHub Client.</span></span>
+      description: <span data-ttu-id="92251-121">La configuración de conexión para crear al cliente de centro de eventos.</span><span class="sxs-lookup"><span data-stu-id="92251-121">The connection configuration to create the EventHub Client.</span></span>
     - id: options
       type:
       - azure-event-hubs.ClientOptions
       description: >
-        <span data-ttu-id="db4e1-115">Los parámetros opcionales que pueden usarse en el constructor de cliente de centro de eventos.</span><span class="sxs-lookup"><span data-stu-id="db4e1-115">The optional parameters that can be provided to the EventHub Client constructor.</span></span>
+        <span data-ttu-id="92251-122">Los parámetros opcionales que pueden usarse en el constructor de cliente de centro de eventos.</span><span class="sxs-lookup"><span data-stu-id="92251-122">The optional parameters that can be provided to the EventHub Client constructor.</span></span>
       optional: true
   package: azure-event-hubs
 - uid: azure-event-hubs.EventHubClient.getHubRuntimeInformation
@@ -166,7 +198,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-116">Proporciona la información de tiempo de ejecución de eventhub.</span><span class="sxs-lookup"><span data-stu-id="db4e1-116">Provides the eventhub runtime information.</span></span>
+  summary: <span data-ttu-id="92251-123">Proporciona la información de tiempo de ejecución de eventhub.</span><span class="sxs-lookup"><span data-stu-id="92251-123">Provides the eventhub runtime information.</span></span>
   syntax:
     content: function getHubRuntimeInformation()
     parameters: []
@@ -180,7 +212,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-117">Proporciona una matriz de partitionIds.</span><span class="sxs-lookup"><span data-stu-id="db4e1-117">Provides an array of partitionIds.</span></span>
+  summary: <span data-ttu-id="92251-124">Proporciona una matriz de partitionIds.</span><span class="sxs-lookup"><span data-stu-id="92251-124">Provides an array of partitionIds.</span></span>
   syntax:
     content: function getPartitionIds()
     parameters: []
@@ -194,14 +226,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-118">Proporciona información acerca de la partición especificada.</span><span class="sxs-lookup"><span data-stu-id="db4e1-118">Provides information about the specified partition.</span></span>
+  summary: <span data-ttu-id="92251-125">Proporciona información acerca de la partición especificada.</span><span class="sxs-lookup"><span data-stu-id="92251-125">Provides information about the specified partition.</span></span>
   syntax:
     content: 'function getPartitionInformation(partitionId: string | number)'
     parameters:
     - id: partitionId
       type:
       - string | number
-      description: <span data-ttu-id="db4e1-119">Id. de partición para la partición que la información es necesaria.</span><span class="sxs-lookup"><span data-stu-id="db4e1-119">Partition ID for which partition information is required.</span></span>
+      description: <span data-ttu-id="92251-126">Id. de partición para la partición que la información es necesaria.</span><span class="sxs-lookup"><span data-stu-id="92251-126">Partition ID for which partition information is required.</span></span>
     return:
       type:
       - Promise<azure-event-hubs.EventHubPartitionRuntimeInformation>
@@ -212,22 +244,22 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-120">Inicia el receptor mediante el establecimiento de una sesión AMQP y un vínculo del receptor AMQP en la sesión.</span><span class="sxs-lookup"><span data-stu-id="db4e1-120">Starts the receiver by establishing an AMQP session and an AMQP receiver link on the session.</span></span> <span data-ttu-id="db4e1-121">Los mensajes se pasará al controlador onMessage proporcionado y error se pasará al controlador onError proporcionado.</span><span class="sxs-lookup"><span data-stu-id="db4e1-121">Messages will be passed to the provided onMessage handler and error will be passed to the provided onError handler.</span></span>
+  summary: <span data-ttu-id="92251-127">Inicia el receptor mediante el establecimiento de una sesión AMQP y un vínculo del receptor AMQP en la sesión.</span><span class="sxs-lookup"><span data-stu-id="92251-127">Starts the receiver by establishing an AMQP session and an AMQP receiver link on the session.</span></span> <span data-ttu-id="92251-128">Los mensajes se pasará al controlador onMessage proporcionado y error se pasará al controlador onError proporcionado.</span><span class="sxs-lookup"><span data-stu-id="92251-128">Messages will be passed to the provided onMessage handler and error will be passed to the provided onError handler.</span></span>
   syntax:
     content: 'function receive(partitionId: string | number, onMessage: OnMessage, onError: OnError, options?: ReceiveOptions)'
     parameters:
     - id: partitionId
       type:
       - string | number
-      description: <span data-ttu-id="db4e1-122">Id. de partición desde la que se va a recibir.</span><span class="sxs-lookup"><span data-stu-id="db4e1-122">Partition ID from which to receive.</span></span>
+      description: <span data-ttu-id="92251-129">Id. de partición desde la que se va a recibir.</span><span class="sxs-lookup"><span data-stu-id="92251-129">Partition ID from which to receive.</span></span>
     - id: onMessage
       type:
       - azure-event-hubs.OnMessage
-      description: <span data-ttu-id="db4e1-123">El controlador de mensajes para recibir objetos de datos de eventos.</span><span class="sxs-lookup"><span data-stu-id="db4e1-123">The message handler to receive event data objects.</span></span>
+      description: <span data-ttu-id="92251-130">El controlador de mensajes para recibir objetos de datos de eventos.</span><span class="sxs-lookup"><span data-stu-id="92251-130">The message handler to receive event data objects.</span></span>
     - id: onError
       type:
       - azure-event-hubs.OnError
-      description: <span data-ttu-id="db4e1-124">El controlador de errores para recibir un error que se produce al recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="db4e1-124">The error handler to receive an error that occurs while receiving messages.</span></span>
+      description: <span data-ttu-id="92251-131">El controlador de errores para recibir un error que se produce al recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="92251-131">The error handler to receive an error that occurs while receiving messages.</span></span>
     - id: options
       type:
       - azure-event-hubs.ReceiveOptions
@@ -243,18 +275,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-125">Recibe un lote de objetos EventData desde una partición del centro de eventos para un número determinado y un máximo determinado tiempo de espera en segundos, lo que ocurra primero.</span><span class="sxs-lookup"><span data-stu-id="db4e1-125">Receives a batch of EventData objects from an EventHub partition for a given count and a given max wait time in seconds, whichever happens first.</span></span> <span data-ttu-id="db4e1-126">Este método se puede utilizar directamente después de crear el objeto de receptor y **no debe** usarse junto con el `start()` método.</span><span class="sxs-lookup"><span data-stu-id="db4e1-126">This method can be used directly after creating the receiver object and **MUST NOT** be used along with the `start()` method.</span></span>
+  summary: <span data-ttu-id="92251-132">Recibe un lote de objetos EventData desde una partición del centro de eventos para un número determinado y un máximo determinado tiempo de espera en segundos, lo que ocurra primero.</span><span class="sxs-lookup"><span data-stu-id="92251-132">Receives a batch of EventData objects from an EventHub partition for a given count and a given max wait time in seconds, whichever happens first.</span></span> <span data-ttu-id="92251-133">Este método se puede utilizar directamente después de crear el objeto de receptor y **no debe** usarse junto con el `start()` método.</span><span class="sxs-lookup"><span data-stu-id="92251-133">This method can be used directly after creating the receiver object and **MUST NOT** be used along with the `start()` method.</span></span>
   syntax:
     content: 'function receiveBatch(partitionId: string | number, maxMessageCount: number, maxWaitTimeInSeconds?: number, options?: ReceiveOptions)'
     parameters:
     - id: partitionId
       type:
       - string | number
-      description: <span data-ttu-id="db4e1-127">Id. de partición desde la que se va a recibir.</span><span class="sxs-lookup"><span data-stu-id="db4e1-127">Partition ID from which to receive.</span></span>
+      description: <span data-ttu-id="92251-134">Id. de partición desde la que se va a recibir.</span><span class="sxs-lookup"><span data-stu-id="92251-134">Partition ID from which to receive.</span></span>
     - id: maxMessageCount
       type:
       - number
-      description: <span data-ttu-id="db4e1-128">El número máximo de mensajes.</span><span class="sxs-lookup"><span data-stu-id="db4e1-128">The maximum message count.</span></span> <span data-ttu-id="db4e1-129">Debe ser un valor mayor que 0.</span><span class="sxs-lookup"><span data-stu-id="db4e1-129">Must be a value greater than 0.</span></span>
+      description: <span data-ttu-id="92251-135">El número máximo de mensajes.</span><span class="sxs-lookup"><span data-stu-id="92251-135">The maximum message count.</span></span> <span data-ttu-id="92251-136">Debe ser un valor mayor que 0.</span><span class="sxs-lookup"><span data-stu-id="92251-136">Must be a value greater than 0.</span></span>
     - id: maxWaitTimeInSeconds
       type:
       - number
@@ -275,14 +307,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-130">Envía el mensaje especificado en el centro de eventos.</span><span class="sxs-lookup"><span data-stu-id="db4e1-130">Sends the given message to the EventHub.</span></span>
+  summary: <span data-ttu-id="92251-137">Envía el mensaje especificado en el centro de eventos.</span><span class="sxs-lookup"><span data-stu-id="92251-137">Sends the given message to the EventHub.</span></span>
   syntax:
     content: 'function send(data: EventData, partitionId?: string | number)'
     parameters:
     - id: data
       type:
       - azure-event-hubs.EventData
-      description: <span data-ttu-id="db4e1-131">Mensaje que se enviará.</span><span class="sxs-lookup"><span data-stu-id="db4e1-131">Message to send.</span></span>  <span data-ttu-id="db4e1-132">Se enviará como cadena JSON con codificación UTF8.</span><span class="sxs-lookup"><span data-stu-id="db4e1-132">Will be sent as UTF8-encoded JSON string.</span></span>
+      description: <span data-ttu-id="92251-138">Mensaje que se enviará.</span><span class="sxs-lookup"><span data-stu-id="92251-138">Message to send.</span></span>  <span data-ttu-id="92251-139">Se enviará como cadena JSON con codificación UTF8.</span><span class="sxs-lookup"><span data-stu-id="92251-139">Will be sent as UTF8-encoded JSON string.</span></span>
     - id: partitionId
       type:
       - string | number
@@ -298,14 +330,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="db4e1-133">Enviar un lote de EventData para el centro de eventos.</span><span class="sxs-lookup"><span data-stu-id="db4e1-133">Send a batch of EventData to the EventHub.</span></span> <span data-ttu-id="db4e1-134">El "message_annotations", "application_properties" y "propiedades" del primer mensaje se establecerá como el de la envoltura (mensaje de lote).</span><span class="sxs-lookup"><span data-stu-id="db4e1-134">The "message_annotations", "application_properties" and "properties" of the first message will be set as that of the envelope (batch message).</span></span>
+  summary: <span data-ttu-id="92251-140">Enviar un lote de EventData para el centro de eventos.</span><span class="sxs-lookup"><span data-stu-id="92251-140">Send a batch of EventData to the EventHub.</span></span> <span data-ttu-id="92251-141">El "message_annotations", "application_properties" y "propiedades" del primer mensaje se establecerá como el de la envoltura (mensaje de lote).</span><span class="sxs-lookup"><span data-stu-id="92251-141">The "message_annotations", "application_properties" and "properties" of the first message will be set as that of the envelope (batch message).</span></span>
   syntax:
     content: 'function sendBatch(datas: EventData[], partitionId?: string | number)'
     parameters:
     - id: datas
       type:
       - azure-event-hubs.EventData[]
-      description: <span data-ttu-id="db4e1-135">Una matriz de objetos EventData para enviarlo en un mensaje por lotes.</span><span class="sxs-lookup"><span data-stu-id="db4e1-135">An array of EventData objects to be sent in a Batch message.</span></span>
+      description: <span data-ttu-id="92251-142">Una matriz de objetos EventData para enviarlo en un mensaje por lotes.</span><span class="sxs-lookup"><span data-stu-id="92251-142">An array of EventData objects to be sent in a Batch message.</span></span>
     - id: partitionId
       type:
       - string | number
@@ -404,3 +436,8 @@ references:
     uid: azure-event-hubs.EventHubClient
   - name: '>'
     fullName: '>'
+- uid: azure-event-hubs.TokenProvider
+  spec.typeScript:
+  - name: TokenProvider
+    fullName: TokenProvider
+    uid: azure-event-hubs.TokenProvider

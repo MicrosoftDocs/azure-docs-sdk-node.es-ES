@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 685c62758b7f26967fac57e034b0ab66612ea2d9
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: a775279825384abae0ea1df5fe46c79a424df434
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40074975"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41686449"
 items:
 - uid: azure-event-hubs.Connection
   name: Connection
@@ -22,6 +22,7 @@ items:
   - azure-event-hubs.Connection.options
   - azure-event-hubs.Connection.registerHandler
   - azure-event-hubs.Connection.removeHandler
+  - azure-event-hubs.Connection.wasCloseInitiated
   langs:
   - typeScript
   type: class
@@ -33,7 +34,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130f9-101">Cierra la conexión de amqp.</span><span class="sxs-lookup"><span data-stu-id="130f9-101">Closes the amqp connection.</span></span>
+  summary: <span data-ttu-id="ee703-101">Cierra la conexión de amqp.</span><span class="sxs-lookup"><span data-stu-id="ee703-101">Closes the amqp connection.</span></span>
   syntax:
     content: function close()
     parameters: []
@@ -63,14 +64,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130f9-102">Crea un vínculo del receptor de amqp.</span><span class="sxs-lookup"><span data-stu-id="130f9-102">Creates an amqp receiver link.</span></span> <span data-ttu-id="130f9-103">Se usa la sesión proporcionada o crea uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="130f9-103">It either uses the provided session or creates a new one.</span></span>
+  summary: <span data-ttu-id="ee703-102">Crea un vínculo del receptor de amqp.</span><span class="sxs-lookup"><span data-stu-id="ee703-102">Creates an amqp receiver link.</span></span> <span data-ttu-id="ee703-103">Se usa la sesión proporcionada o crea uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="ee703-103">It either uses the provided session or creates a new one.</span></span>
   syntax:
     content: 'function createReceiver(options?: ReceiverOptionsWithSession)'
     parameters:
     - id: options
       type:
       - azure-event-hubs.ReceiverOptionsWithSession
-      description: <span data-ttu-id="130f9-104">Parámetros opcionales para crear un vínculo del receptor.</span><span class="sxs-lookup"><span data-stu-id="130f9-104">Optional parameters to create a receiver link.</span></span>
+      description: <span data-ttu-id="ee703-104">Parámetros opcionales para crear un vínculo del receptor.</span><span class="sxs-lookup"><span data-stu-id="ee703-104">Optional parameters to create a receiver link.</span></span>
       optional: true
     return:
       type:
@@ -83,20 +84,20 @@ items:
   langs:
   - typeScript
   summary: >-
-    <span data-ttu-id="130f9-105">Crea un vínculo de remitente-receptor amqp.</span><span class="sxs-lookup"><span data-stu-id="130f9-105">Creates an amqp sender-receiver link.</span></span> <span data-ttu-id="130f9-106">Se usa la sesión proporcionada o crea uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="130f9-106">It either uses the provided session or creates a new one.</span></span>
+    <span data-ttu-id="ee703-105">Crea un vínculo de remitente-receptor amqp.</span><span class="sxs-lookup"><span data-stu-id="ee703-105">Creates an amqp sender-receiver link.</span></span> <span data-ttu-id="ee703-106">Se usa la sesión proporcionada o crea uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="ee703-106">It either uses the provided session or creates a new one.</span></span>
 
-    <span data-ttu-id="130f9-107">Este método crea un vínculo de remitente-receptor en la misma sesión.</span><span class="sxs-lookup"><span data-stu-id="130f9-107">This method creates a sender-receiver link on the same session.</span></span> <span data-ttu-id="130f9-108">Es útil para las operaciones del estilo de administración donde puede que quiera enviar una solicitud y esperar la respuesta.</span><span class="sxs-lookup"><span data-stu-id="130f9-108">It is useful for management style operations where one may want to send a request and await for response.</span></span>
+    <span data-ttu-id="ee703-107">Este método crea un vínculo de remitente-receptor en la misma sesión.</span><span class="sxs-lookup"><span data-stu-id="ee703-107">This method creates a sender-receiver link on the same session.</span></span> <span data-ttu-id="ee703-108">Es útil para las operaciones del estilo de administración donde puede que quiera enviar una solicitud y esperar la respuesta.</span><span class="sxs-lookup"><span data-stu-id="ee703-108">It is useful for management style operations where one may want to send a request and await for response.</span></span>
   syntax:
     content: 'function createRequestResponseLink(senderOptions: SenderOptions, receiverOptions: ReceiverOptions, providedSession?: Session)'
     parameters:
     - id: senderOptions
       type:
       - azure-event-hubs.SenderOptions
-      description: <span data-ttu-id="130f9-109">Parámetros para crear un remitente.</span><span class="sxs-lookup"><span data-stu-id="130f9-109">Parameters to create a sender.</span></span>
+      description: <span data-ttu-id="ee703-109">Parámetros para crear un remitente.</span><span class="sxs-lookup"><span data-stu-id="ee703-109">Parameters to create a sender.</span></span>
     - id: receiverOptions
       type:
       - azure-event-hubs.ReceiverOptions
-      description: <span data-ttu-id="130f9-110">Parámetros para crear un receptor.</span><span class="sxs-lookup"><span data-stu-id="130f9-110">Parameters to create a receiver.</span></span>
+      description: <span data-ttu-id="ee703-110">Parámetros para crear un receptor.</span><span class="sxs-lookup"><span data-stu-id="ee703-110">Parameters to create a receiver.</span></span>
     - id: providedSession
       type:
       - azure-event-hubs.Session
@@ -112,14 +113,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130f9-111">Crea un vínculo de remitente de amqp.</span><span class="sxs-lookup"><span data-stu-id="130f9-111">Creates an amqp sender link.</span></span> <span data-ttu-id="130f9-112">Se usa la sesión proporcionada o crea uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="130f9-112">It either uses the provided session or creates a new one.</span></span>
+  summary: <span data-ttu-id="ee703-111">Crea un vínculo de remitente de amqp.</span><span class="sxs-lookup"><span data-stu-id="ee703-111">Creates an amqp sender link.</span></span> <span data-ttu-id="ee703-112">Se usa la sesión proporcionada o crea uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="ee703-112">It either uses the provided session or creates a new one.</span></span>
   syntax:
     content: 'function createSender(options?: SenderOptionsWithSession)'
     parameters:
     - id: options
       type:
       - azure-event-hubs.SenderOptionsWithSession
-      description: <span data-ttu-id="130f9-113">Parámetros opcionales para crear un vínculo del remitente.</span><span class="sxs-lookup"><span data-stu-id="130f9-113">Optional parameters to create a sender link.</span></span>
+      description: <span data-ttu-id="ee703-113">Parámetros opcionales para crear un vínculo del remitente.</span><span class="sxs-lookup"><span data-stu-id="ee703-113">Optional parameters to create a sender link.</span></span>
       optional: true
     return:
       type:
@@ -131,7 +132,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130f9-114">Crea una sesión de amqp en la conexión de amqp proporcionado.</span><span class="sxs-lookup"><span data-stu-id="130f9-114">Creates an amqp session on the provided amqp connection.</span></span>
+  summary: <span data-ttu-id="ee703-114">Crea una sesión de amqp en la conexión de amqp proporcionado.</span><span class="sxs-lookup"><span data-stu-id="ee703-114">Creates an amqp session on the provided amqp connection.</span></span>
   syntax:
     content: function createSession()
     parameters: []
@@ -159,7 +160,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130f9-115">Determina si la conexión está abierta.</span><span class="sxs-lookup"><span data-stu-id="130f9-115">Determines whether the connection is open.</span></span>
+  summary: <span data-ttu-id="ee703-115">Determina si la conexión está abierta.</span><span class="sxs-lookup"><span data-stu-id="ee703-115">Determines whether the connection is open.</span></span>
   syntax:
     content: function isOpen()
     parameters: []
@@ -173,7 +174,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130f9-116">Crea una nueva conexión de amqp.</span><span class="sxs-lookup"><span data-stu-id="130f9-116">Creates a new amqp connection.</span></span>
+  summary: <span data-ttu-id="ee703-116">Crea una nueva conexión de amqp.</span><span class="sxs-lookup"><span data-stu-id="ee703-116">Creates a new amqp connection.</span></span>
   syntax:
     content: function open()
     parameters: []
@@ -233,6 +234,20 @@ items:
       type:
       - rhea.OnAmqpEvent
       description: ''
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.wasCloseInitiated
+  name: wasCloseInitiated
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ee703-117">Determina si el cierre del mismo nivel es una respuesta a una solicitud de cierre iniciada de manera local para la conexión.</span><span class="sxs-lookup"><span data-stu-id="ee703-117">Determines whether the close from the peer is a response to a locally initiated close request for the connection.</span></span>
+  syntax:
+    content: function wasCloseInitiated()
+    parameters: []
+    return:
+      type:
+      - boolean
   package: azure-event-hubs
 references:
 - uid: azure-event-hubs.ReceiverOptionsWithSession
