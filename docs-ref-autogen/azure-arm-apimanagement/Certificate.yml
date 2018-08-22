@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: fd665eb615fdc65e8016e593520ab8ec757fe399
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: c2d7d26c675c2cb6e2f957fd1a4c5c27f7d22ed9
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40072886"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41681544"
 items:
 - uid: azure-arm-apimanagement.Certificate
   name: Certificate
@@ -47,7 +47,7 @@ items:
   - typeScript
   summary: Crea o actualiza el certificado que se usa para la autenticación con el back-end.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, certificateId: string, parameters: CertificateCreateOrUpdateParameters, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, certificateId: string, parameters: CertificateCreateOrUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -71,7 +71,7 @@ items:
         Crear o actualizar los parámetros.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -120,7 +120,7 @@ items:
   - typeScript
   summary: Crea o actualiza el certificado que se usa para la autenticación con el back-end.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, certificateId: string, parameters: CertificateCreateOrUpdateParameters, options: function, callback: ServiceCallback<CertificateContract>)'
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, certificateId: string, parameters: CertificateCreateOrUpdateParameters, options: Object, callback: ServiceCallback<CertificateContract>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -140,7 +140,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -158,7 +158,7 @@ items:
   - typeScript
   summary: Crea o actualiza el certificado que se usa para la autenticación con el back-end.
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, certificateId: string, parameters: CertificateCreateOrUpdateParameters, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, certificateId: string, parameters: CertificateCreateOrUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -182,7 +182,7 @@ items:
         Crear o actualizar los parámetros.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -197,7 +197,7 @@ items:
   - typeScript
   summary: Elimina un certificado específico.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, certificateId: string, ifMatch: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, certificateId: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -221,7 +221,7 @@ items:
         ETag de la entidad. ETag debe coincidir con el estado actual de entidad de la respuesta de encabezado de la solicitud GET o debe ser * para actualización incondicional.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -270,7 +270,7 @@ items:
   - typeScript
   summary: Elimina un certificado específico.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, certificateId: string, ifMatch: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, certificateId: string, ifMatch: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -290,7 +290,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -308,7 +308,7 @@ items:
   - typeScript
   summary: Elimina un certificado específico.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, serviceName: string, certificateId: string, ifMatch: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, serviceName: string, certificateId: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -332,7 +332,7 @@ items:
         ETag de la entidad. ETag debe coincidir con el estado actual de entidad de la respuesta de encabezado de la solicitud GET o debe ser * para actualización incondicional.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -347,7 +347,7 @@ items:
   - typeScript
   summary: Obtiene los detalles del certificado especificado mediante su identificador.
   syntax:
-    content: 'function get(resourceGroupName: string, serviceName: string, certificateId: string, options?: function)'
+    content: 'function get(resourceGroupName: string, serviceName: string, certificateId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -366,7 +366,7 @@ items:
         Identificador de la entidad de certificado. Debe ser único en la instancia actual del servicio API Management.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -411,7 +411,7 @@ items:
   - typeScript
   summary: Obtiene los detalles del certificado especificado mediante su identificador.
   syntax:
-    content: 'function get(resourceGroupName: string, serviceName: string, certificateId: string, options: function, callback: ServiceCallback<CertificateContract>)'
+    content: 'function get(resourceGroupName: string, serviceName: string, certificateId: string, options: Object, callback: ServiceCallback<CertificateContract>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -427,7 +427,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -445,7 +445,7 @@ items:
   - typeScript
   summary: Obtiene la versión de entidad (Etag) del estado del certificado especificado mediante su identificador.
   syntax:
-    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, certificateId: string, options?: function)'
+    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, certificateId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -464,7 +464,7 @@ items:
         Identificador de la entidad de certificado. Debe ser único en la instancia actual del servicio API Management.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -509,7 +509,7 @@ items:
   - typeScript
   summary: Obtiene la versión de entidad (Etag) del estado del certificado especificado mediante su identificador.
   syntax:
-    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, certificateId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, certificateId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -525,7 +525,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -543,7 +543,7 @@ items:
   - typeScript
   summary: Obtiene la versión de entidad (Etag) del estado del certificado especificado mediante su identificador.
   syntax:
-    content: 'function getEntityTagWithHttpOperationResponse(resourceGroupName: string, serviceName: string, certificateId: string, options?: function)'
+    content: 'function getEntityTagWithHttpOperationResponse(resourceGroupName: string, serviceName: string, certificateId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -562,7 +562,7 @@ items:
         Identificador de la entidad de certificado. Debe ser único en la instancia actual del servicio API Management.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -577,7 +577,7 @@ items:
   - typeScript
   summary: Obtiene los detalles del certificado especificado mediante su identificador.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serviceName: string, certificateId: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serviceName: string, certificateId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -596,7 +596,7 @@ items:
         Identificador de la entidad de certificado. Debe ser único en la instancia actual del servicio API Management.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -611,7 +611,7 @@ items:
   - typeScript
   summary: Enumera una colección de todos los certificados en la instancia de servicio especificada.
   syntax:
-    content: 'function listByService(resourceGroupName: string, serviceName: string, options?: function)'
+    content: 'function listByService(resourceGroupName: string, serviceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -625,7 +625,7 @@ items:
         El nombre del servicio API Management.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -666,7 +666,7 @@ items:
   - typeScript
   summary: Enumera una colección de todos los certificados en la instancia de servicio especificada.
   syntax:
-    content: 'function listByService(resourceGroupName: string, serviceName: string, options: function, callback: ServiceCallback<CertificateCollection>)'
+    content: 'function listByService(resourceGroupName: string, serviceName: string, options: Object, callback: ServiceCallback<CertificateCollection>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -678,7 +678,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -696,7 +696,7 @@ items:
   - typeScript
   summary: Enumera una colección de todos los certificados en la instancia de servicio especificada.
   syntax:
-    content: 'function listByServiceNext(nextPageLink: string, options?: function)'
+    content: 'function listByServiceNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -705,7 +705,7 @@ items:
         NextLink de la llamada anterior correcta a la operación de lista.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -742,7 +742,7 @@ items:
   - typeScript
   summary: Enumera una colección de todos los certificados en la instancia de servicio especificada.
   syntax:
-    content: 'function listByServiceNext(nextPageLink: string, options: function, callback: ServiceCallback<CertificateCollection>)'
+    content: 'function listByServiceNext(nextPageLink: string, options: Object, callback: ServiceCallback<CertificateCollection>)'
     parameters:
     - id: nextPageLink
       type:
@@ -750,7 +750,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -768,7 +768,7 @@ items:
   - typeScript
   summary: Enumera una colección de todos los certificados en la instancia de servicio especificada.
   syntax:
-    content: 'function listByServiceNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByServiceNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -777,7 +777,7 @@ items:
         NextLink de la llamada anterior correcta a la operación de lista.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -792,7 +792,7 @@ items:
   - typeScript
   summary: Enumera una colección de todos los certificados en la instancia de servicio especificada.
   syntax:
-    content: 'function listByServiceWithHttpOperationResponse(resourceGroupName: string, serviceName: string, options?: function)'
+    content: 'function listByServiceWithHttpOperationResponse(resourceGroupName: string, serviceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -806,7 +806,7 @@ items:
         El nombre del servicio API Management.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

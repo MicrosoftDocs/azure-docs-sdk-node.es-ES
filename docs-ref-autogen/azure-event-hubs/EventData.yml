@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 9d1d1dcf38ea1a28c04c4a6653127bf36e7b39c0
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 0b5760e16e033a0488094487d82fa87a1715f5a0
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40072999"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41547473"
 items:
 - uid: azure-event-hubs.EventData
   name: EventData
@@ -30,6 +30,7 @@ items:
   type: module
   summary: Describe los métodos en la interfaz EventData.
   package: azure-event-hubs
+  module: EventData
 - uid: azure-event-hubs.EventData.annotations
   name: annotations
   fullName: annotations
@@ -37,7 +38,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{AmqpMessageAnnotations} [anotaciones] Los atributos de mensaje de amqp.'
   optional: true
   syntax:
     content: 'annotations?: EventHubMessageAnnotations'
@@ -52,7 +53,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{Diccionario<any>} [applicationProperties] las propiedades específicas de la aplicación.'
   optional: true
   syntax:
     content: 'applicationProperties?: Dictionary<any>'
@@ -67,7 +68,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{cualquier} cuerpo: cuerpo del mensaje que se debe enviar o recibe.'
   syntax:
     content: 'body: any'
     return:
@@ -81,7 +82,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{Date} [enqueuedTimeUtc] El tiempo en cola del evento.'
   optional: true
   syntax:
     content: 'enqueuedTimeUtc?: Date'
@@ -115,7 +116,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{MessageHeader} [encabezado] - los encabezados del mensaje.'
   optional: true
   syntax:
     content: 'header?: MessageHeader'
@@ -130,7 +131,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{cadena} [lastEnqueuedOffset] El desplazamiento del último evento en cola.'
   optional: true
   syntax:
     content: 'lastEnqueuedOffset?: string'
@@ -145,7 +146,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{Date} [lastEnqueuedTime] El tiempo en cola UTC del último evento.'
   optional: true
   syntax:
     content: 'lastEnqueuedTime?: Date'
@@ -160,7 +161,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number} [lastSequenceNumber] El último número de secuencia del evento dentro de la secuencia de la partición del centro de eventos.'
   optional: true
   syntax:
     content: 'lastSequenceNumber?: number'
@@ -175,7 +176,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{cadena} [desplazamiento] El desplazamiento del evento.'
   optional: true
   syntax:
     content: 'offset?: string'
@@ -190,7 +191,10 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: >-
+    {cadena | null} [partitionKey] Si especifica EventHub aplicarán hash a un valor de partitionId.
+
+    Garantiza que los mensajes que terminen en una partición concreta en el centro de eventos.
   optional: true
   syntax:
     content: 'partitionKey?: string | null'
@@ -205,7 +209,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{AmqpMessageProperties} [Propiedades] Las propiedades predefinidas de AMQP como message_id, correlation_id, reply_to, etcetera.'
   optional: true
   syntax:
     content: 'properties?: MessageProperties'
@@ -220,7 +224,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{Date} [retrievalTime] El tiempo cuando se recuperó la información en tiempo de ejecución'
   optional: true
   syntax:
     content: 'retrievalTime?: Date'
@@ -235,7 +239,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number} [sequenceNumber] El número de secuencia del evento.'
   optional: true
   syntax:
     content: 'sequenceNumber?: number'

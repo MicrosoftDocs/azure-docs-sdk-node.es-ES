@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 5d7b19e346f90daa5225c91be1f675ce8ac5adcc
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 64fd01ca409abafebf124adb4f60da750a7f7115
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40075955"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41689509"
 items:
 - uid: azure-arm-recoveryservicesbackup.ProtectedItems
   name: ProtectedItems
@@ -35,7 +35,7 @@ items:
   - typeScript
   summary: Habilita la copia de seguridad de un elemento o que modifica la información de directiva de copia de seguridad de un elemento de copia de seguridad ya. Se trata de una operación asincrónica. Para conocer el estado de la operación, llame a la API GetItemOperationResult.
   syntax:
-    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options?: function)'
+    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -69,7 +69,7 @@ items:
         elemento de copia de seguridad de recursos
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -84,7 +84,7 @@ items:
   - typeScript
   summary: Habilita la copia de seguridad de un elemento o que modifica la información de directiva de copia de seguridad de un elemento de copia de seguridad ya. Se trata de una operación asincrónica. Para conocer el estado de la operación, llame a la API GetItemOperationResult.
   syntax:
-    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options: function, callback: ServiceCallback<void>)'
+    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: vaultName
       type:
@@ -112,7 +112,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -172,7 +172,7 @@ items:
   - typeScript
   summary: Habilita la copia de seguridad de un elemento o que modifica la información de directiva de copia de seguridad de un elemento de copia de seguridad ya. Se trata de una operación asincrónica. Para conocer el estado de la operación, llame a la API GetItemOperationResult.
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -206,7 +206,7 @@ items:
         elemento de copia de seguridad de recursos
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -221,7 +221,7 @@ items:
   - typeScript
   summary: Se usa para deshabilitar la copia de seguridad de un elemento dentro de un contenedor. Se trata de una operación asincrónica. Para conocer el estado de la solicitud, llame a la API GetItemOperationResult.
   syntax:
-    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -250,7 +250,7 @@ items:
         Copia de seguridad de elemento que se eliminará.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -303,7 +303,7 @@ items:
   - typeScript
   summary: Se usa para deshabilitar la copia de seguridad de un elemento dentro de un contenedor. Se trata de una operación asincrónica. Para conocer el estado de la solicitud, llame a la API GetItemOperationResult.
   syntax:
-    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: vaultName
       type:
@@ -327,7 +327,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -345,7 +345,7 @@ items:
   - typeScript
   summary: Se usa para deshabilitar la copia de seguridad de un elemento dentro de un contenedor. Se trata de una operación asincrónica. Para conocer el estado de la solicitud, llame a la API GetItemOperationResult.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -374,7 +374,7 @@ items:
         Copia de seguridad de elemento que se eliminará.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -389,7 +389,7 @@ items:
   - typeScript
   summary: Proporciona los detalles del elemento de copia de seguridad. Se trata de una operación asincrónica. Para conocer el estado de la operación, llame a la API GetItemOperationResult.
   syntax:
-    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -418,7 +418,7 @@ items:
         Copia el nombre del elemento cuyos detalles se deben capturar.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -471,7 +471,7 @@ items:
   - typeScript
   summary: Proporciona los detalles del elemento de copia de seguridad. Se trata de una operación asincrónica. Para conocer el estado de la operación, llame a la API GetItemOperationResult.
   syntax:
-    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: function, callback: ServiceCallback<ProtectedItemResource>)'
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: Object, callback: ServiceCallback<ProtectedItemResource>)'
     parameters:
     - id: vaultName
       type:
@@ -495,7 +495,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -513,7 +513,7 @@ items:
   - typeScript
   summary: Proporciona los detalles del elemento de copia de seguridad. Se trata de una operación asincrónica. Para conocer el estado de la operación, llame a la API GetItemOperationResult.
   syntax:
-    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -542,7 +542,7 @@ items:
         Copia el nombre del elemento cuyos detalles se deben capturar.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
