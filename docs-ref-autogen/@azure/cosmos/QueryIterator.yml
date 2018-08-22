@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 47883452a0cbdb278f33d889b368dd1d9980f547
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 191cfc4fa4e9d81715994e7d0270373adb0a73b0
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40076499"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41701703"
 items:
 - uid: '@azure/cosmos.QueryIterator'
   name: QueryIterator
@@ -13,6 +13,7 @@ items:
   - '@azure/cosmos.QueryIterator.current'
   - '@azure/cosmos.QueryIterator.executeNext'
   - '@azure/cosmos.QueryIterator.forEach'
+  - '@azure/cosmos.QueryIterator.getAsyncIterator'
   - '@azure/cosmos.QueryIterator.hasMoreResults'
   - '@azure/cosmos.QueryIterator.nextItem'
   - '@azure/cosmos.QueryIterator.reset'
@@ -56,9 +57,50 @@ items:
   type: method
   langs:
   - typeScript
-  summary: Ejecutar una función una vez por elemento de fuente proporcionada.
+  summary: >-
+    Llama a una devolución de llamada especificada para cada elemento devuelto por la consulta.
+
+    Se ejecuta en serie; cada devolución de llamada bloquea la siguiente.
   syntax:
-    content: function forEach()
+    content: 'function forEach(callback: (result: T, headers?: IHeaders, index?: number) => boolean | void)'
+    parameters:
+    - id: callback
+      type:
+      - '(result: T, headers?: IHeaders, index?: number) => boolean | void'
+      description: >
+        Devolución de llamada especificado.
+
+        Primer parámetro es el resultado, (opcional) el segundo parámetro es el estado actual del objeto de encabezados, tercer parámetro (opcional) es el índice actual.
+
+        No hay devoluciones de llamada se llamará si uno de ellos tiene como resultado false.
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.getAsyncIterator'
+  name: getAsyncIterator
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Obtiene un iterador de asincronía que tendrán los resultados hasta la finalización.
+
+    Nota: AsyncIterators son una característica muy nueva y es posible que deba usar polyfils/etc. con el fin de usarlos en el código.
+
+
+    Si usa TypeScript, puede usar el siguiente polyfill tan larga como destino ES6 o superior y se ejecutan en el nodo de 6 o posterior.
+
+
+    ```typescript
+
+    if (!Symbol || !Symbol.asyncIterator) {
+      (Symbol as any).asyncIterator = Symbol.for("Symbol.asyncIterator");
+    }
+
+    ```
+  syntax:
+    content: function getAsyncIterator()
     parameters: []
     return:
       type:
