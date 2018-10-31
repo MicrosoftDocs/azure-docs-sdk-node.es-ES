@@ -1,6 +1,6 @@
 ---
-title: Módulos de Azure para Node.js
-description: Introducción a los módulos de servicio y de administración de Azure para Node.js
+title: Módulos de Azure para JavaScript
+description: Introducción a los módulos de servicio y de administración de Azure para JavaScript
 author: rloutlaw
 ms.author: routlaw
 manager: routlaw
@@ -9,22 +9,22 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 165e1580e408b71b6147e51c41e22bc8fe7277a1
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220537"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49673000"
 ---
-# <a name="azure-modules-for-nodejs"></a><span data-ttu-id="9a03f-103">Módulos de Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="9a03f-103">Azure modules for Node.js</span></span>
+# <a name="azure-modules-for-javascript"></a><span data-ttu-id="7cbee-103">Módulos de Azure para JavaScript</span><span class="sxs-lookup"><span data-stu-id="7cbee-103">Azure modules for JavaScript</span></span>
 
-<span data-ttu-id="9a03f-104">Administre los recursos de Azure y conecte con los servicios desde sus aplicaciones Node.js con los módulos de Azure para Node.js.</span><span class="sxs-lookup"><span data-stu-id="9a03f-104">Manage Azure resources and connect to services from your Node.js applications with the Azure modules for Node.js.</span></span> <span data-ttu-id="9a03f-105">El código está disponible como [módulos npm](node-sdk-azure-install.md) para su uso en los proyectos.</span><span class="sxs-lookup"><span data-stu-id="9a03f-105">The code is available as [npm modules](node-sdk-azure-install.md) for use in your projects.</span></span> 
+<span data-ttu-id="7cbee-104">Administre los recursos de Azure y conecte con los servicios desde sus aplicaciones JavaScript con los módulos de Azure para JavaScript.</span><span class="sxs-lookup"><span data-stu-id="7cbee-104">Manage Azure resources and connect to services from your JavaScript applications with the Azure modules for JavaScript.</span></span> <span data-ttu-id="7cbee-105">El código está disponible como [módulos npm](node-sdk-azure-install.md) para su uso en los proyectos.</span><span class="sxs-lookup"><span data-stu-id="7cbee-105">The code is available as [npm modules](node-sdk-azure-install.md) for use in your projects.</span></span> 
 
-## <a name="manage-azure-resources"></a><span data-ttu-id="9a03f-106">Administración de recursos de Azure</span><span class="sxs-lookup"><span data-stu-id="9a03f-106">Manage Azure resources</span></span>
+## <a name="manage-azure-resources"></a><span data-ttu-id="7cbee-106">Administración de recursos de Azure</span><span class="sxs-lookup"><span data-stu-id="7cbee-106">Manage Azure resources</span></span>
 
-<span data-ttu-id="9a03f-107">Los módulos de administración se utilizan para crear y consultar los recursos de las aplicaciones o para crear las propias herramientas de automatización de Azure.</span><span class="sxs-lookup"><span data-stu-id="9a03f-107">Use management modules to create and query resources from your apps or to build your own Azure automation tools.</span></span> 
+<span data-ttu-id="7cbee-107">Los módulos de administración se utilizan para crear y consultar los recursos de las aplicaciones o para crear las propias herramientas de automatización de Azure.</span><span class="sxs-lookup"><span data-stu-id="7cbee-107">Use management modules to create and query resources from your apps or to build your own Azure automation tools.</span></span> 
 
-<span data-ttu-id="9a03f-108">Por ejemplo, para crear una máquina virtual Linux usando una interfaz de red existente, debe escribir el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="9a03f-108">For example, to create a Linux VM using an existing network interface, you would write the following code:</span></span>
+<span data-ttu-id="7cbee-108">Por ejemplo, para crear una máquina virtual Linux usando una interfaz de red existente, debe escribir el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="7cbee-108">For example, to create a Linux VM using an existing network interface, you would write the following code:</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -81,13 +81,13 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 });
 ```
 
-<span data-ttu-id="9a03f-109">Revise las [instrucciones de instalación](node-sdk-azure-install.md) para obtener una lista completa de los módulos y el [artículo de introducción](node-sdk-azure-get-started.md) para configurar la autenticación y ejecutar código de ejemplo para crear y actualizar los recursos en su propia suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="9a03f-109">Review the [install instructions](node-sdk-azure-install.md) for a full list of the modules and the [get started article](node-sdk-azure-get-started.md) to set up authentication and run sample code to create and update resources against your own Azure subscription.</span></span> 
+<span data-ttu-id="7cbee-109">Revise las [instrucciones de instalación](node-sdk-azure-install.md) para obtener una lista completa de los módulos y el [artículo de introducción](node-sdk-azure-get-started.md) para configurar la autenticación y ejecutar código de ejemplo para crear y actualizar los recursos en su propia suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="7cbee-109">Review the [install instructions](node-sdk-azure-install.md) for a full list of the modules and the [get started article](node-sdk-azure-get-started.md) to set up authentication and run sample code to create and update resources against your own Azure subscription.</span></span> 
 
-## <a name="connect-to-azure-services"></a><span data-ttu-id="9a03f-110">Conexión a los servicios de Azure</span><span class="sxs-lookup"><span data-stu-id="9a03f-110">Connect to Azure services</span></span>
+## <a name="connect-to-azure-services"></a><span data-ttu-id="7cbee-110">Conexión a los servicios de Azure</span><span class="sxs-lookup"><span data-stu-id="7cbee-110">Connect to Azure services</span></span>
 
-<span data-ttu-id="9a03f-111">Además de utilizar los módulos de Azure para crear y administrar recursos en Azure, también puede utilizar paquetes para conectarse a los servicios en la nube de Azure en las aplicaciones y a utilizarlos.</span><span class="sxs-lookup"><span data-stu-id="9a03f-111">In addition to using the Azure modules to create and manage resources within Azure, you can also use packages to connect and use Azure cloud services in your apps.</span></span> <span data-ttu-id="9a03f-112">Por ejemplo, puede actualizar una tabla de SQL Database o cargar archivos en Azure Storage.</span><span class="sxs-lookup"><span data-stu-id="9a03f-112">For example, you might update a table SQL Database or upload files to Azure Storage.</span></span> <span data-ttu-id="9a03f-113">Seleccione el paquete que necesita para un servicio determinado en la [lista completa](node-sdk-azure-install.md) y visite el [Centro para desarrolladores de Node.js](https://azure.microsoft.com/develop/nodejs/) para ver tutoriales y código de ejemplo para aprender a usar los módulos en las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="9a03f-113">Select the package you need for a particular service from the [complete list](node-sdk-azure-install.md) and visit the [Node.js developer center](https://azure.microsoft.com/develop/nodejs/) for tutorials and sample code to learn how to use the modules in your apps.</span></span>
+<span data-ttu-id="7cbee-111">Además de utilizar los módulos de Azure para crear y administrar recursos en Azure, también puede utilizar paquetes para conectarse a los servicios en la nube de Azure en las aplicaciones y a utilizarlos.</span><span class="sxs-lookup"><span data-stu-id="7cbee-111">In addition to using the Azure modules to create and manage resources within Azure, you can also use packages to connect and use Azure cloud services in your apps.</span></span> <span data-ttu-id="7cbee-112">Por ejemplo, puede actualizar una tabla de SQL Database o cargar archivos en Azure Storage.</span><span class="sxs-lookup"><span data-stu-id="7cbee-112">For example, you might update a table SQL Database or upload files to Azure Storage.</span></span> <span data-ttu-id="7cbee-113">Seleccione el paquete que necesita para un servicio determinado en la [lista completa](node-sdk-azure-install.md) y visite el [Centro para desarrolladores de JavaScript](https://azure.microsoft.com/develop/nodejs/) para ver tutoriales y código de ejemplo para aprender a usar los módulos en las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="7cbee-113">Select the package you need for a particular service from the [complete list](node-sdk-azure-install.md) and visit the [JavaScript developer center](https://azure.microsoft.com/develop/nodejs/) for tutorials and sample code to learn how to use the modules in your apps.</span></span>
 
-<span data-ttu-id="9a03f-114">Por ejemplo, para imprimir el contenido de cada blob en un contenedor de Azure Storage:</span><span class="sxs-lookup"><span data-stu-id="9a03f-114">For example, to print out the contents of every blob in an Azure storage container:</span></span>
+<span data-ttu-id="7cbee-114">Por ejemplo, para imprimir el contenido de cada blob en un contenedor de Azure Storage:</span><span class="sxs-lookup"><span data-stu-id="7cbee-114">For example, to print out the contents of every blob in an Azure storage container:</span></span>
 
 ```javascript
 var azure = require('azure-storage');
@@ -98,12 +98,12 @@ blobService.listBlobsSegmented('testcontainer', null, function(error, result, re
 });
 ```
 
-## <a name="sample-code-and-reference"></a><span data-ttu-id="9a03f-115">Código de ejemplo y referencia</span><span class="sxs-lookup"><span data-stu-id="9a03f-115">Sample code and reference</span></span>
+## <a name="sample-code-and-reference"></a><span data-ttu-id="7cbee-115">Código de ejemplo y referencia</span><span class="sxs-lookup"><span data-stu-id="7cbee-115">Sample code and reference</span></span>
 
-<span data-ttu-id="9a03f-116">Los ejemplos siguientes incluyen las tareas comunes con los módulos de administración de Azure y tienen código listo para usar en sus propias aplicaciones:</span><span class="sxs-lookup"><span data-stu-id="9a03f-116">The following samples cover common tasks with the Azure management modules and have code ready to use in your own apps:</span></span>
+<span data-ttu-id="7cbee-116">Los ejemplos siguientes incluyen las tareas comunes con los módulos de administración de Azure y tienen código listo para usar en sus propias aplicaciones:</span><span class="sxs-lookup"><span data-stu-id="7cbee-116">The following samples cover common tasks with the Azure management modules and have code ready to use in your own apps:</span></span>
 
-- [<span data-ttu-id="9a03f-117">Máquinas virtuales</span><span class="sxs-lookup"><span data-stu-id="9a03f-117">Virtual machines</span></span>](node-samples-services-compute.md)
-- [<span data-ttu-id="9a03f-118">Aplicaciones web</span><span class="sxs-lookup"><span data-stu-id="9a03f-118">Web apps</span></span>](node-samples-services-web-and-mobile.md)
-- [<span data-ttu-id="9a03f-119">SQL Database</span><span class="sxs-lookup"><span data-stu-id="9a03f-119">SQL Database</span></span>](node-samples-services-database.md)
+- [<span data-ttu-id="7cbee-117">Máquinas virtuales</span><span class="sxs-lookup"><span data-stu-id="7cbee-117">Virtual machines</span></span>](node-samples-services-compute.md)
+- [<span data-ttu-id="7cbee-118">Aplicaciones web</span><span class="sxs-lookup"><span data-stu-id="7cbee-118">Web apps</span></span>](node-samples-services-web-and-mobile.md)
+- [<span data-ttu-id="7cbee-119">SQL Database</span><span class="sxs-lookup"><span data-stu-id="7cbee-119">SQL Database</span></span>](node-samples-services-database.md)
    
-<span data-ttu-id="9a03f-120">Hay disponible una [referencia](https://docs.microsoft.com/javascript/api) para todos los módulos tanto de los módulos de servicio como de las bibliotecas.</span><span class="sxs-lookup"><span data-stu-id="9a03f-120">A [reference](https://docs.microsoft.com/javascript/api) is available for all modules in both the service and management modules.</span></span> <span data-ttu-id="9a03f-121">Las nuevas características, cambios importantes e instrucciones de migración desde versiones anteriores están disponibles en las [notas de la versión](https://github.com/Azure/azure-sdk-for-node/releases).</span><span class="sxs-lookup"><span data-stu-id="9a03f-121">New features, breaking changes, and migration instructions from previous versions are available in the [release notes](https://github.com/Azure/azure-sdk-for-node/releases).</span></span>
+<span data-ttu-id="7cbee-120">Hay disponible una [referencia](https://docs.microsoft.com/javascript/api) para todos los módulos tanto de los módulos de servicio como de las bibliotecas.</span><span class="sxs-lookup"><span data-stu-id="7cbee-120">A [reference](https://docs.microsoft.com/javascript/api) is available for all modules in both the service and management modules.</span></span> <span data-ttu-id="7cbee-121">Las nuevas características, cambios importantes e instrucciones de migración desde versiones anteriores están disponibles en las [notas de la versión](https://github.com/Azure/azure-sdk-for-node/releases).</span><span class="sxs-lookup"><span data-stu-id="7cbee-121">New features, breaking changes, and migration instructions from previous versions are available in the [release notes](https://github.com/Azure/azure-sdk-for-node/releases).</span></span>
