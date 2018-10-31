@@ -1,6 +1,6 @@
 ---
-title: Herramientas para desarrolladores de Node.js en Azure | Microsoft Docs
-description: Instalación de herramientas individuales para el desarrollo de Node.js en Azure
+title: Herramientas para desarrolladores de JavaScript en Azure | Microsoft Docs
+description: Instalación de herramientas individuales para el desarrollo en JavaScript en Azure
 services: multiple
 author: rloutlaw
 manager: routlaw
@@ -10,15 +10,15 @@ ms.devlang: nodejs
 ms.topic: article
 ms.date: 11/07/2017
 ms.author: routlaw
-ms.openlocfilehash: 172cc3e1bff763cbf768dce5aa85065da0dd4927
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1c676b1f31fde7b14a16031b78f767a2c59edd5a
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220737"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49726670"
 ---
-# <a name="azure-tools-for-nodejs-developers"></a>Herramientas de Azure para desarrolladores de Node.js
-Se recomiendan las siguientes herramientas para el desarrollo con Azure en Node.js.
+# <a name="azure-tools-for-javascript-developers"></a>Herramientas de Azure para desarrolladores de JavaScript
+Se recomiendan las siguientes herramientas para el desarrollo de aplicaciones JavaScript en Azure.
 
 ## <a name="azure-cli"></a>Azure CLI
 La CLI de Azure está optimizada para administrar recursos de Azure desde la línea de comandos.
@@ -29,7 +29,7 @@ La CLI de Azure está optimizada para administrar recursos de Azure desde la lí
 > [Instalación de la CLI de Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
-Edite y depure aplicaciones Node.js en cualquier sistema operativo.
+Edite y depure aplicaciones JavaScript en cualquier sistema operativo.
 
 ![Visual Studio Code](media/node-azure-tools/vs-code.png)
 
@@ -42,7 +42,7 @@ Utilice las siguientes extensiones gratuitas para interactuar con los servicios 
 | Herramienta | DESCRIPCIÓN  |
 |:---------:|---------|
 | [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Herramientas de Azure Functions](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | Crear, administrar, ver, depurar e implementar funciones|
-| [Azure App Service](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![Herramientas de App Service](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | Explorar sitios y Azure Portal, crear nuevos sitios (Linux en Node.js únicamente) e implementar en ranuras |
+| [Azure App Service](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![Herramientas de App Service](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | Explorar sitios y Azure Portal, crear nuevos sitios e implementar en ranuras |
 | [Cosmos DB ](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)  <br> [![Herramientas de Cosmos DB](media/node-azure-tools/icon-cosmos-db.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)| Crear, examinar y actualizar bases de datos multimodelo distribuidas globalmente en Azure |
 | [Docker](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)   <br> [![Herramientas de Cosmos DB](media/node-azure-tools/icon-docker.png)](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)| Administrar contenedores e imágenes de Docker, Docker Hub y Azure Container Registry |
 
