@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: PowerBI Embedded
 ms.openlocfilehash: 58251dd1cd3a672a5167193f74d311952d70e84e
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49656262"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50405761"
 ---
-# <a name="azure-powerbi-embedded-modules-for-nodejs"></a><span data-ttu-id="d33f6-103">Módulos PowerBI Embedded de Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="d33f6-103">Azure PowerBI Embedded modules for Node.js</span></span>
+# <a name="azure-powerbi-embedded-modules-for-nodejs"></a><span data-ttu-id="3cdb9-103">Módulos PowerBI Embedded de Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="3cdb9-103">Azure PowerBI Embedded modules for Node.js</span></span>
 
-<span data-ttu-id="d33f6-104">Con el servicio Power BI Embedded de Azure, puede integrar informes de Power BI directamente en la aplicación de nodo para crear o editar gráficos e informes.</span><span class="sxs-lookup"><span data-stu-id="d33f6-104">With the Power BI Embedded Azure service, you can integrate Power BI reports right into your node application to create or edit charts and reports.</span></span>
+<span data-ttu-id="3cdb9-104">Con el servicio Power BI Embedded de Azure, puede integrar informes de Power BI directamente en la aplicación de nodo para crear o editar gráficos e informes.</span><span class="sxs-lookup"><span data-stu-id="3cdb9-104">With the Power BI Embedded Azure service, you can integrate Power BI reports right into your node application to create or edit charts and reports.</span></span>
 
-<span data-ttu-id="d33f6-105">Más información sobre [Power BI Embedded](https://powerbi.microsoft.com/documentation/powerbi-developer-embedding/).</span><span class="sxs-lookup"><span data-stu-id="d33f6-105">Learn more about [Power BI Embedded](https://powerbi.microsoft.com/documentation/powerbi-developer-embedding/).</span></span>
+<span data-ttu-id="3cdb9-105">Más información sobre [Power BI Embedded](https://powerbi.microsoft.com/documentation/powerbi-developer-embedding/).</span><span class="sxs-lookup"><span data-stu-id="3cdb9-105">Learn more about [Power BI Embedded](https://powerbi.microsoft.com/documentation/powerbi-developer-embedding/).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="d33f6-106">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="d33f6-106">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="3cdb9-106">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="3cdb9-106">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="d33f6-107">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="d33f6-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="3cdb9-107">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="3cdb9-107">Install the npm module</span></span>
 
-<span data-ttu-id="d33f6-108">Instale el módulo npm de Azure Power BI.</span><span class="sxs-lookup"><span data-stu-id="d33f6-108">Install the Azure Power BI npm module</span></span>
+<span data-ttu-id="3cdb9-108">Instale el módulo npm de Azure Power BI.</span><span class="sxs-lookup"><span data-stu-id="3cdb9-108">Install the Azure Power BI npm module</span></span>
 
 ```bash
 npm install azure-arm-powerbiembedded
 ```
 
-### <a name="example"></a><span data-ttu-id="d33f6-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d33f6-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="3cdb9-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3cdb9-109">Example</span></span>
 
-<span data-ttu-id="d33f6-110">En este ejemplo se crea una colección de áreas de trabajo en un grupo de recursos existente.</span><span class="sxs-lookup"><span data-stu-id="d33f6-110">This example creates a workspace collection in an existing resource group.</span></span>
+<span data-ttu-id="3cdb9-110">En este ejemplo se crea una colección de áreas de trabajo en un grupo de recursos existente.</span><span class="sxs-lookup"><span data-stu-id="3cdb9-110">This example creates a workspace collection in an existing resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -74,6 +74,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="d33f6-111">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="d33f6-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="3cdb9-111">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="3cdb9-111">Samples</span></span>
 
-<span data-ttu-id="d33f6-112">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="d33f6-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="3cdb9-112">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="3cdb9-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
