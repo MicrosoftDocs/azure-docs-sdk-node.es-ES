@@ -11,27 +11,27 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
 ms.openlocfilehash: fb2cc5ba927fe03fb5fe3114919ed1b0b6e969ae
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50346353"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51141314"
 ---
-# <a name="azure-monitor-modules-for-nodejs"></a><span data-ttu-id="bb5de-103">Módulos de Azure Monitor para Node.js</span><span class="sxs-lookup"><span data-stu-id="bb5de-103">Azure Monitor modules for Node.js</span></span>
+# <a name="azure-monitor-modules-for-nodejs"></a><span data-ttu-id="1005d-103">Módulos de Azure Monitor para Node.js</span><span class="sxs-lookup"><span data-stu-id="1005d-103">Azure Monitor modules for Node.js</span></span>
 
-<span data-ttu-id="bb5de-104">Las aplicaciones de nube son complejas y tienen muchas partes móviles.</span><span class="sxs-lookup"><span data-stu-id="bb5de-104">Cloud applications are complex with many moving parts.</span></span> <span data-ttu-id="bb5de-105">La supervisión proporciona datos para garantizar que la aplicación permanece en funcionamiento en un estado correcto.</span><span class="sxs-lookup"><span data-stu-id="bb5de-105">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="bb5de-106">También ayuda a evitar posibles problemas o a solucionar los existentes.</span><span class="sxs-lookup"><span data-stu-id="bb5de-106">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="bb5de-107">Además, puede usar datos de supervisión para obtener un conocimiento más profundo sobre su aplicación.</span><span class="sxs-lookup"><span data-stu-id="bb5de-107">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="bb5de-108">Este conocimiento puede ayudarle a mejorar el rendimiento o mantenimiento de la aplicación, o a automatizar acciones que de lo contrario requerirían intervención manual.</span><span class="sxs-lookup"><span data-stu-id="bb5de-108">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
+<span data-ttu-id="1005d-104">Las aplicaciones de nube son complejas y tienen muchas partes móviles.</span><span class="sxs-lookup"><span data-stu-id="1005d-104">Cloud applications are complex with many moving parts.</span></span> <span data-ttu-id="1005d-105">La supervisión proporciona datos para garantizar que la aplicación permanece en funcionamiento en un estado correcto.</span><span class="sxs-lookup"><span data-stu-id="1005d-105">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="1005d-106">También ayuda a evitar posibles problemas o a solucionar los existentes.</span><span class="sxs-lookup"><span data-stu-id="1005d-106">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="1005d-107">Además, puede usar datos de supervisión para obtener un conocimiento más profundo sobre su aplicación.</span><span class="sxs-lookup"><span data-stu-id="1005d-107">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="1005d-108">Este conocimiento puede ayudarle a mejorar el rendimiento o mantenimiento de la aplicación, o a automatizar acciones que de lo contrario requerirían intervención manual.</span><span class="sxs-lookup"><span data-stu-id="1005d-108">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="bb5de-109">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="bb5de-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="1005d-109">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="1005d-109">Management Package</span></span>
 
-### <a name="install-npm-module"></a><span data-ttu-id="bb5de-110">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="bb5de-110">Install npm module</span></span>
+### <a name="install-npm-module"></a><span data-ttu-id="1005d-110">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="1005d-110">Install npm module</span></span>
 
 ```bash
 npm install azure-arm-monitor
 ```
 
-### <a name="example"></a><span data-ttu-id="bb5de-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bb5de-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="1005d-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1005d-111">Example</span></span>
 
-<span data-ttu-id="bb5de-112">En este ejemplo de código se imprimen todas las reglas de alertas asociadas a un grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="bb5de-112">This code example prints all the alerting rules associated with a resource group.</span></span>
+<span data-ttu-id="1005d-112">En este ejemplo de código se imprimen todas las reglas de alertas asociadas a un grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="1005d-112">This code example prints all the alerting rules associated with a resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -51,6 +51,6 @@ msRestAzure
   });
 ```
 
-### <a name="samples"></a><span data-ttu-id="bb5de-113">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="bb5de-113">Samples</span></span>
+### <a name="samples"></a><span data-ttu-id="1005d-113">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="1005d-113">Samples</span></span>
 
-<span data-ttu-id="bb5de-114">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="bb5de-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="1005d-114">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="1005d-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

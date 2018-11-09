@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Scheduler
 ms.openlocfilehash: 9a842919fddb3d6448d5a4e951dc58dd0d3211e0
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50406481"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51122084"
 ---
-# <a name="azure-scheduler-modules-for-nodejs"></a><span data-ttu-id="582b6-103">Módulos de Azure Scheduler para Node.js</span><span class="sxs-lookup"><span data-stu-id="582b6-103">Azure Scheduler modules for Node.js</span></span>
+# <a name="azure-scheduler-modules-for-nodejs"></a><span data-ttu-id="3824a-103">Módulos de Azure Scheduler para Node.js</span><span class="sxs-lookup"><span data-stu-id="3824a-103">Azure Scheduler modules for Node.js</span></span>
 
-<span data-ttu-id="582b6-104">Azure Scheduler crea, mantiene e invoca el trabajo programado a través de HTTP, HTTPS, una cola de almacenamiento o el servicio [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview).</span><span class="sxs-lookup"><span data-stu-id="582b6-104">Azure Scheduler creates, maintains, and invokes scheduled work via HTTP, HTTPS, a storage queue, or the [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview).</span></span>
+<span data-ttu-id="3824a-104">Azure Scheduler crea, mantiene e invoca el trabajo programado a través de HTTP, HTTPS, una cola de almacenamiento o el servicio [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview).</span><span class="sxs-lookup"><span data-stu-id="3824a-104">Azure Scheduler creates, maintains, and invokes scheduled work via HTTP, HTTPS, a storage queue, or the [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview).</span></span>
 
-<span data-ttu-id="582b6-105">Más información sobre [Azure Scheduler](/azure/scheduler/scheduler-intro).</span><span class="sxs-lookup"><span data-stu-id="582b6-105">Learn more about [Azure Scheduler](/azure/scheduler/scheduler-intro).</span></span>
+<span data-ttu-id="3824a-105">Más información sobre [Azure Scheduler](/azure/scheduler/scheduler-intro).</span><span class="sxs-lookup"><span data-stu-id="3824a-105">Learn more about [Azure Scheduler](/azure/scheduler/scheduler-intro).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="582b6-106">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="582b6-106">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="3824a-106">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="3824a-106">Management package</span></span>
 
-<span data-ttu-id="582b6-107">Cree, mantenga e invoque el trabajo programado a través de diversos canales de comunicación con la API de administración.</span><span class="sxs-lookup"><span data-stu-id="582b6-107">Create, maintain, and invoke scheduled work across various communication channels with the management API.</span></span>
+<span data-ttu-id="3824a-107">Cree, mantenga e invoque el trabajo programado a través de diversos canales de comunicación con la API de administración.</span><span class="sxs-lookup"><span data-stu-id="3824a-107">Create, maintain, and invoke scheduled work across various communication channels with the management API.</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="582b6-108">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="582b6-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="3824a-108">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="3824a-108">Install the npm module</span></span>
 
-<span data-ttu-id="582b6-109">Instale el módulo npm de Azure Scheduler.</span><span class="sxs-lookup"><span data-stu-id="582b6-109">Install the Azure Scheduler npm module</span></span>
+<span data-ttu-id="3824a-109">Instale el módulo npm de Azure Scheduler.</span><span class="sxs-lookup"><span data-stu-id="3824a-109">Install the Azure Scheduler npm module</span></span>
 
 ```bash
 npm install azure-arm-scheduler
 ```
 
-### <a name="example"></a><span data-ttu-id="582b6-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="582b6-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="3824a-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3824a-110">Example</span></span>
 
-<span data-ttu-id="582b6-111">En este ejemplo se enumeran los programadores actuales.</span><span class="sxs-lookup"><span data-stu-id="582b6-111">This examples lists the current schedulers.</span></span>
+<span data-ttu-id="3824a-111">En este ejemplo se enumeran los programadores actuales.</span><span class="sxs-lookup"><span data-stu-id="3824a-111">This examples lists the current schedulers.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure')
@@ -57,6 +57,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 })
 ```
 
-## <a name="samples"></a><span data-ttu-id="582b6-112">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="582b6-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="3824a-112">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="3824a-112">Samples</span></span>
 
-<span data-ttu-id="582b6-113">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="582b6-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="3824a-113">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="3824a-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
