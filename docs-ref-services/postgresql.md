@@ -9,31 +9,31 @@ ms.topic: article
 ms.devlang: nodejs
 ms.service: postgresql
 ms.openlocfilehash: ed9373b767684e4893ca84de1030d062178b7ea4
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51098728"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51465699"
 ---
-# <a name="azure-postgresql-modules-for-nodejs"></a><span data-ttu-id="2383b-103">Módulos de Azure PostgreSQL para Node.js</span><span class="sxs-lookup"><span data-stu-id="2383b-103">Azure PostgreSQL modules for Node.js</span></span>
+# <a name="azure-postgresql-modules-for-nodejs"></a><span data-ttu-id="caf55-103">Módulos de Azure PostgreSQL para Node.js</span><span class="sxs-lookup"><span data-stu-id="caf55-103">Azure PostgreSQL modules for Node.js</span></span>
 
-<span data-ttu-id="2383b-104">La biblioteca de cliente recomendada para acceder a Azure Database for PostgreSQL es la [biblioteca de conexión de Node.js para Azure Database for PostgreSQL](https://www.npmjs.com/package/pg) de código abierto.</span><span class="sxs-lookup"><span data-stu-id="2383b-104">The recommended client library for accessing Azure Database for PostgreSQL is the open-source [Node.js connection library for Azure Database for PostgreSQL](https://www.npmjs.com/package/pg).</span></span> <span data-ttu-id="2383b-105">Esta biblioteca es un cliente de PostgreSQL sin bloqueo para Node.js, que admite JavaScript puro y enlaces libpq nativo opcionales.</span><span class="sxs-lookup"><span data-stu-id="2383b-105">This library is a non-blocking PostgreSQL client for Node.js, supporting pure JavaScript and optional native libpq bindings.</span></span>
+<span data-ttu-id="caf55-104">La biblioteca de cliente recomendada para acceder a Azure Database for PostgreSQL es la [biblioteca de conexión de Node.js para Azure Database for PostgreSQL](https://www.npmjs.com/package/pg) de código abierto.</span><span class="sxs-lookup"><span data-stu-id="caf55-104">The recommended client library for accessing Azure Database for PostgreSQL is the open-source [Node.js connection library for Azure Database for PostgreSQL](https://www.npmjs.com/package/pg).</span></span> <span data-ttu-id="caf55-105">Esta biblioteca es un cliente de PostgreSQL sin bloqueo para Node.js, que admite JavaScript puro y enlaces libpq nativo opcionales.</span><span class="sxs-lookup"><span data-stu-id="caf55-105">This library is a non-blocking PostgreSQL client for Node.js, supporting pure JavaScript and optional native libpq bindings.</span></span>
 
-<span data-ttu-id="2383b-106">Más información acerca de [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)</span><span class="sxs-lookup"><span data-stu-id="2383b-106">Learn more about [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)</span></span>
+<span data-ttu-id="caf55-106">Más información acerca de [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)</span><span class="sxs-lookup"><span data-stu-id="caf55-106">Learn more about [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)</span></span>
 
-## <a name="client-package"></a><span data-ttu-id="2383b-107">Paquete del cliente</span><span class="sxs-lookup"><span data-stu-id="2383b-107">Client package</span></span>
+## <a name="client-package"></a><span data-ttu-id="caf55-107">Paquete del cliente</span><span class="sxs-lookup"><span data-stu-id="caf55-107">Client package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="2383b-108">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="2383b-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="caf55-108">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="caf55-108">Install the npm module</span></span>
 
-<span data-ttu-id="2383b-109">Utilice npm para instalar el módulo de cliente de PostgreSQL.</span><span class="sxs-lookup"><span data-stu-id="2383b-109">Use npm to install the PostgreSQL client module.</span></span>
+<span data-ttu-id="caf55-109">Utilice npm para instalar el módulo de cliente de PostgreSQL.</span><span class="sxs-lookup"><span data-stu-id="caf55-109">Use npm to install the PostgreSQL client module.</span></span>
 
 ```bash
 npm install pg
 ```   
 
-### <a name="example"></a><span data-ttu-id="2383b-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2383b-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="caf55-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="caf55-110">Example</span></span>
 
-<span data-ttu-id="2383b-111">En este ejemplo se abre una conexión de cliente y ejecuta una consulta simple.</span><span class="sxs-lookup"><span data-stu-id="2383b-111">This example opens a client connection and executes a simple query.</span></span>
+<span data-ttu-id="caf55-111">En este ejemplo se abre una conexión de cliente y ejecuta una consulta simple.</span><span class="sxs-lookup"><span data-stu-id="caf55-111">This example opens a client connection and executes a simple query.</span></span>
 
 ```javascript
 const pg = require('pg');
@@ -50,8 +50,8 @@ client.query(query, (err, res) => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="2383b-112">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="2383b-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="caf55-112">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="caf55-112">Samples</span></span>
 
 [!INCLUDE [node-postgresql-samples](../docs-ref-conceptual/includes/postgresql-samples.md)]
 
-<span data-ttu-id="2383b-113">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="2383b-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="caf55-113">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="caf55-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

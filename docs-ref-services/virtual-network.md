@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Virtual Network
 ms.openlocfilehash: 11341fdff5df3b7521319d841707493db1d07732
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51062054"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51444349"
 ---
-# <a name="azure-virtual-network-modules-for-nodejs"></a><span data-ttu-id="2afd5-103">Módulos de Azure Virtual Network para Node.js</span><span class="sxs-lookup"><span data-stu-id="2afd5-103">Azure Virtual Network modules for Node.js</span></span>
+# <a name="azure-virtual-network-modules-for-nodejs"></a><span data-ttu-id="3cbba-103">Módulos de Azure Virtual Network para Node.js</span><span class="sxs-lookup"><span data-stu-id="3cbba-103">Azure Virtual Network modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="2afd5-104">Información general</span><span class="sxs-lookup"><span data-stu-id="2afd5-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="3cbba-104">Información general</span><span class="sxs-lookup"><span data-stu-id="3cbba-104">Overview</span></span>
 
-<span data-ttu-id="2afd5-105">El servicio de Azure Virtual Network le permite conectar de forma segura los recursos de Azure con redes virtuales.</span><span class="sxs-lookup"><span data-stu-id="2afd5-105">The Azure Virtual Network service enables you to securely connect Azure resources to each other with virtual networks (VNets).</span></span> <span data-ttu-id="2afd5-106">Una red virtual es una representación de su propia red en la nube.</span><span class="sxs-lookup"><span data-stu-id="2afd5-106">A VNet is a representation of your own network in the cloud.</span></span> <span data-ttu-id="2afd5-107">Una red virtual es un aislamiento lógico de la nube de Azure dedicada a su suscripción.</span><span class="sxs-lookup"><span data-stu-id="2afd5-107">A VNet is a logical isolation of the Azure cloud dedicated to your subscription.</span></span> <span data-ttu-id="2afd5-108">También puede conectar redes virtuales a la red local.</span><span class="sxs-lookup"><span data-stu-id="2afd5-108">You can also connect VNets to your on-premises network.</span></span>
+<span data-ttu-id="3cbba-105">El servicio de Azure Virtual Network le permite conectar de forma segura los recursos de Azure con redes virtuales.</span><span class="sxs-lookup"><span data-stu-id="3cbba-105">The Azure Virtual Network service enables you to securely connect Azure resources to each other with virtual networks (VNets).</span></span> <span data-ttu-id="3cbba-106">Una red virtual es una representación de su propia red en la nube.</span><span class="sxs-lookup"><span data-stu-id="3cbba-106">A VNet is a representation of your own network in the cloud.</span></span> <span data-ttu-id="3cbba-107">Una red virtual es un aislamiento lógico de la nube de Azure dedicada a su suscripción.</span><span class="sxs-lookup"><span data-stu-id="3cbba-107">A VNet is a logical isolation of the Azure cloud dedicated to your subscription.</span></span> <span data-ttu-id="3cbba-108">También puede conectar redes virtuales a la red local.</span><span class="sxs-lookup"><span data-stu-id="3cbba-108">You can also connect VNets to your on-premises network.</span></span>
 
-<span data-ttu-id="2afd5-109">Más información acerca de [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).</span><span class="sxs-lookup"><span data-stu-id="2afd5-109">Learn more about [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).</span></span>
+<span data-ttu-id="3cbba-109">Más información acerca de [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).</span><span class="sxs-lookup"><span data-stu-id="3cbba-109">Learn more about [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="2afd5-110">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="2afd5-110">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="3cbba-110">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="3cbba-110">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="2afd5-111">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="2afd5-111">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="3cbba-111">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="3cbba-111">Install the npm module</span></span>
 
-<span data-ttu-id="2afd5-112">Instale el módulo npm de Azure Virtual Network.</span><span class="sxs-lookup"><span data-stu-id="2afd5-112">Install the Azure Virtual Network npm module</span></span>
+<span data-ttu-id="3cbba-112">Instale el módulo npm de Azure Virtual Network.</span><span class="sxs-lookup"><span data-stu-id="3cbba-112">Install the Azure Virtual Network npm module</span></span>
 
 ```bash
 npm install azure-arm-network
 ```
 
-### <a name="example"></a><span data-ttu-id="2afd5-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2afd5-113">Example</span></span>
+### <a name="example"></a><span data-ttu-id="3cbba-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3cbba-113">Example</span></span>
 
-<span data-ttu-id="2afd5-114">En este ejemplo se obtiene y se imprime la lista de redes virtuales.</span><span class="sxs-lookup"><span data-stu-id="2afd5-114">This example gets and prints the list of virtual networks</span></span>
+<span data-ttu-id="3cbba-114">En este ejemplo se obtiene y se imprime la lista de redes virtuales.</span><span class="sxs-lookup"><span data-stu-id="3cbba-114">This example gets and prints the list of virtual networks</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -58,6 +58,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="2afd5-115">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="2afd5-115">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="3cbba-115">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="3cbba-115">Samples</span></span>
 
-<span data-ttu-id="2afd5-116">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="2afd5-116">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="3cbba-116">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="3cbba-116">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
