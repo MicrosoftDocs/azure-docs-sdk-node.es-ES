@@ -10,11 +10,11 @@ ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
 ms.openlocfilehash: 98d52e21332138512d40ff2de9f5d3388fa596e4
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51099024"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51364909"
 ---
 # <a name="create-an-azure-service-principal-with-nodejs"></a>Creación de una entidad de servicio de Azure con Node.js 
 
