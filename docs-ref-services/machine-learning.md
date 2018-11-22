@@ -11,30 +11,30 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Machine Learning
 ms.openlocfilehash: 7e39084c65a40e47ed61cc01daf994aff447690e
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51439109"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52094409"
 ---
-# <a name="azure-machine-learning-modules-for-nodejs"></a><span data-ttu-id="3145b-103">Módulos de Azure Machine Learning para Node.js</span><span class="sxs-lookup"><span data-stu-id="3145b-103">Azure Machine Learning modules for Node.js</span></span>
+# <a name="azure-machine-learning-modules-for-nodejs"></a><span data-ttu-id="7e09f-103">Módulos de Azure Machine Learning para Node.js</span><span class="sxs-lookup"><span data-stu-id="7e09f-103">Azure Machine Learning modules for Node.js</span></span>
 
-<span data-ttu-id="3145b-104">El aprendizaje automático es una técnica de ciencia de datos que ayuda a los equipos a aprender de los datos existentes para prever tendencias, resultados y comportamientos futuros.</span><span class="sxs-lookup"><span data-stu-id="3145b-104">Machine learning is a technique of data science that helps computers learn from existing data in order to forecast future behaviors, outcomes, and trends.</span></span> <span data-ttu-id="3145b-105">Estas previsiones o predicciones del aprendizaje automático pueden hacer que las aplicaciones y los dispositivos sean más inteligentes.</span><span class="sxs-lookup"><span data-stu-id="3145b-105">These forecasts or predictions from machine learning can make apps and devices smarter.</span></span> <span data-ttu-id="3145b-106">Cuando compra en línea, el aprendizaje automático ayuda a recomendar otros productos según lo que haya adquirido.</span><span class="sxs-lookup"><span data-stu-id="3145b-106">When you shop online, machine learning helps recommend other products you might like based on what you've purchased.</span></span> <span data-ttu-id="3145b-107">Al pasar su tarjeta de crédito, el aprendizaje automático compara la transacción con una base de datos de transacciones y ayuda a detectar fraudes.</span><span class="sxs-lookup"><span data-stu-id="3145b-107">When your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud.</span></span> <span data-ttu-id="3145b-108">Cuando la aspiradora robot aspira una sala, el aprendizaje automático le ayuda a decidir si se ha terminado el trabajo.</span><span class="sxs-lookup"><span data-stu-id="3145b-108">When your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.</span></span>
+<span data-ttu-id="7e09f-104">El aprendizaje automático es una técnica de ciencia de datos que ayuda a los equipos a aprender de los datos existentes para prever tendencias, resultados y comportamientos futuros.</span><span class="sxs-lookup"><span data-stu-id="7e09f-104">Machine learning is a technique of data science that helps computers learn from existing data in order to forecast future behaviors, outcomes, and trends.</span></span> <span data-ttu-id="7e09f-105">Estas previsiones o predicciones del aprendizaje automático pueden hacer que las aplicaciones y los dispositivos sean más inteligentes.</span><span class="sxs-lookup"><span data-stu-id="7e09f-105">These forecasts or predictions from machine learning can make apps and devices smarter.</span></span> <span data-ttu-id="7e09f-106">Cuando compra en línea, el aprendizaje automático ayuda a recomendar otros productos según lo que haya adquirido.</span><span class="sxs-lookup"><span data-stu-id="7e09f-106">When you shop online, machine learning helps recommend other products you might like based on what you've purchased.</span></span> <span data-ttu-id="7e09f-107">Al pasar su tarjeta de crédito, el aprendizaje automático compara la transacción con una base de datos de transacciones y ayuda a detectar fraudes.</span><span class="sxs-lookup"><span data-stu-id="7e09f-107">When your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud.</span></span> <span data-ttu-id="7e09f-108">Cuando la aspiradora robot aspira una sala, el aprendizaje automático le ayuda a decidir si se ha terminado el trabajo.</span><span class="sxs-lookup"><span data-stu-id="7e09f-108">When your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="3145b-109">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="3145b-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="7e09f-109">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="7e09f-109">Management Package</span></span>
 
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="3145b-110">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="3145b-110">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="7e09f-110">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="7e09f-110">Install the npm module</span></span>
 
-<span data-ttu-id="3145b-111">Instale el módulo npm de Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="3145b-111">Install the Azure Machine Learning npm module</span></span>
+<span data-ttu-id="7e09f-111">Instale el módulo npm de Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="7e09f-111">Install the Azure Machine Learning npm module</span></span>
 
 ```bash
 npm install azure-arm-machinelearning
 ```
 
-### <a name="example"></a><span data-ttu-id="3145b-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3145b-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="7e09f-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7e09f-112">Example</span></span>
 
-<span data-ttu-id="3145b-113">En este ejemplo se enumeran todos los planes de confirmación de aprendizaje automático.</span><span class="sxs-lookup"><span data-stu-id="3145b-113">This example lists all machine learning committment plans.</span></span>
+<span data-ttu-id="7e09f-113">En este ejemplo se enumeran todos los planes de confirmación de aprendizaje automático.</span><span class="sxs-lookup"><span data-stu-id="7e09f-113">This example lists all machine learning committment plans.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -57,6 +57,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="3145b-114">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="3145b-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="7e09f-114">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="7e09f-114">Samples</span></span>
 
-<span data-ttu-id="3145b-115">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="3145b-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="7e09f-115">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="7e09f-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

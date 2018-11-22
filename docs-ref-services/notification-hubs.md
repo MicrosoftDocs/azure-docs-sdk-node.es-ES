@@ -11,37 +11,37 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Notification Hubs
 ms.openlocfilehash: 18eae632b41b71bc64b052852b677507da2678e9
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51439209"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52094395"
 ---
-# <a name="azure-notification-hubs-modules-for-nodejs"></a><span data-ttu-id="4f0c6-103">Módulos de Azure Notification Hubs para Node.js</span><span class="sxs-lookup"><span data-stu-id="4f0c6-103">Azure Notification Hubs modules for Node.js</span></span>
+# <a name="azure-notification-hubs-modules-for-nodejs"></a><span data-ttu-id="6767e-103">Módulos de Azure Notification Hubs para Node.js</span><span class="sxs-lookup"><span data-stu-id="6767e-103">Azure Notification Hubs modules for Node.js</span></span>
 
-<span data-ttu-id="4f0c6-104">Azure Notification Hubs proporciona un motor de inserción fácil de usar, multiplataforma y escalado horizontalmente.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-104">Azure Notification Hubs provide an easy-to-use, multi-platform, scaled-out push engine.</span></span> <span data-ttu-id="4f0c6-105">Con una única llamada de API multiplataforma puede enviar fácilmente notificaciones push específicas y personalizadas a cualquier plataforma móvil desde cualquier back-end local o en la nube.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-105">With a single cross-platform API call, you can easily send targeted and personalized push notifications to any mobile platform from any cloud or on-premises backend.</span></span>
+<span data-ttu-id="6767e-104">Azure Notification Hubs proporciona un motor de inserción fácil de usar, multiplataforma y escalado horizontalmente.</span><span class="sxs-lookup"><span data-stu-id="6767e-104">Azure Notification Hubs provide an easy-to-use, multi-platform, scaled-out push engine.</span></span> <span data-ttu-id="6767e-105">Con una única llamada de API multiplataforma puede enviar fácilmente notificaciones push específicas y personalizadas a cualquier plataforma móvil desde cualquier back-end local o en la nube.</span><span class="sxs-lookup"><span data-stu-id="6767e-105">With a single cross-platform API call, you can easily send targeted and personalized push notifications to any mobile platform from any cloud or on-premises backend.</span></span>
 
-<span data-ttu-id="4f0c6-106">Notification Hubs funciona muy bien tanto para escenarios empresariales como de consumidores.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-106">Notification Hubs works great for both enterprise and consumer scenarios.</span></span> <span data-ttu-id="4f0c6-107">Estos son algunos ejemplos de para qué utilizan los clientes Notification Hubs:</span><span class="sxs-lookup"><span data-stu-id="4f0c6-107">Here are a few examples customers use Notification Hubs for:</span></span>
-- <span data-ttu-id="4f0c6-108">Enviar notificaciones de noticias de última hora a millones de usuarios con baja latencia.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-108">Send breaking news notifications to millions with low latency.</span></span>
-- <span data-ttu-id="4f0c6-109">Enviar cupones basados en la ubicación a segmentos de usuarios interesados.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-109">Send location-based coupons to interested user segments.</span></span>
-- <span data-ttu-id="4f0c6-110">Enviar notificaciones relacionadas con eventos a usuarios o grupos para aplicaciones de medios, deportivas, de finanzas o de juegos.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-110">Send event-related notifications to users or groups for media/sports/finance/gaming applications.</span></span>
-- <span data-ttu-id="4f0c6-111">Insertar contenido promocional en aplicaciones para ponerse en contacto y comercializar con clientes.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-111">Push promotional contents to apps to engage and market to customers.</span></span>
-- <span data-ttu-id="4f0c6-112">Informar a los usuarios sobre eventos empresariales como, por ejemplo, nuevos mensajes o elementos de trabajo.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-112">Notify users of enterprise events like new messages and work items.</span></span>
-- <span data-ttu-id="4f0c6-113">Enviar códigos para Multi-Factor Authentication.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-113">Send codes for multi-factor authentication.</span></span>
+<span data-ttu-id="6767e-106">Notification Hubs funciona muy bien tanto para escenarios empresariales como de consumidores.</span><span class="sxs-lookup"><span data-stu-id="6767e-106">Notification Hubs works great for both enterprise and consumer scenarios.</span></span> <span data-ttu-id="6767e-107">Estos son algunos ejemplos de para qué utilizan los clientes Notification Hubs:</span><span class="sxs-lookup"><span data-stu-id="6767e-107">Here are a few examples customers use Notification Hubs for:</span></span>
+- <span data-ttu-id="6767e-108">Enviar notificaciones de noticias de última hora a millones de usuarios con baja latencia.</span><span class="sxs-lookup"><span data-stu-id="6767e-108">Send breaking news notifications to millions with low latency.</span></span>
+- <span data-ttu-id="6767e-109">Enviar cupones basados en la ubicación a segmentos de usuarios interesados.</span><span class="sxs-lookup"><span data-stu-id="6767e-109">Send location-based coupons to interested user segments.</span></span>
+- <span data-ttu-id="6767e-110">Enviar notificaciones relacionadas con eventos a usuarios o grupos para aplicaciones de medios, deportivas, de finanzas o de juegos.</span><span class="sxs-lookup"><span data-stu-id="6767e-110">Send event-related notifications to users or groups for media/sports/finance/gaming applications.</span></span>
+- <span data-ttu-id="6767e-111">Insertar contenido promocional en aplicaciones para ponerse en contacto y comercializar con clientes.</span><span class="sxs-lookup"><span data-stu-id="6767e-111">Push promotional contents to apps to engage and market to customers.</span></span>
+- <span data-ttu-id="6767e-112">Informar a los usuarios sobre eventos empresariales como, por ejemplo, nuevos mensajes o elementos de trabajo.</span><span class="sxs-lookup"><span data-stu-id="6767e-112">Notify users of enterprise events like new messages and work items.</span></span>
+- <span data-ttu-id="6767e-113">Enviar códigos para Multi-Factor Authentication.</span><span class="sxs-lookup"><span data-stu-id="6767e-113">Send codes for multi-factor authentication.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="4f0c6-114">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="4f0c6-114">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="6767e-114">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="6767e-114">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="4f0c6-115">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="4f0c6-115">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="6767e-115">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="6767e-115">Install the npm module</span></span>
 
-<span data-ttu-id="4f0c6-116">Instale el módulo de Azure Notification Hubs.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-116">Install the Azure Notification Hubs module</span></span> 
+<span data-ttu-id="6767e-116">Instale el módulo de Azure Notification Hubs.</span><span class="sxs-lookup"><span data-stu-id="6767e-116">Install the Azure Notification Hubs module</span></span> 
 
 ```bash
 npm install azure-arm-notificationhubs
 ```
 
-### <a name="example"></a><span data-ttu-id="4f0c6-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4f0c6-117">Example</span></span>
+### <a name="example"></a><span data-ttu-id="6767e-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6767e-117">Example</span></span>
 
-<span data-ttu-id="4f0c6-118">En este ejemplo se enumeran todos los centros de notificaciones.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-118">This example lists all notification hubs.</span></span>
+<span data-ttu-id="6767e-118">En este ejemplo se enumeran todos los centros de notificaciones.</span><span class="sxs-lookup"><span data-stu-id="6767e-118">This example lists all notification hubs.</span></span>
 
  ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -60,9 +60,9 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="4f0c6-119">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="4f0c6-119">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="6767e-119">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="6767e-119">Samples</span></span>
 
-* <span data-ttu-id="4f0c6-120">[App Service Mobile completed quickstart for Node.js backend](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/) (Inicio rápido a App Service Mobile completo para back-end de Node.js)</span><span class="sxs-lookup"><span data-stu-id="4f0c6-120">[App Service Mobile completed quickstart for Node.js backend](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)</span></span>
-* <span data-ttu-id="4f0c6-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/) (Anomalías de vibración de tweets detectadas por los servicios Azure IoT en los datos de un Intel Edison que ejecuta Node.js)</span><span class="sxs-lookup"><span data-stu-id="4f0c6-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)</span></span>
+* <span data-ttu-id="6767e-120">[App Service Mobile completed quickstart for Node.js backend](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/) (Inicio rápido a App Service Mobile completo para back-end de Node.js)</span><span class="sxs-lookup"><span data-stu-id="6767e-120">[App Service Mobile completed quickstart for Node.js backend](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)</span></span>
+* <span data-ttu-id="6767e-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/) (Anomalías de vibración de tweets detectadas por los servicios Azure IoT en los datos de un Intel Edison que ejecuta Node.js)</span><span class="sxs-lookup"><span data-stu-id="6767e-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)</span></span>
 
-<span data-ttu-id="4f0c6-122">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="4f0c6-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="6767e-122">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="6767e-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

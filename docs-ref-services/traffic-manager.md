@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Traffic Manager
 ms.openlocfilehash: 2a32eed460c6076011fdcf31d77200502ef61a3d
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51366459"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52081630"
 ---
-# <a name="azure-traffic-manager-modules-for-nodejs"></a><span data-ttu-id="16ba5-103">Módulos de Azure Traffic Manager para Node.js</span><span class="sxs-lookup"><span data-stu-id="16ba5-103">Azure Traffic Manager modules for Node.js</span></span>
+# <a name="azure-traffic-manager-modules-for-nodejs"></a><span data-ttu-id="a511b-103">Módulos de Azure Traffic Manager para Node.js</span><span class="sxs-lookup"><span data-stu-id="a511b-103">Azure Traffic Manager modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="16ba5-104">Información general</span><span class="sxs-lookup"><span data-stu-id="16ba5-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="a511b-104">Información general</span><span class="sxs-lookup"><span data-stu-id="a511b-104">Overview</span></span>
 
-<span data-ttu-id="16ba5-105">Microsoft Azure Traffic Manager permite controlar la distribución del tráfico de los usuarios para puntos de conexión de servicio en distintos centros de datos.</span><span class="sxs-lookup"><span data-stu-id="16ba5-105">Microsoft Azure Traffic Manager allows you to control the distribution of user traffic for service endpoints in different datacenters.</span></span> <span data-ttu-id="16ba5-106">Entre los puntos de conexión de servicio compatibles con Traffic Manager, se incluyen máquinas virtuales de Azure, Web Apps y servicios en la nube.</span><span class="sxs-lookup"><span data-stu-id="16ba5-106">Service endpoints supported by Traffic Manager include Azure VMs, Web Apps, and cloud services.</span></span> <span data-ttu-id="16ba5-107">También puede utilizar el Administrador de tráfico con puntos de conexión externos, que no forman parte de Azure.</span><span class="sxs-lookup"><span data-stu-id="16ba5-107">You can also use Traffic Manager with external, non-Azure endpoints.</span></span>
+<span data-ttu-id="a511b-105">Microsoft Azure Traffic Manager permite controlar la distribución del tráfico de los usuarios para puntos de conexión de servicio en distintos centros de datos.</span><span class="sxs-lookup"><span data-stu-id="a511b-105">Microsoft Azure Traffic Manager allows you to control the distribution of user traffic for service endpoints in different datacenters.</span></span> <span data-ttu-id="a511b-106">Entre los puntos de conexión de servicio compatibles con Traffic Manager, se incluyen máquinas virtuales de Azure, Web Apps y servicios en la nube.</span><span class="sxs-lookup"><span data-stu-id="a511b-106">Service endpoints supported by Traffic Manager include Azure VMs, Web Apps, and cloud services.</span></span> <span data-ttu-id="a511b-107">También puede utilizar el Administrador de tráfico con puntos de conexión externos, que no forman parte de Azure.</span><span class="sxs-lookup"><span data-stu-id="a511b-107">You can also use Traffic Manager with external, non-Azure endpoints.</span></span>
 
-<span data-ttu-id="16ba5-108">Más información acerca de [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).</span><span class="sxs-lookup"><span data-stu-id="16ba5-108">Learn more about [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).</span></span>
+<span data-ttu-id="a511b-108">Más información acerca de [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).</span><span class="sxs-lookup"><span data-stu-id="a511b-108">Learn more about [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="16ba5-109">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="16ba5-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="a511b-109">Paquete de administración</span><span class="sxs-lookup"><span data-stu-id="a511b-109">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="16ba5-110">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="16ba5-110">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="a511b-110">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="a511b-110">Install the npm module</span></span>
 
-<span data-ttu-id="16ba5-111">Instale el módulo npm de Azure Traffic Manager.</span><span class="sxs-lookup"><span data-stu-id="16ba5-111">Install the Azure traffic manager npm module</span></span>
+<span data-ttu-id="a511b-111">Instale el módulo npm de Azure Traffic Manager.</span><span class="sxs-lookup"><span data-stu-id="a511b-111">Install the Azure traffic manager npm module</span></span>
 
 ```bash
 npm install azure-arm-trafficmanager
 ```
 
-### <a name="example"></a><span data-ttu-id="16ba5-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="16ba5-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="a511b-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a511b-112">Example</span></span>
 
-<span data-ttu-id="16ba5-113">En este ejemplo se enumeran todas las instancias de Traffic Manager para un grupo de recursos determinado.</span><span class="sxs-lookup"><span data-stu-id="16ba5-113">This example lists all Traffic Managers for a given resource group.</span></span>
+<span data-ttu-id="a511b-113">En este ejemplo se enumeran todas las instancias de Traffic Manager para un grupo de recursos determinado.</span><span class="sxs-lookup"><span data-stu-id="a511b-113">This example lists all Traffic Managers for a given resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="16ba5-114">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="16ba5-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="a511b-114">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="a511b-114">Samples</span></span>
 
-<span data-ttu-id="16ba5-115">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="16ba5-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="a511b-115">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="a511b-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

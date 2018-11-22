@@ -8,31 +8,31 @@ ms.topic: article
 ms.devlang: nodejs
 ms.service: mysql
 ms.openlocfilehash: 557645774ecb0ea5e774f99d03251a303ad19660
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51354149"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52080400"
 ---
-# <a name="azure-mysql-modules-for-nodejs"></a><span data-ttu-id="c9f2d-103">Módulos de Azure MySQL para Node.js</span><span class="sxs-lookup"><span data-stu-id="c9f2d-103">Azure MySQL modules for Node.js</span></span>
+# <a name="azure-mysql-modules-for-nodejs"></a><span data-ttu-id="5b1c7-103">Módulos de Azure MySQL para Node.js</span><span class="sxs-lookup"><span data-stu-id="5b1c7-103">Azure MySQL modules for Node.js</span></span>
 
-<span data-ttu-id="c9f2d-104">La biblioteca de cliente recomendada para acceder a Azure Database for MySQL es la [biblioteca de conexión de Node.js para Azure Database for MySQL](https://github.com/sidorares/node-mysql2) de código abierto.</span><span class="sxs-lookup"><span data-stu-id="c9f2d-104">The recommended client library for accessing Azure Database for MySQL is the open-source [Node.js connection library for Azure Database for MySQL](https://github.com/sidorares/node-mysql2).</span></span> 
+<span data-ttu-id="5b1c7-104">La biblioteca de cliente recomendada para acceder a Azure Database for MySQL es la [biblioteca de conexión de Node.js para Azure Database for MySQL](https://github.com/sidorares/node-mysql2) de código abierto.</span><span class="sxs-lookup"><span data-stu-id="5b1c7-104">The recommended client library for accessing Azure Database for MySQL is the open-source [Node.js connection library for Azure Database for MySQL](https://github.com/sidorares/node-mysql2).</span></span> 
 
-<span data-ttu-id="c9f2d-105">Más información acerca de [Azure Database for MySQL](https://docs.microsoft.com/azure/MySQL/)</span><span class="sxs-lookup"><span data-stu-id="c9f2d-105">Learn more about [Azure Database for MySQL](https://docs.microsoft.com/azure/MySQL/)</span></span>
+<span data-ttu-id="5b1c7-105">Más información acerca de [Azure Database for MySQL](https://docs.microsoft.com/azure/MySQL/)</span><span class="sxs-lookup"><span data-stu-id="5b1c7-105">Learn more about [Azure Database for MySQL](https://docs.microsoft.com/azure/MySQL/)</span></span>
 
-## <a name="client-package"></a><span data-ttu-id="c9f2d-106">Paquete del cliente</span><span class="sxs-lookup"><span data-stu-id="c9f2d-106">Client Package</span></span>
+## <a name="client-package"></a><span data-ttu-id="5b1c7-106">Paquete del cliente</span><span class="sxs-lookup"><span data-stu-id="5b1c7-106">Client Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="c9f2d-107">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="c9f2d-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="5b1c7-107">Instalación del módulo npm</span><span class="sxs-lookup"><span data-stu-id="5b1c7-107">Install the npm module</span></span>
 
-<span data-ttu-id="c9f2d-108">Utilice npm para instalar el módulo de cliente MySQL.</span><span class="sxs-lookup"><span data-stu-id="c9f2d-108">Use npm to install the MySQL client module.</span></span>
+<span data-ttu-id="5b1c7-108">Utilice npm para instalar el módulo de cliente MySQL.</span><span class="sxs-lookup"><span data-stu-id="5b1c7-108">Use npm to install the MySQL client module.</span></span>
 
 ```bash
 npm install mysql2
 ```   
 
-### <a name="example"></a><span data-ttu-id="c9f2d-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c9f2d-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="5b1c7-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5b1c7-109">Example</span></span>
 
-<span data-ttu-id="c9f2d-110">En este ejemplo se conecta a una base de datos MySQL y se realiza una consulta simple para recuperar todos los clientes.</span><span class="sxs-lookup"><span data-stu-id="c9f2d-110">This example connects to a MySQL database and performs a simple query to retrieve all customers.</span></span>
+<span data-ttu-id="5b1c7-110">En este ejemplo se conecta a una base de datos MySQL y se realiza una consulta simple para recuperar todos los clientes.</span><span class="sxs-lookup"><span data-stu-id="5b1c7-110">This example connects to a MySQL database and performs a simple query to retrieve all customers.</span></span>
 
 ```javascript
 const mysql = require('mysql2');
@@ -55,8 +55,8 @@ connection.query(query, (err, res) =>
 connection.end();
 ```
 
-## <a name="samples"></a><span data-ttu-id="c9f2d-111">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="c9f2d-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="5b1c7-111">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="5b1c7-111">Samples</span></span>
 
 [!INCLUDE [node-mysql-samples](../docs-ref-conceptual/includes/mysql-samples.md)]
 
-<span data-ttu-id="c9f2d-112">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="c9f2d-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="5b1c7-112">Explore más [código de Node.js de ejemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que puede usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="5b1c7-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
