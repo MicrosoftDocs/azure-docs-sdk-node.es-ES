@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Resources
 ms.openlocfilehash: ac82356f0f9f566e29cb2c89181a0cedf2f62f87
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51352196"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52092000"
 ---
 # <a name="azure-resource-modules-for-nodejs"></a>Módulos de Azure Resource para Node.js
 
