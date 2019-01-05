@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: adcef858bd14ae01101959fd1c927fe9740bcb92
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53668040"
+items:
+- uid: azure-servicefabric.StatefulServicePartitionInfo
+  name: StatefulServicePartitionInfo
+  fullName: StatefulServicePartitionInfo
+  children:
+  - azure-servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration
+  - azure-servicefabric.StatefulServicePartitionInfo.minReplicaSetSize
+  - azure-servicefabric.StatefulServicePartitionInfo.primaryEpoch
+  - azure-servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize
+  langs:
+  - typeScript
+  type: interface
+  summary: Información acerca de una partición de un servicio de Service Fabric con estado...
+  extends:
+    name: azure-servicefabric.ServicePartitionInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration
+  name: lastQuorumLossDuration
+  fullName: lastQuorumLossDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La duración para la que esta partición se encontraba en pérdida de quórum. Si la partición está en pérdida de quórum, devuelve la duración ya que ha sido en ese estado. Este campo usa el formato ISO8601 para especificar la duración.
+  optional: true
+  syntax:
+    content: 'lastQuorumLossDuration?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServicePartitionInfo.minReplicaSetSize
+  name: minReplicaSetSize
+  fullName: minReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El tamaño del conjunto de réplica mínimo como número.
+  optional: true
+  syntax:
+    content: 'minReplicaSetSize?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServicePartitionInfo.primaryEpoch
+  name: primaryEpoch
+  fullName: primaryEpoch
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Una época es un número de configuración para la partición como un todo. Cuando los cambios, por ejemplo, cuando los cambios de la réplica principal, las operaciones que se replican desde la nueva réplica principal se dice que un lote nuevo de las que han sido enviados por la réplica principal anterior establece la configuración de la réplica.
+  optional: true
+  syntax:
+    content: 'primaryEpoch?: Epoch'
+    return:
+      type:
+      - azure-servicefabric.Epoch
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize
+  name: targetReplicaSetSize
+  fullName: targetReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El tamaño del conjunto de réplica de destino como número.
+  optional: true
+  syntax:
+    content: 'targetReplicaSetSize?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServicePartitionInfo
+  name: ServicePartitionInfo
+  spec.typeScript:
+  - name: ServicePartitionInfo
+    fullName: ServicePartitionInfo
+    uid: azure-servicefabric.ServicePartitionInfo
+- uid: azure-servicefabric.Epoch
+  name: Epoch
+  spec.typeScript:
+  - name: Epoch
+    fullName: Epoch
+    uid: azure-servicefabric.Epoch

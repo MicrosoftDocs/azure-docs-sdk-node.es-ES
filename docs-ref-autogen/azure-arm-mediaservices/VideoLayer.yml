@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a4a9a6abaa06fb8220473924f4ac6cda9ccb9f7f
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53677350"
+items:
+- uid: azure-arm-mediaservices.VideoLayer
+  name: VideoLayer
+  fullName: VideoLayer
+  children:
+  - azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+  - azure-arm-mediaservices.VideoLayer.bFrames
+  - azure-arm-mediaservices.VideoLayer.bitrate
+  - azure-arm-mediaservices.VideoLayer.frameRate
+  - azure-arm-mediaservices.VideoLayer.maxBitrate
+  - azure-arm-mediaservices.VideoLayer.slices
+  langs:
+  - typeScript
+  type: interface
+  summary: Describe la configuración que se usará al codificar el vídeo de entrada en una capa de velocidad de bits de salida deseado.
+  extends:
+    name: azure-arm-mediaservices.Layer
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+  name: adaptiveBFrame
+  fullName: adaptiveBFrame
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si son o no fotogramas B adaptables que se usará al codificar esta capa. Si no se especifica, el codificador convertirá cada vez que el perfil de vídeo permite su uso.
+  optional: true
+  syntax:
+    content: 'adaptiveBFrame?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.VideoLayer.bFrames
+  name: bFrames
+  fullName: bFrames
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El número de fotogramas B que se usará al codificar esta capa.  Si no se especifica, el codificador elige un número adecuado según el perfil de vídeo y el nivel.
+  optional: true
+  syntax:
+    content: 'bFrames?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.VideoLayer.bitrate
+  name: bitrate
+  fullName: bitrate
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Velocidad de bits Media en bits por segundo en el que se va a codificar el vídeo de entrada al generar esta capa. Este campo es obligatorio.
+  optional: true
+  syntax:
+    content: 'bitrate?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.VideoLayer.frameRate
+  name: frameRate
+  fullName: frameRate
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El marco de frecuencia (en fotogramas por segundo) en el que se va a codificar esta capa. El valor puede ser en forma de M o N, donde M y N son enteros (por ejemplo, 30000/1001) o en forma de un número (por ejemplo, 30 o 29,97). El codificador aplica las restricciones en las velocidades de fotogramas permitidas según el perfil y nivel. Si no se especifica, el codificador usará la misma velocidad de fotogramas que el vídeo de entrada.
+  optional: true
+  syntax:
+    content: 'frameRate?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.VideoLayer.maxBitrate
+  name: maxBitrate
+  fullName: maxBitrate
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    La velocidad de bits máxima (en bits por segundo), en el que el búfer VBV debe suponerse que volver a rellenar.
+
+    Si no se especifica, valor predeterminado es el mismo valor que la velocidad de bits.
+  optional: true
+  syntax:
+    content: 'maxBitrate?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.VideoLayer.slices
+  name: slices
+  fullName: slices
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El número de segmentos que se usará al codificar esta capa. Si no se especifica, el valor predeterminado es cero, lo que significa que ese codificador utilizará un solo sector para cada fotograma.
+  optional: true
+  syntax:
+    content: 'slices?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.Layer
+  name: Layer
+  spec.typeScript:
+  - name: Layer
+    fullName: Layer
+    uid: azure-arm-mediaservices.Layer

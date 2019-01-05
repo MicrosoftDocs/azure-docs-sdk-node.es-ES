@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ccb4b418a7ce4895d1376dc2e04c1f1b1dcbdb4e
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53673599"
+items:
+- uid: azure-batch.PoolInformation
+  name: PoolInformation
+  fullName: PoolInformation
+  children:
+  - azure-batch.PoolInformation.autoPoolSpecification
+  - azure-batch.PoolInformation.poolId
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.PoolInformation.autoPoolSpecification
+  name: autoPoolSpecification
+  fullName: autoPoolSpecification
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si se produce un error en la creación automática del grupo, el servicio Batch mueve el trabajo en un estado completado y el error de creación del grupo se establece en la propiedad error de programación del trabajo. El servicio Batch administra la duración (tanto para crear y, a menos que se especifica keepAlive, eliminación) del grupo automáticamente. Las acciones del usuario que afectan a la duración del grupo automáticamente, mientras que el trabajo está activo dará como resultado un comportamiento inesperado. Debe especificar el identificador del grupo o la especificación de agrupación automática, pero no ambos.
+  optional: true
+  syntax:
+    content: 'autoPoolSpecification?: AutoPoolSpecification'
+    return:
+      type:
+      - azure-batch.AutoPoolSpecification
+  package: azure-batch
+- uid: azure-batch.PoolInformation.poolId
+  name: poolId
+  fullName: poolId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Debe asegurarse de que existe el grupo al que hace referencia esta propiedad. Si el grupo no existe en el momento en que el servicio Batch intenta programar un trabajo, no hay tareas para el trabajo se ejecutarán hasta que se cree un grupo con ese identificador. Tenga en cuenta que el servicio Batch no rechazará la solicitud de trabajo; simplemente no se ejecutará las tareas hasta que el grupo existe. Debe especificar el identificador del grupo o la especificación de agrupación automática, pero no ambos.
+  optional: true
+  syntax:
+    content: 'poolId?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.AutoPoolSpecification
+  name: AutoPoolSpecification
+  spec.typeScript:
+  - name: AutoPoolSpecification
+    fullName: AutoPoolSpecification
+    uid: azure-batch.AutoPoolSpecification
