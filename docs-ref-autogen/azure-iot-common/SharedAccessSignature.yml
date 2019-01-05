@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 59c30bf57b92487b240eeb638d8b5831d91a7013
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52017977"
+items:
+- uid: azure-iot-common.SharedAccessSignature
+  name: SharedAccessSignature
+  fullName: SharedAccessSignature
+  children:
+  - azure-iot-common.SharedAccessSignature.create
+  - azure-iot-common.SharedAccessSignature.extend
+  - azure-iot-common.SharedAccessSignature.parse
+  - azure-iot-common.SharedAccessSignature.toString
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="73518-101">Los tokens de firma de acceso compartido se usan para autenticar la conexión al usar claves simétricas (en contraposición a x509 certificados) para proteger la conexión con el centro de IoT de Azure.</span><span class="sxs-lookup"><span data-stu-id="73518-101">Shared access signature tokens are used to authenticate the connection when using symmetric keys (as opposed to x509 certificates) to secure the connection with the Azure IoT hub.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.create
+  name: create(string, string, string, number | string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="73518-102">Crear una instancia de un token SharedAccessSignature con los parámetros especificados.</span><span class="sxs-lookup"><span data-stu-id="73518-102">Instantiate a SharedAccessSignature token with the given parameters.</span></span>
+  syntax:
+    content: 'static function create(resourceUri: string, keyName: string, key: string, expiry: number | string)'
+    parameters:
+    - id: resourceUri
+      type:
+      - string
+      description: <span data-ttu-id="73518-103">el URI para codificar en el token de recurso.</span><span class="sxs-lookup"><span data-stu-id="73518-103">the resource URI to encode into the token.</span></span>
+    - id: keyName
+      type:
+      - string
+      description: <span data-ttu-id="73518-104">un identificador asociado con la clave.</span><span class="sxs-lookup"><span data-stu-id="73518-104">an identifier associated with the key.</span></span>
+    - id: key
+      type:
+      - string
+      description: <span data-ttu-id="73518-105">un valor de clave con codificación base64.</span><span class="sxs-lookup"><span data-stu-id="73518-105">a base64-encoded key value.</span></span>
+    - id: expiry
+      type:
+      - number | string
+      description: >
+        <span data-ttu-id="73518-106">valor entero que representa el número de segundos transcurridos desde la época 00:00:00 UTC el 1 de enero de 1970.</span><span class="sxs-lookup"><span data-stu-id="73518-106">an integer value representing the number of seconds since the epoch 00:00:00 UTC on 1 January 1970.</span></span>
+    return:
+      type:
+      - azure-iot-common.SharedAccessSignature
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.extend
+  name: extend(number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="73518-107">Ampliar la Sas y devolver el formato de cadena del mismo.</span><span class="sxs-lookup"><span data-stu-id="73518-107">Extend the Sas and return the string form of it.</span></span>
+  syntax:
+    content: 'function extend(expiry: number)'
+    parameters:
+    - id: expiry
+      type:
+      - number
+      description: >
+        <span data-ttu-id="73518-108">valor entero que representa el número de segundos transcurridos desde la época 00:00:00 UTC el 1 de enero de 1970.</span><span class="sxs-lookup"><span data-stu-id="73518-108">an integer value representing the number of seconds since the epoch 00:00:00 UTC on 1 January 1970.</span></span>
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.parse
+  name: parse(string, string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="73518-109">Crear una instancia de un token SharedAccessSignature desde una cadena.</span><span class="sxs-lookup"><span data-stu-id="73518-109">Instantiate a SharedAccessSignature token from a string.</span></span>
+  syntax:
+    content: 'static function parse(source: string, requiredFields?: string[])'
+    parameters:
+    - id: source
+      type:
+      - string
+      description: <span data-ttu-id="73518-110">la cadena para analizar con el fin de crear el token SharedAccessSignature.</span><span class="sxs-lookup"><span data-stu-id="73518-110">the string to parse in order to create the SharedAccessSignature token.</span></span>
+    - id: requiredFields
+      type:
+      - string[]
+      description: >
+        <span data-ttu-id="73518-111">una matriz de los campos que se esperan encontrar en la cadena de origen.</span><span class="sxs-lookup"><span data-stu-id="73518-111">an array of fields that we expect to find in the source string.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-iot-common.SharedAccessSignature
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.toString
+  name: toString()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="73518-112">Da formato a un SharedAccessSignatureObject en una cadena con el formato correcto.</span><span class="sxs-lookup"><span data-stu-id="73518-112">Formats a SharedAccessSignatureObject into a properly formatted string.</span></span>
+  syntax:
+    content: function toString()
+    parameters: []
+    return:
+      type:
+      - string
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.SharedAccessSignature
+  name: SharedAccessSignature
+  spec.typeScript:
+  - name: SharedAccessSignature
+    fullName: SharedAccessSignature
+    uid: azure-iot-common.SharedAccessSignature

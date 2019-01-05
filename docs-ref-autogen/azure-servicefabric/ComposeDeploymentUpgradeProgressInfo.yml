@@ -1,0 +1,373 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b00eccb9fe0e1a0df07efaed8d0ece1d202d71c0
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52149570"
+items:
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo
+  name: ComposeDeploymentUpgradeProgressInfo
+  fullName: ComposeDeploymentUpgradeProgressInfo
+  children:
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationHealthPolicy
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationName
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationUnhealthyEvaluations
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationUpgradeStatusDetails
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.currentUpgradeDomainDuration
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.currentUpgradeDomainProgress
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.deploymentName
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.failureReason
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.failureTimestampUtc
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.forceRestart
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.monitoringPolicy
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.rollingUpgradeMode
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.startTimestampUtc
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.targetApplicationTypeVersion
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeDomainProgressAtFailure
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeDuration
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeKind
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeReplicaSetCheckTimeoutInSeconds
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeState
+  - azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeStatusDetails
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="4ca61-101">Describe los parámetros para una actualización de la implementación de compose.</span><span class="sxs-lookup"><span data-stu-id="4ca61-101">Describes the parameters for a compose deployment upgrade.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationHealthPolicy
+  name: applicationHealthPolicy
+  fullName: applicationHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-102">Define una directiva de mantenimiento que se utilizan para evaluar el estado de una aplicación o uno de sus entidades de elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="4ca61-102">Defines a health policy used to evaluate the health of an application or one of its children entities.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthPolicy
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationName
+  name: applicationName
+  fullName: applicationName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-103">El nombre de la aplicación de destino, incluido el "fabric:' Esquema de URI.</span><span class="sxs-lookup"><span data-stu-id="4ca61-103">The name of the target application, including the 'fabric:' URI scheme.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationUnhealthyEvaluations
+  name: applicationUnhealthyEvaluations
+  fullName: applicationUnhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-104">Lista de las evaluaciones de mantenimiento que dan como resultado el estado actual de mantenimiento agregado.</span><span class="sxs-lookup"><span data-stu-id="4ca61-104">List of health evaluations that resulted in the current aggregated health state.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationUnhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationUpgradeStatusDetails
+  name: applicationUpgradeStatusDetails
+  fullName: applicationUpgradeStatusDetails
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-105">Detalles adicionales de actualización incluyendo el mensaje de error de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="4ca61-105">Additional details of application upgrade including failure message.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationUpgradeStatusDetails?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.currentUpgradeDomainDuration
+  name: currentUpgradeDomainDuration
+  fullName: currentUpgradeDomainDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-106">La cantidad estimada de tiempo invertido en procesar el dominio de actualización actual.</span><span class="sxs-lookup"><span data-stu-id="4ca61-106">The estimated amount of time spent processing current Upgrade Domain.</span></span> <span data-ttu-id="4ca61-107">En primer lugar se interpreta como una cadena que representa una duración ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="4ca61-107">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="4ca61-108">Si se produce un error, se interpreta como un número que representa el total de milisegundos.</span><span class="sxs-lookup"><span data-stu-id="4ca61-108">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'currentUpgradeDomainDuration?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.currentUpgradeDomainProgress
+  name: currentUpgradeDomainProgress
+  fullName: currentUpgradeDomainProgress
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-109">Información sobre el actual dominio de actualización en curso.</span><span class="sxs-lookup"><span data-stu-id="4ca61-109">Information about the current in-progress upgrade domain.</span></span>
+  optional: true
+  syntax:
+    content: 'currentUpgradeDomainProgress?: CurrentUpgradeDomainProgressInfo'
+    return:
+      type:
+      - azure-servicefabric.CurrentUpgradeDomainProgressInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.deploymentName
+  name: deploymentName
+  fullName: deploymentName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-110">El nombre de la implementación de destino.</span><span class="sxs-lookup"><span data-stu-id="4ca61-110">The name of the target deployment.</span></span>
+  optional: true
+  syntax:
+    content: 'deploymentName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.failureReason
+  name: failureReason
+  fullName: failureReason
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"4ca61-111\">La causa de un error de actualización que dieron lugar a FailureAction que se está ejecutando.</span><span class=\"sxs-lookup\"><span data-stu-id=\"4ca61-111\">The cause of an upgrade failure that resulted in FailureAction being executed.</span></span> <span data-ttu-id=\"4ca61-112\">Los valores posibles son: 'None', 'interrumpe', 'HealthCheck', 'UpgradeDomainTimeout', 'OverallUpgradeTimeout'</span><span class=\"sxs-lookup\"><span data-stu-id=\"4ca61-112\">Possible values include: 'None', 'Interrupted', 'HealthCheck', 'UpgradeDomainTimeout', 'OverallUpgradeTimeout'</span></span>"
+  optional: true
+  syntax:
+    content: 'failureReason?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.failureTimestampUtc
+  name: failureTimestampUtc
+  fullName: failureTimestampUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-113">Se ha ejecutado el estimado datetime de UTC cuando la actualización produce un error y FailureAction.</span><span class="sxs-lookup"><span data-stu-id="4ca61-113">The estimated UTC datetime when the upgrade failed and FailureAction was executed.</span></span>
+  optional: true
+  syntax:
+    content: 'failureTimestampUtc?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-114">Si es true, a continuación, se fuerza reiniciando los procesos durante la actualización incluso si no ha cambiado la versión del código (la configuración de actualización únicamente los cambios o los datos).</span><span class="sxs-lookup"><span data-stu-id="4ca61-114">If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).</span></span>
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.monitoringPolicy
+  name: monitoringPolicy
+  fullName: monitoringPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-115">Describe los parámetros para la supervisión de una actualización en modo supervisado.</span><span class="sxs-lookup"><span data-stu-id="4ca61-115">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+  optional: true
+  syntax:
+    content: 'monitoringPolicy?: MonitoringPolicyDescription'
+    return:
+      type:
+      - azure-servicefabric.MonitoringPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"4ca61-116\">El modo usado para supervisar el mantenimiento durante una actualización gradual.</span><span class=\"sxs-lookup\"><span data-stu-id=\"4ca61-116\">The mode used to monitor health during a rolling upgrade.</span></span> <span data-ttu-id=\"4ca61-117\">Los valores son Monitored, UnmonitoredAuto y UnmonitoredManual.</span><span class=\"sxs-lookup\"><span data-stu-id=\"4ca61-117\">The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.</span></span> <span data-ttu-id=\"4ca61-118\">Los valores posibles son: 'Invalid', 'UnmonitoredAuto', 'UnmonitoredManual', 'Supervisado'</span><span class=\"sxs-lookup\"><span data-stu-id=\"4ca61-118\">Possible values include: 'Invalid', 'UnmonitoredAuto', 'UnmonitoredManual', 'Monitored'</span></span>"
+  optional: true
+  syntax:
+    content: 'rollingUpgradeMode?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.startTimestampUtc
+  name: startTimestampUtc
+  fullName: startTimestampUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-119">El estimado fecha y hora UTC en que comenzó la actualización.</span><span class="sxs-lookup"><span data-stu-id="4ca61-119">The estimated UTC datetime when the upgrade started.</span></span>
+  optional: true
+  syntax:
+    content: 'startTimestampUtc?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.targetApplicationTypeVersion
+  name: targetApplicationTypeVersion
+  fullName: targetApplicationTypeVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-120">La versión del tipo de aplicación de destino (que se encuentra en el manifiesto de aplicación) para la actualización de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="4ca61-120">The target application type version (found in the application manifest) for the application upgrade.</span></span>
+  optional: true
+  syntax:
+    content: 'targetApplicationTypeVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeDomainProgressAtFailure
+  name: upgradeDomainProgressAtFailure
+  fullName: upgradeDomainProgressAtFailure
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-121">Información sobre el progreso de dominio de actualización en el momento del error de actualización.</span><span class="sxs-lookup"><span data-stu-id="4ca61-121">Information about the upgrade domain progress at the time of upgrade failure.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeDomainProgressAtFailure?: FailureUpgradeDomainProgressInfo'
+    return:
+      type:
+      - azure-servicefabric.FailureUpgradeDomainProgressInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeDuration
+  name: upgradeDuration
+  fullName: upgradeDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-122">La cantidad estimada de tiempo transcurrida de la actualización global.</span><span class="sxs-lookup"><span data-stu-id="4ca61-122">The estimated amount of time that the overall upgrade elapsed.</span></span> <span data-ttu-id="4ca61-123">En primer lugar se interpreta como una cadena que representa una duración ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="4ca61-123">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="4ca61-124">Si se produce un error, se interpreta como un número que representa el total de milisegundos.</span><span class="sxs-lookup"><span data-stu-id="4ca61-124">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeDuration?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeKind
+  name: upgradeKind
+  fullName: upgradeKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"4ca61-125\">El tipo de actualización fuera de los siguientes valores posibles.</span><span class=\"sxs-lookup\"><span data-stu-id=\"4ca61-125\">The kind of upgrade out of the following possible values.</span></span> <span data-ttu-id=\"4ca61-126\">Los valores posibles son: 'Invalid', 'Gradual'</span><span class=\"sxs-lookup\"><span data-stu-id=\"4ca61-126\">Possible values include: 'Invalid', 'Rolling'</span></span>"
+  optional: true
+  syntax:
+    content: 'upgradeKind?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeReplicaSetCheckTimeoutInSeconds
+  name: upgradeReplicaSetCheckTimeoutInSeconds
+  fullName: upgradeReplicaSetCheckTimeoutInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="4ca61-127">El período de tiempo máximo para bloquear el procesamiento de un dominio de actualización y evitar la pérdida de disponibilidad cuando hay problemas inesperados.</span><span class="sxs-lookup"><span data-stu-id="4ca61-127">The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues.</span></span> <span data-ttu-id="4ca61-128">Cuando este tiempo de espera expire, el procesamiento del dominio de actualización se llevará a cabo independientemente de los problemas de pérdida de disponibilidad.</span><span class="sxs-lookup"><span data-stu-id="4ca61-128">When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues.</span></span> <span data-ttu-id="4ca61-129">El tiempo de espera se restablece al principio de cada dominio de actualización.</span><span class="sxs-lookup"><span data-stu-id="4ca61-129">The timeout is reset at the start of each upgrade domain.</span></span> <span data-ttu-id="4ca61-130">Los valores válidos oscilan entre 0 y 42949672925, ambos inclusive.</span><span class="sxs-lookup"><span data-stu-id="4ca61-130">Valid values are between 0 and 42949672925 inclusive.</span></span>
+
+    <span data-ttu-id="4ca61-131">(entero de 32 bits sin signo).</span><span class="sxs-lookup"><span data-stu-id="4ca61-131">(unsigned 32-bit integer).</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeReplicaSetCheckTimeoutInSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeState
+  name: upgradeState
+  fullName: upgradeState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"4ca61-132\">El estado de la actualización de la implementación de compose.</span><span class=\"sxs-lookup\"><span data-stu-id=\"4ca61-132\">The state of the compose deployment upgrade.</span></span> <span data-ttu-id=\"4ca61-133\">Los valores posibles son: 'Invalid', 'ProvisioningTarget', 'RollingForwardInProgress', 'RollingForwardPending', 'UnprovisioningCurrent', 'RollingForwardCompleted', 'RollingBackInProgress', 'UnprovisioningTarget', 'RollingBackCompleted', 'Error'</span><span class=\"sxs-lookup\"><span data-stu-id=\"4ca61-133\">Possible values include: 'Invalid', 'ProvisioningTarget', 'RollingForwardInProgress', 'RollingForwardPending', 'UnprovisioningCurrent', 'RollingForwardCompleted', 'RollingBackInProgress', 'UnprovisioningTarget', 'RollingBackCompleted', 'Failed'</span></span>"
+  optional: true
+  syntax:
+    content: 'upgradeState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeStatusDetails
+  name: upgradeStatusDetails
+  fullName: upgradeStatusDetails
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4ca61-134">Información detallada adicional sobre el estado de la actualización pendiente.</span><span class="sxs-lookup"><span data-stu-id="4ca61-134">Additional detailed information about the status of the pending upgrade.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeStatusDetails?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthPolicy
+  name: ApplicationHealthPolicy
+  spec.typeScript:
+  - name: ApplicationHealthPolicy
+    fullName: ApplicationHealthPolicy
+    uid: azure-servicefabric.ApplicationHealthPolicy
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.CurrentUpgradeDomainProgressInfo
+  name: CurrentUpgradeDomainProgressInfo
+  spec.typeScript:
+  - name: CurrentUpgradeDomainProgressInfo
+    fullName: CurrentUpgradeDomainProgressInfo
+    uid: azure-servicefabric.CurrentUpgradeDomainProgressInfo
+- uid: azure-servicefabric.MonitoringPolicyDescription
+  name: MonitoringPolicyDescription
+  spec.typeScript:
+  - name: MonitoringPolicyDescription
+    fullName: MonitoringPolicyDescription
+    uid: azure-servicefabric.MonitoringPolicyDescription
+- uid: azure-servicefabric.FailureUpgradeDomainProgressInfo
+  name: FailureUpgradeDomainProgressInfo
+  spec.typeScript:
+  - name: FailureUpgradeDomainProgressInfo
+    fullName: FailureUpgradeDomainProgressInfo
+    uid: azure-servicefabric.FailureUpgradeDomainProgressInfo
