@@ -1,0 +1,231 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1170452791677275d567768cac21a4eb151a4f2d
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53671969"
+items:
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  name: SpeechTranslationConfig
+  fullName: SpeechTranslationConfig
+  children:
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.addTargetLanguage
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.authorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.close
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromAuthorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromEndpoint
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromSubscription
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.setProperty
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.speechRecognitionLanguage
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.targetLanguages
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.voiceName
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="d0241-101">Configuración de la traducción de voz.</span><span class="sxs-lookup"><span data-stu-id="d0241-101">Speech translation configuration.</span></span>
+  extends:
+    name: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.addTargetLanguage
+  name: addTargetLanguage(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d0241-102">Agregar un idioma de destino (texto) para traducir en.</span><span class="sxs-lookup"><span data-stu-id="d0241-102">Add a (text) target language to translate into.</span></span>
+  syntax:
+    content: 'function addTargetLanguage(value: string)'
+    parameters:
+    - id: value
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d0241-103">El lenguaje como de-DE</span><span class="sxs-lookup"><span data-stu-id="d0241-103">The language such as de-DE</span></span>
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.authorizationToken
+  name: authorizationToken
+  fullName: authorizationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="d0241-104">Establece el token de autorización.</span><span class="sxs-lookup"><span data-stu-id="d0241-104">Sets the authorization token.</span></span>
+
+    <span data-ttu-id="d0241-105">Si se establece, se omite la clave de suscripción.</span><span class="sxs-lookup"><span data-stu-id="d0241-105">If this is set, subscription key is ignored.</span></span>
+
+    <span data-ttu-id="d0241-106">Usuario debe asegurarse de que el token de autorización proporcionado es válido y no ha expirado.</span><span class="sxs-lookup"><span data-stu-id="d0241-106">User needs to make sure the provided authorization token is valid and not expired.</span></span>
+  syntax:
+    content: 'public authorizationToken: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.close
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d0241-107">Eliminar los recursos asociados.</span><span class="sxs-lookup"><span data-stu-id="d0241-107">Dispose of associated resources.</span></span>
+  syntax:
+    content: function close()
+    parameters: []
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromAuthorizationToken
+  name: fromAuthorizationToken(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="d0241-108">Instancia estática de SpeechTranslationConfig devuelve pasando la región de servicio y token de autorización.</span><span class="sxs-lookup"><span data-stu-id="d0241-108">Static instance of SpeechTranslationConfig returned by passing authorization token and service region.</span></span>
+
+    <span data-ttu-id="d0241-109">Nota: El llamador debe asegurarse de que el token de autorización es válido.</span><span class="sxs-lookup"><span data-stu-id="d0241-109">Note: The caller needs to ensure that the authorization token is valid.</span></span> <span data-ttu-id="d0241-110">Antes de que expire el token de autorización, el llamador debe actualizarlo estableciendo el authorizationToken de propiedad con un nuevo token válido.</span><span class="sxs-lookup"><span data-stu-id="d0241-110">Before the authorization token expires, the caller needs to refresh it by setting the property authorizationToken with a new valid token.</span></span> <span data-ttu-id="d0241-111">De lo contrario, todos los reconocedores creados por esta instancia SpeechTranslationConfig producirán errores durante el reconocimiento.</span><span class="sxs-lookup"><span data-stu-id="d0241-111">Otherwise, all the recognizers created by this SpeechTranslationConfig instance will encounter errors during recognition.</span></span>
+  syntax:
+    content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
+    parameters:
+    - id: authorizationToken
+      type:
+      - string
+      description: <span data-ttu-id="d0241-112">El token de autorización.</span><span class="sxs-lookup"><span data-stu-id="d0241-112">The authorization token.</span></span>
+    - id: region
+      type:
+      - string
+      description: <span data-ttu-id="d0241-113">El nombre de región (consulte la <a href="https://aka.ms/csspeech/region">página región</a>).</span><span class="sxs-lookup"><span data-stu-id="d0241-113">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromEndpoint
+  name: fromEndpoint(URL, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="d0241-114">Crea una instancia de la configuración de la traducción de voz con el punto de conexión especificado y la clave de suscripción.</span><span class="sxs-lookup"><span data-stu-id="d0241-114">Creates an instance of the speech translation config with specified endpoint and subscription key.</span></span>
+
+    <span data-ttu-id="d0241-115">Este método está pensado solo para los usuarios que utilizan un punto de conexión de servicio no estándar o parámetros.</span><span class="sxs-lookup"><span data-stu-id="d0241-115">This method is intended only for users who use a non-standard service endpoint or paramters.</span></span>
+
+    <span data-ttu-id="d0241-116">Nota: No se cambian las propiedades de consulta especificadas en la dirección URL del extremo, incluso si están establecidos por cualquier otra API.</span><span class="sxs-lookup"><span data-stu-id="d0241-116">Note: The query properties specified in the endpoint URL are not changed, even if they are set by any other APIs.</span></span> <span data-ttu-id="d0241-117">Por ejemplo, si se ha definido el idioma en el uri como parámetro de consulta "language = de-DE" y también establece la propiedad speechRecognitionLanguage, prevalece la configuración de idioma en el uri y el eficaz lenguaje es "de-DE".</span><span class="sxs-lookup"><span data-stu-id="d0241-117">For example, if language is defined in the uri as query parameter "language=de-DE", and also set by the speechRecognitionLanguage property, the language setting in uri takes precedence, and the effective language is "de-DE".</span></span>
+
+    <span data-ttu-id="d0241-118">Solo las propiedades que no se especifican en el punto de conexión de dirección URL se puede establecer otras API.</span><span class="sxs-lookup"><span data-stu-id="d0241-118">Only the properties that are not specified in the endpoint URL can be set by other APIs.</span></span>
+  syntax:
+    content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
+    parameters:
+    - id: endpoint
+      type:
+      - URL
+      description: <span data-ttu-id="d0241-119">El extremo de servicio al que conectarse.</span><span class="sxs-lookup"><span data-stu-id="d0241-119">The service endpoint to connect to.</span></span>
+    - id: subscriptionKey
+      type:
+      - string
+      description: <span data-ttu-id="d0241-120">La clave de suscripción.</span><span class="sxs-lookup"><span data-stu-id="d0241-120">The subscription key.</span></span>
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromSubscription
+  name: fromSubscription(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d0241-121">Devuelve una instancia estática de SpeechTranslationConfig pasando una clave de suscripción y región del servicio.</span><span class="sxs-lookup"><span data-stu-id="d0241-121">Static instance of SpeechTranslationConfig returned by passing a subscription key and service region.</span></span>
+  syntax:
+    content: 'static function fromSubscription(subscriptionKey: string, region: string)'
+    parameters:
+    - id: subscriptionKey
+      type:
+      - string
+      description: <span data-ttu-id="d0241-122">La clave de suscripción.</span><span class="sxs-lookup"><span data-stu-id="d0241-122">The subscription key.</span></span>
+    - id: region
+      type:
+      - string
+      description: <span data-ttu-id="d0241-123">El nombre de región (consulte la <a href="https://aka.ms/csspeech/region">página región</a>).</span><span class="sxs-lookup"><span data-stu-id="d0241-123">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.setProperty
+  name: setProperty(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d0241-124">Establece una propiedad con nombre como valor</span><span class="sxs-lookup"><span data-stu-id="d0241-124">Sets a named property as value</span></span>
+  syntax:
+    content: 'function setProperty(name: string, value: string)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: <span data-ttu-id="d0241-125">El nombre de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="d0241-125">The name of the property.</span></span>
+    - id: value
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d0241-126">El valor.</span><span class="sxs-lookup"><span data-stu-id="d0241-126">The value.</span></span>
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.speechRecognitionLanguage
+  name: speechRecognitionLanguage
+  fullName: speechRecognitionLanguage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="d0241-127">Establece el token de autorización.</span><span class="sxs-lookup"><span data-stu-id="d0241-127">Sets the authorization token.</span></span>
+
+    <span data-ttu-id="d0241-128">Si se establece, se omite la clave de suscripción.</span><span class="sxs-lookup"><span data-stu-id="d0241-128">If this is set, subscription key is ignored.</span></span>
+
+    <span data-ttu-id="d0241-129">Usuario debe asegurarse de que el token de autorización proporcionado es válido y no ha expirado.</span><span class="sxs-lookup"><span data-stu-id="d0241-129">User needs to make sure the provided authorization token is valid and not expired.</span></span>
+  syntax:
+    content: 'public speechRecognitionLanguage: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.targetLanguages
+  name: targetLanguages
+  fullName: targetLanguages
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d0241-130">Agregar un idioma de destino (texto) para traducir en.</span><span class="sxs-lookup"><span data-stu-id="d0241-130">Add a (text) target language to translate into.</span></span>
+  syntax:
+    content: 'public targetLanguages: string[]'
+    return:
+      type:
+      - string[]
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.voiceName
+  name: voiceName
+  fullName: voiceName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d0241-131">Conjuntos de voz del idioma traducido, habilitar la salida de síntesis de voz.</span><span class="sxs-lookup"><span data-stu-id="d0241-131">Sets voice of the translated language, enable voice synthesis output.</span></span>
+  syntax:
+    content: 'public voiceName: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+references:
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  name: SpeechConfig
+  spec.typeScript:
+  - name: SpeechConfig
+    fullName: SpeechConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  name: SpeechTranslationConfig
+  spec.typeScript:
+  - name: SpeechTranslationConfig
+    fullName: SpeechTranslationConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig

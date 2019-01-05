@@ -1,0 +1,228 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a9e18900104a3cb82f1c4922749158760ad10922
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53664339"
+items:
+- uid: azure-servicefabric.BackupInfo
+  name: BackupInfo
+  fullName: BackupInfo
+  children:
+  - azure-servicefabric.BackupInfo.applicationName
+  - azure-servicefabric.BackupInfo.backupChainId
+  - azure-servicefabric.BackupInfo.backupId
+  - azure-servicefabric.BackupInfo.backupLocation
+  - azure-servicefabric.BackupInfo.backupType
+  - azure-servicefabric.BackupInfo.creationTimeUtc
+  - azure-servicefabric.BackupInfo.epochOfLastBackupRecord
+  - azure-servicefabric.BackupInfo.failureError
+  - azure-servicefabric.BackupInfo.lsnOfLastBackupRecord
+  - azure-servicefabric.BackupInfo.partitionInformation
+  - azure-servicefabric.BackupInfo.serviceManifestVersion
+  - azure-servicefabric.BackupInfo.serviceName
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="86cf1-101">Representa un punto de copia de seguridad que puede usarse para desencadenar una restauración.</span><span class="sxs-lookup"><span data-stu-id="86cf1-101">Represents a backup point which can be used to trigger a restore.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.applicationName
+  name: applicationName
+  fullName: applicationName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-102">Nombre de la aplicación de Service Fabric que pertenece esta copia de seguridad de la partición.</span><span class="sxs-lookup"><span data-stu-id="86cf1-102">Name of the Service Fabric application this partition backup belongs to.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.backupChainId
+  name: backupChainId
+  fullName: backupChainId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-103">Identificador de cadena de copia de seguridad único.</span><span class="sxs-lookup"><span data-stu-id="86cf1-103">Unique backup chain ID.</span></span> <span data-ttu-id="86cf1-104">Todo forma parte de las copias de seguridad de la misma cadena tiene el mismo identificador de cadena de copia de seguridad. Una cadena de copia de seguridad consta de 1 copia de seguridad completa y varias copias de seguridad incrementales.</span><span class="sxs-lookup"><span data-stu-id="86cf1-104">All backups part of the same chain has the same backup chain id. A backup chain is comprised of 1 full backup and multiple incremental backups.</span></span>
+  optional: true
+  syntax:
+    content: 'backupChainId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.backupId
+  name: backupId
+  fullName: backupId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-105">Identificador único de copia de seguridad.</span><span class="sxs-lookup"><span data-stu-id="86cf1-105">Unique backup ID .</span></span>
+  optional: true
+  syntax:
+    content: 'backupId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.backupLocation
+  name: backupLocation
+  fullName: backupLocation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-106">Ubicación de la copia de seguridad, en relación con el almacén de copia de seguridad.</span><span class="sxs-lookup"><span data-stu-id="86cf1-106">Location of the backup, relative to the backup store.</span></span>
+  optional: true
+  syntax:
+    content: 'backupLocation?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.backupType
+  name: backupType
+  fullName: backupType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"86cf1-107\">Describe el tipo de copia de seguridad, si su completo o incremental.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86cf1-107\">Describes the type of backup, whether its full or incremental.</span></span> <span data-ttu-id=\"86cf1-108\">Los valores posibles son: 'Invalid', 'Full', 'Incremental'</span><span class=\"sxs-lookup\"><span data-stu-id=\"86cf1-108\">Possible values include: 'Invalid', 'Full', 'Incremental'</span></span>"
+  optional: true
+  syntax:
+    content: 'backupType?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.creationTimeUtc
+  name: creationTimeUtc
+  fullName: creationTimeUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-109">Fecha y hora cuando se tomó esta copia de seguridad.</span><span class="sxs-lookup"><span data-stu-id="86cf1-109">The date time when this backup was taken.</span></span>
+  optional: true
+  syntax:
+    content: 'creationTimeUtc?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.epochOfLastBackupRecord
+  name: epochOfLastBackupRecord
+  fullName: epochOfLastBackupRecord
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-110">Tiempo del último registro en esta copia de seguridad.</span><span class="sxs-lookup"><span data-stu-id="86cf1-110">Epoch of the last record in this backup.</span></span>
+  optional: true
+  syntax:
+    content: 'epochOfLastBackupRecord?: Epoch'
+    return:
+      type:
+      - azure-servicefabric.Epoch
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.failureError
+  name: failureError
+  fullName: failureError
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-111">Indica el error al obtener información de punto de copia de seguridad.</span><span class="sxs-lookup"><span data-stu-id="86cf1-111">Denotes the failure encountered in getting backup point information.</span></span>
+  optional: true
+  syntax:
+    content: 'failureError?: FabricErrorError'
+    return:
+      type:
+      - azure-servicefabric.FabricErrorError
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.lsnOfLastBackupRecord
+  name: lsnOfLastBackupRecord
+  fullName: lsnOfLastBackupRecord
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-112">LSN del último registro en esta copia de seguridad.</span><span class="sxs-lookup"><span data-stu-id="86cf1-112">LSN of the last record in this backup.</span></span>
+  optional: true
+  syntax:
+    content: 'lsnOfLastBackupRecord?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.partitionInformation
+  name: partitionInformation
+  fullName: partitionInformation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-113">Información acerca de la partición a la que pertenece esta copia de seguridad</span><span class="sxs-lookup"><span data-stu-id="86cf1-113">Information about the partition to which this backup belongs to</span></span>
+  optional: true
+  syntax:
+    content: 'partitionInformation?: PartitionInformation'
+    return:
+      type:
+      - azure-servicefabric.PartitionInformation
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.serviceManifestVersion
+  name: serviceManifestVersion
+  fullName: serviceManifestVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-114">Versión del servicio al que pertenece esta copia de seguridad de la partición del manifiesto.</span><span class="sxs-lookup"><span data-stu-id="86cf1-114">Manifest Version of the service this partition backup belongs to.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceManifestVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupInfo.serviceName
+  name: serviceName
+  fullName: serviceName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="86cf1-115">Nombre del servicio de Service Fabric que pertenece esta copia de seguridad de la partición.</span><span class="sxs-lookup"><span data-stu-id="86cf1-115">Name of the Service Fabric service this partition backup belongs to.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.Epoch
+  name: Epoch
+  spec.typeScript:
+  - name: Epoch
+    fullName: Epoch
+    uid: azure-servicefabric.Epoch
+- uid: azure-servicefabric.FabricErrorError
+  name: FabricErrorError
+  spec.typeScript:
+  - name: FabricErrorError
+    fullName: FabricErrorError
+    uid: azure-servicefabric.FabricErrorError
+- uid: azure-servicefabric.PartitionInformation
+  name: PartitionInformation
+  spec.typeScript:
+  - name: PartitionInformation
+    fullName: PartitionInformation
+    uid: azure-servicefabric.PartitionInformation
