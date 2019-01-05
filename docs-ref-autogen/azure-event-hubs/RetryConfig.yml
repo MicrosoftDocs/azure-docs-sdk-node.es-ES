@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6b1978bbc8fcbdb2ac9f7cde4c4f6aeb01df28c8
+ms.sourcegitcommit: 094b6aa16c2ee9aa1418d36ce033f1d99151d913
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45867760"
+items:
+- uid: azure-event-hubs.RetryConfig
+  name: RetryConfig
+  fullName: RetryConfig<T>
+  children:
+  - azure-event-hubs.RetryConfig.connectionId
+  - azure-event-hubs.RetryConfig.delayInSeconds
+  - azure-event-hubs.RetryConfig.operation
+  - azure-event-hubs.RetryConfig.operationType
+  - azure-event-hubs.RetryConfig.times
+  langs:
+  - typeScript
+  type: interface
+  summary: Describe los parámetros que deben configurarse para la operación de reintento.
+  package: azure-event-hubs
+- uid: azure-event-hubs.RetryConfig.connectionId
+  name: connectionId
+  fullName: connectionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {cadena} connectionId el identificador de conexión. Se usa en la información de registro.
+
+    Muy útil cuando se registran varias conexiones en el mismo archivo.
+  syntax:
+    content: 'connectionId: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.RetryConfig.delayInSeconds
+  name: delayInSeconds
+  fullName: delayInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} [delayInSeconds] Cantidad de tiempo de espera en segundos antes de realizar el siguiente intento. Valor predeterminado: 15.'
+  optional: true
+  syntax:
+    content: 'delayInSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-event-hubs
+- uid: azure-event-hubs.RetryConfig.operation
+  name: operation
+  fullName: operation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Promesa<T>} operación de la operación que debe volver a intentarlo.'
+  syntax:
+    content: 'operation: () => Promise<T>'
+    return:
+      type:
+      - () => Promise<T>
+  package: azure-event-hubs
+- uid: azure-event-hubs.RetryConfig.operationType
+  name: operationType
+  fullName: operationType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    OperationType {RetryOperationType} el nombre, tipo de operación se realizará.
+
+    Muy útiles al proporcionar una mejor los registros de depuración.
+  syntax:
+    content: 'operationType: RetryOperationType'
+    return:
+      type:
+      - azure-event-hubs.RetryOperationType
+  package: azure-event-hubs
+- uid: azure-event-hubs.RetryConfig.times
+  name: times
+  fullName: times
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} [horas] Número de veces que la operación necesita que se vuelva a intentar en el caso de error. Valor predeterminado: 3.'
+  optional: true
+  syntax:
+    content: 'times?: number'
+    return:
+      type:
+      - number
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.RetryOperationType
+  name: RetryOperationType
+  spec.typeScript:
+  - name: RetryOperationType
+    fullName: RetryOperationType
+    uid: azure-event-hubs.RetryOperationType

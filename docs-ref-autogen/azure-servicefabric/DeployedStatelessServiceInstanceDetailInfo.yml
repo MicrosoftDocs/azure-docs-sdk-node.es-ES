@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0ad49539905ab6480d3da4a3d778658b8a960169
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52024979"
+items:
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo
+  name: DeployedStatelessServiceInstanceDetailInfo
+  fullName: DeployedStatelessServiceInstanceDetailInfo
+  children:
+  - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+  - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: Información sobre una instancia sin estado que se ejecutan en un paquete de código. Tenga en cuenta que DeployedServiceReplicaQueryResult contendrá datos duplicados, como ServiceKind, ServiceName, PartitionId y InstanceId.
+  extends:
+    name: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+  name: deployedServiceReplicaQueryResult
+  fullName: deployedServiceReplicaQueryResult
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Información sobre una instancia de servicio sin estado implementada en un nodo.
+  optional: true
+  syntax:
+    content: 'deployedServiceReplicaQueryResult?: DeployedStatelessServiceInstanceInfo'
+    return:
+      type:
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Identificador de una instancia de servicio sin estado. InstanceId se usa Service fabric para identificar de forma exclusiva una instancia de una partición de un servicio sin estado. Es único dentro de una partición y no cambia durante la vigencia de la instancia. Si la instancia ha conmutado por error en el nodo de iguales o distintos, obtendrá un valor diferente para el identificador de instancia.
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  name: DeployedServiceReplicaDetailInfo
+  spec.typeScript:
+  - name: DeployedServiceReplicaDetailInfo
+    fullName: DeployedServiceReplicaDetailInfo
+    uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
+  name: DeployedStatelessServiceInstanceInfo
+  spec.typeScript:
+  - name: DeployedStatelessServiceInstanceInfo
+    fullName: DeployedStatelessServiceInstanceInfo
+    uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
