@@ -1,0 +1,177 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3b28fb8cd37f73cef606dd8efc6359565c781ca1
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53677124"
+items:
+- uid: azure-iot-common.ConnectionString
+  name: ConnectionString
+  fullName: ConnectionString
+  children:
+  - azure-iot-common.ConnectionString.DeviceId
+  - azure-iot-common.ConnectionString.GatewayHostName
+  - azure-iot-common.ConnectionString.HostName
+  - azure-iot-common.ConnectionString.ModuleId
+  - azure-iot-common.ConnectionString.parse
+  - azure-iot-common.ConnectionString.SharedAccessKey
+  - azure-iot-common.ConnectionString.SharedAccessKeyName
+  - azure-iot-common.ConnectionString.SharedAccessSignature
+  - azure-iot-common.ConnectionString.x509
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="c2350-101">Describe los parámetros que permiten a una aplicación de dispositivo o en la nube para conectarse a un centro de IoT de Azure.</span><span class="sxs-lookup"><span data-stu-id="c2350-101">Describes the parameters that enable a device or cloud application to connect to an Azure IoT hub.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.DeviceId
+  name: DeviceId
+  fullName: DeviceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2350-102">Identificador único del dispositivo tal y como existe en el registro de identidad de dispositivo.</span><span class="sxs-lookup"><span data-stu-id="c2350-102">Unique device identifier as it exists in the device identity registry.</span></span> <span data-ttu-id="c2350-103">Esto solo se usa para las cadenas de conexión del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="c2350-103">This is only used for device connection strings.</span></span>
+  optional: true
+  syntax:
+    content: 'DeviceId?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.GatewayHostName
+  name: GatewayHostName
+  fullName: GatewayHostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2350-104">IP nombre de la máquina host funciona como una puerta de enlace de dispositivo o el protocolo de internet o la dirección.</span><span class="sxs-lookup"><span data-stu-id="c2350-104">IP address or internet name of the host machine working as a device or protocol gateway.</span></span>  <span data-ttu-id="c2350-105">Se usa al comunicarse con dispositivos de Edge de Azure.</span><span class="sxs-lookup"><span data-stu-id="c2350-105">Used when communicating with Azure Edge devices.</span></span>
+  optional: true
+  syntax:
+    content: 'GatewayHostName?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.HostName
+  name: HostName
+  fullName: HostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2350-106">Nombre de host de IoT hub de Azure.</span><span class="sxs-lookup"><span data-stu-id="c2350-106">Hostname of the Azure IoT hub.</span></span>
+  optional: true
+  syntax:
+    content: 'HostName?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.ModuleId
+  name: ModuleId
+  fullName: ModuleId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2350-107">Identificador único del módulo tal y como existe en el registro de identidad de dispositivo.</span><span class="sxs-lookup"><span data-stu-id="c2350-107">Unique module identifier as it exists in the device identity registry.</span></span> <span data-ttu-id="c2350-108">Esto solo se usa para las cadenas de conexión del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="c2350-108">This is only used for device connection strings.</span></span>
+  optional: true
+  syntax:
+    content: 'ModuleId?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.parse
+  name: parse(string, string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c2350-109">Analiza una cadena y devuelve el correspondiente <xref:azure-iot-common.ConnectionString> objeto.</span><span class="sxs-lookup"><span data-stu-id="c2350-109">Parses a string and returns the corresponding <xref:azure-iot-common.ConnectionString> object.</span></span>
+  syntax:
+    content: 'static function parse(source: string, requiredFields?: string[])'
+    parameters:
+    - id: source
+      type:
+      - string
+      description: <span data-ttu-id="c2350-110">cadena desde el que se va a extraer la cadena de conexión</span><span class="sxs-lookup"><span data-stu-id="c2350-110">string from which the connection string will be extracted</span></span>
+    - id: requiredFields
+      type:
+      - string[]
+      description: >
+        <span data-ttu-id="c2350-111">matriz de cadenas que enumeran los campos que se esperan que se encuentra.</span><span class="sxs-lookup"><span data-stu-id="c2350-111">array of strings listing the fields that are expected to be found.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-iot-common.ConnectionString
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.SharedAccessKey
+  name: SharedAccessKey
+  fullName: SharedAccessKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2350-112">Clave simétrica utilizada para crear tokens de firma que a su vez se usan para autenticar la conexión de acceso compartido.</span><span class="sxs-lookup"><span data-stu-id="c2350-112">Symmetric key used to create shared access signature tokens that are in turn used to authenticate the connection.</span></span> <span data-ttu-id="c2350-113">Asociado con un dispositivo específico o una directiva de servicio específico.</span><span class="sxs-lookup"><span data-stu-id="c2350-113">Associated either with a specific device or a specific service policy.</span></span>
+  optional: true
+  syntax:
+    content: 'SharedAccessKey?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.SharedAccessKeyName
+  name: SharedAccessKeyName
+  fullName: SharedAccessKeyName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2350-114">Nombre de la directiva de acceso utilizada para conectarse a IoT hub de Azure.</span><span class="sxs-lookup"><span data-stu-id="c2350-114">Name of the access policy used to connect to the Azure IoT hub.</span></span> <span data-ttu-id="c2350-115">usa solo en el caso del SDK, sin usar con el SDK de dispositivo de servicio (que usa `DeviceId` en su lugar).</span><span class="sxs-lookup"><span data-stu-id="c2350-115">used only in the case of the service SDK, unused with the Device SDK (which uses `DeviceId` instead).</span></span>
+  optional: true
+  syntax:
+    content: 'SharedAccessKeyName?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.SharedAccessSignature
+  name: SharedAccessSignature
+  fullName: SharedAccessSignature
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2350-116">Una firma de acceso compartido que encapsula permisos de "conexión de dispositivo" en un centro de IoT.</span><span class="sxs-lookup"><span data-stu-id="c2350-116">A shared access signature which encapsulates "device connect" permissions on an IoT hub.</span></span>
+  optional: true
+  syntax:
+    content: 'SharedAccessSignature?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.x509
+  name: x509
+  fullName: x509
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2350-117">Esta propiedad solo existe si un dispositivo usa x509 certificados para la autenticación y si existe, se establecerá en True.</span><span class="sxs-lookup"><span data-stu-id="c2350-117">This property exists only if a device uses x509 certificates for authentication and if it exists, will be set to True.</span></span>
+  optional: true
+  syntax:
+    content: 'x509?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.ConnectionString
+  name: ConnectionString
+  spec.typeScript:
+  - name: ConnectionString
+    fullName: ConnectionString
+    uid: azure-iot-common.ConnectionString

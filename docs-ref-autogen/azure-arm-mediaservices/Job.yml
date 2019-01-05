@@ -1,0 +1,166 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 09f0cba346df49ad0c4d96b53096608cc5c8044f
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53665759"
+items:
+- uid: azure-arm-mediaservices.Job
+  name: Job
+  fullName: Job
+  children:
+  - azure-arm-mediaservices.Job.correlationData
+  - azure-arm-mediaservices.Job.created
+  - azure-arm-mediaservices.Job.description
+  - azure-arm-mediaservices.Job.input
+  - azure-arm-mediaservices.Job.lastModified
+  - azure-arm-mediaservices.Job.outputs
+  - azure-arm-mediaservices.Job.priority
+  - azure-arm-mediaservices.Job.state
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="0af77-101">Un tipo de recurso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="0af77-101">A Job resource type.</span></span> <span data-ttu-id="0af77-102">El progreso y el estado pueden obtenerse mediante un trabajo de sondeo o suscribirse a eventos mediante EventGrid.</span><span class="sxs-lookup"><span data-stu-id="0af77-102">The progress and state can be obtained by polling a Job or subscribing to events using EventGrid.</span></span>
+  extends:
+    name: azure-arm-mediaservices.ProxyResource
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Job.correlationData
+  name: correlationData
+  fullName: correlationData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0af77-103">Cliente proporciona datos de correlación que se devolverán en los eventos de estado de trabajo y JobOutput.</span><span class="sxs-lookup"><span data-stu-id="0af77-103">Customer provided correlation data that will be returned in Job and JobOutput state events.</span></span>
+  optional: true
+  syntax:
+    content: 'correlationData?: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Job.created
+  name: created
+  fullName: created
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0af77-104">La fecha y hora UTC cuando se creó el trabajo, en formato "AAAA-MM-DDThh:mm:ssZ".</span><span class="sxs-lookup"><span data-stu-id="0af77-104">The UTC date and time when the Job was created, in 'YYYY-MM-DDThh:mm:ssZ' format.</span></span>
+  optional: true
+  syntax:
+    content: 'created?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Job.description
+  name: description
+  fullName: description
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0af77-105">Descripción opcional del trabajo proporcionada por el cliente.</span><span class="sxs-lookup"><span data-stu-id="0af77-105">Optional customer supplied description of the Job.</span></span>
+  optional: true
+  syntax:
+    content: 'description?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Job.input
+  name: input
+  fullName: input
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0af77-106">Las entradas para el trabajo.</span><span class="sxs-lookup"><span data-stu-id="0af77-106">The inputs for the Job.</span></span>
+  syntax:
+    content: 'input: JobInput'
+    return:
+      type:
+      - azure-arm-mediaservices.JobInput
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Job.lastModified
+  name: lastModified
+  fullName: lastModified
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0af77-107">La fecha y hora UTC cuando se actualizó el trabajo por última vez, en formato "AAAA-MM-DDThh:mm:ssZ".</span><span class="sxs-lookup"><span data-stu-id="0af77-107">The UTC date and time when the Job was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.</span></span>
+  optional: true
+  syntax:
+    content: 'lastModified?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Job.outputs
+  name: outputs
+  fullName: outputs
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0af77-108">Las salidas del trabajo.</span><span class="sxs-lookup"><span data-stu-id="0af77-108">The outputs for the Job.</span></span>
+  syntax:
+    content: 'outputs: JobOutput[]'
+    return:
+      type:
+      - azure-arm-mediaservices.JobOutput[]
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Job.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"0af77-109\">Prioridad con la que se debe procesar el trabajo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0af77-109\">Priority with which the job should be processed.</span></span> <span data-ttu-id=\"0af77-110\">Los trabajos con prioridad superior se procesan antes que los trabajos con prioridad inferior.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0af77-110\">Higher priority jobs are processed before lower priority jobs.</span></span> <span data-ttu-id=\"0af77-111\">Si no se establece, el valor predeterminado es normal.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0af77-111\">If not set, the default is normal.</span></span> <span data-ttu-id=\"0af77-112\">Los valores posibles incluyen: 'Bajo', 'Normal', 'Alto'</span><span class=\"sxs-lookup\"><span data-stu-id=\"0af77-112\">Possible values include: 'Low', 'Normal', 'High'</span></span>"
+  optional: true
+  syntax:
+    content: 'priority?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Job.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"0af77-113\">Estado actual del trabajo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0af77-113\">The current state of the job.</span></span> <span data-ttu-id=\"0af77-114\">Los valores posibles incluyen: 'Cancelar', 'Cancelar', 'Error', \"Finalizada\", \"Processing\", \"en cola', 'Scheduled'</span><span class=\"sxs-lookup\"><span data-stu-id=\"0af77-114\">Possible values include: 'Canceled', 'Canceling', 'Error', 'Finished', 'Processing', 'Queued', 'Scheduled'</span></span>"
+  optional: true
+  syntax:
+    content: 'state?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.ProxyResource
+  name: ProxyResource
+  spec.typeScript:
+  - name: ProxyResource
+    fullName: ProxyResource
+    uid: azure-arm-mediaservices.ProxyResource
+- uid: azure-arm-mediaservices.JobInput
+  name: JobInput
+  spec.typeScript:
+  - name: JobInput
+    fullName: JobInput
+    uid: azure-arm-mediaservices.JobInput
+- uid: azure-arm-mediaservices.JobOutput[]
+  name: JobOutput[]
+  spec.typeScript:
+  - name: JobOutput
+    fullName: JobOutput
+    uid: azure-arm-mediaservices.JobOutput
+  - name: '[]'
+    fullName: '[]'

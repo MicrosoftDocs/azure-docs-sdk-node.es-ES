@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 344409e66863c322e5c8c48ee638239da4850bac
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52061090"
+items:
+- uid: azure-servicefabric.ReplicaEvent
+  name: ReplicaEvent
+  fullName: ReplicaEvent
+  children:
+  - azure-servicefabric.ReplicaEvent.partitionId
+  - azure-servicefabric.ReplicaEvent.replicaId
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="a8ad3-101">Representa la base para todos los eventos de réplica.</span><span class="sxs-lookup"><span data-stu-id="a8ad3-101">Represents the base for all Replica Events.</span></span>
+  extends:
+    name: azure-servicefabric.FabricEvent
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaEvent.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a8ad3-102">Un identificador interno usado por Service Fabric para identificar de forma única una partición.</span><span class="sxs-lookup"><span data-stu-id="a8ad3-102">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="a8ad3-103">Esto es un GUID generado aleatoriamente cuando se creó el servicio.</span><span class="sxs-lookup"><span data-stu-id="a8ad3-103">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="a8ad3-104">Id. de partición es único y no cambia durante la vigencia del servicio.</span><span class="sxs-lookup"><span data-stu-id="a8ad3-104">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="a8ad3-105">Si el mismo servicio se ha eliminado y vuelto a crear los identificadores de sus particiones sería diferente.</span><span class="sxs-lookup"><span data-stu-id="a8ad3-105">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+  syntax:
+    content: 'partitionId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaEvent.replicaId
+  name: replicaId
+  fullName: replicaId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a8ad3-106">Id. de una réplica de servicio con estado.</span><span class="sxs-lookup"><span data-stu-id="a8ad3-106">Id of a stateful service replica.</span></span> <span data-ttu-id="a8ad3-107">ReplicaId sirve para identificar de forma exclusiva una réplica de una partición de Service fabric.</span><span class="sxs-lookup"><span data-stu-id="a8ad3-107">ReplicaId is used by Service Fabric to uniquely identify a replica of a partition.</span></span> <span data-ttu-id="a8ad3-108">Es único dentro de una partición y no cambia durante la vigencia de la réplica.</span><span class="sxs-lookup"><span data-stu-id="a8ad3-108">It is unique within a partition and does not change for the lifetime of the replica.</span></span> <span data-ttu-id="a8ad3-109">Si se quita una réplica y otra réplica se crea en el mismo nodo de la misma partición, obtendrá un valor diferente para el id. A veces, el identificador de una instancia de servicio sin estado también se conoce como un identificador de réplica.</span><span class="sxs-lookup"><span data-stu-id="a8ad3-109">If a replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the id. Sometimes the id of a stateless service instance is also referred as a replica id.</span></span>
+  syntax:
+    content: 'replicaId: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.FabricEvent
+  name: FabricEvent
+  spec.typeScript:
+  - name: FabricEvent
+    fullName: FabricEvent
+    uid: azure-servicefabric.FabricEvent
