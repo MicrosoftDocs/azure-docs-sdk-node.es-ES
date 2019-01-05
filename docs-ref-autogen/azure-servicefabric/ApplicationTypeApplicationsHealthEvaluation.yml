@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f981572ac204e89f3a3b64661a006d2fb082828f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52035300"
+items:
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation
+  name: ApplicationTypeApplicationsHealthEvaluation
+  fullName: ApplicationTypeApplicationsHealthEvaluation
+  children:
+  - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.applicationTypeName
+  - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.maxPercentUnhealthyApplications
+  - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.totalCount
+  - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: Representa la evaluación de mantenimiento de las aplicaciones de un tipo de aplicación concreto. La evaluación de las aplicaciones del tipo de aplicación se puede devolver cuando la evaluación de mantenimiento de Cluster Server devuelve el estado de mantenimiento agregado incorrecto, Error o advertencia. Contiene las evaluaciones de mantenimiento para cada aplicación en mal estado del tipo de aplicación que se incluyen que afectado el actual estado de mantenimiento agregado.
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.applicationTypeName
+  name: applicationTypeName
+  fullName: applicationTypeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El nombre de tipo de aplicación tal como se define en el manifiesto de aplicación.
+  optional: true
+  syntax:
+    content: 'applicationTypeName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.maxPercentUnhealthyApplications
+  name: maxPercentUnhealthyApplications
+  fullName: maxPercentUnhealthyApplications
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Porcentaje máximo permitido de aplicaciones en mal estado para el tipo de aplicación, especificado como una entrada en ApplicationTypeHealthPolicyMap.
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyApplications?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.totalCount
+  name: totalCount
+  fullName: totalCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Número total de las aplicaciones del tipo de aplicación que se encuentra en el almacén de estado.
+  optional: true
+  syntax:
+    content: 'totalCount?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lista de las evaluaciones en mal estado que llevó al estado de mantenimiento agregado. Incluye todas la ApplicationHealthEvaluation incorrecto de este tipo de aplicación que se ve afectado el mantenimiento agregado.
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'

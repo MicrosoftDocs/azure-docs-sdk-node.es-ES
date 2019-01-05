@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 23bebeb9af47e6ab96610c85ddc45108807e8321
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52170280"
+items:
+- uid: azure-servicefabric.ServiceHealthStateFilter
+  name: ServiceHealthStateFilter
+  fullName: ServiceHealthStateFilter
+  children:
+  - azure-servicefabric.ServiceHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ServiceHealthStateFilter.partitionFilters
+  - azure-servicefabric.ServiceHealthStateFilter.serviceNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Define los criterios de coincidencia para determinar si un servicio se debe incluir como elemento secundario de una aplicación en los fragmentos de mantenimiento del clúster.
+
+    Los servicios se devuelven solo si la aplicación primaria coincide con un filtro especificado en la descripción de la consulta de la salud fragmento clúster.
+
+    Un filtro puede hacer coincidir cero, uno o varios servicios, dependiendo de sus propiedades.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    El filtro para el estado de mantenimiento de los servicios. Permite seleccionar los servicios si coinciden con los Estados de mantenimiento deseada.
+
+    Los valores posibles son el valor entero de uno de los siguientes estados de mantenimiento. Se devuelven únicamente los servicios que coinciden con el filtro. Todos los servicios se utilizan para evaluar el estado de mantenimiento agregado del clúster.
+
+    Si no se especifica, valor predeterminado es None, a menos que se especifica el nombre del servicio. Si el filtro tiene valor predeterminado y se especifica el nombre del servicio, se devuelve el servicio de búsqueda de coincidencias.
+
+    Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.
+
+    Por ejemplo, si el valor proporcionado es 6, detecta los servicios con el valor de HealthState de OK (2) y Warning (4).
+
+    - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+
+    - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+
+    - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+
+    - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+
+    - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+
+    - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceHealthStateFilter.partitionFilters
+  name: partitionFilters
+  fullName: partitionFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Define una lista de filtros que especifican qué particiones que se incluirán en el estado del clúster devuelto fragmento como elementos secundarios del servicio. Las particiones se devuelven solo si un filtro coincide con el servicio principal.
+
+    Si la lista está vacía, no se devuelven particiones. Todas las particiones se utilizan para evaluar el estado de mantenimiento de los servicios agregados primario, independientemente de los filtros de entrada.
+
+    El filtro de servicio puede especificar varios filtros de partición.
+
+    Por ejemplo, puede especificar un filtro para devolver todas las particiones con el estado de Error y otro para incluir siempre una partición identificada por su identificador de partición.
+  optional: true
+  syntax:
+    content: 'partitionFilters?: PartitionHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.PartitionHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceHealthStateFilter.serviceNameFilter
+  name: serviceNameFilter
+  fullName: serviceNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    El nombre del servicio que coincide con el filtro. El filtro se aplica solo al servicio especificado, si existe.
+
+    Si el servicio no existe, no se devuelve ningún servicio en los fragmentos de mantenimiento del clúster según este filtro.
+
+    Si el servicio no existe, se incluye como elemento secundario de la aplicación si el estado de mantenimiento coincide con las propiedades del filtro.
+
+    Si no se especifica, todos los servicios que coinciden con los filtros primario (si existe) se toma en consideración y se compara con los demás miembros de filtro, como filtro de estado de mantenimiento.
+  optional: true
+  syntax:
+    content: 'serviceNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.PartitionHealthStateFilter[]
+  name: PartitionHealthStateFilter[]
+  spec.typeScript:
+  - name: PartitionHealthStateFilter
+    fullName: PartitionHealthStateFilter
+    uid: azure-servicefabric.PartitionHealthStateFilter
+  - name: '[]'
+    fullName: '[]'
