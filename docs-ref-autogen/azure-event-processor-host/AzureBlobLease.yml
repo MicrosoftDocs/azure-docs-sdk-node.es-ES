@@ -1,0 +1,174 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 800dbe8ecc8b48523a109e93b30800e9929280f3
+ms.sourcegitcommit: 094b6aa16c2ee9aa1418d36ce033f1d99151d913
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45954159"
+items:
+- uid: azure-event-processor-host.AzureBlobLease
+  name: AzureBlobLease
+  fullName: AzureBlobLease
+  children:
+  - azure-event-processor-host.AzureBlobLease.constructor
+  - azure-event-processor-host.AzureBlobLease.blob
+  - azure-event-processor-host.AzureBlobLease.createFromPartitionId
+  - azure-event-processor-host.AzureBlobLease.getInfo
+  - azure-event-processor-host.AzureBlobLease.offset
+  - azure-event-processor-host.AzureBlobLease.sequenceNumber
+  - azure-event-processor-host.AzureBlobLease.serialize
+  - azure-event-processor-host.AzureBlobLease.token
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="2a656-101">Describe la concesión que se usa con un Blob de Azure para almacenar la información de punto de comprobación.</span><span class="sxs-lookup"><span data-stu-id="2a656-101">Describes the lease used with an Azure Blob for storing the checkpoint information.</span></span>
+  extends:
+    name: azure-event-processor-host.CompleteLease
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.constructor
+  name: AzureBlobLease
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new AzureBlobLease(info: AzureBlobLeaseInfo)'
+    parameters:
+    - id: info
+      type:
+      - azure-event-processor-host.AzureBlobLeaseInfo
+      description: ''
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.blob
+  name: blob
+  fullName: blob
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2a656-102">Blob {AzureBlob} referencia al blob de azure.</span><span class="sxs-lookup"><span data-stu-id="2a656-102">{AzureBlob} blob Reference to the azure blob.</span></span>
+  syntax:
+    content: 'blob: AzureBlob'
+    return:
+      type:
+      - AzureBlob
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.createFromPartitionId
+  name: createFromPartitionId
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2a656-103">Crea una concesión para el valor de partitionId determinado.</span><span class="sxs-lookup"><span data-stu-id="2a656-103">Creates a Lease for the given partitionId.</span></span>
+  syntax:
+    content: 'static function createFromPartitionId(id: string, blob: AzureBlob)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: <span data-ttu-id="2a656-104">El valor de partitionId para el que debe crearse la concesión.</span><span class="sxs-lookup"><span data-stu-id="2a656-104">The partitionId for which the lease needs to be created.</span></span>
+    - id: blob
+      type:
+      - AzureBlob
+      description: <span data-ttu-id="2a656-105">La referencia de blob de azure</span><span class="sxs-lookup"><span data-stu-id="2a656-105">The azure blob reference</span></span>
+    return:
+      type:
+      - azure-event-processor-host.AzureBlobLease
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.getInfo
+  name: getInfo
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2a656-106">Obtiene la información de concesión.</span><span class="sxs-lookup"><span data-stu-id="2a656-106">Gets the lease information.</span></span>
+  syntax:
+    content: function getInfo()
+    parameters: []
+    return:
+      type:
+      - azure-event-processor-host.LeaseInfo
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.offset
+  name: offset
+  fullName: offset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2a656-107">{cadena} desplazamiento el desplazamiento del evento que se comprobará.</span><span class="sxs-lookup"><span data-stu-id="2a656-107">{string} offset The offset of the event to be checked in.</span></span>
+  optional: true
+  syntax:
+    content: 'offset?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.sequenceNumber
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2a656-108">{cadena} sequenceNumber del evento que se comprobará el número de secuencia.</span><span class="sxs-lookup"><span data-stu-id="2a656-108">{string} sequenceNumber The sequence number of the event to be checked in.</span></span>
+  syntax:
+    content: 'sequenceNumber: number'
+    return:
+      type:
+      - number
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.serialize
+  name: serialize
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="2a656-109">Serializa la información de concesión.</span><span class="sxs-lookup"><span data-stu-id="2a656-109">Serializes the lease information.</span></span>
+  syntax:
+    content: function serialize()
+    parameters: []
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.token
+  name: token
+  fullName: token
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2a656-110">token {cadena} el token de concesión que administra la simultaneidad entre hosts.</span><span class="sxs-lookup"><span data-stu-id="2a656-110">{string} token The lease token that manages concurrency between hosts.</span></span> <span data-ttu-id="2a656-111">Puede usar este token para garantizar el acceso solo a cualquier recurso que necesita la EPH.</span><span class="sxs-lookup"><span data-stu-id="2a656-111">You can use this token to guarantee single access to any resource needed by the EPH.</span></span>
+  syntax:
+    content: 'token: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+references:
+- uid: azure-event-processor-host.CompleteLease
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: azure-event-processor-host.CompleteLease
+- uid: azure-event-processor-host.AzureBlobLeaseInfo
+  name: AzureBlobLeaseInfo
+  spec.typeScript:
+  - name: AzureBlobLeaseInfo
+    fullName: AzureBlobLeaseInfo
+    uid: azure-event-processor-host.AzureBlobLeaseInfo
+- uid: azure-event-processor-host.LeaseInfo
+  name: LeaseInfo
+  spec.typeScript:
+  - name: LeaseInfo
+    fullName: LeaseInfo
+    uid: azure-event-processor-host.LeaseInfo
+- uid: azure-event-processor-host.AzureBlobLease
+  name: AzureBlobLease
+  spec.typeScript:
+  - name: AzureBlobLease
+    fullName: AzureBlobLease
+    uid: azure-event-processor-host.AzureBlobLease

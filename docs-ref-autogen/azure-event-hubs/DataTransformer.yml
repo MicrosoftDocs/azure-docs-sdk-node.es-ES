@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bf7c7f8600a26a8bf475078d60f3bf0c66e38e58
+ms.sourcegitcommit: 094b6aa16c2ee9aa1418d36ce033f1d99151d913
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45905269"
+items:
+- uid: azure-event-hubs.DataTransformer
+  name: DataTransformer
+  fullName: DataTransformer
+  children:
+  - azure-event-hubs.DataTransformer.decode
+  - azure-event-hubs.DataTransformer.encode
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="575d5-101">Describe las transformaciones que se pueden realizar para codificar y descodificar los datos antes enviarlo (o recibirlo de) la conexión.</span><span class="sxs-lookup"><span data-stu-id="575d5-101">Describes the transformations that can be performed to encode/decode the data before sending it on (or receiving it from) the wire.</span></span>
+  package: azure-event-hubs
+- uid: azure-event-hubs.DataTransformer.decode
+  name: decode
+  fullName: decode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="575d5-102">{La función} descodificar una función que toma la propiedad del cuerpo de un mensaje de AMQP y devuelve el cuerpo del mensaje descodificado.</span><span class="sxs-lookup"><span data-stu-id="575d5-102">{Function} decode A function that takes the body property from an AMQP message and returns the decoded message body.</span></span> <span data-ttu-id="575d5-103">Si no puede descodificar el cuerpo, a continuación, devuelve el cuerpo como-es.</span><span class="sxs-lookup"><span data-stu-id="575d5-103">If it cannot decode the body then it returns the body as-is.</span></span>
+  syntax:
+    content: 'decode: (body: any) => any'
+    return:
+      type:
+      - '(body: any) => any'
+  package: azure-event-hubs
+- uid: azure-event-hubs.DataTransformer.encode
+  name: encode
+  fullName: encode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="575d5-104">{La función} codificar una función que toma la propiedad de cuerpo de un objeto EventData y devuelve un cuerpo codificado (alguna forma de tipo AMQP).</span><span class="sxs-lookup"><span data-stu-id="575d5-104">{Function} encode A function that takes the body property from an EventData object and returns an encoded body (some form of AMQP type).</span></span>
+  syntax:
+    content: 'encode: (body: any) => any'
+    return:
+      type:
+      - '(body: any) => any'
+  package: azure-event-hubs
