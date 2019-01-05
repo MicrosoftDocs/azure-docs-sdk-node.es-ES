@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d3e75182e570626c77183494aebb37f3ae54a77c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52170020"
+items:
+- uid: azure-arm-resource.DeploymentProperties
+  name: DeploymentProperties
+  fullName: DeploymentProperties
+  children:
+  - azure-arm-resource.DeploymentProperties.debugSetting
+  - azure-arm-resource.DeploymentProperties.mode
+  - azure-arm-resource.DeploymentProperties.onErrorDeployment
+  - azure-arm-resource.DeploymentProperties.parameters
+  - azure-arm-resource.DeploymentProperties.parametersLink
+  - azure-arm-resource.DeploymentProperties.template
+  - azure-arm-resource.DeploymentProperties.templateLink
+  langs:
+  - typeScript
+  type: interface
+  summary: Propiedades de implementación.
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.debugSetting
+  name: debugSetting
+  fullName: debugSetting
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La configuración de depuración de la implementación.
+  optional: true
+  syntax:
+    content: 'debugSetting?: DebugSetting'
+    return:
+      type:
+      - azure-arm-resource.DebugSetting
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.mode
+  name: mode
+  fullName: mode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    El modo en que se usa para implementar recursos. Este valor puede ser Incremental o completo.
+
+    En el modo Incremental, los recursos se implementan sin eliminar los recursos existentes que no están incluidos en la plantilla. En el modo completo, los recursos se implementan y se eliminan los recursos existentes en el grupo de recursos que no están incluidos en la plantilla. Tenga cuidado al usar el modo completo tal como se puede eliminar accidentalmente los recursos. Los valores posibles son: "Incremental", 'Completa'
+  syntax:
+    content: 'mode: string'
+    return:
+      type:
+      - string
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.onErrorDeployment
+  name: onErrorDeployment
+  fullName: onErrorDeployment
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La implementación en el comportamiento de error.
+  optional: true
+  syntax:
+    content: 'onErrorDeployment?: OnErrorDeployment'
+    return:
+      type:
+      - azure-arm-resource.OnErrorDeployment
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.parameters
+  name: parameters
+  fullName: parameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Pares de nombre y valor que definen los parámetros de implementación para la plantilla. Use este elemento cuando desea proporcionar los valores de parámetro directamente en la solicitud en lugar de vincular a un archivo de parámetros existente. Utilice la propiedad parametersLink o la propiedad parameters, pero no ambos. Puede ser un elemento JObject o una cadena JSON con formato correcto.
+  optional: true
+  syntax:
+    content: 'parameters?: any'
+    return:
+      type:
+      - any
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.parametersLink
+  name: parametersLink
+  fullName: parametersLink
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El URI del archivo de parámetros. Utilice este elemento para vincular a un archivo de parámetros existente. Utilice la propiedad parametersLink o la propiedad parameters, pero no ambos.
+  optional: true
+  syntax:
+    content: 'parametersLink?: ParametersLink'
+    return:
+      type:
+      - azure-arm-resource.ParametersLink
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.template
+  name: template
+  fullName: template
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El contenido de la plantilla. Use este elemento cuando desee pasar la sintaxis de la plantilla directamente en la solicitud en lugar de vínculo a una plantilla existente. Puede ser un JObject o una cadena JSON con formato correcto. Utilice la propiedad templateLink o la propiedad template, pero no ambos.
+  optional: true
+  syntax:
+    content: 'template?: any'
+    return:
+      type:
+      - any
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.templateLink
+  name: templateLink
+  fullName: templateLink
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El URI de la plantilla. Utilice la propiedad templateLink o la propiedad template, pero no ambos.
+  optional: true
+  syntax:
+    content: 'templateLink?: TemplateLink'
+    return:
+      type:
+      - azure-arm-resource.TemplateLink
+  package: azure-arm-resource
+references:
+- uid: azure-arm-resource.DebugSetting
+  name: DebugSetting
+  spec.typeScript:
+  - name: DebugSetting
+    fullName: DebugSetting
+    uid: azure-arm-resource.DebugSetting
+- uid: azure-arm-resource.OnErrorDeployment
+  name: OnErrorDeployment
+  spec.typeScript:
+  - name: OnErrorDeployment
+    fullName: OnErrorDeployment
+    uid: azure-arm-resource.OnErrorDeployment
+- uid: azure-arm-resource.ParametersLink
+  name: ParametersLink
+  spec.typeScript:
+  - name: ParametersLink
+    fullName: ParametersLink
+    uid: azure-arm-resource.ParametersLink
+- uid: azure-arm-resource.TemplateLink
+  name: TemplateLink
+  spec.typeScript:
+  - name: TemplateLink
+    fullName: TemplateLink
+    uid: azure-arm-resource.TemplateLink
