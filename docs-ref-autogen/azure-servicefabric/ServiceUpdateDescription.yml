@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 341e3b0b6b4e5d0988dcc034d0604aff3d6b02ef
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52061230"
+items:
+- uid: azure-servicefabric.ServiceUpdateDescription
+  name: ServiceUpdateDescription
+  fullName: ServiceUpdateDescription
+  children:
+  - azure-servicefabric.ServiceUpdateDescription.correlationScheme
+  - azure-servicefabric.ServiceUpdateDescription.defaultMoveCost
+  - azure-servicefabric.ServiceUpdateDescription.flags
+  - azure-servicefabric.ServiceUpdateDescription.loadMetrics
+  - azure-servicefabric.ServiceUpdateDescription.placementConstraints
+  - azure-servicefabric.ServiceUpdateDescription.scalingPolicies
+  - azure-servicefabric.ServiceUpdateDescription.serviceKind
+  - azure-servicefabric.ServiceUpdateDescription.servicePlacementPolicies
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="87949-101">Un ServiceUpdateDescription contiene toda la información necesaria para actualizar un servicio.</span><span class="sxs-lookup"><span data-stu-id="87949-101">A ServiceUpdateDescription contains all of the information necessary to update a service.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.correlationScheme
+  name: correlationScheme
+  fullName: correlationScheme
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="87949-102">El esquema de la correlación.</span><span class="sxs-lookup"><span data-stu-id="87949-102">The correlation scheme.</span></span>
+  optional: true
+  syntax:
+    content: 'correlationScheme?: ServiceCorrelationDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceCorrelationDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.defaultMoveCost
+  name: defaultMoveCost
+  fullName: defaultMoveCost
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"87949-103\">El costo de movimiento para el servicio.</span><span class=\"sxs-lookup\"><span data-stu-id=\"87949-103\">The move cost for the service.</span></span> <span data-ttu-id=\"87949-104\">Los valores posibles son: \"Zero\", \"Low\", \"Medium\", \"High\"</span><span class=\"sxs-lookup\"><span data-stu-id=\"87949-104\">Possible values include: 'Zero', 'Low', 'Medium', 'High'</span></span>"
+  optional: true
+  syntax:
+    content: 'defaultMoveCost?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="87949-105">Marcas que indican si se establecen otras propiedades.</span><span class="sxs-lookup"><span data-stu-id="87949-105">Flags indicating whether other properties are set.</span></span> <span data-ttu-id="87949-106">Cada una de las propiedades asociadas corresponde a una marca, que se especifica a continuación, lo que, si establece, indica que se ha especificado la propiedad.</span><span class="sxs-lookup"><span data-stu-id="87949-106">Each of the associated properties corresponds to a flag, specified below, which, if set, indicate that the property is specified.</span></span>
+
+    <span data-ttu-id="87949-107">Esta propiedad puede ser una combinación de estas marcas obtenidos mediante el operador de bit a bit 'OR'.</span><span class="sxs-lookup"><span data-stu-id="87949-107">This property can be a combination of those flags obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="87949-108">Por ejemplo, si el valor proporcionado es 6, a continuación, se establecen las marcas de ReplicaRestartWaitDuration (2) y QuorumLossWaitDuration (4).</span><span class="sxs-lookup"><span data-stu-id="87949-108">For example, if the provided value is 6 then the flags for ReplicaRestartWaitDuration (2) and QuorumLossWaitDuration (4) are set.</span></span>
+
+    - <span data-ttu-id="87949-109">None: no indica las demás propiedades se establecen.</span><span class="sxs-lookup"><span data-stu-id="87949-109">None - Does not indicate any other properties are set.</span></span> <span data-ttu-id="87949-110">El valor predeterminado es cero.</span><span class="sxs-lookup"><span data-stu-id="87949-110">The value is zero.</span></span>
+
+    - <span data-ttu-id="87949-111">Valor de TargetReplicaSetSize/InstanceCount - indica si se establece la propiedad de valor de TargetReplicaSetSize (para los servicios con estado) o la propiedad InstanceCount (para servicios sin estado).</span><span class="sxs-lookup"><span data-stu-id="87949-111">TargetReplicaSetSize/InstanceCount - Indicates whether the TargetReplicaSetSize property (for Stateful services) or the InstanceCount property (for Stateless services) is set.</span></span> <span data-ttu-id="87949-112">El valor es 1.</span><span class="sxs-lookup"><span data-stu-id="87949-112">The value is 1.</span></span>
+
+    - <span data-ttu-id="87949-113">ReplicaRestartWaitDuration - indica ReplicaRestartWaitDuration propiedad está establecida.</span><span class="sxs-lookup"><span data-stu-id="87949-113">ReplicaRestartWaitDuration - Indicates the ReplicaRestartWaitDuration property is set.</span></span> <span data-ttu-id="87949-114">El valor es 2.</span><span class="sxs-lookup"><span data-stu-id="87949-114">The value is  2.</span></span>
+
+    - <span data-ttu-id="87949-115">QuorumLossWaitDuration - indica QuorumLossWaitDuration propiedad está establecida.</span><span class="sxs-lookup"><span data-stu-id="87949-115">QuorumLossWaitDuration - Indicates the QuorumLossWaitDuration property is set.</span></span> <span data-ttu-id="87949-116">El valor es</span><span class="sxs-lookup"><span data-stu-id="87949-116">The value is</span></span>
+
+    4.
+
+    - <span data-ttu-id="87949-117">StandByReplicaKeepDuration - indica StandByReplicaKeepDuration propiedad está establecida.</span><span class="sxs-lookup"><span data-stu-id="87949-117">StandByReplicaKeepDuration - Indicates the StandByReplicaKeepDuration property is set.</span></span> <span data-ttu-id="87949-118">El valor es 8.</span><span class="sxs-lookup"><span data-stu-id="87949-118">The value is 8.</span></span>
+
+    - <span data-ttu-id="87949-119">MinReplicaSetSize - indica MinReplicaSetSize propiedad está establecida.</span><span class="sxs-lookup"><span data-stu-id="87949-119">MinReplicaSetSize - Indicates the MinReplicaSetSize property is set.</span></span> <span data-ttu-id="87949-120">El valor es 16.</span><span class="sxs-lookup"><span data-stu-id="87949-120">The value is 16.</span></span>
+
+    - <span data-ttu-id="87949-121">PlacementConstraints - indica PlacementConstraints propiedad está establecida.</span><span class="sxs-lookup"><span data-stu-id="87949-121">PlacementConstraints - Indicates the PlacementConstraints property is set.</span></span> <span data-ttu-id="87949-122">El valor es 32.</span><span class="sxs-lookup"><span data-stu-id="87949-122">The value is 32.</span></span>
+
+    - <span data-ttu-id="87949-123">PlacementPolicyList - indica el ServicePlacementPolicies se establece la propiedad.</span><span class="sxs-lookup"><span data-stu-id="87949-123">PlacementPolicyList - Indicates the ServicePlacementPolicies property is set.</span></span> <span data-ttu-id="87949-124">El valor es</span><span class="sxs-lookup"><span data-stu-id="87949-124">The value is</span></span>
+
+    64.
+
+    - <span data-ttu-id="87949-125">Correlación - indica el CorrelationScheme se establece la propiedad.</span><span class="sxs-lookup"><span data-stu-id="87949-125">Correlation - Indicates the CorrelationScheme property is set.</span></span> <span data-ttu-id="87949-126">El valor es 128.</span><span class="sxs-lookup"><span data-stu-id="87949-126">The value is 128.</span></span>
+
+    - <span data-ttu-id="87949-127">Métricas: indica el ServiceLoadMetrics se establece la propiedad.</span><span class="sxs-lookup"><span data-stu-id="87949-127">Metrics - Indicates the ServiceLoadMetrics property is set.</span></span> <span data-ttu-id="87949-128">El valor es 256.</span><span class="sxs-lookup"><span data-stu-id="87949-128">The value is 256.</span></span>
+
+    - <span data-ttu-id="87949-129">DefaultMoveCost - indica el DefaultMoveCost se establece la propiedad.</span><span class="sxs-lookup"><span data-stu-id="87949-129">DefaultMoveCost - Indicates the DefaultMoveCost property is set.</span></span> <span data-ttu-id="87949-130">El valor es 512.</span><span class="sxs-lookup"><span data-stu-id="87949-130">The value is 512.</span></span>
+
+    - <span data-ttu-id="87949-131">ScalingPolicy - indica el ScalingPolicies se establece la propiedad.</span><span class="sxs-lookup"><span data-stu-id="87949-131">ScalingPolicy - Indicates the ScalingPolicies property is set.</span></span> <span data-ttu-id="87949-132">El valor es 1024.</span><span class="sxs-lookup"><span data-stu-id="87949-132">The value is 1024.</span></span>
+  optional: true
+  syntax:
+    content: 'flags?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.loadMetrics
+  name: loadMetrics
+  fullName: loadMetrics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="87949-133">Las métricas de carga del servicio.</span><span class="sxs-lookup"><span data-stu-id="87949-133">The service load metrics.</span></span>
+  optional: true
+  syntax:
+    content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceLoadMetricDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.placementConstraints
+  name: placementConstraints
+  fullName: placementConstraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="87949-134">Las restricciones de colocación como una cadena.</span><span class="sxs-lookup"><span data-stu-id="87949-134">The placement constraints as a string.</span></span> <span data-ttu-id="87949-135">Las restricciones de colocación son expresiones booleanas en las propiedades del nodo y permiten restringir un servicio en nodos concretos según los requisitos de servicio.</span><span class="sxs-lookup"><span data-stu-id="87949-135">Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements.</span></span> <span data-ttu-id="87949-136">Por ejemplo, para colocar un servicio en los nodos que NodeType está en azul especifique lo siguiente: "NodeColor == Blue)".</span><span class="sxs-lookup"><span data-stu-id="87949-136">For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".</span></span>'
+  optional: true
+  syntax:
+    content: 'placementConstraints?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.scalingPolicies
+  name: scalingPolicies
+  fullName: scalingPolicies
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="87949-137">Directivas de escalado para este servicio.</span><span class="sxs-lookup"><span data-stu-id="87949-137">Scaling policies for this service.</span></span>
+  optional: true
+  syntax:
+    content: 'scalingPolicies?: ScalingPolicyDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ScalingPolicyDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.serviceKind
+  name: serviceKind
+  fullName: serviceKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="87949-138">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="87949-138">Polymorphic Discriminator</span></span>
+  syntax:
+    content: 'serviceKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.servicePlacementPolicies
+  name: servicePlacementPolicies
+  fullName: servicePlacementPolicies
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="87949-139">Las directivas de colocación de servicio.</span><span class="sxs-lookup"><span data-stu-id="87949-139">The service placement policies.</span></span>
+  optional: true
+  syntax:
+    content: 'servicePlacementPolicies?: ServicePlacementPolicyDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ServicePlacementPolicyDescription[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServiceCorrelationDescription[]
+  name: ServiceCorrelationDescription[]
+  spec.typeScript:
+  - name: ServiceCorrelationDescription
+    fullName: ServiceCorrelationDescription
+    uid: azure-servicefabric.ServiceCorrelationDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServiceLoadMetricDescription[]
+  name: ServiceLoadMetricDescription[]
+  spec.typeScript:
+  - name: ServiceLoadMetricDescription
+    fullName: ServiceLoadMetricDescription
+    uid: azure-servicefabric.ServiceLoadMetricDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ScalingPolicyDescription[]
+  name: ScalingPolicyDescription[]
+  spec.typeScript:
+  - name: ScalingPolicyDescription
+    fullName: ScalingPolicyDescription
+    uid: azure-servicefabric.ScalingPolicyDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServicePlacementPolicyDescription[]
+  name: ServicePlacementPolicyDescription[]
+  spec.typeScript:
+  - name: ServicePlacementPolicyDescription
+    fullName: ServicePlacementPolicyDescription
+    uid: azure-servicefabric.ServicePlacementPolicyDescription
+  - name: '[]'
+    fullName: '[]'
