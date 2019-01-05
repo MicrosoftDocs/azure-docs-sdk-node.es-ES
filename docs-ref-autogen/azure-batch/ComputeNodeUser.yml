@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: fb638f8e02e009da37aa5db50b0993a75c5c36e2
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53677981"
+items:
+- uid: azure-batch.ComputeNodeUser
+  name: ComputeNodeUser
+  fullName: ComputeNodeUser
+  children:
+  - azure-batch.ComputeNodeUser.expiryTime
+  - azure-batch.ComputeNodeUser.isAdmin
+  - azure-batch.ComputeNodeUser.name
+  - azure-batch.ComputeNodeUser.password
+  - azure-batch.ComputeNodeUser.sshPublicKey
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.expiryTime
+  name: expiryTime
+  fullName: expiryTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7d2f2-101">Si se omite, el valor predeterminado es 1 día de la hora actual.</span><span class="sxs-lookup"><span data-stu-id="7d2f2-101">If omitted, the default is 1 day from the current time.</span></span> <span data-ttu-id="7d2f2-102">Para nodos de proceso de Linux, el expiryTime tiene una precisión de hasta un día.</span><span class="sxs-lookup"><span data-stu-id="7d2f2-102">For Linux compute nodes, the expiryTime has a precision up to a day.</span></span>
+  optional: true
+  syntax:
+    content: 'expiryTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.isAdmin
+  name: isAdmin
+  fullName: isAdmin
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7d2f2-103">El valor predeterminado es false.</span><span class="sxs-lookup"><span data-stu-id="7d2f2-103">The default value is false.</span></span>
+  optional: true
+  syntax:
+    content: 'isAdmin?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.password
+  name: password
+  fullName: password
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7d2f2-104">La contraseña es necesaria para los nodos de Windows (aquellos creados con 'cloudServiceConfiguration', o con 'virtualMachineConfiguration' mediante una referencia de imagen de Windows).</span><span class="sxs-lookup"><span data-stu-id="7d2f2-104">The password is required for Windows nodes (those created with 'cloudServiceConfiguration', or created with 'virtualMachineConfiguration' using a Windows image reference).</span></span> <span data-ttu-id="7d2f2-105">Para nodos de proceso de Linux, opcionalmente se puede especificar la contraseña junto con la propiedad sshPublicKey.</span><span class="sxs-lookup"><span data-stu-id="7d2f2-105">For Linux compute nodes, the password can optionally be specified along with the sshPublicKey property.</span></span>
+  optional: true
+  syntax:
+    content: 'password?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.ComputeNodeUser.sshPublicKey
+  name: sshPublicKey
+  fullName: sshPublicKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7d2f2-106">La clave pública debe ser compatible con la codificación de OpenSSH y debería estar codificada en base 64.</span><span class="sxs-lookup"><span data-stu-id="7d2f2-106">The public key should be compatible with OpenSSH encoding and should be base 64 encoded.</span></span> <span data-ttu-id="7d2f2-107">Esta propiedad se puede especificar solo para los nodos de Linux.</span><span class="sxs-lookup"><span data-stu-id="7d2f2-107">This property can be specified only for Linux nodes.</span></span> <span data-ttu-id="7d2f2-108">Si se especifica para un nodo de Windows, el servicio Batch rechaza la solicitud; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="7d2f2-108">If this is specified for a Windows node, then the Batch service rejects the request; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>
+  optional: true
+  syntax:
+    content: 'sshPublicKey?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
