@@ -1,0 +1,168 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d40d05884ed7fd066e3ac1c88e2393db5b8dea34
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52063810"
+items:
+- uid: azure-servicefabric.ApplicationHealthStateFilter
+  name: ApplicationHealthStateFilter
+  fullName: ApplicationHealthStateFilter
+  children:
+  - azure-servicefabric.ApplicationHealthStateFilter.applicationNameFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters
+  - azure-servicefabric.ApplicationHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.serviceFilters
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Define los criterios de coincidencia para determinar si una aplicación debe incluirse en los fragmentos de mantenimiento del clúster.
+
+    Un filtro puede hacer coincidir cero, una o varias aplicaciones, dependiendo de sus propiedades.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.applicationNameFilter
+  name: applicationNameFilter
+  fullName: applicationNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    El nombre de la aplicación que coincide con el filtro, como un uri de fabric. El filtro se aplica solo a la aplicación especificada, si existe.
+
+    Si la aplicación no existe, no se devuelve ninguna aplicación en los fragmentos de mantenimiento del clúster según este filtro.
+
+    Si la aplicación existe, se incluye en los fragmentos de mantenimiento del clúster Si respeta las propiedades del filtro.
+
+    Si no se especifica, todas las aplicaciones se comparan con los demás miembros de filtro, como filtro de estado de mantenimiento.
+  optional: true
+  syntax:
+    content: 'applicationNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter
+  name: applicationTypeNameFilter
+  fullName: applicationTypeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    El nombre del tipo de aplicación que coincida con el filtro.
+
+    Si se especifica, el filtro se aplica solo a las aplicaciones del tipo de aplicación seleccionado, si existe.
+
+    Si no existe ninguna aplicación del tipo de aplicación especificado, no se devuelve ninguna aplicación en los fragmentos de mantenimiento del clúster según este filtro.
+
+    Cada aplicación del tipo de aplicación especificado se incluye en los fragmentos de mantenimiento del clúster Si respeta las propiedades del filtro.
+
+    Si no se especifica, todas las aplicaciones se comparan con los demás miembros de filtro, como filtro de estado de mantenimiento.
+  optional: true
+  syntax:
+    content: 'applicationTypeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters
+  name: deployedApplicationFilters
+  fullName: deployedApplicationFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Define una lista de filtros que especifican qué aplicaciones implementadas que se incluirán en el estado del clúster devuelto fragmento como elementos secundarios de la aplicación. Las aplicaciones implementadas se devuelven solo si la aplicación primaria coincide con un filtro.
+
+    Si la lista está vacía, no se devuelven aplicaciones implementadas. Todas las aplicaciones implementadas se utilizan para evaluar el estado de mantenimiento de aplicaciones agregan primario, independientemente de los filtros de entrada.
+
+    El filtro de aplicación puede especificar varios filtros de aplicación implementada.
+
+    Por ejemplo, pueden especificar un filtro para devolver todas las aplicaciones implementadas con el estado de Error y otro para incluir siempre una aplicación implementada en un nodo específico.
+  optional: true
+  syntax:
+    content: 'deployedApplicationFilters?: DeployedApplicationHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.DeployedApplicationHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    El filtro para el estado de mantenimiento de las aplicaciones. Permite seleccionar las aplicaciones si coinciden con los Estados de mantenimiento deseada.
+
+    Los valores posibles son el valor entero de uno de los siguientes estados de mantenimiento. Solo se devuelven las aplicaciones que coinciden con el filtro. Todas las aplicaciones se utilizan para evaluar el estado de mantenimiento agregado del clúster.
+
+    Si no se especifica, valor predeterminado es None, a menos que se especifique el nombre de la aplicación o el nombre del tipo de aplicación. Si el filtro tiene valor predeterminado y se especifica el nombre de la aplicación, se devuelve la aplicación correspondiente.
+
+    Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.
+
+    Por ejemplo, si el valor proporcionado es 6, detecta las aplicaciones con el valor HealthState de OK (2) y Warning (4).
+
+    - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+
+    - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+
+    - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+
+    - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+
+    - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+
+    - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.serviceFilters
+  name: serviceFilters
+  fullName: serviceFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Define una lista de filtros que especifican qué servicios se deben incluirse en el estado del clúster devuelto fragmento como elementos secundarios de la aplicación. Los servicios se devuelven solo si la aplicación primaria coincide con un filtro.
+
+    Si la lista está vacía, no se devuelve ningún servicio. Todos los servicios se utilizan para evaluar el estado de mantenimiento de aplicaciones agregan primario, independientemente de los filtros de entrada.
+
+    El filtro de aplicación puede especificar varios filtros del servicio.
+
+    Por ejemplo, pueden especificar un filtro para devolver todos los servicios con el estado de Error y otro para incluir siempre un servicio identificado por su nombre de servicio.
+  optional: true
+  syntax:
+    content: 'serviceFilters?: ServiceHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceHealthStateFilter[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter[]
+  name: DeployedApplicationHealthStateFilter[]
+  spec.typeScript:
+  - name: DeployedApplicationHealthStateFilter
+    fullName: DeployedApplicationHealthStateFilter
+    uid: azure-servicefabric.DeployedApplicationHealthStateFilter
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServiceHealthStateFilter[]
+  name: ServiceHealthStateFilter[]
+  spec.typeScript:
+  - name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    uid: azure-servicefabric.ServiceHealthStateFilter
+  - name: '[]'
+    fullName: '[]'

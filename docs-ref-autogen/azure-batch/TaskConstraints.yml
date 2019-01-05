@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c26c261c0741ba13751d313ac28767855f0d2eef
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53670528"
+items:
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  fullName: TaskConstraints
+  children:
+  - azure-batch.TaskConstraints.maxTaskRetryCount
+  - azure-batch.TaskConstraints.maxWallClockTime
+  - azure-batch.TaskConstraints.retentionTime
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.TaskConstraints.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Tenga en cuenta que este valor controla específicamente el número de reintentos para la tarea ejecutable debido a un código de salida distinto de cero. El servicio de Batch intentará una vez la tarea y podría reintentarla hasta alcanzar este límite. Por ejemplo, si el número máximo de reintentos es 3, Batch intenta la tarea hasta 4 veces (un intento inicial y 3 reintentos). Si el número máximo de reintentos es 0, el servicio Batch no reintenta la tarea después del primer intento. Si el máximo número de reintentos es -1, los reintentos de servicio de lote de la tarea sin límites.
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.TaskConstraints.maxWallClockTime
+  name: maxWallClockTime
+  fullName: maxWallClockTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si no se especifica, no hay ningún límite de tiempo en cuánto tiempo puede ejecutar la tarea.
+  optional: true
+  syntax:
+    content: 'maxWallClockTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.TaskConstraints.retentionTime
+  name: retentionTime
+  fullName: retentionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El valor predeterminado es 7 días, es decir, el directorio de la tarea se conservarán durante 7 días a menos que se quita el nodo de proceso o se elimina el trabajo.
+  optional: true
+  syntax:
+    content: 'retentionTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
