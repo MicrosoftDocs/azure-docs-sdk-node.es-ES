@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 777051058935475aebf2055932882ec0cd21fea9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52135180"
+items:
+- uid: azure-servicefabric.TestErrorChaosEvent
+  name: TestErrorChaosEvent
+  fullName: TestErrorChaosEvent
+  children:
+  - azure-servicefabric.TestErrorChaosEvent.reason
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Describe un evento de caos que se genera cuando se produce un evento inesperado en el motor de Chaos.
+
+    Por ejemplo, debido a la instantánea de clúster que se va a incoherente, mientras que se produzca un error de una entidad, Chaos encontró que la entidad se ha habido un error, lo que sería un evento inesperado.
+  extends:
+    name: azure-servicefabric.ChaosEvent
+  package: azure-servicefabric
+- uid: azure-servicefabric.TestErrorChaosEvent.reason
+  name: reason
+  fullName: reason
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Describe por qué se ha generado TestErrorChaosEvent. Por ejemplo, Chaos trata de una partición de error, pero encuentra que la partición ya no es tolerante a errores, a continuación, se genera un TestErrorEvent con el motivo que indique que la partición no es tolerante a errores.
+  optional: true
+  syntax:
+    content: 'reason?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ChaosEvent
+  name: ChaosEvent
+  spec.typeScript:
+  - name: ChaosEvent
+    fullName: ChaosEvent
+    uid: azure-servicefabric.ChaosEvent
