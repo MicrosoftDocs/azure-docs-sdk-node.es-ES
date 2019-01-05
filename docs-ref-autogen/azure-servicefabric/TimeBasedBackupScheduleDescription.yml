@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e9f0e155b5058c68b44227cef47a4e2ebc7b4775
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52125280"
+items:
+- uid: azure-servicefabric.TimeBasedBackupScheduleDescription
+  name: TimeBasedBackupScheduleDescription
+  fullName: TimeBasedBackupScheduleDescription
+  children:
+  - azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+  - azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+  - azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+  langs:
+  - typeScript
+  type: interface
+  summary: Describe la programación de copia de seguridad basado en el tiempo.
+  extends:
+    name: azure-servicefabric.BackupScheduleDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+  name: runDays
+  fullName: runDays
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lista de días de la semana en las que se debe desencadenar la copia de seguridad periódica. Esto es válido solo cuando el tipo de frecuencia de programación de copia de seguridad es semanal.
+  optional: true
+  syntax:
+    content: 'runDays?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+  name: runTimes
+  fullName: runTimes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Representa la lista de tiempo exacto durante el día en el formato ISO8601. Al igual que ' 19: 00:00' representa '7 PM' durante el día. Se omitirá la fecha especificada junto con el tiempo."
+  syntax:
+    content: 'runTimes: Date[]'
+    return:
+      type:
+      - Date[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+  name: scheduleFrequencyType
+  fullName: scheduleFrequencyType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Describe la frecuencia con que se va a ejecutar la duración programar copia de seguridad. Los valores posibles son: 'Invalid', 'Diario', 'Semanal'"
+  syntax:
+    content: 'scheduleFrequencyType: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.BackupScheduleDescription
+  name: BackupScheduleDescription
+  spec.typeScript:
+  - name: BackupScheduleDescription
+    fullName: BackupScheduleDescription
+    uid: azure-servicefabric.BackupScheduleDescription

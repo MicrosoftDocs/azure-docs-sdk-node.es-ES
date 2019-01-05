@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b55c1abbd7c66ee7dfacaae97fe767a685f2678a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53661419"
+items:
+- uid: azure-arm-mediaservices.JobOutput
+  name: JobOutput
+  fullName: JobOutput
+  children:
+  - azure-arm-mediaservices.JobOutput.error
+  - azure-arm-mediaservices.JobOutput.label
+  - azure-arm-mediaservices.JobOutput.odatatype
+  - azure-arm-mediaservices.JobOutput.progress
+  - azure-arm-mediaservices.JobOutput.state
+  langs:
+  - typeScript
+  type: interface
+  summary: Describe todas las propiedades de un JobOutput.
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.error
+  name: error
+  fullName: error
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si el JobOutput está en el estado de Error, contiene los detalles del error.
+  optional: true
+  syntax:
+    content: 'error?: JobError'
+    return:
+      type:
+      - azure-arm-mediaservices.JobError
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.label
+  name: label
+  fullName: label
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Una etiqueta que se asigna a un JobOutput con el fin de ayudar a identificar de forma exclusiva. Esto es útil cuando la transformación tiene más de un TransformOutput, mediante el cual el trabajo tiene más de un JobOutput. En tales casos, al enviar el trabajo, agregará JobOutputs dos o más, en el mismo orden que TransformOutputs en la transformación. Posteriormente, cuando se recupera el trabajo, ya sea a través de eventos o en una solicitud GET, puede usar la etiqueta para identificar fácilmente el JobOutput. Si no se proporciona una etiqueta, un valor predeterminado de '{presetName} _ {outputIndex}' se usará, donde el nombre de valor predefinido es el nombre del valor preestablecido del TransformOutput correspondiente y el índice de la salida es el índice relativo de esta JobOutput dentro del trabajo. Tenga en cuenta que este índice es el mismo que el índice relativo de la correspondiente TransformOutput dentro de su transformación.
+  optional: true
+  syntax:
+    content: 'label?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.odatatype
+  name: odatatype
+  fullName: odatatype
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Discriminador polimórfico
+  syntax:
+    content: 'odatatype: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.progress
+  name: progress
+  fullName: progress
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si el JobOutput está en un estado de procesamiento, contiene el porcentaje de finalización del trabajo. El valor es una estimación y no pretende utilizarse para predecir los tiempos de finalización del trabajo. Para determinar si el JobOutput completada, use la propiedad State.
+  optional: true
+  syntax:
+    content: 'progress?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.JobOutput.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Describe el estado de la JobOutput. Los valores posibles son: 'Cancelar', 'Cancelar', 'Error', \"Finalizada\", \"Processing\", \"en cola', 'Scheduled'"
+  optional: true
+  syntax:
+    content: 'state?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.JobError
+  name: JobError
+  spec.typeScript:
+  - name: JobError
+    fullName: JobError
+    uid: azure-arm-mediaservices.JobError

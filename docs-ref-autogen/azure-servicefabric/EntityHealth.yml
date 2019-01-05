@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a30966c4a9d5bd74dfbbaf5c2b4d3e189b3b5d9e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52106373"
+items:
+- uid: azure-servicefabric.EntityHealth
+  name: EntityHealth
+  fullName: EntityHealth
+  children:
+  - azure-servicefabric.EntityHealth.aggregatedHealthState
+  - azure-servicefabric.EntityHealth.healthEvents
+  - azure-servicefabric.EntityHealth.healthStatistics
+  - azure-servicefabric.EntityHealth.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: Información de estado comunes a todas las entidades del clúster. Contiene el estado de mantenimiento agregado, los eventos de estado y evaluación de estado incorrecto.
+  package: azure-servicefabric
+- uid: azure-servicefabric.EntityHealth.aggregatedHealthState
+  name: aggregatedHealthState
+  fullName: aggregatedHealthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    El HealthState que representa el estado de mantenimiento agregado de la entidad que se calcula mediante el Administrador de estado.
+
+    La evaluación de mantenimiento de la entidad refleja todos los eventos notificados en la entidad y sus elementos secundarios (si existe).
+
+    La agregación se realiza aplicando la directiva de estado deseado. Los valores posibles son: 'Invalid', 'Aceptar', 'Advertencia', 'Error', 'Unknown'.
+  optional: true
+  syntax:
+    content: 'aggregatedHealthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.EntityHealth.healthEvents
+  name: healthEvents
+  fullName: healthEvents
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La lista de eventos de estado notificados en la entidad.
+  optional: true
+  syntax:
+    content: 'healthEvents?: HealthEvent[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvent[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.EntityHealth.healthStatistics
+  name: healthStatistics
+  fullName: healthStatistics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Muestra las estadísticas de estado para todos los tipos de elementos secundarios de la entidad consultada.
+  optional: true
+  syntax:
+    content: 'healthStatistics?: HealthStatistics'
+    return:
+      type:
+      - azure-servicefabric.HealthStatistics
+  package: azure-servicefabric
+- uid: azure-servicefabric.EntityHealth.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Las evaluaciones en mal estado que se muestran por qué el estado actual de mantenimiento agregado se devuelve por el Administrador de estado.
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvent[]
+  name: HealthEvent[]
+  spec.typeScript:
+  - name: HealthEvent
+    fullName: HealthEvent
+    uid: azure-servicefabric.HealthEvent
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.HealthStatistics
+  name: HealthStatistics
+  spec.typeScript:
+  - name: HealthStatistics
+    fullName: HealthStatistics
+    uid: azure-servicefabric.HealthStatistics
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'

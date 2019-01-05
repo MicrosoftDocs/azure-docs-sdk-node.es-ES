@@ -1,0 +1,179 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1c5d4291ffe02ac8f86bc6d6aca1109c397d9195
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48514793"
+items:
+- uid: '@azure/event-hubs.CbsClient'
+  name: CbsClient
+  fullName: CbsClient
+  children:
+  - '@azure/event-hubs.CbsClient.constructor'
+  - '@azure/event-hubs.CbsClient.cbsLock'
+  - '@azure/event-hubs.CbsClient.close'
+  - '@azure/event-hubs.CbsClient.connection'
+  - '@azure/event-hubs.CbsClient.connectionLock'
+  - '@azure/event-hubs.CbsClient.endpoint'
+  - '@azure/event-hubs.CbsClient.init'
+  - '@azure/event-hubs.CbsClient.negotiateClaim'
+  - '@azure/event-hubs.CbsClient.replyTo'
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.constructor'
+  name: CbsClient
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new CbsClient(connection: Connection, connectionLock: string)'
+    parameters:
+    - id: connection
+      type:
+      - '@azure/event-hubs.Connection'
+      description: La conexión de AMQP.
+    - id: connectionLock
+      type:
+      - string
+      description: >
+        Una cadena única (usualmente un guid) por conexión.
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.cbsLock'
+  name: cbsLock
+  fullName: cbsLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{cadena} cbsLock el nombre del bloqueo único por sesión $cbs por conexión que se usa para adquirir el bloqueo para establecer una sesión de cbs, si no existe para una conexión aqmp.'
+  syntax:
+    content: 'cbsLock: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.close'
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Cierra la sesión de cbs AMQP al centro de eventos y bus de servicio para este cliente, devolver una promesa que se resolverán cuando se complete la desconexión.
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.connection'
+  name: connection
+  fullName: connection
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Conexión de la {conexión de} conexión AMQP el.
+  syntax:
+    content: 'connection: Connection'
+    return:
+      type:
+      - '@azure/event-hubs.Connection'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.connectionLock'
+  name: connectionLock
+  fullName: connectionLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{cadena} connectionLock el nombre del bloqueo único por conexión que se usa para adquirir el bloqueo para establecer una conexión amqp si no existe.'
+  syntax:
+    content: 'connectionLock: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.endpoint'
+  name: endpoint
+  fullName: endpoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'extremo CBS de punto de conexión {string}: "$cbs"'
+  syntax:
+    content: 'endpoint: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.init'
+  name: init
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea una instancia singleton de la sesión CBS si aún no se ha inicializado anteriormente en la conexión especificada.
+  syntax:
+    content: function init()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.negotiateClaim'
+  name: negotiateClaim
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Negocia la notificación CBS con el servicio de bus de servicio/EventHub.
+  syntax:
+    content: 'function negotiateClaim(audience: string, tokenObject: TokenInfo)'
+    parameters:
+    - id: audience
+      type:
+      - string
+      description: La audiencia para el que se solicita el token.
+    - id: tokenObject
+      type:
+      - '@azure/event-hubs.TokenInfo'
+      description: El objeto de token que debe enviarse en la solicitud put-token.
+    return:
+      type:
+      - Promise<any>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.replyTo'
+  name: replyTo
+  fullName: replyTo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{cadena} replyTo CBS replyTo - el nombre del vínculo de receptor que el servicio debe responder a.'
+  syntax:
+    content: 'replyTo: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.Connection'
+  name: Connection
+  spec.typeScript:
+  - name: Connection
+    fullName: Connection
+    uid: '@azure/event-hubs.Connection'
+- uid: '@azure/event-hubs.TokenInfo'
+  name: TokenInfo
+  spec.typeScript:
+  - name: TokenInfo
+    fullName: TokenInfo
+    uid: '@azure/event-hubs.TokenInfo'

@@ -1,0 +1,206 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 779ee5e566ab6a1ff0f8ca534626ea75dc3211a9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52021769"
+items:
+- uid: ms-rest.WebResource
+  name: WebResource
+  fullName: WebResource
+  children:
+  - ms-rest.WebResource.body
+  - ms-rest.WebResource.formData
+  - ms-rest.WebResource.headers
+  - ms-rest.WebResource.method
+  - ms-rest.WebResource.pipeInput
+  - ms-rest.WebResource.prepare
+  - ms-rest.WebResource.query
+  - ms-rest.WebResource.rawResponse
+  - ms-rest.WebResource.url
+  - ms-rest.WebResource.validateRequestProperties
+  langs:
+  - typeScript
+  type: class
+  summary: Esta clase proporciona una abstracción sobre una llamada de REST al que se va a la biblioteca o independiente de la implementación y ajuste las propiedades necesarias para iniciar una solicitud.
+  package: ms-rest
+- uid: ms-rest.WebResource.body
+  name: body
+  fullName: body
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{cualquier} [body] El cuerpo de solicitud'
+  optional: true
+  syntax:
+    content: 'public body?: any'
+    return:
+      type:
+      - any
+  package: ms-rest
+- uid: ms-rest.WebResource.formData
+  name: formData
+  fullName: formData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{cualquier} [formData] Parámetros de formdata.'
+  optional: true
+  syntax:
+    content: 'public formData?: any'
+    return:
+      type:
+      - any
+  package: ms-rest
+- uid: ms-rest.WebResource.headers
+  name: headers
+  fullName: headers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Acceso a los encabezados de solicitud sin procesar para las solicitudes. Resulta útil cuando tiene que establecer un encabezado en cada solicitud (como en un objeto de credencial) donde el método de preparación no realiza mucho trabajo.
+  syntax:
+    content: 'public headers: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: ms-rest
+- uid: ms-rest.WebResource.method
+  name: method
+  fullName: method
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El método de solicitud (método) {string}
+  syntax:
+    content: 'public method: HttpMethods'
+    return:
+      type:
+      - ms-rest.HttpMethods
+  package: ms-rest
+- uid: ms-rest.WebResource.pipeInput
+  name: pipeInput(stream.Readable, stream.Writable)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Conecte el flujo de entrada determinado en un flujo de salida de destino si el método WebResource requiere un cuerpo de solicitud y un cuerpo ya no está establecido.
+  syntax:
+    content: 'function pipeInput(inputStream: stream.Readable, destStream: stream.Writable)'
+    parameters:
+    - id: inputStream
+      type:
+      - stream.Readable
+      description: la secuencia de canalización desde
+    - id: destStream
+      type:
+      - stream.Writable
+      description: ''
+    return:
+      type:
+      - stream.Writable
+  package: ms-rest
+- uid: ms-rest.WebResource.prepare
+  name: prepare(PathTemplateBasedRequestPrepareOptions | UrlBasedRequestPrepareOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Prepara la solicitud.
+  syntax:
+    content: 'function prepare(options?: PathTemplateBasedRequestPrepareOptions | UrlBasedRequestPrepareOptions)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest.PathTemplateBasedRequestPrepareOptions | ms-rest.UrlBasedRequestPrepareOptions
+      description: >
+        Las opciones de solicitud que deben usarse para enviar una solicitud correctamente
+      optional: true
+    return:
+      type:
+      - ms-rest.WebResource
+  package: ms-rest
+- uid: ms-rest.WebResource.query
+  name: query
+  fullName: query
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{cualquier} [consulta] Parámetros de consulta'
+  optional: true
+  syntax:
+    content: 'public query?: [key: string]: any'
+    return:
+      type:
+      - '[key: string]: any'
+  package: ms-rest
+- uid: ms-rest.WebResource.rawResponse
+  name: rawResponse
+  fullName: rawResponse
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{booleano} rawResponse indica si el cliente debe dar vuelta la respuesta como-es. (Útil para escenarios de transmisión).'
+  optional: true
+  syntax:
+    content: 'public rawResponse?: boolean'
+    return:
+      type:
+      - boolean
+  package: ms-rest
+- uid: ms-rest.WebResource.url
+  name: url
+  fullName: url
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: dirección url de {cadena} la solicitud de dirección url
+  syntax:
+    content: 'public url: string'
+    return:
+      type:
+      - string
+  package: ms-rest
+- uid: ms-rest.WebResource.validateRequestProperties
+  name: validateRequestProperties()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Valida que se definen las propiedades necesarias, como los encabezados de método, la dirección url, ["Content-Type"], ['accept-language'] encabezados. Si no se define una de las propiedades mencionadas producirá un error.
+  syntax:
+    content: function validateRequestProperties()
+    parameters: []
+  package: ms-rest
+references:
+- uid: ms-rest.HttpMethods
+  name: HttpMethods
+  spec.typeScript:
+  - name: HttpMethods
+    fullName: HttpMethods
+    uid: ms-rest.HttpMethods
+- uid: ms-rest.PathTemplateBasedRequestPrepareOptions | ms-rest.UrlBasedRequestPrepareOptions
+  name: UrlBasedRequestPrepareOptions
+  spec.typeScript:
+  - name: PathTemplateBasedRequestPrepareOptions
+    fullName: PathTemplateBasedRequestPrepareOptions
+    uid: ms-rest.PathTemplateBasedRequestPrepareOptions
+  - name: " | "
+    fullName: " | "
+  - name: UrlBasedRequestPrepareOptions
+    fullName: UrlBasedRequestPrepareOptions
+    uid: ms-rest.UrlBasedRequestPrepareOptions
+- uid: ms-rest.WebResource
+  name: WebResource
+  spec.typeScript:
+  - name: WebResource
+    fullName: WebResource
+    uid: ms-rest.WebResource

@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 212961c9b7831a4c38c55e53e6b86675552138a6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52096442"
+items:
+- uid: azure-servicefabric.PartitionHealthEvaluation
+  name: PartitionHealthEvaluation
+  fullName: PartitionHealthEvaluation
+  children:
+  - azure-servicefabric.PartitionHealthEvaluation.partitionId
+  - azure-servicefabric.PartitionHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: Representa la evaluación del estado de una partición, que contiene información sobre los datos y el algoritmo utilizado por el almacén de estado para evaluar el estado. La evaluación solo se devuelve cuando el estado de mantenimiento agregado es Error o advertencia.
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionHealthEvaluation.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Identificador de la partición cuya evaluación de mantenimiento es descrita por este objeto.
+  optional: true
+  syntax:
+    content: 'partitionId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lista de las evaluaciones en mal estado que ha provocado el actual estado de mantenimiento agregado de la partición. Los tipos de las evaluaciones en mal estado pueden ser ReplicasHealthEvaluation o EventHealthEvaluation.
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'

@@ -1,0 +1,288 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ed7f92526f273477e153fad3fe0ab03db0704f34
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52104230"
+items:
+- uid: '@azure/event-processor-host.LeaseManager'
+  name: LeaseManager
+  fullName: LeaseManager
+  children:
+  - '@azure/event-processor-host.LeaseManager.acquireLease'
+  - '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.deleteLease'
+  - '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  - '@azure/event-processor-host.LeaseManager.getAllLeases'
+  - '@azure/event-processor-host.LeaseManager.getLease'
+  - '@azure/event-processor-host.LeaseManager.leaseDuration'
+  - '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  - '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  - '@azure/event-processor-host.LeaseManager.releaseLease'
+  - '@azure/event-processor-host.LeaseManager.renewLease'
+  - '@azure/event-processor-host.LeaseManager.updateLease'
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.acquireLease'
+  name: acquireLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Adquirir la concesión de la partición que desee para este EventProcessorHost.
+
+    Tenga en cuenta que es legal para adquirir una concesión que ya pertenece a otro host.
+
+    Robo de concesión es cómo se redistribuyen particiones cuando se inician los hosts adicionales.
+
+
+    La implementación existente de Azure Storage puede experimentar las carreras entre dos instancias de host intenta adquirir o robar la concesión al mismo tiempo. Para evitar situaciones donde dos instancias de host tanto creen que poseen la concesión, adquisición puede producir un error sin errores devolviendo false y debe hacerlo si tiene alguna duda, la peor que puede ocurrir es ninguna instancia de host posee la concesión durante un breve período. Esto difiere cualitativamente, por ejemplo, el almacén subyacente de producir una excepción de acceso, que es un error.
+  syntax:
+    content: 'function acquireLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: Información de la partición que desee obtenida anteriormente de la concesión `getLease()`.
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  name: createAllLeasesIfNotExists(string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crear en el almacén de información de la concesión para la partición especificada, si no existe. No hacer nada si existe ya en el almacén.
+  syntax:
+    content: 'function createAllLeasesIfNotExists(partitionIds: string[])'
+    parameters:
+    - id: partitionIds
+      type:
+      - string[]
+      description: Id. de particiones que se va a crear la información de concesión para
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  name: createLeaseStoreIfNotExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crear el almacén de concesión si no existe. No hacer nada si existe.
+  syntax:
+    content: function createLeaseStoreIfNotExists()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLease'
+  name: deleteLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Eliminar la información de concesión de la partición especificada del almacén. Si no hay ninguna concesión almacenada para la partición especificada, que se trata como correcta.
+  syntax:
+    content: 'function deleteLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: Información de la partición que desee obtenida anteriormente de la concesión `getLease()`.
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  name: deleteLeaseStore()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Eliminar almacén de concesión.
+  syntax:
+    content: function deleteLeaseStore()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getAllLeases'
+  name: getAllLeases()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Devuelve BaseLease ligera para todas las concesiones, que incluye el nombre de propiedad de host y si concesión ha expirado. Una implementación es gratuita devolver CompleteLease o su propia clase derivada de CompleteLease, pero es importante que getAllLeases se ejecute tan rápido como sea posible. Si es más rápido obtener únicamente la información necesaria para un BaseLease, principalmente se recomienda hacerlo.
+  syntax:
+    content: function getAllLeases()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/event-processor-host.BaseLease[]>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getLease'
+  name: getLease(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Obtiene la información de concesión para la partición especificada. Puede devolver `undefined` si no se ha creado ninguna concesión en el almacén para la partición especificada.
+  syntax:
+    content: 'function getLease(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: Id. de partición para obtener la concesión para.
+    return:
+      type:
+      - Promise<@azure/event-processor-host.CompleteLease | undefined>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseDuration'
+  name: leaseDuration
+  fullName: leaseDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} leaseDuration duración de una concesión **en segundos** antes de que expire, a menos que se renueva.'
+  syntax:
+    content: 'leaseDuration: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  name: leaseRenewInterval
+  fullName: leaseRenewInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {number} leaseRenewInterval el intervalo de suspensión **en segundos** entre análisis.
+
+
+    Permite que una implementación de administrador de concesiones especificar con qué frecuencia debe buscar las concesiones y renovarlos PartitionManager. Para redistribuir las concesiones de manera oportuna después de un host deja de funcionar, se recomienda un intervalo relativamente corto, como los diez segundos. Obviamente, debe ser menor que la mitad de la duración de concesión, para evitar la expiración accidental.
+  syntax:
+    content: 'leaseRenewInterval: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  name: leaseStoreExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ¿Existe el almacén de concesión?
+  syntax:
+    content: function leaseStoreExists()
+    parameters: []
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.releaseLease'
+  name: releaseLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Abandonar una concesión mantenida actualmente por este host.
+
+    Si la concesión se ha robado, o ha expirado, liberarla es innecesario y se producirá un error si intenta realizar.
+  syntax:
+    content: 'function releaseLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: Información de la partición que desee obtenida anteriormente de la concesión `getLease()`.
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.renewLease'
+  name: renewLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Renovar una concesión mantenida actualmente por este host.
+
+    Si la concesión se ha tomado por otra instancia de host (robado o tras la expiración) o liberar de forma explícita, renewLease debe devolver false. Con la implementación basada en el almacenamiento de Azure, es posible renovar una concesión expirada que no ha tomado por otro host, por lo que la implementación que puede permitir o no, lo que sea conveniente. Si no es así, renewLease debería devolver false.
+  syntax:
+    content: 'function renewLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: concesión va a renovar.
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.updateLease'
+  name: updateLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Actualizar el almacén con la información de la concesión proporcionada.
+
+    Es necesario almacenar actualmente una concesión con el fin de actualizarlo. Si la concesión que se ha robado o caducadas o publicada, no puede actualizarse. Implementaciones del Administrador de concesiones deben renovar la concesión antes de realizar la actualización para evitar la expiración de concesión durante el proceso.
+  syntax:
+    content: 'function updateLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: Nueva información de concesión que se almacenará.
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+- uid: Promise<@azure/event-processor-host.BaseLease[]>
+  name: BaseLease[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: BaseLease
+    fullName: BaseLease
+    uid: '@azure/event-processor-host.BaseLease'
+  - name: '[]>'
+    fullName: '[]>'
+- uid: Promise<@azure/event-processor-host.CompleteLease | undefined>
+  name: CompleteLease | undefined>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+  - name: " | undefined>"
+    fullName: " | undefined>"

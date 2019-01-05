@@ -1,0 +1,290 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 57904c874fb45bb5bfb6f2b2c17c8aac38af3e3c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52067930"
+items:
+- uid: '@azure/event-hubs.EventPosition'
+  name: EventPosition
+  fullName: EventPosition
+  children:
+  - '@azure/event-hubs.EventPosition.customFilter'
+  - '@azure/event-hubs.EventPosition.endOfStream'
+  - '@azure/event-hubs.EventPosition.enqueuedTime'
+  - '@azure/event-hubs.EventPosition.constructor'
+  - '@azure/event-hubs.EventPosition.fromEnd'
+  - '@azure/event-hubs.EventPosition.fromEnqueuedTime'
+  - '@azure/event-hubs.EventPosition.fromOffset'
+  - '@azure/event-hubs.EventPosition.fromSequenceNumber'
+  - '@azure/event-hubs.EventPosition.fromStart'
+  - '@azure/event-hubs.EventPosition.getExpression'
+  - '@azure/event-hubs.EventPosition.isInclusive'
+  - '@azure/event-hubs.EventPosition.offset'
+  - '@azure/event-hubs.EventPosition.sequenceNumber'
+  - '@azure/event-hubs.EventPosition.startOfStream'
+  - '@azure/event-hubs.EventPosition.withCustomFilter'
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    Representa opciones se pueden establecer durante la creación de un receptor de concentrador de eventos.
+
+    Define una posición de un @link~ EventData en la partición del centro de eventos.
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.customFilter'
+  name: customFilter
+  fullName: customFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{cadena} [customFilter] La expresión de filtro personalizado que debe establecerse en el receptor.'
+  optional: true
+  syntax:
+    content: 'customFilter?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.endOfStream'
+  name: endOfStream
+  fullName: endOfStream
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'endOfStream {cadena} recibiría el desplazamiento de los eventos: `"@latest"`.'
+  syntax:
+    content: 'static endOfStream: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.enqueuedTime'
+  name: enqueuedTime
+  fullName: enqueuedTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Fecha | número} [enqueuedTime] El tiempo en cola del evento en la posición. Puede ser indefinido si la posición se acaba de crear en un número de secuencia o un desplazamiento.'
+  optional: true
+  syntax:
+    content: 'enqueuedTime?: Date | number'
+    return:
+      type:
+      - Date | number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.constructor'
+  name: EventPosition(EventPositionOptions)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new EventPosition(options?: EventPositionOptions)'
+    parameters:
+    - id: options
+      type:
+      - EventPositionOptions
+      description: ''
+      optional: true
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromEnd'
+  name: fromEnd()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Devuelve la posición para el final de una secuencia. Proporcione esta posición en la creación de receptores para empezar a recibir desde el siguiente evento disponible en la partición después de que se crea el receptor.
+  syntax:
+    content: static function fromEnd()
+    parameters: []
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromEnqueuedTime'
+  name: fromEnqueuedTime(Date | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea una posición en el momento determinado puestos en cola.
+  syntax:
+    content: 'static function fromEnqueuedTime(enqueuedTime: Date | number)'
+    parameters:
+    - id: enqueuedTime
+      type:
+      - Date | number
+      description: La hora de poner en cola. Este valor representa la hora real de poniendo en cola el mensaje.
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromOffset'
+  name: fromOffset(string, undefined | false | true)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea una posición en el desplazamiento dado.
+  syntax:
+    content: 'static function fromOffset(offset: string, isInclusive?: undefined | false | true)'
+    parameters:
+    - id: offset
+      type:
+      - string
+      description: >-
+        El desplazamiento de los datos relacionados con el flujo de partición de Event Hubs.
+
+        El desplazamiento es un marcador o identificador del flujo de Event Hubs.
+
+        El identificador es único dentro de una partición del flujo de Event Hubs.
+    - id: isInclusive
+      type:
+      - undefined | false | true
+      description: 'Si es true, el evento especificado está incluido; de lo contrario se devuelve el siguiente evento. Valor predeterminado: false.'
+      optional: true
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromSequenceNumber'
+  name: fromSequenceNumber(number, undefined | false | true)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea una posición en el número de secuencia especificado.
+  syntax:
+    content: 'static function fromSequenceNumber(sequenceNumber: number, isInclusive?: undefined | false | true)'
+    parameters:
+    - id: sequenceNumber
+      type:
+      - number
+      description: El número de secuencia lógica de los eventos dentro de la secuencia de la partición del centro de eventos.
+    - id: isInclusive
+      type:
+      - undefined | false | true
+      description: Si es true, el evento especificado está incluido; de lo contrario se devuelve el siguiente evento. Valor predeterminado es false.
+      optional: true
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.fromStart'
+  name: fromStart()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Devuelve la posición de inicio de una secuencia. Proporcione esta posición en la creación de receptores para empezar a recibir desde el primer evento disponible en la partición.
+  syntax:
+    content: static function fromStart()
+    parameters: []
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.getExpression'
+  name: getExpression()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Obtiene la expresión (cláusula de filtro) que debe establecerse en el origen.
+  syntax:
+    content: function getExpression()
+    parameters: []
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.isInclusive'
+  name: isInclusive
+  fullName: isInclusive
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{booleano} isInclusive indica si el evento actual en el desplazamiento especificado está incluido o no. Solo es aplicable si se establece el desplazamiento. Valor predeterminado: false.'
+  syntax:
+    content: 'isInclusive: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.offset'
+  name: offset
+  fullName: offset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{cadena} [desplazamiento] El desplazamiento del evento en la posición. Puede ser indefinido si la posición se acaba de crear en un número de secuencia o un tiempo en cola.'
+  optional: true
+  syntax:
+    content: 'offset?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.sequenceNumber'
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} [sequenceNumber] El número de secuencia del evento en la posición. Puede ser indefinido si la posición se acaba de crear en un tiempo en cola o un desplazamiento.'
+  optional: true
+  syntax:
+    content: 'sequenceNumber?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.startOfStream'
+  name: startOfStream
+  fullName: startOfStream
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'startOfStream {cadena} recibiría el desplazamiento de los eventos: `"-1"`.'
+  syntax:
+    content: 'static startOfStream: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventPosition.withCustomFilter'
+  name: withCustomFilter(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea una posición basada en el filtro personalizado especificado.
+  syntax:
+    content: 'static function withCustomFilter(customFilter: string)'
+    parameters:
+    - id: customFilter
+      type:
+      - string
+      description: >
+        La expresión de filtro personalizados que se debe aplicar en el receptor. Esto se debe usar cuando uno de los otros métodos `fromOffset()`, `fromSequenceNumber()`, `fromEnqueuedTime()` no es aplicable para su escenario.
+    return:
+      type:
+      - '@azure/event-hubs.EventPosition'
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.EventPosition'
+  name: EventPosition
+  spec.typeScript:
+  - name: EventPosition
+    fullName: EventPosition
+    uid: '@azure/event-hubs.EventPosition'
