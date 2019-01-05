@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f686ebb2462a7a83117ecf98fdb43af764ee6f8a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52041660"
+items:
+- uid: ms-rest-azure.loginWithVmMSI_2
+  name: loginWithVmMSI(MSIVmOptions)
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    Antes de usar este método, instale az cli desde https://github.com/Azure/azure-cli/releases.
+
+    Si tiene una máquina virtual de Azure aprovisionada con az cli y habilitó MSI, a continuación, puede usar este método para obtener tokens de autenticación de la máquina virtual.
+
+    Para crear una nueva máquina virtual, habilitar MSI, ejecute este comando: crear < nombre_grupo_recursos > -g - n < vm_name >--az vm assign-identity--imagen < os_image_name > Nota: el comando anterior permite que un punto de conexión de servicio en el host, con un puerto predeterminado 50342
+
+
+    Para habilitar MSI en una máquina virtual ya se aprovisionaron, ejecute el siguiente comando: az vm--assign-identity - g < nombre_grupo_recursos > -n < vm_name >: puerto < custom_port_number >
+
+
+    Para obtener más información sobre este comando, ejecute: az vm--assign-identity - h
+
+
+    Se autentica mediante el servicio de identidad que se ejecuta en una máquina virtual de Azure.
+
+    Este método realiza una solicitud al servicio de autenticación que se hospeda en la máquina virtual y recibe un token de acceso.
+  syntax:
+    content: 'function loginWithVmMSI(options?: MSIVmOptions)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest-azure.MSIVmOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<ms-rest-azure.MSIVmTokenCredentials>
+  package: ms-rest-azure
+references:
+- uid: ms-rest-azure.MSIVmOptions
+  name: MSIVmOptions
+  spec.typeScript:
+  - name: MSIVmOptions
+    fullName: MSIVmOptions
+    uid: ms-rest-azure.MSIVmOptions
+- uid: Promise<ms-rest-azure.MSIVmTokenCredentials>
+  name: MSIVmTokenCredentials>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: MSIVmTokenCredentials
+    fullName: MSIVmTokenCredentials
+    uid: ms-rest-azure.MSIVmTokenCredentials
+  - name: '>'
+    fullName: '>'
