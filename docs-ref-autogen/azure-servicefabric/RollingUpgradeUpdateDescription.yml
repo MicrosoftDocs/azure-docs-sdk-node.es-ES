@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bd5b9eaacd3e0fe8d39d35790a637a735d1c1cef
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52115890"
+items:
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription
+  name: RollingUpgradeUpdateDescription
+  fullName: RollingUpgradeUpdateDescription
+  children:
+  - azure-servicefabric.RollingUpgradeUpdateDescription.failureAction
+  - azure-servicefabric.RollingUpgradeUpdateDescription.forceRestart
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode
+  - azure-servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds
+  - azure-servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="41821-101">Describe los parámetros de actualización de una actualización gradual de la aplicación o el clúster.</span><span class="sxs-lookup"><span data-stu-id="41821-101">Describes the parameters for updating a rolling upgrade of application or cluster.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.failureAction
+  name: failureAction
+  fullName: failureAction
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="41821-102">La acción de compensación debe realizar cuando una actualización supervisada detecta infracciones de directivas de mantenimiento o supervisión.</span><span class="sxs-lookup"><span data-stu-id="41821-102">The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations.</span></span>
+
+    <span data-ttu-id="41821-103">Válido indica que la acción de error no es válida.</span><span class="sxs-lookup"><span data-stu-id="41821-103">Invalid indicates the failure action is invalid.</span></span> <span data-ttu-id="41821-104">Reversión especifica que la actualización comenzará revirtiendo automáticamente.</span><span class="sxs-lookup"><span data-stu-id="41821-104">Rollback specifies that the upgrade will start rolling back automatically.</span></span>
+
+    <span data-ttu-id="41821-105">Manual indica que la actualización cambiará al modo de actualización UnmonitoredManual.</span><span class="sxs-lookup"><span data-stu-id="41821-105">Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.</span></span> <span data-ttu-id="41821-106">Los valores posibles incluyen: 'Invalid', 'Rollback', 'Manual'</span><span class="sxs-lookup"><span data-stu-id="41821-106">Possible values include: 'Invalid', 'Rollback', 'Manual'</span></span>
+  optional: true
+  syntax:
+    content: 'failureAction?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="41821-107">Si es true, a continuación, se fuerza reiniciando los procesos durante la actualización incluso si no ha cambiado la versión del código (la configuración de actualización únicamente los cambios o los datos).</span><span class="sxs-lookup"><span data-stu-id="41821-107">If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).</span></span>
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds
+  name: healthCheckRetryTimeoutInMilliseconds
+  fullName: healthCheckRetryTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="41821-108">La cantidad de tiempo para volver a intentar la evaluación de mantenimiento cuando la aplicación o el clúster está en mal estado antes de que se ejecute FailureAction.</span><span class="sxs-lookup"><span data-stu-id="41821-108">The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed.</span></span> <span data-ttu-id="41821-109">En primer lugar se interpreta como una cadena que representa una duración ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="41821-109">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="41821-110">Si se produce un error, se interpreta como un número que representa el total de milisegundos.</span><span class="sxs-lookup"><span data-stu-id="41821-110">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckRetryTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds
+  name: healthCheckStableDurationInMilliseconds
+  fullName: healthCheckStableDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="41821-111">La cantidad de tiempo que la aplicación o el clúster deben tener un estado correcto antes de que la actualización continúe con el siguiente dominio de actualización.</span><span class="sxs-lookup"><span data-stu-id="41821-111">The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain.</span></span> <span data-ttu-id="41821-112">En primer lugar se interpreta como una cadena que representa una duración ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="41821-112">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="41821-113">Si se produce un error, se interpreta como un número que representa el total de milisegundos.</span><span class="sxs-lookup"><span data-stu-id="41821-113">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckStableDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds
+  name: healthCheckWaitDurationInMilliseconds
+  fullName: healthCheckWaitDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="41821-114">La cantidad de tiempo de espera después de completar un dominio de actualización antes de aplicar directivas de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="41821-114">The amount of time to wait after completing an upgrade domain before applying health policies.</span></span>
+
+    <span data-ttu-id="41821-115">En primer lugar se interpreta como una cadena que representa una duración ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="41821-115">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="41821-116">Si se produce un error, se interpreta como un número que representa el total de milisegundos.</span><span class="sxs-lookup"><span data-stu-id="41821-116">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckWaitDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds
+  name: replicaSetCheckTimeoutInMilliseconds
+  fullName: replicaSetCheckTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="41821-117">El período de tiempo máximo para bloquear el procesamiento de un dominio de actualización y evitar la pérdida de disponibilidad cuando hay problemas inesperados.</span><span class="sxs-lookup"><span data-stu-id="41821-117">The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues.</span></span> <span data-ttu-id="41821-118">Cuando este tiempo de espera expire, el procesamiento del dominio de actualización se llevará a cabo independientemente de los problemas de pérdida de disponibilidad.</span><span class="sxs-lookup"><span data-stu-id="41821-118">When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues.</span></span> <span data-ttu-id="41821-119">El tiempo de espera se restablece al principio de cada dominio de actualización.</span><span class="sxs-lookup"><span data-stu-id="41821-119">The timeout is reset at the start of each upgrade domain.</span></span> <span data-ttu-id="41821-120">Los valores válidos oscilan entre 0 y 42949672925, ambos inclusive.</span><span class="sxs-lookup"><span data-stu-id="41821-120">Valid values are between 0 and 42949672925 inclusive.</span></span>
+
+    <span data-ttu-id="41821-121">(entero de 32 bits sin signo).</span><span class="sxs-lookup"><span data-stu-id="41821-121">(unsigned 32-bit integer).</span></span>
+  optional: true
+  syntax:
+    content: 'replicaSetCheckTimeoutInMilliseconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"41821-122\">El modo usado para supervisar el mantenimiento durante una actualización gradual.</span><span class=\"sxs-lookup\"><span data-stu-id=\"41821-122\">The mode used to monitor health during a rolling upgrade.</span></span> <span data-ttu-id=\"41821-123\">Los valores son Monitored, UnmonitoredAuto y UnmonitoredManual.</span><span class=\"sxs-lookup\"><span data-stu-id=\"41821-123\">The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.</span></span> <span data-ttu-id=\"41821-124\">Los valores posibles incluyen: 'Invalid', 'UnmonitoredAuto', 'UnmonitoredManual', 'Supervisado'</span><span class=\"sxs-lookup\"><span data-stu-id=\"41821-124\">Possible values include: 'Invalid', 'UnmonitoredAuto', 'UnmonitoredManual', 'Monitored'</span></span>"
+  syntax:
+    content: 'rollingUpgradeMode: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds
+  name: upgradeDomainTimeoutInMilliseconds
+  fullName: upgradeDomainTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="41821-125">El período de tiempo del que dispone cada dominio de actualización para completarse antes de la ejecución de FailureAction.</span><span class="sxs-lookup"><span data-stu-id="41821-125">The amount of time each upgrade domain has to complete before FailureAction is executed.</span></span> <span data-ttu-id="41821-126">En primer lugar se interpreta como una cadena que representa una duración ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="41821-126">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="41821-127">Si se produce un error, se interpreta como un número que representa el total de milisegundos.</span><span class="sxs-lookup"><span data-stu-id="41821-127">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeDomainTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds
+  name: upgradeTimeoutInMilliseconds
+  fullName: upgradeTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="41821-128">El período de tiempo en el que se debe completar la actualización general antes de que se ejecute FailureAction.</span><span class="sxs-lookup"><span data-stu-id="41821-128">The amount of time the overall upgrade has to complete before FailureAction is executed.</span></span> <span data-ttu-id="41821-129">En primer lugar se interpreta como una cadena que representa una duración ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="41821-129">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="41821-130">Si se produce un error, se interpreta como un número que representa el total de milisegundos.</span><span class="sxs-lookup"><span data-stu-id="41821-130">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
