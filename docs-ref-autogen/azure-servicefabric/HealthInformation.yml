@@ -1,0 +1,173 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b0266aeafd1b03a205eb770e7f390592b64d13cf
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53660459"
+items:
+- uid: azure-servicefabric.HealthInformation
+  name: HealthInformation
+  fullName: HealthInformation
+  children:
+  - azure-servicefabric.HealthInformation.description
+  - azure-servicefabric.HealthInformation.healthState
+  - azure-servicefabric.HealthInformation.property
+  - azure-servicefabric.HealthInformation.removeWhenExpired
+  - azure-servicefabric.HealthInformation.sequenceNumber
+  - azure-servicefabric.HealthInformation.sourceId
+  - azure-servicefabric.HealthInformation.timeToLiveInMilliSeconds
+  langs:
+  - typeScript
+  type: interface
+  summary: Representa información de informe de mantenimiento común. Se incluye en todos los informes de estado enviados al almacén de estado y en todos los eventos de estado devueltos por las consultas de mantenimiento.
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.description
+  name: description
+  fullName: description
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    La descripción de la información de mantenimiento. Representa el texto libre utilizado para agregar información legible por el ser humano sobre el informe.
+
+    La longitud máxima de la cadena de la descripción es de 4096 caracteres.
+
+    Si la cadena proporcionada es más larga, se truncará automáticamente.
+
+    Cuando está truncado, los últimos caracteres de la descripción contienen un marcador "[Truncado]" y el tamaño total de la cadena es de 4096 caracteres.
+
+    La presencia del marcador indica a los usuarios que el truncamiento se ha producido.
+
+    Tenga en cuenta que, cuando se trunca, la descripción tiene menos de 4096 caracteres de la cadena original.
+  optional: true
+  syntax:
+    content: 'description?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "El estado de mantenimiento de una entidad de Service Fabric como clúster, nodo, aplicación, servicio, partición, réplica etcetera. Los valores posibles son: 'Invalid', 'Aceptar', 'Advertencia', 'Error', 'Unknown'."
+  syntax:
+    content: 'healthState: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.property
+  name: property
+  fullName: property
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    La propiedad de la información de mantenimiento. Una entidad puede tener informes de mantenimiento para diferentes propiedades.
+
+    La propiedad es una cadena y no una enumeración fija para permitir al informador la flexibilidad de categorizar la condición de estado que desencadena el informe.
+
+    Por ejemplo, un informador con SourceId "LocalWatchdog" puede supervisar el estado del disco disponible en un nodo, por lo que puede informar de la propiedad "AvailableDisk" en ese nodo.
+
+    El mismo informador puede supervisar la conectividad del nodo, por lo que puede informar de una propiedad "Connectivity" en el mismo nodo.
+
+    En el almacén de estado, estos informes se tratan como eventos de mantenimiento independientes del nodo especificado.
+
+    Junto con SourceId, la propiedad identifica la información de mantenimiento de manera única.
+  syntax:
+    content: 'property: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.removeWhenExpired
+  name: removeWhenExpired
+  fullName: removeWhenExpired
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Valor que indica si el informe se quita del almacén de estado cuando expire.
+
+    Si se establece en true, el informe se quita del almacén de estado una vez que expire.
+
+    Si se establece en false, el informe se trata como un error cuando expire. El valor de esta propiedad es false de forma predeterminada.
+
+    Cuando los clientes notifican periódicamente, deben establecer RemoveWhenExpired en false (valor predeterminado).
+
+    De este modo, si el Informador tiene problemas (por ejemplo, un interbloqueo) y no se puede informar, la entidad se evalúa con error cuando expira el informe de mantenimiento.
+
+    De este modo, se marca que la entidad está en estado de mantenimiento Error.
+  optional: true
+  syntax:
+    content: 'removeWhenExpired?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.sequenceNumber
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    El número de secuencia para este informe de estado como una cadena numérica.
+
+    El número de secuencia del informe se usa por el almacén de estado para detectar informes obsoletos.
+
+    Si no se especifica, se genera automáticamente un número de secuencia por el cliente de estado cuando se agrega un informe.
+  optional: true
+  syntax:
+    content: 'sequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.sourceId
+  name: sourceId
+  fullName: sourceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: El nombre de origen que identifica el componente de cliente/guardián/sistema que genera la información de estado.
+  syntax:
+    content: 'sourceId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.timeToLiveInMilliSeconds
+  name: timeToLiveInMilliSeconds
+  fullName: timeToLiveInMilliSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    La duración durante la cual este informe de mantenimiento es válido. Este campo usa el formato ISO8601 para especificar la duración.
+
+    Cuando los clientes notifican periódicamente, deben enviar informes con una frecuencia mayor que el período de vida.
+
+    Si los clientes notifican en transición, pueden establecer el período de vida en Infinito.
+
+    Cuando expira el período de vida, el evento de estado que contiene la información de estado se quita del almacén de estado, si RemoveWhenExpired es true, o se evalúa en el error, si RemoveWhenExpired es false.
+
+    Si no se especifica, el período de vida se establece de forma predeterminada en un valor infinito.
+  optional: true
+  syntax:
+    content: 'timeToLiveInMilliSeconds?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-servicefabric

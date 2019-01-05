@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 62fd16ee404efba59799d1de2f35e41f30d61e8d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126447"
+items:
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter
+  name: DeployedServicePackageHealthStateFilter
+  fullName: DeployedServicePackageHealthStateFilter
+  children:
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Define los criterios de coincidencia para determinar si se debe incluir como elemento secundario de una aplicación implementada en los fragmentos de mantenimiento del clúster en un paquete de servicio implementado.
+
+    Solo se devuelven los paquetes de servicio implementado si las entidades primarias coincide con un filtro especificado en la descripción de la consulta de la salud fragmento clúster. El elemento primario implementa la aplicación y su aplicación primaria debe incluirse en los fragmentos de mantenimiento del clúster.
+
+    Un filtro puede hacer coincidir cero, implementan uno o varios paquetes, dependiendo de sus propiedades de servicio.
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    El filtro para el estado de mantenimiento de los paquetes de servicio implementado. Permite seleccionar paquetes de servicio implementados si coinciden con los Estados de mantenimiento deseada.
+
+    Los valores posibles son el valor entero de uno de los siguientes estados de mantenimiento. Se devuelven únicamente los paquetes de servicio implementados que coinciden con el filtro. Todos los paquetes de servicio implementados se utilizan para evaluar el estado de mantenimiento de aplicaciones agregan implementado primario.
+
+    Si no se especifica, valor predeterminado es None, a menos que se especifica el identificador del paquete de servicio implementado.
+
+    Si el filtro tiene valor predeterminado y se especifica el Id. de paquete de servicio implementado, se devuelve el paquete de servicio implementado coincidente.
+
+    Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.
+
+    Por ejemplo, si el valor proporcionado es 6, detecta los paquetes de servicio implementado con el valor de HealthState de OK (2) y Warning (4).
+
+    - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+
+    - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+
+    - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+
+    - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+
+    - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+
+    - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  name: serviceManifestNameFilter
+  fullName: serviceManifestNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    El nombre del manifiesto de servicio que identifica los paquetes de servicio implementados que coincide con el filtro.
+
+    Si se especifica, el filtro se aplica solo a los paquetes de servicio implementado especificado, si existe.
+
+    Si no hay paquetes de servicio implementado con el nombre de manifiesto especificado existen, se devuelve nada en los fragmentos de mantenimiento del clúster según este filtro.
+
+    Si existe cualquier paquete de servicio implementado, se incluyen en los fragmentos de mantenimiento del clúster Si respeta las propiedades del filtro.
+
+    Si no se toma en consideración y se compara con los demás miembros de filtro, como filtro de estado de mantenimiento paquetes de servicio especificado, todos ellos implementados que coincidan con los filtros de elemento primario (si existe).
+  optional: true
+  syntax:
+    content: 'serviceManifestNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  name: servicePackageActivationIdFilter
+  fullName: servicePackageActivationIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    El identificador de activación de un paquete de servicio implementado que coincide con el filtro.
+
+    Si no se especifica, el filtro se aplica a todos los paquetes de servicio implementados que coinciden con los demás parámetros.
+
+    Si se especifica, el filtro coincide con el paquete de servicio implementado con el identificador de activación especificado.
+  optional: true
+  syntax:
+    content: 'servicePackageActivationIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
