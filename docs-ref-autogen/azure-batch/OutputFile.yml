@@ -1,0 +1,78 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 86f498fc9ddfd6d24d259dc7d6e9baa40c5017b5
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53667049"
+items:
+- uid: azure-batch.OutputFile
+  name: OutputFile
+  fullName: OutputFile
+  children:
+  - azure-batch.OutputFile.destination
+  - azure-batch.OutputFile.filePattern
+  - azure-batch.OutputFile.uploadOptions
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.OutputFile.destination
+  name: destination
+  fullName: destination
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'destination: OutputFileDestination'
+    return:
+      type:
+      - azure-batch.OutputFileDestination
+  package: azure-batch
+- uid: azure-batch.OutputFile.filePattern
+  name: filePattern
+  fullName: filePattern
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="85ccf-101">Se admiten las rutas de acceso relativas y absolutas.</span><span class="sxs-lookup"><span data-stu-id="85ccf-101">Both relative and absolute paths are supported.</span></span> <span data-ttu-id="85ccf-102">Son rutas de acceso relativas en relación con el directorio de trabajo de tarea.</span><span class="sxs-lookup"><span data-stu-id="85ccf-102">Relative paths are relative to the task working directory.</span></span> <span data-ttu-id="85ccf-103">¿Se admiten los siguientes caracteres comodín: \* coincide con 0 o más caracteres (para el patrón de ejemplo abc \* coincidiría con abc o abcdef), \*\* coincide con cualquier directorio,?</span><span class="sxs-lookup"><span data-stu-id="85ccf-103">The following wildcards are supported: \* matches 0 or more characters (for example pattern abc\* would match abc or abcdef), \*\* matches any directory, ?</span></span>
+
+    <span data-ttu-id="85ccf-104">coincide con un carácter en el intervalo de coincidencias de [a-c], [abc] coincide con un carácter en los corchetes y cualquier carácter individual.</span><span class="sxs-lookup"><span data-stu-id="85ccf-104">matches any single character, [abc] matches one character in the brackets, and [a-c] matches one character in the range.</span></span> <span data-ttu-id="85ccf-105">Corchetes pueden incluir una negación para que coincida con cualquier carácter no especificado (por ejemplo [! abc] coincide con cualquier carácter excepto a, b o c).</span><span class="sxs-lookup"><span data-stu-id="85ccf-105">Brackets can include a negation to match any character not specified (for example [!abc] matches any character but a, b, or c).</span></span> <span data-ttu-id="85ccf-106">Si un nombre de archivo comienza con "." se omite de forma predeterminada, pero puede tener coincidencias mediante la especificación de forma explícita (por ejemplo *.gif no coincidirán. a.gif, pero.*. de forma GIF).</span><span class="sxs-lookup"><span data-stu-id="85ccf-106">If a file name starts with "." it is ignored by default but may be matched by specifying it explicitly (for example *.gif will not match .a.gif, but .*.gif will).</span></span> <span data-ttu-id="85ccf-107">Un ejemplo sencillo: \**\*.txt coincide con cualquier archivo que no se inicia en '.' y termine con .txt en el directorio de trabajo de tarea o en cualquier subdirectorio. Si el nombre de archivo contiene un carácter comodín puede convertirse en escape con corchetes (por ejemplo, abc [*] coincidiría con un archivo denominado abc \*).</span><span class="sxs-lookup"><span data-stu-id="85ccf-107">A simple example: \**\*.txt matches any file that does not start in '.' and ends with .txt in the task working directory or any subdirectory. If the filename contains a wildcard character it can be escaped using brackets (for example abc[*] would match a file named abc\*).</span></span> <span data-ttu-id="85ccf-108">Tenga en cuenta que ambos \ y se tratan como separadores de directorio en Windows, pero solo o en Linux.</span><span class="sxs-lookup"><span data-stu-id="85ccf-108">Note that both \ and / are treated as directory separators on Windows, but only / is on Linux.</span></span> <span data-ttu-id="85ccf-109">Se expanden las variables de entorno (% var % en Windows) o $var en Linux antes el patrón que se va a aplicar.</span><span class="sxs-lookup"><span data-stu-id="85ccf-109">Environment variables (%var% on Windows or $var on Linux) are expanded prior to the pattern being applied.</span></span>
+  syntax:
+    content: 'filePattern: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.OutputFile.uploadOptions
+  name: uploadOptions
+  fullName: uploadOptions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'uploadOptions: OutputFileUploadOptions'
+    return:
+      type:
+      - azure-batch.OutputFileUploadOptions
+  package: azure-batch
+references:
+- uid: azure-batch.OutputFileDestination
+  name: OutputFileDestination
+  spec.typeScript:
+  - name: OutputFileDestination
+    fullName: OutputFileDestination
+    uid: azure-batch.OutputFileDestination
+- uid: azure-batch.OutputFileUploadOptions
+  name: OutputFileUploadOptions
+  spec.typeScript:
+  - name: OutputFileUploadOptions
+    fullName: OutputFileUploadOptions
+    uid: azure-batch.OutputFileUploadOptions
