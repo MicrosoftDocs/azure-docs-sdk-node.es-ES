@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1e94bebc6b45853631b634d459eb76d0d1c29c36
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55058366"
+items:
+- uid: azure-arm-storage.BlobServiceProperties
+  name: BlobServiceProperties
+  fullName: BlobServiceProperties
+  children:
+  - azure-arm-storage.BlobServiceProperties.cors
+  - azure-arm-storage.BlobServiceProperties.defaultServiceVersion
+  - azure-arm-storage.BlobServiceProperties.deleteRetentionPolicy
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="142d1-101">Las propiedades de Blob service de una cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="142d1-101">The properties of a storage account’s Blob service.</span></span>
+  extends:
+    name: azure-arm-storage.Resource
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobServiceProperties.cors
+  name: cors
+  fullName: cors
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="142d1-102">Especifica las reglas de CORS para Blob service.</span><span class="sxs-lookup"><span data-stu-id="142d1-102">Specifies CORS rules for the Blob service.</span></span> <span data-ttu-id="142d1-103">Puede incluir hasta cinco elementos CorsRule en la solicitud.</span><span class="sxs-lookup"><span data-stu-id="142d1-103">You can include up to five CorsRule elements in the request.</span></span> <span data-ttu-id="142d1-104">Si ningún elemento CorsRule se incluye en el cuerpo de solicitud, se eliminarán todas las reglas CORS y se deshabilitará CORS para Blob service.</span><span class="sxs-lookup"><span data-stu-id="142d1-104">If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.</span></span>
+  optional: true
+  syntax:
+    content: 'cors?: CorsRules'
+    return:
+      type:
+      - azure-arm-storage.CorsRules
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobServiceProperties.defaultServiceVersion
+  name: defaultServiceVersion
+  fullName: defaultServiceVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="142d1-105">DefaultServiceVersion indica la versión predeterminada que se usará para las solicitudes a Blob service si no se especifica la versión de una solicitud entrante.</span><span class="sxs-lookup"><span data-stu-id="142d1-105">DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified.</span></span> <span data-ttu-id="142d1-106">Los valores posibles incluyen la versión 2008-10-27 y las versiones más recientes.</span><span class="sxs-lookup"><span data-stu-id="142d1-106">Possible values include version 2008-10-27 and all more recent versions.</span></span>
+  optional: true
+  syntax:
+    content: 'defaultServiceVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobServiceProperties.deleteRetentionPolicy
+  name: deleteRetentionPolicy
+  fullName: deleteRetentionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="142d1-107">Las propiedades del servicio blob para la eliminación temporal.</span><span class="sxs-lookup"><span data-stu-id="142d1-107">The blob service properties for soft delete.</span></span>
+  optional: true
+  syntax:
+    content: 'deleteRetentionPolicy?: DeleteRetentionPolicy'
+    return:
+      type:
+      - azure-arm-storage.DeleteRetentionPolicy
+  package: azure-arm-storage
+references:
+- uid: azure-arm-storage.Resource
+  name: Resource
+  spec.typeScript:
+  - name: Resource
+    fullName: Resource
+    uid: azure-arm-storage.Resource
+- uid: azure-arm-storage.CorsRules
+  name: CorsRules
+  spec.typeScript:
+  - name: CorsRules
+    fullName: CorsRules
+    uid: azure-arm-storage.CorsRules
+- uid: azure-arm-storage.DeleteRetentionPolicy
+  name: DeleteRetentionPolicy
+  spec.typeScript:
+  - name: DeleteRetentionPolicy
+    fullName: DeleteRetentionPolicy
+    uid: azure-arm-storage.DeleteRetentionPolicy

@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 90753b01e2312768c1dfbab870657d2d41e807c9
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55060006"
+items:
+- uid: azure-arm-storage.Restriction
+  name: Restriction
+  fullName: Restriction
+  children:
+  - azure-arm-storage.Restriction.reasonCode
+  - azure-arm-storage.Restriction.type
+  - azure-arm-storage.Restriction.values
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="91c27-101">La restricción debido a que no se puede usar SKU.</span><span class="sxs-lookup"><span data-stu-id="91c27-101">The restriction because of which SKU cannot be used.</span></span>
+  package: azure-arm-storage
+- uid: azure-arm-storage.Restriction.reasonCode
+  name: reasonCode
+  fullName: reasonCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"91c27-102\">La razón de la restricción.</span><span class=\"sxs-lookup\"><span data-stu-id=\"91c27-102\">The reason for the restriction.</span></span> <span data-ttu-id=\"91c27-103\">A partir de ahora puede ser \"Valor de QuotaId\" o \"NotAvailableForSubscription\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"91c27-103\">As of now this can be \"QuotaId\" or \"NotAvailableForSubscription\".</span></span> <span data-ttu-id=\"91c27-104\">Id. de la cuota se establece cuando la SKU tiene parámetro requiredQuotas como la suscripción no pertenece a esa cuota.</span><span class=\"sxs-lookup\"><span data-stu-id=\"91c27-104\">Quota Id is set when the SKU has requiredQuotas parameter as the subscription does not belong to that quota.</span></span> <span data-ttu-id=\"91c27-105\">El \"NotAvailableForSubscription\" está relacionado con la capacidad al controlador de dominio.</span><span class=\"sxs-lookup\"><span data-stu-id=\"91c27-105\">The \"NotAvailableForSubscription\" is related to capacity at DC.</span></span> <span data-ttu-id=\"91c27-106\">Los valores posibles son: 'QuotaId', 'NotAvailableForSubscription'</span><span class=\"sxs-lookup\"><span data-stu-id=\"91c27-106\">Possible values include: 'QuotaId', 'NotAvailableForSubscription'</span></span>"
+  optional: true
+  syntax:
+    content: 'reasonCode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.Restriction.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="91c27-107">El tipo de restricciones.</span><span class="sxs-lookup"><span data-stu-id="91c27-107">The type of restrictions.</span></span> <span data-ttu-id="91c27-108">A partir de ahora solo un valor posible para esta es la ubicación.</span><span class="sxs-lookup"><span data-stu-id="91c27-108">As of now only possible value for this is location.</span></span>
+  optional: true
+  syntax:
+    content: 'type?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.Restriction.values
+  name: values
+  fullName: values
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="91c27-109">El valor de restricciones.</span><span class="sxs-lookup"><span data-stu-id="91c27-109">The value of restrictions.</span></span> <span data-ttu-id="91c27-110">Si el tipo de restricción se establece en la ubicación.</span><span class="sxs-lookup"><span data-stu-id="91c27-110">If the restriction type is set to location.</span></span> <span data-ttu-id="91c27-111">Esto sería diferentes ubicaciones donde la SKU está restringida.</span><span class="sxs-lookup"><span data-stu-id="91c27-111">This would be different locations where the SKU is restricted.</span></span>
+  optional: true
+  syntax:
+    content: 'values?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-arm-storage
