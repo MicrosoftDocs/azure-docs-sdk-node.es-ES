@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 346acd817b5704da6d9c4013d165d83b555e28c2
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046478"
+items:
+- uid: '@azure/arm-network.AzureAsyncOperationResult'
+  name: AzureAsyncOperationResult
+  fullName: AzureAsyncOperationResult
+  children:
+  - '@azure/arm-network.AzureAsyncOperationResult.error'
+  - '@azure/arm-network.AzureAsyncOperationResult.status'
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    El cuerpo de respuesta contiene el estado de la operación asincrónica especificada, que indica si se ha realizado correctamente, si está en curso o si ha producido un error. Tenga en cuenta que este estado es distinto del código de estado HTTP devuelto para la operación Get Operation Status en Sí. Si la operación asincrónica se realizó correctamente, el cuerpo de respuesta incluye el código de estado HTTP para la solicitud correctamente.
+
+    Si se produjo un error en la operación asincrónica, el cuerpo de respuesta incluye el código de estado HTTP para la información de error y la solicitud con error sobre el error.
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.AzureAsyncOperationResult.error'
+  name: error
+  fullName: error
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'error?: ErrorModel'
+    return:
+      type:
+      - '@azure/arm-network.ErrorModel'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.AzureAsyncOperationResult.status'
+  name: status
+  fullName: status
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Estado de la operación asincrónica de Azure. Los valores posibles son: 'InProgress', 'Correcto' y 'Error'. Los valores posibles son: 'InProgress', 'Correcto', 'Error'"
+  optional: true
+  syntax:
+    content: 'status?: NetworkOperationStatus'
+    return:
+      type:
+      - '@azure/arm-network.NetworkOperationStatus'
+  package: '@azure/arm-network'
+references:
+- uid: '@azure/arm-network.ErrorModel'
+  name: ErrorModel
+  spec.typeScript:
+  - name: ErrorModel
+    fullName: ErrorModel
+    uid: '@azure/arm-network.ErrorModel'
+- uid: '@azure/arm-network.NetworkOperationStatus'
+  name: NetworkOperationStatus
+  spec.typeScript:
+  - name: NetworkOperationStatus
+    fullName: NetworkOperationStatus
+    uid: '@azure/arm-network.NetworkOperationStatus'

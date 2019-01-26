@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 22f4b966773a544c98b2dbcfa308a56b7b2afb94
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55061843"
+items:
+- uid: azure-iot-provisioning-service.AllocationPolicyType
+  name: AllocationPolicyType
+  fullName: AllocationPolicyType
+  children: []
+  langs:
+  - typeScript
+  type: type alias
+  summary: >-
+    La directiva de asignación de esta inscripción individual. Esta directiva invalida la directiva de asignación de nivel de inquilino.
+
+    - 'hash': Centros de IoT vinculados tienen la misma probabilidades tener dispositivos aprovisionados para ellos.
+
+    - 'geoLatency':  Los dispositivos se aprovisionan en un centro de IoT con la menor latencia al dispositivo. Si varios centros de IoT vinculados proporcionaría la misma latencia más baja, el servicio de aprovisionamiento aplica un algoritmo hash dispositivos a través de esas centrales.
+
+    - 'static': Especificación de la instancia de IoT en la lista de inscripción tiene prioridad sobre la directiva de asignación de nivel de servicio.
+
+    - 'custom': Los dispositivos se aprovisionan en un centro de IoT según su propia lógica personalizada. El servicio de aprovisionamiento pasa información sobre el dispositivo a la lógica y la lógica que devuelve la instancia de IoT, así como la configuración inicial deseada. Se recomienda usar Azure Functions para hospedar su lógica.
+  syntax:
+    content: type AllocationPolicyType = "hashed" | "geoLatency" | "static" | "custom"
+  package: azure-iot-provisioning-service

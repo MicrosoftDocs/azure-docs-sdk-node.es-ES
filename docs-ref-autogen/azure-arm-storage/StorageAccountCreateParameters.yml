@@ -1,0 +1,240 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5c45910c826927a2fff249643b8984b003b456e4
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054566"
+items:
+- uid: azure-arm-storage.StorageAccountCreateParameters
+  name: StorageAccountCreateParameters
+  fullName: StorageAccountCreateParameters
+  children:
+  - azure-arm-storage.StorageAccountCreateParameters.accessTier
+  - azure-arm-storage.StorageAccountCreateParameters.customDomain
+  - azure-arm-storage.StorageAccountCreateParameters.enableAzureFilesAadIntegration
+  - azure-arm-storage.StorageAccountCreateParameters.enableHttpsTrafficOnly
+  - azure-arm-storage.StorageAccountCreateParameters.encryption
+  - azure-arm-storage.StorageAccountCreateParameters.identity
+  - azure-arm-storage.StorageAccountCreateParameters.isHnsEnabled
+  - azure-arm-storage.StorageAccountCreateParameters.kind
+  - azure-arm-storage.StorageAccountCreateParameters.location
+  - azure-arm-storage.StorageAccountCreateParameters.networkRuleSet
+  - azure-arm-storage.StorageAccountCreateParameters.sku
+  - azure-arm-storage.StorageAccountCreateParameters.tags
+  langs:
+  - typeScript
+  type: interface
+  summary: Los parámetros utilizados al crear una cuenta de almacenamiento.
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.accessTier
+  name: accessTier
+  fullName: accessTier
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Necesario para las cuentas de almacenamiento donde kind = BlobStorage. El nivel de acceso que se usa para la facturación.
+
+    Los valores posibles son: 'Activos', 'enfriar'
+  optional: true
+  syntax:
+    content: 'accessTier?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.customDomain
+  name: customDomain
+  fullName: customDomain
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Dominio del usuario asignado a la cuenta de almacenamiento. Nombre es el origen CNAME. En este momento, solo un dominio personalizado se admite por cuenta de almacenamiento. Para borrar el dominio personalizado existente, use una cadena vacía para la propiedad de nombre de dominio personalizado.
+  optional: true
+  syntax:
+    content: 'customDomain?: CustomDomain'
+    return:
+      type:
+      - azure-arm-storage.CustomDomain
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.enableAzureFilesAadIntegration
+  name: enableAzureFilesAadIntegration
+  fullName: enableAzureFilesAadIntegration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Habilita la integración de AAD de archivos de Azure para SMB si establece en true.
+  optional: true
+  syntax:
+    content: 'enableAzureFilesAadIntegration?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.enableHttpsTrafficOnly
+  name: enableHttpsTrafficOnly
+  fullName: enableHttpsTrafficOnly
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Permite el tráfico https solo para el servicio de almacenamiento si se establece en true.
+  optional: true
+  syntax:
+    content: 'enableHttpsTrafficOnly?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.encryption
+  name: encryption
+  fullName: encryption
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Proporciona la configuración de cifrado en la cuenta. Si no se especifica la configuración de cifrado de la cuenta seguirá siendo el mismo. El valor predeterminado es sin cifrar.
+  optional: true
+  syntax:
+    content: 'encryption?: Encryption'
+    return:
+      type:
+      - azure-arm-storage.Encryption
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.identity
+  name: identity
+  fullName: identity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La identidad del recurso.
+  optional: true
+  syntax:
+    content: 'identity?: Identity'
+    return:
+      type:
+      - azure-arm-storage.Identity
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.isHnsEnabled
+  name: isHnsEnabled
+  fullName: isHnsEnabled
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: HierarchicalNamespace cuenta habilitada si se establece en true.
+  optional: true
+  syntax:
+    content: 'isHnsEnabled?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.kind
+  name: kind
+  fullName: kind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Necesario. Indica el tipo de cuenta de almacenamiento. Los valores posibles son: 'Storage', 'StorageV2', 'BlobStorage', 'FileStorage', 'BlockBlobStorage'"
+  syntax:
+    content: 'kind: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.location
+  name: location
+  fullName: location
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Necesario. Obtiene o establece la ubicación del recurso. Esto puede ser uno de los admitidos y registrados regiones geográficas de Azure (por ejemplo, oeste de Estados Unidos, este de EE.UU., sudeste asiático, etcetera). La región geográfica de un recurso no puede cambiarse una vez que se crea, pero si se especifica una región geográfica idénticos en la actualización, la solicitud se realizará correctamente.
+  syntax:
+    content: 'location: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.networkRuleSet
+  name: networkRuleSet
+  fullName: networkRuleSet
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Conjunto de reglas de red
+  optional: true
+  syntax:
+    content: 'networkRuleSet?: NetworkRuleSet'
+    return:
+      type:
+      - azure-arm-storage.NetworkRuleSet
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.sku
+  name: sku
+  fullName: sku
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Necesario. Obtiene o establece el nombre de SKU.
+  syntax:
+    content: 'sku: Sku'
+    return:
+      type:
+      - azure-arm-storage.Sku
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountCreateParameters.tags
+  name: tags
+  fullName: tags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Obtiene o establece una lista de pares clave / valor que describen el recurso. Estas etiquetas pueden utilizarse para visualizar y agrupar este recurso (a través de grupos de recursos). Puede proporcionar un máximo de 15 etiquetas para un recurso. Cada etiqueta debe tener una clave con una longitud no superior a 128 caracteres y un valor con una longitud no superior a 256 caracteres.
+  optional: true
+  syntax:
+    content: 'tags?: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: azure-arm-storage
+references:
+- uid: azure-arm-storage.CustomDomain
+  name: CustomDomain
+  spec.typeScript:
+  - name: CustomDomain
+    fullName: CustomDomain
+    uid: azure-arm-storage.CustomDomain
+- uid: azure-arm-storage.Encryption
+  name: Encryption
+  spec.typeScript:
+  - name: Encryption
+    fullName: Encryption
+    uid: azure-arm-storage.Encryption
+- uid: azure-arm-storage.Identity
+  name: Identity
+  spec.typeScript:
+  - name: Identity
+    fullName: Identity
+    uid: azure-arm-storage.Identity
+- uid: azure-arm-storage.NetworkRuleSet
+  name: NetworkRuleSet
+  spec.typeScript:
+  - name: NetworkRuleSet
+    fullName: NetworkRuleSet
+    uid: azure-arm-storage.NetworkRuleSet
+- uid: azure-arm-storage.Sku
+  name: Sku
+  spec.typeScript:
+  - name: Sku
+    fullName: Sku
+    uid: azure-arm-storage.Sku
