@@ -1,0 +1,147 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 305d9f1170cdaeaa7972e21eaeeb94849d453c47
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55060335"
+items:
+- uid: azure-arm-batch.VirtualMachineConfiguration
+  name: VirtualMachineConfiguration
+  fullName: VirtualMachineConfiguration
+  children:
+  - azure-arm-batch.VirtualMachineConfiguration.containerConfiguration
+  - azure-arm-batch.VirtualMachineConfiguration.dataDisks
+  - azure-arm-batch.VirtualMachineConfiguration.imageReference
+  - azure-arm-batch.VirtualMachineConfiguration.licenseType
+  - azure-arm-batch.VirtualMachineConfiguration.nodeAgentSkuId
+  - azure-arm-batch.VirtualMachineConfiguration.windowsConfiguration
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.containerConfiguration
+  name: containerConfiguration
+  fullName: containerConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="3ab44-101">Si se especifica, el programa de instalación se realiza en cada nodo en el grupo para permitir que las tareas se ejecutan en contenedores.</span><span class="sxs-lookup"><span data-stu-id="3ab44-101">If specified, setup is performed on each node in the pool to allow tasks to run in containers.</span></span> <span data-ttu-id="3ab44-102">Regulares todas las tareas y tareas de administrador de trabajos se ejecutan en este grupo deben especificar la propiedad containerSettings y todas las demás tareas pueden especificarla.</span><span class="sxs-lookup"><span data-stu-id="3ab44-102">All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.</span></span>
+  optional: true
+  syntax:
+    content: 'containerConfiguration?: ContainerConfiguration'
+    return:
+      type:
+      - azure-arm-batch.ContainerConfiguration
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.dataDisks
+  name: dataDisks
+  fullName: dataDisks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="3ab44-103">Esta propiedad debe ser especifica si los nodos de proceso en el grupo deben tener los discos de datos vacíos conectados a ellos.</span><span class="sxs-lookup"><span data-stu-id="3ab44-103">This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.</span></span>
+  optional: true
+  syntax:
+    content: 'dataDisks?: DataDisk[]'
+    return:
+      type:
+      - azure-arm-batch.DataDisk[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.imageReference
+  name: imageReference
+  fullName: imageReference
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'imageReference: ImageReference'
+    return:
+      type:
+      - azure-arm-batch.ImageReference
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.licenseType
+  name: licenseType
+  fullName: licenseType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="3ab44-104">Esto solo se aplica a las imágenes que contienen el sistema operativo Windows y solo deben usarse cuando se mantiene de licencias local válida para los nodos que se va a implementar.</span><span class="sxs-lookup"><span data-stu-id="3ab44-104">This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed.</span></span> <span data-ttu-id="3ab44-105">Si se omite, no en el entorno local se aplica el descuento de licencias.</span><span class="sxs-lookup"><span data-stu-id="3ab44-105">If omitted, no on-premises licensing discount is applied.</span></span> <span data-ttu-id="3ab44-106">Los valores son:</span><span class="sxs-lookup"><span data-stu-id="3ab44-106">Values are:</span></span>
+
+
+    <span data-ttu-id="3ab44-107">Windows_Server - la licencia en el entorno local es para Windows Server.</span><span class="sxs-lookup"><span data-stu-id="3ab44-107">Windows_Server - The on-premises license is for Windows Server.</span></span>
+
+    <span data-ttu-id="3ab44-108">Windows_Client - la licencia en el entorno local es para el cliente de Windows.</span><span class="sxs-lookup"><span data-stu-id="3ab44-108">Windows_Client - The on-premises license is for Windows Client.</span></span>
+  optional: true
+  syntax:
+    content: 'licenseType?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.nodeAgentSkuId
+  name: nodeAgentSkuId
+  fullName: nodeAgentSkuId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="3ab44-109">El agente de nodo de Batch es un programa que se ejecuta en cada nodo del grupo y proporciona la interfaz de comando y control entre el nodo y el servicio Batch.</span><span class="sxs-lookup"><span data-stu-id="3ab44-109">The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service.</span></span> <span data-ttu-id="3ab44-110">Hay diferentes implementaciones del agente de nodo, conocidas como SKU, para distintos sistemas operativos.</span><span class="sxs-lookup"><span data-stu-id="3ab44-110">There are different implementations of the node agent, known as SKUs, for different operating systems.</span></span>
+
+    <span data-ttu-id="3ab44-111">Debe especificar a un agente de nodo SKU que coincida con la referencia de la imagen seleccionada.</span><span class="sxs-lookup"><span data-stu-id="3ab44-111">You must specify a node agent SKU which matches the selected image reference.</span></span> <span data-ttu-id="3ab44-112">Para obtener la lista de SKU del agente de nodo admitido junto con su lista de referencias de imagen comprobados, vea la operación 'Lista admite la SKU del agente de nodo'.</span><span class="sxs-lookup"><span data-stu-id="3ab44-112">To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.</span></span>
+  syntax:
+    content: 'nodeAgentSkuId: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.windowsConfiguration
+  name: windowsConfiguration
+  fullName: windowsConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="3ab44-113">Esta propiedad no se debe especificar si el imageReference especifica una imagen de sistema operativo Linux.</span><span class="sxs-lookup"><span data-stu-id="3ab44-113">This property must not be specified if the imageReference specifies a Linux OS image.</span></span>
+  optional: true
+  syntax:
+    content: 'windowsConfiguration?: WindowsConfiguration'
+    return:
+      type:
+      - azure-arm-batch.WindowsConfiguration
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.ContainerConfiguration
+  name: ContainerConfiguration
+  spec.typeScript:
+  - name: ContainerConfiguration
+    fullName: ContainerConfiguration
+    uid: azure-arm-batch.ContainerConfiguration
+- uid: azure-arm-batch.DataDisk[]
+  name: DataDisk[]
+  spec.typeScript:
+  - name: DataDisk
+    fullName: DataDisk
+    uid: azure-arm-batch.DataDisk
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.ImageReference
+  name: ImageReference
+  spec.typeScript:
+  - name: ImageReference
+    fullName: ImageReference
+    uid: azure-arm-batch.ImageReference
+- uid: azure-arm-batch.WindowsConfiguration
+  name: WindowsConfiguration
+  spec.typeScript:
+  - name: WindowsConfiguration
+    fullName: WindowsConfiguration
+    uid: azure-arm-batch.WindowsConfiguration

@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ede64883f1ec60cb487bb7278c4dbd33b5b26d86
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55061813"
+items:
+- uid: azure-iot-provisioning-service.ReprovisionPolicy
+  name: ReprovisionPolicy
+  fullName: ReprovisionPolicy
+  children:
+  - azure-iot-provisioning-service.ReprovisionPolicy.migrateDeviceData
+  - azure-iot-provisioning-service.ReprovisionPolicy.updateHubAssignment
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="ececc-101">El comportamiento que debe adoptar el servicio cuando un dispositivo se vuelve a aprovisionar a otro centro de IoT.</span><span class="sxs-lookup"><span data-stu-id="ececc-101">The behavior the service should adopt when a device is re-provisioned to another IoT Hub.</span></span>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ReprovisionPolicy.migrateDeviceData
+  name: migrateDeviceData
+  fullName: migrateDeviceData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="ececc-102">Cuando se establece en true (valor predeterminado) el servicio Device Provisioning migrará los datos del dispositivo (gemelo, capacidades de dispositivo e Id. de dispositivo) desde un único núcleo a otro durante una actualización de asignación de IoT hub.</span><span class="sxs-lookup"><span data-stu-id="ececc-102">When set to true (default) the Device Provisioning Service will migrate the device data (twin, device capabilities and device id) from one hub to another during an IoT hub assignment update.</span></span> <span data-ttu-id="ececc-103">Si se establece en false, el servicio Device Provisioning restablecerá los datos del dispositivo a su configuración inicial que se almacenan en su inscripción correspondiente.</span><span class="sxs-lookup"><span data-stu-id="ececc-103">If set to false the Device Provisioning Service will reset the device data to its initial configuration stored in its corresponding enrollment.</span></span>
+  syntax:
+    content: 'migrateDeviceData: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ReprovisionPolicy.updateHubAssignment
+  name: updateHubAssignment
+  fullName: updateHubAssignment
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="ececc-104">Cuando establecido en true (valor predeterminado) el servicio Device Provisioning evaluará la asignación de hub del dispositivo y actualizarla si es necesario para cualquier solicitud de aprovisionamiento más allá de la primera de un dispositivo determinado.</span><span class="sxs-lookup"><span data-stu-id="ececc-104">When set to true (default) the Device Provisioning Service will evaluate the device's hub assignment and update it if necessary for any provisioning request beyond the first from a given device.</span></span> <span data-ttu-id="ececc-105">Si se establece en false, el dispositivo permanecerá asignado a su IoT hub actual.</span><span class="sxs-lookup"><span data-stu-id="ececc-105">If set to false the device will stay assigned to its current IoT hub.</span></span>
+  syntax:
+    content: 'updateHubAssignment: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-provisioning-service
