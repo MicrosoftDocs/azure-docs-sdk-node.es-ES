@@ -22,7 +22,7 @@ Azure HDInsight es una distribución en la nube de los componentes de Hadoop de 
 HDInsight hace más fácil de usar las tecnologías de Hadoop, con:
 - Menos configuración. Consulte Aprovisionamiento de clústeres de Hadoop en HDInsight.
 - Alta disponibilidad y confiabilidad. Consulte Disponibilidad y confiabilidad de HDInsight.
-- Seguridad y gobierno mediante la integración con Active Directory. Consulte Clústeres unidos al dominio.
+- Seguridad y gobernanza mediante la integración con Active Directory. Consulte Clústeres unidos al dominio.
 - Escalado dinámico sin interrupción de trabajos
 - Actualizaciones de componentes y versiones actuales. Consulte Componentes y versiones de Hadoop en HDInsight.
 - Integración con otros servicios de Azure, como Web Apps y SQL Database
