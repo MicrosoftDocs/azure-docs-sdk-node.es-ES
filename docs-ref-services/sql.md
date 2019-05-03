@@ -19,7 +19,7 @@ ms.locfileid: "55046435"
 # <a name="azure-sql-modules-for-nodejs"></a>Módulos de Azure SQL para Node.js
 
 Trabaje con datos almacenados en [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) en Node.js.
-La biblioteca de administración proporciona una interfaz para que sea fácil administrar bases de datos Microsoft Azure SQL Database.
+La biblioteca de administración proporciona una interfaz para que sea fácil administrar bases de datos de Azure SQL.
 
 ## <a name="client-package"></a>Paquete del cliente
 
