@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.TransportStreamFormat
+    name: TransportStreamFormat
+    fullName: TransportStreamFormat
+    children:
+      - azure-arm-mediaservices.TransportStreamFormat.filenamePattern
+      - azure-arm-mediaservices.TransportStreamFormat.odatatype
+      - azure-arm-mediaservices.TransportStreamFormat.outputFiles
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe las propiedades para generar un Stream de transporte MPEG-2 (ISO/IEC 13818 - 1) Los archivos de vídeo de salida.
+    extends:
+      name: azure-arm-mediaservices.MultiBitrateFormat
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.TransportStreamFormat.filenamePattern
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El patrón de nombres de archivo para los archivos de salida generado. Se admiten las siguientes macros en el nombre de archivo: {Basename}: el nombre de base de la entrada de vídeo {Extension}: la extensión adecuada para este formato. {Label}: la etiqueta asignada a la capa de códec.
+      {Index}: un índice único para las miniaturas. Solo se aplica a las miniaturas. {Velocidad de bits}: la velocidad de bits de audio y vídeo. No es aplicable a las miniaturas. {Códec}: el tipo del códec de audio y vídeo. Las macros no sustituidas se contrae y se quitará el nombre de archivo.
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.TransportStreamFormat.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.TransportStreamFormat.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La lista de archivos de salida para generar.  Cada entrada en la lista es un conjunto de etiquetas de nivel de audio y vídeo estén MUX juntos.
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.OutputFile[]'
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.MultiBitrateFormat
+    name: MultiBitrateFormat
+    spec.typeScript:
+      - name: MultiBitrateFormat
+        fullName: MultiBitrateFormat
+        uid: azure-arm-mediaservices.MultiBitrateFormat
+  - uid: 'azure-arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-arm-mediaservices.OutputFile
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,184 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoOverlay
+    name: VideoOverlay
+    fullName: VideoOverlay
+    children:
+      - azure-arm-mediaservices.VideoOverlay.audioGainLevel
+      - azure-arm-mediaservices.VideoOverlay.cropRectangle
+      - azure-arm-mediaservices.VideoOverlay.end
+      - azure-arm-mediaservices.VideoOverlay.fadeInDuration
+      - azure-arm-mediaservices.VideoOverlay.fadeOutDuration
+      - azure-arm-mediaservices.VideoOverlay.inputLabel
+      - azure-arm-mediaservices.VideoOverlay.odatatype
+      - azure-arm-mediaservices.VideoOverlay.opacity
+      - azure-arm-mediaservices.VideoOverlay.position
+      - azure-arm-mediaservices.VideoOverlay.start
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe las propiedades de una superposición de vídeo.
+    extends:
+      name: azure-arm-mediaservices.Overlay
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.audioGainLevel
+    name: audioGainLevel
+    fullName: audioGainLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El nivel de ganancia de audio en la superposición. El valor debe estar en el intervalo [0, 1.0]. El valor predeterminado es 1.0.'
+    optional: true
+    syntax:
+      content: 'audioGainLevel?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.cropRectangle
+    name: cropRectangle
+    fullName: cropRectangle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una ventana rectangular opcional que usa para recortar la imagen de superposición o el vídeo.
+    optional: true
+    syntax:
+      content: 'cropRectangle?: Rectangle'
+      return:
+        type:
+          - azure-arm-mediaservices.Rectangle
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.end
+    name: end
+    fullName: end
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La posición en la entrada en el que finaliza la superposición de vídeo. El valor debe ser en formato de duración ISO 8601. Por ejemplo, PT30S al final de la superposición de 30 segundos en el vídeo de entrada. Si no se especifica la superposición se aplicará hasta el final de la entrada de vídeo si inputLoop es true. En caso contrario, si inputLoop es false, a continuación, superposición durará siempre que la duración de los medios de superposición.'
+    optional: true
+    syntax:
+      content: 'end?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.fadeInDuration
+    name: fadeInDuration
+    fullName: fadeInDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La duración en la que la superposición de fundido de entrada en el vídeo de entrada. El valor debe ser en formato de duración ISO 8601. Si no se especifica el comportamiento predeterminado consiste en no tener ninguna atenuación en (igual que PT0S).
+    optional: true
+    syntax:
+      content: 'fadeInDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.fadeOutDuration
+    name: fadeOutDuration
+    fullName: fadeOutDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La duración en la que se desvanece la superposición de fuera de la entrada de vídeo. El valor debe ser en formato de duración ISO 8601. Si no se especifica el comportamiento predeterminado consiste en no tener ningún difuminar (igual que PT0S).
+    optional: true
+    syntax:
+      content: 'fadeOutDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.inputLabel
+    name: inputLabel
+    fullName: inputLabel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La etiqueta de la entrada del trabajo que se utiliza como una superposición. La entrada debe especificar exactamente un archivo. Puede especificar un archivo de imagen en formato JPG o PNG, o un archivo de audio (por ejemplo, un archivo WAV, MP3, WMA o M4A) o un archivo de vídeo. Consulte https://aka.ms/mesformats para una lista completa de los formatos de archivo de vídeo y audio compatible.'
+    syntax:
+      content: 'inputLabel: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.opacity
+    name: opacity
+    fullName: opacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La opacidad de la superposición. Se trata de un valor en el intervalo [0 - 1.0]. Valor predeterminado es 1.0, lo que significa la superposición es opaca.'
+    optional: true
+    syntax:
+      content: 'opacity?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La ubicación en la entrada de vídeo que se aplica la superposición.
+    optional: true
+    syntax:
+      content: 'position?: Rectangle'
+      return:
+        type:
+          - azure-arm-mediaservices.Rectangle
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La posición inicial, con referencia a la entrada de vídeo, donde empieza la superposición. El valor debe estar en formato ISO 8601. Por ejemplo, PT05S para iniciar la superposición en 5 segundos en el vídeo de entrada. Si no se especifica la superposición se inicia desde el principio de la entrada de vídeo.'
+    optional: true
+    syntax:
+      content: 'start?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Overlay
+    name: Overlay
+    spec.typeScript:
+      - name: Overlay
+        fullName: Overlay
+        uid: azure-arm-mediaservices.Overlay
+  - uid: azure-arm-mediaservices.Rectangle
+    name: Rectangle
+    spec.typeScript:
+      - name: Rectangle
+        fullName: Rectangle
+        uid: azure-arm-mediaservices.Rectangle
