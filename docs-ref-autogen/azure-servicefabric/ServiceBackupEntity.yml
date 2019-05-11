@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServiceBackupEntity
+    name: ServiceBackupEntity
+    fullName: ServiceBackupEntity
+    children:
+      - azure-servicefabric.ServiceBackupEntity.entityKind
+      - azure-servicefabric.ServiceBackupEntity.serviceName
+    langs:
+      - typeScript
+    type: interface
+    summary: Identifica el servicio de Service Fabric con estado que la copia de seguridad.
+    extends:
+      name: azure-servicefabric.BackupEntity
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceBackupEntity.entityKind
+    name: entityKind
+    fullName: entityKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'entityKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceBackupEntity.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El nombre completo del servicio con "fabric:'' "fabric:"'
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.BackupEntity
+    name: BackupEntity
+    spec.typeScript:
+      - name: BackupEntity
+        fullName: BackupEntity
+        uid: azure-servicefabric.BackupEntity
