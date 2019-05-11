@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription
+    name: TimeBasedBackupScheduleDescription
+    fullName: TimeBasedBackupScheduleDescription
+    children:
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleKind
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="3d8d2-101">Describe la programación de copia de seguridad basado en el tiempo.</span><span class="sxs-lookup"><span data-stu-id="3d8d2-101">Describes the time based backup schedule.</span></span>
+    extends:
+      name: azure-servicefabric.BackupScheduleDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+    name: runDays
+    fullName: runDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3d8d2-102">Lista de días de la semana en las que se debe desencadenar la copia de seguridad periódica.</span><span class="sxs-lookup"><span data-stu-id="3d8d2-102">List of days of a week when to trigger the periodic backup.</span></span> <span data-ttu-id="3d8d2-103">Esto es válido solo cuando el tipo de frecuencia de programación de copia de seguridad es semanal.</span><span class="sxs-lookup"><span data-stu-id="3d8d2-103">This is valid only when the backup schedule frequency type is weekly.</span></span>
+    optional: true
+    syntax:
+      content: 'runDays?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+    name: runTimes
+    fullName: runTimes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3d8d2-104">Representa la lista de tiempo exacto durante el día en el formato ISO8601.</span><span class="sxs-lookup"><span data-stu-id="3d8d2-104">Represents the list of exact time during the day in ISO8601 format.</span></span> <span data-ttu-id="3d8d2-105">Al igual que '' 19: 00:00'' representa ''7 PM'' durante el día.</span><span class="sxs-lookup"><span data-stu-id="3d8d2-105">Like ''19:00:00'' will represent ''7PM'' during the day.</span></span> <span data-ttu-id="3d8d2-106">Se omitirá la fecha especificada junto con el tiempo.</span><span class="sxs-lookup"><span data-stu-id="3d8d2-106">Date specified along with time will be ignored.</span></span>'
+    syntax:
+      content: 'runTimes: Date[]'
+      return:
+        type:
+          - 'Date[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+    name: scheduleFrequencyType
+    fullName: scheduleFrequencyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3d8d2-107">Describe la frecuencia con que se va a ejecutar la duración programar copia de seguridad.</span><span class="sxs-lookup"><span data-stu-id="3d8d2-107">Describes the frequency with which to run the time based backup schedule.</span></span> <span data-ttu-id="3d8d2-108">Los valores posibles son: ''Invalid'', ''Diario'', ''Semanal''</span><span class="sxs-lookup"><span data-stu-id="3d8d2-108">Possible values include: ''Invalid'', ''Daily'', ''Weekly''</span></span>'
+    syntax:
+      content: 'scheduleFrequencyType: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleKind
+    name: scheduleKind
+    fullName: scheduleKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3d8d2-109">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="3d8d2-109">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'scheduleKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.BackupScheduleDescription
+    name: BackupScheduleDescription
+    spec.typeScript:
+      - name: BackupScheduleDescription
+        fullName: BackupScheduleDescription
+        uid: azure-servicefabric.BackupScheduleDescription
