@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthStateChunk
+    name: ReplicaHealthStateChunk
+    fullName: ReplicaHealthStateChunk
+    children:
+      - azure-servicefabric.ReplicaHealthStateChunk.healthState
+      - azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Representa el fragmento de estado de mantenimiento de una réplica de servicio con estado o una instancia de servicio sin estado.
+      El estado de mantenimiento de réplica contiene el identificador de réplica y su estado de mantenimiento agregado.
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de mantenimiento de una entidad de Service Fabric como clúster, nodo, aplicación, servicio, partición, réplica etcetera. Los valores posibles son: ''Invalid'', ''Aceptar'', ''Advertencia'', ''Error'', ''Unknown''.'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Identificador de una réplica de servicio con estado o una instancia de servicio sin estado. Este identificador se usa en las consultas que se aplican a los servicios con y sin estado. Se usa Service fabric para identificar de forma exclusiva una réplica de una partición de un servicio con estado o una instancia de una partición de servicio sin estado. Es único dentro de una partición y no cambia durante la vigencia de la réplica o la instancia. Si se quita una réplica con estado y otra réplica se crea en el mismo nodo de la misma partición, obtendrá un valor diferente para el identificador. Si una instancia sin estado se conmuta por error en el nodo de iguales o distintos obtendrá un valor diferente para el identificador.'
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk

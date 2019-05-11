@@ -1,0 +1,143 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.SecondaryReplicatorStatus
+    name: SecondaryReplicatorStatus
+    fullName: SecondaryReplicatorStatus
+    children:
+      - azure-servicefabric.SecondaryReplicatorStatus.copyQueueStatus
+      - azure-servicefabric.SecondaryReplicatorStatus.isInBuild
+      - azure-servicefabric.SecondaryReplicatorStatus.kind
+      - azure-servicefabric.SecondaryReplicatorStatus.lastAcknowledgementSentTimeUtc
+      - azure-servicefabric.SecondaryReplicatorStatus.lastCopyOperationReceivedTimeUtc
+      - azure-servicefabric.SecondaryReplicatorStatus.lastReplicationOperationReceivedTimeUtc
+      - azure-servicefabric.SecondaryReplicatorStatus.replicationQueueStatus
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Proporciona estadísticas sobre el Replicador de Service Fabric, cuando funciona en un rol secundarias activas.'
+    extends:
+      name: azure-servicefabric.ReplicatorStatus
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SecondaryReplicatorStatus.copyQueueStatus
+    name: copyQueueStatus
+    fullName: copyQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Detalles acerca de la cola de copia en el replicador secundario.
+    optional: true
+    syntax:
+      content: 'copyQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - azure-servicefabric.ReplicatorQueueStatus
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SecondaryReplicatorStatus.isInBuild
+    name: isInBuild
+    fullName: isInBuild
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valor que indica si la réplica se está compilando actualmente.
+    optional: true
+    syntax:
+      content: 'isInBuild?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SecondaryReplicatorStatus.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SecondaryReplicatorStatus.lastAcknowledgementSentTimeUtc
+    name: lastAcknowledgementSentTimeUtc
+    fullName: lastAcknowledgementSentTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La última marca de tiempo (UTC) en el que se ha enviado una confirmación en el replicador principal.
+      UTC 0 representa un valor no válido, que indica que nunca se ha enviado un mensaje de confirmación.
+    optional: true
+    syntax:
+      content: 'lastAcknowledgementSentTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SecondaryReplicatorStatus.lastCopyOperationReceivedTimeUtc
+    name: lastCopyOperationReceivedTimeUtc
+    fullName: lastCopyOperationReceivedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La última marca de tiempo (UTC) en el que se recibió una operación de copia de la réplica principal.
+      UTC 0 representa un valor no válido, que indica que nunca se ha recibido un mensaje de operación de copia.
+    optional: true
+    syntax:
+      content: 'lastCopyOperationReceivedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SecondaryReplicatorStatus.lastReplicationOperationReceivedTimeUtc
+    name: lastReplicationOperationReceivedTimeUtc
+    fullName: lastReplicationOperationReceivedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La última marca de tiempo (UTC) en el que se recibió una operación de replicación desde el servidor principal.
+      UTC 0 representa un valor no válido, que indica que nunca se ha recibido un mensaje de operación de replicación.
+    optional: true
+    syntax:
+      content: 'lastReplicationOperationReceivedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SecondaryReplicatorStatus.replicationQueueStatus
+    name: replicationQueueStatus
+    fullName: replicationQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Detalles acerca de la cola de replicación en el replicador secundario.
+    optional: true
+    syntax:
+      content: 'replicationQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - azure-servicefabric.ReplicatorQueueStatus
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicatorStatus
+    name: ReplicatorStatus
+    spec.typeScript:
+      - name: ReplicatorStatus
+        fullName: ReplicatorStatus
+        uid: azure-servicefabric.ReplicatorStatus
+  - uid: azure-servicefabric.ReplicatorQueueStatus
+    name: ReplicatorQueueStatus
+    spec.typeScript:
+      - name: ReplicatorQueueStatus
+        fullName: ReplicatorQueueStatus
+        uid: azure-servicefabric.ReplicatorQueueStatus

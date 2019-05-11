@@ -1,0 +1,195 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
+    name: DeployedStatelessServiceInstanceInfo
+    fullName: DeployedStatelessServiceInstanceInfo
+    children:
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.address
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.codePackageName
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.hostProcessId
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.instanceId
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.partitionId
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.replicaStatus
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.serviceKind
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.serviceManifestName
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.serviceName
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.servicePackageActivationId
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo.serviceTypeName
+    langs:
+      - typeScript
+    type: interface
+    summary: Información sobre una instancia de servicio sin estado implementada en un nodo.
+    extends:
+      name: azure-servicefabric.DeployedServiceReplicaInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.address
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La última dirección devuelta por la réplica en Open o ChangeRole.
+    optional: true
+    syntax:
+      content: 'address?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.codePackageName
+    name: codePackageName
+    fullName: codePackageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre del paquete de código que hospeda esta réplica.
+    optional: true
+    syntax:
+      content: 'codePackageName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.hostProcessId
+    name: hostProcessId
+    fullName: hostProcessId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id. de proceso de host del proceso que hospeda la réplica. Esto será cero si la réplica está inactivo. En los contenedores de hyper-v este Id. de proceso de host será de kernel diferente.
+    optional: true
+    syntax:
+      content: 'hostProcessId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Identificador de una instancia de servicio sin estado. InstanceId se usa Service fabric para identificar de forma exclusiva una instancia de una partición de un servicio sin estado. Es único dentro de una partición y no cambia durante la vigencia de la instancia. Si la instancia ha conmutado por error en el nodo de iguales o distintos, obtendrá un valor diferente para el identificador de instancia.'
+    optional: true
+    syntax:
+      content: 'instanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un identificador interno usado por Service Fabric para identificar de forma única una partición. Esto es un GUID generado aleatoriamente cuando se creó el servicio. Id. de partición es único y no cambia durante la vigencia del servicio. Si el mismo servicio se ha eliminado y vuelto a crear los identificadores de sus particiones sería diferente.
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.replicaStatus
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de una réplica de un servicio. Los valores posibles son: ''Invalid'', ''InBuild'', ''En espera'', ''listo'', ''Abajo'', ''Quitar'''
+    optional: true
+    syntax:
+      content: 'replicaStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.serviceManifestName
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre del manifiesto de servicio en la que se define este tipo de servicio.
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El nombre completo del servicio con "fabric:'' "fabric:"'
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.servicePackageActivationId
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ActivationId de un paquete de servicio implementado. Si ServicePackageActivationMode especificado en el momento de crear el servicio es ''SharedProcess'' (o si no se especifica, en cuyo caso el valor predeterminado es ''SharedProcess''), el valor de ServicePackageActivationId es siempre una cadena vacía.'
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo.serviceTypeName
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre del tipo de servicio como se especifica en el manifiesto de servicio.
+    optional: true
+    syntax:
+      content: 'serviceTypeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.DeployedServiceReplicaInfo
+    name: DeployedServiceReplicaInfo
+    spec.typeScript:
+      - name: DeployedServiceReplicaInfo
+        fullName: DeployedServiceReplicaInfo
+        uid: azure-servicefabric.DeployedServiceReplicaInfo

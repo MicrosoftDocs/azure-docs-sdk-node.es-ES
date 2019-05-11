@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription
+    name: ProvisionApplicationTypeDescription
+    fullName: ProvisionApplicationTypeDescription
+    children:
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+      - azure-servicefabric.ProvisionApplicationTypeDescription.async
+      - azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe la operación para registrar o aprovisionar un tipo de aplicación mediante un paquete de aplicación cargado en el almacén de imágenes de Service Fabric.
+    extends:
+      name: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+    name: applicationPackageCleanupPolicy
+    fullName: applicationPackageCleanupPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El tipo de acción que hay que realizar para limpiar el paquete de aplicación después de aprovisionar correctamente. Los valores posibles son: ''Invalid'', ''Default'', ''Automatic'', ''Manual'''
+    optional: true
+    syntax:
+      content: 'applicationPackageCleanupPolicy?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+    name: applicationTypeBuildPath
+    fullName: applicationTypeBuildPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La ruta de acceso relativa para el paquete de aplicación en el almacén de imágenes especificado durante la operación de carga anterior.
+    syntax:
+      content: 'applicationTypeBuildPath: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.async
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica si el aprovisionamiento se debe realizar o no de forma asincrónica. Cuando se establece en true, la operación de aprovisionamiento se devuelve cuando el sistema acepta la solicitud y la operación de aprovisionamiento continúa sin ningún límite de tiempo de espera. El valor predeterminado es false. Para paquetes de aplicación de gran tamaño, se recomienda establecer el valor en true.'
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    name: ProvisionApplicationTypeDescriptionBase
+    spec.typeScript:
+      - name: ProvisionApplicationTypeDescriptionBase
+        fullName: ProvisionApplicationTypeDescriptionBase
+        uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
