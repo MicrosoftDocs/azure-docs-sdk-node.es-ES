@@ -1,0 +1,101 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.AverageLoadScalingTrigger
+    name: AverageLoadScalingTrigger
+    fullName: AverageLoadScalingTrigger
+    children:
+      - azure-servicefabric.AverageLoadScalingTrigger.kind
+      - azure-servicefabric.AverageLoadScalingTrigger.lowerLoadThreshold
+      - azure-servicefabric.AverageLoadScalingTrigger.metric
+      - azure-servicefabric.AverageLoadScalingTrigger.scaleIntervalInSeconds
+      - azure-servicefabric.AverageLoadScalingTrigger.upperLoadThreshold
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe el desencadenador de carga promedio utilizado para el escalado automático.
+    extends:
+      name: azure-servicefabric.AutoScalingTrigger
+    package: azure-servicefabric
+  - uid: azure-servicefabric.AverageLoadScalingTrigger.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.AverageLoadScalingTrigger.lowerLoadThreshold
+    name: lowerLoadThreshold
+    fullName: lowerLoadThreshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Umbral de carga inferior (si la carga Media está por debajo de este umbral, servicio se escalará hacia abajo).'
+    syntax:
+      content: 'lowerLoadThreshold: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.AverageLoadScalingTrigger.metric
+    name: metric
+    fullName: metric
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descripción de la métrica que se usa para el escalado.
+    syntax:
+      content: 'metric: AutoScalingMetric'
+      return:
+        type:
+          - azure-servicefabric.AutoScalingMetric
+    package: azure-servicefabric
+  - uid: azure-servicefabric.AverageLoadScalingTrigger.scaleIntervalInSeconds
+    name: scaleIntervalInSeconds
+    fullName: scaleIntervalInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Intervalo de escala que indica la frecuencia con este desencadenador se comprobará.
+    syntax:
+      content: 'scaleIntervalInSeconds: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.AverageLoadScalingTrigger.upperLoadThreshold
+    name: upperLoadThreshold
+    fullName: upperLoadThreshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Umbral de carga superior (si la carga Media está por encima del umbral, servicio escalará verticalmente).'
+    syntax:
+      content: 'upperLoadThreshold: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.AutoScalingTrigger
+    name: AutoScalingTrigger
+    spec.typeScript:
+      - name: AutoScalingTrigger
+        fullName: AutoScalingTrigger
+        uid: azure-servicefabric.AutoScalingTrigger
+  - uid: azure-servicefabric.AutoScalingMetric
+    name: AutoScalingMetric
+    spec.typeScript:
+      - name: AutoScalingMetric
+        fullName: AutoScalingMetric
+        uid: azure-servicefabric.AutoScalingMetric

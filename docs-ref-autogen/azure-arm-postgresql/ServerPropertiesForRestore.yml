@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-postgresql.ServerPropertiesForRestore
+    name: ServerPropertiesForRestore
+    fullName: ServerPropertiesForRestore
+    children:
+      - azure-arm-postgresql.ServerPropertiesForRestore.createMode
+      - azure-arm-postgresql.ServerPropertiesForRestore.restorePointInTime
+      - azure-arm-postgresql.ServerPropertiesForRestore.sourceServerId
+      - azure-arm-postgresql.ServerPropertiesForRestore.sslEnforcement
+      - azure-arm-postgresql.ServerPropertiesForRestore.storageProfile
+      - azure-arm-postgresql.ServerPropertiesForRestore.version
+    langs:
+      - typeScript
+    type: interface
+    summary: Las propiedades que se usa para crear un nuevo servidor mediante la restauración desde una copia de seguridad.
+    extends:
+      name: azure-arm-postgresql.ServerPropertiesForCreate
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForRestore.createMode
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'createMode: string'
+      return:
+        type:
+          - string
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForRestore.restorePointInTime
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Hora de creación de punto (formato ISO8601), especificando la hora de restaurar a partir de restauración.'
+    syntax:
+      content: 'restorePointInTime: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForRestore.sourceServerId
+    name: sourceServerId
+    fullName: sourceServerId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id. del servidor de origen para restaurar desde.
+    syntax:
+      content: 'sourceServerId: string'
+      return:
+        type:
+          - string
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForRestore.sslEnforcement
+    name: sslEnforcement
+    fullName: sslEnforcement
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Habilitar el cumplimiento de ssl o no cuando se conecta al servidor. Los valores posibles son: ''Enabled'', ''Desactivado'''
+    optional: true
+    syntax:
+      content: 'sslEnforcement?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForRestore.storageProfile
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Perfil de almacenamiento de un servidor.
+    optional: true
+    syntax:
+      content: 'storageProfile?: StorageProfile'
+      return:
+        type:
+          - azure-arm-postgresql.StorageProfile
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForRestore.version
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Versión del servidor. Los valores posibles son: ''9.5'', ''9.6'', ''10'', ''10.0'', ''10.2'''
+    optional: true
+    syntax:
+      content: 'version?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-postgresql
+references:
+  - uid: azure-arm-postgresql.ServerPropertiesForCreate
+    name: ServerPropertiesForCreate
+    spec.typeScript:
+      - name: ServerPropertiesForCreate
+        fullName: ServerPropertiesForCreate
+        uid: azure-arm-postgresql.ServerPropertiesForCreate
+  - uid: azure-arm-postgresql.StorageProfile
+    name: StorageProfile
+    spec.typeScript:
+      - name: StorageProfile
+        fullName: StorageProfile
+        uid: azure-arm-postgresql.StorageProfile

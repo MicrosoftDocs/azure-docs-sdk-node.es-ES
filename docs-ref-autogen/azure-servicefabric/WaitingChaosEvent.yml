@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.WaitingChaosEvent
+    name: WaitingChaosEvent
+    fullName: WaitingChaosEvent
+    children:
+      - azure-servicefabric.WaitingChaosEvent.kind
+      - azure-servicefabric.WaitingChaosEvent.reason
+      - azure-servicefabric.WaitingChaosEvent.timeStampUtc
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Describe un caos de evento que se genera cuando el clúster esté listo para que se produzca un error, por ejemplo, Chaos espera Chaos esté esperando a que finalice la actualización en curso.'
+    extends:
+      name: azure-servicefabric.ChaosEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitingChaosEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitingChaosEvent.reason
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Describe por qué se generó el WaitingChaosEvent, por ejemplo, debido a una actualización de clúster.'
+    optional: true
+    syntax:
+      content: 'reason?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitingChaosEvent.timeStampUtc
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La marca de tiempo de UTC cuando se generó este evento de Chaos.
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ChaosEvent
+    name: ChaosEvent
+    spec.typeScript:
+      - name: ChaosEvent
+        fullName: ChaosEvent
+        uid: azure-servicefabric.ChaosEvent

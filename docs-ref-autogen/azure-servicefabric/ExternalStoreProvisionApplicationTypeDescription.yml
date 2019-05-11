@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription
+    name: ExternalStoreProvisionApplicationTypeDescription
+    fullName: ExternalStoreProvisionApplicationTypeDescription
+    children:
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationPackageDownloadUri
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationTypeName
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationTypeVersion
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.async
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.kind
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe la operación para registrar o aprovisionar un tipo de aplicación mediante un paquete de aplicación desde un almacén externo en lugar de un paquete cargado en el almacén de imágenes de Service Fabric.
+    extends:
+      name: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationPackageDownloadUri
+    name: applicationPackageDownloadUri
+    fullName: applicationPackageDownloadUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La ruta al paquete de aplicación ''.sfpkg'' desde la que puede descargar el paquete de aplicación mediante los protocolos HTTP o HTTPS. El paquete de aplicación puede almacenarse en un almacén externo que proporcione la operación GET para descargar el archivo. Los protocolos compatibles son HTTP y HTTPS, y la ruta de acceso debe permitir un acceso de lectura.'
+    syntax:
+      content: 'applicationPackageDownloadUri: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationTypeName
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre del tipo de aplicación representa el nombre del tipo de aplicación que se encuentra en el manifiesto de aplicación.
+    syntax:
+      content: 'applicationTypeName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationTypeVersion
+    name: applicationTypeVersion
+    fullName: applicationTypeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La versión del tipo de aplicación representa la versión del tipo de aplicación que se encuentra en el manifiesto de aplicación.
+    syntax:
+      content: 'applicationTypeVersion: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.async
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica si el aprovisionamiento se debe realizar o no de forma asincrónica. Cuando se establece en true, la operación de aprovisionamiento se devuelve cuando el sistema acepta la solicitud y la operación de aprovisionamiento continúa sin ningún límite de tiempo de espera. El valor predeterminado es false. Para paquetes de aplicación de gran tamaño, se recomienda establecer el valor en true.'
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    name: ProvisionApplicationTypeDescriptionBase
+    spec.typeScript:
+      - name: ProvisionApplicationTypeDescriptionBase
+        fullName: ProvisionApplicationTypeDescriptionBase
+        uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
