@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.HealthEvent
+    name: HealthEvent
+    fullName: HealthEvent
+    children:
+      - azure-servicefabric.HealthEvent.description
+      - azure-servicefabric.HealthEvent.healthState
+      - azure-servicefabric.HealthEvent.isExpired
+      - azure-servicefabric.HealthEvent.lastErrorTransitionAt
+      - azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+      - azure-servicefabric.HealthEvent.lastOkTransitionAt
+      - azure-servicefabric.HealthEvent.lastWarningTransitionAt
+      - azure-servicefabric.HealthEvent.property
+      - azure-servicefabric.HealthEvent.removeWhenExpired
+      - azure-servicefabric.HealthEvent.sequenceNumber
+      - azure-servicefabric.HealthEvent.sourceId
+      - azure-servicefabric.HealthEvent.sourceUtcTimestamp
+      - azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="b2a01-101">Representa la información de estado notificado en una entidad de mantenimiento, como clústeres, aplicación o nodo, con metadatos adicionales que se agregan mediante el Administrador de estado.</span><span class="sxs-lookup"><span data-stu-id="b2a01-101">Represents health information reported on a health entity, such as cluster, application or node, with additional metadata added by the Health Manager.</span></span>'
+    extends:
+      name: azure-servicefabric.HealthInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b2a01-102">La descripción de la información de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="b2a01-102">The description of the health information.</span></span> <span data-ttu-id="b2a01-103">Representa el texto libre utilizado para agregar información legible por el ser humano sobre el informe.</span><span class="sxs-lookup"><span data-stu-id="b2a01-103">It represents free text used to add human readable information about the report.</span></span>
+      <span data-ttu-id="b2a01-104">La longitud máxima de la cadena de la descripción es de 4096 caracteres.</span><span class="sxs-lookup"><span data-stu-id="b2a01-104">The maximum string length for the description is 4096 characters.</span></span>
+      <span data-ttu-id="b2a01-105">Si la cadena proporcionada es más larga, se truncará automáticamente.</span><span class="sxs-lookup"><span data-stu-id="b2a01-105">If the provided string is longer, it will be automatically truncated.</span></span>
+      <span data-ttu-id="b2a01-106">Cuando está truncado, los últimos caracteres de la descripción contienen un marcador "[Truncado]" y el tamaño total de la cadena es de 4096 caracteres.</span><span class="sxs-lookup"><span data-stu-id="b2a01-106">When truncated, the last characters of the description contain a marker "[Truncated]", and total string size is 4096 characters.</span></span>
+      <span data-ttu-id="b2a01-107">La presencia del marcador indica a los usuarios que el truncamiento se ha producido.</span><span class="sxs-lookup"><span data-stu-id="b2a01-107">The presence of the marker indicates to users that truncation occurred.</span></span>
+      <span data-ttu-id="b2a01-108">Tenga en cuenta que, cuando se trunca, la descripción tiene menos de 4096 caracteres de la cadena original.</span><span class="sxs-lookup"><span data-stu-id="b2a01-108">Note that when truncated, the description has less than 4096 characters from the original string.</span></span>
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b2a01-109">El estado de mantenimiento de una entidad de Service Fabric como clúster, nodo, aplicación, servicio, partición, réplica etcetera. Los valores posibles son: ''Invalid'', ''Aceptar'', ''Advertencia'', ''Error'', ''Unknown''.</span><span class="sxs-lookup"><span data-stu-id="b2a01-109">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    syntax:
+      content: 'healthState: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.isExpired
+    name: isExpired
+    fullName: isExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b2a01-110">Devuelve true si el evento de mantenimiento está caducado, de lo contrario, false.</span><span class="sxs-lookup"><span data-stu-id="b2a01-110">Returns true if the health event is expired, otherwise false.</span></span>'
+    optional: true
+    syntax:
+      content: 'isExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastErrorTransitionAt
+    name: lastErrorTransitionAt
+    fullName: lastErrorTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b2a01-111">Si el estado actual es "Error", esta propiedad devuelve la hora a la que el informe de estado se notificó primero con 'Error'.</span><span class="sxs-lookup"><span data-stu-id="b2a01-111">If the current health state is 'Error', this property returns the time at which the health report was first reported with 'Error'.</span></span> <span data-ttu-id="b2a01-112">Para los informes periódicos, muchos informes con el mismo estado que se han generado sin embargo, esta propiedad devuelve solo la fecha y hora en el primer 'Error' se ha recibido el informe de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="b2a01-112">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Error' health report was received.</span></span>
+      <span data-ttu-id="b2a01-113">Si el estado actual es 'Aceptar' o 'Advertencia', devuelve la fecha y hora en que el estado de mantenimiento por última vez en 'Error', antes de realizar la transición a un estado diferente.</span><span class="sxs-lookup"><span data-stu-id="b2a01-113">If the current health state is 'Ok' or 'Warning', returns the date and time at which the health state was last in 'Error', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="b2a01-114">Si el estado de mantenimiento nunca fue 'Error', el valor será cero fecha y hora.</span><span class="sxs-lookup"><span data-stu-id="b2a01-114">If the health state was never 'Error', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastErrorTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+    name: lastModifiedUtcTimestamp
+    fullName: lastModifiedUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b2a01-115">La fecha y hora de última modificación el informe de mantenimiento de almacén de estado.</span><span class="sxs-lookup"><span data-stu-id="b2a01-115">The date and time when the health report was last modified by the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'lastModifiedUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastOkTransitionAt
+    name: lastOkTransitionAt
+    fullName: lastOkTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b2a01-116">Si el estado actual es 'Ok', esta propiedad devuelve la hora a la que el informe de estado se notificó primero con 'Aceptar'.</span><span class="sxs-lookup"><span data-stu-id="b2a01-116">If the current health state is 'Ok', this property returns the time at which the health report was first reported with 'Ok'.</span></span>
+      <span data-ttu-id="b2a01-117">Para los informes periódicos, es posible que se han generado numerosos informes con el mismo estado.</span><span class="sxs-lookup"><span data-stu-id="b2a01-117">For periodic reporting, many reports with the same state may have been generated.</span></span>
+      <span data-ttu-id="b2a01-118">Esta propiedad devuelve la fecha y hora en que se recibió el primer informe de mantenimiento 'Aceptar'.</span><span class="sxs-lookup"><span data-stu-id="b2a01-118">This property returns the date and time when the first 'Ok' health report was received.</span></span>
+      <span data-ttu-id="b2a01-119">Si el estado actual es 'Error' o 'Advertencia', devuelve la fecha y hora en que el estado de mantenimiento por última vez en 'Ok', antes de realizar la transición a un estado diferente.</span><span class="sxs-lookup"><span data-stu-id="b2a01-119">If the current health state is 'Error' or 'Warning', returns the date and time at which the health state was last in 'Ok', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="b2a01-120">Si el estado de mantenimiento nunca fue 'Aceptar', el valor será cero fecha y hora.</span><span class="sxs-lookup"><span data-stu-id="b2a01-120">If the health state was never 'Ok', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastOkTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastWarningTransitionAt
+    name: lastWarningTransitionAt
+    fullName: lastWarningTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b2a01-121">Si el estado actual es "Warning", esta propiedad devuelve la hora a la que el informe de estado se notificó primero con 'Advertencia'.</span><span class="sxs-lookup"><span data-stu-id="b2a01-121">If the current health state is 'Warning', this property returns the time at which the health report was first reported with 'Warning'.</span></span> <span data-ttu-id="b2a01-122">Para los informes periódicos, muchos informes con el mismo estado que se han generado sin embargo, esta propiedad devuelve solo la fecha y hora en el primer informe de mantenimiento de 'Advertencia' se ha recibido.</span><span class="sxs-lookup"><span data-stu-id="b2a01-122">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Warning' health report was received.</span></span>
+      <span data-ttu-id="b2a01-123">Si el estado actual es 'Aceptar' o 'Error', devuelve la fecha y hora en que el estado de mantenimiento por última vez en 'Advertencia' antes de realizar la transición a un estado diferente.</span><span class="sxs-lookup"><span data-stu-id="b2a01-123">If the current health state is 'Ok' or 'Error', returns the date and time at which the health state was last in 'Warning', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="b2a01-124">Si el estado de mantenimiento no se nunca 'advertencia', el valor será cero fecha y hora.</span><span class="sxs-lookup"><span data-stu-id="b2a01-124">If the health state was never 'Warning', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastWarningTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.property
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b2a01-125">La propiedad de la información de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="b2a01-125">The property of the health information.</span></span> <span data-ttu-id="b2a01-126">Una entidad puede tener informes de mantenimiento para diferentes propiedades.</span><span class="sxs-lookup"><span data-stu-id="b2a01-126">An entity can have health reports for different properties.</span></span>
+      <span data-ttu-id="b2a01-127">La propiedad es una cadena y no una enumeración fija para permitir al informador la flexibilidad de categorizar la condición de estado que desencadena el informe.</span><span class="sxs-lookup"><span data-stu-id="b2a01-127">The property is a string and not a fixed enumeration to allow the reporter flexibility to categorize the state condition that triggers the report.</span></span>
+      <span data-ttu-id="b2a01-128">Por ejemplo, un informador con SourceId "LocalWatchdog" puede supervisar el estado del disco disponible en un nodo, por lo que puede informar de la propiedad "AvailableDisk" en ese nodo.</span><span class="sxs-lookup"><span data-stu-id="b2a01-128">For example, a reporter with SourceId "LocalWatchdog" can monitor the state of the available disk on a node, so it can report "AvailableDisk" property on that node.</span></span>
+      <span data-ttu-id="b2a01-129">El mismo informador puede supervisar la conectividad del nodo, por lo que puede informar de una propiedad "Connectivity" en el mismo nodo.</span><span class="sxs-lookup"><span data-stu-id="b2a01-129">The same reporter can monitor the node connectivity, so it can report a property "Connectivity" on the same node.</span></span>
+      <span data-ttu-id="b2a01-130">En el almacén de estado, estos informes se tratan como eventos de mantenimiento independientes del nodo especificado.</span><span class="sxs-lookup"><span data-stu-id="b2a01-130">In the health store, these reports are treated as separate health events for the specified node.</span></span>
+      <span data-ttu-id="b2a01-131">Junto con SourceId, la propiedad identifica la información de mantenimiento de manera única.</span><span class="sxs-lookup"><span data-stu-id="b2a01-131">Together with the SourceId, the property uniquely identifies the health information.</span></span>
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.removeWhenExpired
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b2a01-132">Valor que indica si el informe se quita del almacén de estado cuando expire.</span><span class="sxs-lookup"><span data-stu-id="b2a01-132">Value that indicates whether the report is removed from health store when it expires.</span></span>
+      <span data-ttu-id="b2a01-133">Si se establece en true, el informe se quita del almacén de estado una vez que expire.</span><span class="sxs-lookup"><span data-stu-id="b2a01-133">If set to true, the report is removed from the health store after it expires.</span></span>
+      <span data-ttu-id="b2a01-134">Si se establece en false, el informe se trata como un error cuando expire.</span><span class="sxs-lookup"><span data-stu-id="b2a01-134">If set to false, the report is treated as an error when expired.</span></span> <span data-ttu-id="b2a01-135">El valor de esta propiedad es false de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="b2a01-135">The value of this property is false by default.</span></span>
+      <span data-ttu-id="b2a01-136">Cuando los clientes notifican periódicamente, deben establecer RemoveWhenExpired en false (valor predeterminado).</span><span class="sxs-lookup"><span data-stu-id="b2a01-136">When clients report periodically, they should set RemoveWhenExpired false (default).</span></span>
+      <span data-ttu-id="b2a01-137">De este modo, si el Informador tiene problemas (por ejemplo, un interbloqueo) y no se puede informar, la entidad se evalúa con error cuando expira el informe de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="b2a01-137">This way, if the reporter has issues (e.g. deadlock) and can't report, the entity is evaluated at error when the health report expires.</span></span>
+      <span data-ttu-id="b2a01-138">De este modo, se marca que la entidad está en estado de mantenimiento Error.</span><span class="sxs-lookup"><span data-stu-id="b2a01-138">This flags the entity as being in Error health state.</span></span>
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sequenceNumber
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b2a01-139">El número de secuencia para este informe de estado como una cadena numérica.</span><span class="sxs-lookup"><span data-stu-id="b2a01-139">The sequence number for this health report as a numeric string.</span></span>
+      <span data-ttu-id="b2a01-140">El número de secuencia del informe se usa por el almacén de estado para detectar informes obsoletos.</span><span class="sxs-lookup"><span data-stu-id="b2a01-140">The report sequence number is used by the health store to detect stale reports.</span></span>
+      <span data-ttu-id="b2a01-141">Si no se especifica, se genera automáticamente un número de secuencia por el cliente de estado cuando se agrega un informe.</span><span class="sxs-lookup"><span data-stu-id="b2a01-141">If not specified, a sequence number is auto-generated by the health client when a report is added.</span></span>
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceId
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b2a01-142">El nombre de origen que identifica el componente de cliente/guardián/sistema que genera la información de estado.</span><span class="sxs-lookup"><span data-stu-id="b2a01-142">The source name that identifies the client/watchdog/system component that generated the health information.</span></span>
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceUtcTimestamp
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b2a01-143">La fecha y hora en el informe de mantenimiento se envió por el origen.</span><span class="sxs-lookup"><span data-stu-id="b2a01-143">The date and time when the health report was sent by the source.</span></span>
+    optional: true
+    syntax:
+      content: 'sourceUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b2a01-144">La duración durante la cual este informe de mantenimiento es válido.</span><span class="sxs-lookup"><span data-stu-id="b2a01-144">The duration for which this health report is valid.</span></span> <span data-ttu-id="b2a01-145">Este campo usa el formato ISO8601 para especificar la duración.</span><span class="sxs-lookup"><span data-stu-id="b2a01-145">This field uses ISO8601 format for specifying the duration.</span></span>
+      <span data-ttu-id="b2a01-146">Cuando los clientes notifican periódicamente, deben enviar informes con una frecuencia mayor que el período de vida.</span><span class="sxs-lookup"><span data-stu-id="b2a01-146">When clients report periodically, they should send reports with higher frequency than time to live.</span></span>
+      <span data-ttu-id="b2a01-147">Si los clientes notifican en transición, pueden establecer el período de vida en Infinito.</span><span class="sxs-lookup"><span data-stu-id="b2a01-147">If clients report on transition, they can set the time to live to infinite.</span></span>
+      <span data-ttu-id="b2a01-148">Cuando expira el período de vida, el evento de estado que contiene la información de estado se quita del almacén de estado, si RemoveWhenExpired es true, o se evalúa en el error, si RemoveWhenExpired es false.</span><span class="sxs-lookup"><span data-stu-id="b2a01-148">When time to live expires, the health event that contains the health information is either removed from health store, if RemoveWhenExpired is true, or evaluated at error, if RemoveWhenExpired false.</span></span>
+      <span data-ttu-id="b2a01-149">Si no se especifica, el período de vida se establece de forma predeterminada en un valor infinito.</span><span class="sxs-lookup"><span data-stu-id="b2a01-149">If not specified, time to live defaults to infinite value.</span></span>
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthInformation
+    name: HealthInformation
+    spec.typeScript:
+      - name: HealthInformation
+        fullName: HealthInformation
+        uid: azure-servicefabric.HealthInformation
