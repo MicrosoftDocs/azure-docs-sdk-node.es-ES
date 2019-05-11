@@ -1,0 +1,218 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-network.InboundNatPool'
+    name: InboundNatPool
+    fullName: InboundNatPool
+    children:
+      - '@azure/arm-network.InboundNatPool.backendPort'
+      - '@azure/arm-network.InboundNatPool.enableFloatingIP'
+      - '@azure/arm-network.InboundNatPool.enableTcpReset'
+      - '@azure/arm-network.InboundNatPool.etag'
+      - '@azure/arm-network.InboundNatPool.frontendIPConfiguration'
+      - '@azure/arm-network.InboundNatPool.frontendPortRangeEnd'
+      - '@azure/arm-network.InboundNatPool.frontendPortRangeStart'
+      - '@azure/arm-network.InboundNatPool.id'
+      - '@azure/arm-network.InboundNatPool.idleTimeoutInMinutes'
+      - '@azure/arm-network.InboundNatPool.name'
+      - '@azure/arm-network.InboundNatPool.protocol'
+      - '@azure/arm-network.InboundNatPool.provisioningState'
+    langs:
+      - typeScript
+    type: interface
+    summary: Grupo NAT entrante del equilibrador de carga.
+    extends:
+      name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.backendPort'
+    name: backendPort
+    fullName: backendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El puerto usado para las conexiones internas del punto de conexión. Los valores aceptables son entre 1 y
+      65535.
+    syntax:
+      content: 'backendPort: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.enableFloatingIP'
+    name: enableFloatingIP
+    fullName: enableFloatingIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Configura el punto de conexión de una máquina virtual para la funcionalidad IP flotante necesaria para configurar un grupo de disponibilidad AlwaysOn de SQL. Esta configuración es necesaria al usar los grupos de disponibilidad AlwaysOn de SQL en SQL server. No se puede cambiar esta configuración después de crear el punto de conexión.
+    optional: true
+    syntax:
+      content: 'enableFloatingIP?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.enableTcpReset'
+    name: enableTcpReset
+    fullName: enableTcpReset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Recepción bidireccional TCP Reset en tiempo de espera de inactividad de flujo TCP o la terminación inesperada de la conexión.
+      Este elemento solo se usa cuando el protocolo está establecido en TCP.
+    optional: true
+    syntax:
+      content: 'enableTcpReset?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.etag'
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una de sólo lectura cadena única que cambia cada vez que el recurso se actualiza.
+    optional: true
+    syntax:
+      content: 'etag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.frontendIPConfiguration'
+    name: frontendIPConfiguration
+    fullName: frontendIPConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una referencia a las direcciones IP de front-end.
+    optional: true
+    syntax:
+      content: 'frontendIPConfiguration?: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.frontendPortRangeEnd'
+    name: frontendPortRangeEnd
+    fullName: frontendPortRangeEnd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El último número de puerto en el intervalo de puertos externos que se usará para proporcionar Nat de entrada a la NIC asociadas con un equilibrador de carga. Valores válidos están comprendidos entre 1 y 65535.
+    syntax:
+      content: 'frontendPortRangeEnd: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.frontendPortRangeStart'
+    name: frontendPortRangeStart
+    fullName: frontendPortRangeStart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El primer número de puerto en el intervalo de puertos externos que se usará para proporcionar Nat de entrada a la NIC asociadas con un equilibrador de carga. Valores válidos están comprendidos entre 1 y 65534.
+    syntax:
+      content: 'frontendPortRangeStart: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identificador del recurso.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.idleTimeoutInMinutes'
+    name: idleTimeoutInMinutes
+    fullName: idleTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El tiempo de espera para la conexión TCP inactiva. El valor se puede establecer entre 4 y 30 minutos. El valor predeterminado es 4 minutos. Este elemento solo se usa cuando el protocolo está establecido en TCP.
+    optional: true
+    syntax:
+      content: 'idleTimeoutInMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre del recurso que es único dentro de un grupo de recursos. Este nombre puede utilizarse para tener acceso al recurso.
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La referencia para el protocolo de transporte utilizado por el grupo NAT entrante. Los valores posibles son: ''Udp'', ''Tcp'', ''All'''
+    syntax:
+      content: 'protocol: TransportProtocol'
+      return:
+        type:
+          - '@azure/arm-network.TransportProtocol'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatPool.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Obtiene el estado de aprovisionamiento del recurso PublicIP. Los valores posibles son: ''Actualizar'', ''Deleting'' y ''Error''.'
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.TransportProtocol'
+    name: TransportProtocol
+    spec.typeScript:
+      - name: TransportProtocol
+        fullName: TransportProtocol
+        uid: '@azure/arm-network.TransportProtocol'

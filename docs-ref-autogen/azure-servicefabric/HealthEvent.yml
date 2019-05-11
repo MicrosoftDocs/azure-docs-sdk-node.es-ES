@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.HealthEvent
+    name: HealthEvent
+    fullName: HealthEvent
+    children:
+      - azure-servicefabric.HealthEvent.description
+      - azure-servicefabric.HealthEvent.healthState
+      - azure-servicefabric.HealthEvent.isExpired
+      - azure-servicefabric.HealthEvent.lastErrorTransitionAt
+      - azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+      - azure-servicefabric.HealthEvent.lastOkTransitionAt
+      - azure-servicefabric.HealthEvent.lastWarningTransitionAt
+      - azure-servicefabric.HealthEvent.property
+      - azure-servicefabric.HealthEvent.removeWhenExpired
+      - azure-servicefabric.HealthEvent.sequenceNumber
+      - azure-servicefabric.HealthEvent.sourceId
+      - azure-servicefabric.HealthEvent.sourceUtcTimestamp
+      - azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa la información de estado notificado en una entidad de mantenimiento, como clústeres, aplicación o nodo, con metadatos adicionales que se agregan mediante el Administrador de estado.'
+    extends:
+      name: azure-servicefabric.HealthInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La descripción de la información de mantenimiento. Representa el texto libre utilizado para agregar información legible por el ser humano sobre el informe.
+      La longitud máxima de la cadena de la descripción es de 4096 caracteres.
+      Si la cadena proporcionada es más larga, se truncará automáticamente.
+      Cuando está truncado, los últimos caracteres de la descripción contienen un marcador "[Truncado]" y el tamaño total de la cadena es de 4096 caracteres.
+      La presencia del marcador indica a los usuarios que el truncamiento se ha producido.
+      Tenga en cuenta que, cuando se trunca, la descripción tiene menos de 4096 caracteres de la cadena original.
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de mantenimiento de una entidad de Service Fabric como clúster, nodo, aplicación, servicio, partición, réplica etcetera. Los valores posibles son: ''Invalid'', ''Aceptar'', ''Advertencia'', ''Error'', ''Unknown''.'
+    syntax:
+      content: 'healthState: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.isExpired
+    name: isExpired
+    fullName: isExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Devuelve true si el evento de mantenimiento está caducado, de lo contrario, false.'
+    optional: true
+    syntax:
+      content: 'isExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastErrorTransitionAt
+    name: lastErrorTransitionAt
+    fullName: lastErrorTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Si el estado actual es "Error", esta propiedad devuelve la hora a la que el informe de estado se notificó primero con 'Error'. Para los informes periódicos, muchos informes con el mismo estado que se han generado sin embargo, esta propiedad devuelve solo la fecha y hora en el primer 'Error' se ha recibido el informe de mantenimiento.
+      Si el estado actual es 'Aceptar' o 'Advertencia', devuelve la fecha y hora en que el estado de mantenimiento por última vez en 'Error', antes de realizar la transición a un estado diferente.
+
+      Si el estado de mantenimiento nunca fue 'Error', el valor será cero fecha y hora.
+    optional: true
+    syntax:
+      content: 'lastErrorTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+    name: lastModifiedUtcTimestamp
+    fullName: lastModifiedUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La fecha y hora de última modificación el informe de mantenimiento de almacén de estado.
+    optional: true
+    syntax:
+      content: 'lastModifiedUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastOkTransitionAt
+    name: lastOkTransitionAt
+    fullName: lastOkTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Si el estado actual es 'Ok', esta propiedad devuelve la hora a la que el informe de estado se notificó primero con 'Aceptar'.
+      Para los informes periódicos, es posible que se han generado numerosos informes con el mismo estado.
+      Esta propiedad devuelve la fecha y hora en que se recibió el primer informe de mantenimiento 'Aceptar'.
+      Si el estado actual es 'Error' o 'Advertencia', devuelve la fecha y hora en que el estado de mantenimiento por última vez en 'Ok', antes de realizar la transición a un estado diferente.
+
+      Si el estado de mantenimiento nunca fue 'Aceptar', el valor será cero fecha y hora.
+    optional: true
+    syntax:
+      content: 'lastOkTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastWarningTransitionAt
+    name: lastWarningTransitionAt
+    fullName: lastWarningTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Si el estado actual es "Warning", esta propiedad devuelve la hora a la que el informe de estado se notificó primero con 'Advertencia'. Para los informes periódicos, muchos informes con el mismo estado que se han generado sin embargo, esta propiedad devuelve solo la fecha y hora en el primer informe de mantenimiento de 'Advertencia' se ha recibido.
+      Si el estado actual es 'Aceptar' o 'Error', devuelve la fecha y hora en que el estado de mantenimiento por última vez en 'Advertencia' antes de realizar la transición a un estado diferente.
+
+      Si el estado de mantenimiento no se nunca 'advertencia', el valor será cero fecha y hora.
+    optional: true
+    syntax:
+      content: 'lastWarningTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.property
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      La propiedad de la información de mantenimiento. Una entidad puede tener informes de mantenimiento para diferentes propiedades.
+      La propiedad es una cadena y no una enumeración fija para permitir al informador la flexibilidad de categorizar la condición de estado que desencadena el informe.
+      Por ejemplo, un informador con SourceId "LocalWatchdog" puede supervisar el estado del disco disponible en un nodo, por lo que puede informar de la propiedad "AvailableDisk" en ese nodo.
+      El mismo informador puede supervisar la conectividad del nodo, por lo que puede informar de una propiedad "Connectivity" en el mismo nodo.
+      En el almacén de estado, estos informes se tratan como eventos de mantenimiento independientes del nodo especificado.
+      Junto con SourceId, la propiedad identifica la información de mantenimiento de manera única.
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.removeWhenExpired
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Valor que indica si el informe se quita del almacén de estado cuando expire.
+      Si se establece en true, el informe se quita del almacén de estado una vez que expire.
+      Si se establece en false, el informe se trata como un error cuando expire. El valor de esta propiedad es false de forma predeterminada.
+      Cuando los clientes notifican periódicamente, deben establecer RemoveWhenExpired en false (valor predeterminado).
+      De este modo, si el Informador tiene problemas (por ejemplo, un interbloqueo) y no se puede informar, la entidad se evalúa con error cuando expira el informe de mantenimiento.
+      De este modo, se marca que la entidad está en estado de mantenimiento Error.
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sequenceNumber
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El número de secuencia para este informe de estado como una cadena numérica.
+      El número de secuencia del informe se usa por el almacén de estado para detectar informes obsoletos.
+      Si no se especifica, se genera automáticamente un número de secuencia por el cliente de estado cuando se agrega un informe.
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceId
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre de origen que identifica el componente de cliente/guardián/sistema que genera la información de estado.
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceUtcTimestamp
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La fecha y hora en el informe de mantenimiento se envió por el origen.
+    optional: true
+    syntax:
+      content: 'sourceUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      La duración durante la cual este informe de mantenimiento es válido. Este campo usa el formato ISO8601 para especificar la duración.
+      Cuando los clientes notifican periódicamente, deben enviar informes con una frecuencia mayor que el período de vida.
+      Si los clientes notifican en transición, pueden establecer el período de vida en Infinito.
+      Cuando expira el período de vida, el evento de estado que contiene la información de estado se quita del almacén de estado, si RemoveWhenExpired es true, o se evalúa en el error, si RemoveWhenExpired es false.
+      Si no se especifica, el período de vida se establece de forma predeterminada en un valor infinito.
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthInformation
+    name: HealthInformation
+    spec.typeScript:
+      - name: HealthInformation
+        fullName: HealthInformation
+        uid: azure-servicefabric.HealthInformation

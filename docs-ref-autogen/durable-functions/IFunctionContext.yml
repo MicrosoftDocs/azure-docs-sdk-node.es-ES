@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+items:
+  - uid: durable-functions.IFunctionContext
+    name: IFunctionContext
+    fullName: IFunctionContext
+    children:
+      - durable-functions.IFunctionContext.bindingData
+      - durable-functions.IFunctionContext.bindingDefinitions
+      - durable-functions.IFunctionContext.bindings
+      - durable-functions.IFunctionContext.df
+      - durable-functions.IFunctionContext.done
+      - durable-functions.IFunctionContext.executionContext
+      - durable-functions.IFunctionContext.invocationId
+      - durable-functions.IFunctionContext.log
+      - durable-functions.IFunctionContext.req
+      - durable-functions.IFunctionContext.res
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: Context
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindingData
+    name: bindingData
+    fullName: bindingData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Desencadenar metadatos y la función de los datos de invocación.
+    syntax:
+      content: 'bindingData: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindingDefinitions
+    name: bindingDefinitions
+    fullName: bindingDefinitions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Enlaces que se usa la función, tal como se define en function.json.'
+    syntax:
+      content: 'bindingDefinitions: BindingDefinition[]'
+      return:
+        type:
+          - 'BindingDefinition[]'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindings
+    name: bindings
+    fullName: bindings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Entrada y desencadenador de enlace de datos, como se define en function.json. Las propiedades de este objeto se generan dinámicamente y se denominado según la propiedad "name" en function.json.'
+    syntax:
+      content: 'bindings: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.df
+    name: df
+    fullName: df
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'df: DurableOrchestrationContext'
+      return:
+        type:
+          - durable-functions.DurableOrchestrationContext
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.done
+    name: 'done(Error | string | null, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Una función de devolución de llamada que señala al tiempo de ejecución que se ha completado el código. Si la función es sincrónica, debe llamar a context.done al final de la ejecución. Si la función es asincrónica, no debe usar esta devolución de llamada.'
+    syntax:
+      content: 'function done(err?: Error | string | null, result?: any)'
+      parameters:
+        - id: err
+          type:
+            - Error | string | null
+          description: 'Un error definido por el usuario para devolver al tiempo de ejecución. Si está presente, se producirá un error en la ejecución de la función.'
+          optional: true
+        - id: result
+          type:
+            - any
+          description: |
+            Un objeto que contiene los datos de enlace de salida. `result` se pasarán al JSON.stringify a menos que sea una cadena, un búfer, un ArrayBufferView o un número.
+          optional: true
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.executionContext
+    name: executionContext
+    fullName: executionContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Metadatos de la ejecución de función.
+    syntax:
+      content: 'executionContext: ExecutionContext'
+      return:
+        type:
+          - ExecutionContext
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.invocationId
+    name: invocationId
+    fullName: invocationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un GUID único por cada invocación de función.
+    syntax:
+      content: 'invocationId: string'
+      return:
+        type:
+          - string
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.log
+    name: log
+    fullName: log
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le permite escribir registros de la función de transmisión por secuencias. Llamar directamente a le permite escribir registros en el nivel de seguimiento predeterminado de la función de transmisión por secuencias.
+    syntax:
+      content: 'log: Logger'
+      return:
+        type:
+          - Logger
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.req
+    name: req
+    fullName: req
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Objeto de solicitud HTTP. Proporciona a la función al usar enlaces HTTP.
+    optional: true
+    syntax:
+      content: 'req?: HttpRequest'
+      return:
+        type:
+          - HttpRequest
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.res
+    name: res
+    fullName: res
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Objeto de respuesta HTTP. Proporciona a la función al usar enlaces HTTP.
+    optional: true
+    syntax:
+      content: 'res?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+references:
+  - uid: durable-functions.DurableOrchestrationContext
+    name: DurableOrchestrationContext
+    spec.typeScript:
+      - name: DurableOrchestrationContext
+        fullName: DurableOrchestrationContext
+        uid: durable-functions.DurableOrchestrationContext

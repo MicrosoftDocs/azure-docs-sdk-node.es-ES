@@ -1,0 +1,586 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sql.Database
+    name: Database
+    fullName: Database
+    children:
+      - azure-arm-sql.Database.catalogCollation
+      - azure-arm-sql.Database.collation
+      - azure-arm-sql.Database.createMode
+      - azure-arm-sql.Database.creationDate
+      - azure-arm-sql.Database.currentServiceObjectiveName
+      - azure-arm-sql.Database.currentSku
+      - azure-arm-sql.Database.databaseId
+      - azure-arm-sql.Database.defaultSecondaryLocation
+      - azure-arm-sql.Database.earliestRestoreDate
+      - azure-arm-sql.Database.elasticPoolId
+      - azure-arm-sql.Database.failoverGroupId
+      - azure-arm-sql.Database.id
+      - azure-arm-sql.Database.kind
+      - azure-arm-sql.Database.licenseType
+      - azure-arm-sql.Database.location
+      - azure-arm-sql.Database.longTermRetentionBackupResourceId
+      - azure-arm-sql.Database.managedBy
+      - azure-arm-sql.Database.maxLogSizeBytes
+      - azure-arm-sql.Database.maxSizeBytes
+      - azure-arm-sql.Database.name
+      - azure-arm-sql.Database.readScale
+      - azure-arm-sql.Database.recoverableDatabaseId
+      - azure-arm-sql.Database.recoveryServicesRecoveryPointId
+      - azure-arm-sql.Database.requestedServiceObjectiveName
+      - azure-arm-sql.Database.restorableDroppedDatabaseId
+      - azure-arm-sql.Database.restorePointInTime
+      - azure-arm-sql.Database.sampleName
+      - azure-arm-sql.Database.sku
+      - azure-arm-sql.Database.sourceDatabaseDeletionDate
+      - azure-arm-sql.Database.sourceDatabaseId
+      - azure-arm-sql.Database.status
+      - azure-arm-sql.Database.tags
+      - azure-arm-sql.Database.type
+      - azure-arm-sql.Database.zoneRedundant
+    langs:
+      - typeScript
+    type: interface
+    summary: Un recurso de base de datos.
+    extends:
+      name: azure-arm-sql.TrackedResource
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.catalogCollation
+    name: catalogCollation
+    fullName: catalogCollation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Intercalación del catálogo de metadatos. Los valores posibles son: ''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS'''
+    optional: true
+    syntax:
+      content: 'catalogCollation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.collation
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La intercalación de la base de datos.
+    optional: true
+    syntax:
+      content: 'collation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.createMode
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Especifica el modo de creación de la base de datos.
+      Valor predeterminado: creación de base de datos normal.
+
+      Copia: crea una base de datos como una copia de una base de datos existente. sourceDatabaseId debe especificarse como el identificador de recurso de la base de datos de origen.
+
+      Secundaria: crea una base de datos como una réplica secundaria de una base de datos existente. sourceDatabaseId debe especificarse como el identificador de recurso de la base de datos principal existente.
+
+      PointInTimeRestore: Crea una base de datos mediante la restauración de un punto de copia de seguridad de una base de datos existente. sourceDatabaseId debe especificarse como el identificador de recurso de la base de datos existente, y se debe especificar restorePointInTime.
+
+      Recuperación: Crea una base de datos mediante la restauración de una copia de seguridad con replicación geográfica. sourceDatabaseId debe especificarse como el identificador de recurso de base de datos recuperable para restaurar.
+
+      Restaurar: Crea una base de datos mediante la restauración de una copia de seguridad de una base de datos eliminada. debe especificarse sourceDatabaseId. Si sourceDatabaseId es el identificador de recurso original de la base de datos, debe especificarse sourceDatabaseDeletionDate. De lo contrario sourceDatabaseId debe ser el identificador de recurso de base de datos eliminada y sourceDatabaseDeletionDate se omite.
+      También se puede especificar restorePointInTime para restaurar a partir de un momento anterior en el tiempo.
+
+      RestoreLongTermRetentionBackup: Crea una base de datos mediante la restauración desde un almacén de retención a largo plazo. recoveryServicesRecoveryPointResourceId debe especificarse como el identificador de recurso de punto de recuperación.
+
+      Copiar base de datos secundaria y RestoreLongTermRetentionBackup no se admiten para la edición DataWarehouse. Los valores posibles son: 'Default', 'Copy', 'Secondary', 'PointInTimeRestore', 'Restore', 'Recovery', 'RestoreExternalBackup', 'RestoreExternalBackupSecondary', 'RestoreLongTermRetentionBackup', 'OnlineSecondary'
+    optional: true
+    syntax:
+      content: 'createMode?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.creationDate
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La fecha de creación de la base de datos (formato ISO8601).
+    optional: true
+    syntax:
+      content: 'creationDate?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.currentServiceObjectiveName
+    name: currentServiceObjectiveName
+    fullName: currentServiceObjectiveName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El servicio nivel objetivo nombre actual de la base de datos.
+    optional: true
+    syntax:
+      content: 'currentServiceObjectiveName?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.currentSku
+    name: currentSku
+    fullName: currentSku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre y el nivel de la SKU.
+    optional: true
+    syntax:
+      content: 'currentSku?: Sku'
+      return:
+        type:
+          - azure-arm-sql.Sku
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.databaseId
+    name: databaseId
+    fullName: databaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de la base de datos.
+    optional: true
+    syntax:
+      content: 'databaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.defaultSecondaryLocation
+    name: defaultSecondaryLocation
+    fullName: defaultSecondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La región secundaria de forma predeterminada para esta base de datos.
+    optional: true
+    syntax:
+      content: 'defaultSecondaryLocation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.earliestRestoreDate
+    name: earliestRestoreDate
+    fullName: earliestRestoreDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Este registra la fecha de inicio más temprana y la hora de restauración está disponible para esta base de datos (formato ISO8601).
+    optional: true
+    syntax:
+      content: 'earliestRestoreDate?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.elasticPoolId
+    name: elasticPoolId
+    fullName: elasticPoolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de recurso del grupo elástico que contiene esta base de datos.
+    optional: true
+    syntax:
+      content: 'elasticPoolId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.failoverGroupId
+    name: failoverGroupId
+    fullName: failoverGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identificador de recursos del grupo de conmutación por error que pertenece esta base de datos.
+    optional: true
+    syntax:
+      content: 'failoverGroupId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identificador del recurso.
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tipo de base de datos. Se trata de metadatos que se usan para la experiencia del portal de Azure.
+    optional: true
+    syntax:
+      content: 'kind?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.licenseType
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El tipo de licencia que se aplicará para esta base de datos. Los valores posibles son: ''LicenseIncluded'', ''BasePrice'''
+    optional: true
+    syntax:
+      content: 'licenseType?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ubicación del recurso
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.longTermRetentionBackupResourceId
+    name: longTermRetentionBackupResourceId
+    fullName: longTermRetentionBackupResourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Operación de esta base de datos de crear el identificador de recurso de copia de seguridad de retención asociado a largo plazo.
+    optional: true
+    syntax:
+      content: 'longTermRetentionBackupResourceId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.managedBy
+    name: managedBy
+    fullName: managedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Recursos que administra la base de datos.
+    optional: true
+    syntax:
+      content: 'managedBy?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.maxLogSizeBytes
+    name: maxLogSizeBytes
+    fullName: maxLogSizeBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El tamaño máximo de registro para esta base de datos.
+    optional: true
+    syntax:
+      content: 'maxLogSizeBytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.maxSizeBytes
+    name: maxSizeBytes
+    fullName: maxSizeBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El tamaño máximo de la base de datos que se expresa en bytes.
+    optional: true
+    syntax:
+      content: 'maxSizeBytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre del recurso.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.readScale
+    name: readScale
+    fullName: readScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de enrutamiento de solo lectura. Si está habilitada, las conexiones que tienen intención de aplicaciones establecida en readonly en su cadena de conexión se pueden enrutar a una réplica secundaria de solo lectura en la misma región. Los valores posibles son: ''Enabled'', ''Desactivado'''
+    optional: true
+    syntax:
+      content: 'readScale?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.recoverableDatabaseId
+    name: recoverableDatabaseId
+    fullName: recoverableDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de recursos de la base de datos recuperable asociada con crear esta base de datos.
+    optional: true
+    syntax:
+      content: 'recoverableDatabaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.recoveryServicesRecoveryPointId
+    name: recoveryServicesRecoveryPointId
+    fullName: recoveryServicesRecoveryPointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de recurso del punto de recuperación asociado con la operación de esta base de datos de creación.
+    optional: true
+    syntax:
+      content: 'recoveryServicesRecoveryPointId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.requestedServiceObjectiveName
+    name: requestedServiceObjectiveName
+    fullName: requestedServiceObjectiveName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El servicio solicitado objetivo nombre de nivel de la base de datos.
+    optional: true
+    syntax:
+      content: 'requestedServiceObjectiveName?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.restorableDroppedDatabaseId
+    name: restorableDroppedDatabaseId
+    fullName: restorableDroppedDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de recursos de la base de datos eliminada asociado con la operación de esta base de datos de creación.
+    optional: true
+    syntax:
+      content: 'restorableDroppedDatabaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.restorePointInTime
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica el punto en el tiempo (en formato ISO8601) de la base de datos de origen que se restaurarán para crear la nueva base de datos.
+    optional: true
+    syntax:
+      content: 'restorePointInTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.sampleName
+    name: sampleName
+    fullName: sampleName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El nombre del esquema de ejemplo para aplicar al crear esta base de datos. Los valores posibles son: ''AdventureWorksLT'', ''WideWorldImportersStd'', ''WideWorldImportersFull'''
+    optional: true
+    syntax:
+      content: 'sampleName?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre y el nivel de la SKU.
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - azure-arm-sql.Sku
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.sourceDatabaseDeletionDate
+    name: sourceDatabaseDeletionDate
+    fullName: sourceDatabaseDeletionDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica el tiempo que se eliminó la base de datos.
+    optional: true
+    syntax:
+      content: 'sourceDatabaseDeletionDate?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.sourceDatabaseId
+    name: sourceDatabaseId
+    fullName: sourceDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de recursos de la base de datos de origen asociado con la operación de esta base de datos de creación.
+    optional: true
+    syntax:
+      content: 'sourceDatabaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de la base de datos. Los valores posibles son: "En línea", "restaurar'', ''RecoveryPending'', ''Recuperar'', ''Suspect'', ''Sin conexión'', ''En espera'', ''Apagado'', ''EmergencyMode'', ''Cerrado automáticamente'', ''Copiar'', ''Crear'', ''Inaccesible'', ''OfflineSecondary'', ''Pausar'', ''en pausa'', ''Reanudar'', ''Escala'''
+    optional: true
+    syntax:
+      content: 'status?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Etiquetas del recurso.
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tipo de recurso.
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.Database.zoneRedundant
+    name: zoneRedundant
+    fullName: zoneRedundant
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si es o no esta base de datos con redundancia de zona, lo que significa que las réplicas de esta base de datos se distribuirán entre varias zonas de disponibilidad.'
+    optional: true
+    syntax:
+      content: 'zoneRedundant?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+references:
+  - uid: azure-arm-sql.TrackedResource
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: azure-arm-sql.TrackedResource
+  - uid: azure-arm-sql.Sku
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: azure-arm-sql.Sku

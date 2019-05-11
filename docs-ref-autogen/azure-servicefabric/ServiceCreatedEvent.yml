@@ -1,0 +1,264 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServiceCreatedEvent
+    name: ServiceCreatedEvent
+    fullName: ServiceCreatedEvent
+    children:
+      - azure-servicefabric.ServiceCreatedEvent.applicationName
+      - azure-servicefabric.ServiceCreatedEvent.applicationTypeName
+      - azure-servicefabric.ServiceCreatedEvent.category
+      - azure-servicefabric.ServiceCreatedEvent.eventInstanceId
+      - azure-servicefabric.ServiceCreatedEvent.hasCorrelatedEvents
+      - azure-servicefabric.ServiceCreatedEvent.isStateful
+      - azure-servicefabric.ServiceCreatedEvent.kind
+      - azure-servicefabric.ServiceCreatedEvent.minReplicaSetSize
+      - azure-servicefabric.ServiceCreatedEvent.partitionCount
+      - azure-servicefabric.ServiceCreatedEvent.partitionId
+      - azure-servicefabric.ServiceCreatedEvent.serviceId
+      - azure-servicefabric.ServiceCreatedEvent.serviceInstance
+      - azure-servicefabric.ServiceCreatedEvent.servicePackageVersion
+      - azure-servicefabric.ServiceCreatedEvent.serviceTypeName
+      - azure-servicefabric.ServiceCreatedEvent.targetReplicaSetSize
+      - azure-servicefabric.ServiceCreatedEvent.timeStamp
+    langs:
+      - typeScript
+    type: interface
+    summary: Evento que se creó el servicio.
+    extends:
+      name: azure-servicefabric.ServiceEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.applicationName
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre de la aplicación.
+    syntax:
+      content: 'applicationName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.applicationTypeName
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre del tipo de aplicación.
+    syntax:
+      content: 'applicationTypeName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.category
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La categoría de eventos.
+    optional: true
+    syntax:
+      content: 'category?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.eventInstanceId
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de la instancia de FabricEvent.
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.hasCorrelatedEvents
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Muestra que hay un eventos relacionados disponibles.
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.isStateful
+    name: isStateful
+    fullName: isStateful
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica si el servicio es con estado.
+    syntax:
+      content: 'isStateful: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.minReplicaSetSize
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tamaño mínimo del conjunto de réplicas.
+    syntax:
+      content: 'minReplicaSetSize: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.partitionCount
+    name: partitionCount
+    fullName: partitionCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Número de particiones.
+    syntax:
+      content: 'partitionCount: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un identificador interno usado por Service Fabric para identificar de forma única una partición. Esto es un GUID generado aleatoriamente cuando se creó el servicio. Id. de partición es único y no cambia durante la vigencia del servicio. Si el mismo servicio se ha eliminado y vuelto a crear los identificadores de sus particiones sería diferente.
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.serviceId
+    name: serviceId
+    fullName: serviceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La identidad del servicio. Este identificador es una representación codificada del nombre del servicio. Esto se utiliza en las API de REST para identificar el recurso del servicio.
+      A partir de la versión 6.0, los nombres jerárquicos se delimitan con el "\~" caracteres. Por ejemplo, si el nombre del servicio es "fabric: / myapp/app1/svc1", la identidad del servicio sería "myapp ~ app1\~svc1" en 6.0 + y "myapp/app1/svc1" en versiones anteriores.
+    syntax:
+      content: 'serviceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.serviceInstance
+    name: serviceInstance
+    fullName: serviceInstance
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id. de instancia de servicio.
+    syntax:
+      content: 'serviceInstance: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.servicePackageVersion
+    name: servicePackageVersion
+    fullName: servicePackageVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Versión del paquete de servicio.
+    syntax:
+      content: 'servicePackageVersion: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.serviceTypeName
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre del tipo de servicio.
+    syntax:
+      content: 'serviceTypeName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.targetReplicaSetSize
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tamaño del conjunto de réplicas de destino.
+    syntax:
+      content: 'targetReplicaSetSize: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceCreatedEvent.timeStamp
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Se registró el evento de tiempo.
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServiceEvent
+    name: ServiceEvent
+    spec.typeScript:
+      - name: ServiceEvent
+        fullName: ServiceEvent
+        uid: azure-servicefabric.ServiceEvent
