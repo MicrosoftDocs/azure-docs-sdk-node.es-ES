@@ -1,0 +1,205 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-compute.AvailabilitySet
+    name: AvailabilitySet
+    fullName: AvailabilitySet
+    children:
+      - azure-arm-compute.AvailabilitySet.id
+      - azure-arm-compute.AvailabilitySet.location
+      - azure-arm-compute.AvailabilitySet.name
+      - azure-arm-compute.AvailabilitySet.platformFaultDomainCount
+      - azure-arm-compute.AvailabilitySet.platformUpdateDomainCount
+      - azure-arm-compute.AvailabilitySet.sku
+      - azure-arm-compute.AvailabilitySet.statuses
+      - azure-arm-compute.AvailabilitySet.tags
+      - azure-arm-compute.AvailabilitySet.type
+      - azure-arm-compute.AvailabilitySet.virtualMachines
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Especifica información sobre el conjunto de disponibilidad que se debe asignar a la máquina virtual.
+      Las máquinas virtuales especificadas en el mismo conjunto de disponibilidad se asignan a varios nodos para maximizar la disponibilidad. Para obtener más información acerca de los conjuntos de disponibilidad, consulte [administrar la disponibilidad de las máquinas virtuales](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+      <br><br> Para obtener más información sobre el mantenimiento planeado de Azure, consulte [mantenimiento planeado de máquinas virtuales en Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Actualmente, solo se agrega una máquina virtual al conjunto de disponibilidad en tiempo de creación. No se puede agregar una máquina virtual existente a un conjunto de disponibilidad.
+    extends:
+      name: azure-arm-compute.Resource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identificador de recurso
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ubicación de recursos
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre del recurso
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.platformFaultDomainCount
+    name: platformFaultDomainCount
+    fullName: platformFaultDomainCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Número de dominios de error.
+    optional: true
+    syntax:
+      content: 'platformFaultDomainCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.platformUpdateDomainCount
+    name: platformUpdateDomainCount
+    fullName: platformUpdateDomainCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Actualizar número de dominios.
+    optional: true
+    syntax:
+      content: 'platformUpdateDomainCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Establezca la SKU de la disponibilidad, el nombre sólo es necesario establecer. Consulte AvailabilitySetSkuTypes para el conjunto de valores posibles. Use "Alineada" para las máquinas virtuales con discos administrados y clásicos para máquinas virtuales con discos no administrados. Valor predeterminado es "Clásica".'
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - azure-arm-compute.Sku
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.statuses
+    name: statuses
+    fullName: statuses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La información de estado de recursos.
+    optional: true
+    syntax:
+      content: 'statuses?: InstanceViewStatus[]'
+      return:
+        type:
+          - 'azure-arm-compute.InstanceViewStatus[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Etiquetas del recurso
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tipo de recurso
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.virtualMachines
+    name: virtualMachines
+    fullName: virtualMachines
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Establece una lista de referencias a todas las máquinas virtuales en la disponibilidad.
+    optional: true
+    syntax:
+      content: 'virtualMachines?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+references:
+  - uid: azure-arm-compute.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-compute.Resource
+  - uid: azure-arm-compute.Sku
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: azure-arm-compute.Sku
+  - uid: 'azure-arm-compute.InstanceViewStatus[]'
+    name: 'InstanceViewStatus[]'
+    spec.typeScript:
+      - name: InstanceViewStatus
+        fullName: InstanceViewStatus
+        uid: azure-arm-compute.InstanceViewStatus
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-arm-compute.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-compute.SubResource
+      - name: '[]'
+        fullName: '[]'

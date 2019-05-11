@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.AudioAnalyzerPreset
+    name: AudioAnalyzerPreset
+    fullName: AudioAnalyzerPreset
+    children:
+      - azure-arm-mediaservices.AudioAnalyzerPreset.audioLanguage
+      - azure-arm-mediaservices.AudioAnalyzerPreset.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: 'El valor preestablecido de Audio Analyzer aplica un conjunto predefinido de operaciones de análisis basado en inteligencia artificial, incluidas la transcripción de voz. Actualmente, el valor predeterminado admite el procesamiento de contenido con una sola pista de audio.'
+    extends:
+      name: azure-arm-mediaservices.Preset
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.AudioAnalyzerPreset.audioLanguage
+    name: audioLanguage
+    fullName: audioLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El idioma para la carga en la entrada con el formato BCP-47 de ''etiqueta de idioma y región'' audio (p. ej.: ''es-es'').  La lista de idiomas admitidos son inglés ("en-US" y "en-GB"), español (''es-es'' y "es-MX"), francés ("fr-FR"), italiano ("it-IT''), japonés ("ja-JP"), portugués ("pt-BR"), chino ("zh-CN"), alemán ("de-DE"), árabe ("ar-EG"y ''ar-SY''), ruso ('' ru-RU''), Hindi (''hi-IN") y coreano (''ko-KR"). Si conoce el lenguaje de su contenido, se recomienda que se especifique. Si el idioma no se especifica o se establece en null, la detección automática de idioma elegirá el primer idioma detectado y realizará el procesamiento con el idioma seleccionado lo que dure el archivo. Actualmente, esta característica de detección de idioma admite inglés, chino, francés, alemán, italiano, japonés, español, ruso y portugués. Por ahora no se admite el cambio dinámico entre idiomas una vez detectado el primer idioma. La detección automática funciona mejor con las grabaciones de audio con voz perceptible claramente. Si la detección automática no puede encontrar el idioma, transcripción sería reserva en "en-US"."'
+    optional: true
+    syntax:
+      content: 'audioLanguage?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.AudioAnalyzerPreset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Preset
+    name: Preset
+    spec.typeScript:
+      - name: Preset
+        fullName: Preset
+        uid: azure-arm-mediaservices.Preset
