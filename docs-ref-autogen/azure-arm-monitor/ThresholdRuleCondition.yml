@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.ThresholdRuleCondition
+    name: ThresholdRuleCondition
+    fullName: ThresholdRuleCondition
+    children:
+      - azure-arm-monitor.ThresholdRuleCondition.dataSource
+      - azure-arm-monitor.ThresholdRuleCondition.odatatype
+      - azure-arm-monitor.ThresholdRuleCondition.operator
+      - azure-arm-monitor.ThresholdRuleCondition.threshold
+      - azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+      - azure-arm-monitor.ThresholdRuleCondition.windowSize
+    langs:
+      - typeScript
+    type: interface
+    summary: Una condición de regla basada en una métrica cruza un umbral.
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: el recurso desde el que la regla recopila los datos. Para este tipo de origen de datos siempre será de tipo RuleMetricDataSource.
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.operator
+    name: operator
+    fullName: operator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'el operador que se utiliza para comparar los datos y el umbral. Los valores posibles son: ''GreaterThan'', ''GreaterThanOrEqual'', ''LessThan'', ''LessThanOrEqual'''
+    syntax:
+      content: 'operator: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.threshold
+    name: threshold
+    fullName: threshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: el valor de umbral que activa la alerta.
+    syntax:
+      content: 'threshold: number'
+      return:
+        type:
+          - number
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+    name: timeAggregation
+    fullName: timeAggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      el operador de agregación de tiempo. Cómo se deben combinar los datos que se recopilan con el tiempo.
+      El valor predeterminado es el PrimaryAggregationType de la métrica. Los valores posibles son: 'Medio', 'Mínimo', 'Máximo', 'Total', 'Last'
+    optional: true
+    syntax:
+      content: 'timeAggregation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.windowSize
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'el período de tiempo (en formato de duración ISO 8601) que se usa para supervisar la actividad de alerta según el umbral. Si se especifica, a continuación, debe estar entre 5 minutos y 1 día.'
+    optional: true
+    syntax:
+      content: 'windowSize?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource

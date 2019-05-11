@@ -1,0 +1,279 @@
+### YamlMime:UniversalReference
+items:
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    name: SpeechConfig
+    fullName: SpeechConfig
+    children:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy_1
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+    langs:
+      - typeScript
+    type: class
+    summary: Configuración de voz.
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+    name: authorizationToken
+    fullName: authorizationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Obtiene o establece el token de autorización.
+      Nota: El llamador debe asegurarse de que el token de autorización es válido. Antes de que expire el token de autorización, el llamador debe actualizarlo mediante una llamada a este establecedor con un nuevo token válido.
+    syntax:
+      content: 'public authorizationToken: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Cierra la configuración.
+    syntax:
+      content: function close()
+      parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Obtiene o establece el identificador del extremo de un modelo de voz personalizados que se usa para el reconocimiento de voz.
+    syntax:
+      content: 'public endpointId: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+    name: 'fromAuthorizationToken(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Crea una instancia de la fábrica de voz con la región y el token de autorización inicial especificado.
+      Nota: El llamador debe asegurarse de que el token de autorización es válido. Antes de que expire el token de autorización, el llamador debe actualizarlo mediante una llamada a este establecedor con un nuevo token válido.
+      Nota: Use un token derivado de la clave de suscripción LanguageUnderstanding en caso de que desea usar el reconocedor intención. Como los valores de configuración se copian al crear un nuevo módulo de reconocimiento, el nuevo valor del token no se aplicará a los reconocedores que ya se han creado. Para los reconocedores que se han creado antes, deberá establecer el token de autorización del reconocedor correspondiente para el token de actualización. En caso contrario, los reconocedores producirán errores durante el reconocimiento.
+    syntax:
+      content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
+      parameters:
+        - id: authorizationToken
+          type:
+            - string
+          description: El token de autorización inicial.
+        - id: region
+          type:
+            - string
+          description: 'El nombre de región (consulte la <a href="https://aka.ms/csspeech/region">página región</a>).'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+    name: 'fromEndpoint(URL, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Crea una instancia de la configuración de la voz con el punto de conexión especificado y la clave de suscripción.
+      Este método está pensado solo para los usuarios que utilizan un punto de conexión de servicio no estándar o parámetros.
+      Nota: Use su clave de suscripción LanguageUnderstanding en caso de que desea usar el reconocedor intención.
+      Nota: No se cambian los parámetros de consulta especificados en la dirección URL del extremo, incluso si están establecidos por cualquier otra API.
+      Por ejemplo, si se ha definido el idioma en el uri como parámetro de consulta "language = de-DE" y también establecer SpeechConfig.speechRecognitionLanguage = "en-US", prevalece la configuración de idioma en el uri y el eficaz lenguaje es "de-DE". Solo los parámetros que no se especifican en el punto de conexión de dirección URL se puede establecer otras API.
+      Nota: Para usar el token de autorización con fromEndpoint, pasar una cadena vacía a la subscriptionKey en el método fromEndpoint y, a continuación, establezca authorizationToken = "tokens" en la instancia de SpeechConfig creada para usar el token de autorización.
+    syntax:
+      content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
+      parameters:
+        - id: endpoint
+          type:
+            - URL
+          description: El extremo de servicio al que conectarse.
+        - id: subscriptionKey
+          type:
+            - string
+          description: La clave de suscripción.
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+    name: 'fromSubscription(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Instancia estática de SpeechConfig devuelve pasando subscriptionKey y servicio de región.
+      Nota: Use su clave de suscripción LanguageUnderstanding en caso de que desea usar el reconocedor intención.
+    syntax:
+      content: 'static function fromSubscription(subscriptionKey: string, region: string)'
+      parameters:
+        - id: subscriptionKey
+          type:
+            - string
+          description: La clave de suscripción.
+        - id: region
+          type:
+            - string
+          description: 'El nombre de región (consulte la <a href="https://aka.ms/csspeech/region">página región</a>).'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+    name: 'getProperty(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Devuelve el valor actual de una propiedad arbitraria.
+    syntax:
+      content: 'function getProperty(name: string, def?: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: El nombre de la propiedad a la consulta.
+        - id: def
+          type:
+            - string
+          description: No se conoce el valor devuelto en el caso de la propiedad.
+          optional: true
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+    name: outputFormat
+    fullName: outputFormat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Obtiene o establece el formato de salida.
+    syntax:
+      content: 'public outputFormat: OutputFormat'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.OutputFormat
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+    name: 'setProperty(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Establece una propiedad arbitraria.
+    syntax:
+      content: 'function setProperty(name: string, value: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: El nombre de la propiedad para establecer.
+        - id: value
+          type:
+            - string
+          description: |
+            El nuevo valor de la propiedad.
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy
+    name: 'setProxy(string, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Establece la configuración de proxy.
+      Solo es relevante en entornos de Node.js.
+      Se agregó en la versión 1.4.0.
+    syntax:
+      content: 'function setProxy(proxyHostName: string, proxyPort: number)'
+      parameters:
+        - id: proxyHostName
+          type:
+            - string
+          description: El nombre de host del servidor proxy.
+        - id: proxyPort
+          type:
+            - number
+          description: |
+            El número de puerto del servidor proxy.
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy_1
+    name: 'setProxy(string, number, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Establece la configuración de proxy.
+      Solo es relevante en entornos de Node.js.
+      Se agregó en la versión 1.4.0.
+    syntax:
+      content: 'function setProxy(proxyHostName: string, proxyPort: number, proxyUserName: string, proxyPassword: string)'
+      parameters:
+        - id: proxyHostName
+          type:
+            - string
+          description: 'El nombre de host del servidor proxy, sin el esquema de protocolo (http://)'
+        - id: proxyPort
+          type:
+            - number
+          description: ''
+        - id: proxyUserName
+          type:
+            - string
+          description: El nombre de usuario del servidor proxy.
+        - id: proxyPassword
+          type:
+            - string
+          description: |
+            La contraseña del servidor proxy.
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+    name: speechRecognitionLanguage
+    fullName: speechRecognitionLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Obtiene o establece el idioma de entrada.
+    syntax:
+      content: 'public speechRecognitionLanguage: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+references:
+  - uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+    name: OutputFormat
+    spec.typeScript:
+      - name: OutputFormat
+        fullName: OutputFormat
+        uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    name: SpeechConfig
+    spec.typeScript:
+      - name: SpeechConfig
+        fullName: SpeechConfig
+        uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig

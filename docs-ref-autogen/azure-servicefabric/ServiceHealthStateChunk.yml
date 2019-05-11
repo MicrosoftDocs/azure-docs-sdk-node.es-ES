@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServiceHealthStateChunk
+    name: ServiceHealthStateChunk
+    fullName: ServiceHealthStateChunk
+    children:
+      - azure-servicefabric.ServiceHealthStateChunk.healthState
+      - azure-servicefabric.ServiceHealthStateChunk.partitionHealthStateChunks
+      - azure-servicefabric.ServiceHealthStateChunk.serviceName
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa el fragmento de estado de mantenimiento de un servicio, que contiene el nombre del servicio, su estado de mantenimiento agregado y cualquier partición que respeta los filtros en la descripción de la consulta de la salud fragmento clúster.'
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de mantenimiento de una entidad de Service Fabric como clúster, nodo, aplicación, servicio, partición, réplica etcetera. Los valores posibles son: ''Invalid'', ''Aceptar'', ''Advertencia'', ''Error'', ''Unknown''.'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceHealthStateChunk.partitionHealthStateChunks
+    name: partitionHealthStateChunks
+    fullName: partitionHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La lista de partición estado estado fragmentos que pertenecen al servicio que respetan los filtros en el estado del clúster fragmentos descripción de la consulta.
+    optional: true
+    syntax:
+      content: 'partitionHealthStateChunks?: PartitionHealthStateChunkList'
+      return:
+        type:
+          - azure-servicefabric.PartitionHealthStateChunkList
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceHealthStateChunk.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre del servicio cuyos fragmentos de estado de mantenimiento se proporcionan en este objeto.
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk
+  - uid: azure-servicefabric.PartitionHealthStateChunkList
+    name: PartitionHealthStateChunkList
+    spec.typeScript:
+      - name: PartitionHealthStateChunkList
+        fullName: PartitionHealthStateChunkList
+        uid: azure-servicefabric.PartitionHealthStateChunkList

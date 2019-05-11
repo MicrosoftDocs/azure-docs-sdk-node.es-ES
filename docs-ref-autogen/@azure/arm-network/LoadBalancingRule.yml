@@ -1,0 +1,274 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-network.LoadBalancingRule'
+    name: LoadBalancingRule
+    fullName: LoadBalancingRule
+    children:
+      - '@azure/arm-network.LoadBalancingRule.backendAddressPool'
+      - '@azure/arm-network.LoadBalancingRule.backendPort'
+      - '@azure/arm-network.LoadBalancingRule.disableOutboundSnat'
+      - '@azure/arm-network.LoadBalancingRule.enableFloatingIP'
+      - '@azure/arm-network.LoadBalancingRule.enableTcpReset'
+      - '@azure/arm-network.LoadBalancingRule.etag'
+      - '@azure/arm-network.LoadBalancingRule.frontendIPConfiguration'
+      - '@azure/arm-network.LoadBalancingRule.frontendPort'
+      - '@azure/arm-network.LoadBalancingRule.id'
+      - '@azure/arm-network.LoadBalancingRule.idleTimeoutInMinutes'
+      - '@azure/arm-network.LoadBalancingRule.loadDistribution'
+      - '@azure/arm-network.LoadBalancingRule.name'
+      - '@azure/arm-network.LoadBalancingRule.probe'
+      - '@azure/arm-network.LoadBalancingRule.protocol'
+      - '@azure/arm-network.LoadBalancingRule.provisioningState'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una regla para un equilibrador de carga de equilibrio de carga.
+    extends:
+      name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.backendAddressPool'
+    name: backendAddressPool
+    fullName: backendAddressPool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una referencia a un grupo de DIP. El tráfico entrante al azar está equilibrada entre direcciones IP en la direcciones IP de back-end.
+    optional: true
+    syntax:
+      content: 'backendAddressPool?: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.backendPort'
+    name: backendPort
+    fullName: backendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El puerto usado para las conexiones internas del punto de conexión. Los valores aceptables son entre 0 y
+      65535. Tenga en cuenta que el valor 0 permite a "Cualquier puerto"
+    optional: true
+    syntax:
+      content: 'backendPort?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.disableOutboundSnat'
+    name: disableOutboundSnat
+    fullName: disableOutboundSnat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Configura SNAT para las máquinas virtuales en el grupo de back-end para usar la dirección de publicIP especificada en el front-end de la regla de equilibrio de carga.
+    optional: true
+    syntax:
+      content: 'disableOutboundSnat?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.enableFloatingIP'
+    name: enableFloatingIP
+    fullName: enableFloatingIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Configura el punto de conexión de una máquina virtual para la funcionalidad IP flotante necesaria para configurar un grupo de disponibilidad AlwaysOn de SQL. Esta configuración es necesaria al usar los grupos de disponibilidad AlwaysOn de SQL en SQL server. No se puede cambiar esta configuración después de crear el punto de conexión.
+    optional: true
+    syntax:
+      content: 'enableFloatingIP?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.enableTcpReset'
+    name: enableTcpReset
+    fullName: enableTcpReset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Recepción bidireccional TCP Reset en tiempo de espera de inactividad de flujo TCP o la terminación inesperada de la conexión.
+      Este elemento solo se usa cuando el protocolo está establecido en TCP.
+    optional: true
+    syntax:
+      content: 'enableTcpReset?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.etag'
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una de sólo lectura cadena única que cambia cada vez que el recurso se actualiza.
+    optional: true
+    syntax:
+      content: 'etag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.frontendIPConfiguration'
+    name: frontendIPConfiguration
+    fullName: frontendIPConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una referencia a las direcciones IP de front-end.
+    optional: true
+    syntax:
+      content: 'frontendIPConfiguration?: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.frontendPort'
+    name: frontendPort
+    fullName: frontendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El puerto del punto de conexión externo. Números de puerto para cada regla deben ser únicos en el equilibrador de carga. Los valores aceptables son entre 0 y 65534. Tenga en cuenta que el valor 0 permite a "Cualquier puerto"
+    syntax:
+      content: 'frontendPort: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identificador del recurso.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.idleTimeoutInMinutes'
+    name: idleTimeoutInMinutes
+    fullName: idleTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El tiempo de espera para la conexión TCP inactiva. El valor se puede establecer entre 4 y 30 minutos. El valor predeterminado es 4 minutos. Este elemento solo se usa cuando el protocolo está establecido en TCP.
+    optional: true
+    syntax:
+      content: 'idleTimeoutInMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.loadDistribution'
+    name: loadDistribution
+    fullName: loadDistribution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La directiva de distribución de carga para esta regla. Los valores posibles son ''Default'', ''SourceIP'' y ''SourceIPProtocol''. Los valores posibles son: ''Default'', ''SourceIP'', ''SourceIPProtocol'''
+    optional: true
+    syntax:
+      content: 'loadDistribution?: LoadDistribution'
+      return:
+        type:
+          - '@azure/arm-network.LoadDistribution'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre del recurso que es único dentro de un grupo de recursos. Este nombre puede utilizarse para tener acceso al recurso.
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.probe'
+    name: probe
+    fullName: probe
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La referencia del sondeo de equilibrador de carga utilizado por la regla de equilibrio de carga.
+    optional: true
+    syntax:
+      content: 'probe?: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La referencia para el protocolo de transporte utilizado por la regla de equilibrio de carga. Los valores posibles son: ''Udp'', ''Tcp'', ''All'''
+    syntax:
+      content: 'protocol: TransportProtocol'
+      return:
+        type:
+          - '@azure/arm-network.TransportProtocol'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.LoadBalancingRule.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Obtiene el estado de aprovisionamiento del recurso PublicIP. Los valores posibles son: ''Actualizar'', ''Deleting'' y ''Error''.'
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.LoadDistribution'
+    name: LoadDistribution
+    spec.typeScript:
+      - name: LoadDistribution
+        fullName: LoadDistribution
+        uid: '@azure/arm-network.LoadDistribution'
+  - uid: '@azure/arm-network.TransportProtocol'
+    name: TransportProtocol
+    spec.typeScript:
+      - name: TransportProtocol
+        fullName: TransportProtocol
+        uid: '@azure/arm-network.TransportProtocol'

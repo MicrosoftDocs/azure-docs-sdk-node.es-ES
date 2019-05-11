@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+items:
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+    name: PushAudioInputStream
+    fullName: PushAudioInputStream
+    children:
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.close
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.create
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.createPullStream
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.createPushStream
+      - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.write
+    langs:
+      - typeScript
+    type: class
+    summary: Representa memoria inserción copia audio flujo de entrada utilizado para configuraciones de entrada de audio personalizadas.
+    extends:
+      name: microsoft-cognitiveservices-speech-sdk.AudioInputStream
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.close
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Cierra la secuencia.
+    syntax:
+      content: function close()
+      parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.create
+    name: create(AudioStreamFormat)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea una memoria respaldada PushAudioInputStream con el formato de audio especificado.
+    syntax:
+      content: 'static function create(format?: AudioStreamFormat)'
+      parameters:
+        - id: format
+          type:
+            - microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+          description: El formato de datos de audio en el que el audio se escribirán en método de la secuencia de audio inserción write() (actualmente solo compatibilidad con 16 kHz 16 bits mono PCM).
+          optional: true
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.createPullStream
+    name: 'createPullStream(PullAudioInputStreamCallback, AudioStreamFormat)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un PullAudioInputStream que delega a la interfaz de devolución de llamada especificadas para los métodos read() y close().
+    syntax:
+      content: 'static function createPullStream(callback: PullAudioInputStreamCallback, format?: AudioStreamFormat)'
+      parameters:
+        - id: callback
+          type:
+            - microsoft-cognitiveservices-speech-sdk.PullAudioInputStreamCallback
+          description: 'El objeto de entrada de audio personalizado, derivado de PullAudioInputStreamCallback'
+        - id: format
+          type:
+            - microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+          description: El formato de datos de audio en el que se devolverá audio desde el método de devolución de llamada de read() (actualmente solo compatibilidad con 16 kHz 16 bits mono PCM).
+          optional: true
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.PullAudioInputStream
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.createPushStream
+    name: createPushStream(AudioStreamFormat)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea una memoria respaldada PushAudioInputStream con el formato de audio especificado.
+    syntax:
+      content: 'static function createPushStream(format?: AudioStreamFormat)'
+      parameters:
+        - id: format
+          type:
+            - microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+          description: El formato de datos de audio en el que el audio se escribirán en método de la secuencia de audio inserción write() (actualmente solo compatibilidad con 16 kHz 16 bits mono PCM).
+          optional: true
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream.write
+    name: write(ArrayBuffer)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Escribe los datos de audio especificados mediante la realización de una copia interna de los datos.
+    syntax:
+      content: 'function write(dataBuffer: ArrayBuffer)'
+      parameters:
+        - id: dataBuffer
+          type:
+            - ArrayBuffer
+          description: |
+            El búfer de audio de los cuales esta función realizará una copia.
+    package: microsoft-cognitiveservices-speech-sdk
+references:
+  - uid: microsoft-cognitiveservices-speech-sdk.AudioInputStream
+    name: AudioInputStream
+    spec.typeScript:
+      - name: AudioInputStream
+        fullName: AudioInputStream
+        uid: microsoft-cognitiveservices-speech-sdk.AudioInputStream
+  - uid: microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+    name: AudioStreamFormat
+    spec.typeScript:
+      - name: AudioStreamFormat
+        fullName: AudioStreamFormat
+        uid: microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
+  - uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+    name: PushAudioInputStream
+    spec.typeScript:
+      - name: PushAudioInputStream
+        fullName: PushAudioInputStream
+        uid: microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
+  - uid: microsoft-cognitiveservices-speech-sdk.PullAudioInputStreamCallback
+    name: PullAudioInputStreamCallback
+    spec.typeScript:
+      - name: PullAudioInputStreamCallback
+        fullName: PullAudioInputStreamCallback
+        uid: microsoft-cognitiveservices-speech-sdk.PullAudioInputStreamCallback
+  - uid: microsoft-cognitiveservices-speech-sdk.PullAudioInputStream
+    name: PullAudioInputStream
+    spec.typeScript:
+      - name: PullAudioInputStream
+        fullName: PullAudioInputStream
+        uid: microsoft-cognitiveservices-speech-sdk.PullAudioInputStream

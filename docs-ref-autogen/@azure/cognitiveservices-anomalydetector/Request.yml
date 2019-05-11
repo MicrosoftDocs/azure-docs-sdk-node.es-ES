@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.Request'
+    name: Request
+    fullName: Request
+    children:
+      - '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+      - '@azure/cognitiveservices-anomalydetector.Request.granularity'
+      - '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+      - '@azure/cognitiveservices-anomalydetector.Request.period'
+      - '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+      - '@azure/cognitiveservices-anomalydetector.Request.series'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa la solicitud.
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+    name: customInterval
+    fullName: customInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Intervalo personalizado se usa para establecer el intervalo de tiempo no estándar, por ejemplo, si la serie es de 5 minutos, solicitud puede establecerse como {"granularidad": "minuciosamente", "customInterval": 5}.'
+    optional: true
+    syntax:
+      content: 'customInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.granularity'
+    name: granularity
+    fullName: granularity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Solo puede tener uno de los años, mensualmente, semanalmente, diariamente, cada hora o minuciosamente. Granularidad se usa para comprobar si la serie de entrada es válida. Los valores posibles son: ''anual'', ''mensualmente'', ''semanal'', ''diario'', ''hourly'', ''minuciosamente'''
+    syntax:
+      content: 'granularity: Granularity'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Granularity'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+    name: maxAnomalyRatio
+    fullName: maxAnomalyRatio
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Argumento opcional avanzada de parámetro de modelo, proporción máxima anomalías en una serie temporal.'
+    optional: true
+    syntax:
+      content: 'maxAnomalyRatio?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Argumento opcional, valor periódico de una serie temporal. Si el valor es null o no está presente, la API determinará el período automáticamente.'
+    optional: true
+    syntax:
+      content: 'period?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+    name: sensitivity
+    fullName: sensitivity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Argumento opcional, advanced parámetro de modelo, entre 0 y 99, menor será el valor es, cuanto mayor sea el valor del margen será lo que significa que se aceptarán menos anomalías.'
+    optional: true
+    syntax:
+      content: 'sensitivity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.series'
+    name: series
+    fullName: series
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Puntos de datos de series temporales. Puntos deben ordenarse por la marca de tiempo en orden ascendente para que coincida con el resultado de la detección de anomalías. Si los datos no están ordenados correctamente o si hay duplicado de la marca de tiempo, la API no funcionará. En este caso, se devolverá un mensaje de error.'
+    syntax:
+      content: 'series: Point[]'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Point[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+references:
+  - uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+    name: Granularity
+    spec.typeScript:
+      - name: Granularity
+        fullName: Granularity
+        uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+  - uid: '@azure/cognitiveservices-anomalydetector.Point[]'
+    name: 'Point[]'
+    spec.typeScript:
+      - name: Point
+        fullName: Point
+        uid: '@azure/cognitiveservices-anomalydetector.Point'
+      - name: '[]'
+        fullName: '[]'
