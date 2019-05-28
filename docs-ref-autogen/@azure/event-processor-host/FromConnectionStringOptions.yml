@@ -30,7 +30,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '{cadena} [consumerGroup] El nombre del grupo de consumidores en el centro de eventos. Valor predeterminado: ** `"$default"` **.'
+    summary: '{cadena} [consumerGroup] El nombre del grupo de consumidores en el centro de eventos. Valor predeterminado: **`"$default"`**.'
     optional: true
     syntax:
       content: 'consumerGroup?: undefined | string'
@@ -76,8 +76,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      {number} [fastScanInterval] Hay dos veces intervalo posible entre los exámenes en busca de particiones disponibles, rápidas y lentas. El intervalo rápido (corto) ** `in seconds` ** se usa después de un examen en qué concesión robo se ha producido, para promover el reequilibrio más rápido.
-      Valor predeterminado: ** `3` segundos**.
+      {number} [fastScanInterval] Hay dos veces intervalo posible entre los exámenes en busca de particiones disponibles, rápidas y lentas. El intervalo rápido (corto) **`in seconds`** se usa después de un examen en qué concesión robo se ha producido, para promover el reequilibrio más rápido.
+      Valor predeterminado: **`3` segundos**.
     optional: true
     syntax:
       content: 'fastScanInterval?: undefined | number'
@@ -107,7 +107,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '{number} [leaseDuration] Duración de una concesión ** `in seconds` ** antes de que expire, a menos que se renueva. Valor predeterminado: ** `30` segundos**, valor mínimo: ** `15` segundos**, valor máximo: ** `60` segundos**.'
+    summary: '{number} [leaseDuration] Duración de una concesión **`in seconds`** antes de que expire, a menos que se renueva. Valor predeterminado: **`30` segundos**, valor mínimo: **`15` segundos**, valor máximo: **`60` segundos**.'
     optional: true
     syntax:
       content: 'leaseDuration?: undefined | number'
@@ -123,8 +123,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      {number} [leaseRenewInterval] El intervalo de suspensión ** `in seconds` ** entre análisis.
-      Valor predeterminado: ** `10` segundos**.
+      {number} [leaseRenewInterval] El intervalo de suspensión **`in seconds`** entre análisis.
+      Valor predeterminado: **`10` segundos**.
 
       Permite que una implementación de administrador de concesiones especificar con qué frecuencia debe buscar las concesiones y renovarlos PartitionManager. Para redistribuir las concesiones de manera oportuna después de un host deja de funcionar, se recomienda un intervalo relativamente corto, como los diez segundos. Obviamente, debe ser menor que la mitad de la duración de concesión, para evitar la expiración accidental.
     optional: true
@@ -159,7 +159,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '{number} [slowScanInterval] El intervalo (long) lento ** `in seconds` ** se usa después de un examen en qué concesión robo no se produjo, para reducir el análisis innecesario cuando el sistema está en estado estable. Valor predeterminado: ** `5` segundos**.'
+    summary: '{number} [slowScanInterval] El intervalo (long) lento **`in seconds`** se usa después de un examen en qué concesión robo no se produjo, para reducir el análisis innecesario cuando el sistema está en estado estable. Valor predeterminado: **`5` segundos**.'
     optional: true
     syntax:
       content: 'slowScanInterval?: undefined | number'
@@ -174,7 +174,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '{number} [startupScanDelay] El tiempo de retardo ** `in seconds` ** entre el primer examen para las particiones disponibles y el segundo. Esto forma parte de una optimización de inicio que permite a los hosts individuales son visibles para otros hosts y, por tanto, obtener un recuento más preciso del número de hosts en el sistema, antes de intentar calcular cuántas particiones debe poseen. Valor predeterminado: ** `30` segundos**.'
+    summary: '{number} [startupScanDelay] El tiempo de retardo **`in seconds`** entre el primer examen para las particiones disponibles y el segundo. Esto forma parte de una optimización de inicio que permite a los hosts individuales son visibles para otros hosts y, por tanto, obtener un recuento más preciso del número de hosts en el sistema, antes de intentar calcular cuántas particiones debe poseen. Valor predeterminado: **`30` segundos**.'
     optional: true
     syntax:
       content: 'startupScanDelay?: undefined | number'
