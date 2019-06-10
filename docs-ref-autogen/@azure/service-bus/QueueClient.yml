@@ -1,0 +1,246 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.QueueClient'
+    name: QueueClient
+    fullName: QueueClient
+    children:
+      - '@azure/service-bus.QueueClient.close'
+      - '@azure/service-bus.QueueClient.createReceiver'
+      - '@azure/service-bus.QueueClient.createReceiver_1'
+      - '@azure/service-bus.QueueClient.createSender'
+      - '@azure/service-bus.QueueClient.entityPath'
+      - '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+      - '@azure/service-bus.QueueClient.id'
+      - '@azure/service-bus.QueueClient.peek'
+      - '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="ab7ad-101">Describe al cliente que permite interactuar con una cola de Service Bus.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-101">Describes the client that allows interacting with a Service Bus Queue.</span></span>
+      <span data-ttu-id="ab7ad-102">Use el `createQueueClient` función en el objeto ServiceBusClient para crear una instancia QueueClient</span><span class="sxs-lookup"><span data-stu-id="ab7ad-102">Use the `createQueueClient` function on the ServiceBusClient object to instantiate a QueueClient</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ab7ad-103">Cierra todos los vínculos AMQP para remitentes/receptores creados por este cliente.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-103">Closes all the AMQP links for sender/receivers created by this client.</span></span>
+      <span data-ttu-id="ab7ad-104">Una vez cerrado, ni el QueueClient ni sus remitente/receptores pueden usarse para realizar más operaciones.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-104">Once closed, neither the QueueClient nor its sender/receivers can be used for any further operations.</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver'
+    name: createReceiver(ReceiveMode)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ab7ad-105">Crea un receptor para recibir mensajes de una cola que no tienen sesiones habilitadas.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-105">Creates a Receiver for receiving messages from a Queue which does not have sessions enabled.</span></span>
+      - <span data-ttu-id="ab7ad-106">Produce el error si ya existe un receptor abierto para este QueueClient.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-106">Throws error if an open receiver already exists for this QueueClient.</span></span>
+      - <span data-ttu-id="ab7ad-107">Produce `InvalidOperationError` si la cola tiene sesiones habilitadas (en cuyo caso, utilice la sobrecarga de este método que toma `sessionOptions` argumento)</span><span class="sxs-lookup"><span data-stu-id="ab7ad-107">Throws `InvalidOperationError` if the Queue has sessions enabled (in which case, use the overload of this method which takes `sessionOptions` argument)</span></span>
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |
+            <span data-ttu-id="ab7ad-108">Una enumeración que indica el modo en que se deben recibir los mensajes.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-108">An enum indicating the mode in which messages should be received.</span></span> <span data-ttu-id="ab7ad-109">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="ab7ad-109">Possible values are:</span></span>
+            - <span data-ttu-id="ab7ad-110">`ReceiveMode.peekLock`: Una vez que se recibe un mensaje en este modo, el receptor tiene un bloqueo en el mensaje durante un tiempo determinado.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-110">`ReceiveMode.peekLock`: Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="ab7ad-111">Si el mensaje no se resuelvan mediante este tiempo, llega a activarlo de Service Bus para ser capturado por la siguiente operación de recepción.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-111">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>
+            - <span data-ttu-id="ab7ad-112">`ReceiveMode.receiveAndDelete`: Los mensajes recibidos en este modo se quitarán automáticamente de Service Bus.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-112">`ReceiveMode.receiveAndDelete`: Messages received in this mode get automatically removed from Service Bus.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.Receiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver_1'
+    name: 'createReceiver(ReceiveMode, SessionReceiverOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ab7ad-113">Crea un receptor para recibir mensajes desde una sesión habilitada la cola.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-113">Creates a Receiver for receiving messages from a session enabled Queue.</span></span> <span data-ttu-id="ab7ad-114">Cuando no se especifica ningún Id. de sesión, se utiliza una sesión aleatoria entre las sesiones disponibles.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-114">When no sessionId is given, a random session among the available sessions is used.</span></span>
+      - <span data-ttu-id="ab7ad-115">Se produce error si un receptor abierto ya existe para la dada sessionId.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-115">Throws error if an open receiver already exists for given sessionId.</span></span>
+      - <span data-ttu-id="ab7ad-116">Produce `SessionCannotBeLockedError` si la cola no tienen sesiones habilitadas (en cuyo caso no pase el `sessionOptions` argumento) o si Service Bus no es capaz de obtener un bloqueo en la sesión (en qué casos vuelva a intentarlo más tarde)</span><span class="sxs-lookup"><span data-stu-id="ab7ad-116">Throws `SessionCannotBeLockedError` if the Queue does not have sessions enabled (in which case do not pass the `sessionOptions` argument) or if Service Bus is not able to get a lock on the session (in which case try again after some time)</span></span>
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode, sessionOptions: SessionReceiverOptions)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |-
+            <span data-ttu-id="ab7ad-117">Una enumeración que indica el modo en que se deben recibir los mensajes.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-117">An enum indicating the mode in which messages should be received.</span></span> <span data-ttu-id="ab7ad-118">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="ab7ad-118">Possible values are:</span></span>
+            - <span data-ttu-id="ab7ad-119">`ReceiveMode.peekLock`: Una vez que se recibe un mensaje en este modo, el receptor tiene un bloqueo en el mensaje durante un tiempo determinado.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-119">`ReceiveMode.peekLock`: Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="ab7ad-120">Si el mensaje no se resuelvan mediante este tiempo, llega a activarlo de Service Bus para ser capturado por la siguiente operación de recepción.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-120">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>
+            - <span data-ttu-id="ab7ad-121">`ReceiveMode.receiveAndDelete`: Los mensajes recibidos en este modo se quitarán automáticamente de Service Bus.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-121">`ReceiveMode.receiveAndDelete`: Messages received in this mode get automatically removed from Service Bus.</span></span>
+        - id: sessionOptions
+          type:
+            - '@azure/service-bus.SessionReceiverOptions'
+          description: |
+            <span data-ttu-id="ab7ad-122">Opciones para proporcionar el Id. de sesión y la duración de la renovación del bloqueo automático para el receptor de sesión.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-122">Options to provide sessionId and duration of automatic lock renewal for the session receiver.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.SessionReceiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ab7ad-123">Crea un remitente que se usará para enviar mensajes, la programación de los mensajes se envíen en un momento posterior y cancelando tales mensajes programados.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-123">Creates a Sender to be used for sending messages, scheduling messages to be sent at a later time and cancelling such scheduled messages.</span></span>
+      - <span data-ttu-id="ab7ad-124">Se produce error si un remitente abrirlo ya existe para este QueueClient.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-124">Throws error if an open sender already exists for this QueueClient.</span></span>
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ab7ad-125">La ruta de acceso para la cola de Service Bus para el que se creó este cliente.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-125">The path for the Service Bus Queue for which this client is created.</span></span>
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+    name: getDeadLetterQueuePath(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ab7ad-126">Devuelve el nombre de cola de mensajes no enviados correspondiente para la cola representada por el nombre especificado.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-126">Returns the corresponding dead letter queue name for the queue represented by the given name.</span></span>
+      <span data-ttu-id="ab7ad-127">Utilícelo en el `createQueueClient` funcionan en el `ServiceBusClient` instancia para recibir mensajes de una cola de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-127">Use this in the `createQueueClient` function on the `ServiceBusClient` instance to receive messages from a dead letter queue.</span></span>
+    syntax:
+      content: 'static function getDeadLetterQueuePath(queueName: string)'
+      parameters:
+        - id: queueName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="ab7ad-128">Nombre de la cola de los resultados se obtienen nombre de cuyo equivalente cola de mensajes</span><span class="sxs-lookup"><span data-stu-id="ab7ad-128">Name of the queue whose dead letter counterpart's name is being fetched</span></span>
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ab7ad-129">Un identificador único para este cliente.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-129">A unique identifier for this client.</span></span>
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ab7ad-130">Recupera el siguiente lote de mensajes activos (incluidos diferida, pero no deadlettered mensajes).</span><span class="sxs-lookup"><span data-stu-id="ab7ad-130">Fetches the next batch of active messages (including deferred but not deadlettered messages).</span></span>
+      - <span data-ttu-id="ab7ad-131">La primera llamada a `peek()` captura el primer mensaje activo.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-131">The first call to `peek()` fetches the first active message.</span></span> <span data-ttu-id="ab7ad-132">Cada llamada posterior realizada captura el mensaje subsiguiente.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-132">Each subsequent call fetches the subsequent message.</span></span>
+      - <span data-ttu-id="ab7ad-133">A diferencia de un `received` mensaje, `peeked` mensaje es una versión de solo lectura del mensaje.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-133">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="ab7ad-134">No puede ser `Completed/Abandoned/Deferred/Deadlettered`.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-134">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="ab7ad-135">No se puede renovar el bloqueo en él.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-135">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ab7ad-136">Busca el número deseado de mensajes activos (incluidos diferida, pero no los mensajes deadlettered) del número de secuencia especificado.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-136">Peeks the desired number of active messages (including deferred but not deadlettered messages) from the specified sequence number.</span></span>
+      - <span data-ttu-id="ab7ad-137">A diferencia de un `received` mensaje, `peeked` mensaje es una versión de solo lectura del mensaje.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-137">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="ab7ad-138">No puede ser `Completed/Abandoned/Deferred/Deadlettered`.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-138">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="ab7ad-139">No se puede renovar el bloqueo en él.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-139">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="ab7ad-140">El número de secuencia desde donde leer el mensaje.</span><span class="sxs-lookup"><span data-stu-id="ab7ad-140">The sequence number from where to read the message.</span></span>
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    spec.typeScript:
+      - name: Receiver
+        fullName: Receiver
+        uid: '@azure/service-bus.Receiver'
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    spec.typeScript:
+      - name: SessionReceiverOptions
+        fullName: SessionReceiverOptions
+        uid: '@azure/service-bus.SessionReceiverOptions'
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    spec.typeScript:
+      - name: SessionReceiver
+        fullName: SessionReceiver
+        uid: '@azure/service-bus.SessionReceiver'
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'
