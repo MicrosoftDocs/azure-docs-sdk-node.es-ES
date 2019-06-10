@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.UpgradePolicy'
+    name: UpgradePolicy
+    fullName: UpgradePolicy
+    children:
+      - '@azure/arm-compute.UpgradePolicy.automaticOSUpgradePolicy'
+      - '@azure/arm-compute.UpgradePolicy.mode'
+      - '@azure/arm-compute.UpgradePolicy.rollingUpgradePolicy'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Describe una directiva de actualización - gradual, manual o automática.'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.UpgradePolicy.automaticOSUpgradePolicy'
+    name: automaticOSUpgradePolicy
+    fullName: automaticOSUpgradePolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Parámetros de configuración que se usan para realizar la actualización automática del sistema operativo.
+    optional: true
+    syntax:
+      content: 'automaticOSUpgradePolicy?: AutomaticOSUpgradePolicy'
+      return:
+        type:
+          - '@azure/arm-compute.AutomaticOSUpgradePolicy'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.UpgradePolicy.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica el modo de una actualización a las máquinas virtuales del conjunto de escalado.<br /><br /> Los valores posibles son:<br /><br /> **Manual** -controlar la aplicación de actualizaciones a las máquinas virtuales del conjunto de escalado. Para ello, use la acción manualUpgrade.<br /><br />
+      **Automática** -todas las máquinas virtuales del conjunto de escalado se actualizan automáticamente al mismo tiempo. Los valores posibles son: 'Automatic', 'Manual', 'Gradual'
+    optional: true
+    syntax:
+      content: 'mode?: UpgradeMode'
+      return:
+        type:
+          - '@azure/arm-compute.UpgradeMode'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.UpgradePolicy.rollingUpgradePolicy'
+    name: rollingUpgradePolicy
+    fullName: rollingUpgradePolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Los parámetros de configuración que se utiliza al realizar una actualización gradual.
+    optional: true
+    syntax:
+      content: 'rollingUpgradePolicy?: RollingUpgradePolicy'
+      return:
+        type:
+          - '@azure/arm-compute.RollingUpgradePolicy'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AutomaticOSUpgradePolicy'
+    name: AutomaticOSUpgradePolicy
+    spec.typeScript:
+      - name: AutomaticOSUpgradePolicy
+        fullName: AutomaticOSUpgradePolicy
+        uid: '@azure/arm-compute.AutomaticOSUpgradePolicy'
+  - uid: '@azure/arm-compute.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/arm-compute.UpgradeMode'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    spec.typeScript:
+      - name: RollingUpgradePolicy
+        fullName: RollingUpgradePolicy
+        uid: '@azure/arm-compute.RollingUpgradePolicy'
