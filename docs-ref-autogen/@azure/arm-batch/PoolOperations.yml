@@ -1,0 +1,785 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.PoolOperations'
+    name: PoolOperations
+    fullName: PoolOperations
+    children:
+      - '@azure/arm-batch.PoolOperations.beginCreate'
+      - '@azure/arm-batch.PoolOperations.beginDeleteMethod'
+      - '@azure/arm-batch.PoolOperations.create'
+      - '@azure/arm-batch.PoolOperations.deleteMethod'
+      - '@azure/arm-batch.PoolOperations.disableAutoScale'
+      - '@azure/arm-batch.PoolOperations.disableAutoScale_2'
+      - '@azure/arm-batch.PoolOperations.disableAutoScale_1'
+      - '@azure/arm-batch.PoolOperations.get'
+      - '@azure/arm-batch.PoolOperations.get_2'
+      - '@azure/arm-batch.PoolOperations.get_1'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccount'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccount_2'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccount_1'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccountNext'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccountNext_2'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccountNext_1'
+      - '@azure/arm-batch.PoolOperations.constructor'
+      - '@azure/arm-batch.PoolOperations.stopResize'
+      - '@azure/arm-batch.PoolOperations.stopResize_2'
+      - '@azure/arm-batch.PoolOperations.stopResize_1'
+      - '@azure/arm-batch.PoolOperations.update'
+      - '@azure/arm-batch.PoolOperations.update_2'
+      - '@azure/arm-batch.PoolOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Clase que representa un PoolOperations.
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.beginCreate'
+    name: 'beginCreate(string, string, string, Pool, Models.PoolBeginCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un nuevo grupo dentro de la cuenta especificada.
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, options?: Models.PoolBeginCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: Parámetros adicionales para crear grupos.
+        - id: options
+          type:
+            - Models.PoolBeginCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elimina el grupo especificado.
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.create'
+    name: 'create(string, string, string, Pool, Models.PoolCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un nuevo grupo dentro de la cuenta especificada.
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, options?: Models.PoolCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: Parámetros adicionales para crear grupos.
+        - id: options
+          type:
+            - Models.PoolCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elimina el grupo especificado.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.disableAutoScale'
+    name: 'disableAutoScale(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Deshabilita el escalado automático para un grupo.
+    syntax:
+      content: 'function disableAutoScale(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.disableAutoScale_2'
+    name: 'disableAutoScale(string, string, string, RequestOptionsBase, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(resourceGroupName: string, accountName: string, poolName: string, options: RequestOptionsBase, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.disableAutoScale_1'
+    name: 'disableAutoScale(string, string, string, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(resourceGroupName: string, accountName: string, poolName: string, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtiene información sobre el grupo especificado.
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, poolName: string, options: RequestOptionsBase, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, poolName: string, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccount'
+    name: 'listByBatchAccount(string, string, Models.PoolListByBatchAccountOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Enumera todos los grupos de la cuenta especificada.
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options?: Models.PoolListByBatchAccountOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - Models.PoolListByBatchAccountOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccount_2'
+    name: 'listByBatchAccount(string, string, PoolListByBatchAccountOptionalParams, ServiceCallback<ListPoolsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options: PoolListByBatchAccountOptionalParams, callback: ServiceCallback<ListPoolsResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - '@azure/arm-batch.PoolListByBatchAccountOptionalParams'
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListPoolsResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccount_1'
+    name: 'listByBatchAccount(string, string, ServiceCallback<ListPoolsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListPoolsResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListPoolsResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccountNext'
+    name: 'listByBatchAccountNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Enumera todos los grupos de la cuenta especificada.
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccountNext_2'
+    name: 'listByBatchAccountNext(string, RequestOptionsBase, ServiceCallback<ListPoolsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListPoolsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListPoolsResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccountNext_1'
+    name: 'listByBatchAccountNext(string, ServiceCallback<ListPoolsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, callback: ServiceCallback<ListPoolsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListPoolsResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.constructor'
+    name: PoolOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crear un PoolOperations.
+    syntax:
+      content: 'new PoolOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            Referencia para el cliente del servicio.
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.stopResize'
+    name: 'stopResize(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esto no restaura el grupo a su estado anterior antes de la operación de cambio de tamaño: solo detiene los cambios adicionales realizados, y el grupo mantiene su estado actual. Después de detener el grupo se estabilice el número de nodos que estaba cuando se realizó la operación de detención. En primer lugar durante la operación de detención, el estado de asignación de grupo cambia para detener y, a continuación, firme. Una operación de cambio de tamaño no tiene que ser una solicitud de grupo explícita de cambio de tamaño; Esta API puede usarse también para detener el ajuste de tamaño inicial del grupo cuando se crea.'
+    syntax:
+      content: 'function stopResize(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.stopResize_2'
+    name: 'stopResize(string, string, string, RequestOptionsBase, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(resourceGroupName: string, accountName: string, poolName: string, options: RequestOptionsBase, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.stopResize_1'
+    name: 'stopResize(string, string, string, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(resourceGroupName: string, accountName: string, poolName: string, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.update'
+    name: 'update(string, string, string, Pool, Models.PoolUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Actualiza las propiedades de un grupo existente.
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, options?: Models.PoolUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: 'Propiedades de grupo que deben actualizarse. Se actualizarán las propiedades que se proporcionan, cualquier propiedad que no se ha proporcionado no se modificará.'
+        - id: options
+          type:
+            - Models.PoolUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.update_2'
+    name: 'update(string, string, string, Pool, PoolUpdateOptionalParams, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, options: PoolUpdateOptionalParams, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: 'Propiedades de grupo que deben actualizarse. Se actualizarán las propiedades que se proporcionan, cualquier propiedad que no se ha proporcionado no se modificará.'
+        - id: options
+          type:
+            - '@azure/arm-batch.PoolUpdateOptionalParams'
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.update_1'
+    name: 'update(string, string, string, Pool, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: poolName
+          type:
+            - string
+          description: El nombre del grupo. Esto debe ser único dentro de la cuenta.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: 'Propiedades de grupo que deben actualizarse. Se actualizarán las propiedades que se proporcionan, cualquier propiedad que no se ha proporcionado no se modificará.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.PoolUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.Pool'
+    name: Pool
+    spec.typeScript:
+      - name: Pool
+        fullName: Pool
+        uid: '@azure/arm-batch.Pool'
+  - uid: ServiceCallback<@azure/arm-batch.Pool>
+    name: Pool>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Pool
+        fullName: Pool
+        uid: '@azure/arm-batch.Pool'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.ListPoolsResult>
+    name: ListPoolsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListPoolsResult
+        fullName: ListPoolsResult
+        uid: '@azure/arm-batch.ListPoolsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.PoolListByBatchAccountOptionalParams'
+    name: PoolListByBatchAccountOptionalParams
+    spec.typeScript:
+      - name: PoolListByBatchAccountOptionalParams
+        fullName: PoolListByBatchAccountOptionalParams
+        uid: '@azure/arm-batch.PoolListByBatchAccountOptionalParams'
+  - uid: '@azure/arm-batch.PoolUpdateOptionalParams'
+    name: PoolUpdateOptionalParams
+    spec.typeScript:
+      - name: PoolUpdateOptionalParams
+        fullName: PoolUpdateOptionalParams
+        uid: '@azure/arm-batch.PoolUpdateOptionalParams'
