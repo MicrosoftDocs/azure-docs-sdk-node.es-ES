@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.EndpointHealthData'
+    name: EndpointHealthData
+    fullName: EndpointHealthData
+    children:
+      - '@azure/arm-iothub.EndpointHealthData.endpointId'
+      - '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="b9f4c-101">Los datos de estado para un punto de conexión</span><span class="sxs-lookup"><span data-stu-id="b9f4c-101">The health data for an endpoint</span></span>
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.endpointId'
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b9f4c-102">Identificador del extremo</span><span class="sxs-lookup"><span data-stu-id="b9f4c-102">Id of the endpoint</span></span>
+    optional: true
+    syntax:
+      content: 'endpointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    name: healthStatus
+    fullName: healthStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b9f4c-103">Estados de mantenimiento tienen estos significados.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-103">Health statuses have following meanings.</span></span> <span data-ttu-id="b9f4c-104">El estado ''correcto'' muestra que el punto de conexión está aceptando los mensajes según lo previsto.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-104">The ''healthy'' status shows that the endpoint is accepting messages as expected.</span></span> <span data-ttu-id="b9f4c-105">El estado "incorrecto" muestra que el punto de conexión no acepta los mensajes según lo previsto y está reintentando la operación de IoT Hub para enviar datos a este punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-105">The ''unhealthy'' status shows that the endpoint is not accepting messages as expected and IoT Hub is retrying to send data to this endpoint.</span></span> <span data-ttu-id="b9f4c-106">Se actualizará el estado de un punto de conexión en mal estado a correcto cuando IoT Hub ha establecido un estado coherente de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-106">The status of an unhealthy endpoint will be updated to healthy when IoT Hub has established an eventually consistent state of health.</span></span> <span data-ttu-id="b9f4c-107">El estado "inactivo" se muestra que el punto de conexión no acepta los mensajes, después de IoT Hub reintenta el envío de mensajes para el período retrial.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-107">The ''dead'' status shows that the endpoint is not accepting messages, after IoT Hub retried sending messages for the retrial period.</span></span> <span data-ttu-id="b9f4c-108">Ver las métricas de IoT Hub para identificar errores y problemas con los puntos de conexión con el monitor.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-108">See IoT Hub metrics to identify errors and monitor issues with endpoints.</span></span> <span data-ttu-id="b9f4c-109">El estado ''unknown'' muestra que el centro de IoT no ha establecido una conexión con el punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-109">The ''unknown'' status shows that the IoT Hub has not established a connection with the endpoint.</span></span> <span data-ttu-id="b9f4c-110">Se han entregado a ningún mensaje o rechazarse desde este punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-110">No messages have been delivered to or rejected from this endpoint.</span></span> <span data-ttu-id="b9f4c-111">Los valores posibles son: ''unknown'', ''correcto'', ''correcto'', ''cola''</span><span class="sxs-lookup"><span data-stu-id="b9f4c-111">Possible values include: ''unknown'', ''healthy'', ''unhealthy'', ''dead''</span></span>'
+    optional: true
+    syntax:
+      content: 'healthStatus?: EndpointHealthStatus'
+      return:
+        type:
+          - '@azure/arm-iothub.EndpointHealthStatus'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.EndpointHealthStatus'
+    name: EndpointHealthStatus
+    spec.typeScript:
+      - name: EndpointHealthStatus
+        fullName: EndpointHealthStatus
+        uid: '@azure/arm-iothub.EndpointHealthStatus'
