@@ -1,0 +1,167 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    fullName: OSProfile
+    children:
+      - '@azure/arm-compute.OSProfile.adminPassword'
+      - '@azure/arm-compute.OSProfile.adminUsername'
+      - '@azure/arm-compute.OSProfile.allowExtensionOperations'
+      - '@azure/arm-compute.OSProfile.computerName'
+      - '@azure/arm-compute.OSProfile.customData'
+      - '@azure/arm-compute.OSProfile.linuxConfiguration'
+      - '@azure/arm-compute.OSProfile.secrets'
+      - '@azure/arm-compute.OSProfile.windowsConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="b3a92-101">Especifica la configuración del sistema operativo de la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b3a92-101">Specifies the operating system settings for the virtual machine.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminPassword'
+    name: adminPassword
+    fullName: adminPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b3a92-102">Especifica la contraseña de la cuenta de administrador.</span><span class="sxs-lookup"><span data-stu-id="b3a92-102">Specifies the password of the administrator account.</span></span> <br><br> <span data-ttu-id="b3a92-103">**Longitud mínima (Windows):** 8 caracteres</span><span class="sxs-lookup"><span data-stu-id="b3a92-103">**Minimum-length (Windows):** 8 characters</span></span> <br><br> <span data-ttu-id="b3a92-104">**Longitud mínima (Linux):** 6 caracteres</span><span class="sxs-lookup"><span data-stu-id="b3a92-104">**Minimum-length (Linux):** 6 characters</span></span> <br><br> <span data-ttu-id="b3a92-105">**Longitud máxima (Windows):** 123 caracteres</span><span class="sxs-lookup"><span data-stu-id="b3a92-105">**Max-length (Windows):** 123 characters</span></span> <br><br> <span data-ttu-id="b3a92-106">**Longitud máxima (Linux):** 72 caracteres adicionales.</span><span class="sxs-lookup"><span data-stu-id="b3a92-106">**Max-length (Linux):** 72 characters</span></span> <br><br>
+      <span data-ttu-id="b3a92-107">**Requisitos de complejidad:** deben cumplirse las condiciones de 3 de 4 a continuación</span><span class="sxs-lookup"><span data-stu-id="b3a92-107">**Complexity requirements:** 3 out of 4 conditions below need to be fulfilled</span></span> <br> <span data-ttu-id="b3a92-108">Tiene caracteres en minúsculas.</span><span class="sxs-lookup"><span data-stu-id="b3a92-108">Has lower characters</span></span> <br><span data-ttu-id="b3a92-109">Tiene caracteres en mayúsculas.</span><span class="sxs-lookup"><span data-stu-id="b3a92-109">Has upper characters</span></span> <br> <span data-ttu-id="b3a92-110">Tiene un dígito</span><span class="sxs-lookup"><span data-stu-id="b3a92-110">Has a digit</span></span> <br> <span data-ttu-id="b3a92-111">Incluye un carácter especial (coincidencia de Regex [\W_])</span><span class="sxs-lookup"><span data-stu-id="b3a92-111">Has a special character (Regex match [\W_])</span></span> <br><br> <span data-ttu-id="b3a92-112">**No se permiten valores:** "abc@123", "P@$$w0rd", "P@ssw0rd","P@ssword123", "Pa$ $word", "pass@word1", "Password"!","Password1","Password22","iloveyou!"</span><span class="sxs-lookup"><span data-stu-id="b3a92-112">**Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"</span></span> <br><br> <span data-ttu-id="b3a92-113">Para restablecer la contraseña, vea [cómo restablecer el servicio de escritorio remoto o la contraseña de inicio de sesión en una máquina virtual de Windows](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="b3a92-113">For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span></span>
+      <br><br> <span data-ttu-id="b3a92-114">Para restablecer la contraseña raíz, consulte [administrar usuarios, SSH y comprobar o reparar discos en máquinas virtuales de Linux de Azure con la VMAccess extensión](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)</span><span class="sxs-lookup"><span data-stu-id="b3a92-114">For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)</span></span>
+    optional: true
+    syntax:
+      content: 'adminPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminUsername'
+    name: adminUsername
+    fullName: adminUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b3a92-115">Especifica el nombre de la cuenta de administrador.</span><span class="sxs-lookup"><span data-stu-id="b3a92-115">Specifies the name of the administrator account.</span></span> <br><br> <span data-ttu-id="b3a92-116">**Restricción solo Windows:** No puede terminar en "."</span><span class="sxs-lookup"><span data-stu-id="b3a92-116">**Windows-only restriction:** Cannot end in "."</span></span> <br><br> <span data-ttu-id="b3a92-117">**No se permiten valores:** "administrador", "admin", "user", "user1", "test", "user2", "test1", "usuario3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "copia de seguridad", "consola", "david", "Invitado", "Juan", "owner", "raíz", "server", " SQL","soporte técnico","support_388945a0","sys","test2","test3","user4","user5".</span><span class="sxs-lookup"><span data-stu-id="b3a92-117">**Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5".</span></span> <br><br> <span data-ttu-id="b3a92-118">**Longitud mínima (Linux):** 1 carácter</span><span class="sxs-lookup"><span data-stu-id="b3a92-118">**Minimum-length (Linux):** 1  character</span></span> <br><br> <span data-ttu-id="b3a92-119">**Longitud máxima (Linux):** 64 caracteres</span><span class="sxs-lookup"><span data-stu-id="b3a92-119">**Max-length (Linux):** 64 characters</span></span> <br><br> <span data-ttu-id="b3a92-120">**Longitud máxima (Windows):** 20 caracteres</span><span class="sxs-lookup"><span data-stu-id="b3a92-120">**Max-length (Windows):** 20 characters</span></span>  <br><br><li> <span data-ttu-id="b3a92-121">Para el acceso a la raíz para la VM de Linux, consulte [con privilegios raíz en máquinas virtuales Linux en Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="b3a92-121">For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span></span><br><li>
+      <span data-ttu-id="b3a92-122">Para obtener una lista de usuarios del sistema integradas en Linux que no debe usarse en este campo, vea [seleccionar nombres de usuario para Linux en Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="b3a92-122">For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span></span>
+    optional: true
+    syntax:
+      content: 'adminUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.allowExtensionOperations'
+    name: allowExtensionOperations
+    fullName: allowExtensionOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b3a92-123">Especifica si se deben permitir las operaciones de extensión en la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b3a92-123">Specifies whether extension operations should be allowed on the virtual machine.</span></span> <br><br><span data-ttu-id="b3a92-124">Solo se puede establecer en False cuando no hay extensiones están presentes en la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b3a92-124">This may only be set to False when no extensions are present on the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'allowExtensionOperations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.computerName'
+    name: computerName
+    fullName: computerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3a92-125">Especifica el nombre de host del sistema operativo de la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b3a92-125">Specifies the host OS name of the virtual machine.</span></span> <br><br> <span data-ttu-id="b3a92-126">Este nombre no puede actualizarse una vez creada la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b3a92-126">This name cannot be updated after the VM is created.</span></span> <br><br> <span data-ttu-id="b3a92-127">**Longitud máxima (Windows):** 15 caracteres</span><span class="sxs-lookup"><span data-stu-id="b3a92-127">**Max-length (Windows):** 15 characters</span></span> <br><br> <span data-ttu-id="b3a92-128">**Longitud máxima (Linux):** 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="b3a92-128">**Max-length (Linux):** 64 characters.</span></span> <br><br> <span data-ttu-id="b3a92-129">Para asignar nombres a las convenciones y restricciones, vea [las directrices de implementación de servicios de infraestructura de Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).</span><span class="sxs-lookup"><span data-stu-id="b3a92-129">For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).</span></span>'
+    optional: true
+    syntax:
+      content: 'computerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.customData'
+    name: customData
+    fullName: customData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b3a92-130">Especifica una cadena codificada en base 64 de datos personalizados.</span><span class="sxs-lookup"><span data-stu-id="b3a92-130">Specifies a base-64 encoded string of custom data.</span></span> <span data-ttu-id="b3a92-131">La cadena codificada en base 64 se descodifica en una matriz binaria que se guarda como un archivo en la máquina Virtual.</span><span class="sxs-lookup"><span data-stu-id="b3a92-131">The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine.</span></span> <span data-ttu-id="b3a92-132">La longitud máxima de la matriz binaria es de 65535 bytes.</span><span class="sxs-lookup"><span data-stu-id="b3a92-132">The maximum length of the binary array is 65535 bytes.</span></span> <br><br> <span data-ttu-id="b3a92-133">Para usar cloud-init para la máquina virtual, consulte [mediante cloud-init para personalizar una VM de Linux durante la creación](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="b3a92-133">For using cloud-init for your VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span></span>'
+    optional: true
+    syntax:
+      content: 'customData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.linuxConfiguration'
+    name: linuxConfiguration
+    fullName: linuxConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b3a92-134">Especifica la configuración del sistema operativo Linux en la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b3a92-134">Specifies the Linux operating system settings on the virtual machine.</span></span> <br><br><span data-ttu-id="b3a92-135">Para obtener una lista de distribuciones de Linux compatibles, consulte [Linux en distribuciones aprobadas por Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="b3a92-135">For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span></span>
+      <br><br> <span data-ttu-id="b3a92-136">Para ejecutar las distribuciones no aprobadas, consulte [información para las distribuciones no aprobadas](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).</span><span class="sxs-lookup"><span data-stu-id="b3a92-136">For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).</span></span>
+    optional: true
+    syntax:
+      content: 'linuxConfiguration?: LinuxConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.LinuxConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.secrets'
+    name: secrets
+    fullName: secrets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b3a92-137">Especifica el conjunto de certificados que debe instalarse en la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b3a92-137">Specifies set of certificates that should be installed onto the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'secrets?: VaultSecretGroup[]'
+      return:
+        type:
+          - '@azure/arm-compute.VaultSecretGroup[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.windowsConfiguration'
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b3a92-138">Especifica la configuración del sistema operativo de Windows en la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b3a92-138">Specifies Windows operating system settings on the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WindowsConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    spec.typeScript:
+      - name: LinuxConfiguration
+        fullName: LinuxConfiguration
+        uid: '@azure/arm-compute.LinuxConfiguration'
+  - uid: '@azure/arm-compute.VaultSecretGroup[]'
+    name: 'VaultSecretGroup[]'
+    spec.typeScript:
+      - name: VaultSecretGroup
+        fullName: VaultSecretGroup
+        uid: '@azure/arm-compute.VaultSecretGroup'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: '@azure/arm-compute.WindowsConfiguration'
