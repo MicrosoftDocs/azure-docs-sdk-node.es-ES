@@ -15,8 +15,6 @@ items:
       - msal.UserAgentApplication.getLoginInProgress
       - msal.UserAgentApplication.getPostLogoutRedirectUri
       - msal.UserAgentApplication.getRedirectUri
-      - msal.UserAgentApplication.handleRedirectCallback_1
-      - msal.UserAgentApplication.handleRedirectCallback
       - msal.UserAgentApplication.loginPopup
       - msal.UserAgentApplication.loginRedirect
       - msal.UserAgentApplication.logout
@@ -24,7 +22,8 @@ items:
     langs:
       - typeScript
     type: class
-    summary: 'Clase UserAgentApplication: <xref:UserAgentApplication> Objeto de instancia que el desarrollador puede usar para realizar loginXX funciones de acquireTokenXX OR'
+    summary: |
+      Clase UserAgentApplication instancia del objeto que el desarrollador puede usar para realizar loginXX funciones de acquireTokenXX OR
     package: msal
   - uid: msal.UserAgentApplication.acquireTokenPopup
     name: acquireTokenPopup(AuthenticationParameters)
@@ -50,7 +49,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Se utiliza cuando desea obtener un access_token para la API al redirigir el usuario al extremo de autorización.
+    summary: Se utiliza cuando se desea obtener un access_token para la API mediante el redireccionamiento de ventana del explorador del usuario al extremo de autorización.
     syntax:
       content: 'function acquireTokenRedirect(request: AuthenticationParameters)'
       parameters:
@@ -85,11 +84,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: |-
-      Devuelve la entidad, donde es la entidad de una dirección URL que indica el directorio que se puede usar MSAL para obtener tokens
-      - En Azure AD, este atributo es una dirección URL que indica a Azure active directory que usa MSAL para obtener los tokens tiene el formato https://login.microsoftonline.com/&lt; Enter_the_Tenant_Info_Here&gt; si la aplicación es compatible con cuentas en el directorio de una organización, reemplace el valor de "Enter_the_Tenant_Info_Here" con el Id. de inquilino o el nombre del inquilino (por ejemplo, contoso.microsoft.com) si la aplicación admite cuentas en el directorio de cualquier organización, reemplace el valor de "Enter_the_Tenant_Info_Here" con organizaciones si la aplicación es compatible con cuentas en cualquier directorio de organización y las cuentas personales de Microsoft, reemplace "Enter_the_Tenant_Info_ Aquí"valor con común.
-      Para restringir el soporte técnico a Microsoft Personal cuentas solo, reemplazar el valor de "Enter_the_Tenant_Info_Here" con los consumidores.
-      - En Azure B2C, es del formato https://&lt;instancia&gt;/tfp/&lt;inquilino&gt;/<policyName>/
+    summary: Método para administrar la dirección URL de la entidad.
     syntax:
       content: 'authority: string'
       return:
@@ -102,7 +97,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Devuelve el firmado en cuenta (procedentes de un objeto account creado en el momento de inicio de sesión) o null cuando no se encuentra ningún estado
+    summary: Devuelve la con signo en la cuenta (el objeto de cuenta se crea en el momento de inicio de sesión correcto) o null cuando no se encuentra ningún estado
     syntax:
       content: function getAccount()
       parameters: []
@@ -116,7 +111,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Se usa para filtrar todos los elementos almacenados en caché y devolver una lista de cuentas únicas según homeAccountIdentifier.
+    summary: Usar para obtener una lista de cuentas únicas en caché MSAL basándose en homeAccountIdentifier.
     syntax:
       content: function getAllAccounts()
       parameters: []
@@ -130,7 +125,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Devuelve la instancia de entidad
+    summary: Obtener la instancia actual de la entidad del objeto de configuración de MSAL
     syntax:
       content: function getAuthorityInstance()
       parameters: []
@@ -198,40 +193,6 @@ items:
         type:
           - string
     package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback_1
-    name: handleRedirectCallback(authResponseCallback)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Establece las funciones de devolución de llamada para el flujo de redirección para volver a enviar el objeto de éxito o error.
-    syntax:
-      content: 'function handleRedirectCallback(authCallback: authResponseCallback)'
-      parameters:
-        - id: authCallback
-          type:
-            - authResponseCallback
-          description: ''
-    package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback
-    name: 'handleRedirectCallback(tokenReceivedCallback, errorReceivedCallback)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Establece las funciones de devolución de llamada para el flujo de redirección para volver a enviar el objeto de éxito o error.
-    syntax:
-      content: 'function handleRedirectCallback(tokenReceivedCallback: tokenReceivedCallback, errorReceivedCallback: errorReceivedCallback)'
-      parameters:
-        - id: tokenReceivedCallback
-          type:
-            - tokenReceivedCallback
-          description: ''
-        - id: errorReceivedCallback
-          type:
-            - errorReceivedCallback
-          description: ''
-    package: msal
   - uid: msal.UserAgentApplication.loginPopup
     name: loginPopup(AuthenticationParameters)
     children: []
@@ -274,8 +235,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      Se usa para la sesión del usuario actual y redirigir al usuario a la postLogoutRedirectUri.
-      Es el comportamiento de los valores predeterminados redirigir al usuario a `window.location.href`.
+      Usar para la sesión del usuario actual y redirigir al usuario a la postLogoutRedirectUri.
+      Comportamiento predeterminado es redirigir al usuario `window.location.href`.
     syntax:
       content: function logout()
       parameters: []
@@ -286,7 +247,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: 'Constructor para la <xref:UserAgentApplication> sirve para poder crear una instancia de objeto del <xref:UserAgentApplication> objeto'
+    summary: ''
     syntax:
       content: 'new UserAgentApplication(configuration: Configuration)'
       parameters:
