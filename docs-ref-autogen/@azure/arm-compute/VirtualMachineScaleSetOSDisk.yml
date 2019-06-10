@@ -1,0 +1,211 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk'
+    name: VirtualMachineScaleSetOSDisk
+    fullName: VirtualMachineScaleSetOSDisk
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.caching'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.createOption'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.diffDiskSettings'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.diskSizeGB'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.image'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.managedDisk'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.name'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.osType'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.vhdContainers'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="b4081-101">Describe un disco de sistema operativo de máquina virtual escala conjunto.</span><span class="sxs-lookup"><span data-stu-id="b4081-101">Describes a virtual machine scale set operating system disk.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b4081-102">Especifica los requisitos de almacenamiento en caché.</span><span class="sxs-lookup"><span data-stu-id="b4081-102">Specifies the caching requirements.</span></span> <br><br> <span data-ttu-id="b4081-103">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="b4081-103">Possible values are:</span></span> <br><br> <span data-ttu-id="b4081-104">**Ninguno**</span><span class="sxs-lookup"><span data-stu-id="b4081-104">**None**</span></span> <br><br>
+      <span data-ttu-id="b4081-105">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="b4081-105">**ReadOnly**</span></span> <br><br> <span data-ttu-id="b4081-106">**ReadWrite**</span><span class="sxs-lookup"><span data-stu-id="b4081-106">**ReadWrite**</span></span> <br><br> <span data-ttu-id="b4081-107">Valor predeterminado: **Ninguno de almacenamiento estándar. Solo lectura para Premium storage**.</span><span class="sxs-lookup"><span data-stu-id="b4081-107">Default: **None for Standard storage. ReadOnly for Premium storage**.</span></span> <span data-ttu-id="b4081-108">Los valores posibles son: 'None', 'ReadOnly', 'ReadWrite'</span><span class="sxs-lookup"><span data-stu-id="b4081-108">Possible values include: 'None', 'ReadOnly', 'ReadWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b4081-109">Especifica cómo se deben crear las máquinas virtuales del conjunto de escalado.</span><span class="sxs-lookup"><span data-stu-id="b4081-109">Specifies how the virtual machines in the scale set should be created.</span></span><br><br> <span data-ttu-id="b4081-110">El único valor permitido es: **FromImage** \u2013 este valor se utiliza cuando se usa una imagen para crear la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b4081-110">The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine.</span></span> <span data-ttu-id="b4081-111">Si utiliza una imagen de plataforma, también usar el elemento imageReference que se ha descrito anteriormente.</span><span class="sxs-lookup"><span data-stu-id="b4081-111">If you are using a platform image, you also use the imageReference element described above.</span></span> <span data-ttu-id="b4081-112">Si utiliza una imagen de marketplace, usará el elemento de plan que se ha descrito anteriormente.</span><span class="sxs-lookup"><span data-stu-id="b4081-112">If you are using a marketplace image, you  also use the plan element previously described.</span></span> <span data-ttu-id="b4081-113">Los valores posibles son: ''FromImage'', ''Empty'', ''conectar''</span><span class="sxs-lookup"><span data-stu-id="b4081-113">Possible values include: ''FromImage'', ''Empty'', ''Attach''</span></span>'
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.diffDiskSettings'
+    name: diffDiskSettings
+    fullName: diffDiskSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b4081-114">Especifica el disco efímero configuración para el disco de sistema operativo utilizado por el conjunto de escalado de máquinas virtuales.</span><span class="sxs-lookup"><span data-stu-id="b4081-114">Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.</span></span>
+    optional: true
+    syntax:
+      content: 'diffDiskSettings?: DiffDiskSettings'
+      return:
+        type:
+          - '@azure/arm-compute.DiffDiskSettings'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b4081-115">Especifica el tamaño del disco del sistema operativo en gigabytes.</span><span class="sxs-lookup"><span data-stu-id="b4081-115">Specifies the size of the operating system disk in gigabytes.</span></span> <span data-ttu-id="b4081-116">Este elemento se puede utilizar para sobrescribir el tamaño del disco en una imagen de máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="b4081-116">This element can be used to overwrite the size of the disk in a virtual machine image.</span></span> <br><br> <span data-ttu-id="b4081-117">Este valor no puede ser mayor que 1023 GB</span><span class="sxs-lookup"><span data-stu-id="b4081-117">This value cannot be larger than 1023 GB</span></span>
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b4081-118">Especifica información sobre la imagen de usuario no administrados se basará la escala establecida en.</span><span class="sxs-lookup"><span data-stu-id="b4081-118">Specifies information about the unmanaged user image to base the scale set on.</span></span>
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b4081-119">Los parámetros de disco administrado.</span><span class="sxs-lookup"><span data-stu-id="b4081-119">The managed disk parameters.</span></span>
+    optional: true
+    syntax:
+      content: 'managedDisk?: VirtualMachineScaleSetManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b4081-120">El nombre del disco.</span><span class="sxs-lookup"><span data-stu-id="b4081-120">The disk name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b4081-121">Esta propiedad permite especificar el tipo del sistema operativo que se incluye en el disco si crear una máquina virtual de imagen de usuario o un VHD especializado.</span><span class="sxs-lookup"><span data-stu-id="b4081-121">This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD.</span></span> <br><br> <span data-ttu-id="b4081-122">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="b4081-122">Possible values are:</span></span> <br><br>
+      <span data-ttu-id="b4081-123">**Windows**</span><span class="sxs-lookup"><span data-stu-id="b4081-123">**Windows**</span></span> <br><br> <span data-ttu-id="b4081-124">**Linux**.</span><span class="sxs-lookup"><span data-stu-id="b4081-124">**Linux**.</span></span> <span data-ttu-id="b4081-125">Los valores posibles son: 'Windows', 'Linux'</span><span class="sxs-lookup"><span data-stu-id="b4081-125">Possible values include: 'Windows', 'Linux'</span></span>
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.vhdContainers'
+    name: vhdContainers
+    fullName: vhdContainers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b4081-126">Especifica las direcciones URL de contenedor que se usan para almacenar discos del sistema operativo para el conjunto de escalado.</span><span class="sxs-lookup"><span data-stu-id="b4081-126">Specifies the container urls that are used to store operating system disks for the scale set.</span></span>
+    optional: true
+    syntax:
+      content: 'vhdContainers?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b4081-127">Especifica si debe habilitarse o deshabilitarse en el disco writeAccelerator.</span><span class="sxs-lookup"><span data-stu-id="b4081-127">Specifies whether writeAccelerator should be enabled or disabled on the disk.</span></span>
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.DiffDiskSettings'
+    name: DiffDiskSettings
+    spec.typeScript:
+      - name: DiffDiskSettings
+        fullName: DiffDiskSettings
+        uid: '@azure/arm-compute.DiffDiskSettings'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    name: VirtualMachineScaleSetManagedDiskParameters
+    spec.typeScript:
+      - name: VirtualMachineScaleSetManagedDiskParameters
+        fullName: VirtualMachineScaleSetManagedDiskParameters
+        uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
