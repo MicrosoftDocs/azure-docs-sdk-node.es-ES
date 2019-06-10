@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult'
+    name: ApiManagementServiceNameAvailabilityResult
+    fullName: ApiManagementServiceNameAvailabilityResult
+    children:
+      - '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.message'
+      - '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.nameAvailable'
+      - '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.reason'
+    langs:
+      - typeScript
+    type: interface
+    summary: Respuesta de la operación CheckNameAvailability.
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Si motivo == no válido, proporcionar al usuario con el motivo por qué el nombre especificado no es válido y proporcione el recurso de los requisitos de nomenclatura para que el usuario puede seleccionar un nombre válido. Si motivo == ya existe, se explica que <resourceName> ya está en usar e indicarle que seleccione un nombre diferente.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.nameAvailable'
+    name: nameAvailable
+    fullName: nameAvailable
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      True si el nombre está disponible y puede usarse para crear un nuevo servicio de API Management; en caso contrario, false.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'nameAvailable?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.reason'
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Válido indica el nombre proporcionado no coincide con los requisitos de nombres del proveedor de recursos (longitud incorrecta, caracteres no admitidos, etcetera.)  Ya existe indica que el nombre ya está en uso y, por tanto, no está disponible. Los valores posibles son: ''Válido,'' ''Invalid'', "Ya existe"'
+    optional: true
+    syntax:
+      content: 'reason?: NameAvailabilityReason'
+      return:
+        type:
+          - '@azure/arm-apimanagement.NameAvailabilityReason'
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.NameAvailabilityReason'
+    name: NameAvailabilityReason
+    spec.typeScript:
+      - name: NameAvailabilityReason
+        fullName: NameAvailabilityReason
+        uid: '@azure/arm-apimanagement.NameAvailabilityReason'
