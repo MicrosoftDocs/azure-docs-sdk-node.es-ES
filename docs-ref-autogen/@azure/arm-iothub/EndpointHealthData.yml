@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.EndpointHealthData'
+    name: EndpointHealthData
+    fullName: EndpointHealthData
+    children:
+      - '@azure/arm-iothub.EndpointHealthData.endpointId'
+      - '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: Los datos de estado para un punto de conexión
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.endpointId'
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identificador del extremo
+    optional: true
+    syntax:
+      content: 'endpointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    name: healthStatus
+    fullName: healthStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Estados de mantenimiento tienen estos significados. El estado ''correcto'' muestra que el punto de conexión está aceptando los mensajes según lo previsto. El estado "incorrecto" muestra que el punto de conexión no acepta los mensajes según lo previsto y está reintentando la operación de IoT Hub para enviar datos a este punto de conexión. Se actualizará el estado de un punto de conexión en mal estado a correcto cuando IoT Hub ha establecido un estado coherente de mantenimiento. El estado "inactivo" se muestra que el punto de conexión no acepta los mensajes, después de IoT Hub reintenta el envío de mensajes para el período retrial. Ver las métricas de IoT Hub para identificar errores y problemas con los puntos de conexión con el monitor. El estado ''unknown'' muestra que el centro de IoT no ha establecido una conexión con el punto de conexión. Se han entregado a ningún mensaje o rechazarse desde este punto de conexión. Los valores posibles son: ''unknown'', ''correcto'', ''correcto'', ''cola'''
+    optional: true
+    syntax:
+      content: 'healthStatus?: EndpointHealthStatus'
+      return:
+        type:
+          - '@azure/arm-iothub.EndpointHealthStatus'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.EndpointHealthStatus'
+    name: EndpointHealthStatus
+    spec.typeScript:
+      - name: EndpointHealthStatus
+        fullName: EndpointHealthStatus
+        uid: '@azure/arm-iothub.EndpointHealthStatus'
