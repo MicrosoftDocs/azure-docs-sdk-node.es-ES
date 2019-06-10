@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile'
+    name: VirtualMachineScaleSetVMProfile
+    fullName: VirtualMachineScaleSetVMProfile
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.additionalCapabilities'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.diagnosticsProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.evictionPolicy'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.extensionProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.licenseType'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.networkProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.osProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.priority'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMProfile.storageProfile'
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe un perfil de máquina virtual de máquina virtual escala conjunto.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.additionalCapabilities'
+    name: additionalCapabilities
+    fullName: additionalCapabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica las capacidades adicionales que habilitan o deshabilitan en la máquina virtual en el conjunto de escalado.
+      Por ejemplo: si la máquina virtual tiene la capacidad para admitir adjuntar discos de datos con tipo de cuenta de almacenamiento UltraSSD_LRS administrados.
+    optional: true
+    syntax:
+      content: 'additionalCapabilities?: AdditionalCapabilities'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalCapabilities'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.diagnosticsProfile'
+    name: diagnosticsProfile
+    fullName: diagnosticsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica el estado de configuración de diagnóstico de arranque. <br><br>Mínimo de api-version: 2015-06-15.'
+    optional: true
+    syntax:
+      content: 'diagnosticsProfile?: DiagnosticsProfile'
+      return:
+        type:
+          - '@azure/arm-compute.DiagnosticsProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.evictionPolicy'
+    name: evictionPolicy
+    fullName: evictionPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica la directiva de expulsión para las máquinas virtuales en un conjunto de escalado de prioridad baja.
+      <br><br>Mínimo de api-version: 2017-10-30-preview. Los valores posibles son: 'Cancelar', 'Delete'
+    optional: true
+    syntax:
+      content: 'evictionPolicy?: VirtualMachineEvictionPolicyTypes'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineEvictionPolicyTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.extensionProfile'
+    name: extensionProfile
+    fullName: extensionProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica una colección de valores para las extensiones instaladas en máquinas virtuales en el conjunto de escalado.
+    optional: true
+    syntax:
+      content: 'extensionProfile?: VirtualMachineScaleSetExtensionProfile'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetExtensionProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica que la imagen o el disco que se utiliza era con licencia en el entorno local. Este elemento solo se usa para las imágenes que contienen el sistema operativo Windows Server. <br><br> Los valores posibles son: <br><br> Windows_Client <br><br> Windows_Server <br><br> Si este elemento se incluye en una solicitud de actualización, el valor debe coincidir con el valor inicial. No se puede actualizar este valor. <br><br> Para obtener más información, consulte [Azure Hybrid Use ventaja para Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Mínimo de api-version: 2015-06-15
+    optional: true
+    syntax:
+      content: 'licenseType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.networkProfile'
+    name: networkProfile
+    fullName: networkProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica las propiedades de las interfaces de red de las máquinas virtuales del conjunto de escalado.
+    optional: true
+    syntax:
+      content: 'networkProfile?: VirtualMachineScaleSetNetworkProfile'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetNetworkProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.osProfile'
+    name: osProfile
+    fullName: osProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica la configuración del sistema operativo para las máquinas virtuales del conjunto de escalado.
+    optional: true
+    syntax:
+      content: 'osProfile?: VirtualMachineScaleSetOSProfile'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetOSProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica la prioridad para las máquinas virtuales del conjunto de escalado. <br><br>Mínimo de api-version: 2017-10-30-preview. Los valores posibles son: ''Regular'', ''Low'''
+    optional: true
+    syntax:
+      content: 'priority?: VirtualMachinePriorityTypes'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachinePriorityTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.storageProfile'
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica la configuración de almacenamiento de los discos de máquina virtual.
+    optional: true
+    syntax:
+      content: 'storageProfile?: VirtualMachineScaleSetStorageProfile'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetStorageProfile'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AdditionalCapabilities'
+    name: AdditionalCapabilities
+    spec.typeScript:
+      - name: AdditionalCapabilities
+        fullName: AdditionalCapabilities
+        uid: '@azure/arm-compute.AdditionalCapabilities'
+  - uid: '@azure/arm-compute.DiagnosticsProfile'
+    name: DiagnosticsProfile
+    spec.typeScript:
+      - name: DiagnosticsProfile
+        fullName: DiagnosticsProfile
+        uid: '@azure/arm-compute.DiagnosticsProfile'
+  - uid: '@azure/arm-compute.VirtualMachineEvictionPolicyTypes'
+    name: VirtualMachineEvictionPolicyTypes
+    spec.typeScript:
+      - name: VirtualMachineEvictionPolicyTypes
+        fullName: VirtualMachineEvictionPolicyTypes
+        uid: '@azure/arm-compute.VirtualMachineEvictionPolicyTypes'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionProfile'
+    name: VirtualMachineScaleSetExtensionProfile
+    spec.typeScript:
+      - name: VirtualMachineScaleSetExtensionProfile
+        fullName: VirtualMachineScaleSetExtensionProfile
+        uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionProfile'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetNetworkProfile'
+    name: VirtualMachineScaleSetNetworkProfile
+    spec.typeScript:
+      - name: VirtualMachineScaleSetNetworkProfile
+        fullName: VirtualMachineScaleSetNetworkProfile
+        uid: '@azure/arm-compute.VirtualMachineScaleSetNetworkProfile'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile'
+    name: VirtualMachineScaleSetOSProfile
+    spec.typeScript:
+      - name: VirtualMachineScaleSetOSProfile
+        fullName: VirtualMachineScaleSetOSProfile
+        uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile'
+  - uid: '@azure/arm-compute.VirtualMachinePriorityTypes'
+    name: VirtualMachinePriorityTypes
+    spec.typeScript:
+      - name: VirtualMachinePriorityTypes
+        fullName: VirtualMachinePriorityTypes
+        uid: '@azure/arm-compute.VirtualMachinePriorityTypes'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetStorageProfile'
+    name: VirtualMachineScaleSetStorageProfile
+    spec.typeScript:
+      - name: VirtualMachineScaleSetStorageProfile
+        fullName: VirtualMachineScaleSetStorageProfile
+        uid: '@azure/arm-compute.VirtualMachineScaleSetStorageProfile'
