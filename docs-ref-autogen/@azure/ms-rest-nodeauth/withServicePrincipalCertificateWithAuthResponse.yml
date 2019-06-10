@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withServicePrincipalCertificateWithAuthResponse'
+    name: 'withServicePrincipalCertificateWithAuthResponse(string, string, string, AzureTokenCredentialsOptions)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Proporciona un objeto ApplicationTokenCertificateCredentials y la lista de las suscripciones asociadas a esa servicePrinicpalId/clientId en todos los inquilinos aplicable.
+    syntax:
+      content: 'function withServicePrincipalCertificateWithAuthResponse(clientId: string, certificateStringOrFilePath: string, domain: string, options?: AzureTokenCredentialsOptions)'
+      parameters:
+        - id: clientId
+          type:
+            - string
+          description: |-
+            El identificador de cliente de aplicación de active directory también se denomina el SPN (nombre de ServicePrincipal).
+            Consulte [inicio rápido de Active Directory para .net](https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-dotnet/) para obtener un ejemplo.
+        - id: certificateStringOrFilePath
+          type:
+            - string
+          description: |-
+            Un PEM codificado el certificado y clave privada o una filepath absoluta al archivo .pem que contenga esa información. Por ejemplo:
+            - CertificateString: "---BEGIN PRIVATE KEY---\n<xxxxx>\n---END clave privada---\n---BEGIN CERTIFICATE---\n<yyyyy>\n---END CERTIFICATE---\n"
+            - CertificateFilePath: **Absoluta** ruta de acceso del archivo .pem.
+        - id: domain
+          type:
+            - string
+          description: El identificador de inquilino o dominio que contiene esta aplicación.
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+    name: AzureTokenCredentialsOptions
+    spec.typeScript:
+      - name: AzureTokenCredentialsOptions
+        fullName: AzureTokenCredentialsOptions
+        uid: '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    name: AuthResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: AuthResponse
+        fullName: AuthResponse
+        uid: '@azure/ms-rest-nodeauth.AuthResponse'
+      - name: '>'
+        fullName: '>'
