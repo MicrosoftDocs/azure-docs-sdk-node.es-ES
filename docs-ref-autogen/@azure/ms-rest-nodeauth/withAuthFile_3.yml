@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFile_3'
+    name: withAuthFile(any)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Antes de usar este método, instale az cli desde https://github.com/Azure/azure-cli/releases. A continuación, ejecute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.
+      Si desea crear sp para un entorno de nube diferente y, a continuación, ejecute:
+      1. lista de AZ cloud
+      2. en la nube de AZ establece – n <name of the environment>
+      3. AZ ad sp create-for-rbac--sdk-auth > auth.json / / crear sp con secreto **o**
+      3. ad sp create-for-rbac--de AZ--sdk-auth-cert crear > auth.json / / crear sp con certificado si la entidad de servicio ya está creada, a continuación, inicio de sesión con la información de entidad de servicio:
+      4. az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId>
+      5. muestra de la cuenta de AZ--sdk-auth > auth.json autentica utilizando la información de la entidad de servicio proporcionada en el archivo de autenticación. Este método establecerá el subscriptionId desde el archivo de autenticación para el usuario proporcionado la variable de entorno en el parámetro de opciones o el valor predeterminado "AZURE_SUBSCRIPTION_ID".
+    syntax:
+      content: 'function withAuthFile(callback: any)'
+      parameters:
+        - id: callback
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    name: TokenCredentialsBase>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TokenCredentialsBase
+        fullName: TokenCredentialsBase
+        uid: '@azure/ms-rest-nodeauth.TokenCredentialsBase'
+      - name: '>'
+        fullName: '>'
