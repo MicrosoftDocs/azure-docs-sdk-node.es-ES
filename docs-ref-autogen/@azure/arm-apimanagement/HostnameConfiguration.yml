@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration'
+    name: HostnameConfiguration
+    fullName: HostnameConfiguration
+    children:
+      - '@azure/arm-apimanagement.HostnameConfiguration.certificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.certificatePassword'
+      - '@azure/arm-apimanagement.HostnameConfiguration.defaultSslBinding'
+      - '@azure/arm-apimanagement.HostnameConfiguration.encodedCertificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.hostName'
+      - '@azure/arm-apimanagement.HostnameConfiguration.keyVaultId'
+      - '@azure/arm-apimanagement.HostnameConfiguration.negotiateClientCertificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: Configuración de nombre de host personalizado.
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.certificate'
+    name: certificate
+    fullName: certificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Información del certificado.
+    optional: true
+    syntax:
+      content: 'certificate?: CertificateInformation'
+      return:
+        type:
+          - '@azure/arm-apimanagement.CertificateInformation'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.certificatePassword'
+    name: certificatePassword
+    fullName: certificatePassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Contraseña del certificado.
+    optional: true
+    syntax:
+      content: 'certificatePassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.defaultSslBinding'
+    name: defaultSslBinding
+    fullName: defaultSslBinding
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'True para el programa de instalación, especifique el certificado asociado con este nombre de host como el certificado SSL predeterminado. Si un cliente no envía el encabezado SNI, será el certificado que se enfrentan el desafío. La propiedad es útil si un servicio tiene varios nombre de host personalizado habilitado y necesita decidir cuál es el certificado ssl predeterminado. La configuración que solo se aplica al tipo de nombre de host del Proxy. Valor predeterminado: false.'
+    optional: true
+    syntax:
+      content: 'defaultSslBinding?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.encodedCertificate'
+    name: encodedCertificate
+    fullName: encodedCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Certificado codificado en base 64.
+    optional: true
+    syntax:
+      content: 'encodedCertificate?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.hostName'
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre de host para configurar en el servicio Api Management.
+    syntax:
+      content: 'hostName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.keyVaultId'
+    name: keyVaultId
+    fullName: keyVaultId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Dirección URL para el secreto del almacén de claves que contiene el certificado Ssl. Si incluye la versión de contenedor de dirección Url absoluta, la actualización automática del certificado ssl no funcionará. Esto requiere el servicio de administración de Api para configurarse con MSI. El secreto debe ser de tipo *application/x-pkcs12.*'
+    optional: true
+    syntax:
+      content: 'keyVaultId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.negotiateClientCertificate'
+    name: negotiateClientCertificate
+    fullName: negotiateClientCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifique true para negociar siempre el certificado de cliente en el nombre de host. Valor predeterminado es false.
+      Valor predeterminado: false.
+    optional: true
+    syntax:
+      content: 'negotiateClientCertificate?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Tipo de nombre de host. Los valores posibles son: ''Proxy'', ''Portal'', ''Administración de'', ''Scm'', ''DeveloperPortal'''
+    syntax:
+      content: 'type: HostnameType'
+      return:
+        type:
+          - '@azure/arm-apimanagement.HostnameType'
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.CertificateInformation'
+    name: CertificateInformation
+    spec.typeScript:
+      - name: CertificateInformation
+        fullName: CertificateInformation
+        uid: '@azure/arm-apimanagement.CertificateInformation'
+  - uid: '@azure/arm-apimanagement.HostnameType'
+    name: HostnameType
+    spec.typeScript:
+      - name: HostnameType
+        fullName: HostnameType
+        uid: '@azure/arm-apimanagement.HostnameType'
