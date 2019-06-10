@@ -1,0 +1,863 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ApiOperation'
+    name: ApiOperation
+    fullName: ApiOperation
+    children:
+      - '@azure/arm-apimanagement.ApiOperation.constructor'
+      - '@azure/arm-apimanagement.ApiOperation.createOrUpdate_2'
+      - '@azure/arm-apimanagement.ApiOperation.createOrUpdate'
+      - '@azure/arm-apimanagement.ApiOperation.createOrUpdate_1'
+      - '@azure/arm-apimanagement.ApiOperation.deleteMethod'
+      - '@azure/arm-apimanagement.ApiOperation.deleteMethod_2'
+      - '@azure/arm-apimanagement.ApiOperation.deleteMethod_1'
+      - '@azure/arm-apimanagement.ApiOperation.get'
+      - '@azure/arm-apimanagement.ApiOperation.get_2'
+      - '@azure/arm-apimanagement.ApiOperation.get_1'
+      - '@azure/arm-apimanagement.ApiOperation.getEntityTag'
+      - '@azure/arm-apimanagement.ApiOperation.getEntityTag_2'
+      - '@azure/arm-apimanagement.ApiOperation.getEntityTag_1'
+      - '@azure/arm-apimanagement.ApiOperation.listByApi_2'
+      - '@azure/arm-apimanagement.ApiOperation.listByApi'
+      - '@azure/arm-apimanagement.ApiOperation.listByApi_1'
+      - '@azure/arm-apimanagement.ApiOperation.listByApiNext'
+      - '@azure/arm-apimanagement.ApiOperation.listByApiNext_2'
+      - '@azure/arm-apimanagement.ApiOperation.listByApiNext_1'
+      - '@azure/arm-apimanagement.ApiOperation.update'
+      - '@azure/arm-apimanagement.ApiOperation.update_2'
+      - '@azure/arm-apimanagement.ApiOperation.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="692a7-101">Clase que representa un ApiOperation.</span><span class="sxs-lookup"><span data-stu-id="692a7-101">Class representing a ApiOperation.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.constructor'
+    name: ApiOperation(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="692a7-102">Crear un ApiOperation.</span><span class="sxs-lookup"><span data-stu-id="692a7-102">Create a ApiOperation.</span></span>
+    syntax:
+      content: 'new ApiOperation(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            <span data-ttu-id="692a7-103">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="692a7-103">Reference to the service client.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, string, OperationContract, ApiOperationCreateOrUpdateOptionalParams, ServiceCallback<OperationContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: OperationContract, options: ApiOperationCreateOrUpdateOptionalParams, callback: ServiceCallback<OperationContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-104">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-104">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-105">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-105">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-106">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-106">API revision identifier.</span></span> <span data-ttu-id="692a7-107">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-107">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-108">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-108">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-109">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-109">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-110">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-110">Must be unique in the current API Management service instance.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.OperationContract'
+          description: <span data-ttu-id="692a7-111">Crear parámetros.</span><span class="sxs-lookup"><span data-stu-id="692a7-111">Create parameters.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-apimanagement.ApiOperationCreateOrUpdateOptionalParams'
+          description: <span data-ttu-id="692a7-112">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="692a7-112">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.OperationContract>
+          description: |
+            <span data-ttu-id="692a7-113">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-113">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, string, OperationContract, Models.ApiOperationCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="692a7-114">Crea una nueva operación en la API o actualiza uno ya existente.</span><span class="sxs-lookup"><span data-stu-id="692a7-114">Creates a new operation in the API or updates an existing one.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: OperationContract, options?: Models.ApiOperationCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-115">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-115">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-116">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-116">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-117">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-117">API revision identifier.</span></span> <span data-ttu-id="692a7-118">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-118">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-119">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-119">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-120">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-120">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-121">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-121">Must be unique in the current API Management service instance.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.OperationContract'
+          description: <span data-ttu-id="692a7-122">Crear parámetros.</span><span class="sxs-lookup"><span data-stu-id="692a7-122">Create parameters.</span></span>
+        - id: options
+          type:
+            - Models.ApiOperationCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiOperationCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, string, OperationContract, ServiceCallback<OperationContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: OperationContract, callback: ServiceCallback<OperationContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-123">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-123">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-124">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-124">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-125">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-125">API revision identifier.</span></span> <span data-ttu-id="692a7-126">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-126">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-127">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-127">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-128">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-128">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-129">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-129">Must be unique in the current API Management service instance.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.OperationContract'
+          description: <span data-ttu-id="692a7-130">Crear parámetros.</span><span class="sxs-lookup"><span data-stu-id="692a7-130">Create parameters.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.OperationContract>
+          description: |
+            <span data-ttu-id="692a7-131">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-131">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="692a7-132">Elimina la operación especificada en la API.</span><span class="sxs-lookup"><span data-stu-id="692a7-132">Deletes the specified operation in the API.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-133">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-133">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-134">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-134">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-135">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-135">API revision identifier.</span></span> <span data-ttu-id="692a7-136">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-136">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-137">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-137">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-138">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-138">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-139">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-139">Must be unique in the current API Management service instance.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: <span data-ttu-id="692a7-140">ETag de la entidad.</span><span class="sxs-lookup"><span data-stu-id="692a7-140">ETag of the Entity.</span></span> <span data-ttu-id="692a7-141">ETag debe coincidir con el estado actual de entidad de la respuesta de encabezado de la solicitud GET o debe ser \* para actualización incondicional.</span><span class="sxs-lookup"><span data-stu-id="692a7-141">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, ifMatch: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-142">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-142">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-143">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-143">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-144">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-144">API revision identifier.</span></span> <span data-ttu-id="692a7-145">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-145">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-146">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-146">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-147">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-147">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-148">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-148">Must be unique in the current API Management service instance.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: <span data-ttu-id="692a7-149">ETag de la entidad.</span><span class="sxs-lookup"><span data-stu-id="692a7-149">ETag of the Entity.</span></span> <span data-ttu-id="692a7-150">ETag debe coincidir con el estado actual de entidad de la respuesta de encabezado de la solicitud GET o debe ser \* para actualización incondicional.</span><span class="sxs-lookup"><span data-stu-id="692a7-150">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="692a7-151">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="692a7-151">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="692a7-152">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-152">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, ifMatch: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-153">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-153">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-154">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-154">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-155">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-155">API revision identifier.</span></span> <span data-ttu-id="692a7-156">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-156">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-157">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-157">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-158">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-158">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-159">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-159">Must be unique in the current API Management service instance.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: <span data-ttu-id="692a7-160">ETag de la entidad.</span><span class="sxs-lookup"><span data-stu-id="692a7-160">ETag of the Entity.</span></span> <span data-ttu-id="692a7-161">ETag debe coincidir con el estado actual de entidad de la respuesta de encabezado de la solicitud GET o debe ser \* para actualización incondicional.</span><span class="sxs-lookup"><span data-stu-id="692a7-161">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="692a7-162">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-162">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="692a7-163">Obtiene los detalles de la operación de API especificada mediante su identificador.</span><span class="sxs-lookup"><span data-stu-id="692a7-163">Gets the details of the API Operation specified by its identifier.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-164">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-164">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-165">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-165">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-166">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-166">API revision identifier.</span></span> <span data-ttu-id="692a7-167">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-167">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-168">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-168">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-169">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-169">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-170">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-170">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiOperationGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<OperationContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-171">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-171">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-172">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-172">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-173">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-173">API revision identifier.</span></span> <span data-ttu-id="692a7-174">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-174">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-175">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-175">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-176">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-176">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-177">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-177">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="692a7-178">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="692a7-178">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.OperationContract>
+          description: |
+            <span data-ttu-id="692a7-179">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-179">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<OperationContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, callback: ServiceCallback<OperationContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-180">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-180">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-181">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-181">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-182">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-182">API revision identifier.</span></span> <span data-ttu-id="692a7-183">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-183">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-184">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-184">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-185">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-185">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-186">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-186">Must be unique in the current API Management service instance.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.OperationContract>
+          description: |
+            <span data-ttu-id="692a7-187">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-187">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.getEntityTag'
+    name: 'getEntityTag(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="692a7-188">Obtiene la versión de entidad (Etag) estado de la operación de API especificada mediante su identificador.</span><span class="sxs-lookup"><span data-stu-id="692a7-188">Gets the entity state (Etag) version of the API operation specified by its identifier.</span></span>
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-189">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-189">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-190">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-190">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-191">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-191">API revision identifier.</span></span> <span data-ttu-id="692a7-192">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-192">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-193">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-193">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-194">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-194">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-195">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-195">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiOperationGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.getEntityTag_2'
+    name: 'getEntityTag(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-196">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-196">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-197">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-197">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-198">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-198">API revision identifier.</span></span> <span data-ttu-id="692a7-199">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-199">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-200">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-200">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-201">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-201">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-202">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-202">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="692a7-203">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="692a7-203">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="692a7-204">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-204">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.getEntityTag_1'
+    name: 'getEntityTag(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-205">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-205">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-206">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-206">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-207">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-207">API revision identifier.</span></span> <span data-ttu-id="692a7-208">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-208">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-209">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-209">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-210">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-210">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-211">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-211">Must be unique in the current API Management service instance.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="692a7-212">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-212">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.listByApi_2'
+    name: 'listByApi(string, string, string, ApiOperationListByApiOptionalParams, ServiceCallback<OperationCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, options: ApiOperationListByApiOptionalParams, callback: ServiceCallback<OperationCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-213">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-213">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-214">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-214">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-215">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-215">API revision identifier.</span></span> <span data-ttu-id="692a7-216">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-216">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-217">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-217">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-apimanagement.ApiOperationListByApiOptionalParams'
+          description: <span data-ttu-id="692a7-218">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="692a7-218">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.OperationCollection>
+          description: |
+            <span data-ttu-id="692a7-219">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-219">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationListByApiResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.listByApi'
+    name: 'listByApi(string, string, string, Models.ApiOperationListByApiOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="692a7-220">Enumera una colección de las operaciones de la API especificada.</span><span class="sxs-lookup"><span data-stu-id="692a7-220">Lists a collection of the operations for the specified API.</span></span>
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, options?: Models.ApiOperationListByApiOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-221">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-221">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-222">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-222">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-223">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-223">API revision identifier.</span></span> <span data-ttu-id="692a7-224">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-224">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-225">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-225">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - Models.ApiOperationListByApiOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiOperationListByApiResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.listByApi_1'
+    name: 'listByApi(string, string, string, ServiceCallback<OperationCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, callback: ServiceCallback<OperationCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-226">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-226">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-227">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-227">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-228">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-228">API revision identifier.</span></span> <span data-ttu-id="692a7-229">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-229">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-230">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-230">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.OperationCollection>
+          description: |
+            <span data-ttu-id="692a7-231">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-231">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationListByApiResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.listByApiNext'
+    name: 'listByApiNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="692a7-232">Enumera una colección de las operaciones de la API especificada.</span><span class="sxs-lookup"><span data-stu-id="692a7-232">Lists a collection of the operations for the specified API.</span></span>
+    syntax:
+      content: 'function listByApiNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="692a7-233">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="692a7-233">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiOperationListByApiNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.listByApiNext_2'
+    name: 'listByApiNext(string, RequestOptionsBase, ServiceCallback<OperationCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByApiNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<OperationCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="692a7-234">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="692a7-234">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="692a7-235">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="692a7-235">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.OperationCollection>
+          description: |
+            <span data-ttu-id="692a7-236">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-236">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationListByApiNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.listByApiNext_1'
+    name: 'listByApiNext(string, ServiceCallback<OperationCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByApiNext(nextPageLink: string, callback: ServiceCallback<OperationCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="692a7-237">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="692a7-237">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.OperationCollection>
+          description: |
+            <span data-ttu-id="692a7-238">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-238">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiOperationListByApiNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.update'
+    name: 'update(string, string, string, string, OperationUpdateContract, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="692a7-239">Actualiza los detalles de la operación en la API especificada mediante su identificador.</span><span class="sxs-lookup"><span data-stu-id="692a7-239">Updates the details of the operation in the API specified by its identifier.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: OperationUpdateContract, ifMatch: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-240">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-240">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-241">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-241">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-242">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-242">API revision identifier.</span></span> <span data-ttu-id="692a7-243">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-243">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-244">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-244">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-245">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-245">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-246">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-246">Must be unique in the current API Management service instance.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.OperationUpdateContract'
+          description: <span data-ttu-id="692a7-247">Parámetros de actualización de la operación de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-247">API Operation Update parameters.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: <span data-ttu-id="692a7-248">ETag de la entidad.</span><span class="sxs-lookup"><span data-stu-id="692a7-248">ETag of the Entity.</span></span> <span data-ttu-id="692a7-249">ETag debe coincidir con el estado actual de entidad de la respuesta de encabezado de la solicitud GET o debe ser \* para actualización incondicional.</span><span class="sxs-lookup"><span data-stu-id="692a7-249">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.update_2'
+    name: 'update(string, string, string, string, OperationUpdateContract, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: OperationUpdateContract, ifMatch: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-250">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-250">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-251">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-251">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-252">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-252">API revision identifier.</span></span> <span data-ttu-id="692a7-253">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-253">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-254">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-254">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-255">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-255">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-256">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-256">Must be unique in the current API Management service instance.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.OperationUpdateContract'
+          description: <span data-ttu-id="692a7-257">Parámetros de actualización de la operación de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-257">API Operation Update parameters.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: <span data-ttu-id="692a7-258">ETag de la entidad.</span><span class="sxs-lookup"><span data-stu-id="692a7-258">ETag of the Entity.</span></span> <span data-ttu-id="692a7-259">ETag debe coincidir con el estado actual de entidad de la respuesta de encabezado de la solicitud GET o debe ser \* para actualización incondicional.</span><span class="sxs-lookup"><span data-stu-id="692a7-259">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="692a7-260">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="692a7-260">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="692a7-261">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-261">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiOperation.update_1'
+    name: 'update(string, string, string, string, OperationUpdateContract, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, apiId: string, operationId: string, parameters: OperationUpdateContract, ifMatch: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-262">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="692a7-262">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="692a7-263">El nombre del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-263">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-264">Identificador de la revisión de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-264">API revision identifier.</span></span> <span data-ttu-id="692a7-265">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-265">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="692a7-266">Tiene la revisión no actuales; rev = n como sufijo donde n es el número de revisión.</span><span class="sxs-lookup"><span data-stu-id="692a7-266">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="692a7-267">Identificador de la operación dentro de una API.</span><span class="sxs-lookup"><span data-stu-id="692a7-267">Operation identifier within an API.</span></span> <span data-ttu-id="692a7-268">Debe ser único en la instancia actual del servicio API Management.</span><span class="sxs-lookup"><span data-stu-id="692a7-268">Must be unique in the current API Management service instance.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.OperationUpdateContract'
+          description: <span data-ttu-id="692a7-269">Parámetros de actualización de la operación de API.</span><span class="sxs-lookup"><span data-stu-id="692a7-269">API Operation Update parameters.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: <span data-ttu-id="692a7-270">ETag de la entidad.</span><span class="sxs-lookup"><span data-stu-id="692a7-270">ETag of the Entity.</span></span> <span data-ttu-id="692a7-271">ETag debe coincidir con el estado actual de entidad de la respuesta de encabezado de la solicitud GET o debe ser \* para actualización incondicional.</span><span class="sxs-lookup"><span data-stu-id="692a7-271">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="692a7-272">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="692a7-272">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: '@azure/arm-apimanagement.OperationContract'
+    name: OperationContract
+    spec.typeScript:
+      - name: OperationContract
+        fullName: OperationContract
+        uid: '@azure/arm-apimanagement.OperationContract'
+  - uid: ServiceCallback<@azure/arm-apimanagement.OperationContract>
+    name: OperationContract>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationContract
+        fullName: OperationContract
+        uid: '@azure/arm-apimanagement.OperationContract'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.ApiOperationCreateOrUpdateOptionalParams'
+    name: ApiOperationCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: ApiOperationCreateOrUpdateOptionalParams
+        fullName: ApiOperationCreateOrUpdateOptionalParams
+        uid: '@azure/arm-apimanagement.ApiOperationCreateOrUpdateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-apimanagement.OperationCollection>
+    name: OperationCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationCollection
+        fullName: OperationCollection
+        uid: '@azure/arm-apimanagement.OperationCollection'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.ApiOperationListByApiOptionalParams'
+    name: ApiOperationListByApiOptionalParams
+    spec.typeScript:
+      - name: ApiOperationListByApiOptionalParams
+        fullName: ApiOperationListByApiOptionalParams
+        uid: '@azure/arm-apimanagement.ApiOperationListByApiOptionalParams'
+  - uid: '@azure/arm-apimanagement.OperationUpdateContract'
+    name: OperationUpdateContract
+    spec.typeScript:
+      - name: OperationUpdateContract
+        fullName: OperationUpdateContract
+        uid: '@azure/arm-apimanagement.OperationUpdateContract'
