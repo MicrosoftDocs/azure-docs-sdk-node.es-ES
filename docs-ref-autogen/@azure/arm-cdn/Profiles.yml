@@ -1,0 +1,987 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Profiles'
+    name: Profiles
+    fullName: Profiles
+    children:
+      - '@azure/arm-cdn.Profiles.beginCreate'
+      - '@azure/arm-cdn.Profiles.beginDeleteMethod'
+      - '@azure/arm-cdn.Profiles.beginUpdate'
+      - '@azure/arm-cdn.Profiles.create'
+      - '@azure/arm-cdn.Profiles.deleteMethod'
+      - '@azure/arm-cdn.Profiles.generateSsoUri'
+      - '@azure/arm-cdn.Profiles.generateSsoUri_2'
+      - '@azure/arm-cdn.Profiles.generateSsoUri_1'
+      - '@azure/arm-cdn.Profiles.get'
+      - '@azure/arm-cdn.Profiles.get_2'
+      - '@azure/arm-cdn.Profiles.get_1'
+      - '@azure/arm-cdn.Profiles.list'
+      - '@azure/arm-cdn.Profiles.list_2'
+      - '@azure/arm-cdn.Profiles.list_1'
+      - '@azure/arm-cdn.Profiles.listByResourceGroup'
+      - '@azure/arm-cdn.Profiles.listByResourceGroup_2'
+      - '@azure/arm-cdn.Profiles.listByResourceGroup_1'
+      - '@azure/arm-cdn.Profiles.listByResourceGroupNext'
+      - '@azure/arm-cdn.Profiles.listByResourceGroupNext_2'
+      - '@azure/arm-cdn.Profiles.listByResourceGroupNext_1'
+      - '@azure/arm-cdn.Profiles.listNext'
+      - '@azure/arm-cdn.Profiles.listNext_2'
+      - '@azure/arm-cdn.Profiles.listNext_1'
+      - '@azure/arm-cdn.Profiles.listResourceUsage'
+      - '@azure/arm-cdn.Profiles.listResourceUsage_2'
+      - '@azure/arm-cdn.Profiles.listResourceUsage_1'
+      - '@azure/arm-cdn.Profiles.listResourceUsageNext'
+      - '@azure/arm-cdn.Profiles.listResourceUsageNext_2'
+      - '@azure/arm-cdn.Profiles.listResourceUsageNext_1'
+      - '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes'
+      - '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes_2'
+      - '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes_1'
+      - '@azure/arm-cdn.Profiles.constructor'
+      - '@azure/arm-cdn.Profiles.update'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="96ad6-101">Clase que representa un perfiles.</span><span class="sxs-lookup"><span data-stu-id="96ad6-101">Class representing a Profiles.</span></span>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.beginCreate'
+    name: 'beginCreate(string, string, Profile, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-102">Crea un nuevo perfil de CDN con un nombre de perfil en el grupo de recursos y la suscripción especificado.</span><span class="sxs-lookup"><span data-stu-id="96ad6-102">Creates a new CDN profile with a profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, profileName: string, profile: Profile, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-103">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-103">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-104">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-104">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: profile
+          type:
+            - '@azure/arm-cdn.Profile'
+          description: <span data-ttu-id="96ad6-105">Propiedades de perfil que sean necesarias para crear un nuevo perfil.</span><span class="sxs-lookup"><span data-stu-id="96ad6-105">Profile properties needed to create a new profile.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="96ad6-106">Elimina un perfil CDN existente con los parámetros especificados.</span><span class="sxs-lookup"><span data-stu-id="96ad6-106">Deletes an existing CDN profile with the specified parameters.</span></span> <span data-ttu-id="96ad6-107">Si elimina un perfil dará como resultado la eliminación de todos los recursos secundarios incluidos los puntos de conexión, orígenes y dominios personalizados.</span><span class="sxs-lookup"><span data-stu-id="96ad6-107">Deleting a profile will result in the deletion of all of the sub-resources including endpoints, origins and custom domains.</span></span>'
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-108">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-108">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-109">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-109">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.beginUpdate'
+    name: 'beginUpdate(string, string, Models.ProfilesBeginUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-110">Actualiza un perfil CDN existente con el nombre del perfil especificado en el grupo de recursos y la suscripción especificado.</span><span class="sxs-lookup"><span data-stu-id="96ad6-110">Updates an existing CDN profile with the specified profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, profileName: string, options?: Models.ProfilesBeginUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-111">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-111">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-112">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-112">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - Models.ProfilesBeginUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.create'
+    name: 'create(string, string, Profile, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-113">Crea un nuevo perfil de CDN con un nombre de perfil en el grupo de recursos y la suscripción especificado.</span><span class="sxs-lookup"><span data-stu-id="96ad6-113">Creates a new CDN profile with a profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, profileName: string, profile: Profile, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-114">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-114">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-115">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-115">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: profile
+          type:
+            - '@azure/arm-cdn.Profile'
+          description: <span data-ttu-id="96ad6-116">Propiedades de perfil que sean necesarias para crear un nuevo perfil.</span><span class="sxs-lookup"><span data-stu-id="96ad6-116">Profile properties needed to create a new profile.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesCreateResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="96ad6-117">Elimina un perfil CDN existente con los parámetros especificados.</span><span class="sxs-lookup"><span data-stu-id="96ad6-117">Deletes an existing CDN profile with the specified parameters.</span></span> <span data-ttu-id="96ad6-118">Si elimina un perfil dará como resultado la eliminación de todos los recursos secundarios incluidos los puntos de conexión, orígenes y dominios personalizados.</span><span class="sxs-lookup"><span data-stu-id="96ad6-118">Deleting a profile will result in the deletion of all of the sub-resources including endpoints, origins and custom domains.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-119">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-119">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-120">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-120">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.generateSsoUri'
+    name: 'generateSsoUri(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="96ad6-121">Genera una dinámica que SSO URI se utilizan para iniciar sesión el portal complementario de la red CDN.</span><span class="sxs-lookup"><span data-stu-id="96ad6-121">Generates a dynamic SSO URI used to sign in to the CDN supplemental portal.</span></span> <span data-ttu-id="96ad6-122">Portal complementario se usa para configurar características avanzadas que todavía no están disponibles en el portal de Azure, como los informes principales de un perfil estándar; motor de reglas avanzadas de informes de HTTP y estadísticas en tiempo real y alertas en un perfil premium.</span><span class="sxs-lookup"><span data-stu-id="96ad6-122">Supplemental portal is used to configure advanced feature capabilities that are not yet available in the Azure portal, such as core reports in a standard profile; rules engine, advanced HTTP reports, and real-time stats and alerts in a premium profile.</span></span> <span data-ttu-id="96ad6-123">El URI de SSO cambia aproximadamente cada 10 minutos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-123">The SSO URI changes approximately every 10 minutes.</span></span>'
+    syntax:
+      content: 'function generateSsoUri(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-124">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-124">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-125">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-125">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesGenerateSsoUriResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.generateSsoUri_2'
+    name: 'generateSsoUri(string, string, RequestOptionsBase, ServiceCallback<SsoUri>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function generateSsoUri(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<SsoUri>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-126">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-126">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-127">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-127">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="96ad6-128">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="96ad6-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.SsoUri>
+          description: |
+            <span data-ttu-id="96ad6-129">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesGenerateSsoUriResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.generateSsoUri_1'
+    name: 'generateSsoUri(string, string, ServiceCallback<SsoUri>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function generateSsoUri(resourceGroupName: string, profileName: string, callback: ServiceCallback<SsoUri>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-130">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-130">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-131">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-131">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.SsoUri>
+          description: |
+            <span data-ttu-id="96ad6-132">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-132">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesGenerateSsoUriResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-133">Obtiene un perfil de CDN con el nombre del perfil especificado en el grupo de recursos y la suscripción especificado.</span><span class="sxs-lookup"><span data-stu-id="96ad6-133">Gets a CDN profile with the specified profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-134">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-134">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-135">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-135">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Profile>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<Profile>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-136">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-136">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-137">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-137">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="96ad6-138">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="96ad6-138">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Profile>
+          description: |
+            <span data-ttu-id="96ad6-139">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.get_1'
+    name: 'get(string, string, ServiceCallback<Profile>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, callback: ServiceCallback<Profile>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-140">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-140">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-141">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-141">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Profile>
+          description: |
+            <span data-ttu-id="96ad6-142">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-142">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-143">Enumera todos los perfiles de CDN dentro de una suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-143">Lists all of the CDN profiles within an Azure subscription.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="96ad6-144">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="96ad6-144">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="96ad6-145">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.list_1'
+    name: list(ServiceCallback<ProfileListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="96ad6-146">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-146">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-147">Enumera todos los perfiles de CDN dentro de un grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-147">Lists all of the CDN profiles within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-148">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-148">Name of the Resource group within the Azure subscription.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-149">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-149">Name of the Resource group within the Azure subscription.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="96ad6-150">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="96ad6-150">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="96ad6-151">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-152">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-152">Name of the Resource group within the Azure subscription.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="96ad6-153">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-154">Enumera todos los perfiles de CDN dentro de un grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-154">Lists all of the CDN profiles within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-155">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="96ad6-155">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-156">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="96ad6-156">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="96ad6-157">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="96ad6-157">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="96ad6-158">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-159">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="96ad6-159">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="96ad6-160">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-161">Enumera todos los perfiles de CDN dentro de una suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-161">Lists all of the CDN profiles within an Azure subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-162">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="96ad6-162">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-163">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="96ad6-163">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="96ad6-164">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="96ad6-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="96ad6-165">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listNext_1'
+    name: 'listNext(string, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-166">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="96ad6-166">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="96ad6-167">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-167">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsage'
+    name: 'listResourceUsage(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-168">Comprueba la cuota y uso real de los puntos de conexión en el perfil de CDN especificado.</span><span class="sxs-lookup"><span data-stu-id="96ad6-168">Checks the quota and actual usage of endpoints under the given CDN profile.</span></span>
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-169">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-169">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-170">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-170">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsage_2'
+    name: 'listResourceUsage(string, string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-171">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-171">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-172">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-172">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="96ad6-173">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="96ad6-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="96ad6-174">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsage_1'
+    name: 'listResourceUsage(string, string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-175">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-175">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-176">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-176">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="96ad6-177">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsageNext'
+    name: 'listResourceUsageNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-178">Comprueba la cuota y uso real de los puntos de conexión en el perfil de CDN especificado.</span><span class="sxs-lookup"><span data-stu-id="96ad6-178">Checks the quota and actual usage of endpoints under the given CDN profile.</span></span>
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-179">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="96ad6-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsageNext_2'
+    name: 'listResourceUsageNext(string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-180">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="96ad6-180">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="96ad6-181">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="96ad6-181">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="96ad6-182">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsageNext_1'
+    name: 'listResourceUsageNext(string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-183">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="96ad6-183">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="96ad6-184">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes'
+    name: 'listSupportedOptimizationTypes(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-185">Obtiene los tipos de optimización admitidas para el perfil actual.</span><span class="sxs-lookup"><span data-stu-id="96ad6-185">Gets the supported optimization types for the current profile.</span></span> <span data-ttu-id="96ad6-186">Un usuario puede crear un punto de conexión con un tipo de optimización de los valores que aparecen.</span><span class="sxs-lookup"><span data-stu-id="96ad6-186">A user can create an endpoint with an optimization type from the listed values.</span></span>
+    syntax:
+      content: 'function listSupportedOptimizationTypes(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-187">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-187">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-188">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-188">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListSupportedOptimizationTypesResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes_2'
+    name: 'listSupportedOptimizationTypes(string, string, RequestOptionsBase, ServiceCallback<SupportedOptimizationTypesListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSupportedOptimizationTypes(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<SupportedOptimizationTypesListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-189">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-189">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-190">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-190">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="96ad6-191">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="96ad6-191">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.SupportedOptimizationTypesListResult>
+          description: |
+            <span data-ttu-id="96ad6-192">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListSupportedOptimizationTypesResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes_1'
+    name: 'listSupportedOptimizationTypes(string, string, ServiceCallback<SupportedOptimizationTypesListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSupportedOptimizationTypes(resourceGroupName: string, profileName: string, callback: ServiceCallback<SupportedOptimizationTypesListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-193">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-193">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-194">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-194">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.SupportedOptimizationTypesListResult>
+          description: |
+            <span data-ttu-id="96ad6-195">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="96ad6-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListSupportedOptimizationTypesResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.constructor'
+    name: Profiles(CdnManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-196">Crear perfiles de una.</span><span class="sxs-lookup"><span data-stu-id="96ad6-196">Create a Profiles.</span></span>
+    syntax:
+      content: 'new Profiles(client: CdnManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cdn.CdnManagementClientContext'
+          description: |
+            <span data-ttu-id="96ad6-197">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="96ad6-197">Reference to the service client.</span></span>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.update'
+    name: 'update(string, string, Models.ProfilesUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="96ad6-198">Actualiza un perfil CDN existente con el nombre del perfil especificado en el grupo de recursos y la suscripción especificado.</span><span class="sxs-lookup"><span data-stu-id="96ad6-198">Updates an existing CDN profile with the specified profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, profileName: string, options?: Models.ProfilesUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-199">Nombre del grupo de recursos dentro de la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="96ad6-199">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="96ad6-200">Nombre del perfil CDN que es único dentro del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="96ad6-200">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - Models.ProfilesUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesUpdateResponse>
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.CdnManagementClientContext'
+    name: CdnManagementClientContext
+    spec.typeScript:
+      - name: CdnManagementClientContext
+        fullName: CdnManagementClientContext
+        uid: '@azure/arm-cdn.CdnManagementClientContext'
+  - uid: '@azure/arm-cdn.Profile'
+    name: Profile
+    spec.typeScript:
+      - name: Profile
+        fullName: Profile
+        uid: '@azure/arm-cdn.Profile'
+  - uid: ServiceCallback<@azure/arm-cdn.SsoUri>
+    name: SsoUri>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SsoUri
+        fullName: SsoUri
+        uid: '@azure/arm-cdn.SsoUri'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.Profile>
+    name: Profile>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Profile
+        fullName: Profile
+        uid: '@azure/arm-cdn.Profile'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ProfileListResult>
+    name: ProfileListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ProfileListResult
+        fullName: ProfileListResult
+        uid: '@azure/arm-cdn.ProfileListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+    name: ResourceUsageListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ResourceUsageListResult
+        fullName: ResourceUsageListResult
+        uid: '@azure/arm-cdn.ResourceUsageListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.SupportedOptimizationTypesListResult>
+    name: SupportedOptimizationTypesListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SupportedOptimizationTypesListResult
+        fullName: SupportedOptimizationTypesListResult
+        uid: '@azure/arm-cdn.SupportedOptimizationTypesListResult'
+      - name: '>'
+        fullName: '>'
