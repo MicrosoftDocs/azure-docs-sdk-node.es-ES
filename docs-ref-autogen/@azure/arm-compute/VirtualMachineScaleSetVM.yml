@@ -1,0 +1,524 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
+    name: VirtualMachineScaleSetVM
+    fullName: VirtualMachineScaleSetVM
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.additionalCapabilities'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.availabilitySet'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.diagnosticsProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.hardwareProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.id'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.instanceId'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.instanceView'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.latestModelApplied'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.licenseType'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.location'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.modelDefinitionApplied'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.name'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.networkProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.networkProfileConfiguration'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.osProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.plan'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.protectionPolicy'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.provisioningState'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.resources'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.sku'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.storageProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.tags'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.type'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.vmId'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.zones'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="4f12d-101">Describe una máquina virtual de conjunto de escalado de máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-101">Describes a virtual machine scale set virtual machine.</span></span>
+    extends:
+      name: '@azure/arm-compute.Resource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.additionalCapabilities'
+    name: additionalCapabilities
+    fullName: additionalCapabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-102">Especifica las capacidades adicionales que habilitan o deshabilitan en la máquina virtual en el conjunto de escalado.</span><span class="sxs-lookup"><span data-stu-id="4f12d-102">Specifies additional capabilities enabled or disabled on the virtual machine in the scale set.</span></span>
+      <span data-ttu-id="4f12d-103">Por ejemplo: si la máquina virtual tiene la capacidad para admitir adjuntar discos de datos con tipo de cuenta de almacenamiento UltraSSD_LRS administrados.</span><span class="sxs-lookup"><span data-stu-id="4f12d-103">For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.</span></span>
+    optional: true
+    syntax:
+      content: 'additionalCapabilities?: AdditionalCapabilities'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalCapabilities'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.availabilitySet'
+    name: availabilitySet
+    fullName: availabilitySet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-104">Especifica información sobre el conjunto de disponibilidad que se debe asignar a la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-104">Specifies information about the availability set that the virtual machine should be assigned to.</span></span> <span data-ttu-id="4f12d-105">Las máquinas virtuales especificadas en el mismo conjunto de disponibilidad se asignan a varios nodos para maximizar la disponibilidad.</span><span class="sxs-lookup"><span data-stu-id="4f12d-105">Virtual machines specified in the same availability set are allocated to different nodes to maximize availability.</span></span> <span data-ttu-id="4f12d-106">Para obtener más información acerca de los conjuntos de disponibilidad, consulte [administrar la disponibilidad de las máquinas virtuales](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).</span><span class="sxs-lookup"><span data-stu-id="4f12d-106">For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).</span></span>
+      <br><br> <span data-ttu-id="4f12d-107">Para obtener más información sobre el mantenimiento planeado de Azure, consulte [mantenimiento planeado de máquinas virtuales en Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="4f12d-107">For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span></span>
+      <br><br> <span data-ttu-id="4f12d-108">Actualmente, solo se agrega una máquina virtual al conjunto de disponibilidad en tiempo de creación.</span><span class="sxs-lookup"><span data-stu-id="4f12d-108">Currently, a VM can only be added to availability set at creation time.</span></span> <span data-ttu-id="4f12d-109">No se puede agregar una máquina virtual existente a un conjunto de disponibilidad.</span><span class="sxs-lookup"><span data-stu-id="4f12d-109">An existing VM cannot be added to an availability set.</span></span>
+    optional: true
+    syntax:
+      content: 'availabilitySet?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.diagnosticsProfile'
+    name: diagnosticsProfile
+    fullName: diagnosticsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4f12d-110">Especifica el estado de configuración de diagnóstico de arranque.</span><span class="sxs-lookup"><span data-stu-id="4f12d-110">Specifies the boot diagnostic settings state.</span></span> <br><br><span data-ttu-id="4f12d-111">Mínimo de api-version: 2015-06-15.</span><span class="sxs-lookup"><span data-stu-id="4f12d-111">Minimum api-version: 2015-06-15.</span></span>'
+    optional: true
+    syntax:
+      content: 'diagnosticsProfile?: DiagnosticsProfile'
+      return:
+        type:
+          - '@azure/arm-compute.DiagnosticsProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.hardwareProfile'
+    name: hardwareProfile
+    fullName: hardwareProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4f12d-112">Especifica la configuración de hardware de la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-112">Specifies the hardware settings for the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'hardwareProfile?: HardwareProfile'
+      return:
+        type:
+          - '@azure/arm-compute.HardwareProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4f12d-113">Id. de recurso **Nota: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-113">Resource Id **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.instanceId'
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-114">El identificador de instancia de máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-114">The virtual machine instance ID.</span></span>
+      <span data-ttu-id="4f12d-115">**NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-115">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'instanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.instanceView'
+    name: instanceView
+    fullName: instanceView
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-116">La vista de instancia de máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-116">The virtual machine instance view.</span></span>
+      <span data-ttu-id="4f12d-117">**NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-117">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'instanceView?: VirtualMachineScaleSetVMInstanceView'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetVMInstanceView'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.latestModelApplied'
+    name: latestModelApplied
+    fullName: latestModelApplied
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-118">Especifica si se ha aplicado el modelo más reciente a la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-118">Specifies whether the latest model has been applied to the virtual machine.</span></span>
+      <span data-ttu-id="4f12d-119">**NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-119">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'latestModelApplied?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-120">Especifica que la imagen o el disco que se utiliza era con licencia en el entorno local.</span><span class="sxs-lookup"><span data-stu-id="4f12d-120">Specifies that the image or disk that is being used was licensed on-premises.</span></span> <span data-ttu-id="4f12d-121">Este elemento solo se usa para las imágenes que contienen el sistema operativo Windows Server.</span><span class="sxs-lookup"><span data-stu-id="4f12d-121">This element is only used for images that contain the Windows Server operating system.</span></span> <br><br> <span data-ttu-id="4f12d-122">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="4f12d-122">Possible values are:</span></span> <br><br> <span data-ttu-id="4f12d-123">Windows_Client</span><span class="sxs-lookup"><span data-stu-id="4f12d-123">Windows_Client</span></span> <br><br> <span data-ttu-id="4f12d-124">Windows_Server</span><span class="sxs-lookup"><span data-stu-id="4f12d-124">Windows_Server</span></span> <br><br> <span data-ttu-id="4f12d-125">Si este elemento se incluye en una solicitud de actualización, el valor debe coincidir con el valor inicial.</span><span class="sxs-lookup"><span data-stu-id="4f12d-125">If this element is included in a request for an update, the value must match the initial value.</span></span> <span data-ttu-id="4f12d-126">No se puede actualizar este valor.</span><span class="sxs-lookup"><span data-stu-id="4f12d-126">This value cannot be updated.</span></span> <br><br> <span data-ttu-id="4f12d-127">Para obtener más información, consulte [Azure Hybrid Use ventaja para Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="4f12d-127">For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span></span>
+      <br><br> <span data-ttu-id="4f12d-128">Mínimo de api-version: 2015-06-15</span><span class="sxs-lookup"><span data-stu-id="4f12d-128">Minimum api-version: 2015-06-15</span></span>
+    optional: true
+    syntax:
+      content: 'licenseType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4f12d-129">Ubicación del recurso</span><span class="sxs-lookup"><span data-stu-id="4f12d-129">Resource location</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.modelDefinitionApplied'
+    name: modelDefinitionApplied
+    fullName: modelDefinitionApplied
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-130">Especifica si el modelo que se aplica a la máquina virtual es el modelo del conjunto de escalado de máquina virtual o el modelo personalizado para la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-130">Specifies whether the model applied to the virtual machine is the model of the virtual machine scale set or the customized model for the virtual machine.</span></span>
+      <span data-ttu-id="4f12d-131">**NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-131">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'modelDefinitionApplied?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4f12d-132">Nombre del recurso **Nota: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-132">Resource name **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.networkProfile'
+    name: networkProfile
+    fullName: networkProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4f12d-133">Especifica las interfaces de red de la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-133">Specifies the network interfaces of the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'networkProfile?: NetworkProfile'
+      return:
+        type:
+          - '@azure/arm-compute.NetworkProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.networkProfileConfiguration'
+    name: networkProfileConfiguration
+    fullName: networkProfileConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4f12d-134">Especifica la configuración de perfil de red de la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-134">Specifies the network profile configuration of the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'networkProfileConfiguration?: VirtualMachineScaleSetVMNetworkProfileConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetVMNetworkProfileConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.osProfile'
+    name: osProfile
+    fullName: osProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4f12d-135">Especifica la configuración del sistema operativo de la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-135">Specifies the operating system settings for the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'osProfile?: OSProfile'
+      return:
+        type:
+          - '@azure/arm-compute.OSProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.plan'
+    name: plan
+    fullName: plan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4f12d-136">Especifica información sobre la imagen de marketplace utilizada para crear la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-136">Specifies information about the marketplace image used to create the virtual machine.</span></span> <span data-ttu-id="4f12d-137">Este elemento solo se usa para imágenes de marketplace.</span><span class="sxs-lookup"><span data-stu-id="4f12d-137">This element is only used for marketplace images.</span></span> <span data-ttu-id="4f12d-138">Para poder usar una imagen de marketplace desde una API, debe habilitar la imagen para su uso mediante programación.</span><span class="sxs-lookup"><span data-stu-id="4f12d-138">Before you can use a marketplace image from an API, you must enable the image for programmatic use.</span></span>  <span data-ttu-id="4f12d-139">En Azure portal, busque la imagen de marketplace que desea usar y, a continuación, haga clic en **desea implementar mediante programación, Introducción ->**.</span><span class="sxs-lookup"><span data-stu-id="4f12d-139">In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**.</span></span> <span data-ttu-id="4f12d-140">Escriba cualquier información necesaria y, a continuación, haga clic en **guardar**.</span><span class="sxs-lookup"><span data-stu-id="4f12d-140">Enter any required information and then click **Save**.</span></span>'
+    optional: true
+    syntax:
+      content: 'plan?: Plan'
+      return:
+        type:
+          - '@azure/arm-compute.Plan'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.protectionPolicy'
+    name: protectionPolicy
+    fullName: protectionPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4f12d-141">Especifica la directiva de protección de la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-141">Specifies the protection policy of the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'protectionPolicy?: VirtualMachineScaleSetVMProtectionPolicy'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetVMProtectionPolicy'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-142">El estado de aprovisionamiento, que solo aparece en la respuesta.</span><span class="sxs-lookup"><span data-stu-id="4f12d-142">The provisioning state, which only appears in the response.</span></span>
+      <span data-ttu-id="4f12d-143">**NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-143">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.resources'
+    name: resources
+    fullName: resources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-144">Los recursos de extensión de máquina virtual secundaria.</span><span class="sxs-lookup"><span data-stu-id="4f12d-144">The virtual machine child extension resources.</span></span>
+      <span data-ttu-id="4f12d-145">**NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-145">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'resources?: VirtualMachineExtension[]'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineExtension[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-146">La SKU de máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-146">The virtual machine SKU.</span></span>
+      <span data-ttu-id="4f12d-147">**NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-147">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-compute.Sku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.storageProfile'
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4f12d-148">Especifica la configuración de almacenamiento de los discos de máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-148">Specifies the storage settings for the virtual machine disks.</span></span>
+    optional: true
+    syntax:
+      content: 'storageProfile?: StorageProfile'
+      return:
+        type:
+          - '@azure/arm-compute.StorageProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4f12d-149">Etiquetas del recurso</span><span class="sxs-lookup"><span data-stu-id="4f12d-149">Resource tags</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4f12d-150">Tipo de recurso **Nota: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-150">Resource type **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.vmId'
+    name: vmId
+    fullName: vmId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-151">Identificador único de Azure VM.</span><span class="sxs-lookup"><span data-stu-id="4f12d-151">Azure VM unique ID.</span></span>
+      <span data-ttu-id="4f12d-152">**NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-152">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'vmId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.zones'
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4f12d-153">Las zonas de la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="4f12d-153">The virtual machine zones.</span></span>
+      <span data-ttu-id="4f12d-154">**NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**</span><span class="sxs-lookup"><span data-stu-id="4f12d-154">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-compute.Resource'
+  - uid: '@azure/arm-compute.AdditionalCapabilities'
+    name: AdditionalCapabilities
+    spec.typeScript:
+      - name: AdditionalCapabilities
+        fullName: AdditionalCapabilities
+        uid: '@azure/arm-compute.AdditionalCapabilities'
+  - uid: '@azure/arm-compute.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-compute.SubResource'
+  - uid: '@azure/arm-compute.DiagnosticsProfile'
+    name: DiagnosticsProfile
+    spec.typeScript:
+      - name: DiagnosticsProfile
+        fullName: DiagnosticsProfile
+        uid: '@azure/arm-compute.DiagnosticsProfile'
+  - uid: '@azure/arm-compute.HardwareProfile'
+    name: HardwareProfile
+    spec.typeScript:
+      - name: HardwareProfile
+        fullName: HardwareProfile
+        uid: '@azure/arm-compute.HardwareProfile'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMInstanceView'
+    name: VirtualMachineScaleSetVMInstanceView
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMInstanceView
+        fullName: VirtualMachineScaleSetVMInstanceView
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMInstanceView'
+  - uid: '@azure/arm-compute.NetworkProfile'
+    name: NetworkProfile
+    spec.typeScript:
+      - name: NetworkProfile
+        fullName: NetworkProfile
+        uid: '@azure/arm-compute.NetworkProfile'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMNetworkProfileConfiguration'
+    name: VirtualMachineScaleSetVMNetworkProfileConfiguration
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMNetworkProfileConfiguration
+        fullName: VirtualMachineScaleSetVMNetworkProfileConfiguration
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMNetworkProfileConfiguration'
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    spec.typeScript:
+      - name: OSProfile
+        fullName: OSProfile
+        uid: '@azure/arm-compute.OSProfile'
+  - uid: '@azure/arm-compute.Plan'
+    name: Plan
+    spec.typeScript:
+      - name: Plan
+        fullName: Plan
+        uid: '@azure/arm-compute.Plan'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProtectionPolicy'
+    name: VirtualMachineScaleSetVMProtectionPolicy
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMProtectionPolicy
+        fullName: VirtualMachineScaleSetVMProtectionPolicy
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMProtectionPolicy'
+  - uid: '@azure/arm-compute.VirtualMachineExtension[]'
+    name: 'VirtualMachineExtension[]'
+    spec.typeScript:
+      - name: VirtualMachineExtension
+        fullName: VirtualMachineExtension
+        uid: '@azure/arm-compute.VirtualMachineExtension'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-compute.Sku'
+  - uid: '@azure/arm-compute.StorageProfile'
+    name: StorageProfile
+    spec.typeScript:
+      - name: StorageProfile
+        fullName: StorageProfile
+        uid: '@azure/arm-compute.StorageProfile'
