@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.CreationData'
+    name: CreationData
+    fullName: CreationData
+    children:
+      - '@azure/arm-compute.CreationData.createOption'
+      - '@azure/arm-compute.CreationData.imageReference'
+      - '@azure/arm-compute.CreationData.sourceResourceId'
+      - '@azure/arm-compute.CreationData.sourceUri'
+      - '@azure/arm-compute.CreationData.storageAccountId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Datos que se usan al crear un disco.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Esto enumera los orígenes posibles de creación de un disco. Los valores posibles son: ''Empty'', ''conectar'', ''FromImage'', ''Import'', ''Copiar'', ''Restore'', "Carga"'
+    syntax:
+      content: 'createOption: DiskCreateOption'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOption'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.imageReference'
+    name: imageReference
+    fullName: imageReference
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Información de origen del disco.
+    optional: true
+    syntax:
+      content: 'imageReference?: ImageDiskReference'
+      return:
+        type:
+          - '@azure/arm-compute.ImageDiskReference'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.sourceResourceId'
+    name: sourceResourceId
+    fullName: sourceResourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si createOption es copia, este es el identificador ARM de la instantánea de origen o el disco.'
+    optional: true
+    syntax:
+      content: 'sourceResourceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.sourceUri'
+    name: sourceUri
+    fullName: sourceUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si createOption es importante, este es el URI de un blob que se importarán en un disco administrado.'
+    optional: true
+    syntax:
+      content: 'sourceUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.storageAccountId'
+    name: storageAccountId
+    fullName: storageAccountId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si está createOption importar, el identificador de Azure Resource Manager de la cuenta de almacenamiento que contiene el blob para importar como un disco. Necesario únicamente si el blob está en una suscripción diferente'
+    optional: true
+    syntax:
+      content: 'storageAccountId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.DiskCreateOption'
+    name: DiskCreateOption
+    spec.typeScript:
+      - name: DiskCreateOption
+        fullName: DiskCreateOption
+        uid: '@azure/arm-compute.DiskCreateOption'
+  - uid: '@azure/arm-compute.ImageDiskReference'
+    name: ImageDiskReference
+    spec.typeScript:
+      - name: ImageDiskReference
+        fullName: ImageDiskReference
+        uid: '@azure/arm-compute.ImageDiskReference'

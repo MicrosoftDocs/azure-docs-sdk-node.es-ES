@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.DataDisk'
+    name: DataDisk
+    fullName: DataDisk
+    children:
+      - '@azure/arm-compute.DataDisk.caching'
+      - '@azure/arm-compute.DataDisk.createOption'
+      - '@azure/arm-compute.DataDisk.diskSizeGB'
+      - '@azure/arm-compute.DataDisk.image'
+      - '@azure/arm-compute.DataDisk.lun'
+      - '@azure/arm-compute.DataDisk.managedDisk'
+      - '@azure/arm-compute.DataDisk.name'
+      - '@azure/arm-compute.DataDisk.vhd'
+      - '@azure/arm-compute.DataDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe un disco de datos.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica los requisitos de almacenamiento en caché. <br><br> Los valores posibles son: <br><br> **Ninguno** <br><br>
+      **ReadOnly** <br><br> **ReadWrite** <br><br> Valor predeterminado: **Ninguno de almacenamiento estándar. Solo lectura para Premium storage**. Los valores posibles son: 'None', 'ReadOnly', 'ReadWrite'
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica cómo debe crearse la máquina virtual.<br><br> Los valores posibles son:<br><br>
+      **Adjuntar** \u2013 este valor se utiliza cuando se usa un disco especializado para crear la máquina virtual.<br><br> **FromImage** \u2013 este valor se utiliza cuando se usa una imagen para crear la máquina virtual. Si utiliza una imagen de plataforma, también usar el elemento imageReference que se ha descrito anteriormente. Si utiliza una imagen de marketplace, usará el elemento de plan que se ha descrito anteriormente. Los valores posibles son: 'FromImage', 'Empty', 'conectar'
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica el tamaño de un disco de datos vacía en gigabytes. Este elemento se puede utilizar para sobrescribir el tamaño del disco en una imagen de máquina virtual. <br><br> Este valor no puede ser mayor que 1023 GB
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El usuario del origen de imagen disco duro virtual. Se copiará el disco duro virtual antes de que se asocia a la máquina virtual. Si se proporciona SourceImage, la unidad de disco duro virtual de destino no debe existir.'
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica el número de unidad lógica del disco de datos. Este valor se usa para identificar los discos de datos dentro de la máquina virtual y, por tanto, debe ser único para cada disco de datos conectado a una máquina virtual.'
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Los parámetros de disco administrado.
+    optional: true
+    syntax:
+      content: 'managedDisk?: ManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.ManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre del disco.
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.vhd'
+    name: vhd
+    fullName: vhd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El disco duro virtual.
+    optional: true
+    syntax:
+      content: 'vhd?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica si debe habilitarse o deshabilitarse en el disco writeAccelerator.
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.ManagedDiskParameters'
+    name: ManagedDiskParameters
+    spec.typeScript:
+      - name: ManagedDiskParameters
+        fullName: ManagedDiskParameters
+        uid: '@azure/arm-compute.ManagedDiskParameters'
