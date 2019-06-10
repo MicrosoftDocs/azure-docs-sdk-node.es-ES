@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VaultCertificate'
+    name: VaultCertificate
+    fullName: VaultCertificate
+    children:
+      - '@azure/arm-compute.VaultCertificate.certificateStore'
+      - '@azure/arm-compute.VaultCertificate.certificateUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="c4f95-101">Describe una referencia de certificado en un almacén de claves, y donde el certificado debe residir en la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="c4f95-101">Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM.</span></span>'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateStore'
+    name: certificateStore
+    fullName: certificateStore
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c4f95-102">Las máquinas virtuales de Windows, especifica el almacén de certificados en la máquina Virtual a la que se debe agregar el certificado.</span><span class="sxs-lookup"><span data-stu-id="c4f95-102">For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added.</span></span> <span data-ttu-id="c4f95-103">El almacén de certificados especificado está implícitamente en la cuenta de LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="c4f95-103">The specified certificate store is implicitly in the LocalMachine account.</span></span> <br><br><span data-ttu-id="c4f95-104">Las máquinas virtuales de Linux, el archivo de certificado se coloca bajo el directorio /var/lib/waagent, con el nombre de archivo &lt;UppercaseThumbprint&gt;.crt para el X509 archivo de certificado y &lt;UppercaseThumbprint&gt;.prv para clave privada.</span><span class="sxs-lookup"><span data-stu-id="c4f95-104">For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name &lt;UppercaseThumbprint&gt;.crt for the X509 certificate file and &lt;UppercaseThumbprint&gt;.prv for private key.</span></span> <span data-ttu-id="c4f95-105">Ambos archivos son PEM con formato.</span><span class="sxs-lookup"><span data-stu-id="c4f95-105">Both of these files are .pem formatted.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateStore?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c4f95-106">Se trata de la dirección URL de un certificado que se ha cargado a Key Vault como un secreto.</span><span class="sxs-lookup"><span data-stu-id="c4f95-106">This is the URL of a certificate that has been uploaded to Key Vault as a secret.</span></span> <span data-ttu-id="c4f95-107">Para agregar un secreto a Key Vault, consulte [agregar una clave o un secreto al almacén de claves](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add).</span><span class="sxs-lookup"><span data-stu-id="c4f95-107">For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add).</span></span> <span data-ttu-id="c4f95-108">En este caso, sus necesidades de certificado que es la codificación Base64 del archivo JSON siguiente objeto que está codificado en UTF-8:</span><span class="sxs-lookup"><span data-stu-id="c4f95-108">In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8:</span></span> <br><br> <span data-ttu-id="c4f95-109">{</span><span class="sxs-lookup"><span data-stu-id="c4f95-109">{</span></span><br>  <span data-ttu-id="c4f95-110">"datos": "< Base64-certificado con codificación->",</span><span class="sxs-lookup"><span data-stu-id="c4f95-110">"data":"<Base64-encoded-certificate>",</span></span><br>
+      <span data-ttu-id="c4f95-111">"dataType":"pfx",</span><span class="sxs-lookup"><span data-stu-id="c4f95-111">"dataType":"pfx",</span></span><br>  <span data-ttu-id="c4f95-112">"password": "< pfx-archivo-password >"</span><span class="sxs-lookup"><span data-stu-id="c4f95-112">"password":"<pfx-file-password>"</span></span><br><span data-ttu-id="c4f95-113">}</span><span class="sxs-lookup"><span data-stu-id="c4f95-113">}</span></span>
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
