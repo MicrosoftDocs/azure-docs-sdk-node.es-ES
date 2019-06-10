@@ -105,23 +105,23 @@ items:
           - '@azure/cognitiveservices-qnamaker.Operations'
     package: '@azure/cognitiveservices-qnamaker'
   - uid: '@azure/cognitiveservices-qnamaker.QnAMakerClient.constructor'
-    name: 'QnAMakerClient(string, ServiceClientCredentials, msRest.ServiceClientOptions)'
+    name: 'QnAMakerClient(ServiceClientCredentials, string, msRest.ServiceClientOptions)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: Inicializa una nueva instancia de la clase QnAMakerClient.
     syntax:
-      content: 'new QnAMakerClient(endpoint: string, credentials: ServiceClientCredentials, options?: msRest.ServiceClientOptions)'
+      content: 'new QnAMakerClient(credentials: ServiceClientCredentials, endpoint: string, options?: msRest.ServiceClientOptions)'
       parameters:
-        - id: endpoint
-          type:
-            - string
-          description: 'Admite puntos de conexión de servicios cognitivos (protocolo y el nombre de host, por ejemplo: https://westus.api.cognitive.microsoft.com).'
         - id: credentials
           type:
             - ServiceClientCredentials
           description: Credenciales de suscripción que identifican la suscripción de cliente.
+        - id: endpoint
+          type:
+            - string
+          description: 'Admite puntos de conexión de servicios cognitivos (protocolo y el nombre de host, por ejemplo: https://westus.api.cognitive.microsoft.com).'
         - id: options
           type:
             - msRest.ServiceClientOptions
