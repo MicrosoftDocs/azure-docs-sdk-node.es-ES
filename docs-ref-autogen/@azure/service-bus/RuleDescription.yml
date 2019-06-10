@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.RuleDescription'
+    name: RuleDescription
+    fullName: RuleDescription
+    children:
+      - '@azure/service-bus.RuleDescription.action'
+      - '@azure/service-bus.RuleDescription.filter'
+      - '@azure/service-bus.RuleDescription.name'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="3b43a-101">Representa una regla en una suscripción que se utiliza para filtrar el mensaje entrante procedente de la suscripción.</span><span class="sxs-lookup"><span data-stu-id="3b43a-101">Represents a Rule on a Subscription that is used to filter the incoming message from the Subscription.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3b43a-102">Acción que se realizará si el mensaje satisface la expresión de filtrado.</span><span class="sxs-lookup"><span data-stu-id="3b43a-102">Action to perform if the message satisfies the filtering expression.</span></span>
+    optional: true
+    syntax:
+      content: 'action?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.filter'
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3b43a-103">Expresión de filtro utilizada para hacer coincidir los mensajes.</span><span class="sxs-lookup"><span data-stu-id="3b43a-103">Filter expression used to match messages.</span></span> <span data-ttu-id="3b43a-104">Admite 2 tipos:</span><span class="sxs-lookup"><span data-stu-id="3b43a-104">Supports 2 types:</span></span>
+      - <span data-ttu-id="3b43a-105">`string`: Expresión de condición similar a SQL que se evalúa con respecto a las propiedades definidas por el usuario de los mensajes y las propiedades del sistema.</span><span class="sxs-lookup"><span data-stu-id="3b43a-105">`string`: SQL-like condition expression that is evaluated against the messages' user-defined properties and system properties.</span></span> <span data-ttu-id="3b43a-106">Todas las propiedades del sistema tendrá el prefijo de `sys.` en la expresión de condición.</span><span class="sxs-lookup"><span data-stu-id="3b43a-106">All system properties will be prefixed with `sys.` in the condition expression.</span></span>
+      - <span data-ttu-id="3b43a-107">`CorrelationFilter`: Propiedades del filtro se usará para que coincidan con las propiedades del mensaje.</span><span class="sxs-lookup"><span data-stu-id="3b43a-107">`CorrelationFilter`: Properties of the filter will be used to match with the message properties.</span></span>
+    optional: true
+    syntax:
+      content: 'filter?: string | CorrelationFilter'
+      return:
+        type:
+          - string | @azure/service-bus.CorrelationFilter
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3b43a-108">Representa el nombre de la regla.</span><span class="sxs-lookup"><span data-stu-id="3b43a-108">Represents the name of the rule.</span></span>
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: string | @azure/service-bus.CorrelationFilter
+    name: CorrelationFilter
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: CorrelationFilter
+        fullName: CorrelationFilter
+        uid: '@azure/service-bus.CorrelationFilter'
