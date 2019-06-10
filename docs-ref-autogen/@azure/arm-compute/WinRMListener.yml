@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WinRMListener'
+    name: WinRMListener
+    fullName: WinRMListener
+    children:
+      - '@azure/arm-compute.WinRMListener.certificateUrl'
+      - '@azure/arm-compute.WinRMListener.protocol'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a8ce9-101">Describe el protocolo y la huella digital del agente de escucha de administración remota de Windows</span><span class="sxs-lookup"><span data-stu-id="a8ce9-101">Describes Protocol and thumbprint of Windows Remote Management listener</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a8ce9-102">Se trata de la dirección URL de un certificado que se ha cargado a Key Vault como un secreto.</span><span class="sxs-lookup"><span data-stu-id="a8ce9-102">This is the URL of a certificate that has been uploaded to Key Vault as a secret.</span></span> <span data-ttu-id="a8ce9-103">Para agregar un secreto a Key Vault, consulte [agregar una clave o un secreto al almacén de claves](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add).</span><span class="sxs-lookup"><span data-stu-id="a8ce9-103">For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add).</span></span> <span data-ttu-id="a8ce9-104">En este caso, sus necesidades de certificado que es la codificación Base64 del archivo JSON siguiente objeto que está codificado en UTF-8:</span><span class="sxs-lookup"><span data-stu-id="a8ce9-104">In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8:</span></span> <br><br> <span data-ttu-id="a8ce9-105">{</span><span class="sxs-lookup"><span data-stu-id="a8ce9-105">{</span></span><br>  <span data-ttu-id="a8ce9-106">"datos": "< Base64-certificado con codificación->",</span><span class="sxs-lookup"><span data-stu-id="a8ce9-106">"data":"<Base64-encoded-certificate>",</span></span><br>
+      <span data-ttu-id="a8ce9-107">"dataType":"pfx",</span><span class="sxs-lookup"><span data-stu-id="a8ce9-107">"dataType":"pfx",</span></span><br>  <span data-ttu-id="a8ce9-108">"password": "< pfx-archivo-password >"</span><span class="sxs-lookup"><span data-stu-id="a8ce9-108">"password":"<pfx-file-password>"</span></span><br><span data-ttu-id="a8ce9-109">}</span><span class="sxs-lookup"><span data-stu-id="a8ce9-109">}</span></span>
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a8ce9-110">Especifica el protocolo del agente de escucha.</span><span class="sxs-lookup"><span data-stu-id="a8ce9-110">Specifies the protocol of listener.</span></span> <br><br> <span data-ttu-id="a8ce9-111">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="a8ce9-111">Possible values are:</span></span> <br><span data-ttu-id="a8ce9-112">**http**</span><span class="sxs-lookup"><span data-stu-id="a8ce9-112">**http**</span></span> <br><br>
+      <span data-ttu-id="a8ce9-113">**https**.</span><span class="sxs-lookup"><span data-stu-id="a8ce9-113">**https**.</span></span> <span data-ttu-id="a8ce9-114">Los valores posibles son: 'Http', 'Https'</span><span class="sxs-lookup"><span data-stu-id="a8ce9-114">Possible values include: 'Http', 'Https'</span></span>
+    optional: true
+    syntax:
+      content: 'protocol?: ProtocolTypes'
+      return:
+        type:
+          - '@azure/arm-compute.ProtocolTypes'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ProtocolTypes'
+    name: ProtocolTypes
+    spec.typeScript:
+      - name: ProtocolTypes
+        fullName: ProtocolTypes
+        uid: '@azure/arm-compute.ProtocolTypes'
