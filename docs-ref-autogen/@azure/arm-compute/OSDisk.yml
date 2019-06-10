@@ -1,0 +1,235 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.OSDisk'
+    name: OSDisk
+    fullName: OSDisk
+    children:
+      - '@azure/arm-compute.OSDisk.caching'
+      - '@azure/arm-compute.OSDisk.createOption'
+      - '@azure/arm-compute.OSDisk.diffDiskSettings'
+      - '@azure/arm-compute.OSDisk.diskSizeGB'
+      - '@azure/arm-compute.OSDisk.encryptionSettings'
+      - '@azure/arm-compute.OSDisk.image'
+      - '@azure/arm-compute.OSDisk.managedDisk'
+      - '@azure/arm-compute.OSDisk.name'
+      - '@azure/arm-compute.OSDisk.osType'
+      - '@azure/arm-compute.OSDisk.vhd'
+      - '@azure/arm-compute.OSDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="af18e-101">Especifica información sobre el disco del sistema operativo utilizado por la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="af18e-101">Specifies information about the operating system disk used by the virtual machine.</span></span> <br><br> <span data-ttu-id="af18e-102">Para obtener más información acerca de los discos, consulte [sobre los discos y discos duros virtuales para máquinas virtuales de Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).</span><span class="sxs-lookup"><span data-stu-id="af18e-102">For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).</span></span>'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="af18e-103">Especifica los requisitos de almacenamiento en caché.</span><span class="sxs-lookup"><span data-stu-id="af18e-103">Specifies the caching requirements.</span></span> <br><br> <span data-ttu-id="af18e-104">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="af18e-104">Possible values are:</span></span> <br><br> <span data-ttu-id="af18e-105">**Ninguno**</span><span class="sxs-lookup"><span data-stu-id="af18e-105">**None**</span></span> <br><br>
+      <span data-ttu-id="af18e-106">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="af18e-106">**ReadOnly**</span></span> <br><br> <span data-ttu-id="af18e-107">**ReadWrite**</span><span class="sxs-lookup"><span data-stu-id="af18e-107">**ReadWrite**</span></span> <br><br> <span data-ttu-id="af18e-108">Valor predeterminado: **Ninguno de almacenamiento estándar. Solo lectura para Premium storage**.</span><span class="sxs-lookup"><span data-stu-id="af18e-108">Default: **None for Standard storage. ReadOnly for Premium storage**.</span></span> <span data-ttu-id="af18e-109">Los valores posibles son: 'None', 'ReadOnly', 'ReadWrite'</span><span class="sxs-lookup"><span data-stu-id="af18e-109">Possible values include: 'None', 'ReadOnly', 'ReadWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="af18e-110">Especifica cómo debe crearse la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="af18e-110">Specifies how the virtual machine should be created.</span></span><br><br> <span data-ttu-id="af18e-111">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="af18e-111">Possible values are:</span></span><br><br>
+      <span data-ttu-id="af18e-112">**Adjuntar** \u2013 este valor se utiliza cuando se usa un disco especializado para crear la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="af18e-112">**Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.</span></span><br><br> <span data-ttu-id="af18e-113">**FromImage** \u2013 este valor se utiliza cuando se usa una imagen para crear la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="af18e-113">**FromImage** \u2013 This value is used when you are using an image to create the virtual machine.</span></span> <span data-ttu-id="af18e-114">Si utiliza una imagen de plataforma, también usar el elemento imageReference que se ha descrito anteriormente.</span><span class="sxs-lookup"><span data-stu-id="af18e-114">If you are using a platform image, you also use the imageReference element described above.</span></span> <span data-ttu-id="af18e-115">Si utiliza una imagen de marketplace, usará el elemento de plan que se ha descrito anteriormente.</span><span class="sxs-lookup"><span data-stu-id="af18e-115">If you are using a marketplace image, you  also use the plan element previously described.</span></span> <span data-ttu-id="af18e-116">Los valores posibles son: 'FromImage', 'Empty', 'conectar'</span><span class="sxs-lookup"><span data-stu-id="af18e-116">Possible values include: 'FromImage', 'Empty', 'Attach'</span></span>
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.diffDiskSettings'
+    name: diffDiskSettings
+    fullName: diffDiskSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af18e-117">Especifica la configuración de disco efímeros para el disco de sistema operativo utilizado por la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="af18e-117">Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'diffDiskSettings?: DiffDiskSettings'
+      return:
+        type:
+          - '@azure/arm-compute.DiffDiskSettings'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af18e-118">Especifica el tamaño de un disco de datos vacía en gigabytes.</span><span class="sxs-lookup"><span data-stu-id="af18e-118">Specifies the size of an empty data disk in gigabytes.</span></span> <span data-ttu-id="af18e-119">Este elemento se puede utilizar para sobrescribir el tamaño del disco en una imagen de máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="af18e-119">This element can be used to overwrite the size of the disk in a virtual machine image.</span></span> <br><br> <span data-ttu-id="af18e-120">Este valor no puede ser mayor que 1023 GB</span><span class="sxs-lookup"><span data-stu-id="af18e-120">This value cannot be larger than 1023 GB</span></span>
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.encryptionSettings'
+    name: encryptionSettings
+    fullName: encryptionSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="af18e-121">Especifica la configuración de cifrado para el disco del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="af18e-121">Specifies the encryption settings for the OS Disk.</span></span> <br><br> <span data-ttu-id="af18e-122">Mínimo de api-version: 2015-06-15</span><span class="sxs-lookup"><span data-stu-id="af18e-122">Minimum api-version: 2015-06-15</span></span>'
+    optional: true
+    syntax:
+      content: 'encryptionSettings?: DiskEncryptionSettings'
+      return:
+        type:
+          - '@azure/arm-compute.DiskEncryptionSettings'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="af18e-123">El usuario del origen de imagen disco duro virtual.</span><span class="sxs-lookup"><span data-stu-id="af18e-123">The source user image virtual hard disk.</span></span> <span data-ttu-id="af18e-124">Se copiará el disco duro virtual antes de que se asocia a la máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="af18e-124">The virtual hard disk will be copied before being attached to the virtual machine.</span></span> <span data-ttu-id="af18e-125">Si se proporciona SourceImage, la unidad de disco duro virtual de destino no debe existir.</span><span class="sxs-lookup"><span data-stu-id="af18e-125">If SourceImage is provided, the destination virtual hard drive must not exist.</span></span>'
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af18e-126">Los parámetros de disco administrado.</span><span class="sxs-lookup"><span data-stu-id="af18e-126">The managed disk parameters.</span></span>
+    optional: true
+    syntax:
+      content: 'managedDisk?: ManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.ManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af18e-127">El nombre del disco.</span><span class="sxs-lookup"><span data-stu-id="af18e-127">The disk name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="af18e-128">Esta propiedad permite especificar el tipo del sistema operativo que se incluye en el disco si crear una máquina virtual de imagen de usuario o un VHD especializado.</span><span class="sxs-lookup"><span data-stu-id="af18e-128">This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD.</span></span> <br><br> <span data-ttu-id="af18e-129">Los valores posibles son:</span><span class="sxs-lookup"><span data-stu-id="af18e-129">Possible values are:</span></span> <br><br>
+      <span data-ttu-id="af18e-130">**Windows**</span><span class="sxs-lookup"><span data-stu-id="af18e-130">**Windows**</span></span> <br><br> <span data-ttu-id="af18e-131">**Linux**.</span><span class="sxs-lookup"><span data-stu-id="af18e-131">**Linux**.</span></span> <span data-ttu-id="af18e-132">Los valores posibles son: 'Windows', 'Linux'</span><span class="sxs-lookup"><span data-stu-id="af18e-132">Possible values include: 'Windows', 'Linux'</span></span>
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.vhd'
+    name: vhd
+    fullName: vhd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af18e-133">El disco duro virtual.</span><span class="sxs-lookup"><span data-stu-id="af18e-133">The virtual hard disk.</span></span>
+    optional: true
+    syntax:
+      content: 'vhd?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af18e-134">Especifica si debe habilitarse o deshabilitarse en el disco writeAccelerator.</span><span class="sxs-lookup"><span data-stu-id="af18e-134">Specifies whether writeAccelerator should be enabled or disabled on the disk.</span></span>
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.DiffDiskSettings'
+    name: DiffDiskSettings
+    spec.typeScript:
+      - name: DiffDiskSettings
+        fullName: DiffDiskSettings
+        uid: '@azure/arm-compute.DiffDiskSettings'
+  - uid: '@azure/arm-compute.DiskEncryptionSettings'
+    name: DiskEncryptionSettings
+    spec.typeScript:
+      - name: DiskEncryptionSettings
+        fullName: DiskEncryptionSettings
+        uid: '@azure/arm-compute.DiskEncryptionSettings'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.ManagedDiskParameters'
+    name: ManagedDiskParameters
+    spec.typeScript:
+      - name: ManagedDiskParameters
+        fullName: ManagedDiskParameters
+        uid: '@azure/arm-compute.ManagedDiskParameters'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
