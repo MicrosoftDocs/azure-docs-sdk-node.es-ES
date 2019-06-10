@@ -8,12 +8,11 @@ items:
       - typeScript
     type: type alias
     summary: |+
-      Establece entorno específico de aplicación o marco isAngular de soporte técnico: marca para determinar si se trata de marco Angular. Se usa para difundir los tokens. TODO: terminar con esta dependencia de las principales.
-      unprotectedResources - matriz de URI que son los recursos desprotegidos. MSAL no asociará un token a las solicitudes salientes que tienen estos URI. El valor predeterminado es 'null'.
-      protectedResourceMap - esta es la asignación de recursos a los ámbitos que usa MSAL para asociar automáticamente los tokens de acceso en las llamadas de API web.
-      Se obtiene un token de acceso único para el recurso. Para que pueda asignar una ruta de acceso de recurso específico como sigue: {"https://graph.microsoft.com/v1.0/me", ["user.read"]}, o la dirección URL de aplicación del recurso como: {"https://graph.microsoft.com/", ["user.read", "mail.send"]}.
-      Esto es necesario para las llamadas de la CORS.
+      Soporte técnico de entorno específico de aplicación o marco
+      - isAngular - marca establecida para determinar si se trata de marco Angular. MSAL usa esto para difundir los tokens. Más por venir aquí: terminar con esta dependencia de las principales.
+      - unprotectedResources - matriz de URI que son los recursos desprotegidos. MSAL no asociará un token a las solicitudes salientes que tienen estos URI. El valor predeterminado es 'null'.
+      - protectedResourceMap - esta es la asignación de recursos a los ámbitos que usa MSAL para asociar automáticamente los tokens de acceso en las llamadas de API web. Se obtiene un token de acceso único para el recurso. Para que pueda asignar una ruta de acceso de recurso específico como sigue: {"https://graph.microsoft.com/v1.0/me", ["user.read"]}, o la dirección URL de aplicación del recurso como: {"https://graph.microsoft.com/", ["user.read", "mail.send"]}. Esto es necesario para las llamadas de la CORS.
 
     syntax:
-      content: 'type FrameworkOptions = { isAngular:boolean, protectedResourceMap:Map<string>, unprotectedResources:Array<string> }'
+      content: 'type FrameworkOptions = { isAngular: boolean, protectedResourceMap: Map<string>, unprotectedResources: Array<string> }'
     package: msal

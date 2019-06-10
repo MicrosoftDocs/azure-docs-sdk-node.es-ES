@@ -1,0 +1,953 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.BatchAccountOperations'
+    name: BatchAccountOperations
+    fullName: BatchAccountOperations
+    children:
+      - '@azure/arm-batch.BatchAccountOperations.constructor'
+      - '@azure/arm-batch.BatchAccountOperations.beginCreate'
+      - '@azure/arm-batch.BatchAccountOperations.beginDeleteMethod'
+      - '@azure/arm-batch.BatchAccountOperations.create'
+      - '@azure/arm-batch.BatchAccountOperations.deleteMethod'
+      - '@azure/arm-batch.BatchAccountOperations.get'
+      - '@azure/arm-batch.BatchAccountOperations.get_2'
+      - '@azure/arm-batch.BatchAccountOperations.get_1'
+      - '@azure/arm-batch.BatchAccountOperations.getKeys'
+      - '@azure/arm-batch.BatchAccountOperations.getKeys_2'
+      - '@azure/arm-batch.BatchAccountOperations.getKeys_1'
+      - '@azure/arm-batch.BatchAccountOperations.list'
+      - '@azure/arm-batch.BatchAccountOperations.list_2'
+      - '@azure/arm-batch.BatchAccountOperations.list_1'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroup'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_2'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_1'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_2'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_1'
+      - '@azure/arm-batch.BatchAccountOperations.listNext'
+      - '@azure/arm-batch.BatchAccountOperations.listNext_2'
+      - '@azure/arm-batch.BatchAccountOperations.listNext_1'
+      - '@azure/arm-batch.BatchAccountOperations.regenerateKey'
+      - '@azure/arm-batch.BatchAccountOperations.regenerateKey_2'
+      - '@azure/arm-batch.BatchAccountOperations.regenerateKey_1'
+      - '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys'
+      - '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_2'
+      - '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_1'
+      - '@azure/arm-batch.BatchAccountOperations.update'
+      - '@azure/arm-batch.BatchAccountOperations.update_2'
+      - '@azure/arm-batch.BatchAccountOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Clase que representa un BatchAccountOperations.
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.constructor'
+    name: BatchAccountOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crear un BatchAccountOperations.
+    syntax:
+      content: 'new BatchAccountOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            Referencia para el cliente del servicio.
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.beginCreate'
+    name: 'beginCreate(string, string, BatchAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Crea una nueva cuenta de Batch con los parámetros especificados. Las cuentas existentes no se puede actualizar con esta API y en su lugar, deben actualizarse con la API de cuenta de actualización por lotes.'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: 'Un nombre para la cuenta de Batch que debe ser único dentro de la región. Los nombres de cuenta de batch deben tener entre 3 y 24 caracteres de longitud y deben usar solo números y letras minúsculas. Este nombre se usa como parte del nombre DNS que se usa para tener acceso al servicio de Batch en la región en la que se creó la cuenta. Por ejemplo: http://accountname.region.batch.azure.com/.'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountCreateParameters'
+          description: Parámetros adicionales para la creación de la cuenta.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elimina la cuenta de Batch especificada.
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.create'
+    name: 'create(string, string, BatchAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Crea una nueva cuenta de Batch con los parámetros especificados. Las cuentas existentes no se puede actualizar con esta API y en su lugar, deben actualizarse con la API de cuenta de actualización por lotes.'
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: 'Un nombre para la cuenta de Batch que debe ser único dentro de la región. Los nombres de cuenta de batch deben tener entre 3 y 24 caracteres de longitud y deben usar solo números y letras minúsculas. Este nombre se usa como parte del nombre DNS que se usa para tener acceso al servicio de Batch en la región en la que se creó la cuenta. Por ejemplo: http://accountname.region.batch.azure.com/.'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountCreateParameters'
+          description: Parámetros adicionales para la creación de la cuenta.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elimina la cuenta de Batch especificada.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtiene información sobre la cuenta de Batch especificada.
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.get_1'
+    name: 'get(string, string, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.getKeys'
+    name: 'getKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operación solo se aplica a las cuentas de Batch creadas con un poolAllocationMode de ''BatchService''. Si la cuenta de Batch se creó con un poolAllocationMode de ''UserSubscription'', los clientes no pueden usar el acceso a las claves para autenticar y debe usar Azure Active Directory en su lugar. En este caso, al obtener las claves se producirá un error.'
+    syntax:
+      content: 'function getKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountGetKeysResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.getKeys_2'
+    name: 'getKeys(string, string, RequestOptionsBase, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountGetKeysResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.getKeys_1'
+    name: 'getKeys(string, string, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountGetKeysResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtiene información sobre las cuentas de Batch asociada con la suscripción.
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountListResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.list_1'
+    name: list(ServiceCallback<BatchAccountListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountListResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtiene información sobre las cuentas de Batch asociada con el grupo de recursos especificado.
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtiene información sobre las cuentas de Batch asociada con el grupo de recursos especificado.
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtiene información sobre las cuentas de Batch asociada con la suscripción.
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountListNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listNext_1'
+    name: 'listNext(string, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountListNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.regenerateKey'
+    name: 'regenerateKey(string, string, Models.AccountKeyType, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Regenera la clave de cuenta especificada para la cuenta de Batch.
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: Models.AccountKeyType, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: keyName
+          type:
+            - Models.AccountKeyType
+          description: 'El tipo de clave de cuenta para volver a generar. Los valores posibles son: ''Primary'', ''Secundaria'''
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountRegenerateKeyResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.regenerateKey_2'
+    name: 'regenerateKey(string, string, Models.AccountKeyType, RequestOptionsBase, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: Models.AccountKeyType, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: keyName
+          type:
+            - Models.AccountKeyType
+          description: 'El tipo de clave de cuenta para volver a generar. Los valores posibles son: ''Primary'', ''Secundaria'''
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountRegenerateKeyResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.regenerateKey_1'
+    name: 'regenerateKey(string, string, Models.AccountKeyType, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: Models.AccountKeyType, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: keyName
+          type:
+            - Models.AccountKeyType
+          description: 'El tipo de clave de cuenta para volver a generar. Los valores posibles son: ''Primary'', ''Secundaria'''
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountRegenerateKeyResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys'
+    name: 'synchronizeAutoStorageKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Sincroniza las claves de acceso de la cuenta de almacenamiento automática configurada para la cuenta de Batch especificada.
+    syntax:
+      content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_2'
+    name: 'synchronizeAutoStorageKeys(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_1'
+    name: 'synchronizeAutoStorageKeys(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.update'
+    name: 'update(string, string, BatchAccountUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Actualiza las propiedades de una cuenta de Batch existente.
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountUpdateParameters'
+          description: Parámetros adicionales para la actualización de la cuenta.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.update_2'
+    name: 'update(string, string, BatchAccountUpdateParameters, RequestOptionsBase, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountUpdateParameters'
+          description: Parámetros adicionales para la actualización de la cuenta.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.update_1'
+    name: 'update(string, string, BatchAccountUpdateParameters, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos que contiene la cuenta de Batch.
+        - id: accountName
+          type:
+            - string
+          description: El nombre de la cuenta de Batch.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountUpdateParameters'
+          description: Parámetros adicionales para la actualización de la cuenta.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.BatchAccountUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.BatchAccountCreateParameters'
+    name: BatchAccountCreateParameters
+    spec.typeScript:
+      - name: BatchAccountCreateParameters
+        fullName: BatchAccountCreateParameters
+        uid: '@azure/arm-batch.BatchAccountCreateParameters'
+  - uid: ServiceCallback<@azure/arm-batch.BatchAccount>
+    name: BatchAccount>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BatchAccount
+        fullName: BatchAccount
+        uid: '@azure/arm-batch.BatchAccount'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+    name: BatchAccountKeys>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BatchAccountKeys
+        fullName: BatchAccountKeys
+        uid: '@azure/arm-batch.BatchAccountKeys'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+    name: BatchAccountListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BatchAccountListResult
+        fullName: BatchAccountListResult
+        uid: '@azure/arm-batch.BatchAccountListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.BatchAccountUpdateParameters'
+    name: BatchAccountUpdateParameters
+    spec.typeScript:
+      - name: BatchAccountUpdateParameters
+        fullName: BatchAccountUpdateParameters
+        uid: '@azure/arm-batch.BatchAccountUpdateParameters'
