@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ProductTagResourceContractProperties'
+    name: ProductTagResourceContractProperties
+    fullName: ProductTagResourceContractProperties
+    children:
+      - '@azure/arm-apimanagement.ProductTagResourceContractProperties.approvalRequired'
+      - '@azure/arm-apimanagement.ProductTagResourceContractProperties.description'
+      - '@azure/arm-apimanagement.ProductTagResourceContractProperties.id'
+      - '@azure/arm-apimanagement.ProductTagResourceContractProperties.name'
+      - '@azure/arm-apimanagement.ProductTagResourceContractProperties.state'
+      - '@azure/arm-apimanagement.ProductTagResourceContractProperties.subscriptionRequired'
+      - '@azure/arm-apimanagement.ProductTagResourceContractProperties.subscriptionsLimit'
+      - '@azure/arm-apimanagement.ProductTagResourceContractProperties.terms'
+    langs:
+      - typeScript
+    type: interface
+    summary: Perfil de producto.
+    extends:
+      name: '@azure/arm-apimanagement.ProductEntityBaseParameters'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductTagResourceContractProperties.approvalRequired'
+    name: approvalRequired
+    fullName: approvalRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si la aprobación de suscripción es necesario. Si es false, las nuevas suscripciones se aprueban automáticamente, lo que permite a los desarrolladores llamar a las API del producto inmediatamente después de suscribirse. Si es true, los administradores deben aprobar manualmente la suscripción antes de que el desarrollador puede cualquiera de las API del producto. Pueden estar presentes solo si subscriptionRequired propiedad está presente y tiene un valor de false.'
+    optional: true
+    syntax:
+      content: 'approvalRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductTagResourceContractProperties.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descripción del producto. Puede incluir etiquetas de formato HTML.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductTagResourceContractProperties.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Identificador del producto en forma de /products/ {productId}'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductTagResourceContractProperties.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre de producto.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductTagResourceContractProperties.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si el producto se publica o no. Productos publicados son visibles para los usuarios del portal para desarrolladores. Productos publicados no solo son visibles para los administradores. Estado predeterminado del producto es notPublished. Los valores posibles son: ''notPublished'', ''publicada'''
+    optional: true
+    syntax:
+      content: 'state?: ProductState'
+      return:
+        type:
+          - '@azure/arm-apimanagement.ProductState'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductTagResourceContractProperties.subscriptionRequired'
+    name: subscriptionRequired
+    fullName: subscriptionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Si se requiere una suscripción de producto para tener acceso a API incluido en este producto. Si es true, el producto se conoce como "protegido" y se requiere para una solicitud a una API que se incluye en el producto se realice correctamente una clave de suscripción válida. Si es false, el producto se conoce como "abierto" y se pueden realizar solicitudes a una API que se incluye en el producto sin una clave de suscripción.
+      Si se omite la propiedad al crear un nuevo producto que se supone que su valor sea verdadera.
+    optional: true
+    syntax:
+      content: 'subscriptionRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductTagResourceContractProperties.subscriptionsLimit'
+    name: subscriptionsLimit
+    fullName: subscriptionsLimit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Si el número de suscripciones de un usuario puede tener a este producto al mismo tiempo. Establezca en null o se omite para permitir ilimitado de suscripciones por usuario. Pueden estar presentes solo si subscriptionRequired propiedad está presente y tiene un valor de false.
+    optional: true
+    syntax:
+      content: 'subscriptionsLimit?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductTagResourceContractProperties.terms'
+    name: terms
+    fullName: terms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Términos de uso del producto. Los desarrolladores que traten de suscribirse al producto verán y deberán aceptar estos términos para poder completar el proceso de suscripción.
+    optional: true
+    syntax:
+      content: 'terms?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters'
+    name: ProductEntityBaseParameters
+    spec.typeScript:
+      - name: ProductEntityBaseParameters
+        fullName: ProductEntityBaseParameters
+        uid: '@azure/arm-apimanagement.ProductEntityBaseParameters'
+  - uid: '@azure/arm-apimanagement.ProductState'
+    name: ProductState
+    spec.typeScript:
+      - name: ProductState
+        fullName: ProductState
+        uid: '@azure/arm-apimanagement.ProductState'
