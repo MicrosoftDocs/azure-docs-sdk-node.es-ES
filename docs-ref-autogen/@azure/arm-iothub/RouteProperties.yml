@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.RouteProperties'
+    name: RouteProperties
+    fullName: RouteProperties
+    children:
+      - '@azure/arm-iothub.RouteProperties.condition'
+      - '@azure/arm-iothub.RouteProperties.endpointNames'
+      - '@azure/arm-iothub.RouteProperties.isEnabled'
+      - '@azure/arm-iothub.RouteProperties.name'
+      - '@azure/arm-iothub.RouteProperties.source'
+    langs:
+      - typeScript
+    type: interface
+    summary: Las propiedades de una regla de enrutamiento que utiliza el IoT hub para enrutar mensajes a puntos de conexión.
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.condition'
+    name: condition
+    fullName: condition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La condición que se evalúa para aplicar la regla de enrutamiento. Si no se especifica ninguna condición evalúa en true de forma predeterminada. Para la gramática, consulte: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language'
+    optional: true
+    syntax:
+      content: 'condition?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.endpointNames'
+    name: endpointNames
+    fullName: endpointNames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La lista de puntos de conexión a la que se enrutan los mensajes que satisfacen la condición. Actualmente se permite solo un punto de conexión.
+    syntax:
+      content: 'endpointNames: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.isEnabled'
+    name: isEnabled
+    fullName: isEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Se usa para especificar si se habilita una ruta.
+    syntax:
+      content: 'isEnabled: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El nombre de la ruta. El nombre solo puede incluir caracteres alfanuméricos, puntos, guiones bajos, guiones, tiene una longitud máxima de 64 caracteres y debe ser único.'
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.source'
+    name: source
+    fullName: source
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El origen de la regla de enrutamiento es que se aplicará a, por ejemplo, DeviceMessages. Los valores posibles son: ''Invalid'', ''DeviceMessages'', ''TwinChangeEvents'', ''DeviceLifecycleEvents'', ''DeviceJobLifecycleEvents'''
+    syntax:
+      content: 'source: RoutingSource'
+      return:
+        type:
+          - '@azure/arm-iothub.RoutingSource'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.RoutingSource'
+    name: RoutingSource
+    spec.typeScript:
+      - name: RoutingSource
+        fullName: RoutingSource
+        uid: '@azure/arm-iothub.RoutingSource'
