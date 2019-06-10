@@ -1,0 +1,126 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk'
+    name: VirtualMachineScaleSetUpdateOSDisk
+    fullName: VirtualMachineScaleSetUpdateOSDisk
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.caching'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.diskSizeGB'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.image'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.managedDisk'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.vhdContainers'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe el disco del sistema operativo escala conjunto de máquinas virtuales objeto de la actualización. Esto se debe usar para actualizar el disco de sistema operativo de VMSS.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El tipo de almacenamiento en caché. Los valores posibles son: ''None'', ''ReadOnly'', ''ReadWrite'''
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica el tamaño del disco del sistema operativo en gigabytes. Este elemento se puede utilizar para sobrescribir el tamaño del disco en una imagen de máquina virtual. <br><br> Este valor no puede ser mayor que 1023 GB
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El VirtualHardDisk de imagen de usuario de origen. Se copiará este VirtualHardDisk antes de usarlo para conectar a la máquina Virtual. Si se proporciona SourceImage, el destino VirtualHardDisk no debe existir.'
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Los parámetros de disco administrado.
+    optional: true
+    syntax:
+      content: 'managedDisk?: VirtualMachineScaleSetManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.vhdContainers'
+    name: vhdContainers
+    fullName: vhdContainers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La lista del contenedor de disco duro virtual de URI.
+    optional: true
+    syntax:
+      content: 'vhdContainers?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica si debe habilitarse o deshabilitarse en el disco writeAccelerator.
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    name: VirtualMachineScaleSetManagedDiskParameters
+    spec.typeScript:
+      - name: VirtualMachineScaleSetManagedDiskParameters
+        fullName: VirtualMachineScaleSetManagedDiskParameters
+        uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
