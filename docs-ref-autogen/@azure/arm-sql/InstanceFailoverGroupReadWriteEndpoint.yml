@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint'
+    name: InstanceFailoverGroupReadWriteEndpoint
+    fullName: InstanceFailoverGroupReadWriteEndpoint
+    children:
+      - '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverPolicy'
+      - '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ff5b1-101">Punto de conexión de lectura y escritura de la instancia de grupo de conmutación por error.</span><span class="sxs-lookup"><span data-stu-id="ff5b1-101">Read-write endpoint of the failover group instance.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverPolicy'
+    name: failoverPolicy
+    fullName: failoverPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ff5b1-102">Directiva de conmutación por error del punto de conexión de lectura y escritura para el grupo de conmutación por error.</span><span class="sxs-lookup"><span data-stu-id="ff5b1-102">Failover policy of the read-write endpoint for the failover group.</span></span> <span data-ttu-id="ff5b1-103">Si failoverPolicy es automático failoverWithDataLossGracePeriodMinutes es necesaria.</span><span class="sxs-lookup"><span data-stu-id="ff5b1-103">If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.</span></span> <span data-ttu-id="ff5b1-104">Los valores posibles son: ''Manual'', ''Automatic''</span><span class="sxs-lookup"><span data-stu-id="ff5b1-104">Possible values include: ''Manual'', ''Automatic''</span></span>'
+    syntax:
+      content: 'failoverPolicy: ReadWriteEndpointFailoverPolicy'
+      return:
+        type:
+          - '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    name: failoverWithDataLossGracePeriodMinutes
+    fullName: failoverWithDataLossGracePeriodMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ff5b1-105">Período de gracia antes de intenta la conmutación por error con pérdida de datos para el punto de conexión de lectura y escritura.</span><span class="sxs-lookup"><span data-stu-id="ff5b1-105">Grace period before failover with data loss is attempted for the read-write endpoint.</span></span> <span data-ttu-id="ff5b1-106">Si failoverPolicy es automático failoverWithDataLossGracePeriodMinutes es necesaria.</span><span class="sxs-lookup"><span data-stu-id="ff5b1-106">If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.</span></span>
+    optional: true
+    syntax:
+      content: 'failoverWithDataLossGracePeriodMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    name: ReadWriteEndpointFailoverPolicy
+    spec.typeScript:
+      - name: ReadWriteEndpointFailoverPolicy
+        fullName: ReadWriteEndpointFailoverPolicy
+        uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
