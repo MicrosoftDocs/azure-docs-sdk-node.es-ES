@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.VideoLayer'
+    name: VideoLayer
+    fullName: VideoLayer
+    children:
+      - '@azure/arm-mediaservices.VideoLayer.adaptiveBFrame'
+      - '@azure/arm-mediaservices.VideoLayer.bFrames'
+      - '@azure/arm-mediaservices.VideoLayer.bitrate'
+      - '@azure/arm-mediaservices.VideoLayer.frameRate'
+      - '@azure/arm-mediaservices.VideoLayer.height'
+      - '@azure/arm-mediaservices.VideoLayer.label'
+      - '@azure/arm-mediaservices.VideoLayer.maxBitrate'
+      - '@azure/arm-mediaservices.VideoLayer.odatatype'
+      - '@azure/arm-mediaservices.VideoLayer.slices'
+      - '@azure/arm-mediaservices.VideoLayer.width'
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe la configuración que se usará al codificar el vídeo de entrada en una capa de velocidad de bits de salida deseado.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.adaptiveBFrame'
+    name: adaptiveBFrame
+    fullName: adaptiveBFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si son o no fotogramas B adaptables que se usará al codificar esta capa. Si no se especifica, el codificador convertirá cada vez que el perfil de vídeo permite su uso.'
+    optional: true
+    syntax:
+      content: 'adaptiveBFrame?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.bFrames'
+    name: bFrames
+    fullName: bFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El número de fotogramas B que se usará al codificar esta capa.  Si no se especifica, el codificador elige un número adecuado según el perfil de vídeo y el nivel.'
+    optional: true
+    syntax:
+      content: 'bFrames?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.bitrate'
+    name: bitrate
+    fullName: bitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Velocidad de bits Media en bits por segundo en el que se va a codificar el vídeo de entrada al generar esta capa. Este es un campo obligatorio.
+    syntax:
+      content: 'bitrate: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.frameRate'
+    name: frameRate
+    fullName: frameRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El marco de frecuencia (en fotogramas por segundo) en el que se va a codificar esta capa. El valor puede ser en forma de M o N, donde M y N son enteros (por ejemplo, 30000/1001) o en forma de un número (por ejemplo, 30 o 29,97). El codificador aplica las restricciones en las velocidades de fotogramas permitidas según el perfil y nivel. Si no se especifica, el codificador usará la misma velocidad de fotogramas que el vídeo de entrada.'
+    optional: true
+    syntax:
+      content: 'frameRate?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.height'
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El alto del vídeo de salida para esta capa. El valor puede ser absoluta (en píxeles) o relativa (en porcentaje). Por ejemplo 50% significa que el vídeo de salida tiene como número de píxeles de la mitad de altura como entrada.
+    optional: true
+    syntax:
+      content: 'height?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La etiqueta alfanuméricos para esta capa, que se puede usar en multiplexación capas de audio y vídeo diferentes o en el archivo de salida de nomenclatura.'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.maxBitrate'
+    name: maxBitrate
+    fullName: maxBitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La velocidad de bits máxima (en bits por segundo), en el que el búfer VBV debe suponerse que volver a rellenar.
+      Si no se especifica, valor predeterminado es el mismo valor que la velocidad de bits.
+    optional: true
+    syntax:
+      content: 'maxBitrate?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.VideoLayer"'
+      return:
+        type:
+          - '"#Microsoft.Media.VideoLayer"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.slices'
+    name: slices
+    fullName: slices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El número de segmentos que se usará al codificar esta capa. Si no se especifica, el valor predeterminado es cero, lo que significa que ese codificador utilizará un solo sector para cada fotograma.'
+    optional: true
+    syntax:
+      content: 'slices?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoLayer.width'
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El ancho del vídeo de salida para esta capa. El valor puede ser absoluta (en píxeles) o relativa (en porcentaje). Por ejemplo 50% significa que el vídeo de salida tiene mitad como número de píxeles de ancho como entrada.
+    optional: true
+    syntax:
+      content: 'width?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'

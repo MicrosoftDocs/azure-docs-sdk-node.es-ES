@@ -1,0 +1,399 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolSpecification'
+    name: PoolSpecification
+    fullName: PoolSpecification
+    children:
+      - '@azure/batch.PoolSpecification.applicationLicenses'
+      - '@azure/batch.PoolSpecification.applicationPackageReferences'
+      - '@azure/batch.PoolSpecification.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolSpecification.autoScaleFormula'
+      - '@azure/batch.PoolSpecification.certificateReferences'
+      - '@azure/batch.PoolSpecification.cloudServiceConfiguration'
+      - '@azure/batch.PoolSpecification.displayName'
+      - '@azure/batch.PoolSpecification.enableAutoScale'
+      - '@azure/batch.PoolSpecification.enableInterNodeCommunication'
+      - '@azure/batch.PoolSpecification.maxTasksPerNode'
+      - '@azure/batch.PoolSpecification.metadata'
+      - '@azure/batch.PoolSpecification.networkConfiguration'
+      - '@azure/batch.PoolSpecification.resizeTimeout'
+      - '@azure/batch.PoolSpecification.startTask'
+      - '@azure/batch.PoolSpecification.targetDedicatedNodes'
+      - '@azure/batch.PoolSpecification.targetLowPriorityNodes'
+      - '@azure/batch.PoolSpecification.taskSchedulingPolicy'
+      - '@azure/batch.PoolSpecification.userAccounts'
+      - '@azure/batch.PoolSpecification.virtualMachineConfiguration'
+      - '@azure/batch.PoolSpecification.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa PoolSpecification.
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.applicationLicenses'
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El lote al servicio estará disponible en cada nodo de proceso en el grupo de licencias de la lista de aplicaciones. La lista de licencias de aplicación debe ser un subconjunto de las licencias de aplicación de servicio de Batch disponibles. Si se solicita una licencia que no se admite, se producirá un error en la creación del grupo. Las licencias permitidas en el grupo son ''maya'', ''vray'', ''3dsmax'', ''arnold''. Se aplica un cargo adicional por cada licencia de aplicación agregado al grupo.'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La lista de paquetes de aplicación se instale en cada nodo de proceso en el grupo. Los cambios realizados en las referencias de paquete de aplicación afectan a unir el grupo todos los nodos de proceso nuevo, pero no afectan a los nodos de proceso que ya están en el grupo hasta que se reinicia o se restablece la imagen inicial. Hay un máximo de 10 referencias de paquete de aplicación en un grupo determinado.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El intervalo de tiempo en que se va a ajustar automáticamente el tamaño del grupo según la fórmula de escalado automático. El valor predeterminado es 15 minutos. El valor mínimo y máximo son 5 minutos y 168 horas, respectivamente. Si especifica un valor menor de 5 minutos o más de 168 horas, el servicio Batch rechaza la solicitud con un error de valor de propiedad no válida; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta).'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La fórmula para el número deseado de nodos de proceso en el grupo. Esta propiedad no debe ser si enableAutoScale se establece en false. Es necesario si enableAutoScale se establece en true. La fórmula se comprueba para validez antes de que se crea el grupo. Si la fórmula no es válida, el servicio Batch rechaza la solicitud con información detallada del error.'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Una lista de certificados que deben instalarse en cada nodo de proceso en el grupo. Para nodos de proceso de Windows, el servicio Batch instala los certificados en el almacén de certificados especificada y la ubicación. Para nodos de proceso de Linux, los certificados se almacenan en un directorio en el directorio de trabajo de tarea y un entorno que az_batch_certificates_dir variable se proporciona a la tarea de consulta para esta ubicación. Para los certificados con visibilidad "RemoteUser", se crea un directorio de "certificados" en el directorio principal del usuario (p. ej., / Home / {nombre de usuario} / certificados) y los certificados se colocan en ese directorio.'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.cloudServiceConfiguration'
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La configuración del servicio en la nube para el grupo. Esta propiedad debe ser especifica si el grupo debe crearse con máquinas virtuales de PaaS de Azure. Esta propiedad y virtualMachineConfiguration son mutuamente excluyentes y debe especificarse una de las propiedades. Si se especifica ninguno, a continuación, el servicio Batch devuelve un error; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta). Esta propiedad no se puede especificar si la cuenta de Batch se creó con la propiedad poolAllocationMode establecida en ''UserSubscription''.'
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - '@azure/batch.CloudServiceConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre para mostrar para el grupo. El nombre para mostrar no debe ser único y puede contener cualquier carácter Unicode hasta una longitud máxima de 1024.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.enableAutoScale'
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Si debe ajustar automáticamente el tamaño del grupo con el tiempo. Si es false, se debe especificar al menos uno de targetDedicateNodes y targetLowPriorityNodes. Si es true, se requiere el elemento autoScaleFormula. El grupo se ajusta automáticamente según la fórmula.
+      El valor predeterminado es false.
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.enableInterNodeCommunication'
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Si el grupo admite la comunicación directa entre los nodos. Habilitar la comunicación entre nodos limita el tamaño máximo del grupo debido a restricciones de implementación en los nodos del grupo.
+      Esto puede dar lugar a que el grupo no alcance el tamaño deseado. El valor predeterminado es false.
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.maxTasksPerNode'
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El número máximo de tareas que pueden ejecutarse simultáneamente en un solo nodo de ejecución en el grupo.
+      El valor predeterminado es 1. El valor máximo es el menor de 4 veces el número de núcleos de la vmSize del grupo o a 256.
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una lista de pares de nombre-valor asociados al grupo como metadatos. El servicio Batch no asigna ningún significado a los metadatos; es únicamente para el uso de código de usuario.
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La configuración de red para el grupo.
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.NetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El tiempo de espera para la asignación de nodos de proceso para el grupo. Este tiempo de espera se aplica solo a escala manual; no tiene ningún efecto cuando enableAutoScale se establece en true. El valor predeterminado es 15 minutos. El valor mínimo es 5 minutos. Si especifica un valor inferior a 5 minutos, el servicio Batch rechaza la solicitud con un error; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta).'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una tarea se ejecute en cada nodo de proceso cuando une al grupo. La tarea se ejecuta cuando el nodo se agrega al grupo o cuando se reinicia el nodo.
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.targetDedicatedNodes'
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El número deseado de dedicado nodos de proceso en el grupo. Esta propiedad no debe ser si enableAutoScale se establece en true. Si enableAutoScale se establece en false, debe establecer targetDedicatedNodes, targetLowPriorityNodes o ambos.'
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.targetLowPriorityNodes'
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El número deseado de nodos de proceso de prioridad baja el grupo. Esta propiedad no debe ser si enableAutoScale se establece en true. Si enableAutoScale se establece en false, debe establecer targetDedicatedNodes, targetLowPriorityNodes o ambos.'
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.taskSchedulingPolicy'
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Cómo se distribuyen las tareas entre los nodos de proceso en un grupo. Si no se especifica, se extiende el valor predeterminado.'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - '@azure/batch.TaskSchedulingPolicy'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.userAccounts'
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La lista de cuentas de usuario que se crearán en cada nodo del grupo.
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - '@azure/batch.UserAccount[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.virtualMachineConfiguration'
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La configuración de la máquina virtual para el grupo. Esta propiedad debe ser especifica si el grupo debe crearse con máquinas virtuales de IaaS de Azure. Esta propiedad y cloudServiceConfiguration son mutuamente excluyentes y debe especificarse una de las propiedades. Si se especifica ninguno, a continuación, el servicio Batch devuelve un error; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta).'
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - '@azure/batch.VirtualMachineConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El tamaño de las máquinas virtuales que se usan en el grupo. Todas las máquinas virtuales de un grupo son del mismo tamaño. Para obtener información sobre los tamaños disponibles de máquinas virtuales en grupos, consulte elegir un tamaño de máquina virtual para nodos de proceso en un grupo de Azure Batch (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).'
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CloudServiceConfiguration'
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: '@azure/batch.CloudServiceConfiguration'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: '@azure/batch.NetworkConfiguration'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.TaskSchedulingPolicy'
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: '@azure/batch.TaskSchedulingPolicy'
+  - uid: '@azure/batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: '@azure/batch.UserAccount'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.VirtualMachineConfiguration'
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: '@azure/batch.VirtualMachineConfiguration'
