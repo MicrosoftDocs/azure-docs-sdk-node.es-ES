@@ -1,0 +1,461 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ServerKeys'
+    name: ServerKeys
+    fullName: ServerKeys
+    children:
+      - '@azure/arm-sql.ServerKeys.beginCreateOrUpdate'
+      - '@azure/arm-sql.ServerKeys.beginDeleteMethod'
+      - '@azure/arm-sql.ServerKeys.createOrUpdate'
+      - '@azure/arm-sql.ServerKeys.deleteMethod'
+      - '@azure/arm-sql.ServerKeys.get'
+      - '@azure/arm-sql.ServerKeys.get_2'
+      - '@azure/arm-sql.ServerKeys.get_1'
+      - '@azure/arm-sql.ServerKeys.listByServer'
+      - '@azure/arm-sql.ServerKeys.listByServer_2'
+      - '@azure/arm-sql.ServerKeys.listByServer_1'
+      - '@azure/arm-sql.ServerKeys.listByServerNext'
+      - '@azure/arm-sql.ServerKeys.listByServerNext_2'
+      - '@azure/arm-sql.ServerKeys.listByServerNext_1'
+      - '@azure/arm-sql.ServerKeys.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="3fd15-101">Clase que representa un ServerKeys.</span><span class="sxs-lookup"><span data-stu-id="3fd15-101">Class representing a ServerKeys.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, ServerKey, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3fd15-102">Crea o actualiza una clave de servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-102">Creates or updates a server key.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, keyName: string, parameters: ServerKey, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-103">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-104">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-105">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-105">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="3fd15-106">El nombre de la clave del servidor que se opera (actualizado o creado).</span><span class="sxs-lookup"><span data-stu-id="3fd15-106">The name of the server key to be operated on (updated or created).</span></span> <span data-ttu-id="3fd15-107">El nombre de clave debe tener el formato ''vault_key_version''.</span><span class="sxs-lookup"><span data-stu-id="3fd15-107">The key name is required to be in the format of ''vault_key_version''.</span></span> <span data-ttu-id="3fd15-108">Por ejemplo, si es el keyId https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, a continuación, el nombre de clave de servidor debe tener el formato: YourVaultName_YourKeyName_01234567890123456789012345678901</span><span class="sxs-lookup"><span data-stu-id="3fd15-108">For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, then the server key name should be formatted as: YourVaultName_YourKeyName_01234567890123456789012345678901</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ServerKey'
+          description: <span data-ttu-id="3fd15-109">El estado de la clave de recurso solicitado del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-109">The requested server key resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3fd15-110">Elimina la clave de servidor con el nombre especificado.</span><span class="sxs-lookup"><span data-stu-id="3fd15-110">Deletes the server key with the given name.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-111">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-111">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-112">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-112">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-113">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-113">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-114">El nombre de la clave de servidor que va a eliminar.</span><span class="sxs-lookup"><span data-stu-id="3fd15-114">The name of the server key to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, ServerKey, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3fd15-115">Crea o actualiza una clave de servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-115">Creates or updates a server key.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, keyName: string, parameters: ServerKey, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-116">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-116">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-117">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-117">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-118">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-118">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="3fd15-119">El nombre de la clave del servidor que se opera (actualizado o creado).</span><span class="sxs-lookup"><span data-stu-id="3fd15-119">The name of the server key to be operated on (updated or created).</span></span> <span data-ttu-id="3fd15-120">El nombre de clave debe tener el formato ''vault_key_version''.</span><span class="sxs-lookup"><span data-stu-id="3fd15-120">The key name is required to be in the format of ''vault_key_version''.</span></span> <span data-ttu-id="3fd15-121">Por ejemplo, si es el keyId https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, a continuación, el nombre de clave de servidor debe tener el formato: YourVaultName_YourKeyName_01234567890123456789012345678901</span><span class="sxs-lookup"><span data-stu-id="3fd15-121">For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, then the server key name should be formatted as: YourVaultName_YourKeyName_01234567890123456789012345678901</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ServerKey'
+          description: <span data-ttu-id="3fd15-122">El estado de la clave de recurso solicitado del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-122">The requested server key resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3fd15-123">Elimina la clave de servidor con el nombre especificado.</span><span class="sxs-lookup"><span data-stu-id="3fd15-123">Deletes the server key with the given name.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-124">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-124">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-125">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-125">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-126">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-126">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-127">El nombre de la clave de servidor que va a eliminar.</span><span class="sxs-lookup"><span data-stu-id="3fd15-127">The name of the server key to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3fd15-128">Obtiene una clave de servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-128">Gets a server key.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-129">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-130">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-131">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-131">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-132">El nombre de la clave de servidor que va a recuperar.</span><span class="sxs-lookup"><span data-stu-id="3fd15-132">The name of the server key to be retrieved.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<ServerKey>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, keyName: string, options: RequestOptionsBase, callback: ServiceCallback<ServerKey>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-133">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-133">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-134">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-134">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-135">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-135">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-136">El nombre de la clave de servidor que va a recuperar.</span><span class="sxs-lookup"><span data-stu-id="3fd15-136">The name of the server key to be retrieved.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3fd15-137">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="3fd15-137">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKey>
+          description: |
+            <span data-ttu-id="3fd15-138">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="3fd15-138">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.get_1'
+    name: 'get(string, string, string, ServiceCallback<ServerKey>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, keyName: string, callback: ServiceCallback<ServerKey>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-139">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-139">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-140">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-140">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-141">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-141">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-142">El nombre de la clave de servidor que va a recuperar.</span><span class="sxs-lookup"><span data-stu-id="3fd15-142">The name of the server key to be retrieved.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKey>
+          description: |
+            <span data-ttu-id="3fd15-143">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="3fd15-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServer'
+    name: 'listByServer(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3fd15-144">Obtiene una lista de las claves del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-144">Gets a list of server keys.</span></span>
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-145">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-145">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-146">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-146">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-147">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-147">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServer_2'
+    name: 'listByServer(string, string, RequestOptionsBase, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options: RequestOptionsBase, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-148">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-148">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-149">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-149">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-150">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-150">The name of the server.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3fd15-151">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="3fd15-151">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            <span data-ttu-id="3fd15-152">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="3fd15-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServer_1'
+    name: 'listByServer(string, string, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-153">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="3fd15-153">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="3fd15-154">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="3fd15-154">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-155">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-155">The name of the server.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            <span data-ttu-id="3fd15-156">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="3fd15-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServerNext'
+    name: 'listByServerNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3fd15-157">Obtiene una lista de las claves del servidor.</span><span class="sxs-lookup"><span data-stu-id="3fd15-157">Gets a list of server keys.</span></span>
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-158">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="3fd15-158">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServerNext_2'
+    name: 'listByServerNext(string, RequestOptionsBase, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-159">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="3fd15-159">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3fd15-160">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="3fd15-160">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            <span data-ttu-id="3fd15-161">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="3fd15-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServerNext_1'
+    name: 'listByServerNext(string, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="3fd15-162">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="3fd15-162">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            <span data-ttu-id="3fd15-163">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="3fd15-163">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.constructor'
+    name: ServerKeys(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3fd15-164">Crear un ServerKeys.</span><span class="sxs-lookup"><span data-stu-id="3fd15-164">Create a ServerKeys.</span></span>
+    syntax:
+      content: 'new ServerKeys(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="3fd15-165">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="3fd15-165">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.ServerKey'
+    name: ServerKey
+    spec.typeScript:
+      - name: ServerKey
+        fullName: ServerKey
+        uid: '@azure/arm-sql.ServerKey'
+  - uid: ServiceCallback<@azure/arm-sql.ServerKey>
+    name: ServerKey>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ServerKey
+        fullName: ServerKey
+        uid: '@azure/arm-sql.ServerKey'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+    name: ServerKeyListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ServerKeyListResult
+        fullName: ServerKeyListResult
+        uid: '@azure/arm-sql.ServerKeyListResult'
+      - name: '>'
+        fullName: '>'
