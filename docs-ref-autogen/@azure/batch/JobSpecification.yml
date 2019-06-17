@@ -1,0 +1,285 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobSpecification'
+    name: JobSpecification
+    fullName: JobSpecification
+    children:
+      - '@azure/batch.JobSpecification.commonEnvironmentSettings'
+      - '@azure/batch.JobSpecification.constraints'
+      - '@azure/batch.JobSpecification.displayName'
+      - '@azure/batch.JobSpecification.jobManagerTask'
+      - '@azure/batch.JobSpecification.jobPreparationTask'
+      - '@azure/batch.JobSpecification.jobReleaseTask'
+      - '@azure/batch.JobSpecification.metadata'
+      - '@azure/batch.JobSpecification.networkConfiguration'
+      - '@azure/batch.JobSpecification.onAllTasksComplete'
+      - '@azure/batch.JobSpecification.onTaskFailure'
+      - '@azure/batch.JobSpecification.poolInfo'
+      - '@azure/batch.JobSpecification.priority'
+      - '@azure/batch.JobSpecification.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa JobSpecification.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Una lista de configuraciones de variables de entorno comunes. Estas variables de entorno se establecen para todas las tareas en los trabajos creados según este programa (incluidas las tareas de administrador de trabajos, preparación y liberación del trabajo). Configuración de entorno aquí especificada especificando el mismo nombre de configuración con otro valor puede reemplazarse por tareas individuales.'
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Restricciones de ejecución para los trabajos creados según este programa.
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre para mostrar para los trabajos creados según este programa. El nombre no debe ser único y puede contener cualquier carácter Unicode hasta una longitud máxima de 1024.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Los detalles de una tarea del Administrador de trabajos que se iniciará cuando se inicia un trabajo según este programa. Si el trabajo no especifica una tarea del Administrador de trabajos, el usuario debe agregar explícitamente las tareas al trabajo mediante la API de tarea. Si el trabajo especifica una tarea del Administrador de trabajos, el servicio Batch crea la tarea del Administrador de trabajos cuando se crea el trabajo e intentará programar la tarea del Administrador de trabajos antes de programar otras tareas en el trabajo.'
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La tarea de preparación del trabajo para los trabajos creados según este programa. Si un trabajo tiene una tarea de preparación del trabajo, el servicio Batch ejecutará la tarea de preparación del trabajo en un nodo de proceso antes de iniciar cualquier tarea de ese trabajo en ese nodo de proceso.'
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La tarea de liberación del trabajo para los trabajos creados según este programa. El propósito principal de la tarea de liberación del trabajo es deshacer los cambios realizados por la tarea de preparación del trabajo de los nodos de proceso. Las actividades de ejemplo incluyen la eliminación de archivos locales o detener los servicios que se iniciaron como parte de la preparación del trabajo. No se puede especificar una tarea de liberación del trabajo sin especificar también una tarea de preparación del trabajo para el trabajo. El servicio Batch ejecuta la tarea de liberación del trabajo en los nodos de proceso que se han ejecutado la tarea de preparación del trabajo.
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Una lista de pares de nombre-valor asociados con cada trabajo creada según este programa como metadatos.
+      El servicio Batch no asigna ningún significado a los metadatos; es únicamente para el uso de código de usuario.
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La configuración de red para el trabajo.
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La acción que debe realizar el servicio Batch cuando todas las tareas de un trabajo creado en esta programación se encuentran en estado completado. Tenga en cuenta que si un trabajo no contiene ninguna tarea, a continuación, todas las tareas se consideran completas. Esta opción, por tanto, se usa normalmente con una tarea del Administrador de trabajos; Si desea usar la finalización automática de trabajos sin un administrador de trabajos, debe establecerse onAllTasksComplete noaction inicialmente y actualizar las propiedades del trabajo para establecer onAllTasksComplete en terminatejob cuando haya terminado de agregar tareas. El valor predeterminado es noaction. Los valores posibles son: "noAction", "terminateJob"'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La acción que debe realizar el servicio Batch cuando se produce un error en cualquier tarea en un trabajo creado en esta programación. Se considera una tarea que ha producido un error si ha producido un error si tiene un failureInfo. Se establece un failureInfo si la tarea se completa con un código de salida distinto de cero después de agotar su número de reintentos, o si se produjo un error al iniciar la tarea, por ejemplo debido a un archivo de recursos de error de descarga. El valor predeterminado es noaction. Los valores posibles son: ''noAction'', ''performExitOptionsJobAction'''
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El grupo en el que el servicio Batch ejecuta las tareas de los trabajos creados según este programa.
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La prioridad de los trabajos creados según este programa. Los valores de prioridad pueden oscilar entre -1000 y 1000, siendo-1000 la prioridad más baja y 1000 la prioridad más alta. El valor predeterminado es 0. Esta prioridad se usa como valor predeterminado para todos los trabajos de la programación de trabajo. Puede actualizar la prioridad de un trabajo después de que se ha creado mediante la API de trabajo de actualización.'
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Si las tareas del trabajo pueden definir las dependencias entre sí. El valor predeterminado es false.
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'

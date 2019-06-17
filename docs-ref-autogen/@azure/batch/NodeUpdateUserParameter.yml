@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeUpdateUserParameter'
+    name: NodeUpdateUserParameter
+    fullName: NodeUpdateUserParameter
+    children:
+      - '@azure/batch.NodeUpdateUserParameter.expiryTime'
+      - '@azure/batch.NodeUpdateUserParameter.password'
+      - '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa NodeUpdateUserParameter.
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.expiryTime'
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La hora en que la cuenta debe expirar. Si se omite, el valor predeterminado es 1 día de la hora actual. Para nodos de proceso de Linux, el expiryTime tiene una precisión de hasta un día.'
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La contraseña de la cuenta. La contraseña es necesaria para los nodos de Windows (aquellos creados con ''cloudServiceConfiguration'', o con ''virtualMachineConfiguration'' mediante una referencia de imagen de Windows). Para nodos de proceso de Linux, opcionalmente se puede especificar la contraseña junto con la propiedad sshPublicKey. Si se omite, se quita cualquier contraseña existente.'
+    optional: true
+    syntax:
+      content: 'password?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La clave pública SSH que puede usarse para el inicio de sesión remoto en el nodo de proceso. La clave pública debe ser compatible con la codificación de OpenSSH y debería estar codificada en base 64. Esta propiedad se puede especificar solo para los nodos de Linux. Si se especifica para un nodo de Windows, el servicio Batch rechaza la solicitud; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta). Si se omite, se quita cualquier clave pública SSH existente.'
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
