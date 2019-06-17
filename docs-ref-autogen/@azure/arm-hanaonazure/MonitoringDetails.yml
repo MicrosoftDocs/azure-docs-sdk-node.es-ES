@@ -4,44 +4,28 @@ items:
     name: MonitoringDetails
     fullName: MonitoringDetails
     children:
-      - '@azure/arm-hanaonazure.MonitoringDetails.dbContainer'
-      - '@azure/arm-hanaonazure.MonitoringDetails.hanaDatabase'
+      - '@azure/arm-hanaonazure.MonitoringDetails.hanaDbName'
       - '@azure/arm-hanaonazure.MonitoringDetails.hanaDbPassword'
+      - '@azure/arm-hanaonazure.MonitoringDetails.hanaDbSqlPort'
       - '@azure/arm-hanaonazure.MonitoringDetails.hanaDbUsername'
       - '@azure/arm-hanaonazure.MonitoringDetails.hanaHostname'
-      - '@azure/arm-hanaonazure.MonitoringDetails.hanaInstanceNum'
-      - '@azure/arm-hanaonazure.MonitoringDetails.hanaVnet'
+      - '@azure/arm-hanaonazure.MonitoringDetails.hanaSubnet'
     langs:
       - typeScript
     type: interface
     summary: Los detalles necesitan para supervisar una instancia de Hana
     package: '@azure/arm-hanaonazure'
-  - uid: '@azure/arm-hanaonazure.MonitoringDetails.dbContainer'
-    name: dbContainer
-    fullName: dbContainer
+  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaDbName'
+    name: hanaDbName
+    fullName: hanaDbName
     children: []
     langs:
       - typeScript
     type: property
-    summary: 'Únicos o múltiples según el uso de MDC (base de datos de varios contenedores). Los valores posibles son: ''single'', ''varios''. Valor predeterminado: "single".'
+    summary: Nombre de la base de datos.
     optional: true
     syntax:
-      content: 'dbContainer?: HanaDatabaseContainersEnum'
-      return:
-        type:
-          - '@azure/arm-hanaonazure.HanaDatabaseContainersEnum'
-    package: '@azure/arm-hanaonazure'
-  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaDatabase'
-    name: hanaDatabase
-    fullName: hanaDatabase
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Nombre de la base de datos.  Solo debe especificarse si usa MDC
-    optional: true
-    syntax:
-      content: 'hanaDatabase?: undefined | string'
+      content: 'hanaDbName?: undefined | string'
       return:
         type:
           - undefined | string
@@ -60,6 +44,21 @@ items:
       return:
         type:
           - undefined | string
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaDbSqlPort'
+    name: hanaDbSqlPort
+    fullName: hanaDbSqlPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El número de puerto de la base de datos de inquilino. Se usa para conectarse a la base de datos.
+    optional: true
+    syntax:
+      content: 'hanaDbSqlPort?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaDbUsername'
     name: hanaDbUsername
@@ -91,40 +90,18 @@ items:
         type:
           - undefined | string
     package: '@azure/arm-hanaonazure'
-  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaInstanceNum'
-    name: hanaInstanceNum
-    fullName: hanaInstanceNum
+  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaSubnet'
+    name: hanaSubnet
+    fullName: hanaSubnet
     children: []
     langs:
       - typeScript
     type: property
-    summary: 'Un número comprendido entre 00 y 99, se almacena como una cadena para mantener el cero inicial.'
+    summary: Id. de ARM de una subred de Azure con acceso a la instancia HANA.
     optional: true
     syntax:
-      content: 'hanaInstanceNum?: undefined | string'
+      content: 'hanaSubnet?: undefined | string'
       return:
         type:
           - undefined | string
     package: '@azure/arm-hanaonazure'
-  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaVnet'
-    name: hanaVnet
-    fullName: hanaVnet
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id. de ARM de una red virtual de Azure con acceso a la instancia HANA.
-    optional: true
-    syntax:
-      content: 'hanaVnet?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/arm-hanaonazure'
-references:
-  - uid: '@azure/arm-hanaonazure.HanaDatabaseContainersEnum'
-    name: HanaDatabaseContainersEnum
-    spec.typeScript:
-      - name: HanaDatabaseContainersEnum
-        fullName: HanaDatabaseContainersEnum
-        uid: '@azure/arm-hanaonazure.HanaDatabaseContainersEnum'
