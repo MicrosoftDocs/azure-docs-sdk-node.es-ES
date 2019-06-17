@@ -1,0 +1,969 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.JobSteps'
+    name: JobSteps
+    fullName: JobSteps
+    children:
+      - '@azure/arm-sql.JobSteps.createOrUpdate'
+      - '@azure/arm-sql.JobSteps.createOrUpdate_2'
+      - '@azure/arm-sql.JobSteps.createOrUpdate_1'
+      - '@azure/arm-sql.JobSteps.deleteMethod'
+      - '@azure/arm-sql.JobSteps.deleteMethod_2'
+      - '@azure/arm-sql.JobSteps.deleteMethod_1'
+      - '@azure/arm-sql.JobSteps.get'
+      - '@azure/arm-sql.JobSteps.get_2'
+      - '@azure/arm-sql.JobSteps.get_1'
+      - '@azure/arm-sql.JobSteps.getByVersion'
+      - '@azure/arm-sql.JobSteps.getByVersion_2'
+      - '@azure/arm-sql.JobSteps.getByVersion_1'
+      - '@azure/arm-sql.JobSteps.constructor'
+      - '@azure/arm-sql.JobSteps.listByJob'
+      - '@azure/arm-sql.JobSteps.listByJob_2'
+      - '@azure/arm-sql.JobSteps.listByJob_1'
+      - '@azure/arm-sql.JobSteps.listByJobNext'
+      - '@azure/arm-sql.JobSteps.listByJobNext_2'
+      - '@azure/arm-sql.JobSteps.listByJobNext_1'
+      - '@azure/arm-sql.JobSteps.listByVersion'
+      - '@azure/arm-sql.JobSteps.listByVersion_2'
+      - '@azure/arm-sql.JobSteps.listByVersion_1'
+      - '@azure/arm-sql.JobSteps.listByVersionNext'
+      - '@azure/arm-sql.JobSteps.listByVersionNext_2'
+      - '@azure/arm-sql.JobSteps.listByVersionNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="c631e-101">Clase que representa un JobSteps.</span><span class="sxs-lookup"><span data-stu-id="c631e-101">Class representing a JobSteps.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, string, string, JobStep, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c631e-102">Crea o actualiza un paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-102">Creates or updates a job step.</span></span> <span data-ttu-id="c631e-103">Esto creará implícitamente una nueva versión de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-103">This will implicitly create a new job version.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, stepName: string, parameters: JobStep, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-104">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-105">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-106">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-106">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-107">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-107">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-108">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-108">The name of the job.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-109">El nombre del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-109">The name of the job step.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.JobStep'
+          description: <span data-ttu-id="c631e-110">El estado solicitado del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-110">The requested state of the job step.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepsCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, string, string, JobStep, RequestOptionsBase, ServiceCallback<JobStep>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, stepName: string, parameters: JobStep, options: RequestOptionsBase, callback: ServiceCallback<JobStep>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-111">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-111">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-112">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-112">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-113">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-113">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-114">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-114">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-115">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-115">The name of the job.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-116">El nombre del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-116">The name of the job step.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.JobStep'
+          description: <span data-ttu-id="c631e-117">El estado solicitado del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-117">The requested state of the job step.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="c631e-118">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="c631e-118">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStep>
+          description: |
+            <span data-ttu-id="c631e-119">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-119">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, string, string, JobStep, ServiceCallback<JobStep>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, stepName: string, parameters: JobStep, callback: ServiceCallback<JobStep>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-120">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-120">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-121">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-121">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-122">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-122">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-123">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-123">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-124">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-124">The name of the job.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-125">El nombre del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-125">The name of the job step.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.JobStep'
+          description: <span data-ttu-id="c631e-126">El estado solicitado del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-126">The requested state of the job step.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStep>
+          description: |
+            <span data-ttu-id="c631e-127">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-127">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c631e-128">Elimina un paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-128">Deletes a job step.</span></span> <span data-ttu-id="c631e-129">Esto creará implícitamente una nueva versión de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-129">This will implicitly create a new job version.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, stepName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-130">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-130">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-131">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-131">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-132">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-132">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-133">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-133">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-134">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-134">The name of the job.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-135">El nombre del paso de trabajo para eliminar.</span><span class="sxs-lookup"><span data-stu-id="c631e-135">The name of the job step to delete.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, stepName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-136">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-136">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-137">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-137">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-138">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-138">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-139">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-139">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-140">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-140">The name of the job.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-141">El nombre del paso de trabajo para eliminar.</span><span class="sxs-lookup"><span data-stu-id="c631e-141">The name of the job step to delete.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="c631e-142">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="c631e-142">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="c631e-143">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-143">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, stepName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-144">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-144">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-145">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-145">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-146">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-146">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-147">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-147">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-148">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-148">The name of the job.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-149">El nombre del paso de trabajo para eliminar.</span><span class="sxs-lookup"><span data-stu-id="c631e-149">The name of the job step to delete.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="c631e-150">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-150">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.get'
+    name: 'get(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c631e-151">Obtiene un paso de trabajo en la versión actual de un trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-151">Gets a job step in a job's current version.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, stepName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-152">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-152">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-153">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-153">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-154">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-154">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-155">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-155">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-156">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-156">The name of the job.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-157">El nombre del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-157">The name of the job step.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.get_2'
+    name: 'get(string, string, string, string, string, RequestOptionsBase, ServiceCallback<JobStep>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, stepName: string, options: RequestOptionsBase, callback: ServiceCallback<JobStep>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-158">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-158">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-159">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-159">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-160">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-160">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-161">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-161">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-162">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-162">The name of the job.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-163">El nombre del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-163">The name of the job step.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="c631e-164">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="c631e-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStep>
+          description: |
+            <span data-ttu-id="c631e-165">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<JobStep>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, stepName: string, callback: ServiceCallback<JobStep>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-166">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-166">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-167">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-167">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-168">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-168">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-169">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-169">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-170">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-170">The name of the job.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-171">El nombre del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-171">The name of the job step.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStep>
+          description: |
+            <span data-ttu-id="c631e-172">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.getByVersion'
+    name: 'getByVersion(string, string, string, string, number, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c631e-173">Obtiene la versión especificada de un paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-173">Gets the specified version of a job step.</span></span>
+    syntax:
+      content: 'function getByVersion(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobVersion: number, stepName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-174">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-174">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-175">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-175">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-176">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-176">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-177">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-177">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-178">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-178">The name of the job.</span></span>
+        - id: jobVersion
+          type:
+            - number
+          description: <span data-ttu-id="c631e-179">La versión del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-179">The version of the job to get.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-180">El nombre del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-180">The name of the job step.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepsGetByVersionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.getByVersion_2'
+    name: 'getByVersion(string, string, string, string, number, string, RequestOptionsBase, ServiceCallback<JobStep>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getByVersion(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobVersion: number, stepName: string, options: RequestOptionsBase, callback: ServiceCallback<JobStep>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-181">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-181">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-182">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-182">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-183">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-183">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-184">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-184">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-185">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-185">The name of the job.</span></span>
+        - id: jobVersion
+          type:
+            - number
+          description: <span data-ttu-id="c631e-186">La versión del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-186">The version of the job to get.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-187">El nombre del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-187">The name of the job step.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="c631e-188">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="c631e-188">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStep>
+          description: |
+            <span data-ttu-id="c631e-189">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsGetByVersionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.getByVersion_1'
+    name: 'getByVersion(string, string, string, string, number, string, ServiceCallback<JobStep>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getByVersion(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobVersion: number, stepName: string, callback: ServiceCallback<JobStep>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-190">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-190">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-191">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-191">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-192">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-192">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-193">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-193">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-194">Nombre del trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-194">The name of the job.</span></span>
+        - id: jobVersion
+          type:
+            - number
+          description: <span data-ttu-id="c631e-195">La versión del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-195">The version of the job to get.</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-196">El nombre del paso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-196">The name of the job step.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStep>
+          description: |
+            <span data-ttu-id="c631e-197">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-197">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsGetByVersionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.constructor'
+    name: JobSteps(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c631e-198">Crear pasos de un trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-198">Create a JobSteps.</span></span>
+    syntax:
+      content: 'new JobSteps(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="c631e-199">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="c631e-199">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByJob'
+    name: 'listByJob(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c631e-200">Obtiene todos los pasos de trabajo para la versión actual de un trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-200">Gets all job steps for a job's current version.</span></span>
+    syntax:
+      content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-201">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-201">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-202">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-202">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-203">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-203">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-204">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-204">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-205">El nombre del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-205">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepsListByJobResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByJob_2'
+    name: 'listByJob(string, string, string, string, RequestOptionsBase, ServiceCallback<JobStepListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options: RequestOptionsBase, callback: ServiceCallback<JobStepListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-206">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-206">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-207">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-207">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-208">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-208">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-209">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-209">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-210">El nombre del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-210">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="c631e-211">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="c631e-211">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStepListResult>
+          description: |
+            <span data-ttu-id="c631e-212">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-212">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsListByJobResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByJob_1'
+    name: 'listByJob(string, string, string, string, ServiceCallback<JobStepListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, callback: ServiceCallback<JobStepListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-213">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-213">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-214">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-214">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-215">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-215">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-216">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-216">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-217">El nombre del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-217">The name of the job to get.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStepListResult>
+          description: |
+            <span data-ttu-id="c631e-218">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-218">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsListByJobResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByJobNext'
+    name: 'listByJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c631e-219">Obtiene todos los pasos de trabajo para la versión actual de un trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-219">Gets all job steps for a job's current version.</span></span>
+    syntax:
+      content: 'function listByJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="c631e-220">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="c631e-220">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepsListByJobNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByJobNext_2'
+    name: 'listByJobNext(string, RequestOptionsBase, ServiceCallback<JobStepListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobStepListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="c631e-221">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="c631e-221">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="c631e-222">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="c631e-222">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStepListResult>
+          description: |
+            <span data-ttu-id="c631e-223">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-223">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsListByJobNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByJobNext_1'
+    name: 'listByJobNext(string, ServiceCallback<JobStepListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobNext(nextPageLink: string, callback: ServiceCallback<JobStepListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="c631e-224">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="c631e-224">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStepListResult>
+          description: |
+            <span data-ttu-id="c631e-225">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-225">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsListByJobNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByVersion'
+    name: 'listByVersion(string, string, string, string, number, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c631e-226">Obtiene todos los pasos de trabajo en la versión de trabajo especificado.</span><span class="sxs-lookup"><span data-stu-id="c631e-226">Gets all job steps in the specified job version.</span></span>
+    syntax:
+      content: 'function listByVersion(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobVersion: number, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-227">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-227">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-228">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-228">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-229">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-229">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-230">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-230">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-231">El nombre del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-231">The name of the job to get.</span></span>
+        - id: jobVersion
+          type:
+            - number
+          description: <span data-ttu-id="c631e-232">La versión del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-232">The version of the job to get.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepsListByVersionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByVersion_2'
+    name: 'listByVersion(string, string, string, string, number, RequestOptionsBase, ServiceCallback<JobStepListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByVersion(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobVersion: number, options: RequestOptionsBase, callback: ServiceCallback<JobStepListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-233">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-233">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-234">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-234">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-235">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-235">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-236">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-236">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-237">El nombre del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-237">The name of the job to get.</span></span>
+        - id: jobVersion
+          type:
+            - number
+          description: <span data-ttu-id="c631e-238">La versión del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-238">The version of the job to get.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="c631e-239">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="c631e-239">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStepListResult>
+          description: |
+            <span data-ttu-id="c631e-240">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-240">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsListByVersionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByVersion_1'
+    name: 'listByVersion(string, string, string, string, number, ServiceCallback<JobStepListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByVersion(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobVersion: number, callback: ServiceCallback<JobStepListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-241">Nombre del grupo de recursos que contiene el recurso.</span><span class="sxs-lookup"><span data-stu-id="c631e-241">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="c631e-242">Puede obtener este valor en la API del Administrador de recursos o el portal de Azure.</span><span class="sxs-lookup"><span data-stu-id="c631e-242">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-243">El nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="c631e-243">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-244">El nombre del agente de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c631e-244">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="c631e-245">El nombre del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-245">The name of the job to get.</span></span>
+        - id: jobVersion
+          type:
+            - number
+          description: <span data-ttu-id="c631e-246">La versión del trabajo que se va a obtener.</span><span class="sxs-lookup"><span data-stu-id="c631e-246">The version of the job to get.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStepListResult>
+          description: |
+            <span data-ttu-id="c631e-247">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-247">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsListByVersionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByVersionNext'
+    name: 'listByVersionNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c631e-248">Obtiene todos los pasos de trabajo en la versión de trabajo especificado.</span><span class="sxs-lookup"><span data-stu-id="c631e-248">Gets all job steps in the specified job version.</span></span>
+    syntax:
+      content: 'function listByVersionNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="c631e-249">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="c631e-249">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobStepsListByVersionNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByVersionNext_2'
+    name: 'listByVersionNext(string, RequestOptionsBase, ServiceCallback<JobStepListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByVersionNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobStepListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="c631e-250">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="c631e-250">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="c631e-251">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="c631e-251">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStepListResult>
+          description: |
+            <span data-ttu-id="c631e-252">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-252">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsListByVersionNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobSteps.listByVersionNext_1'
+    name: 'listByVersionNext(string, ServiceCallback<JobStepListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByVersionNext(nextPageLink: string, callback: ServiceCallback<JobStepListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="c631e-253">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="c631e-253">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobStepListResult>
+          description: |
+            <span data-ttu-id="c631e-254">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="c631e-254">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobStepsListByVersionNextResponse>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.JobStep'
+    name: JobStep
+    spec.typeScript:
+      - name: JobStep
+        fullName: JobStep
+        uid: '@azure/arm-sql.JobStep'
+  - uid: ServiceCallback<@azure/arm-sql.JobStep>
+    name: JobStep>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobStep
+        fullName: JobStep
+        uid: '@azure/arm-sql.JobStep'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.JobStepListResult>
+    name: JobStepListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobStepListResult
+        fullName: JobStepListResult
+        uid: '@azure/arm-sql.JobStepListResult'
+      - name: '>'
+        fullName: '>'
