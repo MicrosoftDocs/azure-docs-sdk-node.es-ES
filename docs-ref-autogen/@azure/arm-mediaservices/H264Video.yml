@@ -1,0 +1,143 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.H264Video'
+    name: H264Video
+    fullName: H264Video
+    children:
+      - '@azure/arm-mediaservices.H264Video.complexity'
+      - '@azure/arm-mediaservices.H264Video.keyFrameInterval'
+      - '@azure/arm-mediaservices.H264Video.label'
+      - '@azure/arm-mediaservices.H264Video.layers'
+      - '@azure/arm-mediaservices.H264Video.odatatype'
+      - '@azure/arm-mediaservices.H264Video.sceneChangeDetection'
+      - '@azure/arm-mediaservices.H264Video.stretchMode'
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe todas las propiedades para codificar un vídeo con el códec H.264.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Video.complexity'
+    name: complexity
+    fullName: complexity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica al codificador cómo elegir su configuración de codificación. El valor predeterminado es equilibrado. Los valores posibles son: ''Acelerar'', ''equilibrado'', ''Calidad'''
+    optional: true
+    syntax:
+      content: 'complexity?: H264Complexity'
+      return:
+        type:
+          - '@azure/arm-mediaservices.H264Complexity'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Video.keyFrameInterval'
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La distancia entre dos fotogramas clave, con lo que define un grupo de imágenes (GOP). El valor debe ser un entero distinto de cero en los segundos del intervalo [1 30], especificado en formato ISO 8601. El valor predeterminado es de 2 segundos (PT2S).'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Video.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una etiqueta opcional para el códec. La etiqueta puede usarse para controlar el comportamiento de muxing.
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Video.layers'
+    name: layers
+    fullName: layers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La colección de capas H.264 de salida se produce en el codificador.
+    optional: true
+    syntax:
+      content: 'layers?: H264Layer[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.H264Layer[]'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Video.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.H264Video"'
+      return:
+        type:
+          - '"#Microsoft.Media.H264Video"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Video.sceneChangeDetection'
+    name: sceneChangeDetection
+    fullName: sceneChangeDetection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si el codificador debe insertar fotogramas clave en los cambios de escena. Si no se especifica, el valor predeterminado es false. Esta marca debe establecerse en true sólo cuando el codificador se está configurando para producir un vídeo de salida única.'
+    optional: true
+    syntax:
+      content: 'sceneChangeDetection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Video.stretchMode'
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El modo de cambio de tamaño - cómo cambia el tamaño del vídeo de entrada para ajustarse a las resoluciones de salida deseado. El valor predeterminado es AutoSize. Los valores posibles son: ''None'', ''AutoSize'', ''AutoFit'''
+    optional: true
+    syntax:
+      content: 'stretchMode?: StretchMode'
+      return:
+        type:
+          - '@azure/arm-mediaservices.StretchMode'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.H264Complexity'
+    name: H264Complexity
+    spec.typeScript:
+      - name: H264Complexity
+        fullName: H264Complexity
+        uid: '@azure/arm-mediaservices.H264Complexity'
+  - uid: '@azure/arm-mediaservices.H264Layer[]'
+    name: 'H264Layer[]'
+    spec.typeScript:
+      - name: H264Layer
+        fullName: H264Layer
+        uid: '@azure/arm-mediaservices.H264Layer'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-mediaservices.StretchMode'
+    name: StretchMode
+    spec.typeScript:
+      - name: StretchMode
+        fullName: StretchMode
+        uid: '@azure/arm-mediaservices.StretchMode'
