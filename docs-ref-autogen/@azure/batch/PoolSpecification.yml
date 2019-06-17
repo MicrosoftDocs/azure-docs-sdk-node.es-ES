@@ -1,0 +1,399 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolSpecification'
+    name: PoolSpecification
+    fullName: PoolSpecification
+    children:
+      - '@azure/batch.PoolSpecification.applicationLicenses'
+      - '@azure/batch.PoolSpecification.applicationPackageReferences'
+      - '@azure/batch.PoolSpecification.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolSpecification.autoScaleFormula'
+      - '@azure/batch.PoolSpecification.certificateReferences'
+      - '@azure/batch.PoolSpecification.cloudServiceConfiguration'
+      - '@azure/batch.PoolSpecification.displayName'
+      - '@azure/batch.PoolSpecification.enableAutoScale'
+      - '@azure/batch.PoolSpecification.enableInterNodeCommunication'
+      - '@azure/batch.PoolSpecification.maxTasksPerNode'
+      - '@azure/batch.PoolSpecification.metadata'
+      - '@azure/batch.PoolSpecification.networkConfiguration'
+      - '@azure/batch.PoolSpecification.resizeTimeout'
+      - '@azure/batch.PoolSpecification.startTask'
+      - '@azure/batch.PoolSpecification.targetDedicatedNodes'
+      - '@azure/batch.PoolSpecification.targetLowPriorityNodes'
+      - '@azure/batch.PoolSpecification.taskSchedulingPolicy'
+      - '@azure/batch.PoolSpecification.userAccounts'
+      - '@azure/batch.PoolSpecification.virtualMachineConfiguration'
+      - '@azure/batch.PoolSpecification.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="97381-101">Una interfaz que representa PoolSpecification.</span><span class="sxs-lookup"><span data-stu-id="97381-101">An interface representing PoolSpecification.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.applicationLicenses'
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-102">El lote al servicio estará disponible en cada nodo de proceso en el grupo de licencias de la lista de aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="97381-102">The list of application licenses the Batch service will make available on each compute node in the pool.</span></span> <span data-ttu-id="97381-103">La lista de licencias de aplicación debe ser un subconjunto de las licencias de aplicación de servicio de Batch disponibles.</span><span class="sxs-lookup"><span data-stu-id="97381-103">The list of application licenses must be a subset of available Batch service application licenses.</span></span> <span data-ttu-id="97381-104">Si se solicita una licencia que no se admite, se producirá un error en la creación del grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-104">If a license is requested which is not supported, pool creation will fail.</span></span> <span data-ttu-id="97381-105">Las licencias permitidas en el grupo son ''maya'', ''vray'', ''3dsmax'', ''arnold''.</span><span class="sxs-lookup"><span data-stu-id="97381-105">The permitted licenses available on the pool are ''maya'', ''vray'', ''3dsmax'', ''arnold''.</span></span> <span data-ttu-id="97381-106">Se aplica un cargo adicional por cada licencia de aplicación agregado al grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-106">An additional charge applies for each application license added to the pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-107">La lista de paquetes de aplicación se instale en cada nodo de proceso en el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-107">The list of application packages to be installed on each compute node in the pool.</span></span> <span data-ttu-id="97381-108">Los cambios realizados en las referencias de paquete de aplicación afectan a unir el grupo todos los nodos de proceso nuevo, pero no afectan a los nodos de proceso que ya están en el grupo hasta que se reinicia o se restablece la imagen inicial.</span><span class="sxs-lookup"><span data-stu-id="97381-108">Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="97381-109">Hay un máximo de 10 referencias de paquete de aplicación en un grupo determinado.</span><span class="sxs-lookup"><span data-stu-id="97381-109">There is a maximum of 10 application package references on any given pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-110">El intervalo de tiempo en que se va a ajustar automáticamente el tamaño del grupo según la fórmula de escalado automático.</span><span class="sxs-lookup"><span data-stu-id="97381-110">The time interval at which to automatically adjust the pool size according to the autoscale formula.</span></span> <span data-ttu-id="97381-111">El valor predeterminado es 15 minutos.</span><span class="sxs-lookup"><span data-stu-id="97381-111">The default value is 15 minutes.</span></span> <span data-ttu-id="97381-112">El valor mínimo y máximo son 5 minutos y 168 horas, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="97381-112">The minimum and maximum value are 5 minutes and 168 hours respectively.</span></span> <span data-ttu-id="97381-113">Si especifica un valor menor de 5 minutos o más de 168 horas, el servicio Batch rechaza la solicitud con un error de valor de propiedad no válida; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="97381-113">If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-114">La fórmula para el número deseado de nodos de proceso en el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-114">The formula for the desired number of compute nodes in the pool.</span></span> <span data-ttu-id="97381-115">Esta propiedad no debe ser si enableAutoScale se establece en false.</span><span class="sxs-lookup"><span data-stu-id="97381-115">This property must not be specified if enableAutoScale is set to false.</span></span> <span data-ttu-id="97381-116">Es necesario si enableAutoScale se establece en true.</span><span class="sxs-lookup"><span data-stu-id="97381-116">It is required if enableAutoScale is set to true.</span></span> <span data-ttu-id="97381-117">La fórmula se comprueba para validez antes de que se crea el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-117">The formula is checked for validity before the pool is created.</span></span> <span data-ttu-id="97381-118">Si la fórmula no es válida, el servicio Batch rechaza la solicitud con información detallada del error.</span><span class="sxs-lookup"><span data-stu-id="97381-118">If the formula is not valid, the Batch service rejects the request with detailed error information.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-119">Una lista de certificados que deben instalarse en cada nodo de proceso en el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-119">A list of certificates to be installed on each compute node in the pool.</span></span> <span data-ttu-id="97381-120">Para nodos de proceso de Windows, el servicio Batch instala los certificados en el almacén de certificados especificada y la ubicación.</span><span class="sxs-lookup"><span data-stu-id="97381-120">For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location.</span></span> <span data-ttu-id="97381-121">Para nodos de proceso de Linux, los certificados se almacenan en un directorio en el directorio de trabajo de tarea y un entorno que az_batch_certificates_dir variable se proporciona a la tarea de consulta para esta ubicación.</span><span class="sxs-lookup"><span data-stu-id="97381-121">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="97381-122">Para los certificados con visibilidad "RemoteUser", se crea un directorio de "certificados" en el directorio principal del usuario (p. ej., / Home / {nombre de usuario} / certificados) y los certificados se colocan en ese directorio.</span><span class="sxs-lookup"><span data-stu-id="97381-122">For certificates with visibility of ''remoteUser'', a ''certs'' directory is created in the user''s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.cloudServiceConfiguration'
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-123">La configuración del servicio en la nube para el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-123">The cloud service configuration for the pool.</span></span> <span data-ttu-id="97381-124">Esta propiedad debe ser especifica si el grupo debe crearse con máquinas virtuales de PaaS de Azure.</span><span class="sxs-lookup"><span data-stu-id="97381-124">This property must be specified if the pool needs to be created with Azure PaaS VMs.</span></span> <span data-ttu-id="97381-125">Esta propiedad y virtualMachineConfiguration son mutuamente excluyentes y debe especificarse una de las propiedades.</span><span class="sxs-lookup"><span data-stu-id="97381-125">This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified.</span></span> <span data-ttu-id="97381-126">Si se especifica ninguno, a continuación, el servicio Batch devuelve un error; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="97381-126">If neither is specified then the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="97381-127">Esta propiedad no se puede especificar si la cuenta de Batch se creó con la propiedad poolAllocationMode establecida en ''UserSubscription''.</span><span class="sxs-lookup"><span data-stu-id="97381-127">This property cannot be specified if the Batch account was created with its poolAllocationMode property set to ''UserSubscription''.</span></span>'
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - '@azure/batch.CloudServiceConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="97381-128">El nombre para mostrar para el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-128">The display name for the pool.</span></span> <span data-ttu-id="97381-129">El nombre para mostrar no debe ser único y puede contener cualquier carácter Unicode hasta una longitud máxima de 1024.</span><span class="sxs-lookup"><span data-stu-id="97381-129">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.enableAutoScale'
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="97381-130">Si debe ajustar automáticamente el tamaño del grupo con el tiempo.</span><span class="sxs-lookup"><span data-stu-id="97381-130">Whether the pool size should automatically adjust over time.</span></span> <span data-ttu-id="97381-131">Si es false, se debe especificar al menos uno de targetDedicateNodes y targetLowPriorityNodes.</span><span class="sxs-lookup"><span data-stu-id="97381-131">If false, at least one of targetDedicateNodes and targetLowPriorityNodes must be specified.</span></span> <span data-ttu-id="97381-132">Si es true, se requiere el elemento autoScaleFormula.</span><span class="sxs-lookup"><span data-stu-id="97381-132">If true, the autoScaleFormula element is required.</span></span> <span data-ttu-id="97381-133">El grupo se ajusta automáticamente según la fórmula.</span><span class="sxs-lookup"><span data-stu-id="97381-133">The pool automatically resizes according to the formula.</span></span>
+      <span data-ttu-id="97381-134">El valor predeterminado es false.</span><span class="sxs-lookup"><span data-stu-id="97381-134">The default value is false.</span></span>
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.enableInterNodeCommunication'
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="97381-135">Si el grupo admite la comunicación directa entre los nodos.</span><span class="sxs-lookup"><span data-stu-id="97381-135">Whether the pool permits direct communication between nodes.</span></span> <span data-ttu-id="97381-136">Habilitar la comunicación entre nodos limita el tamaño máximo del grupo debido a restricciones de implementación en los nodos del grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-136">Enabling inter-node communication limits the maximum size of the pool due to deployment restrictions on the nodes of the pool.</span></span>
+      <span data-ttu-id="97381-137">Esto puede dar lugar a que el grupo no alcance el tamaño deseado.</span><span class="sxs-lookup"><span data-stu-id="97381-137">This may result in the pool not reaching its desired size.</span></span> <span data-ttu-id="97381-138">El valor predeterminado es false.</span><span class="sxs-lookup"><span data-stu-id="97381-138">The default value is false.</span></span>
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.maxTasksPerNode'
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="97381-139">El número máximo de tareas que pueden ejecutarse simultáneamente en un solo nodo de ejecución en el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-139">The maximum number of tasks that can run concurrently on a single compute node in the pool.</span></span>
+      <span data-ttu-id="97381-140">El valor predeterminado es 1.</span><span class="sxs-lookup"><span data-stu-id="97381-140">The default value is 1.</span></span> <span data-ttu-id="97381-141">El valor máximo es el menor de 4 veces el número de núcleos de la vmSize del grupo o a 256.</span><span class="sxs-lookup"><span data-stu-id="97381-141">The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.</span></span>
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="97381-142">Una lista de pares de nombre-valor asociados al grupo como metadatos.</span><span class="sxs-lookup"><span data-stu-id="97381-142">A list of name-value pairs associated with the pool as metadata.</span></span> <span data-ttu-id="97381-143">El servicio Batch no asigna ningún significado a los metadatos; es únicamente para el uso de código de usuario.</span><span class="sxs-lookup"><span data-stu-id="97381-143">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="97381-144">La configuración de red para el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-144">The network configuration for the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.NetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-145">El tiempo de espera para la asignación de nodos de proceso para el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-145">The timeout for allocation of compute nodes to the pool.</span></span> <span data-ttu-id="97381-146">Este tiempo de espera se aplica solo a escala manual; no tiene ningún efecto cuando enableAutoScale se establece en true.</span><span class="sxs-lookup"><span data-stu-id="97381-146">This timeout applies only to manual scaling; it has no effect when enableAutoScale is set to true.</span></span> <span data-ttu-id="97381-147">El valor predeterminado es 15 minutos.</span><span class="sxs-lookup"><span data-stu-id="97381-147">The default value is 15 minutes.</span></span> <span data-ttu-id="97381-148">El valor mínimo es 5 minutos.</span><span class="sxs-lookup"><span data-stu-id="97381-148">The minimum value is 5 minutes.</span></span> <span data-ttu-id="97381-149">Si especifica un valor inferior a 5 minutos, el servicio Batch rechaza la solicitud con un error; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="97381-149">If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="97381-150">Una tarea se ejecute en cada nodo de proceso cuando une al grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-150">A task to run on each compute node as it joins the pool.</span></span> <span data-ttu-id="97381-151">La tarea se ejecuta cuando el nodo se agrega al grupo o cuando se reinicia el nodo.</span><span class="sxs-lookup"><span data-stu-id="97381-151">The task runs when the node is added to the pool or when the node is restarted.</span></span>
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.targetDedicatedNodes'
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-152">El número deseado de dedicado nodos de proceso en el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-152">The desired number of dedicated compute nodes in the pool.</span></span> <span data-ttu-id="97381-153">Esta propiedad no debe ser si enableAutoScale se establece en true.</span><span class="sxs-lookup"><span data-stu-id="97381-153">This property must not be specified if enableAutoScale is set to true.</span></span> <span data-ttu-id="97381-154">Si enableAutoScale se establece en false, debe establecer targetDedicatedNodes, targetLowPriorityNodes o ambos.</span><span class="sxs-lookup"><span data-stu-id="97381-154">If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</span></span>'
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.targetLowPriorityNodes'
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-155">El número deseado de nodos de proceso de prioridad baja el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-155">The desired number of low-priority compute nodes in the pool.</span></span> <span data-ttu-id="97381-156">Esta propiedad no debe ser si enableAutoScale se establece en true.</span><span class="sxs-lookup"><span data-stu-id="97381-156">This property must not be specified if enableAutoScale is set to true.</span></span> <span data-ttu-id="97381-157">Si enableAutoScale se establece en false, debe establecer targetDedicatedNodes, targetLowPriorityNodes o ambos.</span><span class="sxs-lookup"><span data-stu-id="97381-157">If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</span></span>'
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.taskSchedulingPolicy'
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-158">Cómo se distribuyen las tareas entre los nodos de proceso en un grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-158">How tasks are distributed across compute nodes in a pool.</span></span> <span data-ttu-id="97381-159">Si no se especifica, se extiende el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="97381-159">If not specified, the default is spread.</span></span>'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - '@azure/batch.TaskSchedulingPolicy'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.userAccounts'
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="97381-160">La lista de cuentas de usuario que se crearán en cada nodo del grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-160">The list of user accounts to be created on each node in the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - '@azure/batch.UserAccount[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.virtualMachineConfiguration'
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-161">La configuración de la máquina virtual para el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-161">The virtual machine configuration for the pool.</span></span> <span data-ttu-id="97381-162">Esta propiedad debe ser especifica si el grupo debe crearse con máquinas virtuales de IaaS de Azure.</span><span class="sxs-lookup"><span data-stu-id="97381-162">This property must be specified if the pool needs to be created with Azure IaaS VMs.</span></span> <span data-ttu-id="97381-163">Esta propiedad y cloudServiceConfiguration son mutuamente excluyentes y debe especificarse una de las propiedades.</span><span class="sxs-lookup"><span data-stu-id="97381-163">This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.</span></span> <span data-ttu-id="97381-164">Si se especifica ninguno, a continuación, el servicio Batch devuelve un error; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta).</span><span class="sxs-lookup"><span data-stu-id="97381-164">If neither is specified then the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - '@azure/batch.VirtualMachineConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolSpecification.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97381-165">El tamaño de las máquinas virtuales que se usan en el grupo.</span><span class="sxs-lookup"><span data-stu-id="97381-165">The size of the virtual machines in the pool.</span></span> <span data-ttu-id="97381-166">Todas las máquinas virtuales de un grupo son del mismo tamaño.</span><span class="sxs-lookup"><span data-stu-id="97381-166">All virtual machines in a pool are the same size.</span></span> <span data-ttu-id="97381-167">Para obtener información sobre los tamaños disponibles de máquinas virtuales en grupos, consulte elegir un tamaño de máquina virtual para nodos de proceso en un grupo de Azure Batch (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).</span><span class="sxs-lookup"><span data-stu-id="97381-167">For information about available sizes of virtual machines in pools, see Choose a VM size for compute nodes in an Azure Batch pool (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).</span></span>'
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CloudServiceConfiguration'
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: '@azure/batch.CloudServiceConfiguration'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: '@azure/batch.NetworkConfiguration'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.TaskSchedulingPolicy'
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: '@azure/batch.TaskSchedulingPolicy'
+  - uid: '@azure/batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: '@azure/batch.UserAccount'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.VirtualMachineConfiguration'
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: '@azure/batch.VirtualMachineConfiguration'
