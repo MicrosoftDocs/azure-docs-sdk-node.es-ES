@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - '@azure/batch.JobNetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="805c9-101">Una interfaz que representa JobNetworkConfiguration.</span><span class="sxs-lookup"><span data-stu-id="805c9-101">An interface representing JobNetworkConfiguration.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobNetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="805c9-102">El identificador de recurso ARM de la subred de red virtual que se unirán los nodos que ejecutan tareas del trabajo para la duración de la tarea.</span><span class="sxs-lookup"><span data-stu-id="805c9-102">The ARM resource identifier of the virtual network subnet which nodes running tasks from the job will join for the duration of the task.</span></span> <span data-ttu-id="805c9-103">Esto solo se admite para los trabajos que se ejecutan en grupos VirtualMachineConfiguration.</span><span class="sxs-lookup"><span data-stu-id="805c9-103">This is only supported for jobs running on VirtualMachineConfiguration pools.</span></span> <span data-ttu-id="805c9-104">Se trata de la forma/Subscriptions / {subscription} / ResourceGroups / {grupo} / Providers / {provider} /virtualNetworks/ {network} / Subnets / {subred}.</span><span class="sxs-lookup"><span data-stu-id="805c9-104">This is of the form /subscriptions/{subscription}/resourceGroups/{group}/providers/{provider}/virtualNetworks/{network}/subnets/{subnet}.</span></span>
+      <span data-ttu-id="805c9-105">La red virtual debe estar en la misma región y suscripción que la cuenta de Azure Batch.</span><span class="sxs-lookup"><span data-stu-id="805c9-105">The virtual network must be in the same region and subscription as the Azure Batch account.</span></span>
+      <span data-ttu-id="805c9-106">La subred especificada debe tener suficientes direcciones IP libres para alojar al número de nodos que se ejecutarán las tareas del trabajo.</span><span class="sxs-lookup"><span data-stu-id="805c9-106">The specified subnet should have enough free IP addresses to accommodate the number of nodes which will run tasks from the job.</span></span> <span data-ttu-id="805c9-107">Para obtener más información, consulte https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.</span><span class="sxs-lookup"><span data-stu-id="805c9-107">For more details, see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.</span></span>
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'

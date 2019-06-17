@@ -1,0 +1,188 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskExecutionInformation'
+    name: TaskExecutionInformation
+    fullName: TaskExecutionInformation
+    children:
+      - '@azure/batch.TaskExecutionInformation.containerInfo'
+      - '@azure/batch.TaskExecutionInformation.endTime'
+      - '@azure/batch.TaskExecutionInformation.exitCode'
+      - '@azure/batch.TaskExecutionInformation.failureInfo'
+      - '@azure/batch.TaskExecutionInformation.lastRequeueTime'
+      - '@azure/batch.TaskExecutionInformation.lastRetryTime'
+      - '@azure/batch.TaskExecutionInformation.requeueCount'
+      - '@azure/batch.TaskExecutionInformation.result'
+      - '@azure/batch.TaskExecutionInformation.retryCount'
+      - '@azure/batch.TaskExecutionInformation.startTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ebf17-101">Una interfaz que representa TaskExecutionInformation.</span><span class="sxs-lookup"><span data-stu-id="ebf17-101">An interface representing TaskExecutionInformation.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ebf17-102">Información sobre el contenedor en el que se ejecuta la tarea.</span><span class="sxs-lookup"><span data-stu-id="ebf17-102">Information about the container under which the task is executing.</span></span> <span data-ttu-id="ebf17-103">Esta propiedad se establece solo si la tarea se ejecuta en un contexto de contenedor.</span><span class="sxs-lookup"><span data-stu-id="ebf17-103">This property is set only if the task runs in a container context.</span></span>
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ebf17-104">Hora a la que finalizó la tarea.</span><span class="sxs-lookup"><span data-stu-id="ebf17-104">The time at which the task completed.</span></span> <span data-ttu-id="ebf17-105">Esta propiedad se establece solo si la tarea está en estado completado.</span><span class="sxs-lookup"><span data-stu-id="ebf17-105">This property is set only if the task is in the Completed state.</span></span>
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ebf17-106">El código de salida del programa especificado en la línea de comandos de la tarea.</span><span class="sxs-lookup"><span data-stu-id="ebf17-106">The exit code of the program specified on the task command line.</span></span> <span data-ttu-id="ebf17-107">Esta propiedad se establece solo si la tarea está en estado completado.</span><span class="sxs-lookup"><span data-stu-id="ebf17-107">This property is set only if the task is in the completed state.</span></span> <span data-ttu-id="ebf17-108">En general, el código de salida de un proceso refleja la convención específica implementada por el desarrollador de aplicaciones para ese proceso.</span><span class="sxs-lookup"><span data-stu-id="ebf17-108">In general, the exit code for a process reflects the specific convention implemented by the application developer for that process.</span></span> <span data-ttu-id="ebf17-109">Si usa el valor del código de salida para tomar decisiones en el código, asegúrese de que conoce la convención de código de salida usada por el proceso de aplicación.</span><span class="sxs-lookup"><span data-stu-id="ebf17-109">If you use the exit code value to make decisions in your code, be sure that you know the exit code convention used by the application process.</span></span> <span data-ttu-id="ebf17-110">Sin embargo, si el servicio Batch terminará la tarea (debido al tiempo de espera o terminación de usuario a través de la API) puede ver un código de salida definido por el sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="ebf17-110">However, if the Batch service terminates the task (due to timeout, or user termination via the API) you may see an operating system-defined exit code.</span></span>'
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ebf17-111">Información que describe el error de tarea, si existe.</span><span class="sxs-lookup"><span data-stu-id="ebf17-111">Information describing the task failure, if any.</span></span> <span data-ttu-id="ebf17-112">Esta propiedad se establece únicamente si la tarea está en estado completado y ha detectado un error.</span><span class="sxs-lookup"><span data-stu-id="ebf17-112">This property is set only if the task is in the completed state and encountered a failure.</span></span>'
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.lastRequeueTime'
+    name: lastRequeueTime
+    fullName: lastRequeueTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ebf17-113">La hora más reciente en el que la tarea ha sido a poner en cola por el servicio Batch como resultado de una solicitud de usuario.</span><span class="sxs-lookup"><span data-stu-id="ebf17-113">The most recent time at which the task has been requeued by the Batch service as the result of a user request.</span></span> <span data-ttu-id="ebf17-114">Esta propiedad se establece solo si el valor de requeueCount es distinto de cero.</span><span class="sxs-lookup"><span data-stu-id="ebf17-114">This property is set only if the requeueCount is nonzero.</span></span>
+    optional: true
+    syntax:
+      content: 'lastRequeueTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.lastRetryTime'
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ebf17-115">La hora más reciente en que un reintento de la tarea empezó a ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="ebf17-115">The most recent time at which a retry of the task started running.</span></span> <span data-ttu-id="ebf17-116">Este elemento solo está presente si se reintentó la tarea (es decir, retryCount es distinto de cero).</span><span class="sxs-lookup"><span data-stu-id="ebf17-116">This element is present only if the task was retried (i.e. retryCount is nonzero).</span></span> <span data-ttu-id="ebf17-117">Si está presente, esto suele ser la misma que la hora de inicio, pero puede ser diferente si la tarea se ha reiniciado por motivos distintos a reintento; Por ejemplo, si el nodo de proceso se reinició durante un reintento, se actualiza la hora de inicio pero el lastRetryTime no lo es.</span><span class="sxs-lookup"><span data-stu-id="ebf17-117">If present, this is typically the same as startTime, but may be different if the task has been restarted for reasons other than retry; for example, if the compute node was rebooted during a retry, then the startTime is updated but the lastRetryTime is not.</span></span>'
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.requeueCount'
+    name: requeueCount
+    fullName: requeueCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ebf17-118">Cantidad de veces que el servicio de Batch volvió a poner en cola la tarea como resultado de una solicitud de usuario.</span><span class="sxs-lookup"><span data-stu-id="ebf17-118">The number of times the task has been requeued by the Batch service as the result of a user request.</span></span> <span data-ttu-id="ebf17-119">Cuando el usuario quita nodos de un grupo (mediante el cambio de tamaño o reducción del grupo) o cuando se va a deshabilitar el trabajo, el usuario puede especifican que las tareas en ejecución en los nodos pueden poner en cola para su ejecución.</span><span class="sxs-lookup"><span data-stu-id="ebf17-119">When the user removes nodes from a pool (by resizing/shrinking the pool) or when the job is being disabled, the user can specify that running tasks on the nodes be requeued for execution.</span></span> <span data-ttu-id="ebf17-120">Este conteo hace un seguimiento de las veces en que la tarea se volvió a poner en cola por estos motivos.</span><span class="sxs-lookup"><span data-stu-id="ebf17-120">This count tracks how many times the task has been requeued for these reasons.</span></span>'
+    syntax:
+      content: 'requeueCount: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ebf17-121">El resultado de la ejecución de la tarea.</span><span class="sxs-lookup"><span data-stu-id="ebf17-121">The result of the task execution.</span></span> <span data-ttu-id="ebf17-122">Si el valor es "error", se pueden encontrar los detalles del error en la propiedad failureInfo.</span><span class="sxs-lookup"><span data-stu-id="ebf17-122">If the value is ''failed'', then the details of the failure can be found in the failureInfo property.</span></span> <span data-ttu-id="ebf17-123">Los valores posibles son: ''correcto'', ''Error''</span><span class="sxs-lookup"><span data-stu-id="ebf17-123">Possible values include: ''success'', ''failure''</span></span>'
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ebf17-124">Cantidad de veces que el servicio de Batch reintentó la tarea.</span><span class="sxs-lookup"><span data-stu-id="ebf17-124">The number of times the task has been retried by the Batch service.</span></span> <span data-ttu-id="ebf17-125">Errores de aplicación de tareas (código de salida distinto de cero) se reintentan, procesamiento previo de errores (no se pudo ejecutar la tarea) y errores de carga de archivo no se vuelve a intentar.</span><span class="sxs-lookup"><span data-stu-id="ebf17-125">Task application failures (non-zero exit code) are retried, pre-processing errors (the task could not be run) and file upload errors are not retried.</span></span> <span data-ttu-id="ebf17-126">El servicio Batch reintentará la tarea hasta alcanzar el límite especificado por las restricciones.</span><span class="sxs-lookup"><span data-stu-id="ebf17-126">The Batch service will retry the task up to the limit specified by the constraints.</span></span>'
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ebf17-127">Hora a la que empezó a ejecutarse la tarea.</span><span class="sxs-lookup"><span data-stu-id="ebf17-127">The time at which the task started running.</span></span> <span data-ttu-id="ebf17-128">''Ejecutar'' corresponde al estado en ejecución, por lo que si la tarea Especifica archivos de recursos o paquetes de aplicación y, después, la hora de inicio refleja la hora en que la tarea empezó a descargarlos o implementarlos.</span><span class="sxs-lookup"><span data-stu-id="ebf17-128">''Running'' corresponds to the running state, so if the task specifies resource files or application packages, then the start time reflects the time at which the task started downloading or deploying these.</span></span> <span data-ttu-id="ebf17-129">Si se reinició o reintentó la tarea, es la hora más reciente a la que comenzó a ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="ebf17-129">If the task has been restarted or retried, this is the most recent time at which the task started running.</span></span> <span data-ttu-id="ebf17-130">Esta propiedad está presente sólo para las tareas que están en el estado de ejecución o completado.</span><span class="sxs-lookup"><span data-stu-id="ebf17-130">This property is present only for tasks that are in the running or completed state.</span></span>'
+    optional: true
+    syntax:
+      content: 'startTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
