@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolPatchParameter'
+    name: PoolPatchParameter
+    fullName: PoolPatchParameter
+    children:
+      - '@azure/batch.PoolPatchParameter.applicationPackageReferences'
+      - '@azure/batch.PoolPatchParameter.certificateReferences'
+      - '@azure/batch.PoolPatchParameter.metadata'
+      - '@azure/batch.PoolPatchParameter.startTask'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa PoolPatchParameter.
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La lista de paquetes de aplicación se instale en cada nodo de proceso en el grupo. La lista reemplaza las referencias de paquete de aplicación existentes en el grupo. Los cambios realizados en las referencias de paquete de aplicación afectan a unir el grupo todos los nodos de proceso nuevo, pero no afectan a los nodos de proceso que ya están en el grupo hasta que se reinicia o se restablece la imagen inicial. Hay un máximo de 10 referencias de paquete de aplicación en un grupo determinado. Si se omite, los paquetes de aplicación existentes se quedan referencias sin cambian.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Una lista de certificados que deben instalarse en cada nodo de proceso en el grupo. Si este elemento está presente, reemplaza todas las referencias de certificados existente configuradas en el grupo. Si se omite, cualquier certificado existente, las referencias se dejan sin cambios. Para nodos de proceso de Windows, el servicio Batch instala los certificados en el almacén de certificados especificada y la ubicación. Para nodos de proceso de Linux, los certificados se almacenan en un directorio en el directorio de trabajo de tarea y un entorno que az_batch_certificates_dir variable se proporciona a la tarea de consulta para esta ubicación. Para los certificados con visibilidad "RemoteUser", se crea un directorio de "certificados" en el directorio principal del usuario (p. ej., / Home / {nombre de usuario} / certificados) y los certificados se colocan en ese directorio.'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Una lista de pares de nombre-valor asociados al grupo como metadatos. Si este elemento está presente, reemplaza los metadatos existentes configurados en el grupo. Si especifica una colección vacía, se quita cualquier metadato del grupo. Si se omite, los metadatos existentes se deja sin modificar.'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Una tarea se ejecute en cada nodo de proceso cuando une al grupo. La tarea se ejecuta cuando el nodo se agrega al grupo o cuando se reinicia el nodo. Si este elemento está presente, se sobrescribe cualquier tarea de inicio existente. Si se omite, cualquier tarea de inicio existente se deja sin modificar.'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
