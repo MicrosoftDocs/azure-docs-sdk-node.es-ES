@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    fullName: JobManagerTask
+    children:
+      - '@azure/batch.JobManagerTask.allowLowPriorityNode'
+      - '@azure/batch.JobManagerTask.applicationPackageReferences'
+      - '@azure/batch.JobManagerTask.authenticationTokenSettings'
+      - '@azure/batch.JobManagerTask.commandLine'
+      - '@azure/batch.JobManagerTask.constraints'
+      - '@azure/batch.JobManagerTask.containerSettings'
+      - '@azure/batch.JobManagerTask.displayName'
+      - '@azure/batch.JobManagerTask.environmentSettings'
+      - '@azure/batch.JobManagerTask.id'
+      - '@azure/batch.JobManagerTask.killJobOnCompletion'
+      - '@azure/batch.JobManagerTask.outputFiles'
+      - '@azure/batch.JobManagerTask.resourceFiles'
+      - '@azure/batch.JobManagerTask.runExclusive'
+      - '@azure/batch.JobManagerTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="931db-101">La tarea del Administrador de trabajos se inicie automáticamente cuando se crea el trabajo.</span><span class="sxs-lookup"><span data-stu-id="931db-101">The Job Manager task is automatically started when the job is created.</span></span> <span data-ttu-id="931db-102">El servicio Batch intenta programar la tarea del Administrador de trabajos antes que cualquier otra tarea en el trabajo.</span><span class="sxs-lookup"><span data-stu-id="931db-102">The Batch service tries to schedule the Job Manager task before any other tasks in the job.</span></span> <span data-ttu-id="931db-103">Al reducir un grupo, el servicio Batch intenta conservar los nodos de proceso donde se ejecutan las tareas de administrador de trabajos tanto como sea posible (es decir, nodos de las tareas de ejecución ''normales'' se quitan antes de nodos que ejecutan tareas del Administrador de trabajos).</span><span class="sxs-lookup"><span data-stu-id="931db-103">When shrinking a pool, the Batch service tries to preserve compute nodes where Job Manager tasks are running for as long as possible (that is, nodes running ''normal'' tasks are removed before nodes running Job Manager tasks).</span></span> <span data-ttu-id="931db-104">Cuando una tarea del Administrador de trabajos se produce un error y debe reiniciarse, el sistema intenta programarlo con la máxima prioridad.</span><span class="sxs-lookup"><span data-stu-id="931db-104">When a Job Manager task fails and needs to be restarted, the system tries to schedule it at the highest priority.</span></span> <span data-ttu-id="931db-105">Si no hay ningún nodo inactivo disponible, el sistema puede finalizar una de las tareas en ejecución en el grupo y vuelva a la cola con el fin de dejar espacio para la tarea del Administrador de trabajos reiniciar.</span><span class="sxs-lookup"><span data-stu-id="931db-105">If there are no idle nodes available, the system may terminate one of the running tasks in the pool and return it to the queue in order to make room for the Job Manager task to restart.</span></span> <span data-ttu-id="931db-106">Tenga en cuenta que una tarea del Administrador de trabajos de un trabajo no tiene prioridad sobre las tareas de otros trabajos.</span><span class="sxs-lookup"><span data-stu-id="931db-106">Note that a Job Manager task in one job does not have priority over tasks in other jobs.</span></span> <span data-ttu-id="931db-107">Entre trabajos, se observan solo prioridades de nivel de trabajo.</span><span class="sxs-lookup"><span data-stu-id="931db-107">Across jobs, only job level priorities are observed.</span></span> <span data-ttu-id="931db-108">Por ejemplo, si un administrador de trabajos en un trabajo de prioridad 0 debe reiniciarse, no mostrará las tareas de un trabajo de prioridad 1.</span><span class="sxs-lookup"><span data-stu-id="931db-108">For example, if a Job Manager in a priority 0 job needs to be restarted, it will not displace tasks of a priority 1 job.</span></span> <span data-ttu-id="931db-109">Batch volverá a intentar tareas cuando se desencadena una operación de recuperación en un nodo de proceso.</span><span class="sxs-lookup"><span data-stu-id="931db-109">Batch will retry tasks when a recovery operation is triggered on a compute node.</span></span> <span data-ttu-id="931db-110">Ejemplos de operaciones de recuperación incluyen (pero no se limitan a) cuando se reinicia un nodo de proceso en mal estado o un nodo de proceso ha desaparecido debido a un error de host.</span><span class="sxs-lookup"><span data-stu-id="931db-110">Examples of recovery operations include (but are not limited to) when an unhealthy compute node is rebooted or a compute node disappeared due to host failure.</span></span> <span data-ttu-id="931db-111">Vuelve a intentar debido a la recuperación de las operaciones son independientes y no se incluyen en el valor maxTaskRetryCount.</span><span class="sxs-lookup"><span data-stu-id="931db-111">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="931db-112">Incluso si el valor maxTaskRetryCount es 0, puede producirse un reintento interno debido a una operación de recuperación.</span><span class="sxs-lookup"><span data-stu-id="931db-112">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="931db-113">Por este motivo, todas las tareas deben ser idempotentes.</span><span class="sxs-lookup"><span data-stu-id="931db-113">Because of this, all tasks should be idempotent.</span></span> <span data-ttu-id="931db-114">Esto significa que las tareas debe tolerar se interrumpe y se reinicia sin causar cualquier daño o datos duplicados.</span><span class="sxs-lookup"><span data-stu-id="931db-114">This means tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="931db-115">La mejor práctica para las tareas de larga ejecución es utilizar alguna forma de los puntos de comprobación.</span><span class="sxs-lookup"><span data-stu-id="931db-115">The best practice for long running tasks is to use some form of checkpointing.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.allowLowPriorityNode'
+    name: allowLowPriorityNode
+    fullName: allowLowPriorityNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="931db-116">Si la tarea del Administrador de trabajos puede ejecutar en un nodo de proceso de prioridad baja.</span><span class="sxs-lookup"><span data-stu-id="931db-116">Whether the Job Manager task may run on a low-priority compute node.</span></span> <span data-ttu-id="931db-117">El valor predeterminado es true.</span><span class="sxs-lookup"><span data-stu-id="931db-117">The default value is true.</span></span>
+    optional: true
+    syntax:
+      content: 'allowLowPriorityNode?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="931db-118">Una lista de paquetes de aplicación que el servicio Batch se implementará en el nodo de proceso antes de ejecutar la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="931db-118">A list of application packages that the Batch service will deploy to the compute node before running the command line.</span></span> <span data-ttu-id="931db-119">Paquetes de aplicación se descargan y se implementa en un directorio compartido, no en la tarea en el directorio de trabajo.</span><span class="sxs-lookup"><span data-stu-id="931db-119">Application packages are downloaded and deployed to a shared directory, not the task working directory.</span></span> <span data-ttu-id="931db-120">Por lo tanto, si un paquete que se hace referencia ya está en el nodo de proceso y están actualizados, a continuación, no vuelva a descargarlo; se utiliza la copia existente en el nodo de proceso.</span><span class="sxs-lookup"><span data-stu-id="931db-120">Therefore, if a referenced package is already on the compute node, and is up to date, then it is not re-downloaded; the existing copy on the compute node is used.</span></span> <span data-ttu-id="931db-121">Si un paquete de aplicación que se hace referencia no se puede instalar, por ejemplo porque el paquete se ha eliminado o porque no se pudo descargar, se produce un error en la tarea.</span><span class="sxs-lookup"><span data-stu-id="931db-121">If a referenced application package cannot be installed, for example because the package has been deleted or because download failed, the task fails.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="931db-122">La configuración de un token de autenticación que puede utilizar la tarea para realizar operaciones de servicio de Batch.</span><span class="sxs-lookup"><span data-stu-id="931db-122">The settings for an authentication token that the task can use to perform Batch service operations.</span></span> <span data-ttu-id="931db-123">Si se establece esta propiedad, el servicio Batch proporciona la tarea con un token de autenticación que se puede usar para autenticar las operaciones de servicio de Batch sin necesidad de una clave de acceso de cuenta.</span><span class="sxs-lookup"><span data-stu-id="931db-123">If this property is set, the Batch service provides the task with an authentication token which can be used to authenticate Batch service operations without requiring an account access key.</span></span> <span data-ttu-id="931db-124">El token se proporciona a través de la variable de entorno AZ_BATCH_AUTHENTICATION_TOKEN.</span><span class="sxs-lookup"><span data-stu-id="931db-124">The token is provided via the AZ_BATCH_AUTHENTICATION_TOKEN environment variable.</span></span> <span data-ttu-id="931db-125">Las operaciones que la tarea puede llevar a cabo con el token dependen de la configuración.</span><span class="sxs-lookup"><span data-stu-id="931db-125">The operations that the task can carry out using the token depend on the settings.</span></span> <span data-ttu-id="931db-126">Por ejemplo, una tarea puede solicitar permisos de trabajo con el fin de agregar otras tareas al trabajo, o comprobar el estado del trabajo o de otras tareas en el trabajo.</span><span class="sxs-lookup"><span data-stu-id="931db-126">For example, a task can request job permissions in order to add other tasks to the job, or check the status of the job or of other tasks under the job.</span></span>'
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="931db-127">La línea de comandos de la tarea del Administrador de trabajos.</span><span class="sxs-lookup"><span data-stu-id="931db-127">The command line of the Job Manager task.</span></span> <span data-ttu-id="931db-128">La línea de comandos no se ejecuta en un shell y, por lo tanto, no se puede aprovechar las características de shell, como la expansión de variables de entorno.</span><span class="sxs-lookup"><span data-stu-id="931db-128">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="931db-129">Si desea aprovechar las ventajas de estas características, debe invocar el shell en la línea de comandos, por ejemplo "cmd /c MyCommand" se usa en Windows o "/ bin/sh - c MyCommand" en Linux.</span><span class="sxs-lookup"><span data-stu-id="931db-129">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="931db-130">Si la línea de comandos se refiere a las rutas de acceso de archivo, debe usar una ruta de acceso relativa (relativo al directorio de trabajo de tarea), o use la variable de entorno proporcionada por lotes (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="931db-130">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="931db-131">Restricciones que se aplican a la tarea del Administrador de trabajos.</span><span class="sxs-lookup"><span data-stu-id="931db-131">Constraints that apply to the Job Manager task.</span></span>
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="931db-132">La configuración para el contenedor que se ejecuta la tarea del Administrador de trabajos.</span><span class="sxs-lookup"><span data-stu-id="931db-132">The settings for the container under which the Job Manager task runs.</span></span> <span data-ttu-id="931db-133">Si el grupo que ejecutará esta tarea tiene containerConfiguration establecida, se debe establecer también.</span><span class="sxs-lookup"><span data-stu-id="931db-133">If the pool that will run this task has containerConfiguration set, this must be set as well.</span></span> <span data-ttu-id="931db-134">Si el grupo que ejecutará esta tarea no tiene containerConfiguration establecido, no debe establecerse.</span><span class="sxs-lookup"><span data-stu-id="931db-134">If the pool that will run this task doesn''t have containerConfiguration set, this must not be set.</span></span> <span data-ttu-id="931db-135">Cuando se especifica, se asignan todos los directorios recursivamente debajo el AZ_BATCH_NODE_ROOT_DIR (la raíz de los directorios de Azure Batch en el nodo) en el contenedor, todas las variables de entorno de tareas se asignan en el contenedor y es la línea de comandos de tarea se ejecuta en el contenedor.</span><span class="sxs-lookup"><span data-stu-id="931db-135">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="931db-136">El nombre para mostrar de la tarea del Administrador de trabajos.</span><span class="sxs-lookup"><span data-stu-id="931db-136">The display name of the Job Manager task.</span></span> <span data-ttu-id="931db-137">No necesita ser único y puede contener cualquier carácter Unicode hasta una longitud máxima de 1024.</span><span class="sxs-lookup"><span data-stu-id="931db-137">It need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="931db-138">Una lista de configuraciones de variables de entorno para la tarea del Administrador de trabajos.</span><span class="sxs-lookup"><span data-stu-id="931db-138">A list of environment variable settings for the Job Manager task.</span></span>
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="931db-139">Cadena que identifica de forma única la tarea del Administrador de trabajos dentro del trabajo.</span><span class="sxs-lookup"><span data-stu-id="931db-139">A string that uniquely identifies the Job Manager task within the job.</span></span> <span data-ttu-id="931db-140">El identificador puede contener cualquier combinación de caracteres alfanuméricos incluidos guiones y caracteres de subrayado y no puede contener más de 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="931db-140">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span>
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.killJobOnCompletion'
+    name: killJobOnCompletion
+    fullName: killJobOnCompletion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="931db-141">Si la finalización de la tarea del Administrador de trabajos significa la finalización de todo el trabajo.</span><span class="sxs-lookup"><span data-stu-id="931db-141">Whether completion of the Job Manager task signifies completion of the entire job.</span></span> <span data-ttu-id="931db-142">Si es true, cuando se complete la tarea del Administrador de trabajos, las marcas de servicio de proceso por lotes el trabajo como completará.</span><span class="sxs-lookup"><span data-stu-id="931db-142">If true, when the Job Manager task completes, the Batch service marks the job as complete.</span></span> <span data-ttu-id="931db-143">Si las tareas siguen en ejecución en este momento (distintos de liberación del trabajo), se finalizan las tareas.</span><span class="sxs-lookup"><span data-stu-id="931db-143">If any tasks are still running at this time (other than Job Release), those tasks are terminated.</span></span> <span data-ttu-id="931db-144">Si es false, la finalización de la tarea del Administrador de trabajos no afecta el estado del trabajo.</span><span class="sxs-lookup"><span data-stu-id="931db-144">If false, the completion of the Job Manager task does not affect the job status.</span></span> <span data-ttu-id="931db-145">En este caso, debe usar el atributo onAllTasksComplete para finalizar el trabajo, o tiene un cliente o usuario explícitamente que el trabajo finalice.</span><span class="sxs-lookup"><span data-stu-id="931db-145">In this case, you should either use the onAllTasksComplete attribute to terminate the job, or have a client or user terminate the job explicitly.</span></span> <span data-ttu-id="931db-146">Un ejemplo de esto es si el Administrador de trabajos crea un conjunto de tareas, pero, a continuación, se toma ninguna función adicional en su ejecución.</span><span class="sxs-lookup"><span data-stu-id="931db-146">An example of this is if the Job Manager creates a set of tasks but then takes no further role in their execution.</span></span> <span data-ttu-id="931db-147">El valor predeterminado es true.</span><span class="sxs-lookup"><span data-stu-id="931db-147">The default value is true.</span></span> <span data-ttu-id="931db-148">Si usa los atributos onAllTasksComplete y onTaskFailure a duración del trabajo de control y el uso de la tarea del Administrador de trabajos solo para crear las tareas del trabajo (no para supervisar el progreso), es importante establecer killJobOnCompletion en false.</span><span class="sxs-lookup"><span data-stu-id="931db-148">If you are using the onAllTasksComplete and onTaskFailure attributes to control job lifetime, and using the Job Manager task only to create the tasks for the job (not to monitor progress), then it is important to set killJobOnCompletion to false.</span></span>'
+    optional: true
+    syntax:
+      content: 'killJobOnCompletion?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="931db-149">Una lista de archivos que el servicio Batch cargará desde el nodo de proceso después de ejecutar la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="931db-149">A list of files that the Batch service will upload from the compute node after running the command line.</span></span> <span data-ttu-id="931db-150">Para las tareas de instancias múltiples, sólo se cargarán los archivos desde el nodo de proceso en el que se ejecuta la tarea principal.</span><span class="sxs-lookup"><span data-stu-id="931db-150">For multi-instance tasks, the files will only be uploaded from the compute node on which the primary task is executed.</span></span>'
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="931db-151">Una lista de archivos que el servicio Batch descargará en el nodo de proceso antes de ejecutar la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="931db-151">A list of files that the Batch service will download to the compute node before running the command line.</span></span> <span data-ttu-id="931db-152">Archivos que aparecen bajo este elemento se encuentran en el directorio de trabajo de la tarea.</span><span class="sxs-lookup"><span data-stu-id="931db-152">Files listed under this element are located in the task's working directory.</span></span>
+      <span data-ttu-id="931db-153">Hay un tamaño máximo para la lista de archivos de recursos.</span><span class="sxs-lookup"><span data-stu-id="931db-153">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="931db-154">Cuando se supera el tamaño máximo, se producirá un error en la solicitud y el código de error de respuesta será la entidad solicitada demasiado grande.</span><span class="sxs-lookup"><span data-stu-id="931db-154">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="931db-155">Si esto ocurre, se debe reducir la colección de ResourceFiles de tamaño.</span><span class="sxs-lookup"><span data-stu-id="931db-155">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="931db-156">Esto puede lograrse mediante los archivos .zip, paquetes de aplicaciones o contenedores de Docker.</span><span class="sxs-lookup"><span data-stu-id="931db-156">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.runExclusive'
+    name: runExclusive
+    fullName: runExclusive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="931db-157">Si la tarea del Administrador de trabajos requiere el uso exclusivo del nodo de proceso donde se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="931db-157">Whether the Job Manager task requires exclusive use of the compute node where it runs.</span></span> <span data-ttu-id="931db-158">Si es true, no hay otras tareas se ejecutarán en el mismo nodo de proceso para siempre y cuando se está ejecutando el Administrador de trabajos.</span><span class="sxs-lookup"><span data-stu-id="931db-158">If true, no other tasks will run on the same compute node for as long as the Job Manager is running.</span></span> <span data-ttu-id="931db-159">Si es false, otras tareas pueden ejecutar simultáneamente con el Administrador de trabajos en un nodo de proceso.</span><span class="sxs-lookup"><span data-stu-id="931db-159">If false, other tasks can run simultaneously with the Job Manager on a compute node.</span></span>
+      <span data-ttu-id="931db-160">La tarea del Administrador de trabajos se descuenta normalmente límite de tareas simultáneas del nodo, por lo que esto solo es pertinente si el nodo permite que varias tareas simultáneas.</span><span class="sxs-lookup"><span data-stu-id="931db-160">The Job Manager task counts normally against the node's concurrent task limit, so this is only relevant if the node allows multiple concurrent tasks.</span></span> <span data-ttu-id="931db-161">El valor predeterminado es true.</span><span class="sxs-lookup"><span data-stu-id="931db-161">The default value is true.</span></span>
+    optional: true
+    syntax:
+      content: 'runExclusive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="931db-162">La identidad del usuario que se ejecuta la tarea del Administrador de trabajos.</span><span class="sxs-lookup"><span data-stu-id="931db-162">The user identity under which the Job Manager task runs.</span></span> <span data-ttu-id="931db-163">Si se omite, la tarea se ejecuta como un usuario sin derechos administrativos único para la tarea.</span><span class="sxs-lookup"><span data-stu-id="931db-163">If omitted, the task runs as a non-administrative user unique to the task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
