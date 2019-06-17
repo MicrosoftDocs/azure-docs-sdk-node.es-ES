@@ -1,0 +1,399 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints'
+    name: RecoveryPoints
+    fullName: RecoveryPoints
+    children:
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.get'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.get_2'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.get_1'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.list'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.list_2'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.list_1'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext_2'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext_1'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: Clase que representa un RecoveryPoints.
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.get'
+    name: 'get(string, string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Proporciona la información de los datos de copias de seguridad identificados mediante RecoveryPointID. Se trata de una operación asincrónica.
+      Para conocer el estado de la operación, llame a la API GetProtectedItemOperationResult.
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Nombre del almacén de recovery services.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos donde el almacén de recovery services está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nombre de tejido asociado con una copia de elemento.
+        - id: containerName
+          type:
+            - string
+          description: Nombre del contenedor asociado con una copia de elemento.
+        - id: protectedItemName
+          type:
+            - string
+          description: Copia el nombre del elemento cuyos datos de copia de seguridad deben capturarse.
+        - id: recoveryPointId
+          type:
+            - string
+          description: RecoveryPointID representa la copia de seguridad de los datos que se capturará.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecoveryPointsGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.get_2'
+    name: 'get(string, string, string, string, string, string, RequestOptionsBase, ServiceCallback<RecoveryPointResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options: RequestOptionsBase, callback: ServiceCallback<RecoveryPointResource>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Nombre del almacén de recovery services.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos donde el almacén de recovery services está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nombre de tejido asociado con una copia de elemento.
+        - id: containerName
+          type:
+            - string
+          description: Nombre del contenedor asociado con una copia de elemento.
+        - id: protectedItemName
+          type:
+            - string
+          description: Copia el nombre del elemento cuyos datos de copia de seguridad deben capturarse.
+        - id: recoveryPointId
+          type:
+            - string
+          description: RecoveryPointID representa la copia de seguridad de los datos que se capturará.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResource>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.RecoveryPointsGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.get_1'
+    name: 'get(string, string, string, string, string, string, ServiceCallback<RecoveryPointResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, callback: ServiceCallback<RecoveryPointResource>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Nombre del almacén de recovery services.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos donde el almacén de recovery services está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nombre de tejido asociado con una copia de elemento.
+        - id: containerName
+          type:
+            - string
+          description: Nombre del contenedor asociado con una copia de elemento.
+        - id: protectedItemName
+          type:
+            - string
+          description: Copia el nombre del elemento cuyos datos de copia de seguridad deben capturarse.
+        - id: recoveryPointId
+          type:
+            - string
+          description: RecoveryPointID representa la copia de seguridad de los datos que se capturará.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResource>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.RecoveryPointsGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.list'
+    name: 'list(string, string, string, string, string, Models.RecoveryPointsListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Enumera las copias de seguridad para el elemento de copia de seguridad.
+    syntax:
+      content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: Models.RecoveryPointsListOptionalParams)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Nombre del almacén de recovery services.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos donde el almacén de recovery services está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nombre de tejido asociado al elemento de copia de seguridad.
+        - id: containerName
+          type:
+            - string
+          description: Nombre del contenedor asociado al elemento de copia de seguridad.
+        - id: protectedItemName
+          type:
+            - string
+          description: Copia de seguridad de elemento cuyas copias de seguridad que se van a recuperarse.
+        - id: options
+          type:
+            - Models.RecoveryPointsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.list_2'
+    name: 'list(string, string, string, string, string, RecoveryPointsListOptionalParams, ServiceCallback<RecoveryPointResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: RecoveryPointsListOptionalParams, callback: ServiceCallback<RecoveryPointResourceList>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Nombre del almacén de recovery services.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos donde el almacén de recovery services está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nombre de tejido asociado al elemento de copia de seguridad.
+        - id: containerName
+          type:
+            - string
+          description: Nombre del contenedor asociado al elemento de copia de seguridad.
+        - id: protectedItemName
+          type:
+            - string
+          description: Copia de seguridad de elemento cuyas copias de seguridad que se van a recuperarse.
+        - id: options
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryPointsListOptionalParams'
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.list_1'
+    name: 'list(string, string, string, string, string, ServiceCallback<RecoveryPointResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, callback: ServiceCallback<RecoveryPointResourceList>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Nombre del almacén de recovery services.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos donde el almacén de recovery services está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nombre de tejido asociado al elemento de copia de seguridad.
+        - id: containerName
+          type:
+            - string
+          description: Nombre del contenedor asociado al elemento de copia de seguridad.
+        - id: protectedItemName
+          type:
+            - string
+          description: Copia de seguridad de elemento cuyas copias de seguridad que se van a recuperarse.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Enumera las copias de seguridad para el elemento de copia de seguridad.
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListNextResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<RecoveryPointResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecoveryPointResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListNextResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext_1'
+    name: 'listNext(string, ServiceCallback<RecoveryPointResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<RecoveryPointResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListNextResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.constructor'
+    name: RecoveryPoints(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crear un RecoveryPoints.
+    syntax:
+      content: 'new RecoveryPoints(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            Referencia para el cliente del servicio.
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResource>
+    name: RecoveryPointResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecoveryPointResource
+        fullName: RecoveryPointResource
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryPointResource'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+    name: RecoveryPointResourceList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecoveryPointResourceList
+        fullName: RecoveryPointResourceList
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryPointResourceList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPointsListOptionalParams'
+    name: RecoveryPointsListOptionalParams
+    spec.typeScript:
+      - name: RecoveryPointsListOptionalParams
+        fullName: RecoveryPointsListOptionalParams
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryPointsListOptionalParams'
