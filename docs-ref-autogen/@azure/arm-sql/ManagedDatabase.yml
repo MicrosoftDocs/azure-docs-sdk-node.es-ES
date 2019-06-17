@@ -1,0 +1,358 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ManagedDatabase'
+    name: ManagedDatabase
+    fullName: ManagedDatabase
+    children:
+      - '@azure/arm-sql.ManagedDatabase.catalogCollation'
+      - '@azure/arm-sql.ManagedDatabase.collation'
+      - '@azure/arm-sql.ManagedDatabase.createMode'
+      - '@azure/arm-sql.ManagedDatabase.creationDate'
+      - '@azure/arm-sql.ManagedDatabase.defaultSecondaryLocation'
+      - '@azure/arm-sql.ManagedDatabase.earliestRestorePoint'
+      - '@azure/arm-sql.ManagedDatabase.failoverGroupId'
+      - '@azure/arm-sql.ManagedDatabase.id'
+      - '@azure/arm-sql.ManagedDatabase.location'
+      - '@azure/arm-sql.ManagedDatabase.name'
+      - '@azure/arm-sql.ManagedDatabase.recoverableDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.restorableDroppedDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.restorePointInTime'
+      - '@azure/arm-sql.ManagedDatabase.sourceDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.status'
+      - '@azure/arm-sql.ManagedDatabase.storageContainerSasToken'
+      - '@azure/arm-sql.ManagedDatabase.storageContainerUri'
+      - '@azure/arm-sql.ManagedDatabase.tags'
+      - '@azure/arm-sql.ManagedDatabase.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: Un recurso de base de datos administrados.
+    extends:
+      name: '@azure/arm-sql.TrackedResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.catalogCollation'
+    name: catalogCollation
+    fullName: catalogCollation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Intercalación del catálogo de metadatos. Los valores posibles son: ''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS'''
+    optional: true
+    syntax:
+      content: 'catalogCollation?: CatalogCollationType'
+      return:
+        type:
+          - '@azure/arm-sql.CatalogCollationType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.collation'
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Intercalación de la base de datos administrado.
+    optional: true
+    syntax:
+      content: 'collation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Base de datos administrada crear modo. PointInTimeRestore: Crear una base de datos mediante la restauración de un punto de copia de seguridad de una base de datos existente. Deben especificarse SourceDatabaseName, SourceManagedInstanceName y PointInTime. RestoreExternalBackup: Crear una base de datos mediante la restauración de archivos de copia de seguridad externos. Deben especificarse la intercalación, StorageContainerUri y StorageContainerSasToken. Recuperación: Crea una base de datos mediante la restauración de una copia de seguridad con replicación geográfica.
+      RecoverableDatabaseId debe especificarse como el identificador de recurso de base de datos recuperable para restaurar.
+      Los valores posibles son: 'Default', 'RestoreExternalBackup', 'PointInTimeRestore', 'Recuperación'
+    optional: true
+    syntax:
+      content: 'createMode?: ManagedDatabaseCreateMode'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseCreateMode'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.creationDate'
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Fecha de creación de la base de datos.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'creationDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.defaultSecondaryLocation'
+    name: defaultSecondaryLocation
+    fullName: defaultSecondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Geográfica región emparejada.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'defaultSecondaryLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.earliestRestorePoint'
+    name: earliestRestorePoint
+    fullName: earliestRestorePoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Punto de restauración más antiguo en el tiempo para el punto de restauración a un momento dado.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'earliestRestorePoint?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.failoverGroupId'
+    name: failoverGroupId
+    fullName: failoverGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Identificador de recursos del grupo de conmutación por error de instancia que pertenece esta base de datos administrado.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'failoverGroupId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Identificador del recurso.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ubicación del recurso
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Nombre del recurso.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.recoverableDatabaseId'
+    name: recoverableDatabaseId
+    fullName: recoverableDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de recursos de la base de datos recuperable asociada con crear esta base de datos.
+    optional: true
+    syntax:
+      content: 'recoverableDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.restorableDroppedDatabaseId'
+    name: restorableDroppedDatabaseId
+    fullName: restorableDroppedDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de recurso de base de datos eliminada para restaurar al crear esta base de datos.
+    optional: true
+    syntax:
+      content: 'restorableDroppedDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.restorePointInTime'
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Condicional. Si createMode es PointInTimeRestore, este valor es necesario. Especifica el punto en el tiempo (en formato ISO8601) de la base de datos de origen que se restaurarán para crear la nueva base de datos.'
+    optional: true
+    syntax:
+      content: 'restorePointInTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.sourceDatabaseId'
+    name: sourceDatabaseId
+    fullName: sourceDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de recursos de la base de datos de origen asociado con la operación de esta base de datos de creación.
+    optional: true
+    syntax:
+      content: 'sourceDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Estado de la base de datos. Los valores posibles son: ''En línea'', ''sin conexión'', ''Apagado'', ''Crear'', ''Inaccesible'', ''Actualizar'' **Nota: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**'
+    optional: true
+    syntax:
+      content: 'status?: ManagedDatabaseStatus'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseStatus'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.storageContainerSasToken'
+    name: storageContainerSasToken
+    fullName: storageContainerSasToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Condicional. Si createMode es RestoreExternalBackup, este valor es necesario. Especifica el token de sas del contenedor de almacenamiento.'
+    optional: true
+    syntax:
+      content: 'storageContainerSasToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.storageContainerUri'
+    name: storageContainerUri
+    fullName: storageContainerUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Condicional. Si createMode es RestoreExternalBackup, este valor es necesario. Especifica el uri del contenedor de almacenamiento donde se almacenan las copias de seguridad para esta restauración.'
+    optional: true
+    syntax:
+      content: 'storageContainerUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Etiquetas del recurso.
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Tipo de recurso.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.TrackedResource'
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: '@azure/arm-sql.TrackedResource'
+  - uid: '@azure/arm-sql.CatalogCollationType'
+    name: CatalogCollationType
+    spec.typeScript:
+      - name: CatalogCollationType
+        fullName: CatalogCollationType
+        uid: '@azure/arm-sql.CatalogCollationType'
+  - uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+    name: ManagedDatabaseCreateMode
+    spec.typeScript:
+      - name: ManagedDatabaseCreateMode
+        fullName: ManagedDatabaseCreateMode
+        uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+  - uid: '@azure/arm-sql.ManagedDatabaseStatus'
+    name: ManagedDatabaseStatus
+    spec.typeScript:
+      - name: ManagedDatabaseStatus
+        fullName: ManagedDatabaseStatus
+        uid: '@azure/arm-sql.ManagedDatabaseStatus'

@@ -1,0 +1,92 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject'
+    name: DetectedObject
+    fullName: DetectedObject
+    children:
+      - '@azure/cognitiveservices-computervision.DetectedObject.confidence'
+      - '@azure/cognitiveservices-computervision.DetectedObject.object'
+      - '@azure/cognitiveservices-computervision.DetectedObject.parent'
+      - '@azure/cognitiveservices-computervision.DetectedObject.rectangle'
+    langs:
+      - typeScript
+    type: interface
+    summary: Un objeto detectado en una imagen.
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject.confidence'
+    name: confidence
+    fullName: confidence
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Puntuación de confianza de tener que el objeto en la imagen, se manifiesta como un valor comprendido entre 0 y 1.'
+    optional: true
+    syntax:
+      content: 'confidence?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject.object'
+    name: object
+    fullName: object
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Etiqueta para el objeto.
+    optional: true
+    syntax:
+      content: 'object?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject.parent'
+    name: parent
+    fullName: parent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El objeto primario, desde una perspectiva de la taxonomía.
+      El objeto primario es una forma más genérica de este objeto.  Por ejemplo, un 'bulldog' tendría un elemento primario de 'perro'.
+    optional: true
+    syntax:
+      content: 'parent?: ObjectHierarchy'
+      return:
+        type:
+          - '@azure/cognitiveservices-computervision.ObjectHierarchy'
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject.rectangle'
+    name: rectangle
+    fullName: rectangle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Ubicación aproximada del objeto detectado.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'rectangle?: BoundingRect'
+      return:
+        type:
+          - '@azure/cognitiveservices-computervision.BoundingRect'
+    package: '@azure/cognitiveservices-computervision'
+references:
+  - uid: '@azure/cognitiveservices-computervision.ObjectHierarchy'
+    name: ObjectHierarchy
+    spec.typeScript:
+      - name: ObjectHierarchy
+        fullName: ObjectHierarchy
+        uid: '@azure/cognitiveservices-computervision.ObjectHierarchy'
+  - uid: '@azure/cognitiveservices-computervision.BoundingRect'
+    name: BoundingRect
+    spec.typeScript:
+      - name: BoundingRect
+        fullName: BoundingRect
+        uid: '@azure/cognitiveservices-computervision.BoundingRect'
