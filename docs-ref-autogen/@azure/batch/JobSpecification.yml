@@ -1,0 +1,285 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobSpecification'
+    name: JobSpecification
+    fullName: JobSpecification
+    children:
+      - '@azure/batch.JobSpecification.commonEnvironmentSettings'
+      - '@azure/batch.JobSpecification.constraints'
+      - '@azure/batch.JobSpecification.displayName'
+      - '@azure/batch.JobSpecification.jobManagerTask'
+      - '@azure/batch.JobSpecification.jobPreparationTask'
+      - '@azure/batch.JobSpecification.jobReleaseTask'
+      - '@azure/batch.JobSpecification.metadata'
+      - '@azure/batch.JobSpecification.networkConfiguration'
+      - '@azure/batch.JobSpecification.onAllTasksComplete'
+      - '@azure/batch.JobSpecification.onTaskFailure'
+      - '@azure/batch.JobSpecification.poolInfo'
+      - '@azure/batch.JobSpecification.priority'
+      - '@azure/batch.JobSpecification.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="344a0-101">Una interfaz que representa JobSpecification.</span><span class="sxs-lookup"><span data-stu-id="344a0-101">An interface representing JobSpecification.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="344a0-102">Una lista de configuraciones de variables de entorno comunes.</span><span class="sxs-lookup"><span data-stu-id="344a0-102">A list of common environment variable settings.</span></span> <span data-ttu-id="344a0-103">Estas variables de entorno se establecen para todas las tareas en los trabajos creados según este programa (incluidas las tareas de administrador de trabajos, preparación y liberación del trabajo).</span><span class="sxs-lookup"><span data-stu-id="344a0-103">These environment variables are set for all tasks in jobs created under this schedule (including the Job Manager, Job Preparation and Job Release tasks).</span></span> <span data-ttu-id="344a0-104">Configuración de entorno aquí especificada especificando el mismo nombre de configuración con otro valor puede reemplazarse por tareas individuales.</span><span class="sxs-lookup"><span data-stu-id="344a0-104">Individual tasks can override an environment setting specified here by specifying the same setting name with a different value.</span></span>'
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="344a0-105">Restricciones de ejecución para los trabajos creados según este programa.</span><span class="sxs-lookup"><span data-stu-id="344a0-105">The execution constraints for jobs created under this schedule.</span></span>
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="344a0-106">El nombre para mostrar para los trabajos creados según este programa.</span><span class="sxs-lookup"><span data-stu-id="344a0-106">The display name for jobs created under this schedule.</span></span> <span data-ttu-id="344a0-107">El nombre no debe ser único y puede contener cualquier carácter Unicode hasta una longitud máxima de 1024.</span><span class="sxs-lookup"><span data-stu-id="344a0-107">The name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="344a0-108">Los detalles de una tarea del Administrador de trabajos que se iniciará cuando se inicia un trabajo según este programa.</span><span class="sxs-lookup"><span data-stu-id="344a0-108">The details of a Job Manager task to be launched when a job is started under this schedule.</span></span> <span data-ttu-id="344a0-109">Si el trabajo no especifica una tarea del Administrador de trabajos, el usuario debe agregar explícitamente las tareas al trabajo mediante la API de tarea.</span><span class="sxs-lookup"><span data-stu-id="344a0-109">If the job does not specify a Job Manager task, the user must explicitly add tasks to the job using the Task API.</span></span> <span data-ttu-id="344a0-110">Si el trabajo especifica una tarea del Administrador de trabajos, el servicio Batch crea la tarea del Administrador de trabajos cuando se crea el trabajo e intentará programar la tarea del Administrador de trabajos antes de programar otras tareas en el trabajo.</span><span class="sxs-lookup"><span data-stu-id="344a0-110">If the job does specify a Job Manager task, the Batch service creates the Job Manager task when the job is created, and will try to schedule the Job Manager task before scheduling other tasks in the job.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="344a0-111">La tarea de preparación del trabajo para los trabajos creados según este programa.</span><span class="sxs-lookup"><span data-stu-id="344a0-111">The Job Preparation task for jobs created under this schedule.</span></span> <span data-ttu-id="344a0-112">Si un trabajo tiene una tarea de preparación del trabajo, el servicio Batch ejecutará la tarea de preparación del trabajo en un nodo de proceso antes de iniciar cualquier tarea de ese trabajo en ese nodo de proceso.</span><span class="sxs-lookup"><span data-stu-id="344a0-112">If a job has a Job Preparation task, the Batch service will run the Job Preparation task on a compute node before starting any tasks of that job on that compute node.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="344a0-113">La tarea de liberación del trabajo para los trabajos creados según este programa.</span><span class="sxs-lookup"><span data-stu-id="344a0-113">The Job Release task for jobs created under this schedule.</span></span> <span data-ttu-id="344a0-114">El propósito principal de la tarea de liberación del trabajo es deshacer los cambios realizados por la tarea de preparación del trabajo de los nodos de proceso.</span><span class="sxs-lookup"><span data-stu-id="344a0-114">The primary purpose of the Job Release task is to undo changes to compute nodes made by the Job Preparation task.</span></span> <span data-ttu-id="344a0-115">Las actividades de ejemplo incluyen la eliminación de archivos locales o detener los servicios que se iniciaron como parte de la preparación del trabajo.</span><span class="sxs-lookup"><span data-stu-id="344a0-115">Example activities include deleting local files, or shutting down services that were started as part of job preparation.</span></span> <span data-ttu-id="344a0-116">No se puede especificar una tarea de liberación del trabajo sin especificar también una tarea de preparación del trabajo para el trabajo.</span><span class="sxs-lookup"><span data-stu-id="344a0-116">A Job Release task cannot be specified without also specifying a Job Preparation task for the job.</span></span> <span data-ttu-id="344a0-117">El servicio Batch ejecuta la tarea de liberación del trabajo en los nodos de proceso que se han ejecutado la tarea de preparación del trabajo.</span><span class="sxs-lookup"><span data-stu-id="344a0-117">The Batch service runs the Job Release task on the compute nodes that have run the Job Preparation task.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="344a0-118">Una lista de pares de nombre-valor asociados con cada trabajo creada según este programa como metadatos.</span><span class="sxs-lookup"><span data-stu-id="344a0-118">A list of name-value pairs associated with each job created under this schedule as metadata.</span></span>
+      <span data-ttu-id="344a0-119">El servicio Batch no asigna ningún significado a los metadatos; es únicamente para el uso de código de usuario.</span><span class="sxs-lookup"><span data-stu-id="344a0-119">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="344a0-120">La configuración de red para el trabajo.</span><span class="sxs-lookup"><span data-stu-id="344a0-120">The network configuration for the job.</span></span>
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="344a0-121">La acción que debe realizar el servicio Batch cuando todas las tareas de un trabajo creado en esta programación se encuentran en estado completado.</span><span class="sxs-lookup"><span data-stu-id="344a0-121">The action the Batch service should take when all tasks in a job created under this schedule are in the completed state.</span></span> <span data-ttu-id="344a0-122">Tenga en cuenta que si un trabajo no contiene ninguna tarea, a continuación, todas las tareas se consideran completas.</span><span class="sxs-lookup"><span data-stu-id="344a0-122">Note that if a job contains no tasks, then all tasks are considered complete.</span></span> <span data-ttu-id="344a0-123">Esta opción, por tanto, se usa normalmente con una tarea del Administrador de trabajos; Si desea usar la finalización automática de trabajos sin un administrador de trabajos, debe establecerse onAllTasksComplete noaction inicialmente y actualizar las propiedades del trabajo para establecer onAllTasksComplete en terminatejob cuando haya terminado de agregar tareas.</span><span class="sxs-lookup"><span data-stu-id="344a0-123">This option is therefore most commonly used with a Job Manager task; if you want to use automatic job termination without a Job Manager, you should initially set onAllTasksComplete to noaction and update the job properties to set onAllTasksComplete to terminatejob once you have finished adding tasks.</span></span> <span data-ttu-id="344a0-124">El valor predeterminado es noaction.</span><span class="sxs-lookup"><span data-stu-id="344a0-124">The default is noaction.</span></span> <span data-ttu-id="344a0-125">Los valores posibles son: "noAction", "terminateJob"</span><span class="sxs-lookup"><span data-stu-id="344a0-125">Possible values include: ''noAction'', ''terminateJob''</span></span>'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="344a0-126">La acción que debe realizar el servicio Batch cuando se produce un error en cualquier tarea en un trabajo creado en esta programación.</span><span class="sxs-lookup"><span data-stu-id="344a0-126">The action the Batch service should take when any task fails in a job created under this schedule.</span></span> <span data-ttu-id="344a0-127">Se considera una tarea que ha producido un error si ha producido un error si tiene un failureInfo.</span><span class="sxs-lookup"><span data-stu-id="344a0-127">A task is considered to have failed if it have failed if has a failureInfo.</span></span> <span data-ttu-id="344a0-128">Se establece un failureInfo si la tarea se completa con un código de salida distinto de cero después de agotar su número de reintentos, o si se produjo un error al iniciar la tarea, por ejemplo debido a un archivo de recursos de error de descarga.</span><span class="sxs-lookup"><span data-stu-id="344a0-128">A failureInfo is set if the task completes with a non-zero exit code after exhausting its retry count, or if there was an error starting the task, for example due to a resource file download error.</span></span> <span data-ttu-id="344a0-129">El valor predeterminado es noaction.</span><span class="sxs-lookup"><span data-stu-id="344a0-129">The default is noaction.</span></span> <span data-ttu-id="344a0-130">Los valores posibles son: ''noAction'', ''performExitOptionsJobAction''</span><span class="sxs-lookup"><span data-stu-id="344a0-130">Possible values include: ''noAction'', ''performExitOptionsJobAction''</span></span>'
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="344a0-131">El grupo en el que el servicio Batch ejecuta las tareas de los trabajos creados según este programa.</span><span class="sxs-lookup"><span data-stu-id="344a0-131">The pool on which the Batch service runs the tasks of jobs created under this schedule.</span></span>
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="344a0-132">La prioridad de los trabajos creados según este programa.</span><span class="sxs-lookup"><span data-stu-id="344a0-132">The priority of jobs created under this schedule.</span></span> <span data-ttu-id="344a0-133">Los valores de prioridad pueden oscilar entre -1000 y 1000, siendo-1000 la prioridad más baja y 1000 la prioridad más alta.</span><span class="sxs-lookup"><span data-stu-id="344a0-133">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="344a0-134">El valor predeterminado es 0.</span><span class="sxs-lookup"><span data-stu-id="344a0-134">The default value is 0.</span></span> <span data-ttu-id="344a0-135">Esta prioridad se usa como valor predeterminado para todos los trabajos de la programación de trabajo.</span><span class="sxs-lookup"><span data-stu-id="344a0-135">This priority is used as the default for all jobs under the job schedule.</span></span> <span data-ttu-id="344a0-136">Puede actualizar la prioridad de un trabajo después de que se ha creado mediante la API de trabajo de actualización.</span><span class="sxs-lookup"><span data-stu-id="344a0-136">You can update a job''s priority after it has been created using by using the update job API.</span></span>'
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="344a0-137">Si las tareas del trabajo pueden definir las dependencias entre sí.</span><span class="sxs-lookup"><span data-stu-id="344a0-137">Whether tasks in the job can define dependencies on each other.</span></span> <span data-ttu-id="344a0-138">El valor predeterminado es false.</span><span class="sxs-lookup"><span data-stu-id="344a0-138">The default is false.</span></span>
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
