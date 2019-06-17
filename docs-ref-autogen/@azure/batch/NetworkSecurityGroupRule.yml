@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkSecurityGroupRule'
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - '@azure/batch.NetworkSecurityGroupRule.access'
+      - '@azure/batch.NetworkSecurityGroupRule.priority'
+      - '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="0c43c-101">Una interfaz que representa NetworkSecurityGroupRule.</span><span class="sxs-lookup"><span data-stu-id="0c43c-101">An interface representing NetworkSecurityGroupRule.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.access'
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0c43c-102">La acción que debe realizarse para una dirección, intervalo de subred o etiqueta IP especificado.</span><span class="sxs-lookup"><span data-stu-id="0c43c-102">The action that should be taken for a specified IP address, subnet range or tag.</span></span> <span data-ttu-id="0c43c-103">Los valores posibles son: "permitir", "Denegar"</span><span class="sxs-lookup"><span data-stu-id="0c43c-103">Possible values include: ''allow'', ''deny''</span></span>'
+    syntax:
+      content: 'access: NetworkSecurityGroupRuleAccess'
+      return:
+        type:
+          - '@azure/batch.NetworkSecurityGroupRuleAccess'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0c43c-104">La prioridad de esta regla.</span><span class="sxs-lookup"><span data-stu-id="0c43c-104">The priority for this rule.</span></span> <span data-ttu-id="0c43c-105">Las prioridades dentro de un grupo deben ser únicas y se evalúan en orden de prioridad.</span><span class="sxs-lookup"><span data-stu-id="0c43c-105">Priorities within a pool must be unique and are evaluated in order of priority.</span></span> <span data-ttu-id="0c43c-106">Cuanto menor sea el número de prioridad, mayor será la prioridad de la regla.</span><span class="sxs-lookup"><span data-stu-id="0c43c-106">The lower the number the higher the priority.</span></span> <span data-ttu-id="0c43c-107">Por ejemplo, se podrían especificar reglas con números de pedido de 150, 250 y 350.</span><span class="sxs-lookup"><span data-stu-id="0c43c-107">For example, rules could be specified with order numbers of 150, 250, and 350.</span></span> <span data-ttu-id="0c43c-108">La regla con el número de pedido de 150 tiene prioridad sobre la regla que tiene un orden de 250.</span><span class="sxs-lookup"><span data-stu-id="0c43c-108">The rule with the order number of 150 takes precedence over the rule that has an order of 250.</span></span> <span data-ttu-id="0c43c-109">Las prioridades permitidas son 150 a 3500.</span><span class="sxs-lookup"><span data-stu-id="0c43c-109">Allowed priorities are 150 to 3500.</span></span> <span data-ttu-id="0c43c-110">Si se proporcionan los valores duplicados o reservados que se produce un error en la solicitud con el código de estado HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="0c43c-110">If any reserved or duplicate values are provided the request fails with HTTP status code 400.</span></span>'
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0c43c-111">El prefijo de dirección de origen o la etiqueta a la que debe coincidir con la regla.</span><span class="sxs-lookup"><span data-stu-id="0c43c-111">The source address prefix or tag to match for the rule.</span></span> <span data-ttu-id="0c43c-112">Los valores válidos son una única dirección IP (es decir, 10.10.10.10), subred IP (es decir, 192.168.1.0/24), la etiqueta predeterminada, o \* (para todas las direcciones).</span><span class="sxs-lookup"><span data-stu-id="0c43c-112">Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or \* (for all addresses).</span></span>
+      <span data-ttu-id="0c43c-113">Si cualquier otro se proporcionan los valores de que la solicitud produce un error con código de estado HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="0c43c-113">If any other values are provided the request fails with HTTP status code 400.</span></span>
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
+    name: NetworkSecurityGroupRuleAccess
+    spec.typeScript:
+      - name: NetworkSecurityGroupRuleAccess
+        fullName: NetworkSecurityGroupRuleAccess
+        uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
