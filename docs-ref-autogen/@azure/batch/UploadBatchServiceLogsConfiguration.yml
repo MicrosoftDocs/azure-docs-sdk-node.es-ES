@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    fullName: UploadBatchServiceLogsConfiguration
+    children:
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa UploadBatchServiceLogsConfiguration.
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La dirección URL del contenedor en Azure Blob Storage que se va a cargar los archivos de registro del servicio Batch. La dirección URL debe incluir una firma de acceso de compartido (SAS) concesión de permisos de escritura al contenedor. La duración SAS debe proporcionar tiempo suficiente para finalizar la carga. La hora de inicio de SAS es opcional y se recomienda no especificarla.
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Final del intervalo de tiempo desde que se va a cargar los archivos de registro del servicio Batch. Se cargará un archivo de registro que contiene un mensaje de registro en el intervalo de tiempo. Esto significa que la operación podría recuperar más registros que se han solicitado, ya que siempre se carga todo el archivo de registro, pero la operación no debe recuperar menos registros que se han solicitado. Si se omite, el valor predeterminado es cargar todos los registros disponibles después de la hora de inicio.'
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El inicio del intervalo de tiempo desde que se va a cargar los archivos de registro del servicio Batch. Se cargará un archivo de registro que contiene un mensaje de registro en el intervalo de tiempo. Esto significa que la operación podría recuperar más registros que se han solicitado, ya que siempre se carga todo el archivo de registro, pero la operación no debe recuperar menos registros que se han solicitado.'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
