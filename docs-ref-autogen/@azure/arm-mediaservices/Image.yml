@@ -1,0 +1,128 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.Image'
+    name: Image
+    fullName: Image
+    children:
+      - '@azure/arm-mediaservices.Image.keyFrameInterval'
+      - '@azure/arm-mediaservices.Image.label'
+      - '@azure/arm-mediaservices.Image.odatatype'
+      - '@azure/arm-mediaservices.Image.range'
+      - '@azure/arm-mediaservices.Image.start'
+      - '@azure/arm-mediaservices.Image.step'
+      - '@azure/arm-mediaservices.Image.stretchMode'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ee7f4-101">Describe las propiedades básicas para generar miniaturas de vídeo de entrada</span><span class="sxs-lookup"><span data-stu-id="ee7f4-101">Describes the basic properties for generating thumbnails from the input video</span></span>
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.keyFrameInterval'
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ee7f4-102">La distancia entre dos fotogramas clave, con lo que define un grupo de imágenes (GOP).</span><span class="sxs-lookup"><span data-stu-id="ee7f4-102">The distance between two key frames, thereby defining a group of pictures (GOP).</span></span> <span data-ttu-id="ee7f4-103">El valor debe ser un entero distinto de cero en los segundos del intervalo [1 30], especificado en formato ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-103">The value should be a non-zero integer in the range [1, 30] seconds, specified in ISO 8601 format.</span></span> <span data-ttu-id="ee7f4-104">El valor predeterminado es de 2 segundos (PT2S).</span><span class="sxs-lookup"><span data-stu-id="ee7f4-104">The default is 2 seconds (PT2S).</span></span>'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ee7f4-105">Una etiqueta opcional para el códec.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-105">An optional label for the codec.</span></span> <span data-ttu-id="ee7f4-106">La etiqueta puede usarse para controlar el comportamiento de muxing.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-106">The label can be used to control muxing behavior.</span></span>
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ee7f4-107">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="ee7f4-107">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.Image"'
+      return:
+        type:
+          - '"#Microsoft.Media.Image"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.range'
+    name: range
+    fullName: range
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ee7f4-108">La posición en la entrada de vídeo en el que se va a detener la generación de miniaturas.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-108">The position in the input video at which to stop generating thumbnails.</span></span> <span data-ttu-id="ee7f4-109">El valor puede estar en la marca de tiempo absoluto (ISO 8601, p. ej.: PT5M30S para detenerse en 5 minutos y 30 segundos), o un número de fotogramas (por ejemplo, 300 para detenerse en el marco de 300) o un valor relativo (por ejemplo, 100%).</span><span class="sxs-lookup"><span data-stu-id="ee7f4-109">The value can be in absolute timestamp (ISO 8601, e.g: PT5M30S to stop at 5 minutes and 30 seconds), or a frame count (For example, 300 to stop at the 300th frame), or a relative value (For example, 100%).</span></span>'
+    optional: true
+    syntax:
+      content: 'range?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.start'
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ee7f4-110">La posición en la entrada de vídeo desde donde se empiezan a generar vistas en miniatura.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-110">The position in the input video from where to start generating thumbnails.</span></span> <span data-ttu-id="ee7f4-111">El valor puede estar en la marca de tiempo absoluto (ISO 8601, p. ej.: PT05S), o un número de fotogramas (por ejemplo, 10 para el marco de 10) o un valor relativo (por ejemplo, 1%).</span><span class="sxs-lookup"><span data-stu-id="ee7f4-111">The value can be in absolute timestamp (ISO 8601, e.g: PT05S), or a frame count (For example, 10 for the 10th frame), or a relative value (For example, 1%).</span></span> <span data-ttu-id="ee7f4-112">También admite una macro {Best}, que indica al codificador para seleccionar la mejor miniatura de los primeros segundos del vídeo.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-112">Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video.</span></span>'
+    syntax:
+      content: 'start: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.step'
+    name: step
+    fullName: step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ee7f4-113">Los intervalos en el que se generan automáticamente miniaturas.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-113">The intervals at which thumbnails are generated.</span></span> <span data-ttu-id="ee7f4-114">El valor puede estar en la marca de tiempo absoluto (ISO 8601, p. ej.: PT05S para una imagen cada 5 segundos), o un número de fotogramas (por ejemplo, 30 para cada 30 fotogramas) o un valor relativo (por ejemplo, 1%).</span><span class="sxs-lookup"><span data-stu-id="ee7f4-114">The value can be in absolute timestamp (ISO 8601, e.g: PT05S for one image every 5 seconds), or a frame count (For example, 30 for every 30 frames), or a relative value (For example, 1%).</span></span>'
+    optional: true
+    syntax:
+      content: 'step?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.stretchMode'
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ee7f4-115">El modo de cambio de tamaño - cómo cambia el tamaño del vídeo de entrada para ajustarse a las resoluciones de salida deseado.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-115">The resizing mode - how the input video will be resized to fit the desired output resolution(s).</span></span> <span data-ttu-id="ee7f4-116">El valor predeterminado es AutoSize.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-116">Default is AutoSize.</span></span> <span data-ttu-id="ee7f4-117">Los valores posibles son: ''None'', ''AutoSize'', ''AutoFit''</span><span class="sxs-lookup"><span data-stu-id="ee7f4-117">Possible values include: ''None'', ''AutoSize'', ''AutoFit''</span></span>'
+    optional: true
+    syntax:
+      content: 'stretchMode?: StretchMode'
+      return:
+        type:
+          - '@azure/arm-mediaservices.StretchMode'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.StretchMode'
+    name: StretchMode
+    spec.typeScript:
+      - name: StretchMode
+        fullName: StretchMode
+        uid: '@azure/arm-mediaservices.StretchMode'

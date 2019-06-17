@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskDependencies'
+    name: TaskDependencies
+    fullName: TaskDependencies
+    children:
+      - '@azure/batch.TaskDependencies.taskIdRanges'
+      - '@azure/batch.TaskDependencies.taskIds'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="59264-101">Una interfaz que representa TaskDependencies.</span><span class="sxs-lookup"><span data-stu-id="59264-101">An interface representing TaskDependencies.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskDependencies.taskIdRanges'
+    name: taskIdRanges
+    fullName: taskIdRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="59264-102">La lista de intervalos de Id. de tarea que depende esta tarea.</span><span class="sxs-lookup"><span data-stu-id="59264-102">The list of task ID ranges that this task depends on.</span></span> <span data-ttu-id="59264-103">Todas las tareas en todos los intervalos deben completarse correctamente antes de que se puede programar la tarea dependiente.</span><span class="sxs-lookup"><span data-stu-id="59264-103">All tasks in all ranges must complete successfully before the dependent task can be scheduled.</span></span>
+    optional: true
+    syntax:
+      content: 'taskIdRanges?: TaskIdRange[]'
+      return:
+        type:
+          - '@azure/batch.TaskIdRange[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskDependencies.taskIds'
+    name: taskIds
+    fullName: taskIds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="59264-104">La lista de identificadores que esta tarea depende de la tarea.</span><span class="sxs-lookup"><span data-stu-id="59264-104">The list of task IDs that this task depends on.</span></span> <span data-ttu-id="59264-105">Todas las tareas de esta lista deben completarse correctamente antes de que se puede programar la tarea dependiente.</span><span class="sxs-lookup"><span data-stu-id="59264-105">All tasks in this list must complete successfully before the dependent task can be scheduled.</span></span> <span data-ttu-id="59264-106">La colección del elemento taskIds se limita a 64000 caracteres en total (es decir, la longitud combinada de todos los identificadores de tarea).</span><span class="sxs-lookup"><span data-stu-id="59264-106">The taskIds collection is limited to 64000 characters total (i.e. the combined length of all task IDs).</span></span> <span data-ttu-id="59264-107">Si la colección del elemento taskIds supera la longitud máxima, la solicitud agregar tarea produce un error con código de error TaskDependencyListTooLong.</span><span class="sxs-lookup"><span data-stu-id="59264-107">If the taskIds collection exceeds the maximum length, the Add Task request fails with error code TaskDependencyListTooLong.</span></span> <span data-ttu-id="59264-108">En este caso, considere la posibilidad de usar intervalos de Id. de tarea en su lugar.</span><span class="sxs-lookup"><span data-stu-id="59264-108">In this case consider using task ID ranges instead.</span></span>'
+    optional: true
+    syntax:
+      content: 'taskIds?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskIdRange[]'
+    name: 'TaskIdRange[]'
+    spec.typeScript:
+      - name: TaskIdRange
+        fullName: TaskIdRange
+        uid: '@azure/batch.TaskIdRange'
+      - name: '[]'
+        fullName: '[]'
