@@ -1,0 +1,423 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-security.AllowedConnections'
+    name: AllowedConnections
+    fullName: AllowedConnections
+    children:
+      - '@azure/arm-security.AllowedConnections.constructor'
+      - '@azure/arm-security.AllowedConnections.get'
+      - '@azure/arm-security.AllowedConnections.get_2'
+      - '@azure/arm-security.AllowedConnections.get_1'
+      - '@azure/arm-security.AllowedConnections.list'
+      - '@azure/arm-security.AllowedConnections.list_2'
+      - '@azure/arm-security.AllowedConnections.list_1'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegion'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegion_2'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegion_1'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegionNext'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegionNext_2'
+      - '@azure/arm-security.AllowedConnections.listByHomeRegionNext_1'
+      - '@azure/arm-security.AllowedConnections.listNext'
+      - '@azure/arm-security.AllowedConnections.listNext_2'
+      - '@azure/arm-security.AllowedConnections.listNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="ad843-101">Clase que representa un AllowedConnections.</span><span class="sxs-lookup"><span data-stu-id="ad843-101">Class representing a AllowedConnections.</span></span>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.constructor'
+    name: AllowedConnections(SecurityCenterContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ad843-102">Crear un AllowedConnections.</span><span class="sxs-lookup"><span data-stu-id="ad843-102">Create a AllowedConnections.</span></span>
+    syntax:
+      content: 'new AllowedConnections(client: SecurityCenterContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-security.SecurityCenterContext'
+          description: |
+            <span data-ttu-id="ad843-103">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="ad843-103">Reference to the service client.</span></span>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.get'
+    name: 'get(string, Models.ConnectionType, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ad843-104">Obtiene la lista de todo el tráfico posible entre los recursos de la suscripción y ubicación, según el tipo de conexión.</span><span class="sxs-lookup"><span data-stu-id="ad843-104">Gets the list of all possible traffic between resources for the subscription and location, based on connection type.</span></span>'
+    syntax:
+      content: 'function get(resourceGroupName: string, connectionType: Models.ConnectionType, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ad843-105">El nombre del grupo de recursos dentro de la suscripción del usuario.</span><span class="sxs-lookup"><span data-stu-id="ad843-105">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="ad843-106">El nombre distingue mayúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="ad843-106">The name is case insensitive.</span></span>
+        - id: connectionType
+          type:
+            - Models.ConnectionType
+          description: '<span data-ttu-id="ad843-107">El tipo de conexiones permitidas (interna, externa).</span><span class="sxs-lookup"><span data-stu-id="ad843-107">The type of allowed connections (Internal, External).</span></span> <span data-ttu-id="ad843-108">Los valores posibles son: ''Internal'', ''Externo''</span><span class="sxs-lookup"><span data-stu-id="ad843-108">Possible values include: ''Internal'', ''External''</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsGetResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.get_2'
+    name: 'get(string, Models.ConnectionType, RequestOptionsBase, ServiceCallback<AllowedConnectionsResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, connectionType: Models.ConnectionType, options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ad843-109">El nombre del grupo de recursos dentro de la suscripción del usuario.</span><span class="sxs-lookup"><span data-stu-id="ad843-109">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="ad843-110">El nombre distingue mayúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="ad843-110">The name is case insensitive.</span></span>
+        - id: connectionType
+          type:
+            - Models.ConnectionType
+          description: '<span data-ttu-id="ad843-111">El tipo de conexiones permitidas (interna, externa).</span><span class="sxs-lookup"><span data-stu-id="ad843-111">The type of allowed connections (Internal, External).</span></span> <span data-ttu-id="ad843-112">Los valores posibles son: ''Internal'', ''Externo''</span><span class="sxs-lookup"><span data-stu-id="ad843-112">Possible values include: ''Internal'', ''External''</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="ad843-113">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="ad843-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsResource>
+          description: |
+            <span data-ttu-id="ad843-114">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsGetResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.get_1'
+    name: 'get(string, Models.ConnectionType, ServiceCallback<AllowedConnectionsResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, connectionType: Models.ConnectionType, callback: ServiceCallback<AllowedConnectionsResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ad843-115">El nombre del grupo de recursos dentro de la suscripción del usuario.</span><span class="sxs-lookup"><span data-stu-id="ad843-115">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="ad843-116">El nombre distingue mayúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="ad843-116">The name is case insensitive.</span></span>
+        - id: connectionType
+          type:
+            - Models.ConnectionType
+          description: '<span data-ttu-id="ad843-117">El tipo de conexiones permitidas (interna, externa).</span><span class="sxs-lookup"><span data-stu-id="ad843-117">The type of allowed connections (Internal, External).</span></span> <span data-ttu-id="ad843-118">Los valores posibles son: ''Internal'', ''Externo''</span><span class="sxs-lookup"><span data-stu-id="ad843-118">Possible values include: ''Internal'', ''External''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsResource>
+          description: |
+            <span data-ttu-id="ad843-119">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-119">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsGetResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ad843-120">Obtiene la lista de posibles todo el tráfico entre los recursos de la suscripción</span><span class="sxs-lookup"><span data-stu-id="ad843-120">Gets the list of all possible traffic between resources for the subscription</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="ad843-121">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="ad843-121">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="ad843-122">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-122">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.list_1'
+    name: list(ServiceCallback<AllowedConnectionsList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="ad843-123">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-123">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegion'
+    name: listByHomeRegion(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ad843-124">Obtiene la lista de todo el tráfico entre los recursos de la suscripción y ubicación posible.</span><span class="sxs-lookup"><span data-stu-id="ad843-124">Gets the list of all possible traffic between resources for the subscription and location.</span></span>
+    syntax:
+      content: 'function listByHomeRegion(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegion_2'
+    name: 'listByHomeRegion(RequestOptionsBase, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByHomeRegion(options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="ad843-125">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="ad843-125">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="ad843-126">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegion_1'
+    name: listByHomeRegion(ServiceCallback<AllowedConnectionsList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByHomeRegion(callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="ad843-127">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-127">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegionNext'
+    name: 'listByHomeRegionNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ad843-128">Obtiene la lista de todo el tráfico entre los recursos de la suscripción y ubicación posible.</span><span class="sxs-lookup"><span data-stu-id="ad843-128">Gets the list of all possible traffic between resources for the subscription and location.</span></span>
+    syntax:
+      content: 'function listByHomeRegionNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ad843-129">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="ad843-129">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegionNext_2'
+    name: 'listByHomeRegionNext(string, RequestOptionsBase, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByHomeRegionNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ad843-130">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="ad843-130">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="ad843-131">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="ad843-131">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="ad843-132">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-132">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listByHomeRegionNext_1'
+    name: 'listByHomeRegionNext(string, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByHomeRegionNext(nextPageLink: string, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ad843-133">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="ad843-133">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="ad843-134">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-134">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListByHomeRegionNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ad843-135">Obtiene la lista de posibles todo el tráfico entre los recursos de la suscripción</span><span class="sxs-lookup"><span data-stu-id="ad843-135">Gets the list of all possible traffic between resources for the subscription</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ad843-136">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="ad843-136">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ad843-137">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="ad843-137">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="ad843-138">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="ad843-138">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="ad843-139">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListNextResponse>
+    package: '@azure/arm-security'
+  - uid: '@azure/arm-security.AllowedConnections.listNext_1'
+    name: 'listNext(string, ServiceCallback<AllowedConnectionsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<AllowedConnectionsList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ad843-140">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="ad843-140">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+          description: |
+            <span data-ttu-id="ad843-141">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="ad843-141">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AllowedConnectionsListNextResponse>
+    package: '@azure/arm-security'
+references:
+  - uid: '@azure/arm-security.SecurityCenterContext'
+    name: SecurityCenterContext
+    spec.typeScript:
+      - name: SecurityCenterContext
+        fullName: SecurityCenterContext
+        uid: '@azure/arm-security.SecurityCenterContext'
+  - uid: ServiceCallback<@azure/arm-security.AllowedConnectionsResource>
+    name: AllowedConnectionsResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AllowedConnectionsResource
+        fullName: AllowedConnectionsResource
+        uid: '@azure/arm-security.AllowedConnectionsResource'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-security.AllowedConnectionsList>
+    name: AllowedConnectionsList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AllowedConnectionsList
+        fullName: AllowedConnectionsList
+        uid: '@azure/arm-security.AllowedConnectionsList'
+      - name: '>'
+        fullName: '>'
