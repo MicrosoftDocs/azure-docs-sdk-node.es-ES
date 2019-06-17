@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    children:
+      - '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+      - '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+      - '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Tareas de instancias múltiples se usan habitualmente para admitir tareas MPI. En el caso MPI, si falla alguna de las subtareas (por ejemplo, porque se cierra con un código de salida distinto de cero) la tarea de instancias múltiples entera se produce un error. Entonces la tarea de instancias múltiples se termina y se reintenta, hasta su límite de reintento.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+    name: commonResourceFiles
+    fullName: commonResourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Una lista de archivos que el servicio Batch descargará antes de ejecutar la línea de comandos de coordinación. La diferencia entre los archivos de recursos comunes y archivos de recursos de la tarea es que se descargan archivos de recursos comunes para todas las subtareas incluidas en el servidor principal, mientras que los archivos de recursos de la tarea se descargan en la réplica principal. Tenga en cuenta que estos archivos de recursos no se descargan en el directorio de trabajo de tarea, pero en su lugar, se descargan en el directorio raíz de tarea (un directorio por encima del directorio de trabajo).  Hay un tamaño máximo para la lista de archivos de recursos.  Cuando se supera el tamaño máximo, se producirá un error en la solicitud y el código de error de respuesta será la entidad solicitada demasiado grande. Si esto ocurre, se debe reducir la colección de ResourceFiles de tamaño. Esto puede lograrse mediante los archivos .zip, paquetes de aplicaciones o contenedores de Docker.'
+    optional: true
+    syntax:
+      content: 'commonResourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+    name: coordinationCommandLine
+    fullName: coordinationCommandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La línea de comandos para ejecutar en todos los nodos de proceso para permitirles coordinar cuando la réplica principal se ejecuta el comando de la tarea principal. Una línea de comandos de coordinación típica inicia un servicio en segundo plano y comprueba que el servicio está listo para procesar los mensajes entre nodos.
+    syntax:
+      content: 'coordinationCommandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    name: numberOfInstances
+    fullName: numberOfInstances
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Número de nodos de proceso que requiere la tarea. Si se omite, el valor predeterminado es 1.'
+    optional: true
+    syntax:
+      content: 'numberOfInstances?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'

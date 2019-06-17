@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/cognitiveservices-face.OperationStatus.createdTime'
+      - '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+      - '@azure/cognitiveservices-face.OperationStatus.message'
+      - '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+      - '@azure/cognitiveservices-face.OperationStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: Objeto de estado de la operación. Operación hace referencia a la tarea asincrónica de back-end como realizar una instantánea y aplicar una instantánea.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.createdTime'
+    name: createdTime
+    fullName: createdTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Combinado de una cadena de fecha y hora UTC que describe el tiempo cuando la operación (tienen o aplicar una instantánea) se solicita. Por ejemplo, 2018-12-25T11:41:02.2331413Z.'
+    syntax:
+      content: 'createdTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+    name: lastActionTime
+    fullName: lastActionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Una fecha UTC de combinar y cadena de tiempo que se describe la última hora en la operación (tienen o aplicar una instantánea) se migra datos activamente. El lastActionTime se siguen aumentando hasta que finalice la operación. Por ejemplo, 2018-12-25T11:51:27.8705696Z.'
+    optional: true
+    syntax:
+      content: 'lastActionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostrar mensaje de error cuando se produce un error en la operación (se omite cuando la operación se realiza correctamente).
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+    name: resourceLocation
+    fullName: resourceLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Cuando la operación funcione correctamente, para realizar la operación de instantánea se incluirá el identificador de la instantánea en este campo y para aplicar la operación de instantánea, se devolverá la ruta de acceso para obtener el objeto de destino en este campo.'
+    optional: true
+    syntax:
+      content: 'resourceLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Estado de la operación: notstarted, que se está ejecutando, se ha realizado correctamente, el error. Si se solicitó la operación y espera a que realice, el estado es notstarted. Si la operación está en curso en el back-end, el estado se está ejecutando. Estado correcto significa que la operación se completa correctamente, específicamente para la operación de toma de instantáneas, muestra la instantánea está bien tomados y listo para aplicar, y para aplicar la operación de instantánea, presenta el destino de objeto ha finalizado la creación por la instantánea y listo para usarse. Estado de error suele provocarlo editando el objeto de origen al tomar la instantánea o editar el objeto de destino al aplicar la instantánea antes de completarse, consulte el campo "mensaje" para comprobar el motivo del error.
+      Los valores posibles son: 'notstarted', 'ejecutando', 'correcto', 'Error'
+    syntax:
+      content: 'status: OperationStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.OperationStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.OperationStatusType'
+    name: OperationStatusType
+    spec.typeScript:
+      - name: OperationStatusType
+        fullName: OperationStatusType
+        uid: '@azure/cognitiveservices-face.OperationStatusType'

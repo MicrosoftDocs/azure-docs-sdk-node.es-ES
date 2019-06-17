@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - '@azure/batch.JobNetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa JobNetworkConfiguration.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobNetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El identificador de recurso ARM de la subred de red virtual que se unirán los nodos que ejecutan tareas del trabajo para la duración de la tarea. Esto solo se admite para los trabajos que se ejecutan en grupos VirtualMachineConfiguration. Se trata de la forma/Subscriptions / {subscription} / ResourceGroups / {grupo} / Providers / {provider} /virtualNetworks/ {network} / Subnets / {subred}.
+      La red virtual debe estar en la misma región y suscripción que la cuenta de Azure Batch.
+      La subred especificada debe tener suficientes direcciones IP libres para alojar al número de nodos que se ejecutarán las tareas del trabajo. Para obtener más información, consulte https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
