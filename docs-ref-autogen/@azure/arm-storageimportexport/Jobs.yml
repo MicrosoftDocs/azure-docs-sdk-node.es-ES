@@ -1,0 +1,753 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storageimportexport.Jobs'
+    name: Jobs
+    fullName: Jobs
+    children:
+      - '@azure/arm-storageimportexport.Jobs.create_2'
+      - '@azure/arm-storageimportexport.Jobs.create'
+      - '@azure/arm-storageimportexport.Jobs.create_1'
+      - '@azure/arm-storageimportexport.Jobs.deleteMethod'
+      - '@azure/arm-storageimportexport.Jobs.deleteMethod_2'
+      - '@azure/arm-storageimportexport.Jobs.deleteMethod_1'
+      - '@azure/arm-storageimportexport.Jobs.get'
+      - '@azure/arm-storageimportexport.Jobs.get_2'
+      - '@azure/arm-storageimportexport.Jobs.get_1'
+      - '@azure/arm-storageimportexport.Jobs.constructor'
+      - '@azure/arm-storageimportexport.Jobs.listByResourceGroup_2'
+      - '@azure/arm-storageimportexport.Jobs.listByResourceGroup'
+      - '@azure/arm-storageimportexport.Jobs.listByResourceGroup_1'
+      - '@azure/arm-storageimportexport.Jobs.listByResourceGroupNext'
+      - '@azure/arm-storageimportexport.Jobs.listByResourceGroupNext_2'
+      - '@azure/arm-storageimportexport.Jobs.listByResourceGroupNext_1'
+      - '@azure/arm-storageimportexport.Jobs.listBySubscription_2'
+      - '@azure/arm-storageimportexport.Jobs.listBySubscription'
+      - '@azure/arm-storageimportexport.Jobs.listBySubscription_1'
+      - '@azure/arm-storageimportexport.Jobs.listBySubscriptionNext'
+      - '@azure/arm-storageimportexport.Jobs.listBySubscriptionNext_2'
+      - '@azure/arm-storageimportexport.Jobs.listBySubscriptionNext_1'
+      - '@azure/arm-storageimportexport.Jobs.update'
+      - '@azure/arm-storageimportexport.Jobs.update_2'
+      - '@azure/arm-storageimportexport.Jobs.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Clase que representa un trabajos.
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.create_2'
+    name: 'create(string, string, PutJobParameters, JobsCreateOptionalParams, ServiceCallback<JobResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(jobName: string, resourceGroupName: string, body: PutJobParameters, options: JobsCreateOptionalParams, callback: ServiceCallback<JobResponse>)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: body
+          type:
+            - '@azure/arm-storageimportexport.PutJobParameters'
+          description: Los parámetros utilizados para crear el trabajo
+        - id: options
+          type:
+            - '@azure/arm-storageimportexport.JobsCreateOptionalParams'
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.JobResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsCreateResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.create'
+    name: 'create(string, string, PutJobParameters, Models.JobsCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un nuevo trabajo o actualiza un trabajo existente en la suscripción especificada.
+    syntax:
+      content: 'function create(jobName: string, resourceGroupName: string, body: PutJobParameters, options?: Models.JobsCreateOptionalParams)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: body
+          type:
+            - '@azure/arm-storageimportexport.PutJobParameters'
+          description: Los parámetros utilizados para crear el trabajo
+        - id: options
+          type:
+            - Models.JobsCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsCreateResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.create_1'
+    name: 'create(string, string, PutJobParameters, ServiceCallback<JobResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(jobName: string, resourceGroupName: string, body: PutJobParameters, callback: ServiceCallback<JobResponse>)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: body
+          type:
+            - '@azure/arm-storageimportexport.PutJobParameters'
+          description: Los parámetros utilizados para crear el trabajo
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.JobResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsCreateResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elimina un trabajo existente. Se pueden eliminar solo los trabajos en los Estados de creación o completado.
+    syntax:
+      content: 'function deleteMethod(jobName: string, resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobName: string, resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobName: string, resourceGroupName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtiene información sobre un trabajo existente.
+    syntax:
+      content: 'function get(jobName: string, resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsGetResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<JobResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobName: string, resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<JobResponse>)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.JobResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsGetResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.get_1'
+    name: 'get(string, string, ServiceCallback<JobResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobName: string, resourceGroupName: string, callback: ServiceCallback<JobResponse>)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.JobResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsGetResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.constructor'
+    name: Jobs(StorageImportExportManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crear un trabajos.
+    syntax:
+      content: 'new Jobs(client: StorageImportExportManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-storageimportexport.StorageImportExportManagementClientContext'
+          description: |
+            Referencia para el cliente del servicio.
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, JobsListByResourceGroupOptionalParams, ServiceCallback<ListJobsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: JobsListByResourceGroupOptionalParams, callback: ServiceCallback<ListJobsResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: options
+          type:
+            - '@azure/arm-storageimportexport.JobsListByResourceGroupOptionalParams'
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.ListJobsResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.JobsListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Devuelve todos los trabajos activos y completados en un grupo de recursos.
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.JobsListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: options
+          type:
+            - Models.JobsListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<ListJobsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<ListJobsResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.ListJobsResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Devuelve todos los trabajos activos y completados en un grupo de recursos.
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupNextResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<ListJobsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListJobsResponse>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.ListJobsResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupNextResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<ListJobsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<ListJobsResponse>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.ListJobsResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupNextResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listBySubscription_2'
+    name: 'listBySubscription(JobsListBySubscriptionOptionalParams, ServiceCallback<ListJobsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscription(options: JobsListBySubscriptionOptionalParams, callback: ServiceCallback<ListJobsResponse>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-storageimportexport.JobsListBySubscriptionOptionalParams'
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.ListJobsResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsListBySubscriptionResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listBySubscription'
+    name: listBySubscription(Models.JobsListBySubscriptionOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Devuelve todos los trabajos activos y completados en una suscripción.
+    syntax:
+      content: 'function listBySubscription(options?: Models.JobsListBySubscriptionOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.JobsListBySubscriptionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListBySubscriptionResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listBySubscription_1'
+    name: listBySubscription(ServiceCallback<ListJobsResponse>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscription(callback: ServiceCallback<ListJobsResponse>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.ListJobsResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsListBySubscriptionResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listBySubscriptionNext'
+    name: 'listBySubscriptionNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Devuelve todos los trabajos activos y completados en una suscripción.
+    syntax:
+      content: 'function listBySubscriptionNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListBySubscriptionNextResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listBySubscriptionNext_2'
+    name: 'listBySubscriptionNext(string, RequestOptionsBase, ServiceCallback<ListJobsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListJobsResponse>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.ListJobsResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsListBySubscriptionNextResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.listBySubscriptionNext_1'
+    name: 'listBySubscriptionNext(string, ServiceCallback<ListJobsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionNext(nextPageLink: string, callback: ServiceCallback<ListJobsResponse>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de la llamada anterior correcta a la operación de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.ListJobsResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsListBySubscriptionNextResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.update'
+    name: 'update(string, string, UpdateJobParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Actualiza las propiedades específicas de un trabajo. Puede llamar a esta operación para notificar al servicio de Import/Export que los discos duros que componen el trabajo de importación o exportación se han enviado al centro de datos de Microsoft. También puede usarse para cancelar un trabajo existente.
+    syntax:
+      content: 'function update(jobName: string, resourceGroupName: string, body: UpdateJobParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: body
+          type:
+            - '@azure/arm-storageimportexport.UpdateJobParameters'
+          description: Los parámetros que se actualizará en el trabajo
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsUpdateResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.update_2'
+    name: 'update(string, string, UpdateJobParameters, RequestOptionsBase, ServiceCallback<JobResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobName: string, resourceGroupName: string, body: UpdateJobParameters, options: RequestOptionsBase, callback: ServiceCallback<JobResponse>)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: body
+          type:
+            - '@azure/arm-storageimportexport.UpdateJobParameters'
+          description: Los parámetros que se actualizará en el trabajo
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Los parámetros opcionales
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.JobResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsUpdateResponse>
+    package: '@azure/arm-storageimportexport'
+  - uid: '@azure/arm-storageimportexport.Jobs.update_1'
+    name: 'update(string, string, UpdateJobParameters, ServiceCallback<JobResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobName: string, resourceGroupName: string, body: UpdateJobParameters, callback: ServiceCallback<JobResponse>)'
+      parameters:
+        - id: jobName
+          type:
+            - string
+          description: El nombre del trabajo de importación y exportación.
+        - id: resourceGroupName
+          type:
+            - string
+          description: El nombre del grupo de recursos identifica el grupo de recursos dentro de la suscripción del usuario.
+        - id: body
+          type:
+            - '@azure/arm-storageimportexport.UpdateJobParameters'
+          description: Los parámetros que se actualizará en el trabajo
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storageimportexport.JobResponse>
+          description: |
+            La devolución de llamada
+      return:
+        type:
+          - Promise<Models.JobsUpdateResponse>
+    package: '@azure/arm-storageimportexport'
+references:
+  - uid: '@azure/arm-storageimportexport.StorageImportExportManagementClientContext'
+    name: StorageImportExportManagementClientContext
+    spec.typeScript:
+      - name: StorageImportExportManagementClientContext
+        fullName: StorageImportExportManagementClientContext
+        uid: '@azure/arm-storageimportexport.StorageImportExportManagementClientContext'
+  - uid: '@azure/arm-storageimportexport.PutJobParameters'
+    name: PutJobParameters
+    spec.typeScript:
+      - name: PutJobParameters
+        fullName: PutJobParameters
+        uid: '@azure/arm-storageimportexport.PutJobParameters'
+  - uid: ServiceCallback<@azure/arm-storageimportexport.JobResponse>
+    name: JobResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobResponse
+        fullName: JobResponse
+        uid: '@azure/arm-storageimportexport.JobResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storageimportexport.JobsCreateOptionalParams'
+    name: JobsCreateOptionalParams
+    spec.typeScript:
+      - name: JobsCreateOptionalParams
+        fullName: JobsCreateOptionalParams
+        uid: '@azure/arm-storageimportexport.JobsCreateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-storageimportexport.ListJobsResponse>
+    name: ListJobsResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListJobsResponse
+        fullName: ListJobsResponse
+        uid: '@azure/arm-storageimportexport.ListJobsResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storageimportexport.JobsListByResourceGroupOptionalParams'
+    name: JobsListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: JobsListByResourceGroupOptionalParams
+        fullName: JobsListByResourceGroupOptionalParams
+        uid: '@azure/arm-storageimportexport.JobsListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-storageimportexport.JobsListBySubscriptionOptionalParams'
+    name: JobsListBySubscriptionOptionalParams
+    spec.typeScript:
+      - name: JobsListBySubscriptionOptionalParams
+        fullName: JobsListBySubscriptionOptionalParams
+        uid: '@azure/arm-storageimportexport.JobsListBySubscriptionOptionalParams'
+  - uid: '@azure/arm-storageimportexport.UpdateJobParameters'
+    name: UpdateJobParameters
+    spec.typeScript:
+      - name: UpdateJobParameters
+        fullName: UpdateJobParameters
+        uid: '@azure/arm-storageimportexport.UpdateJobParameters'
