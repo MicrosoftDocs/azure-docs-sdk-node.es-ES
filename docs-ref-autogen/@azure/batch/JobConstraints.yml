@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - '@azure/batch.JobConstraints.maxTaskRetryCount'
+      - '@azure/batch.JobConstraints.maxWallClockTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa JobConstraints.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El número máximo de veces que se puede reintentar realizar cada tarea. El servicio de Batch reintenta una tarea su el código de salida es distinto de cero. Tenga en cuenta que este valor controla específicamente el número de reintentos. El servicio Batch intentará una vez cada tarea y podría reintentarla hasta alcanzar este límite. Por ejemplo, si el conteo de reintentos máximo es 3, Batch intenta una tarea hasta 4 veces (un intento inicial y 3 reintentos). Si el conteo de intentos máximo es 0, el servicio de Batch no reintenta las tareas. Si el conteo de intentos máximo es -1, el servicio de Batch reintenta las tareas sin ningún límite. El valor predeterminado es 0 (sin ningún reintento).'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Tiempo máximo que se puede ejecutar el trabajo, medido desde el momento en que se crea el trabajo. Si no lleva a cabo el trabajo en el límite de tiempo, el servicio Batch terminará y las tareas que siguen en ejecución. En este caso, el motivo de finalización será MaxWallClockTimeExpiry.
+      Si no se especifica esta propiedad, no hay ningún límite de tiempo en tiempo de ejecución del trabajo.
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
