@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset'
+    name: FaceDetectorPreset
+    fullName: FaceDetectorPreset
+    children:
+      - '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+      - '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe todas las configuraciones que se usará al analizar un vídeo con el fin de detectar todas las caras presentes.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.FaceDetectorPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.FaceDetectorPreset"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    name: resolution
+    fullName: resolution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica la resolución máxima a la que se analiza el vídeo. El comportamiento predeterminado es "SourceResolution", lo que mantendrá la entrada de vídeo en su resolución original si se analizan.
+      Usar "StandardDefinition" cambiará de tamaño de los vídeos de entrada a la definición estándar conservando la relación de aspecto apropiada. Solo cambiará el tamaño si el vídeo de mayor resolución. Por ejemplo, una entrada de 1920 x 1080 podría ampliarse a 640 x 360 antes del procesamiento. Cambiar a "StandardDefinition" reducirá el tiempo necesario para el proceso de alta resolución video. También puede reducir el costo de usar este componente (consulte https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics para obtener más información).
+      Sin embargo, no se pueden detectar caras que acaban siendo demasiado pequeño en el vídeo cuyo tamaño ha cambiado. Los valores posibles son: 'SourceResolution', 'StandardDefinition'
+    optional: true
+    syntax:
+      content: 'resolution?: AnalysisResolution'
+      return:
+        type:
+          - '@azure/arm-mediaservices.AnalysisResolution'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.AnalysisResolution'
+    name: AnalysisResolution
+    spec.typeScript:
+      - name: AnalysisResolution
+        fullName: AnalysisResolution
+        uid: '@azure/arm-mediaservices.AnalysisResolution'
