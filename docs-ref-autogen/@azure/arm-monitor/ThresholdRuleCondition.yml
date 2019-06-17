@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition'
+    name: ThresholdRuleCondition
+    fullName: ThresholdRuleCondition
+    children:
+      - '@azure/arm-monitor.ThresholdRuleCondition.dataSource'
+      - '@azure/arm-monitor.ThresholdRuleCondition.odatatype'
+      - '@azure/arm-monitor.ThresholdRuleCondition.operator'
+      - '@azure/arm-monitor.ThresholdRuleCondition.threshold'
+      - '@azure/arm-monitor.ThresholdRuleCondition.timeAggregation'
+      - '@azure/arm-monitor.ThresholdRuleCondition.windowSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una condición de regla basada en una métrica cruza un umbral.
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.dataSource'
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: el recurso desde el que la regla recopila los datos. Para este tipo de origen de datos siempre será de tipo RuleMetricDataSource.
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSourceUnion'
+      return:
+        type:
+          - '@azure/arm-monitor.RuleDataSourceUnion'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition"'
+      return:
+        type:
+          - '"Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition"'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.operator'
+    name: operator
+    fullName: operator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'el operador que se utiliza para comparar los datos y el umbral. Los valores posibles son: ''GreaterThan'', ''GreaterThanOrEqual'', ''LessThan'', ''LessThanOrEqual'''
+    syntax:
+      content: 'operator: ConditionOperator'
+      return:
+        type:
+          - '@azure/arm-monitor.ConditionOperator'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.threshold'
+    name: threshold
+    fullName: threshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: el valor de umbral que activa la alerta.
+    syntax:
+      content: 'threshold: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.timeAggregation'
+    name: timeAggregation
+    fullName: timeAggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      el operador de agregación de tiempo. Cómo se deben combinar los datos que se recopilan con el tiempo.
+      El valor predeterminado es el PrimaryAggregationType de la métrica. Los valores posibles son: 'Medio', 'Mínimo', 'Máximo', 'Total', 'Last'
+    optional: true
+    syntax:
+      content: 'timeAggregation?: TimeAggregationOperator'
+      return:
+        type:
+          - '@azure/arm-monitor.TimeAggregationOperator'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ThresholdRuleCondition.windowSize'
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'el período de tiempo (en formato de duración ISO 8601) que se usa para supervisar la actividad de alerta según el umbral. Si se especifica, a continuación, debe estar entre 5 minutos y 1 día.'
+    optional: true
+    syntax:
+      content: 'windowSize?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.RuleDataSourceUnion'
+    name: RuleDataSourceUnion
+    spec.typeScript:
+      - name: RuleDataSourceUnion
+        fullName: RuleDataSourceUnion
+        uid: '@azure/arm-monitor.RuleDataSourceUnion'
+  - uid: '@azure/arm-monitor.ConditionOperator'
+    name: ConditionOperator
+    spec.typeScript:
+      - name: ConditionOperator
+        fullName: ConditionOperator
+        uid: '@azure/arm-monitor.ConditionOperator'
+  - uid: '@azure/arm-monitor.TimeAggregationOperator'
+    name: TimeAggregationOperator
+    spec.typeScript:
+      - name: TimeAggregationOperator
+        fullName: TimeAggregationOperator
+        uid: '@azure/arm-monitor.TimeAggregationOperator'
