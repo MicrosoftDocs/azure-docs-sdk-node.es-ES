@@ -13,6 +13,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayProbe.name'
       - '@azure/arm-network.ApplicationGatewayProbe.path'
       - '@azure/arm-network.ApplicationGatewayProbe.pickHostNameFromBackendHttpSettings'
+      - '@azure/arm-network.ApplicationGatewayProbe.port'
       - '@azure/arm-network.ApplicationGatewayProbe.protocol'
       - '@azure/arm-network.ApplicationGatewayProbe.provisioningState'
       - '@azure/arm-network.ApplicationGatewayProbe.timeout'
@@ -139,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: 'Ruta de acceso relativa del sondeo. Ruta de acceso válida se inicia desde ''/''. Sondeo se envía a <Protocol>://<host>:<port><path>'
+    summary: 'Ruta de acceso relativa del sondeo. Ruta de acceso válida se inicia desde ''/''. Sondeo se envía a <Protocol>://<host>:<port><path>.'
     optional: true
     syntax:
       content: 'path?: undefined | string'
@@ -161,6 +162,21 @@ items:
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayProbe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Puerto personalizado que se usará para el sondeo de los servidores back-end. Los intervalos de valor válido entre 1 y 65535. En caso de no configurada, puerto de http se usa la configuración. Esta propiedad sólo es válida para Standard_v2 y WAF_v2.'
+    optional: true
+    syntax:
+      content: 'port?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayProbe.protocol'
     name: protocol
