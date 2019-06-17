@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolPatchParameter'
+    name: PoolPatchParameter
+    fullName: PoolPatchParameter
+    children:
+      - '@azure/batch.PoolPatchParameter.applicationPackageReferences'
+      - '@azure/batch.PoolPatchParameter.certificateReferences'
+      - '@azure/batch.PoolPatchParameter.metadata'
+      - '@azure/batch.PoolPatchParameter.startTask'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="81cfa-101">Una interfaz que representa PoolPatchParameter.</span><span class="sxs-lookup"><span data-stu-id="81cfa-101">An interface representing PoolPatchParameter.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="81cfa-102">La lista de paquetes de aplicación se instale en cada nodo de proceso en el grupo.</span><span class="sxs-lookup"><span data-stu-id="81cfa-102">The list of application packages to be installed on each compute node in the pool.</span></span> <span data-ttu-id="81cfa-103">La lista reemplaza las referencias de paquete de aplicación existentes en el grupo.</span><span class="sxs-lookup"><span data-stu-id="81cfa-103">The list replaces any existing application package references on the pool.</span></span> <span data-ttu-id="81cfa-104">Los cambios realizados en las referencias de paquete de aplicación afectan a unir el grupo todos los nodos de proceso nuevo, pero no afectan a los nodos de proceso que ya están en el grupo hasta que se reinicia o se restablece la imagen inicial.</span><span class="sxs-lookup"><span data-stu-id="81cfa-104">Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="81cfa-105">Hay un máximo de 10 referencias de paquete de aplicación en un grupo determinado.</span><span class="sxs-lookup"><span data-stu-id="81cfa-105">There is a maximum of 10 application package references on any given pool.</span></span> <span data-ttu-id="81cfa-106">Si se omite, los paquetes de aplicación existentes se quedan referencias sin cambian.</span><span class="sxs-lookup"><span data-stu-id="81cfa-106">If omitted, any existing application package references are left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="81cfa-107">Una lista de certificados que deben instalarse en cada nodo de proceso en el grupo.</span><span class="sxs-lookup"><span data-stu-id="81cfa-107">A list of certificates to be installed on each compute node in the pool.</span></span> <span data-ttu-id="81cfa-108">Si este elemento está presente, reemplaza todas las referencias de certificados existente configuradas en el grupo.</span><span class="sxs-lookup"><span data-stu-id="81cfa-108">If this element is present, it replaces any existing certificate references configured on the pool.</span></span> <span data-ttu-id="81cfa-109">Si se omite, cualquier certificado existente, las referencias se dejan sin cambios.</span><span class="sxs-lookup"><span data-stu-id="81cfa-109">If omitted, any existing certificate references are left unchanged.</span></span> <span data-ttu-id="81cfa-110">Para nodos de proceso de Windows, el servicio Batch instala los certificados en el almacén de certificados especificada y la ubicación.</span><span class="sxs-lookup"><span data-stu-id="81cfa-110">For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location.</span></span> <span data-ttu-id="81cfa-111">Para nodos de proceso de Linux, los certificados se almacenan en un directorio en el directorio de trabajo de tarea y un entorno que az_batch_certificates_dir variable se proporciona a la tarea de consulta para esta ubicación.</span><span class="sxs-lookup"><span data-stu-id="81cfa-111">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="81cfa-112">Para los certificados con visibilidad "RemoteUser", se crea un directorio de "certificados" en el directorio principal del usuario (p. ej., / Home / {nombre de usuario} / certificados) y los certificados se colocan en ese directorio.</span><span class="sxs-lookup"><span data-stu-id="81cfa-112">For certificates with visibility of ''remoteUser'', a ''certs'' directory is created in the user''s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="81cfa-113">Una lista de pares de nombre-valor asociados al grupo como metadatos.</span><span class="sxs-lookup"><span data-stu-id="81cfa-113">A list of name-value pairs associated with the pool as metadata.</span></span> <span data-ttu-id="81cfa-114">Si este elemento está presente, reemplaza los metadatos existentes configurados en el grupo.</span><span class="sxs-lookup"><span data-stu-id="81cfa-114">If this element is present, it replaces any existing metadata configured on the pool.</span></span> <span data-ttu-id="81cfa-115">Si especifica una colección vacía, se quita cualquier metadato del grupo.</span><span class="sxs-lookup"><span data-stu-id="81cfa-115">If you specify an empty collection, any metadata is removed from the pool.</span></span> <span data-ttu-id="81cfa-116">Si se omite, los metadatos existentes se deja sin modificar.</span><span class="sxs-lookup"><span data-stu-id="81cfa-116">If omitted, any existing metadata is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="81cfa-117">Una tarea se ejecute en cada nodo de proceso cuando une al grupo.</span><span class="sxs-lookup"><span data-stu-id="81cfa-117">A task to run on each compute node as it joins the pool.</span></span> <span data-ttu-id="81cfa-118">La tarea se ejecuta cuando el nodo se agrega al grupo o cuando se reinicia el nodo.</span><span class="sxs-lookup"><span data-stu-id="81cfa-118">The task runs when the node is added to the pool or when the node is restarted.</span></span> <span data-ttu-id="81cfa-119">Si este elemento está presente, se sobrescribe cualquier tarea de inicio existente.</span><span class="sxs-lookup"><span data-stu-id="81cfa-119">If this element is present, it overwrites any existing start task.</span></span> <span data-ttu-id="81cfa-120">Si se omite, cualquier tarea de inicio existente se deja sin modificar.</span><span class="sxs-lookup"><span data-stu-id="81cfa-120">If omitted, any existing start task is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
