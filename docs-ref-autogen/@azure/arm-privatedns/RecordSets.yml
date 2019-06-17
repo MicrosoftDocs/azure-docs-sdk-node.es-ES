@@ -1,0 +1,903 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-privatedns.RecordSets'
+    name: RecordSets
+    fullName: RecordSets
+    children:
+      - '@azure/arm-privatedns.RecordSets.createOrUpdate'
+      - '@azure/arm-privatedns.RecordSets.createOrUpdate_2'
+      - '@azure/arm-privatedns.RecordSets.createOrUpdate_1'
+      - '@azure/arm-privatedns.RecordSets.deleteMethod'
+      - '@azure/arm-privatedns.RecordSets.deleteMethod_2'
+      - '@azure/arm-privatedns.RecordSets.deleteMethod_1'
+      - '@azure/arm-privatedns.RecordSets.get'
+      - '@azure/arm-privatedns.RecordSets.get_2'
+      - '@azure/arm-privatedns.RecordSets.get_1'
+      - '@azure/arm-privatedns.RecordSets.list'
+      - '@azure/arm-privatedns.RecordSets.list_2'
+      - '@azure/arm-privatedns.RecordSets.list_1'
+      - '@azure/arm-privatedns.RecordSets.listByType'
+      - '@azure/arm-privatedns.RecordSets.listByType_2'
+      - '@azure/arm-privatedns.RecordSets.listByType_1'
+      - '@azure/arm-privatedns.RecordSets.listByTypeNext'
+      - '@azure/arm-privatedns.RecordSets.listByTypeNext_2'
+      - '@azure/arm-privatedns.RecordSets.listByTypeNext_1'
+      - '@azure/arm-privatedns.RecordSets.listNext'
+      - '@azure/arm-privatedns.RecordSets.listNext_2'
+      - '@azure/arm-privatedns.RecordSets.listNext_1'
+      - '@azure/arm-privatedns.RecordSets.constructor'
+      - '@azure/arm-privatedns.RecordSets.update'
+      - '@azure/arm-privatedns.RecordSets.update_2'
+      - '@azure/arm-privatedns.RecordSets.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="cb67c-101">Clase que representa un conjuntos de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-101">Class representing a RecordSets.</span></span>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.createOrUpdate'
+    name: 'createOrUpdate(string, string, Models.RecordType, string, RecordSet, Models.RecordSetsCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cb67c-102">Crea o actualiza un conjunto dentro de una zona DNS privada de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-102">Creates or updates a record set within a Private DNS zone.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options?: Models.RecordSetsCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-103">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-103">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-104">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-104">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-105">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-105">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-106">Conjuntos de registros de tipo SOA se puede actualizar, pero no crea (se crean cuando se crea la zona DNS privada).</span><span class="sxs-lookup"><span data-stu-id="cb67c-106">Record sets of type SOA can be updated but not created (they are created when the Private DNS zone is created).</span></span> <span data-ttu-id="cb67c-107">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-107">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-108">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-108">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: <span data-ttu-id="cb67c-109">Parámetros proporcionados a la operación CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="cb67c-109">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, Models.RecordType, string, RecordSet, RecordSetsCreateOrUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options: RecordSetsCreateOrUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-110">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-110">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-111">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-111">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-112">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-112">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-113">Conjuntos de registros de tipo SOA se puede actualizar, pero no crea (se crean cuando se crea la zona DNS privada).</span><span class="sxs-lookup"><span data-stu-id="cb67c-113">Record sets of type SOA can be updated but not created (they are created when the Private DNS zone is created).</span></span> <span data-ttu-id="cb67c-114">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-114">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-115">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-115">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: <span data-ttu-id="cb67c-116">Parámetros proporcionados a la operación CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="cb67c-116">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsCreateOrUpdateOptionalParams'
+          description: <span data-ttu-id="cb67c-117">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="cb67c-117">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            <span data-ttu-id="cb67c-118">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, Models.RecordType, string, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-119">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-119">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-120">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-120">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-121">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-121">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-122">Conjuntos de registros de tipo SOA se puede actualizar, pero no crea (se crean cuando se crea la zona DNS privada).</span><span class="sxs-lookup"><span data-stu-id="cb67c-122">Record sets of type SOA can be updated but not created (they are created when the Private DNS zone is created).</span></span> <span data-ttu-id="cb67c-123">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-123">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-124">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-124">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: <span data-ttu-id="cb67c-125">Parámetros proporcionados a la operación CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="cb67c-125">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            <span data-ttu-id="cb67c-126">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.deleteMethod'
+    name: 'deleteMethod(string, string, Models.RecordType, string, Models.RecordSetsDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cb67c-127">Elimina un conjunto de registros desde una zona DNS privada.</span><span class="sxs-lookup"><span data-stu-id="cb67c-127">Deletes a record set from a Private DNS zone.</span></span> <span data-ttu-id="cb67c-128">Esta operación no se puede deshacer.</span><span class="sxs-lookup"><span data-stu-id="cb67c-128">This operation cannot be undone.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options?: Models.RecordSetsDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-129">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-129">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-130">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-130">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-131">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-131">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-132">Conjuntos de registros de tipo SOA no se puede eliminar (se eliminan cuando se elimina la zona DNS privada).</span><span class="sxs-lookup"><span data-stu-id="cb67c-132">Record sets of type SOA cannot be deleted (they are deleted when the Private DNS zone is deleted).</span></span> <span data-ttu-id="cb67c-133">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-133">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-134">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-134">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: options
+          type:
+            - Models.RecordSetsDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.deleteMethod_2'
+    name: 'deleteMethod(string, string, Models.RecordType, string, RecordSetsDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options: RecordSetsDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-135">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-135">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-136">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-136">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-137">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-137">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-138">Conjuntos de registros de tipo SOA no se puede eliminar (se eliminan cuando se elimina la zona DNS privada).</span><span class="sxs-lookup"><span data-stu-id="cb67c-138">Record sets of type SOA cannot be deleted (they are deleted when the Private DNS zone is deleted).</span></span> <span data-ttu-id="cb67c-139">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-139">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-140">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-140">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsDeleteMethodOptionalParams'
+          description: <span data-ttu-id="cb67c-141">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="cb67c-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cb67c-142">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.deleteMethod_1'
+    name: 'deleteMethod(string, string, Models.RecordType, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-143">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-143">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-144">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-144">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-145">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-145">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-146">Conjuntos de registros de tipo SOA no se puede eliminar (se eliminan cuando se elimina la zona DNS privada).</span><span class="sxs-lookup"><span data-stu-id="cb67c-146">Record sets of type SOA cannot be deleted (they are deleted when the Private DNS zone is deleted).</span></span> <span data-ttu-id="cb67c-147">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-147">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-148">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-148">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cb67c-149">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-149">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.get'
+    name: 'get(string, string, Models.RecordType, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cb67c-150">Obtiene un conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-150">Gets a record set.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-151">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-151">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-152">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-152">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-153">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-153">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-154">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-154">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-155">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-155">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.get_2'
+    name: 'get(string, string, Models.RecordType, string, RequestOptionsBase, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-156">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-156">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-157">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-157">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-158">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-158">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-159">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-159">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-160">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-160">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cb67c-161">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="cb67c-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            <span data-ttu-id="cb67c-162">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.get_1'
+    name: 'get(string, string, Models.RecordType, string, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-163">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-163">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-164">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-164">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-165">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-165">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-166">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-166">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-167">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-167">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            <span data-ttu-id="cb67c-168">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.list'
+    name: 'list(string, string, Models.RecordSetsListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cb67c-169">Enumera todos los conjuntos de registros en una zona DNS privada.</span><span class="sxs-lookup"><span data-stu-id="cb67c-169">Lists all record sets in a Private DNS zone.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, options?: Models.RecordSetsListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-170">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-170">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-171">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-171">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.list_2'
+    name: 'list(string, string, RecordSetsListOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, options: RecordSetsListOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-172">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-172">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-173">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-173">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsListOptionalParams'
+          description: <span data-ttu-id="cb67c-174">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="cb67c-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="cb67c-175">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.list_1'
+    name: 'list(string, string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-176">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-176">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-177">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-177">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="cb67c-178">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByType'
+    name: 'listByType(string, string, Models.RecordType, Models.RecordSetsListByTypeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cb67c-179">Enumera los conjuntos de registros de un tipo especificado en una zona DNS privada.</span><span class="sxs-lookup"><span data-stu-id="cb67c-179">Lists the record sets of a specified type in a Private DNS zone.</span></span>
+    syntax:
+      content: 'function listByType(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, options?: Models.RecordSetsListByTypeOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-180">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-180">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-181">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-181">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-182">Establece el tipo de registro a enumerar.</span><span class="sxs-lookup"><span data-stu-id="cb67c-182">The type of record sets to enumerate.</span></span> <span data-ttu-id="cb67c-183">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-183">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - Models.RecordSetsListByTypeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByType_2'
+    name: 'listByType(string, string, Models.RecordType, RecordSetsListByTypeOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, options: RecordSetsListByTypeOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-184">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-184">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-185">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-185">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-186">Establece el tipo de registro a enumerar.</span><span class="sxs-lookup"><span data-stu-id="cb67c-186">The type of record sets to enumerate.</span></span> <span data-ttu-id="cb67c-187">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-187">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsListByTypeOptionalParams'
+          description: <span data-ttu-id="cb67c-188">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="cb67c-188">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="cb67c-189">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByType_1'
+    name: 'listByType(string, string, Models.RecordType, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-190">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-190">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-191">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-191">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-192">Establece el tipo de registro a enumerar.</span><span class="sxs-lookup"><span data-stu-id="cb67c-192">The type of record sets to enumerate.</span></span> <span data-ttu-id="cb67c-193">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-193">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="cb67c-194">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByTypeNext'
+    name: 'listByTypeNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cb67c-195">Enumera los conjuntos de registros de un tipo especificado en una zona DNS privada.</span><span class="sxs-lookup"><span data-stu-id="cb67c-195">Lists the record sets of a specified type in a Private DNS zone.</span></span>
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-196">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="cb67c-196">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByTypeNext_2'
+    name: 'listByTypeNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-197">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="cb67c-197">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cb67c-198">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="cb67c-198">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="cb67c-199">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-199">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByTypeNext_1'
+    name: 'listByTypeNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-200">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="cb67c-200">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="cb67c-201">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-201">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cb67c-202">Enumera todos los conjuntos de registros en una zona DNS privada.</span><span class="sxs-lookup"><span data-stu-id="cb67c-202">Lists all record sets in a Private DNS zone.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-203">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="cb67c-203">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-204">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="cb67c-204">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cb67c-205">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="cb67c-205">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="cb67c-206">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-206">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listNext_1'
+    name: 'listNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-207">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="cb67c-207">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="cb67c-208">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-208">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.constructor'
+    name: RecordSets(PrivateDnsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cb67c-209">Crear un conjuntos de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-209">Create a RecordSets.</span></span>
+    syntax:
+      content: 'new RecordSets(client: PrivateDnsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+          description: |
+            <span data-ttu-id="cb67c-210">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="cb67c-210">Reference to the service client.</span></span>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.update'
+    name: 'update(string, string, Models.RecordType, string, RecordSet, Models.RecordSetsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cb67c-211">Actualiza un conjunto dentro de una zona DNS privada de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-211">Updates a record set within a Private DNS zone.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options?: Models.RecordSetsUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-212">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-212">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-213">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-213">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-214">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-214">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-215">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-215">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-216">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-216">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: <span data-ttu-id="cb67c-217">Parámetros proporcionados a la operación de actualización.</span><span class="sxs-lookup"><span data-stu-id="cb67c-217">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.update_2'
+    name: 'update(string, string, Models.RecordType, string, RecordSet, RecordSetsUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options: RecordSetsUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-218">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-218">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-219">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-219">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-220">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-220">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-221">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-221">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-222">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-222">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: <span data-ttu-id="cb67c-223">Parámetros proporcionados a la operación de actualización.</span><span class="sxs-lookup"><span data-stu-id="cb67c-223">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsUpdateOptionalParams'
+          description: <span data-ttu-id="cb67c-224">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="cb67c-224">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            <span data-ttu-id="cb67c-225">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-225">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.update_1'
+    name: 'update(string, string, Models.RecordType, string, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-226">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="cb67c-226">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="cb67c-227">El nombre de la zona de DNS privado (sin un punto de terminación).</span><span class="sxs-lookup"><span data-stu-id="cb67c-227">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="cb67c-228">El tipo de registro DNS en este conjunto de registros.</span><span class="sxs-lookup"><span data-stu-id="cb67c-228">The type of DNS record in this record set.</span></span> <span data-ttu-id="cb67c-229">Los valores posibles son: "A", "AAAA", "CNAME", "MX", "PTR", "SOA", "SRV", "TXT"</span><span class="sxs-lookup"><span data-stu-id="cb67c-229">Possible values include: ''A'', ''AAAA'', ''CNAME'', ''MX'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="cb67c-230">Establece el nombre del registro, en relación con el nombre de la zona.</span><span class="sxs-lookup"><span data-stu-id="cb67c-230">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: <span data-ttu-id="cb67c-231">Parámetros proporcionados a la operación de actualización.</span><span class="sxs-lookup"><span data-stu-id="cb67c-231">Parameters supplied to the Update operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            <span data-ttu-id="cb67c-232">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="cb67c-232">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-privatedns'
+references:
+  - uid: '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+    name: PrivateDnsManagementClientContext
+    spec.typeScript:
+      - name: PrivateDnsManagementClientContext
+        fullName: PrivateDnsManagementClientContext
+        uid: '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+  - uid: '@azure/arm-privatedns.RecordSet'
+    name: RecordSet
+    spec.typeScript:
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-privatedns.RecordSet'
+  - uid: ServiceCallback<@azure/arm-privatedns.RecordSet>
+    name: RecordSet>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-privatedns.RecordSet'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-privatedns.RecordSetsCreateOrUpdateOptionalParams'
+    name: RecordSetsCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsCreateOrUpdateOptionalParams
+        fullName: RecordSetsCreateOrUpdateOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsCreateOrUpdateOptionalParams'
+  - uid: '@azure/arm-privatedns.RecordSetsDeleteMethodOptionalParams'
+    name: RecordSetsDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: RecordSetsDeleteMethodOptionalParams
+        fullName: RecordSetsDeleteMethodOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+    name: RecordSetListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSetListResult
+        fullName: RecordSetListResult
+        uid: '@azure/arm-privatedns.RecordSetListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-privatedns.RecordSetsListOptionalParams'
+    name: RecordSetsListOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListOptionalParams
+        fullName: RecordSetsListOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsListOptionalParams'
+  - uid: '@azure/arm-privatedns.RecordSetsListByTypeOptionalParams'
+    name: RecordSetsListByTypeOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListByTypeOptionalParams
+        fullName: RecordSetsListByTypeOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsListByTypeOptionalParams'
+  - uid: '@azure/arm-privatedns.RecordSetsUpdateOptionalParams'
+    name: RecordSetsUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsUpdateOptionalParams
+        fullName: RecordSetsUpdateOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsUpdateOptionalParams'

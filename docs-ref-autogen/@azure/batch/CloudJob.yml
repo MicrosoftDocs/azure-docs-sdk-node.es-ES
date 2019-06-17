@@ -1,0 +1,482 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudJob'
+    name: CloudJob
+    fullName: CloudJob
+    children:
+      - '@azure/batch.CloudJob.commonEnvironmentSettings'
+      - '@azure/batch.CloudJob.constraints'
+      - '@azure/batch.CloudJob.creationTime'
+      - '@azure/batch.CloudJob.displayName'
+      - '@azure/batch.CloudJob.eTag'
+      - '@azure/batch.CloudJob.executionInfo'
+      - '@azure/batch.CloudJob.id'
+      - '@azure/batch.CloudJob.jobManagerTask'
+      - '@azure/batch.CloudJob.jobPreparationTask'
+      - '@azure/batch.CloudJob.jobReleaseTask'
+      - '@azure/batch.CloudJob.lastModified'
+      - '@azure/batch.CloudJob.metadata'
+      - '@azure/batch.CloudJob.networkConfiguration'
+      - '@azure/batch.CloudJob.onAllTasksComplete'
+      - '@azure/batch.CloudJob.onTaskFailure'
+      - '@azure/batch.CloudJob.poolInfo'
+      - '@azure/batch.CloudJob.previousState'
+      - '@azure/batch.CloudJob.previousStateTransitionTime'
+      - '@azure/batch.CloudJob.priority'
+      - '@azure/batch.CloudJob.state'
+      - '@azure/batch.CloudJob.stateTransitionTime'
+      - '@azure/batch.CloudJob.stats'
+      - '@azure/batch.CloudJob.url'
+      - '@azure/batch.CloudJob.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="90ade-101">Una interfaz que representa CloudJob.</span><span class="sxs-lookup"><span data-stu-id="90ade-101">An interface representing CloudJob.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="90ade-102">La lista de configuraciones de variables de entorno comunes.</span><span class="sxs-lookup"><span data-stu-id="90ade-102">The list of common environment variable settings.</span></span> <span data-ttu-id="90ade-103">Estas variables de entorno se establecen para todas las tareas del trabajo (incluidas las tareas de administrador de trabajos, preparación y liberación del trabajo).</span><span class="sxs-lookup"><span data-stu-id="90ade-103">These environment variables are set for all tasks in the job (including the Job Manager, Job Preparation and Job Release tasks).</span></span>
+      <span data-ttu-id="90ade-104">Configuración de entorno aquí especificada especificando el mismo nombre de configuración con otro valor puede reemplazarse por tareas individuales.</span><span class="sxs-lookup"><span data-stu-id="90ade-104">Individual tasks can override an environment setting specified here by specifying the same setting name with a different value.</span></span>
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-105">Restricciones de ejecución del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-105">The execution constraints for the job.</span></span>
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-106">La hora de creación del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-106">The creation time of the job.</span></span>
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-107">El nombre para mostrar para el trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-107">The display name for the job.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="90ade-108">El valor ETag del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-108">The ETag of the job.</span></span> <span data-ttu-id="90ade-109">Se trata de una cadena opaca.</span><span class="sxs-lookup"><span data-stu-id="90ade-109">This is an opaque string.</span></span> <span data-ttu-id="90ade-110">Puede usarlo para detectar si el trabajo ha cambiado entre las solicitudes.</span><span class="sxs-lookup"><span data-stu-id="90ade-110">You can use it to detect whether the job has changed between requests.</span></span> <span data-ttu-id="90ade-111">En concreto, puede pasar el valor ETag al actualizar un trabajo para especificar que los cambios surtirán efecto solo si nadie ha modificado mientras tanto el trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-111">In particular, you can be pass the ETag when updating a job to specify that your changes should take effect only if nobody else has modified the job in the meantime.</span></span>'
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.executionInfo'
+    name: executionInfo
+    fullName: executionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-112">La información de la ejecución del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-112">The execution information for the job.</span></span>
+    optional: true
+    syntax:
+      content: 'executionInfo?: JobExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.JobExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="90ade-113">Una cadena que identifica el trabajo dentro de la cuenta.</span><span class="sxs-lookup"><span data-stu-id="90ade-113">A string that uniquely identifies the job within the account.</span></span> <span data-ttu-id="90ade-114">El identificador es mantiene las mayúsculas y minúsculas (es decir, no se puede tener dos identificadores dentro de una cuenta que difieran solo por caso).</span><span class="sxs-lookup"><span data-stu-id="90ade-114">The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-115">Detalles de una tarea del Administrador de trabajos que se iniciará cuando se inicia el trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-115">Details of a Job Manager task to be launched when the job is started.</span></span>
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-116">La tarea de preparación del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-116">The Job Preparation task.</span></span> <span data-ttu-id="90ade-117">La tarea de preparación del trabajo es una tarea especial que se ejecute en cada nodo antes de cualquier otra tarea del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-117">The Job Preparation task is a special task run on each node before any other task of the job.</span></span>
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-118">La tarea de liberación del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-118">The Job Release task.</span></span> <span data-ttu-id="90ade-119">La tarea de liberación del trabajo es una tarea especial que se ejecutará al final del trabajo en cada nodo que cualquier otra tarea del trabajo se ha ejecutado.</span><span class="sxs-lookup"><span data-stu-id="90ade-119">The Job Release task is a special task run at the end of the job on each node that has run any other task of the job.</span></span>
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="90ade-120">La hora de última modificación del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-120">The last modified time of the job.</span></span> <span data-ttu-id="90ade-121">Se trata de la última vez en el que los datos de nivel de trabajo, como el estado del trabajo o prioridad, cambian.</span><span class="sxs-lookup"><span data-stu-id="90ade-121">This is the last time at which the job level data, such as the job state or priority, changed.</span></span> <span data-ttu-id="90ade-122">No tiene cabida en cambios en el nivel de tareas como agregar nuevas tareas o tareas de cambio de estado.</span><span class="sxs-lookup"><span data-stu-id="90ade-122">It does not factor in task-level changes such as adding new tasks or tasks changing state.</span></span>'
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-123">Una lista de pares de nombre-valor asociados al trabajo como metadatos.</span><span class="sxs-lookup"><span data-stu-id="90ade-123">A list of name-value pairs associated with the job as metadata.</span></span> <span data-ttu-id="90ade-124">El servicio Batch no asigna ningún significado a los metadatos; es únicamente para el uso de código de usuario.</span><span class="sxs-lookup"><span data-stu-id="90ade-124">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-125">La configuración de red para el trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-125">The network configuration for the job.</span></span>
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="90ade-126">La acción que debe realizar el servicio Batch cuando todas las tareas del trabajo están en estado completado.</span><span class="sxs-lookup"><span data-stu-id="90ade-126">The action the Batch service should take when all tasks in the job are in the completed state.</span></span>
+      <span data-ttu-id="90ade-127">El valor predeterminado es noaction.</span><span class="sxs-lookup"><span data-stu-id="90ade-127">The default is noaction.</span></span> <span data-ttu-id="90ade-128">Los valores posibles son: "noAction", "terminateJob"</span><span class="sxs-lookup"><span data-stu-id="90ade-128">Possible values include: 'noAction', 'terminateJob'</span></span>
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="90ade-129">La acción que debe realizar el servicio Batch cuando se produce un error en cualquier tarea del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-129">The action the Batch service should take when any task in the job fails.</span></span> <span data-ttu-id="90ade-130">Se considera que tiene una tarea con error si tiene un failureInfo.</span><span class="sxs-lookup"><span data-stu-id="90ade-130">A task is considered to have failed if has a failureInfo.</span></span> <span data-ttu-id="90ade-131">Se establece un failureInfo si la tarea se completa con un código de salida distinto de cero después de agotar su número de reintentos, o si se produjo un error al iniciar la tarea, por ejemplo debido a un archivo de recursos de error de descarga.</span><span class="sxs-lookup"><span data-stu-id="90ade-131">A failureInfo is set if the task completes with a non-zero exit code after exhausting its retry count, or if there was an error starting the task, for example due to a resource file download error.</span></span> <span data-ttu-id="90ade-132">El valor predeterminado es noaction.</span><span class="sxs-lookup"><span data-stu-id="90ade-132">The default is noaction.</span></span> <span data-ttu-id="90ade-133">Los valores posibles son: ''noAction'', ''performExitOptionsJobAction''</span><span class="sxs-lookup"><span data-stu-id="90ade-133">Possible values include: ''noAction'', ''performExitOptionsJobAction''</span></span>'
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-134">La configuración del grupo asociada con el trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-134">The pool settings associated with the job.</span></span>
+    optional: true
+    syntax:
+      content: 'poolInfo?: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="90ade-135">El estado anterior del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-135">The previous state of the job.</span></span> <span data-ttu-id="90ade-136">No se establece esta propiedad si el trabajo está en su estado activo inicial.</span><span class="sxs-lookup"><span data-stu-id="90ade-136">This property is not set if the job is in its initial Active state.</span></span> <span data-ttu-id="90ade-137">Los valores posibles son: ''active'', ''deshabilitar'', ''disabled'', ''Activar'', ''Finalizar'', ''completado'', ''deleting''</span><span class="sxs-lookup"><span data-stu-id="90ade-137">Possible values include: ''active'', ''disabling'', ''disabled'', ''enabling'', ''terminating'', ''completed'', ''deleting''</span></span>'
+    optional: true
+    syntax:
+      content: 'previousState?: JobState'
+      return:
+        type:
+          - '@azure/batch.JobState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-138">Hora a la que el trabajo entró en su estado anterior.</span><span class="sxs-lookup"><span data-stu-id="90ade-138">The time at which the job entered its previous state.</span></span> <span data-ttu-id="90ade-139">No se establece esta propiedad si el trabajo está en su estado activo inicial.</span><span class="sxs-lookup"><span data-stu-id="90ade-139">This property is not set if the job is in its initial Active state.</span></span>
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="90ade-140">prioridad del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-140">The priority of the job.</span></span> <span data-ttu-id="90ade-141">Los valores de prioridad pueden oscilar entre -1000 y 1000, siendo-1000 la prioridad más baja y 1000 la prioridad más alta.</span><span class="sxs-lookup"><span data-stu-id="90ade-141">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="90ade-142">El valor predeterminado es 0.</span><span class="sxs-lookup"><span data-stu-id="90ade-142">The default value is 0.</span></span>'
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="90ade-143">Estado actual del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-143">The current state of the job.</span></span> <span data-ttu-id="90ade-144">Los valores posibles son: ''active'', ''deshabilitar'', ''disabled'', ''Activar'', ''Finalizar'', ''completado'', ''deleting''</span><span class="sxs-lookup"><span data-stu-id="90ade-144">Possible values include: ''active'', ''disabling'', ''disabled'', ''enabling'', ''terminating'', ''completed'', ''deleting''</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: JobState'
+      return:
+        type:
+          - '@azure/batch.JobState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-145">Hora a la que el trabajo entró en su estado actual.</span><span class="sxs-lookup"><span data-stu-id="90ade-145">The time at which the job entered its current state.</span></span>
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="90ade-146">Estadísticas de uso de recursos para toda la duración del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-146">Resource usage statistics for the entire lifetime of the job.</span></span> <span data-ttu-id="90ade-147">Esta propiedad solo se rellena si se ha recuperado la CloudJob con una cláusula expand, incluido el atributo ''estadísticas''; en caso contrario, es null.</span><span class="sxs-lookup"><span data-stu-id="90ade-147">This property is populated only if the CloudJob was retrieved with an expand clause including the ''stats'' attribute; otherwise it is null.</span></span> <span data-ttu-id="90ade-148">Las estadísticas no estén inmediatamente disponibles.</span><span class="sxs-lookup"><span data-stu-id="90ade-148">The statistics may not be immediately available.</span></span> <span data-ttu-id="90ade-149">El servicio Batch realiza acumulación periódica de las estadísticas.</span><span class="sxs-lookup"><span data-stu-id="90ade-149">The Batch service performs periodic roll-up of statistics.</span></span> <span data-ttu-id="90ade-150">El retraso normal es aproximadamente 30 minutos.</span><span class="sxs-lookup"><span data-stu-id="90ade-150">The typical delay is about 30 minutes.</span></span>'
+    optional: true
+    syntax:
+      content: 'stats?: JobStatistics'
+      return:
+        type:
+          - '@azure/batch.JobStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-151">La dirección URL del trabajo.</span><span class="sxs-lookup"><span data-stu-id="90ade-151">The URL of the job.</span></span>
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90ade-152">Si las tareas del trabajo pueden definir las dependencias entre sí.</span><span class="sxs-lookup"><span data-stu-id="90ade-152">Whether tasks in the job can define dependencies on each other.</span></span> <span data-ttu-id="90ade-153">El valor predeterminado es false.</span><span class="sxs-lookup"><span data-stu-id="90ade-153">The default is false.</span></span>
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobExecutionInformation'
+    name: JobExecutionInformation
+    spec.typeScript:
+      - name: JobExecutionInformation
+        fullName: JobExecutionInformation
+        uid: '@azure/batch.JobExecutionInformation'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
+  - uid: '@azure/batch.JobState'
+    name: JobState
+    spec.typeScript:
+      - name: JobState
+        fullName: JobState
+        uid: '@azure/batch.JobState'
+  - uid: '@azure/batch.JobStatistics'
+    name: JobStatistics
+    spec.typeScript:
+      - name: JobStatistics
+        fullName: JobStatistics
+        uid: '@azure/batch.JobStatistics'

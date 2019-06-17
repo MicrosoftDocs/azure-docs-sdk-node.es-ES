@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ActivityLogsListOptionalParams'
+    name: ActivityLogsListOptionalParams
+    fullName: ActivityLogsListOptionalParams
+    children:
+      - '@azure/arm-monitor.ActivityLogsListOptionalParams.abortSignal'
+      - '@azure/arm-monitor.ActivityLogsListOptionalParams.customHeaders'
+      - '@azure/arm-monitor.ActivityLogsListOptionalParams.filter'
+      - '@azure/arm-monitor.ActivityLogsListOptionalParams.onDownloadProgress'
+      - '@azure/arm-monitor.ActivityLogsListOptionalParams.onUploadProgress'
+      - '@azure/arm-monitor.ActivityLogsListOptionalParams.select'
+      - '@azure/arm-monitor.ActivityLogsListOptionalParams.timeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="0cf92-101">Parámetros opcionales.</span><span class="sxs-lookup"><span data-stu-id="0cf92-101">Optional Parameters.</span></span>
+    extends:
+      name: RequestOptionsBase
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ActivityLogsListOptionalParams.abortSignal'
+    name: abortSignal
+    fullName: abortSignal
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0cf92-102">La señal que se puede usar para anular las solicitudes.</span><span class="sxs-lookup"><span data-stu-id="0cf92-102">The signal which can be used to abort requests.</span></span>
+    optional: true
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type:
+          - AbortSignalLike
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ActivityLogsListOptionalParams.customHeaders'
+    name: customHeaders
+    fullName: customHeaders
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0cf92-103">objeto de {} [customHeaders] Encabezados de solicitud personalizado que se aplicará antes de enviar la solicitud definido por el usuario.</span><span class="sxs-lookup"><span data-stu-id="0cf92-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    optional: true
+    syntax:
+      content: 'customHeaders?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ActivityLogsListOptionalParams.filter'
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0cf92-104">Reduce el conjunto de datos recopilados.</span><span class="sxs-lookup"><span data-stu-id="0cf92-104">Reduces the set of data collected.</span></span><br><span data-ttu-id="0cf92-105">El **$filter** argumento está muy restringido y permite sólo los siguientes patrones.</span><span class="sxs-lookup"><span data-stu-id="0cf92-105">The **$filter** argument is very restricted and allows only the following patterns.</span></span><br><span data-ttu-id="0cf92-106">- *Lista de eventos para un grupo de recursos*: $filter = marca horaria del evento ge '' 2014-07-16T04:36:37.6407898Z'' y le marca horaria del evento '' 2014-07-20T04:36:37.6407898Z'' y resourceGroupName eq ''resourceGroupName''.</span><span class="sxs-lookup"><span data-stu-id="0cf92-106">- *List events for a resource group*: $filter=eventTimestamp ge ''2014-07-16T04:36:37.6407898Z'' and eventTimestamp le ''2014-07-20T04:36:37.6407898Z'' and resourceGroupName eq ''resourceGroupName''.</span></span><br><span data-ttu-id="0cf92-107">- *Lista de eventos para el recurso*: $filter = marca horaria del evento ge '' 2014-07-16T04:36:37.6407898Z'' y le marca horaria del evento '' 2014-07-20T04:36:37.6407898Z'' y resourceUri eq ''resourceURI''.</span><span class="sxs-lookup"><span data-stu-id="0cf92-107">- *List events for resource*: $filter=eventTimestamp ge ''2014-07-16T04:36:37.6407898Z'' and eventTimestamp le ''2014-07-20T04:36:37.6407898Z'' and resourceUri eq ''resourceURI''.</span></span><br><span data-ttu-id="0cf92-108">- *Lista de eventos de una suscripción en un intervalo de tiempo*: $filter = marca horaria del evento ge '' 2014-07-16T04:36:37.6407898Z'' y le marca horaria del evento '' 2014-07-20T04:36:37.6407898Z''.</span><span class="sxs-lookup"><span data-stu-id="0cf92-108">- *List events for a subscription in a time range*: $filter=eventTimestamp ge ''2014-07-16T04:36:37.6407898Z'' and eventTimestamp le ''2014-07-20T04:36:37.6407898Z''.</span></span><br><span data-ttu-id="0cf92-109">- *Lista de eventos para un proveedor de recursos*: $filter = marca horaria del evento ge '' 2014-07-16T04:36:37.6407898Z'' y le marca horaria del evento '' 2014-07-20T04:36:37.6407898Z'' y resourceProvider eq ''resourceProviderName''.</span><span class="sxs-lookup"><span data-stu-id="0cf92-109">- *List events for a resource provider*: $filter=eventTimestamp ge ''2014-07-16T04:36:37.6407898Z'' and eventTimestamp le ''2014-07-20T04:36:37.6407898Z'' and resourceProvider eq ''resourceProviderName''.</span></span><br><span data-ttu-id="0cf92-110">- *Lista de eventos para un identificador de correlación*: $filter = marca horaria del evento ge '' 2014-07-16T04:36:37.6407898Z'' y le marca horaria del evento '' 2014-07-20T04:36:37.6407898Z'' y correlationId eq ''correlationID''.</span><span class="sxs-lookup"><span data-stu-id="0cf92-110">- *List events for a correlation Id*: $filter=eventTimestamp ge ''2014-07-16T04:36:37.6407898Z'' and eventTimestamp le ''2014-07-20T04:36:37.6407898Z'' and correlationId eq ''correlationID''.</span></span><br><br><span data-ttu-id="0cf92-111">**NOTA**: No se permite ninguna otra sintaxis.</span><span class="sxs-lookup"><span data-stu-id="0cf92-111">**NOTE**: No other syntax is allowed.</span></span>'
+    optional: true
+    syntax:
+      content: 'filter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ActivityLogsListOptionalParams.onDownloadProgress'
+    name: onDownloadProgress
+    fullName: onDownloadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0cf92-112">Devolución de llamada que se desencadena al progreso de la descarga.</span><span class="sxs-lookup"><span data-stu-id="0cf92-112">Callback which fires upon download progress.</span></span>
+    optional: true
+    syntax:
+      content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ActivityLogsListOptionalParams.onUploadProgress'
+    name: onUploadProgress
+    fullName: onUploadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0cf92-113">Devolución de llamada que se desencadena al progreso de carga.</span><span class="sxs-lookup"><span data-stu-id="0cf92-113">Callback which fires upon upload progress.</span></span>
+    optional: true
+    syntax:
+      content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ActivityLogsListOptionalParams.select'
+    name: select
+    fullName: select
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0cf92-114">Se utiliza para capturar los eventos con solo las propiedades.</span><span class="sxs-lookup"><span data-stu-id="0cf92-114">Used to fetch events with only the given properties.</span></span><br><span data-ttu-id="0cf92-115">El **$select** argumento es una lista separada por comas de nombres de propiedad va a devolver.</span><span class="sxs-lookup"><span data-stu-id="0cf92-115">The **$select** argument is a comma separated list of property names to be returned.</span></span> <span data-ttu-id="0cf92-116">Los valores posibles son: *autorización*, *notificaciones*, *correlationId*, *descripción*, *eventDataId*, *eventName*, *marca horaria del evento*, *httpRequest*, *nivel*, *operationId*, *operationName*, *propiedades*, *resourceGroupName*, *resourceProviderName*, \* resourceId\*, *estado*, *submissionTimestamp*, *subestado*, *subscriptionId*</span><span class="sxs-lookup"><span data-stu-id="0cf92-116">Possible values are: *authorization*, *claims*, *correlationId*, *description*, *eventDataId*, *eventName*, *eventTimestamp*, *httpRequest*, *level*, *operationId*, *operationName*, *properties*, *resourceGroupName*, *resourceProviderName*, *resourceId*, *status*, *submissionTimestamp*, *subStatus*, *subscriptionId*</span></span>'
+    optional: true
+    syntax:
+      content: 'select?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ActivityLogsListOptionalParams.timeout'
+    name: timeout
+    fullName: timeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0cf92-117">El número de milisegundos que una solicitud puede tomar antes de finalizar automáticamente.</span><span class="sxs-lookup"><span data-stu-id="0cf92-117">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    optional: true
+    syntax:
+      content: 'timeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-monitor'
