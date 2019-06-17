@@ -5,6 +5,7 @@ items:
     fullName: NetworkManagementClientContext
     children:
       - '@azure/arm-network.NetworkManagementClientContext.acceptLanguage'
+      - '@azure/arm-network.NetworkManagementClientContext.apiVersion'
       - '@azure/arm-network.NetworkManagementClientContext.beginLongRunningRequest'
       - '@azure/arm-network.NetworkManagementClientContext.credentials'
       - '@azure/arm-network.NetworkManagementClientContext.longRunningOperationRetryTimeout'
@@ -36,20 +37,35 @@ items:
         type:
           - string
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClientContext.apiVersion'
+    name: apiVersion
+    fullName: apiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'apiVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClientContext.beginLongRunningRequest'
     name: 'beginLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="85883-101">Enviar la solicitud inicial de un LRO (larga ejecución como operación) y obtener un HttpLongRunningOperationResponse que proporciona métodos para sondear el LRO y comprobar si el LRO finalizada.</span><span class="sxs-lookup"><span data-stu-id="85883-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="6c17c-101">Enviar la solicitud inicial de un LRO (larga ejecución como operación) y obtener un HttpLongRunningOperationResponse que proporciona métodos para sondear el LRO y comprobar si el LRO finalizada.</span><span class="sxs-lookup"><span data-stu-id="6c17c-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="85883-102">El objeto de solicitud</span><span class="sxs-lookup"><span data-stu-id="85883-102">The request object</span></span>
+          description: <span data-ttu-id="6c17c-102">El objeto de solicitud</span><span class="sxs-lookup"><span data-stu-id="6c17c-102">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -80,7 +96,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="85883-103">El tiempo de espera de reintento en segundos para las operaciones de ejecución larga.</span><span class="sxs-lookup"><span data-stu-id="85883-103">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="85883-104">El valor predeterminado es 30.</span><span class="sxs-lookup"><span data-stu-id="85883-104">Default value is 30.</span></span>
+    summary: <span data-ttu-id="6c17c-103">El tiempo de espera de reintento en segundos para las operaciones de ejecución larga.</span><span class="sxs-lookup"><span data-stu-id="6c17c-103">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="6c17c-104">El valor predeterminado es 30.</span><span class="sxs-lookup"><span data-stu-id="6c17c-104">Default value is 30.</span></span>
     optional: true
     syntax:
       content: 'longRunningOperationRetryTimeout?: undefined | number'
@@ -94,18 +110,18 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="85883-105">Inicializa una nueva instancia de la clase NetworkManagementClient.</span><span class="sxs-lookup"><span data-stu-id="85883-105">Initializes a new instance of the NetworkManagementClient class.</span></span>
+    summary: <span data-ttu-id="6c17c-105">Inicializa una nueva instancia de la clase NetworkManagementClient.</span><span class="sxs-lookup"><span data-stu-id="6c17c-105">Initializes a new instance of the NetworkManagementClient class.</span></span>
     syntax:
       content: 'new NetworkManagementClientContext(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.NetworkManagementClientOptions)'
       parameters:
         - id: credentials
           type:
             - ServiceClientCredentials
-          description: <span data-ttu-id="85883-106">Credenciales necesarias para que el cliente para conectarse a Azure.</span><span class="sxs-lookup"><span data-stu-id="85883-106">Credentials needed for the client to connect to Azure.</span></span>
+          description: <span data-ttu-id="6c17c-106">Credenciales necesarias para que el cliente para conectarse a Azure.</span><span class="sxs-lookup"><span data-stu-id="6c17c-106">Credentials needed for the client to connect to Azure.</span></span>
         - id: subscriptionId
           type:
             - string
-          description: <span data-ttu-id="85883-107">Las credenciales de suscripción que identifican de forma única la suscripción de Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="85883-107">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="85883-108">El identificador de suscripción forma parte del URI para cada llamada al servicio.</span><span class="sxs-lookup"><span data-stu-id="85883-108">The subscription ID forms part of the URI for every service call.</span></span>
+          description: <span data-ttu-id="6c17c-107">Las credenciales de suscripción que identifican de forma única la suscripción de Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="6c17c-107">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="6c17c-108">El identificador de suscripción forma parte del URI para cada llamada al servicio.</span><span class="sxs-lookup"><span data-stu-id="6c17c-108">The subscription ID forms part of the URI for every service call.</span></span>
         - id: options
           type:
             - Models.NetworkManagementClientOptions
@@ -118,7 +134,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="85883-109">Restaurar un LROPoller desde el LROPollState proporcionado.</span><span class="sxs-lookup"><span data-stu-id="85883-109">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="85883-110">Este método puede utilizarse para volver a crear un LROPoller en una máquina o un proceso diferente.</span><span class="sxs-lookup"><span data-stu-id="85883-110">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    summary: <span data-ttu-id="6c17c-109">Restaurar un LROPoller desde el LROPollState proporcionado.</span><span class="sxs-lookup"><span data-stu-id="6c17c-109">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="6c17c-110">Este método puede utilizarse para volver a crear un LROPoller en una máquina o un proceso diferente.</span><span class="sxs-lookup"><span data-stu-id="6c17c-110">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
     syntax:
       content: 'function restoreLROPoller(lroPollState: LROPollState)'
       parameters:
@@ -136,14 +152,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="85883-111">Proporciona un mecanismo para realizar una solicitud que se sondean y proporcionará el resultado final.</span><span class="sxs-lookup"><span data-stu-id="85883-111">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    summary: <span data-ttu-id="6c17c-111">Proporciona un mecanismo para realizar una solicitud que se sondean y proporcionará el resultado final.</span><span class="sxs-lookup"><span data-stu-id="6c17c-111">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
     syntax:
       content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="85883-112">El objeto de solicitud</span><span class="sxs-lookup"><span data-stu-id="85883-112">The request object</span></span>
+          description: <span data-ttu-id="6c17c-112">El objeto de solicitud</span><span class="sxs-lookup"><span data-stu-id="6c17c-112">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -159,22 +175,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="85883-113">Enviar la solicitud inicial de un LRO (larga ejecución como operación) y obtener un LROPoller que proporciona métodos para sondear el LRO y comprobar si el LRO finalizada.</span><span class="sxs-lookup"><span data-stu-id="85883-113">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="6c17c-113">Enviar la solicitud inicial de un LRO (larga ejecución como operación) y obtener un LROPoller que proporciona métodos para sondear el LRO y comprobar si el LRO finalizada.</span><span class="sxs-lookup"><span data-stu-id="6c17c-113">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="85883-114">Los argumentos para la operación.</span><span class="sxs-lookup"><span data-stu-id="85883-114">The arguments to the operation.</span></span>
+          description: <span data-ttu-id="6c17c-114">Los argumentos para la operación.</span><span class="sxs-lookup"><span data-stu-id="6c17c-114">The arguments to the operation.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="85883-115">La especificación para la operación.</span><span class="sxs-lookup"><span data-stu-id="85883-115">The specification for the operation.</span></span>
+          description: <span data-ttu-id="6c17c-115">La especificación para la operación.</span><span class="sxs-lookup"><span data-stu-id="6c17c-115">The specification for the operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="85883-116">Opciones adicionales para enviarse al realizar la solicitud.</span><span class="sxs-lookup"><span data-stu-id="85883-116">Additional options to be sent while making the request.</span></span>
+          description: <span data-ttu-id="6c17c-116">Opciones adicionales para enviarse al realizar la solicitud.</span><span class="sxs-lookup"><span data-stu-id="6c17c-116">Additional options to be sent while making the request.</span></span>
           optional: true
       return:
         type:
@@ -186,23 +202,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="85883-117">Enviar una solicitud HTTP que se rellena con el OperationSpec proporcionado.</span><span class="sxs-lookup"><span data-stu-id="85883-117">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    summary: <span data-ttu-id="6c17c-117">Enviar una solicitud HTTP que se rellena con el OperationSpec proporcionado.</span><span class="sxs-lookup"><span data-stu-id="6c17c-117">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
     syntax:
       content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="85883-118">Los argumentos que se rellenarán los valores de la solicitud HTTP con plantillas de.</span><span class="sxs-lookup"><span data-stu-id="85883-118">The arguments that the HTTP request's templated values will be populated from.</span></span>
+          description: <span data-ttu-id="6c17c-118">Los argumentos que se rellenarán los valores de la solicitud HTTP con plantillas de.</span><span class="sxs-lookup"><span data-stu-id="6c17c-118">The arguments that the HTTP request's templated values will be populated from.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="85883-119">OperationSpec debe usar para rellenar la solicitud HTTP.</span><span class="sxs-lookup"><span data-stu-id="85883-119">The OperationSpec to use to populate the httpRequest.</span></span>
+          description: <span data-ttu-id="6c17c-119">OperationSpec debe usar para rellenar la solicitud HTTP.</span><span class="sxs-lookup"><span data-stu-id="6c17c-119">The OperationSpec to use to populate the httpRequest.</span></span>
         - id: callback
           type:
             - ServiceCallback<any>
           description: |
-            <span data-ttu-id="85883-120">La devolución de llamada cuando se recibe la respuesta.</span><span class="sxs-lookup"><span data-stu-id="85883-120">The callback to call when the response is received.</span></span>
+            <span data-ttu-id="6c17c-120">La devolución de llamada cuando se recibe la respuesta.</span><span class="sxs-lookup"><span data-stu-id="6c17c-120">The callback to call when the response is received.</span></span>
           optional: true
       return:
         type:
@@ -214,7 +230,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="85883-121">Enviar la solicitud HTTP proporcionada.</span><span class="sxs-lookup"><span data-stu-id="85883-121">Send the provided httpRequest.</span></span>
+    summary: <span data-ttu-id="6c17c-121">Enviar la solicitud HTTP proporcionada.</span><span class="sxs-lookup"><span data-stu-id="6c17c-121">Send the provided httpRequest.</span></span>
     syntax:
       content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
       parameters:
