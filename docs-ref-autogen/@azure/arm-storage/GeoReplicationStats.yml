@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.GeoReplicationStats'
+    name: GeoReplicationStats
+    fullName: GeoReplicationStats
+    children:
+      - '@azure/arm-storage.GeoReplicationStats.canFailover'
+      - '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+      - '@azure/arm-storage.GeoReplicationStats.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Estadísticas relacionadas con la replicación para la cuenta de almacenamiento Blob, tabla, cola y archivo de servicios. Solo está disponible cuando se habilita la replicación con redundancia geográfica para la cuenta de almacenamiento.'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.canFailover'
+    name: canFailover
+    fullName: canFailover
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Una marca booleana que indica si se admite la conmutación por error de cuenta para la cuenta.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'canFailover?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+    name: lastSyncTime
+    fullName: lastSyncTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Todas las escrituras primarias anteriores esta fecha y hora UTC valor se garantiza que esté disponible para las operaciones de lectura. Las escrituras principales posteriores a este momento dado pueden o no estén disponibles para las lecturas.
+      Elemento puede ser el valor predeterminado si el valor de LastSyncTime no está disponible, esto puede suceder si secundaria está sin conexión o se encuentran en bootstrap.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'lastSyncTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de la ubicación secundaria. Los valores posibles son: - en vivo: Indica que la ubicación secundaria está activa y operativa. -Bootstrap: Indica que la sincronización inicial de la ubicación principal a la ubicación secundaria está en curso. Esto suele ocurrir cuando la replicación se habilita por primera vez. -No disponible: Indica que la ubicación secundaria no está disponible temporalmente. Los valores posibles son: ''Live'', ''arrancar'', ''Disponible'' **Nota: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**'
+    optional: true
+    syntax:
+      content: 'status?: GeoReplicationStatus'
+      return:
+        type:
+          - '@azure/arm-storage.GeoReplicationStatus'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.GeoReplicationStatus'
+    name: GeoReplicationStatus
+    spec.typeScript:
+      - name: GeoReplicationStatus
+        fullName: GeoReplicationStatus
+        uid: '@azure/arm-storage.GeoReplicationStatus'

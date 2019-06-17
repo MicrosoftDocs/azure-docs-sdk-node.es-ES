@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskDependencies'
+    name: TaskDependencies
+    fullName: TaskDependencies
+    children:
+      - '@azure/batch.TaskDependencies.taskIdRanges'
+      - '@azure/batch.TaskDependencies.taskIds'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa TaskDependencies.
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskDependencies.taskIdRanges'
+    name: taskIdRanges
+    fullName: taskIdRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La lista de intervalos de Id. de tarea que depende esta tarea. Todas las tareas en todos los intervalos deben completarse correctamente antes de que se puede programar la tarea dependiente.
+    optional: true
+    syntax:
+      content: 'taskIdRanges?: TaskIdRange[]'
+      return:
+        type:
+          - '@azure/batch.TaskIdRange[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskDependencies.taskIds'
+    name: taskIds
+    fullName: taskIds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La lista de identificadores que esta tarea depende de la tarea. Todas las tareas de esta lista deben completarse correctamente antes de que se puede programar la tarea dependiente. La colección del elemento taskIds se limita a 64000 caracteres en total (es decir, la longitud combinada de todos los identificadores de tarea). Si la colección del elemento taskIds supera la longitud máxima, la solicitud agregar tarea produce un error con código de error TaskDependencyListTooLong. En este caso, considere la posibilidad de usar intervalos de Id. de tarea en su lugar.'
+    optional: true
+    syntax:
+      content: 'taskIds?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskIdRange[]'
+    name: 'TaskIdRange[]'
+    spec.typeScript:
+      - name: TaskIdRange
+        fullName: TaskIdRange
+        uid: '@azure/batch.TaskIdRange'
+      - name: '[]'
+        fullName: '[]'

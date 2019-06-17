@@ -1,0 +1,410 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ComputeNode'
+    name: ComputeNode
+    fullName: ComputeNode
+    children:
+      - '@azure/batch.ComputeNode.affinityId'
+      - '@azure/batch.ComputeNode.allocationTime'
+      - '@azure/batch.ComputeNode.certificateReferences'
+      - '@azure/batch.ComputeNode.endpointConfiguration'
+      - '@azure/batch.ComputeNode.errors'
+      - '@azure/batch.ComputeNode.id'
+      - '@azure/batch.ComputeNode.ipAddress'
+      - '@azure/batch.ComputeNode.isDedicated'
+      - '@azure/batch.ComputeNode.lastBootTime'
+      - '@azure/batch.ComputeNode.nodeAgentInfo'
+      - '@azure/batch.ComputeNode.recentTasks'
+      - '@azure/batch.ComputeNode.runningTasksCount'
+      - '@azure/batch.ComputeNode.schedulingState'
+      - '@azure/batch.ComputeNode.startTask'
+      - '@azure/batch.ComputeNode.startTaskInfo'
+      - '@azure/batch.ComputeNode.state'
+      - '@azure/batch.ComputeNode.stateTransitionTime'
+      - '@azure/batch.ComputeNode.totalTasksRun'
+      - '@azure/batch.ComputeNode.totalTasksSucceeded'
+      - '@azure/batch.ComputeNode.url'
+      - '@azure/batch.ComputeNode.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa ComputeNode.
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.affinityId'
+    name: affinityId
+    fullName: affinityId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un identificador que se puede pasar cuando se agrega una tarea para solicitar que la tarea programada en este nodo. Tenga en cuenta que esto es simplemente una afinidad parcial. Si el nodo de destino está ocupado o no está disponible en el momento en que se programa la tarea, la tarea se programará en otro lugar.'
+    optional: true
+    syntax:
+      content: 'affinityId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.allocationTime'
+    name: allocationTime
+    fullName: allocationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La hora a la que este nodo de proceso se ha asignado al grupo. Se trata de la hora cuando el nodo se asignó inicialmente y no cambia una vez establecido. No se actualiza cuando el nodo es el servicio ha reparado o reemplazan.
+    optional: true
+    syntax:
+      content: 'allocationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La lista de certificados instalados en el nodo de proceso. Para nodos de proceso de Windows, el servicio Batch instala los certificados en el almacén de certificados especificada y la ubicación. Para nodos de proceso de Linux, los certificados se almacenan en un directorio en el directorio de trabajo de tarea y un entorno que az_batch_certificates_dir variable se proporciona a la tarea de consulta para esta ubicación. Para los certificados con visibilidad "RemoteUser", se crea un directorio de "certificados" en el directorio principal del usuario (p. ej., / Home / {nombre de usuario} / certificados) y los certificados se colocan en ese directorio.'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.endpointConfiguration'
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La configuración de punto de conexión para el nodo de proceso.
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: ComputeNodeEndpointConfiguration'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeEndpointConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.errors'
+    name: errors
+    fullName: errors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La lista de errores que se ha detectado actualmente por el nodo de proceso.
+    optional: true
+    syntax:
+      content: 'errors?: ComputeNodeError[]'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeError[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El identificador del nodo de proceso. Todos los nodos que se agregan a un grupo se asigna un identificador único.
+      Cada vez que se quita un nodo de un grupo, se eliminan todos los archivos locales y el identificador se recupera y se podría reutilizar para los nuevos nodos.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.ipAddress'
+    name: ipAddress
+    fullName: ipAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La dirección IP que otros nodos de proceso que pueden usar para comunicarse con este nodo de proceso. Todos los nodos que se agregan a un grupo se asigna una dirección IP única. Cada vez que se quita un nodo de un grupo, se eliminan todos los archivos locales y la dirección IP se recupera y se podría reutilizar para los nuevos nodos.'
+    optional: true
+    syntax:
+      content: 'ipAddress?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.isDedicated'
+    name: isDedicated
+    fullName: isDedicated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si este nodo de proceso es un nodo dedicado. Si es false, el nodo es un nodo de prioridad baja.'
+    optional: true
+    syntax:
+      content: 'isDedicated?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.lastBootTime'
+    name: lastBootTime
+    fullName: lastBootTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La última hora a la que se inició el nodo de proceso. Esta propiedad no puede estar presente si el estado del nodo es inutilizable.
+    optional: true
+    syntax:
+      content: 'lastBootTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.nodeAgentInfo'
+    name: nodeAgentInfo
+    fullName: nodeAgentInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Información acerca de la versión del agente de nodo y la hora en el nodo actualizado a una nueva versión.
+    optional: true
+    syntax:
+      content: 'nodeAgentInfo?: NodeAgentInformation'
+      return:
+        type:
+          - '@azure/batch.NodeAgentInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.recentTasks'
+    name: recentTasks
+    fullName: recentTasks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una lista de tareas cuyo estado ha cambiado recientemente. Esta propiedad solo está presente si se ha ejecutado al menos una tarea en este nodo desde que se asignó al grupo.
+    optional: true
+    syntax:
+      content: 'recentTasks?: TaskInformation[]'
+      return:
+        type:
+          - '@azure/batch.TaskInformation[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.runningTasksCount'
+    name: runningTasksCount
+    fullName: runningTasksCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El número total de las tareas de trabajo en ejecución en el nodo de proceso. Esto incluye las tareas del Administrador de trabajos y tareas normales, pero no las tareas de preparación del trabajo, la liberación del trabajo o inicio.'
+    optional: true
+    syntax:
+      content: 'runningTasksCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.schedulingState'
+    name: schedulingState
+    fullName: schedulingState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si el nodo de proceso está disponible para programación de tareas. Los valores posibles son: ''enabled'', ''deshabilitado'''
+    optional: true
+    syntax:
+      content: 'schedulingState?: SchedulingState'
+      return:
+        type:
+          - '@azure/batch.SchedulingState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La tarea especificada que se ejecute en el nodo de proceso cuando une al grupo.
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.startTaskInfo'
+    name: startTaskInfo
+    fullName: startTaskInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Información de tiempo de ejecución sobre la ejecución de la tarea de inicio en el nodo de proceso.
+    optional: true
+    syntax:
+      content: 'startTaskInfo?: StartTaskInformation'
+      return:
+        type:
+          - '@azure/batch.StartTaskInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado actual del nodo de proceso. Se cambió el nodo de prioridad baja. Volverá a programar las tareas que se estaban ejecutando en el nodo al que se adelantó cuando otro nodo disponible. Los valores posibles son: ''inactivo'', ''Reiniciar'', ''restableciendo imagen inicial de'', ''ejecutando'', '''', ''crear'', ''iniciar'', ''waitingForStartTask'', ''startTaskFailed'', ''unknown'', ''leavingPool'', ''sin conexión'', ''adelantaron'''
+    optional: true
+    syntax:
+      content: 'state?: ComputeNodeState'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La hora en que entró en su estado actual del nodo de proceso.
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.totalTasksRun'
+    name: totalTasksRun
+    fullName: totalTasksRun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El número total de tareas del trabajo completado en el nodo de proceso. Esto incluye las tareas del Administrador de trabajos y tareas normales, pero no las tareas de preparación del trabajo, la liberación del trabajo o inicio.'
+    optional: true
+    syntax:
+      content: 'totalTasksRun?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.totalTasksSucceeded'
+    name: totalTasksSucceeded
+    fullName: totalTasksSucceeded
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El número total de tareas de trabajo que ha completado correctamente (con exitCode 0) en el nodo de proceso. Esto incluye las tareas del Administrador de trabajos y tareas normales, pero no las tareas de preparación del trabajo, la liberación del trabajo o inicio.'
+    optional: true
+    syntax:
+      content: 'totalTasksSucceeded?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La dirección URL del nodo de proceso.
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El tamaño de la máquina virtual del nodo de proceso de hospedaje. Para obtener información sobre los tamaños disponibles de máquinas virtuales en grupos, consulte elegir un tamaño de máquina virtual para nodos de proceso en un grupo de Azure Batch (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).'
+    optional: true
+    syntax:
+      content: 'vmSize?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ComputeNodeEndpointConfiguration'
+    name: ComputeNodeEndpointConfiguration
+    spec.typeScript:
+      - name: ComputeNodeEndpointConfiguration
+        fullName: ComputeNodeEndpointConfiguration
+        uid: '@azure/batch.ComputeNodeEndpointConfiguration'
+  - uid: '@azure/batch.ComputeNodeError[]'
+    name: 'ComputeNodeError[]'
+    spec.typeScript:
+      - name: ComputeNodeError
+        fullName: ComputeNodeError
+        uid: '@azure/batch.ComputeNodeError'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NodeAgentInformation'
+    name: NodeAgentInformation
+    spec.typeScript:
+      - name: NodeAgentInformation
+        fullName: NodeAgentInformation
+        uid: '@azure/batch.NodeAgentInformation'
+  - uid: '@azure/batch.TaskInformation[]'
+    name: 'TaskInformation[]'
+    spec.typeScript:
+      - name: TaskInformation
+        fullName: TaskInformation
+        uid: '@azure/batch.TaskInformation'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.SchedulingState'
+    name: SchedulingState
+    spec.typeScript:
+      - name: SchedulingState
+        fullName: SchedulingState
+        uid: '@azure/batch.SchedulingState'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.StartTaskInformation'
+    name: StartTaskInformation
+    spec.typeScript:
+      - name: StartTaskInformation
+        fullName: StartTaskInformation
+        uid: '@azure/batch.StartTaskInformation'
+  - uid: '@azure/batch.ComputeNodeState'
+    name: ComputeNodeState
+    spec.typeScript:
+      - name: ComputeNodeState
+        fullName: ComputeNodeState
+        uid: '@azure/batch.ComputeNodeState'

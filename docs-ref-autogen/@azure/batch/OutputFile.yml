@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.OutputFile'
+    name: OutputFile
+    fullName: OutputFile
+    children:
+      - '@azure/batch.OutputFile.destination'
+      - '@azure/batch.OutputFile.filePattern'
+      - '@azure/batch.OutputFile.uploadOptions'
+    langs:
+      - typeScript
+    type: interface
+    summary: Una interfaz que representa OutputFile.
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFile.destination'
+    name: destination
+    fullName: destination
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El destino de los archivos de salida.
+    syntax:
+      content: 'destination: OutputFileDestination'
+      return:
+        type:
+          - '@azure/batch.OutputFileDestination'
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFile.filePattern'
+    name: filePattern
+    fullName: filePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Un patrón que indica que archivos para cargar. Se admiten las rutas de acceso relativas y absolutas.
+      Son rutas de acceso relativas en relación con el directorio de trabajo de tarea. ¿Se admiten los siguientes caracteres comodín: * coincide con 0 o más caracteres (para el patrón de ejemplo abc * coincidiría con abc o abcdef), ** coincide con cualquier directorio,? coincide con un carácter en el intervalo de coincidencias de [a-c], [abc] coincide con un carácter en los corchetes y cualquier carácter individual. Corchetes pueden incluir una negación para que coincida con cualquier carácter no especificado (por ejemplo [! abc] coincide con cualquier carácter excepto a, b o c). Si un nombre de archivo comienza con "." se omite de forma predeterminada, pero puede tener coincidencias mediante la especificación de forma explícita (por ejemplo *.gif no coincidirán. a.gif, pero.*. de forma GIF). Un ejemplo sencillo: **\*.txt coincide con cualquier archivo que no se inicia en '.' y termine con .txt en el directorio de trabajo de tarea o en cualquier subdirectorio. Si el nombre de archivo contiene un carácter comodín puede convertirse en escape con corchetes (por ejemplo, abc [*] coincidiría con un archivo denominado abc *). Tenga en cuenta que ambos \ y se tratan como separadores de directorio en Windows, pero solo o en Linux. Se expanden las variables de entorno (% var % en Windows) o $var en Linux antes el patrón que se va a aplicar.
+    syntax:
+      content: 'filePattern: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFile.uploadOptions'
+    name: uploadOptions
+    fullName: uploadOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Opciones adicionales para la operación de carga, incluyendo bajo qué condiciones para realizar la carga.'
+    syntax:
+      content: 'uploadOptions: OutputFileUploadOptions'
+      return:
+        type:
+          - '@azure/batch.OutputFileUploadOptions'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.OutputFileDestination'
+    name: OutputFileDestination
+    spec.typeScript:
+      - name: OutputFileDestination
+        fullName: OutputFileDestination
+        uid: '@azure/batch.OutputFileDestination'
+  - uid: '@azure/batch.OutputFileUploadOptions'
+    name: OutputFileUploadOptions
+    spec.typeScript:
+      - name: OutputFileUploadOptions
+        fullName: OutputFileUploadOptions
+        uid: '@azure/batch.OutputFileUploadOptions'
