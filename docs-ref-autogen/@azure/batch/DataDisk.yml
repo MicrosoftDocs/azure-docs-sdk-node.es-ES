@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.DataDisk'
+    name: DataDisk
+    fullName: DataDisk
+    children:
+      - '@azure/batch.DataDisk.caching'
+      - '@azure/batch.DataDisk.diskSizeGB'
+      - '@azure/batch.DataDisk.lun'
+      - '@azure/batch.DataDisk.storageAccountType'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="783a5-101">Una interfaz que representa DataDisk.</span><span class="sxs-lookup"><span data-stu-id="783a5-101">An interface representing DataDisk.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="783a5-102">El tipo de almacenamiento en caché para habilitarse para los discos de datos.</span><span class="sxs-lookup"><span data-stu-id="783a5-102">The type of caching to be enabled for the data disks.</span></span> <span data-ttu-id="783a5-103">El valor predeterminado para almacenar en caché es readwrite.</span><span class="sxs-lookup"><span data-stu-id="783a5-103">The default value for caching is readwrite.</span></span> <span data-ttu-id="783a5-104">Para obtener información acerca de las opciones de almacenamiento en caché, consulte: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.</span><span class="sxs-lookup"><span data-stu-id="783a5-104">For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.</span></span>
+      <span data-ttu-id="783a5-105">Los valores posibles son: 'none', 'readOnly', 'readWrite'</span><span class="sxs-lookup"><span data-stu-id="783a5-105">Possible values include: 'none', 'readOnly', 'readWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingType'
+      return:
+        type:
+          - '@azure/batch.CachingType'
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="783a5-106">El tamaño de disco inicial en gigabytes.</span><span class="sxs-lookup"><span data-stu-id="783a5-106">The initial disk size in gigabytes.</span></span>
+    syntax:
+      content: 'diskSizeGB: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="783a5-107">El número de unidad lógica.</span><span class="sxs-lookup"><span data-stu-id="783a5-107">The logical unit number.</span></span> <span data-ttu-id="783a5-108">El lun se utiliza para identificar de forma única cada disco de datos.</span><span class="sxs-lookup"><span data-stu-id="783a5-108">The lun is used to uniquely identify each data disk.</span></span> <span data-ttu-id="783a5-109">Si la conexión de varios discos, cada uno debe tener un lun distinto.</span><span class="sxs-lookup"><span data-stu-id="783a5-109">If attaching multiple disks, each should have a distinct lun.</span></span>'
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.storageAccountType'
+    name: storageAccountType
+    fullName: storageAccountType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="783a5-110">El tipo de cuenta de almacenamiento que se usará para el disco de datos.</span><span class="sxs-lookup"><span data-stu-id="783a5-110">The storage account type to be used for the data disk.</span></span> <span data-ttu-id="783a5-111">Si se omite, el valor predeterminado es "standard_lrs".</span><span class="sxs-lookup"><span data-stu-id="783a5-111">If omitted, the default is "standard_lrs".</span></span> <span data-ttu-id="783a5-112">Los valores posibles son: ''StandardLRS'', ''PremiumLRS''</span><span class="sxs-lookup"><span data-stu-id="783a5-112">Possible values include: ''StandardLRS'', ''PremiumLRS''</span></span>'
+    optional: true
+    syntax:
+      content: 'storageAccountType?: StorageAccountType'
+      return:
+        type:
+          - '@azure/batch.StorageAccountType'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CachingType'
+    name: CachingType
+    spec.typeScript:
+      - name: CachingType
+        fullName: CachingType
+        uid: '@azure/batch.CachingType'
+  - uid: '@azure/batch.StorageAccountType'
+    name: StorageAccountType
+    spec.typeScript:
+      - name: StorageAccountType
+        fullName: StorageAccountType
+        uid: '@azure/batch.StorageAccountType'
