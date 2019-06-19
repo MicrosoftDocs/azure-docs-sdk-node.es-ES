@@ -4,8 +4,12 @@ items:
     name: HanaInstances
     fullName: HanaInstances
     children:
+      - '@azure/arm-hanaonazure.HanaInstances.beginCreate'
+      - '@azure/arm-hanaonazure.HanaInstances.beginDeleteMethod'
       - '@azure/arm-hanaonazure.HanaInstances.beginEnableMonitoring'
       - '@azure/arm-hanaonazure.HanaInstances.beginRestart'
+      - '@azure/arm-hanaonazure.HanaInstances.create'
+      - '@azure/arm-hanaonazure.HanaInstances.deleteMethod'
       - '@azure/arm-hanaonazure.HanaInstances.enableMonitoring'
       - '@azure/arm-hanaonazure.HanaInstances.get'
       - '@azure/arm-hanaonazure.HanaInstances.get_2'
@@ -30,7 +34,65 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="f4cf3-101">Clase que representa un HanaInstances.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-101">Class representing a HanaInstances.</span></span>
+    summary: <span data-ttu-id="708b5-101">Clase que representa un HanaInstances.</span><span class="sxs-lookup"><span data-stu-id="708b5-101">Class representing a HanaInstances.</span></span>
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstances.beginCreate'
+    name: 'beginCreate(string, string, HanaInstance, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="708b5-102">Crea una instancia de SAP HANA para la suscripción especificada, el grupo de recursos y el nombre de instancia.</span><span class="sxs-lookup"><span data-stu-id="708b5-102">Creates a SAP HANA instance for the specified subscription, resource group, and instance name.</span></span>'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, hanaInstanceName: string, hanaInstanceParameter: HanaInstance, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="708b5-103">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-103">Name of the resource group.</span></span>
+        - id: hanaInstanceName
+          type:
+            - string
+          description: <span data-ttu-id="708b5-104">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-104">Name of the SAP HANA on Azure instance.</span></span>
+        - id: hanaInstanceParameter
+          type:
+            - '@azure/arm-hanaonazure.HanaInstance'
+          description: <span data-ttu-id="708b5-105">Cuerpo de la solicitud que representa un HanaInstance</span><span class="sxs-lookup"><span data-stu-id="708b5-105">Request body representing a HanaInstance</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstances.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="708b5-106">Elimina una instancia de SAP HANA con la suscripción especificada, el grupo de recursos y el nombre de instancia.</span><span class="sxs-lookup"><span data-stu-id="708b5-106">Deletes a SAP HANA instance with the specified subscription, resource group, and instance name.</span></span>'
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, hanaInstanceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="708b5-107">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-107">Name of the resource group.</span></span>
+        - id: hanaInstanceName
+          type:
+            - string
+          description: <span data-ttu-id="708b5-108">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-108">Name of the SAP HANA on Azure instance.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstances.beginEnableMonitoring'
     name: 'beginEnableMonitoring(string, string, MonitoringDetails, msRest.RequestOptionsBase)'
@@ -38,22 +100,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f4cf3-102">La operación de agregar a un monitor a una instancia de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-102">The operation to add a monitor to an SAP HANA instance.</span></span>
+    summary: <span data-ttu-id="708b5-109">La operación de agregar a un monitor a una instancia de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-109">The operation to add a monitor to an SAP HANA instance.</span></span>
     syntax:
       content: 'function beginEnableMonitoring(resourceGroupName: string, hanaInstanceName: string, monitoringParameter: MonitoringDetails, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-103">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-103">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-110">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-110">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-104">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-104">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-111">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-111">Name of the SAP HANA on Azure instance.</span></span>
         - id: monitoringParameter
           type:
             - '@azure/arm-hanaonazure.MonitoringDetails'
-          description: <span data-ttu-id="f4cf3-105">Cuerpo de solicitud que contiene solo los atributos de supervisión</span><span class="sxs-lookup"><span data-stu-id="f4cf3-105">Request body that only contains monitoring attributes</span></span>
+          description: <span data-ttu-id="708b5-112">Cuerpo de solicitud que contiene solo los atributos de supervisión</span><span class="sxs-lookup"><span data-stu-id="708b5-112">Request body that only contains monitoring attributes</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -69,18 +131,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f4cf3-106">La operación para reiniciar una instancia de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-106">The operation to restart a SAP HANA instance.</span></span>
+    summary: <span data-ttu-id="708b5-113">La operación para reiniciar una instancia de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-113">The operation to restart a SAP HANA instance.</span></span>
     syntax:
       content: 'function beginRestart(resourceGroupName: string, hanaInstanceName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-107">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-107">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-114">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-114">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-108">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-108">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-115">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-115">Name of the SAP HANA on Azure instance.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -90,28 +152,86 @@ items:
         type:
           - Promise<LROPoller>
     package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstances.create'
+    name: 'create(string, string, HanaInstance, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="708b5-116">Crea una instancia de SAP HANA para la suscripción especificada, el grupo de recursos y el nombre de instancia.</span><span class="sxs-lookup"><span data-stu-id="708b5-116">Creates a SAP HANA instance for the specified subscription, resource group, and instance name.</span></span>'
+    syntax:
+      content: 'function create(resourceGroupName: string, hanaInstanceName: string, hanaInstanceParameter: HanaInstance, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="708b5-117">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-117">Name of the resource group.</span></span>
+        - id: hanaInstanceName
+          type:
+            - string
+          description: <span data-ttu-id="708b5-118">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-118">Name of the SAP HANA on Azure instance.</span></span>
+        - id: hanaInstanceParameter
+          type:
+            - '@azure/arm-hanaonazure.HanaInstance'
+          description: <span data-ttu-id="708b5-119">Cuerpo de la solicitud que representa un HanaInstance</span><span class="sxs-lookup"><span data-stu-id="708b5-119">Request body representing a HanaInstance</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.HanaInstancesCreateResponse>
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstances.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="708b5-120">Elimina una instancia de SAP HANA con la suscripción especificada, el grupo de recursos y el nombre de instancia.</span><span class="sxs-lookup"><span data-stu-id="708b5-120">Deletes a SAP HANA instance with the specified subscription, resource group, and instance name.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, hanaInstanceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="708b5-121">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-121">Name of the resource group.</span></span>
+        - id: hanaInstanceName
+          type:
+            - string
+          description: <span data-ttu-id="708b5-122">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-122">Name of the SAP HANA on Azure instance.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstances.enableMonitoring'
     name: 'enableMonitoring(string, string, MonitoringDetails, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f4cf3-109">La operación de agregar a un monitor a una instancia de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-109">The operation to add a monitor to an SAP HANA instance.</span></span>
+    summary: <span data-ttu-id="708b5-123">La operación de agregar a un monitor a una instancia de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-123">The operation to add a monitor to an SAP HANA instance.</span></span>
     syntax:
       content: 'function enableMonitoring(resourceGroupName: string, hanaInstanceName: string, monitoringParameter: MonitoringDetails, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-110">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-110">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-124">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-124">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-111">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-111">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-125">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-125">Name of the SAP HANA on Azure instance.</span></span>
         - id: monitoringParameter
           type:
             - '@azure/arm-hanaonazure.MonitoringDetails'
-          description: <span data-ttu-id="f4cf3-112">Cuerpo de solicitud que contiene solo los atributos de supervisión</span><span class="sxs-lookup"><span data-stu-id="f4cf3-112">Request body that only contains monitoring attributes</span></span>
+          description: <span data-ttu-id="708b5-126">Cuerpo de solicitud que contiene solo los atributos de supervisión</span><span class="sxs-lookup"><span data-stu-id="708b5-126">Request body that only contains monitoring attributes</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -127,18 +247,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="f4cf3-113">Obtiene las propiedades de una instancia de SAP HANA para la suscripción especificada, el grupo de recursos y el nombre de instancia.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-113">Gets properties of a SAP HANA instance for the specified subscription, resource group, and instance name.</span></span>'
+    summary: '<span data-ttu-id="708b5-127">Obtiene las propiedades de una instancia de SAP HANA para la suscripción especificada, el grupo de recursos y el nombre de instancia.</span><span class="sxs-lookup"><span data-stu-id="708b5-127">Gets properties of a SAP HANA instance for the specified subscription, resource group, and instance name.</span></span>'
     syntax:
       content: 'function get(resourceGroupName: string, hanaInstanceName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-114">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-114">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-128">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-128">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-115">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-115">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-129">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-129">Name of the SAP HANA on Azure instance.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -161,20 +281,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-116">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-116">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-130">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-130">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-117">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-117">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-131">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-131">Name of the SAP HANA on Azure instance.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="f4cf3-118">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="f4cf3-118">The optional parameters</span></span>
+          description: <span data-ttu-id="708b5-132">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="708b5-132">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstance>
           description: |
-            <span data-ttu-id="f4cf3-119">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-119">The callback</span></span>
+            <span data-ttu-id="708b5-133">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-133">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesGetResponse>
@@ -192,16 +312,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-120">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-120">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-134">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-134">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-121">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-121">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-135">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-135">Name of the SAP HANA on Azure instance.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstance>
           description: |
-            <span data-ttu-id="f4cf3-122">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-122">The callback</span></span>
+            <span data-ttu-id="708b5-136">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-136">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesGetResponse>
@@ -212,7 +332,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="f4cf3-123">Crear un HanaInstances.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-123">Create a HanaInstances.</span></span>
+    summary: <span data-ttu-id="708b5-137">Crear un HanaInstances.</span><span class="sxs-lookup"><span data-stu-id="708b5-137">Create a HanaInstances.</span></span>
     syntax:
       content: 'new HanaInstances(client: HanaManagementClientContext)'
       parameters:
@@ -220,7 +340,7 @@ items:
           type:
             - '@azure/arm-hanaonazure.HanaManagementClientContext'
           description: |
-            <span data-ttu-id="f4cf3-124">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-124">Reference to the service client.</span></span>
+            <span data-ttu-id="708b5-138">Referencia para el cliente del servicio.</span><span class="sxs-lookup"><span data-stu-id="708b5-138">Reference to the service client.</span></span>
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstances.list'
     name: list(msRest.RequestOptionsBase)
@@ -228,7 +348,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f4cf3-125">Obtiene una lista de instancias de SAP HANA en la suscripción especificada.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-125">Gets a list of SAP HANA instances in the specified subscription.</span></span> <span data-ttu-id="f4cf3-126">La operación devuelve varias propiedades de cada instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-126">The operations returns various properties of each SAP HANA on Azure instance.</span></span>
+    summary: <span data-ttu-id="708b5-139">Obtiene una lista de instancias de SAP HANA en la suscripción especificada.</span><span class="sxs-lookup"><span data-stu-id="708b5-139">Gets a list of SAP HANA instances in the specified subscription.</span></span> <span data-ttu-id="708b5-140">La operación devuelve varias propiedades de cada instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-140">The operations returns various properties of each SAP HANA on Azure instance.</span></span>
     syntax:
       content: 'function list(options?: msRest.RequestOptionsBase)'
       parameters:
@@ -254,12 +374,12 @@ items:
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="f4cf3-127">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="f4cf3-127">The optional parameters</span></span>
+          description: <span data-ttu-id="708b5-141">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="708b5-141">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstancesListResult>
           description: |
-            <span data-ttu-id="f4cf3-128">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-128">The callback</span></span>
+            <span data-ttu-id="708b5-142">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-142">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesListResponse>
@@ -278,7 +398,7 @@ items:
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstancesListResult>
           description: |
-            <span data-ttu-id="f4cf3-129">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-129">The callback</span></span>
+            <span data-ttu-id="708b5-143">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-143">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesListResponse>
@@ -289,14 +409,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f4cf3-130">Obtiene una lista de instancias de SAP HANA en la suscripción especificada y el grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-130">Gets a list of SAP HANA instances in the specified subscription and the resource group.</span></span> <span data-ttu-id="f4cf3-131">La operación devuelve varias propiedades de cada instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-131">The operations returns various properties of each SAP HANA on Azure instance.</span></span>
+    summary: <span data-ttu-id="708b5-144">Obtiene una lista de instancias de SAP HANA en la suscripción especificada y el grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-144">Gets a list of SAP HANA instances in the specified subscription and the resource group.</span></span> <span data-ttu-id="708b5-145">La operación devuelve varias propiedades de cada instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-145">The operations returns various properties of each SAP HANA on Azure instance.</span></span>
     syntax:
       content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-132">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-132">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-146">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-146">Name of the resource group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -319,16 +439,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-133">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-133">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-147">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-147">Name of the resource group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="f4cf3-134">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="f4cf3-134">The optional parameters</span></span>
+          description: <span data-ttu-id="708b5-148">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="708b5-148">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstancesListResult>
           description: |
-            <span data-ttu-id="f4cf3-135">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-135">The callback</span></span>
+            <span data-ttu-id="708b5-149">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-149">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesListByResourceGroupResponse>
@@ -346,12 +466,12 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-136">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-136">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-150">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-150">Name of the resource group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstancesListResult>
           description: |
-            <span data-ttu-id="f4cf3-137">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-137">The callback</span></span>
+            <span data-ttu-id="708b5-151">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-151">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesListByResourceGroupResponse>
@@ -362,14 +482,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f4cf3-138">Obtiene una lista de instancias de SAP HANA en la suscripción especificada y el grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-138">Gets a list of SAP HANA instances in the specified subscription and the resource group.</span></span> <span data-ttu-id="f4cf3-139">La operación devuelve varias propiedades de cada instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-139">The operations returns various properties of each SAP HANA on Azure instance.</span></span>
+    summary: <span data-ttu-id="708b5-152">Obtiene una lista de instancias de SAP HANA en la suscripción especificada y el grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-152">Gets a list of SAP HANA instances in the specified subscription and the resource group.</span></span> <span data-ttu-id="708b5-153">La operación devuelve varias propiedades de cada instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-153">The operations returns various properties of each SAP HANA on Azure instance.</span></span>
     syntax:
       content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="f4cf3-140">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-140">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="708b5-154">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="708b5-154">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -392,16 +512,16 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="f4cf3-141">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-141">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="708b5-155">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="708b5-155">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="f4cf3-142">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="f4cf3-142">The optional parameters</span></span>
+          description: <span data-ttu-id="708b5-156">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="708b5-156">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstancesListResult>
           description: |
-            <span data-ttu-id="f4cf3-143">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-143">The callback</span></span>
+            <span data-ttu-id="708b5-157">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-157">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesListByResourceGroupNextResponse>
@@ -419,12 +539,12 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="f4cf3-144">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-144">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="708b5-158">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="708b5-158">The NextLink from the previous successful call to List operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstancesListResult>
           description: |
-            <span data-ttu-id="f4cf3-145">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-145">The callback</span></span>
+            <span data-ttu-id="708b5-159">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-159">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesListByResourceGroupNextResponse>
@@ -435,14 +555,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f4cf3-146">Obtiene una lista de instancias de SAP HANA en la suscripción especificada.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-146">Gets a list of SAP HANA instances in the specified subscription.</span></span> <span data-ttu-id="f4cf3-147">La operación devuelve varias propiedades de cada instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-147">The operations returns various properties of each SAP HANA on Azure instance.</span></span>
+    summary: <span data-ttu-id="708b5-160">Obtiene una lista de instancias de SAP HANA en la suscripción especificada.</span><span class="sxs-lookup"><span data-stu-id="708b5-160">Gets a list of SAP HANA instances in the specified subscription.</span></span> <span data-ttu-id="708b5-161">La operación devuelve varias propiedades de cada instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-161">The operations returns various properties of each SAP HANA on Azure instance.</span></span>
     syntax:
       content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="f4cf3-148">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-148">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="708b5-162">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="708b5-162">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -465,16 +585,16 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="f4cf3-149">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-149">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="708b5-163">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="708b5-163">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="f4cf3-150">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="f4cf3-150">The optional parameters</span></span>
+          description: <span data-ttu-id="708b5-164">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="708b5-164">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstancesListResult>
           description: |
-            <span data-ttu-id="f4cf3-151">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-151">The callback</span></span>
+            <span data-ttu-id="708b5-165">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-165">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesListNextResponse>
@@ -492,12 +612,12 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="f4cf3-152">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-152">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="708b5-166">NextLink de la llamada anterior correcta a la operación de lista.</span><span class="sxs-lookup"><span data-stu-id="708b5-166">The NextLink from the previous successful call to List operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstancesListResult>
           description: |
-            <span data-ttu-id="f4cf3-153">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-153">The callback</span></span>
+            <span data-ttu-id="708b5-167">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-167">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesListNextResponse>
@@ -508,18 +628,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f4cf3-154">La operación para reiniciar una instancia de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-154">The operation to restart a SAP HANA instance.</span></span>
+    summary: <span data-ttu-id="708b5-168">La operación para reiniciar una instancia de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-168">The operation to restart a SAP HANA instance.</span></span>
     syntax:
       content: 'function restart(resourceGroupName: string, hanaInstanceName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-155">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-155">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-169">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-169">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-156">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-156">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-170">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-170">Name of the SAP HANA on Azure instance.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -535,22 +655,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="f4cf3-157">Aplica revisiones en el campo de etiquetas de una instancia de SAP HANA para la suscripción especificada, el grupo de recursos y el nombre de instancia.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-157">Patches the Tags field of a SAP HANA instance for the specified subscription, resource group, and instance name.</span></span>'
+    summary: '<span data-ttu-id="708b5-171">Aplica revisiones en el campo de etiquetas de una instancia de SAP HANA para la suscripción especificada, el grupo de recursos y el nombre de instancia.</span><span class="sxs-lookup"><span data-stu-id="708b5-171">Patches the Tags field of a SAP HANA instance for the specified subscription, resource group, and instance name.</span></span>'
     syntax:
       content: 'function update(resourceGroupName: string, hanaInstanceName: string, tagsParameter: Tags, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-158">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-158">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-172">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-172">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-159">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-159">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-173">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-173">Name of the SAP HANA on Azure instance.</span></span>
         - id: tagsParameter
           type:
             - '@azure/arm-hanaonazure.Tags'
-          description: <span data-ttu-id="f4cf3-160">Cuerpo de solicitud que solo contiene el nuevo campo de etiquetas</span><span class="sxs-lookup"><span data-stu-id="f4cf3-160">Request body that only contains the new Tags field</span></span>
+          description: <span data-ttu-id="708b5-174">Cuerpo de solicitud que solo contiene el nuevo campo de etiquetas</span><span class="sxs-lookup"><span data-stu-id="708b5-174">Request body that only contains the new Tags field</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -573,24 +693,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-161">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-161">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-175">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-175">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-162">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-162">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-176">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-176">Name of the SAP HANA on Azure instance.</span></span>
         - id: tagsParameter
           type:
             - '@azure/arm-hanaonazure.Tags'
-          description: <span data-ttu-id="f4cf3-163">Cuerpo de solicitud que solo contiene el nuevo campo de etiquetas</span><span class="sxs-lookup"><span data-stu-id="f4cf3-163">Request body that only contains the new Tags field</span></span>
+          description: <span data-ttu-id="708b5-177">Cuerpo de solicitud que solo contiene el nuevo campo de etiquetas</span><span class="sxs-lookup"><span data-stu-id="708b5-177">Request body that only contains the new Tags field</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="f4cf3-164">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="f4cf3-164">The optional parameters</span></span>
+          description: <span data-ttu-id="708b5-178">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="708b5-178">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstance>
           description: |
-            <span data-ttu-id="f4cf3-165">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-165">The callback</span></span>
+            <span data-ttu-id="708b5-179">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-179">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesUpdateResponse>
@@ -608,20 +728,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-166">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-166">Name of the resource group.</span></span>
+          description: <span data-ttu-id="708b5-180">Nombre del grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="708b5-180">Name of the resource group.</span></span>
         - id: hanaInstanceName
           type:
             - string
-          description: <span data-ttu-id="f4cf3-167">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="f4cf3-167">Name of the SAP HANA on Azure instance.</span></span>
+          description: <span data-ttu-id="708b5-181">Nombre de la instancia de Azure de SAP HANA.</span><span class="sxs-lookup"><span data-stu-id="708b5-181">Name of the SAP HANA on Azure instance.</span></span>
         - id: tagsParameter
           type:
             - '@azure/arm-hanaonazure.Tags'
-          description: <span data-ttu-id="f4cf3-168">Cuerpo de solicitud que solo contiene el nuevo campo de etiquetas</span><span class="sxs-lookup"><span data-stu-id="f4cf3-168">Request body that only contains the new Tags field</span></span>
+          description: <span data-ttu-id="708b5-182">Cuerpo de solicitud que solo contiene el nuevo campo de etiquetas</span><span class="sxs-lookup"><span data-stu-id="708b5-182">Request body that only contains the new Tags field</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-hanaonazure.HanaInstance>
           description: |
-            <span data-ttu-id="f4cf3-169">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="f4cf3-169">The callback</span></span>
+            <span data-ttu-id="708b5-183">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="708b5-183">The callback</span></span>
       return:
         type:
           - Promise<Models.HanaInstancesUpdateResponse>
@@ -633,6 +753,12 @@ references:
       - name: HanaManagementClientContext
         fullName: HanaManagementClientContext
         uid: '@azure/arm-hanaonazure.HanaManagementClientContext'
+  - uid: '@azure/arm-hanaonazure.HanaInstance'
+    name: HanaInstance
+    spec.typeScript:
+      - name: HanaInstance
+        fullName: HanaInstance
+        uid: '@azure/arm-hanaonazure.HanaInstance'
   - uid: '@azure/arm-hanaonazure.MonitoringDetails'
     name: MonitoringDetails
     spec.typeScript:
