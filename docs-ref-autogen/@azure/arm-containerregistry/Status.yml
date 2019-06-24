@@ -3,63 +3,13 @@ items:
   - uid: '@azure/arm-containerregistry.Status'
     name: Status
     fullName: Status
-    children:
-      - '@azure/arm-containerregistry.Status.displayStatus'
-      - '@azure/arm-containerregistry.Status.message'
-      - '@azure/arm-containerregistry.Status.timestamp'
-    langs:
-      - typeScript
-    type: interface
-    summary: El estado de un recurso de Azure en el momento en que se llamó a la operación.
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Status.displayStatus'
-    name: displayStatus
-    fullName: displayStatus
     children: []
     langs:
       - typeScript
-    type: property
+    type: type alias
     summary: |-
-      La etiqueta cortos para el estado.
-      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
-    optional: true
+      Define los valores de estado.
+      Los valores posibles son: 'enabled', 'deshabilitado'
     syntax:
-      content: 'displayStatus?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Status.message'
-    name: message
-    fullName: message
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      El mensaje detallado para el estado, incluidas las alertas y mensajes de error.
-      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
-    optional: true
-    syntax:
-      content: 'message?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Status.timestamp'
-    name: timestamp
-    fullName: timestamp
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      La marca de tiempo cuando el estado ha cambiado el valor actual.
-      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
-    optional: true
-    syntax:
-      content: 'timestamp?: Date'
-      return:
-        type:
-          - Date
+      content: type Status = "enabled" | "disabled"
     package: '@azure/arm-containerregistry'

@@ -66,15 +66,16 @@ items:
       - typeScript
     summary: |-
       Cree un nuevo grupo de persona grandes con largePersonGroupId especificado por el usuario, nombre, un opcional userData y recognitionModel.
-      <br /> Un grupo grande de persona es el contenedor de los datos de la persona cargados, incluidas imágenes de cara y la característica de reconocimiento de caras y hasta 1 000 000 personas.
+      <br /> Un grupo grande de persona es el contenedor de los datos cargados de persona, incluida la característica de reconocimiento de caras y hasta 1 000 000 personas.
       <br /> Después de crear, usar [crear persona LargePersonGroup -](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) Agregar persona en el grupo y llamar a [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) para estar preparado para este grupo [enfrentan: identificación de](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br /> Se almacenarán en el servidor hasta que la cara de la persona, la imagen y userData [persona LargePersonGroup - eliminar](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) o [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) se llama.
-      <br />
+      <br /> No hay ninguna imagen se almacenará. Solo la persona extraídos características faciales y userData se almacenarán en el servidor hasta que [persona LargePersonGroup - eliminar](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) o [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) se llama.
+      <br/>'recognitionModel' debe especificarse para asociar a este grupo grande de persona. El valor predeterminado de 'recognitionModel' es 'recognition_01', si el modelo más reciente es necesario, especifique explícitamente el modelo que necesita en este parámetro. Las caras nuevas que se agregan a un grupo existente de grandes persona usará el modelo de reconocimiento que ya está asociado con la colección.
+      No se puede actualizar las características existentes de cara de un grupo grande de persona a las características extraídas por otra versión del modelo de reconocimiento.
+      * 'recognition_01': El modelo de reconocimiento de forma predeterminada para [LargePersonGroup - crear](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d). Todos esos grupos de personas grandes creados antes de marzo de 2019 están enlazados con este modelo de reconocimiento.
+      * 'recognition_02': Modelo de reconocimiento que se lanzó en marzo de 2019. se recomienda 'recognition_02' porque su precisión global se ha mejorado en comparación con 'recognition_01'.
+      Cuota del grupo grande de persona:
       * Cuota de suscripción del nivel gratuito: 1.000 grupos de personas de gran tamaño.
       * Cuota de suscripción del nivel s0: 1 000 000 grupos de personas de gran tamaño.
-      <br />
-      'recognitionModel' debe especificarse para asociar a este grupo grande de persona. El valor predeterminado de 'recognitionModel' es 'recognition_01', si el modelo más reciente es necesario, especifique explícitamente el modelo que necesita en este parámetro. Las caras nuevas que se agregan a un grupo existente de grandes persona usará el modelo de reconocimiento que ya está asociado con la colección.
-      No se puede actualizar las características existentes de cara de un grupo grande de persona a las características extraídas por otra versión del modelo de reconocimiento.
     syntax:
       content: 'function create(largePersonGroupId: string, options?: Models.LargePersonGroupCreateOptionalParams)'
       parameters:

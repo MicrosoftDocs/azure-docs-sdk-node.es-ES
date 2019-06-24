@@ -1,0 +1,191 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobPreparationTask
+    name: JobPreparationTask
+    fullName: JobPreparationTask
+    children:
+      - azure-batch.JobPreparationTask.commandLine
+      - azure-batch.JobPreparationTask.constraints
+      - azure-batch.JobPreparationTask.containerSettings
+      - azure-batch.JobPreparationTask.environmentSettings
+      - azure-batch.JobPreparationTask.id
+      - azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+      - azure-batch.JobPreparationTask.resourceFiles
+      - azure-batch.JobPreparationTask.userIdentity
+      - azure-batch.JobPreparationTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Puede usar la preparación del trabajo para preparar un nodo para ejecutar las tareas del trabajo. Las actividades que se realizan normalmente en la preparación del trabajo incluyen: Descargando archivos de recursos comunes utilizados por todas las tareas del trabajo. La tarea de preparación del trabajo puede descargar estos archivos de recursos comunes a la ubicación compartida en el nodo. (AZ_BATCH_NODE_ROOT_DIR\shared), o iniciar un servicio local en el nodo para que todas las tareas de dicho trabajo pueden comunicarse con él. Si el error de tarea de preparación del trabajo (es decir, agota su reintento recuento antes de salir con código de salida 0), no se ejecutará tareas de este trabajo en el nodo de Batch. El nodo de proceso sigue siendo no apto para ejecutar tareas de este trabajo hasta que se está restableciendo imagen inicial. El nodo de proceso permanece activo y puede usarse para otros trabajos. La tarea de preparación del trabajo puede ejecutar varias veces en el mismo nodo. Por lo tanto, debe escribir la tarea de preparación del trabajo para tratar de volver a ejecutar. Si se reinicia el nodo, la tarea de preparación del trabajo se vuelve a ejecutar en el nodo de proceso antes de programar cualquier otra tarea del trabajo, si es true rerunOnNodeRebootAfterSuccess o si la tarea de preparación del trabajo no se completó anteriormente. Si el nodo está restableciendo imagen inicial, se ejecuta la tarea de preparación del trabajo de nuevo antes de programar cualquier tarea del trabajo. Batch volverá a intentar tareas cuando se desencadena una operación de recuperación en un nodo. Ejemplos de operaciones de recuperación incluyen (pero no se limitan a) cuando se reinicia un nodo en mal estado o un nodo de proceso ha desaparecido debido a un error de host. Vuelve a intentar debido a la recuperación de las operaciones son independientes y no se incluyen en el valor maxTaskRetryCount. Incluso si el valor maxTaskRetryCount es 0, puede producirse un reintento interno debido a una operación de recuperación. Por este motivo, todas las tareas deben ser idempotentes. Esto significa que las tareas debe tolerar se interrumpe y se reinicia sin causar cualquier daño o datos duplicados. La mejor práctica para las tareas de larga ejecución es utilizar alguna forma de los puntos de comprobación.'
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La línea de comandos no se ejecuta en un shell y, por lo tanto, no se puede aprovechar las características de shell, como la expansión de variables de entorno. Si desea aprovechar las ventajas de estas características, debe invocar el shell en la línea de comandos, por ejemplo "cmd /c MyCommand" se usa en Windows o "/ bin/sh - c MyCommand" en Linux. Si la línea de comandos se refiere a las rutas de acceso de archivo, debe usar una ruta de acceso relativa (relativo al directorio de trabajo de tarea), o use la variable de entorno proporcionada por lotes (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - azure-batch.TaskConstraints
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Cuando se especifica, se asignan todos los directorios recursivamente debajo el AZ_BATCH_NODE_ROOT_DIR (la raíz de los directorios de Azure Batch en el nodo) en el contenedor, todas las variables de entorno de tareas se asignan en el contenedor y es la línea de comandos de tarea se ejecuta en el contenedor. Archivos generados en el contenedor fuera AZ_BATCH_NODE_ROOT_DIR podrían no reflejarse en el disco del host, lo que significa que las API de archivo por lotes no podrá tener acceso a esos archivos.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El identificador puede contener cualquier combinación de caracteres alfanuméricos incluidos guiones y caracteres de subrayado y no puede contener más de 64 caracteres. Si no se especifica esta propiedad, el servicio Batch asigna un valor predeterminado de ''jobpreparation''. Ninguna otra tarea en el trabajo puede tener el mismo identificador que la tarea de preparación del trabajo. Si intenta enviar una tarea con el mismo identificador, el servicio Batch rechaza la solicitud con el código de error TaskIdSameAsJobPreparationTask; Si está llamando a la API de REST directamente, el código de estado HTTP es 409 (conflicto).'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+    name: rerunOnNodeRebootAfterSuccess
+    fullName: rerunOnNodeRebootAfterSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Siempre se vuelve a ejecutar la tarea de preparación del trabajo si se restablezcan imágenes iniciales de un nodo de proceso, o si no se completó la tarea de preparación del trabajo (por ejemplo, porque se produjo el reinicio mientras se ejecutaba la tarea). Por lo tanto, siempre debería escribir una tarea de preparación del trabajo para que sean idempotentes y se comporten correctamente si ejecuta varias veces. El valor predeterminado es true.'
+    optional: true
+    syntax:
+      content: 'rerunOnNodeRebootAfterSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Archivos que aparecen bajo este elemento se encuentran en el directorio de trabajo de la tarea.
+      Hay un tamaño máximo para la lista de archivos de recursos.  Cuando se supera el tamaño máximo, se producirá un error en la solicitud y el código de error de respuesta será la entidad solicitada demasiado grande. Si esto ocurre, se debe reducir la colección de ResourceFiles de tamaño. Esto puede lograrse mediante los archivos .zip, paquetes de aplicaciones o contenedores de Docker.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si se omite, la tarea se ejecuta como un usuario sin derechos administrativos único para la tarea en los nodos de proceso de Windows o un usuario sin derechos administrativos único para el grupo de nodos de proceso de Linux.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si true y la tarea de preparación del trabajo se produce un error en un nodo, contarán los reintentos del servicio Batch la preparación del trabajo de tareas hasta su máximo de reintentos (según lo especificado en el elemento de restricciones). Si la tarea todavía no ha completado correctamente después de todos los reintentos, a continuación, el servicio Batch no programará las tareas del trabajo en el nodo. El nodo permanece activo y son aptos ejecutar tareas de otros trabajos. Si es false, el servicio Batch esperará no se complete la tarea de preparación del trabajo. En este caso, otras tareas del trabajo pueden empezar a ejecutar en el nodo de proceso mientras todavía se está ejecutando la tarea de preparación del trabajo; e incluso si se produce un error en la tarea de preparación del trabajo, las nuevas tareas continuará a ser programados en el nodo de proceso. El valor predeterminado es true.'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: azure-batch.TaskConstraints
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

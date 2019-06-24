@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.ImageReference
+    name: ImageReference
+    fullName: ImageReference
+    children:
+      - azure-batch.ImageReference.offer
+      - azure-batch.ImageReference.publisher
+      - azure-batch.ImageReference.sku
+      - azure-batch.ImageReference.version
+      - azure-batch.ImageReference.virtualMachineImageId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.ImageReference.offer
+    name: offer
+    fullName: offer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Por ejemplo, UbuntuServer o Windows Server.'
+    optional: true
+    syntax:
+      content: 'offer?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ImageReference.publisher
+    name: publisher
+    fullName: publisher
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Por ejemplo, Canonical o Microsoft Windows Server.'
+    optional: true
+    syntax:
+      content: 'publisher?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ImageReference.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Por ejemplo, 14.04.0-LTS o 2012-R2-Datacenter.'
+    optional: true
+    syntax:
+      content: 'sku?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ImageReference.version
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Puede especificarse un valor de "latest" para seleccionar la versión más reciente de una imagen. Si se omite, el valor predeterminado es "latest".'
+    optional: true
+    syntax:
+      content: 'version?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ImageReference.virtualMachineImageId
+    name: virtualMachineImageId
+    fullName: virtualMachineImageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Esta propiedad es mutuamente excluyente con otras propiedades ImageReference. La imagen de máquina Virtual debe estar en la misma región y suscripción que la cuenta de Batch de Azure.
+      Para obtener información sobre el firewall vea configuración para el agente de nodo de proceso por lotes para comunicarse con el servicio Batch https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+    optional: true
+    syntax:
+      content: 'virtualMachineImageId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

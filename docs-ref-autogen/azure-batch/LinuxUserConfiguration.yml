@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.LinuxUserConfiguration
+    name: LinuxUserConfiguration
+    fullName: LinuxUserConfiguration
+    children:
+      - azure-batch.LinuxUserConfiguration.gid
+      - azure-batch.LinuxUserConfiguration.sshPrivateKey
+      - azure-batch.LinuxUserConfiguration.uid
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.LinuxUserConfiguration.gid
+    name: gid
+    fullName: gid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Las propiedades de uid y gid deben especificarse juntas o ninguna. Si no se especifica el funcionamiento subyacente sistema elige el gid.
+    optional: true
+    syntax:
+      content: 'gid?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.LinuxUserConfiguration.sshPrivateKey
+    name: sshPrivateKey
+    fullName: sshPrivateKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La clave privada no debe ser protegido por contraseña. La clave privada se utiliza para configurar automáticamente la autenticación basada en clave asimétrica para SSH entre los nodos de proceso en un grupo de Linux cuando la propiedad de enableInterNodeCommunication del grupo es true (se omite si enableInterNodeCommunication es false). Para ello, coloque el par de claves en el directorio del usuario .ssh. Si no se especifica, sin contraseña SSH no está configurado entre los nodos de proceso (no se realiza ninguna modificación del directorio del usuario .ssh).'
+    optional: true
+    syntax:
+      content: 'sshPrivateKey?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.LinuxUserConfiguration.uid
+    name: uid
+    fullName: uid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Las propiedades de uid y gid deben especificarse juntas o ninguna. Si no se especifica el funcionamiento subyacente sistema elige el uid.
+    optional: true
+    syntax:
+      content: 'uid?: number'
+      return:
+        type:
+          - number
+    package: azure-batch

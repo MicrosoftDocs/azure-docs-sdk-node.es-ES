@@ -86,7 +86,24 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Agregar una cara a una lista de caras de gran tamaño. La cara de entrada se especifica como una imagen con un rectángulo targetFace. Devuelve un persistedFaceId que representa la imagen se ha agregado y persistedFaceId no caducará.
+    summary: |-
+      Agregar una cara a una lista de fuente grandes especificado, hasta 1 000 000 caras.
+      <br /> Para tratar con una imagen que contenga varias caras, la cara de entrada se puede especificar como una imagen con un rectángulo targetFace. Devuelve un persistedFaceId que representa la imagen se ha agregado. No hay ninguna imagen se almacenará. Solo la característica de cara extraídos se almacenarán en el servidor hasta que [cara LargeFaceList - eliminar](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) o [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) se llama.
+      <br /> Tenga en cuenta persistedFaceId es diferente de faceId generado por [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Mayor calidad de imagen de cara significa mejorar la precisión de reconocimiento. Considere la posibilidad de caras de alta calidad: frontal, clear y cara tamaño es de 200 x 200 píxeles (100 píxeles entre los ojos) o mayor.
+      * Se admiten JPEG, PNG, GIF (el primer fotograma) y el formato BMP. El tamaño del archivo de imagen permitido es de 1KB a 6MB.
+      * rectángulo "targetFace" debe contener una cara. Cero o varias caras se considerarán como un error. Si no se devuelve el rectángulo proporcionado "targetFace" de [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), no hay ninguna garantía para detectar y agregar la cara correctamente.
+      * Fuera del tamaño de cara detectable (36 x 36-4096 x 4096 píxeles), grandes occlusions poses o grandes, producirán errores.
+      * Agregar o eliminar caras de una misma lista de caras se procesan secuencialmente y de cara diferentes listas se encuentran en paralelo.
+      * El tamaño mínimo de cara detectable es 36 x 36 píxeles en una imagen no superior a 1920 x 1080 píxeles.
+      Las imágenes con dimensiones superiores a 1920 x 1080 píxeles tendrá un tamaño mínimo de cara proporcionalmente mayor.
+      * Se pueden proporcionar valores diferentes 'detectionModel'. Para usar y comparar los modelos de detección diferente, consulte [cómo especificar un modelo de detección](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | El modelo de detección predeterminado para [LargeFaceList - agregar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3). Se recomienda para cerca de la detección de caras frontales. Para escenarios con caras de ángulo excepcionalmente grandes (poses), caras ocluidas u orientación de la imagen incorrecta, no se pueden detectar las caras en estos casos. | | 'detection_02': | Es posible que un modelo de detección publicada en 2019 con una mayor precisión, especialmente en las caras pequeñas, en paralelo y borrosas. | Cuota:
+      * Cuota de suscripción del nivel gratuito: 1000 caras por lista de caras de gran tamaño.
+      * Cuota de suscripción del nivel s0: 1.000.000 caras por lista de caras de gran tamaño.
     syntax:
       content: 'function addFaceFromStream(largeFaceListId: string, image: msRest.HttpRequestBody, options?: Models.LargeFaceListAddFaceFromStreamOptionalParams)'
       parameters:
@@ -171,7 +188,24 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Agregar una cara a una lista de caras de gran tamaño. La cara de entrada se especifica como una imagen con un rectángulo targetFace. Devuelve un persistedFaceId que representa la imagen se ha agregado y persistedFaceId no caducará.
+    summary: |-
+      Agregar una cara a una lista de fuente grandes especificado, hasta 1 000 000 caras.
+      <br /> Para tratar con una imagen que contenga varias caras, la cara de entrada se puede especificar como una imagen con un rectángulo targetFace. Devuelve un persistedFaceId que representa la imagen se ha agregado. No hay ninguna imagen se almacenará. Solo la característica de cara extraídos se almacenarán en el servidor hasta que [cara LargeFaceList - eliminar](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) o [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) se llama.
+      <br /> Tenga en cuenta persistedFaceId es diferente de faceId generado por [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Mayor calidad de imagen de cara significa mejorar la precisión de reconocimiento. Considere la posibilidad de caras de alta calidad: frontal, clear y cara tamaño es de 200 x 200 píxeles (100 píxeles entre los ojos) o mayor.
+      * Se admiten JPEG, PNG, GIF (el primer fotograma) y el formato BMP. El tamaño del archivo de imagen permitido es de 1KB a 6MB.
+      * rectángulo "targetFace" debe contener una cara. Cero o varias caras se considerarán como un error. Si no se devuelve el rectángulo proporcionado "targetFace" de [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), no hay ninguna garantía para detectar y agregar la cara correctamente.
+      * Fuera del tamaño de cara detectable (36 x 36-4096 x 4096 píxeles), grandes occlusions poses o grandes, producirán errores.
+      * Agregar o eliminar caras de una misma lista de caras se procesan secuencialmente y de cara diferentes listas se encuentran en paralelo.
+      * El tamaño mínimo de cara detectable es 36 x 36 píxeles en una imagen no superior a 1920 x 1080 píxeles.
+      Las imágenes con dimensiones superiores a 1920 x 1080 píxeles tendrá un tamaño mínimo de cara proporcionalmente mayor.
+      * Se pueden proporcionar valores diferentes 'detectionModel'. Para usar y comparar los modelos de detección diferente, consulte [cómo especificar un modelo de detección](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | El modelo de detección predeterminado para [LargeFaceList - agregar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3). Se recomienda para cerca de la detección de caras frontales. Para escenarios con caras de ángulo excepcionalmente grandes (poses), caras ocluidas u orientación de la imagen incorrecta, no se pueden detectar las caras en estos casos. | | 'detection_02': | Es posible que un modelo de detección publicada en 2019 con una mayor precisión, especialmente en las caras pequeñas, en paralelo y borrosas. | Cuota:
+      * Cuota de suscripción del nivel gratuito: 1000 caras por lista de caras de gran tamaño.
+      * Cuota de suscripción del nivel s0: 1.000.000 caras por lista de caras de gran tamaño.
     syntax:
       content: 'function addFaceFromUrl(largeFaceListId: string, url: string, options?: Models.LargeFaceListAddFaceFromUrlOptionalParams)'
       parameters:
@@ -255,14 +289,15 @@ items:
     summary: |-
       Crear una lista de caras grande vacío con largeFaceListId especificado por el usuario, el nombre, un recognitionModel y userData opcional.
       <br /> Lista de caras grande es una lista de caras, hasta 1 000 000 caras y usando [cara - buscar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).
-      <br /> Después de la creación, el usuario debe usar [cara LargeFaceList - agregar](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) para importar las caras y [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) para prepararla para [cara - FindSimilar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237). Caras se almacenan en el servidor hasta que [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) se llama.
+      <br /> Después de la creación, el usuario debe usar [cara LargeFaceList - agregar](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) para importar las caras y [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) para prepararla para [cara - buscar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237). No hay ninguna imagen se almacenará. Solo las características de cara extraídos se almacenan en el servidor hasta que [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) se llama.
       <br /> Buscar que similar se utiliza para el escenario como encontrar caras similar a celebridades, caras similares filtrado, o como una luz cierto enfrenta identificación. Pero si es el uso real para identificar la persona, use [grupo de personas](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
       [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) y [enfrentan: identificación de](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br />
+      <br/>'recognitionModel' debe especificarse para asociar a esta lista de caras de gran tamaño. El valor predeterminado de 'recognitionModel' es 'recognition_01', si el modelo más reciente es necesario, especifique explícitamente el modelo que necesita en este parámetro. Las caras nuevas que se agregan a una lista de caras grande existente usará el modelo de reconocimiento que ya está asociado con la colección. No se puede actualizar las características existentes de cara en una lista grande de cara a las características extraídas por otra versión del modelo de reconocimiento.
+      * 'recognition_01': El modelo de reconocimiento de forma predeterminada para [LargeFaceList - crear](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc). Todas esas listas grandes cara creadas antes de marzo de 2019 están enlazadas con este modelo de reconocimiento.
+      * 'recognition_02': Modelo de reconocimiento que se lanzó en marzo de 2019. se recomienda 'recognition_02' porque su precisión global se ha mejorado en comparación con 'recognition_01'.
+      Lista de cuotas de cara grandes:
       * Cuota de suscripción del nivel gratuito: las listas se enfrentan a 64 grandes.
       * Cuota de suscripción del nivel s0: 1.000.000 de gran tamaño se enfrentan a las listas.
-      <br />
-      'recognitionModel' debe especificarse para asociar a esta lista de caras de gran tamaño. El valor predeterminado de 'recognitionModel' es 'recognition_01', si el modelo más reciente es necesario, especifique explícitamente el modelo que necesita en este parámetro. Las caras nuevas que se agregan a una lista de caras grande existente usará el modelo de reconocimiento que ya está asociado con la colección. No se puede actualizar las características existentes de cara en una lista grande de cara a las características extraídas por otra versión del modelo de reconocimiento.
     syntax:
       content: 'function create(largeFaceListId: string, options?: Models.LargeFaceListCreateOptionalParams)'
       parameters:
@@ -308,7 +343,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Eliminar una imagen existente de una lista de caras de gran tamaño (proporcionada por un persistedFaceId y un largeFaceListId). También se eliminará la imagen permanente relacionados con la cara.
+    summary: |-
+      Eliminar una cara de una lista de caras grandes persistedFaceId y largeFaceListId especificado.
+      <br /> Agregar o eliminar caras desde una misma lista de caras grandes se procesan secuencialmente y desde diferentes caras grandes son listas en paralelo.
     syntax:
       content: 'function deleteFace(largeFaceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -393,7 +430,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Eliminar una lista de caras grande existente según faceListId. Conserva la cara también se eliminarán las imágenes de la lista de caras de gran tamaño.
+    summary: Eliminar una lista de caras de gran tamaño especificado.
     syntax:
       content: 'function deleteMethod(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:

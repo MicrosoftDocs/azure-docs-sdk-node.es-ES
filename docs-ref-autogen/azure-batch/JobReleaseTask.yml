@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - azure-batch.JobReleaseTask.commandLine
+      - azure-batch.JobReleaseTask.containerSettings
+      - azure-batch.JobReleaseTask.environmentSettings
+      - azure-batch.JobReleaseTask.id
+      - azure-batch.JobReleaseTask.maxWallClockTime
+      - azure-batch.JobReleaseTask.resourceFiles
+      - azure-batch.JobReleaseTask.retentionTime
+      - azure-batch.JobReleaseTask.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      La tarea de liberación del trabajo se ejecuta cuando finaliza el trabajo, debido a una de las siguientes acciones: El usuario llama a la API de trabajo finaliza, o la API de trabajo eliminar mientras el trabajo todavía está activo, se alcanza la restricción de tiempo de reloj de pared máximo del trabajo y sigue estando activo, el trabajo o tarea del Administrador de trabajos del trabajo completado y el trabajo está configurado para finalizar cuando el trabajo de Administr ER completa.
+      La tarea de liberación del trabajo se ejecuta en cada nodo donde se ejecutaron las tareas del trabajo y la tarea de preparación del trabajo se ha ejecutado y completado. Si la imagen inicial de un nodo después de que ha ejecutado la tarea de preparación del trabajo y el trabajo finaliza sin más tareas del trabajo que se ejecutan en ese nodo (y, por tanto, la tarea de preparación del trabajo no vuelva a ejecutar), a continuación, la tarea de liberación del trabajo no se ejecuta en ese nodo de proceso.
+      Si se reinicia un nodo mientras todavía se está ejecutando la tarea de liberación del trabajo, la tarea de liberación del trabajo se ejecuta de nuevo cuando se inicia el nodo de proceso. El trabajo no está marcado como completado hasta que se completen todas las tareas de liberación del trabajo. La tarea de liberación del trabajo se ejecuta en segundo plano. No ocupa un espacio de programación; es decir, no cuentan para el límite de maxTasksPerNode especificado en el grupo.
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La línea de comandos no se ejecuta en un shell y, por lo tanto, no se puede aprovechar las características de shell, como la expansión de variables de entorno. Si desea aprovechar las ventajas de estas características, debe invocar el shell en la línea de comandos, por ejemplo "cmd /c MyCommand" se usa en Windows o "/ bin/sh - c MyCommand" en Linux. Si la línea de comandos se refiere a las rutas de acceso de archivo, debe usar una ruta de acceso relativa (relativo al directorio de trabajo de tarea), o use la variable de entorno proporcionada por lotes (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Cuando se especifica, se asignan todos los directorios recursivamente debajo el AZ_BATCH_NODE_ROOT_DIR (la raíz de los directorios de Azure Batch en el nodo) en el contenedor, todas las variables de entorno de tareas se asignan en el contenedor y es la línea de comandos de tarea se ejecuta en el contenedor. Archivos generados en el contenedor fuera AZ_BATCH_NODE_ROOT_DIR podrían no reflejarse en el disco del host, lo que significa que las API de archivo por lotes no podrá tener acceso a esos archivos.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El identificador puede contener cualquier combinación de caracteres alfanuméricos incluidos guiones y caracteres de subrayado y no puede contener más de 64 caracteres. Si no se especifica esta propiedad, el servicio Batch asigna un valor predeterminado de ''jobrelease''. Ninguna otra tarea en el trabajo puede tener el mismo identificador que la tarea de liberación del trabajo. Si intenta enviar una tarea con el mismo identificador, el servicio Batch rechaza la solicitud con el código de error TaskIdSameAsJobReleaseTask; Si está llamando a la API de REST directamente, el código de estado HTTP es 409 (conflicto).'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Archivos que aparecen bajo este elemento se encuentran en el directorio de trabajo de la tarea.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El valor predeterminado es 7 días, es decir, el directorio de la tarea se conservarán durante 7 días a menos que se quite el nodo de proceso o se elimina el trabajo.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si se omite, la tarea se ejecuta como un usuario sin derechos administrativos único para la tarea.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

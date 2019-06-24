@@ -39,16 +39,16 @@ items:
       - typeScript
     summary: |-
       Crear un nuevo grupo de persona con personGroupId especificado, el nombre y recognitionModel, userData proporcionado por el usuario.
-      <br /> Una persona del grupo es el contenedor de los datos de la persona cargados, incluidas imágenes de caras y las características de reconocimiento de caras.
+      <br /> Una persona del grupo es el contenedor de los datos de la persona cargados, incluidas las características de reconocimiento de caras.
       <br /> Después de crear, usar [crear grupo de personas persona -](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) agregar personas al grupo y, a continuación, llamar a [grupo de personas - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) para estar preparado para este grupo [enfrentan: identificación de](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br /> La persona cara, la imagen y userData se almacena en el servidor hasta [grupo de personas Person
-      - DELETE](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f3039523d) o [grupo de personas - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) se llama.
-      <br />
+      <br /> No hay ninguna imagen se almacenará. Solo la persona extraídos características faciales y userData se almacenarán en el servidor hasta que [eliminar grupo de personas persona -](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) o [grupo de personas - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) se llama.
+      <br/>Para asociar a esta persona, grupo, se debe especificar 'recognitionModel'. El valor predeterminado de 'recognitionModel' es 'recognition_01', si el modelo más reciente es necesario, especifique explícitamente el modelo que necesita en este parámetro. Las caras nuevas que se agregan a un grupo existente de la persona que utilizará el modelo de reconocimiento que ya está asociado con la colección. No se puede actualizar las características existentes de cara de un grupo de la persona a las características extraídas por otra versión del modelo de reconocimiento.
+      * 'recognition_01': El modelo de reconocimiento de forma predeterminada para [grupo de personas - crear](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244). Todos esos grupos de personas creados antes de marzo de 2019 están enlazados con este modelo de reconocimiento.
+      * 'recognition_02': Modelo de reconocimiento que se lanzó en marzo de 2019. se recomienda 'recognition_02' porque su precisión global se ha mejorado en comparación con 'recognition_01'.
+      Cuota de grupo de persona:
       * Cuota de suscripción del nivel gratuito: 1.000 grupos de personas. Cada una contiene a hasta 1000 personas.
       * Cuota de suscripción del nivel s0: 1 000 000 grupos de personas. Cada una contiene a hasta 10 000 personas.
       * para controlar el problema de identificación de caras de escala más grande, considere la posibilidad de usar [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).
-      <br />
-      Para asociar a esta persona, grupo, se debe especificar 'recognitionModel'. El valor predeterminado de 'recognitionModel' es 'recognition_01', si el modelo más reciente es necesario, especifique explícitamente el modelo que necesita en este parámetro. Las caras nuevas que se agregan a un grupo existente de la persona que utilizará el modelo de reconocimiento que ya está asociado con la colección. No se puede actualizar las características existentes de cara de un grupo de la persona a las características extraídas por otra versión del modelo de reconocimiento.
     syntax:
       content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
       parameters:

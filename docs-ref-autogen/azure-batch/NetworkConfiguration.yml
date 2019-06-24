@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+      - azure-batch.NetworkConfiguration.endpointConfiguration
+      - azure-batch.NetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: La configuración de red para un grupo.
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Los valores posibles son: ''none'', ''del trabajo'''
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Configuración del punto de conexión de grupo solo se admite en los grupos con la propiedad virtualMachineConfiguration.
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.PoolEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La red virtual debe estar en la misma región y suscripción que la cuenta de Batch de Azure. La subred especificada debe tener suficientes direcciones IP libres para alojar al número de nodos de proceso en el grupo. Si la subred no tiene suficientes direcciones IP libres, el grupo asignará parcialmente los nodos y se producirá un error de cambio de tamaño. La entidad de servicio ''MicrosoftAzureBatch'' debe tener el ''clásico colaborador de máquina Virtual "control de acceso basado en roles (RBAC) para la red virtual especificada. La subred especificada debe permitir la comunicación desde el servicio de Azure Batch para poder programar tareas en los nodos. Esto se puede comprobar mediante la comprobación de si la red virtual especificada tiene los grupos de seguridad de red (NSG) asociado. Si un NSG deniega la comunicación a los nodos de la subred especificada, a continuación, el servicio Batch establecerá el estado de los nodos de proceso en inutilizable. Los grupos creados con virtualMachineConfiguration se admiten solo redes virtuales de ARM ('' Microsoft.Network/virtualnetworks''), pero los grupos creados con cloudServiceConfiguration se admiten tanto ARM como redes virtuales clásicas. Si la red virtual especificada tiene grupos de seguridad de red (NSG) asociados, será preciso habilitar varios puertos del sistema reservados para las comunicaciones entrantes. Los grupos creados con una configuración de máquina virtual, habilite los puertos 29876 y 29877, así como el puerto 22 para Linux y el puerto 3389 para Windows. Los grupos creados con una configuración de servicio en la nube, habilite los puertos 10100, 20100 y 30100. También se permiten las conexiones salientes a Azure Storage en el puerto 443. Para obtener más información, consulte: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration'
+    optional: true
+    syntax:
+      content: 'subnetId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolEndpointConfiguration
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: azure-batch.PoolEndpointConfiguration

@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobPatchParameter
+    name: JobPatchParameter
+    fullName: JobPatchParameter
+    children:
+      - azure-batch.JobPatchParameter.constraints
+      - azure-batch.JobPatchParameter.metadata
+      - azure-batch.JobPatchParameter.onAllTasksComplete
+      - azure-batch.JobPatchParameter.poolInfo
+      - azure-batch.JobPatchParameter.priority
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si se omite, la ejecución existente, las restricciones se dejan sin cambios.'
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - azure-batch.JobConstraints
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si se omite, el trabajo existente, los metadatos se deja sin modificar.'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.onAllTasksComplete
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si se omite, el comportamiento de finalización se deja sin modificar. No se puede cambiar el valor de terminatejob al noaction: es decir, una vez que haya activado la finalización automática de trabajos, no puede desactivarla. Si intenta hacerlo, se produce un error en la solicitud con una respuesta de error ''valor de propiedad no válida''; Si está llamando a la API de REST directamente, el código de estado HTTP es 400 (solicitud incorrecta). Los valores posibles son: "noAction", "terminateJob"'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.poolInfo
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Puede cambiar el grupo para un trabajo solo cuando el trabajo está deshabilitado. Se producirá un error en la llamada de trabajo de revisión si incluye el elemento poolInfo y el trabajo no está deshabilitado. Si especifica una especificación de autoPoolSpecification en el poolInfo, se puede actualizar solo la propiedad keepAlive y, a continuación, solo si la agrupación automática tiene un poolLifetimeOption del trabajo. Si se omite, el trabajo continúa ejecutándose en su grupo actual.'
+    optional: true
+    syntax:
+      content: 'poolInfo?: PoolInformation'
+      return:
+        type:
+          - azure-batch.PoolInformation
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Los valores de prioridad pueden oscilar entre -1000 y 1000, siendo-1000 la prioridad más baja y 1000 la prioridad más alta. Si se omite, la prioridad del trabajo se deja sin modificar.'
+    optional: true
+    syntax:
+      content: 'priority?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+references:
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: azure-batch.JobConstraints
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: azure-batch.PoolInformation

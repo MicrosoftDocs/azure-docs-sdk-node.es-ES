@@ -1,0 +1,455 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-hubs.EventHubClient'
+    name: EventHubClient
+    fullName: EventHubClient
+    children:
+      - '@azure/event-hubs.EventHubClient.close'
+      - '@azure/event-hubs.EventHubClient.connectionId'
+      - '@azure/event-hubs.EventHubClient.createFromAadTokenCredentials'
+      - '@azure/event-hubs.EventHubClient.createFromConnectionString'
+      - '@azure/event-hubs.EventHubClient.createFromIotHubConnectionString'
+      - '@azure/event-hubs.EventHubClient.createFromTokenProvider'
+      - '@azure/event-hubs.EventHubClient.constructor'
+      - '@azure/event-hubs.EventHubClient.eventhubName'
+      - '@azure/event-hubs.EventHubClient.getHubRuntimeInformation'
+      - '@azure/event-hubs.EventHubClient.getPartitionIds'
+      - '@azure/event-hubs.EventHubClient.getPartitionInformation'
+      - '@azure/event-hubs.EventHubClient.receive'
+      - '@azure/event-hubs.EventHubClient.receiveBatch'
+      - '@azure/event-hubs.EventHubClient.send'
+      - '@azure/event-hubs.EventHubClient.sendBatch'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Cierra la conexión de AMQP con el centro de eventos para este cliente, devolver una promesa que se resolverán cuando se complete la desconexión.'
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.connectionId'
+    name: connectionId
+    fullName: connectionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{cadena} [connectionId] El identificador de conexión de amqp que identifica la conexión dentro de un proceso.'
+    optional: true
+    syntax:
+      content: 'connectionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.createFromAadTokenCredentials'
+    name: 'createFromAadTokenCredentials(string, string, ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, ClientOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea a un cliente de centro de eventos de AADTokenCredentials.
+    syntax:
+      content: 'static function createFromAadTokenCredentials(host: string, entityPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: ClientOptionsBase)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: 'Nombre de dominio completo para Event Hubs. Probablemente, <yournamespace>. servicebus.windows.net'
+        - id: entityPath
+          type:
+            - string
+          description: Ruta de acceso del centro de eventos del formulario 'Mi-event-hub-name'
+        - id: credentials
+          type:
+            - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+          description: 'Las credenciales de Token de AAD. Puede ser uno de los siguientes: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.'
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptionsBase'
+          description: Las opciones que se pueden usar durante la creación del cliente.
+          optional: true
+      return:
+        type:
+          - '@azure/event-hubs.EventHubClient'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.createFromConnectionString'
+    name: 'createFromConnectionString(string, undefined | string, ClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea a un cliente de centro de eventos de cadena de conexión.
+    syntax:
+      content: 'static function createFromConnectionString(connectionString: string, path?: undefined | string, options?: ClientOptions)'
+      parameters:
+        - id: connectionString
+          type:
+            - string
+          description: 'Cadena de conexión de la forma '' Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName = my-SA-name; SharedAccessKey = my-SA-key'''
+        - id: path
+          type:
+            - undefined | string
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@azure/event-hubs.EventHubClient'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.createFromIotHubConnectionString'
+    name: 'createFromIotHubConnectionString(string, ClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea a un cliente de centro de eventos de cadena de conexión.
+    syntax:
+      content: 'static function createFromIotHubConnectionString(iothubConnectionString: string, options?: ClientOptions)'
+      parameters:
+        - id: iothubConnectionString
+          type:
+            - string
+          description: Cadena de conexión de la forma ' nombre de host = host-iot-name; SharedAccessKeyName = my-SA-name; SharedAccessKey = my-SA-key'
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/event-hubs.EventHubClient>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.createFromTokenProvider'
+    name: 'createFromTokenProvider(string, string, TokenProvider, ClientOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea a un cliente de centro de eventos desde un proveedor de tokens genérico.
+    syntax:
+      content: 'static function createFromTokenProvider(host: string, entityPath: string, tokenProvider: TokenProvider, options?: ClientOptionsBase)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: 'Nombre de dominio completo para Event Hubs. Probablemente, <yournamespace>. servicebus.windows.net'
+        - id: entityPath
+          type:
+            - string
+          description: Ruta de acceso del centro de eventos del formulario 'Mi-event-hub-name'
+        - id: tokenProvider
+          type:
+            - TokenProvider
+          description: El proveedor de tokens que implementa la interfaz TokenProvider.
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptionsBase'
+          description: Las opciones que se pueden usar durante la creación del cliente.
+          optional: true
+      return:
+        type:
+          - '@azure/event-hubs.EventHubClient'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.constructor'
+    name: 'EventHubClient(EventHubConnectionConfig, ClientOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crea una instancia de un cliente que apunte al centro de eventos proporcionado por esta configuración.
+    syntax:
+      content: 'new EventHubClient(config: EventHubConnectionConfig, options?: ClientOptions)'
+      parameters:
+        - id: config
+          type:
+            - EventHubConnectionConfig
+          description: La configuración de conexión para crear al cliente de centro de eventos.
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptions'
+          description: |
+            Los parámetros opcionales que pueden usarse en el constructor de cliente de centro de eventos.
+          optional: true
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.eventhubName'
+    name: eventhubName
+    fullName: eventhubName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{cadena} eventhubName el nombre del centro de eventos.'
+    syntax:
+      content: 'eventhubName: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.getHubRuntimeInformation'
+    name: getHubRuntimeInformation()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Proporciona la información de tiempo de ejecución de eventhub.
+    syntax:
+      content: function getHubRuntimeInformation()
+      parameters: []
+      return:
+        type:
+          - Promise<@azure/event-hubs.EventHubRuntimeInformation>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.getPartitionIds'
+    name: getPartitionIds()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Proporciona una matriz de partitionIds.
+    syntax:
+      content: function getPartitionIds()
+      parameters: []
+      return:
+        type:
+          - Promise<Array<string>>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.getPartitionInformation'
+    name: getPartitionInformation(string | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Proporciona información acerca de la partición especificada.
+    syntax:
+      content: 'function getPartitionInformation(partitionId: string | number)'
+      parameters:
+        - id: partitionId
+          type:
+            - string | number
+          description: Id. de partición para la partición que la información es necesaria.
+      return:
+        type:
+          - Promise<@azure/event-hubs.EventHubPartitionRuntimeInformation>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.receive'
+    name: 'receive(string | number, OnMessage, OnError, ReceiveOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Inicia el receptor mediante el establecimiento de una sesión AMQP y un vínculo del receptor AMQP en la sesión. Los mensajes se pasará al controlador onMessage proporcionado y error se pasará al controlador onError proporcionado.
+    syntax:
+      content: 'function receive(partitionId: string | number, onMessage: OnMessage, onError: OnError, options?: ReceiveOptions)'
+      parameters:
+        - id: partitionId
+          type:
+            - string | number
+          description: Id. de partición desde la que se va a recibir.
+        - id: onMessage
+          type:
+            - '@azure/event-hubs.OnMessage'
+          description: El controlador de mensajes para recibir objetos de datos de eventos.
+        - id: onError
+          type:
+            - '@azure/event-hubs.OnError'
+          description: El controlador de errores para recibir un error que se produce al recibir mensajes.
+        - id: options
+          type:
+            - '@azure/event-hubs.ReceiveOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@azure/event-hubs.ReceiveHandler'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.receiveBatch'
+    name: 'receiveBatch(string | number, number, undefined | number, ReceiveOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Recibe un lote de objetos EventData desde una partición del centro de eventos para un número determinado y un máximo determinado tiempo de espera en segundos, lo que ocurra primero. Este método se puede utilizar directamente después de crear el objeto de receptor y **no debe** usarse junto con el `start()` método.'
+    syntax:
+      content: 'function receiveBatch(partitionId: string | number, maxMessageCount: number, maxWaitTimeInSeconds?: undefined | number, options?: ReceiveOptions)'
+      parameters:
+        - id: partitionId
+          type:
+            - string | number
+          description: Id. de partición desde la que se va a recibir.
+        - id: maxMessageCount
+          type:
+            - number
+          description: El número máximo de mensajes. Debe ser un valor mayor que 0.
+        - id: maxWaitTimeInSeconds
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@azure/event-hubs.ReceiveOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/event-hubs.EventData[]>'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.send'
+    name: 'send(EventData, string | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Envía el mensaje especificado en el centro de eventos.
+    syntax:
+      content: 'function send(data: EventData, partitionId?: string | number)'
+      parameters:
+        - id: data
+          type:
+            - '@azure/event-hubs.EventData'
+          description: Mensaje que se enviará.  Se enviará como cadena JSON con codificación UTF8.
+        - id: partitionId
+          type:
+            - string | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Delivery>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.sendBatch'
+    name: 'sendBatch(EventData[], string | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Enviar un lote de EventData para el centro de eventos. El "message_annotations", "application_properties" y "propiedades" del primer mensaje se establecerá como el de la envoltura (mensaje de lote).'
+    syntax:
+      content: 'function sendBatch(datas: EventData[], partitionId?: string | number)'
+      parameters:
+        - id: datas
+          type:
+            - '@azure/event-hubs.EventData[]'
+          description: Una matriz de objetos EventData para enviarlo en un mensaje por lotes.
+        - id: partitionId
+          type:
+            - string | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Delivery>
+    package: '@azure/event-hubs'
+references:
+  - uid: '@azure/event-hubs.ClientOptions'
+    name: ClientOptions
+    spec.typeScript:
+      - name: ClientOptions
+        fullName: ClientOptions
+        uid: '@azure/event-hubs.ClientOptions'
+  - uid: Promise<@azure/event-hubs.EventHubRuntimeInformation>
+    name: EventHubRuntimeInformation>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventHubRuntimeInformation
+        fullName: EventHubRuntimeInformation
+        uid: '@azure/event-hubs.EventHubRuntimeInformation'
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<@azure/event-hubs.EventHubPartitionRuntimeInformation>
+    name: EventHubPartitionRuntimeInformation>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventHubPartitionRuntimeInformation
+        fullName: EventHubPartitionRuntimeInformation
+        uid: '@azure/event-hubs.EventHubPartitionRuntimeInformation'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/event-hubs.OnMessage'
+    name: OnMessage
+    spec.typeScript:
+      - name: OnMessage
+        fullName: OnMessage
+        uid: '@azure/event-hubs.OnMessage'
+  - uid: '@azure/event-hubs.OnError'
+    name: OnError
+    spec.typeScript:
+      - name: OnError
+        fullName: OnError
+        uid: '@azure/event-hubs.OnError'
+  - uid: '@azure/event-hubs.ReceiveOptions'
+    name: ReceiveOptions
+    spec.typeScript:
+      - name: ReceiveOptions
+        fullName: ReceiveOptions
+        uid: '@azure/event-hubs.ReceiveOptions'
+  - uid: '@azure/event-hubs.ReceiveHandler'
+    name: ReceiveHandler
+    spec.typeScript:
+      - name: ReceiveHandler
+        fullName: ReceiveHandler
+        uid: '@azure/event-hubs.ReceiveHandler'
+  - uid: 'Promise<@azure/event-hubs.EventData[]>'
+    name: 'EventData[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventData
+        fullName: EventData
+        uid: '@azure/event-hubs.EventData'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/event-hubs.EventData'
+    name: EventData
+    spec.typeScript:
+      - name: EventData
+        fullName: EventData
+        uid: '@azure/event-hubs.EventData'
+  - uid: '@azure/event-hubs.EventData[]'
+    name: 'EventData[]'
+    spec.typeScript:
+      - name: EventData
+        fullName: EventData
+        uid: '@azure/event-hubs.EventData'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/event-hubs.ClientOptionsBase'
+    name: ClientOptionsBase
+    spec.typeScript:
+      - name: ClientOptionsBase
+        fullName: ClientOptionsBase
+        uid: '@azure/event-hubs.ClientOptionsBase'
+  - uid: '@azure/event-hubs.EventHubClient'
+    name: EventHubClient
+    spec.typeScript:
+      - name: EventHubClient
+        fullName: EventHubClient
+        uid: '@azure/event-hubs.EventHubClient'
+  - uid: Promise<@azure/event-hubs.EventHubClient>
+    name: EventHubClient>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventHubClient
+        fullName: EventHubClient
+        uid: '@azure/event-hubs.EventHubClient'
+      - name: '>'
+        fullName: '>'

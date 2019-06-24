@@ -46,7 +46,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Agregue una representante de cara a una persona para la identificación. La cara de entrada se especifica como una imagen con un rectángulo targetFace.
+    summary: |-
+      Agregue una cara a una persona en un grupo de persona para la identificación de caras o comprobación. Para tratar con una imagen que contenga varias caras, la cara de entrada se puede especificar como una imagen con un rectángulo targetFace. Devuelve un persistedFaceId que representa la imagen se ha agregado. No hay ninguna imagen se almacenará.
+      Solo la característica de cara extraídos se almacenarán en el servidor hasta que [PersonGroup PersonFace - eliminar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e), [eliminar grupo de personas persona -](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) o [grupo de personas - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) se llama.
+      <br /> Tenga en cuenta persistedFaceId es diferente de faceId generado por [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      *   Mayor calidad de imagen de cara significa mejorar la precisión de reconocimiento. Considere la posibilidad de caras de alta calidad: frontal, clear y cara tamaño es de 200 x 200 píxeles (100 píxeles entre los ojos) o mayor.
+      *   Cada entrada de la persona que puede contener hasta 248 caras.
+      *   Se admiten JPEG, PNG, GIF (el primer fotograma) y el formato BMP. El tamaño del archivo de imagen permitido es de 1KB a 6MB.
+      *   rectángulo "targetFace" debe contener una cara. Cero o varias caras se considerarán como un error. Si no se devuelve el rectángulo proporcionado "targetFace" de [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), no hay ninguna garantía para detectar y agregar la cara correctamente.
+      *   Fuera del tamaño de cara detectable (36 x 36-4096 x 4096 píxeles), grandes occlusions poses o grandes, producirán errores.
+      *   Agregar o eliminar las caras de una misma persona se procesarán secuencialmente. Agregar o eliminar caras de personas diferentes se procesan en paralelo.
+      * El tamaño mínimo de cara detectable es 36 x 36 píxeles en una imagen no superior a 1920 x 1080 píxeles.
+      Las imágenes con dimensiones superiores a 1920 x 1080 píxeles tendrá un tamaño mínimo de cara proporcionalmente mayor.
+      * Se pueden proporcionar valores diferentes 'detectionModel'. Para usar y comparar los modelos de detección diferente, consulte [cómo especificar un modelo de detección](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | El modelo de detección predeterminado para [grupo de personas persona - agregar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b). Se recomienda para cerca de la detección de caras frontales. Para escenarios con caras de ángulo excepcionalmente grandes (poses), caras ocluidas u orientación de la imagen incorrecta, no se pueden detectar las caras en estos casos. | | 'detection_02': | Es posible que un modelo de detección publicada en 2019 con una mayor precisión, especialmente en las caras pequeñas, en paralelo y borrosas. |
     syntax:
       content: 'function addFaceFromStream(personGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.PersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
@@ -143,7 +159,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Agregue una representante de cara a una persona para la identificación. La cara de entrada se especifica como una imagen con un rectángulo targetFace.
+    summary: |-
+      Agregue una cara a una persona en un grupo de persona para la identificación de caras o comprobación. Para tratar con una imagen que contenga varias caras, la cara de entrada se puede especificar como una imagen con un rectángulo targetFace. Devuelve un persistedFaceId que representa la imagen se ha agregado. No hay ninguna imagen se almacenará.
+      Solo la característica de cara extraídos se almacenarán en el servidor hasta que [PersonGroup PersonFace - eliminar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e), [eliminar grupo de personas persona -](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) o [grupo de personas - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) se llama.
+      <br /> Tenga en cuenta persistedFaceId es diferente de faceId generado por [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      *   Mayor calidad de imagen de cara significa mejorar la precisión de reconocimiento. Considere la posibilidad de caras de alta calidad: frontal, clear y cara tamaño es de 200 x 200 píxeles (100 píxeles entre los ojos) o mayor.
+      *   Cada entrada de la persona que puede contener hasta 248 caras.
+      *   Se admiten JPEG, PNG, GIF (el primer fotograma) y el formato BMP. El tamaño del archivo de imagen permitido es de 1KB a 6MB.
+      *   rectángulo "targetFace" debe contener una cara. Cero o varias caras se considerarán como un error. Si no se devuelve el rectángulo proporcionado "targetFace" de [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), no hay ninguna garantía para detectar y agregar la cara correctamente.
+      *   Fuera del tamaño de cara detectable (36 x 36-4096 x 4096 píxeles), grandes occlusions poses o grandes, producirán errores.
+      *   Agregar o eliminar las caras de una misma persona se procesarán secuencialmente. Agregar o eliminar caras de personas diferentes se procesan en paralelo.
+      * El tamaño mínimo de cara detectable es 36 x 36 píxeles en una imagen no superior a 1920 x 1080 píxeles.
+      Las imágenes con dimensiones superiores a 1920 x 1080 píxeles tendrá un tamaño mínimo de cara proporcionalmente mayor.
+      * Se pueden proporcionar valores diferentes 'detectionModel'. Para usar y comparar los modelos de detección diferente, consulte [cómo especificar un modelo de detección](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | El modelo de detección predeterminado para [grupo de personas persona - agregar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523b). Se recomienda para cerca de la detección de caras frontales. Para escenarios con caras de ángulo excepcionalmente grandes (poses), caras ocluidas u orientación de la imagen incorrecta, no se pueden detectar las caras en estos casos. | | 'detection_02': | Es posible que un modelo de detección publicada en 2019 con una mayor precisión, especialmente en las caras pequeñas, en paralelo y borrosas. |
     syntax:
       content: 'function addFaceFromUrl(personGroupId: string, personId: string, url: string, options?: Models.PersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
@@ -313,7 +345,10 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Eliminar una cara de una persona. También se eliminará la característica relativa de la cara persistente.
+    summary: |-
+      Eliminar una cara de una persona en un grupo de persona persistedFaceId, personId y personGroupId especificado.
+      <br /> Agregar o eliminar las caras de una misma persona se procesarán secuencialmente.
+      Agregar o eliminar caras de personas diferentes se procesan en paralelo.
     syntax:
       content: 'function deleteFace(personGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -410,7 +445,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Eliminar a una persona existente de un grupo de persona. Todos almacenan datos de la persona, y se eliminarán las características de cara de la entrada de la persona.'
+    summary: 'Eliminar a una persona existente de un grupo de persona. El persistedFaceId, userData, característica de nombre y la cara de persona en la entrada de la persona que todos se eliminará.'
     syntax:
       content: 'function deleteMethod(personGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -851,7 +886,16 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Actualización de una persona conserva el campo de rostro userData.
+    summary: |-
+      Agregue una cara a una persona en un grupo de persona para la identificación de caras o comprobación. Para tratar con una imagen que contenga varias caras, la cara de entrada se puede especificar como una imagen con un rectángulo targetFace. Devuelve un persistedFaceId que representa la imagen se ha agregado. No hay ninguna imagen se almacenará.
+      Solo la característica de cara extraídos se almacenarán en el servidor hasta que [PersonGroup PersonFace - eliminar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e), [eliminar grupo de personas persona -](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) o [grupo de personas - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) se llama.
+      <br /> Tenga en cuenta persistedFaceId es diferente de faceId generado por [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Mayor calidad de imagen de cara significa mejorar la precisión de reconocimiento. Considere la posibilidad de caras de alta calidad: frontal, clear y cara tamaño es de 200 x 200 píxeles (100 píxeles entre los ojos) o mayor.
+      * Cada entrada de la persona que puede contener hasta 248 caras.
+      * Se admiten JPEG, PNG, GIF (el primer fotograma) y el formato BMP. El tamaño del archivo de imagen permitido es de 1KB a 6MB.
+      * rectángulo "targetFace" debe contener una cara. Cero o varias caras se considerarán como un error. Si no se devuelve el rectángulo proporcionado "targetFace" de [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), no hay ninguna garantía para detectar y agregar la cara correctamente.
+      * Fuera del tamaño de cara detectable (36 x 36-4096 x 4096 píxeles), grandes occlusions poses o grandes, producirán errores.
+      * Agregar o eliminar las caras de una misma persona se procesarán secuencialmente. Agregar o eliminar caras de personas diferentes se procesan en paralelo.
     syntax:
       content: 'function updateFace(personGroupId: string, personId: string, persistedFaceId: string, options?: Models.PersonGroupPersonUpdateFaceOptionalParams)'
       parameters:

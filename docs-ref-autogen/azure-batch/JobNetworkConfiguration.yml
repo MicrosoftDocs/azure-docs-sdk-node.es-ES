@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - azure-batch.JobNetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobNetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La red virtual debe estar en la misma región y suscripción que la cuenta de Batch de Azure. La subred especificada debe tener suficientes direcciones IP libres para alojar al número de nodos de proceso que se ejecutarán las tareas del trabajo. Esto puede ser hasta el número de nodos de proceso en el grupo. La entidad de servicio 'MicrosoftAzureBatch' debe tener el 'clásico colaborador de máquina Virtual "control de acceso basado en roles (RBAC) para la red virtual especificada para que el servicio Azure Batch puede programar tareas en los nodos. Esto se puede comprobar mediante la comprobación de si la red virtual especificada tiene los grupos de seguridad de red (NSG) asociado. Si un NSG deniega la comunicación a los nodos de la subred especificada, a continuación, el servicio Batch establecerá el estado de los nodos de proceso en inutilizable. Se trata de la forma/Subscriptions / {subscription} / ResourceGroups / {grupo} / Providers / {provider} /virtualNetworks/ {network} / Subnets / {subred}.
+      Si la red virtual especificada tiene los grupos de seguridad de red (NSG) asociado, algunos puertos del sistema reservados deben habilitarse para las comunicaciones entrantes desde el servicio Azure Batch. Los grupos creados con una configuración de máquina Virtual, habilite los puertos 29876 y 29877, así como el puerto 22 para Linux y el puerto 3389 para Windows. También se requiere el puerto 443 esté abierto para las conexiones salientes para las comunicaciones con el almacenamiento de Azure. Para obtener más información, consulte: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: azure-batch

@@ -72,8 +72,21 @@ items:
     langs:
       - typeScript
     summary: |-
-      Agregar una cara a una lista de caras. La cara de entrada se especifica como una imagen con un rectángulo targetFace.
-      Devuelve un persistedFaceId que representa la imagen se ha agregado y persistedFaceId no caducará.
+      Agregar una cara a una lista de fuente especificado, hasta 1000 caras.
+      <br /> Para tratar con una imagen que contenga varias caras, la cara de entrada se puede especificar como una imagen con un rectángulo targetFace. Devuelve un persistedFaceId que representa la imagen se ha agregado. No hay ninguna imagen se almacenará. Solo la característica de cara extraídos se almacenarán en el servidor hasta que [FaceList - Eliminar cara](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) o [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) se llama.
+      <br /> Tenga en cuenta persistedFaceId es diferente de faceId generado por [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Calidad de imagen de cara superior significa mejor detección y la precisión del reconocimiento. Considere la posibilidad de caras de alta calidad: frontal, clear y cara tamaño es de 200 x 200 píxeles (100 píxeles entre los ojos) o mayor.
+      * Se admiten JPEG, PNG, GIF (el primer fotograma) y el formato BMP. El tamaño del archivo de imagen permitido es de 1KB a 6MB.
+      * rectángulo "targetFace" debe contener una cara. Cero o varias caras se considerarán como un error. Si no se devuelve el rectángulo proporcionado "targetFace" de [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), no hay ninguna garantía para detectar y agregar la cara correctamente.
+      * Fuera del tamaño de cara detectable (36 x 36-4096 x 4096 píxeles), grandes occlusions poses o grandes, producirán errores.
+      * Agregar o eliminar caras de una misma lista de caras se procesan secuencialmente y de cara diferentes listas se encuentran en paralelo.
+      * El tamaño mínimo de cara detectable es 36 x 36 píxeles en una imagen no superior a 1920 x 1080 píxeles.
+      Las imágenes con dimensiones superiores a 1920 x 1080 píxeles tendrá un tamaño mínimo de cara proporcionalmente mayor.
+      * Se pueden proporcionar valores diferentes 'detectionModel'. Para usar y comparar los modelos de detección diferente, consulte [cómo especificar un modelo de detección](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | El modelo de detección predeterminado para [FaceList - agregar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250). Se recomienda para cerca de la detección de caras frontales. Para escenarios con caras de ángulo excepcionalmente grandes (poses), caras ocluidas u orientación de la imagen incorrecta, no se pueden detectar las caras en estos casos. | | 'detection_02': | Es posible que un modelo de detección publicada en 2019 con una mayor precisión, especialmente en las caras pequeñas, en paralelo y borrosas. |
     syntax:
       content: 'function addFaceFromStream(faceListId: string, image: msRest.HttpRequestBody, options?: Models.FaceListAddFaceFromStreamOptionalParams)'
       parameters:
@@ -159,8 +172,21 @@ items:
     langs:
       - typeScript
     summary: |-
-      Agregar una cara a una lista de caras. La cara de entrada se especifica como una imagen con un rectángulo targetFace.
-      Devuelve un persistedFaceId que representa la imagen se ha agregado y persistedFaceId no caducará.
+      Agregar una cara a una lista de fuente especificado, hasta 1000 caras.
+      <br /> Para tratar con una imagen que contenga varias caras, la cara de entrada se puede especificar como una imagen con un rectángulo targetFace. Devuelve un persistedFaceId que representa la imagen se ha agregado. No hay ninguna imagen se almacenará. Solo la característica de cara extraídos se almacenarán en el servidor hasta que [FaceList - Eliminar cara](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) o [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) se llama.
+      <br /> Tenga en cuenta persistedFaceId es diferente de faceId generado por [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Calidad de imagen de cara superior significa mejor detección y la precisión del reconocimiento. Considere la posibilidad de caras de alta calidad: frontal, clear y cara tamaño es de 200 x 200 píxeles (100 píxeles entre los ojos) o mayor.
+      * Se admiten JPEG, PNG, GIF (el primer fotograma) y el formato BMP. El tamaño del archivo de imagen permitido es de 1KB a 6MB.
+      * rectángulo "targetFace" debe contener una cara. Cero o varias caras se considerarán como un error. Si no se devuelve el rectángulo proporcionado "targetFace" de [enfrentan: detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), no hay ninguna garantía para detectar y agregar la cara correctamente.
+      * Fuera del tamaño de cara detectable (36 x 36-4096 x 4096 píxeles), grandes occlusions poses o grandes, producirán errores.
+      * Agregar o eliminar caras de una misma lista de caras se procesan secuencialmente y de cara diferentes listas se encuentran en paralelo.
+      * El tamaño mínimo de cara detectable es 36 x 36 píxeles en una imagen no superior a 1920 x 1080 píxeles.
+      Las imágenes con dimensiones superiores a 1920 x 1080 píxeles tendrá un tamaño mínimo de cara proporcionalmente mayor.
+      * Se pueden proporcionar valores diferentes 'detectionModel'. Para usar y comparar los modelos de detección diferente, consulte [cómo especificar un modelo de detección](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | El modelo de detección predeterminado para [FaceList - agregar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250). Se recomienda para cerca de la detección de caras frontales. Para escenarios con caras de ángulo excepcionalmente grandes (poses), caras ocluidas u orientación de la imagen incorrecta, no se pueden detectar las caras en estos casos. | | 'detection_02': | Es posible que un modelo de detección publicada en 2019 con una mayor precisión, especialmente en las caras pequeñas, en paralelo y borrosas. |
     syntax:
       content: 'function addFaceFromUrl(faceListId: string, url: string, options?: Models.FaceListAddFaceFromUrlOptionalParams)'
       parameters:
@@ -244,10 +270,13 @@ items:
     summary: |-
       Crear una lista de caras vacío con faceListId especificado por el usuario, el nombre, un recognitionModel y userData opcional. Las listas se permiten hasta 64 caras en una suscripción.
       <br /> Lista de caras es una lista de caras, hasta 1000 caras y usa [cara - buscar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).
-      <br /> Después de la creación, el usuario debe usar [FaceList - agregar cara](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) para importar las caras. Caras se almacenan en el servidor hasta que [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) se llama.
+      <br /> Después de la creación, el usuario debe usar [FaceList - agregar cara](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) para importar las caras. No hay ninguna imagen se almacenará. Solo las características de cara extraídos se almacenan en el servidor hasta que [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) se llama.
       <br /> Buscar que similar se utiliza para el escenario como encontrar caras similar a celebridades, caras similares filtrado, o como una luz cierto enfrenta identificación. Pero si es el uso real para identificar la persona, use [grupo de personas](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
       [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) y [enfrentan: identificación de](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br /> Considere la posibilidad de [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) cuando el número de caras es grande. Puede admitir hasta 1 000 000 caras. 'recognitionModel' debe especificarse para asociar a esta lista de caras. El valor predeterminado de 'recognitionModel' es 'recognition_01', si el modelo más reciente es necesario, especifique explícitamente el modelo que necesita en este parámetro. Las caras nuevas que se agregan a una lista de caras existente usará el modelo de reconocimiento que ya está asociado con la colección. No se puede actualizar las características existentes de cara en una lista de cara a las características extraídas por otra versión del modelo de reconocimiento.
+      <br /> Considere la posibilidad de [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) cuando el número de caras es grande. Puede admitir hasta 1 000 000 caras.
+      <br />'recognitionModel' debe especificarse para asociar a esta lista de caras. El valor predeterminado de 'recognitionModel' es 'recognition_01', si el modelo más reciente es necesario, especifique explícitamente el modelo que necesita en este parámetro. Las caras nuevas que se agregan a una lista de caras existente usará el modelo de reconocimiento que ya está asociado con la colección. No se puede actualizar las características existentes de cara en una lista de cara a las características extraídas por otra versión del modelo de reconocimiento.
+      * 'recognition_01': El modelo de reconocimiento de forma predeterminada para [FaceList - crear](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b). Todas esas listas de caras creadas antes de marzo de 2019 están enlazadas con este modelo de reconocimiento.
+      * 'recognition_02': Modelo de reconocimiento que se lanzó en marzo de 2019. se recomienda 'recognition_02' porque su precisión global se ha mejorado en comparación con 'recognition_01'.
     syntax:
       content: 'function create(faceListId: string, options?: Models.FaceListCreateOptionalParams)'
       parameters:
@@ -294,8 +323,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      Eliminar una imagen existente de una lista de caras (proporcionada por un persistedFaceId y un faceListId).
-      También se eliminará la imagen permanente relacionados con la cara.
+      Eliminar una cara de una lista de caras, persistedFaceId y faceListId especificado.
+      <br /> Agregar o eliminar caras de una misma lista de caras se procesan secuencialmente y de cara diferentes listas se encuentran en paralelo.
     syntax:
       content: 'function deleteFace(faceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -380,7 +409,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Eliminar una lista de caras existente según faceListId. Conserva la cara también se eliminarán las imágenes de la lista de caras.
+    summary: Eliminar una lista de fuente especificado.
     syntax:
       content: 'function deleteMethod(faceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:
