@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.StartTask
+    name: StartTask
+    fullName: StartTask
+    children:
+      - azure-batch.StartTask.commandLine
+      - azure-batch.StartTask.containerSettings
+      - azure-batch.StartTask.environmentSettings
+      - azure-batch.StartTask.maxTaskRetryCount
+      - azure-batch.StartTask.resourceFiles
+      - azure-batch.StartTask.userIdentity
+      - azure-batch.StartTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="d2942-101">Batch volverá a intentar tareas cuando se desencadena una operación de recuperación en un nodo.</span><span class="sxs-lookup"><span data-stu-id="d2942-101">Batch will retry Tasks when a recovery operation is triggered on a Node.</span></span> <span data-ttu-id="d2942-102">Ejemplos de operaciones de recuperación incluyen (pero no se limitan a) cuando se reinicia un nodo en mal estado o un nodo de proceso ha desaparecido debido a un error de host.</span><span class="sxs-lookup"><span data-stu-id="d2942-102">Examples of recovery operations include (but are not limited to) when an unhealthy Node is rebooted or a Compute Node disappeared due to host failure.</span></span> <span data-ttu-id="d2942-103">Vuelve a intentar debido a la recuperación de las operaciones son independientes y no se incluyen en el valor maxTaskRetryCount.</span><span class="sxs-lookup"><span data-stu-id="d2942-103">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="d2942-104">Incluso si el valor maxTaskRetryCount es 0, puede producirse un reintento interno debido a una operación de recuperación.</span><span class="sxs-lookup"><span data-stu-id="d2942-104">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="d2942-105">Por este motivo, todas las tareas deben ser idempotentes.</span><span class="sxs-lookup"><span data-stu-id="d2942-105">Because of this, all Tasks should be idempotent.</span></span> <span data-ttu-id="d2942-106">Esto significa que las tareas debe tolerar se interrumpe y se reinicia sin causar cualquier daño o datos duplicados.</span><span class="sxs-lookup"><span data-stu-id="d2942-106">This means Tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="d2942-107">La mejor práctica para las tareas de larga ejecución es utilizar alguna forma de los puntos de comprobación.</span><span class="sxs-lookup"><span data-stu-id="d2942-107">The best practice for long running Tasks is to use some form of checkpointing.</span></span> <span data-ttu-id="d2942-108">En algunos casos el inicio tarea se puede volver a ejecutar, aunque no se ha reiniciado el nodo de proceso.</span><span class="sxs-lookup"><span data-stu-id="d2942-108">In some cases the start Task may be re-run even though the Compute Node was not rebooted.</span></span> <span data-ttu-id="d2942-109">Debe tener especial cuidado para evitar procesan tareas que crean la separación de inicio o de inicio/install servicios desde el directorio de trabajo de tarea de inicio como Esto bloqueará el proceso por lotes de poder volver a ejecutar la tarea de inicio.</span><span class="sxs-lookup"><span data-stu-id="d2942-109">Special care should be taken to avoid start Tasks which create breakaway process or install/launch services from the start Task working directory, as this will block Batch from being able to re-run the start Task.</span></span>'
+    package: azure-batch
+  - uid: azure-batch.StartTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d2942-110">La línea de comandos no se ejecuta en un shell y, por lo tanto, no se puede aprovechar las características de shell, como la expansión de variables de entorno.</span><span class="sxs-lookup"><span data-stu-id="d2942-110">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="d2942-111">Si desea aprovechar las ventajas de estas características, debe invocar el shell en la línea de comandos, por ejemplo "cmd /c MyCommand" se usa en Windows o "/ bin/sh - c MyCommand" en Linux.</span><span class="sxs-lookup"><span data-stu-id="d2942-111">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="d2942-112">Si la línea de comandos se refiere a las rutas de acceso de archivo, debe usar una ruta de acceso relativa (relativo al directorio de trabajo de tarea), o use la variable de entorno proporcionada por lotes (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="d2942-112">If the command line refers to file paths, it should use a relative path (relative to the Task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.StartTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d2942-113">Cuando se especifica, se asignan todos los directorios recursivamente debajo el AZ_BATCH_NODE_ROOT_DIR (la raíz de los directorios de Azure Batch en el nodo) en el contenedor, todas las variables de entorno de tareas se asignan en el contenedor y es la línea de comandos de tarea se ejecuta en el contenedor.</span><span class="sxs-lookup"><span data-stu-id="d2942-113">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all Task environment variables are mapped into the container, and the Task command line is executed in the container.</span></span> <span data-ttu-id="d2942-114">Archivos generados en el contenedor fuera AZ_BATCH_NODE_ROOT_DIR podrían no reflejarse en el disco del host, lo que significa que las API de archivo por lotes no podrá tener acceso a esos archivos.</span><span class="sxs-lookup"><span data-stu-id="d2942-114">Files produced in the container outside of AZ_BATCH_NODE_ROOT_DIR might not be reflected to the host disk, meaning that Batch file APIs will not be able to access those files.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.StartTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d2942-115">El servicio de Batch reintenta una tarea si su código de salida es distinto de cero.</span><span class="sxs-lookup"><span data-stu-id="d2942-115">The Batch service retries a Task if its exit code is nonzero.</span></span> <span data-ttu-id="d2942-116">Tenga en cuenta que este valor controla específicamente el número de reintentos.</span><span class="sxs-lookup"><span data-stu-id="d2942-116">Note that this value specifically controls the number of retries.</span></span> <span data-ttu-id="d2942-117">El servicio Batch intentará una vez que la tarea y podría reintentarla hasta alcanzar este límite.</span><span class="sxs-lookup"><span data-stu-id="d2942-117">The Batch service will try the Task once, and may then retry up to this limit.</span></span> <span data-ttu-id="d2942-118">Por ejemplo, si el número máximo de reintentos es 3, Batch intenta la tarea hasta 4 veces (un intento inicial y 3 reintentos).</span><span class="sxs-lookup"><span data-stu-id="d2942-118">For example, if the maximum retry count is 3, Batch tries the Task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="d2942-119">Si el número máximo de reintentos es 0, el servicio Batch no reintenta la tarea.</span><span class="sxs-lookup"><span data-stu-id="d2942-119">If the maximum retry count is 0, the Batch service does not retry the Task.</span></span> <span data-ttu-id="d2942-120">Si el número máximo de reintentos es -1, el servicio de Batch reintenta la tarea sin límites.</span><span class="sxs-lookup"><span data-stu-id="d2942-120">If the maximum retry count is -1, the Batch service retries the Task without limit.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d2942-121">Archivos que aparecen bajo este elemento se encuentran en el directorio de trabajo de la tarea.</span><span class="sxs-lookup"><span data-stu-id="d2942-121">Files listed under this element are located in the Task's working directory.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d2942-122">Si se omite, la tarea se ejecuta como un usuario sin derechos administrativos único para la tarea.</span><span class="sxs-lookup"><span data-stu-id="d2942-122">If omitted, the Task runs as a non-administrative user unique to the Task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.StartTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d2942-123">Si true y el inicio se produce un error en la tarea en un nodo, el servicio de Batch reintenta la tarea de inicio hasta el número máximo de reintentos (maxTaskRetryCount).</span><span class="sxs-lookup"><span data-stu-id="d2942-123">If true and the start Task fails on a Node, the Batch service retries the start Task up to its maximum retry count (maxTaskRetryCount).</span></span> <span data-ttu-id="d2942-124">Si la tarea tiene todavía no se completó correctamente después de todos los reintentos y, a continuación, las marcas de servicio de Batch el nodo inutilizable y no a programar tareas al mismo.</span><span class="sxs-lookup"><span data-stu-id="d2942-124">If the Task has still not completed successfully after all retries, then the Batch service marks the Node unusable, and will not schedule Tasks to it.</span></span> <span data-ttu-id="d2942-125">Esta condición se puede detectar a través de los detalles de información de estado y errores de nodo de proceso.</span><span class="sxs-lookup"><span data-stu-id="d2942-125">This condition can be detected via the Compute Node state and failure info details.</span></span> <span data-ttu-id="d2942-126">Si es false, el servicio Batch no esperará para el inicio de tarea se complete.</span><span class="sxs-lookup"><span data-stu-id="d2942-126">If false, the Batch service will not wait for the start Task to complete.</span></span> <span data-ttu-id="d2942-127">En este caso, pueden empezar a ejecutar en el nodo de proceso durante el inicio de que tarea todavía se está ejecutando; otras tareas y aunque el inicio de tarea falla, nuevas tareas continuará a ser programados en el nodo de proceso.</span><span class="sxs-lookup"><span data-stu-id="d2942-127">In this case, other Tasks can start executing on the Compute Node while the start Task is still running; and even if the start Task fails, new Tasks will continue to be scheduled on the Compute Node.</span></span> <span data-ttu-id="d2942-128">El valor predeterminado es false.</span><span class="sxs-lookup"><span data-stu-id="d2942-128">The default is false.</span></span>'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

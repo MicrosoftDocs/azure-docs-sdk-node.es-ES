@@ -1,0 +1,134 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-hubs.ReceiveOptions'
+    name: ReceiveOptions
+    fullName: ReceiveOptions
+    children:
+      - '@azure/event-hubs.ReceiveOptions.consumerGroup'
+      - '@azure/event-hubs.ReceiveOptions.enableReceiverRuntimeMetric'
+      - '@azure/event-hubs.ReceiveOptions.epoch'
+      - '@azure/event-hubs.ReceiveOptions.eventPosition'
+      - '@azure/event-hubs.ReceiveOptions.identifier'
+      - '@azure/event-hubs.ReceiveOptions.name'
+      - '@azure/event-hubs.ReceiveOptions.prefetchCount'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="66ca6-101">Describe las opciones que puede establecer al recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="66ca6-101">Describes the options that one can set while receiving messages.</span></span>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.consumerGroup'
+    name: consumerGroup
+    fullName: consumerGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="66ca6-102">{cadena} [consumerGroup] El grupo de consumidores a la que desea conectar con el receptor.</span><span class="sxs-lookup"><span data-stu-id="66ca6-102">{string} [consumerGroup] The consumer group to which the receiver wants to connect to.</span></span>
+      <span data-ttu-id="66ca6-103">Si no se proporciona, se conectará al grupo de consumidores "$default".</span><span class="sxs-lookup"><span data-stu-id="66ca6-103">If not provided then it will be connected to "$default" consumer group.</span></span>
+    optional: true
+    syntax:
+      content: 'consumerGroup?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.enableReceiverRuntimeMetric'
+    name: enableReceiverRuntimeMetric
+    fullName: enableReceiverRuntimeMetric
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="66ca6-104">{valor} booleano [enableReceiverRuntimeMetric] Un valor que indica si está habilitada la métrica de tiempo de ejecución de un receptor.</span><span class="sxs-lookup"><span data-stu-id="66ca6-104">{boolean} [enableReceiverRuntimeMetric] A value indicating whether the runtime metric of a receiver is enabled.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableReceiverRuntimeMetric?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.epoch'
+    name: epoch
+    fullName: epoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="66ca6-105">{number} [tiempo] El valor de tiempo que este receptor se está usando actualmente para la propiedad de la partición.</span><span class="sxs-lookup"><span data-stu-id="66ca6-105">{number} [epoch] The epoch value that this receiver is currently using for partition ownership.</span></span>'
+    optional: true
+    syntax:
+      content: 'epoch?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.eventPosition'
+    name: eventPosition
+    fullName: eventPosition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="66ca6-106">objeto de {} [eventPosition] La posición inicial de eventos en el que se va a empezar a recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="66ca6-106">{object} [eventPosition] The starting event position at which to start receiving messages.</span></span>
+      <span data-ttu-id="66ca6-107">Esto se usa para filtrar los mensajes para el receptor de EventHub.</span><span class="sxs-lookup"><span data-stu-id="66ca6-107">This is used to filter messages for the EventHub Receiver.</span></span>
+    optional: true
+    syntax:
+      content: 'eventPosition?: EventPosition'
+      return:
+        type:
+          - '@azure/event-hubs.EventPosition'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.identifier'
+    name: identifier
+    fullName: identifier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="66ca6-108">{cadena} [identificador] El identificador de receptor que uniqely identifica el receptor.</span><span class="sxs-lookup"><span data-stu-id="66ca6-108">{string} [identifier] The receiver identifier that uniqely identifies the receiver.</span></span>'
+    optional: true
+    syntax:
+      content: 'identifier?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="66ca6-109">{cadena} [nombre] El nombre del receptor.</span><span class="sxs-lookup"><span data-stu-id="66ca6-109">{string} [name] The name of the receiver.</span></span> <span data-ttu-id="66ca6-110">Si no se proporciona, a continuación, establecemos un GUID de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="66ca6-110">If not provided then we will set a GUID by default.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.prefetchCount'
+    name: prefetchCount
+    fullName: prefetchCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="66ca6-111">{number} [prefetchCount] El límite superior de los eventos este receptor activamente recibirá independientemente de si está pendiente una operación de recepción.</span><span class="sxs-lookup"><span data-stu-id="66ca6-111">{number} [prefetchCount] The upper limit of events this receiver will actively receive regardless of whether a receive operation is pending.</span></span> <span data-ttu-id="66ca6-112">El valor predeterminado es 1000.</span><span class="sxs-lookup"><span data-stu-id="66ca6-112">Defaults to 1000.</span></span>'
+    optional: true
+    syntax:
+      content: 'prefetchCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-hubs'
+references:
+  - uid: '@azure/event-hubs.EventPosition'
+    name: EventPosition
+    spec.typeScript:
+      - name: EventPosition
+        fullName: EventPosition
+        uid: '@azure/event-hubs.EventPosition'

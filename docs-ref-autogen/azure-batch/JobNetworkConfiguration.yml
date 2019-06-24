@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - azure-batch.JobNetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobNetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="95c17-101">La red virtual debe estar en la misma región y suscripción que la cuenta de Batch de Azure.</span><span class="sxs-lookup"><span data-stu-id="95c17-101">The virtual network must be in the same region and subscription as the Azure Batch Account.</span></span> <span data-ttu-id="95c17-102">La subred especificada debe tener suficientes direcciones IP libres para alojar al número de nodos de proceso que se ejecutarán las tareas del trabajo.</span><span class="sxs-lookup"><span data-stu-id="95c17-102">The specified subnet should have enough free IP addresses to accommodate the number of Compute Nodes which will run Tasks from the Job.</span></span> <span data-ttu-id="95c17-103">Esto puede ser hasta el número de nodos de proceso en el grupo.</span><span class="sxs-lookup"><span data-stu-id="95c17-103">This can be up to the number of Compute Nodes in the Pool.</span></span> <span data-ttu-id="95c17-104">La entidad de servicio 'MicrosoftAzureBatch' debe tener el 'clásico colaborador de máquina Virtual "control de acceso basado en roles (RBAC) para la red virtual especificada para que el servicio Azure Batch puede programar tareas en los nodos.</span><span class="sxs-lookup"><span data-stu-id="95c17-104">The 'MicrosoftAzureBatch' service principal must have the 'Classic Virtual Machine Contributor' Role-Based Access Control (RBAC) role for the specified VNet so that Azure Batch service can schedule Tasks on the Nodes.</span></span> <span data-ttu-id="95c17-105">Esto se puede comprobar mediante la comprobación de si la red virtual especificada tiene los grupos de seguridad de red (NSG) asociado.</span><span class="sxs-lookup"><span data-stu-id="95c17-105">This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG).</span></span> <span data-ttu-id="95c17-106">Si un NSG deniega la comunicación a los nodos de la subred especificada, a continuación, el servicio Batch establecerá el estado de los nodos de proceso en inutilizable.</span><span class="sxs-lookup"><span data-stu-id="95c17-106">If communication to the Nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the Compute Nodes to unusable.</span></span> <span data-ttu-id="95c17-107">Se trata de la forma/Subscriptions / {subscription} / ResourceGroups / {grupo} / Providers / {provider} /virtualNetworks/ {network} / Subnets / {subred}.</span><span class="sxs-lookup"><span data-stu-id="95c17-107">This is of the form /subscriptions/{subscription}/resourceGroups/{group}/providers/{provider}/virtualNetworks/{network}/subnets/{subnet}.</span></span>
+      <span data-ttu-id="95c17-108">Si la red virtual especificada tiene los grupos de seguridad de red (NSG) asociado, algunos puertos del sistema reservados deben habilitarse para las comunicaciones entrantes desde el servicio Azure Batch.</span><span class="sxs-lookup"><span data-stu-id="95c17-108">If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication from the Azure Batch service.</span></span> <span data-ttu-id="95c17-109">Los grupos creados con una configuración de máquina Virtual, habilite los puertos 29876 y 29877, así como el puerto 22 para Linux y el puerto 3389 para Windows.</span><span class="sxs-lookup"><span data-stu-id="95c17-109">For Pools created with a Virtual Machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows.</span></span> <span data-ttu-id="95c17-110">También se requiere el puerto 443 esté abierto para las conexiones salientes para las comunicaciones con el almacenamiento de Azure.</span><span class="sxs-lookup"><span data-stu-id="95c17-110">Port 443 is also required to be open for outbound connections for communications to Azure Storage.</span></span> <span data-ttu-id="95c17-111">Para obtener más información, consulte: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span><span class="sxs-lookup"><span data-stu-id="95c17-111">For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span></span>
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: azure-batch
