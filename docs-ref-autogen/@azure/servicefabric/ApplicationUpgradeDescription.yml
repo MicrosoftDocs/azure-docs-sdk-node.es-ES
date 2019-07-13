@@ -1,0 +1,209 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription'
+    name: ApplicationUpgradeDescription
+    fullName: ApplicationUpgradeDescription
+    children:
+      - '@azure/servicefabric.ApplicationUpgradeDescription.applicationHealthPolicy'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.forceRestart'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.monitoringPolicy'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.name'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.parameters'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.rollingUpgradeMode'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.sortOrder'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.targetApplicationTypeVersion'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.upgradeKind'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="4ae95-101">Describe los parámetros de actualización de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="4ae95-101">Describes the parameters for an application upgrade.</span></span> <span data-ttu-id="4ae95-102">Tenga en cuenta que la descripción de la actualización reemplaza la descripción existente.</span><span class="sxs-lookup"><span data-stu-id="4ae95-102">Note that upgrade description replaces the existing application description.</span></span> <span data-ttu-id="4ae95-103">Esto significa que, si no se especifican los parámetros, los que ya existen en la aplicación se sobrescribirán con la lista de parámetros vacía.</span><span class="sxs-lookup"><span data-stu-id="4ae95-103">This means that if the parameters are not specified, the existing parameters on the applications will be overwritten with the empty parameters list.</span></span> <span data-ttu-id="4ae95-104">Esto podría dar lugar a que la aplicación use el valor predeterminado de los parámetros del manifiesto de aplicación.</span><span class="sxs-lookup"><span data-stu-id="4ae95-104">This would result in the application using the default value of the parameters from the application manifest.</span></span> <span data-ttu-id="4ae95-105">Si no desea cambiar los valores de parámetro existentes, obtenga primero mediante la consulta GetApplicationInfo los parámetros de aplicación y, a continuación, proporcionar dichos valores como parámetros en esta ApplicationUpgradeDescription.</span><span class="sxs-lookup"><span data-stu-id="4ae95-105">If you do not want to change any existing parameter values, please get the application parameters first using the GetApplicationInfo query and then supply those values as Parameters in this ApplicationUpgradeDescription.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.applicationHealthPolicy'
+    name: applicationHealthPolicy
+    fullName: applicationHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4ae95-106">Define una directiva de mantenimiento que se utilizan para evaluar el estado de una aplicación o uno de sus entidades de elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="4ae95-106">Defines a health policy used to evaluate the health of an application or one of its children entities.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.forceRestart'
+    name: forceRestart
+    fullName: forceRestart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4ae95-107">Si es true, a continuación, se fuerza reiniciando los procesos durante la actualización incluso si no ha cambiado la versión del código (la configuración de actualización únicamente los cambios o los datos).</span><span class="sxs-lookup"><span data-stu-id="4ae95-107">If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).</span></span>'
+    optional: true
+    syntax:
+      content: 'forceRestart?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.monitoringPolicy'
+    name: monitoringPolicy
+    fullName: monitoringPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4ae95-108">Describe los parámetros para la supervisión de una actualización en modo supervisado.</span><span class="sxs-lookup"><span data-stu-id="4ae95-108">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+    optional: true
+    syntax:
+      content: 'monitoringPolicy?: MonitoringPolicyDescription'
+      return:
+        type:
+          - '@azure/servicefabric.MonitoringPolicyDescription'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4ae95-109">El nombre de la aplicación de destino, incluido el "fabric:'' "fabric:"</span><span class="sxs-lookup"><span data-stu-id="4ae95-109">The name of the target application, including the ''fabric:'' URI scheme.</span></span>'
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.parameters'
+    name: parameters
+    fullName: parameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4ae95-110">Lista de parámetros con valores invalidados desde sus valores predeterminados especificados en el manifiesto de aplicación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="4ae95-110">List of application parameters with overridden values from their default values specified in the application manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'parameters?: ApplicationParameter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationParameter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.rollingUpgradeMode'
+    name: rollingUpgradeMode
+    fullName: rollingUpgradeMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4ae95-111">El modo usado para supervisar el mantenimiento durante una actualización gradual.</span><span class="sxs-lookup"><span data-stu-id="4ae95-111">The mode used to monitor health during a rolling upgrade.</span></span> <span data-ttu-id="4ae95-112">Los valores son Monitored, UnmonitoredAuto y UnmonitoredManual.</span><span class="sxs-lookup"><span data-stu-id="4ae95-112">The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.</span></span> <span data-ttu-id="4ae95-113">Los valores posibles son: ''Invalid'', ''UnmonitoredAuto'', ''UnmonitoredManual'', ''Supervisado''.</span><span class="sxs-lookup"><span data-stu-id="4ae95-113">Possible values include: ''Invalid'', ''UnmonitoredAuto'', ''UnmonitoredManual'', ''Monitored''.</span></span> <span data-ttu-id="4ae95-114">Valor predeterminado: ''UnmonitoredAuto''.</span><span class="sxs-lookup"><span data-stu-id="4ae95-114">Default value: ''UnmonitoredAuto''.</span></span>'
+    optional: true
+    syntax:
+      content: 'rollingUpgradeMode?: UpgradeMode'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.sortOrder'
+    name: sortOrder
+    fullName: sortOrder
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4ae95-115">Define el orden en el que se realiza una actualización a través del clúster.</span><span class="sxs-lookup"><span data-stu-id="4ae95-115">Defines the order in which an upgrade proceeds through the cluster.</span></span> <span data-ttu-id="4ae95-116">Los valores posibles son: ''Invalid'', ''Default'', ''Numeric'', ''Lexicográfica'', ''ReverseNumeric'', ''ReverseLexicographical''.</span><span class="sxs-lookup"><span data-stu-id="4ae95-116">Possible values include: ''Invalid'', ''Default'', ''Numeric'', ''Lexicographical'', ''ReverseNumeric'', ''ReverseLexicographical''.</span></span> <span data-ttu-id="4ae95-117">Valor predeterminado: ''Default''.</span><span class="sxs-lookup"><span data-stu-id="4ae95-117">Default value: ''Default''.</span></span>'
+    optional: true
+    syntax:
+      content: 'sortOrder?: UpgradeSortOrder'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeSortOrder'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.targetApplicationTypeVersion'
+    name: targetApplicationTypeVersion
+    fullName: targetApplicationTypeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4ae95-118">La versión del tipo de aplicación de destino (que se encuentra en el manifiesto de aplicación) para la actualización de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="4ae95-118">The target application type version (found in the application manifest) for the application upgrade.</span></span>
+    syntax:
+      content: 'targetApplicationTypeVersion: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.upgradeKind'
+    name: upgradeKind
+    fullName: upgradeKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4ae95-119">El tipo de actualización fuera de los siguientes valores posibles.</span><span class="sxs-lookup"><span data-stu-id="4ae95-119">The kind of upgrade out of the following possible values.</span></span> <span data-ttu-id="4ae95-120">Los valores posibles son: ''Invalid'', ''Gradual''.</span><span class="sxs-lookup"><span data-stu-id="4ae95-120">Possible values include: ''Invalid'', ''Rolling''.</span></span> <span data-ttu-id="4ae95-121">Valor predeterminado: ''Gradual''.</span><span class="sxs-lookup"><span data-stu-id="4ae95-121">Default value: ''Rolling''.</span></span>'
+    syntax:
+      content: 'upgradeKind: UpgradeKind'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeKind'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds'
+    name: upgradeReplicaSetCheckTimeoutInSeconds
+    fullName: upgradeReplicaSetCheckTimeoutInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4ae95-122">El período de tiempo máximo para bloquear el procesamiento de un dominio de actualización y evitar la pérdida de disponibilidad cuando hay problemas inesperados.</span><span class="sxs-lookup"><span data-stu-id="4ae95-122">The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues.</span></span> <span data-ttu-id="4ae95-123">Cuando este tiempo de espera expire, el procesamiento del dominio de actualización se llevará a cabo independientemente de los problemas de pérdida de disponibilidad.</span><span class="sxs-lookup"><span data-stu-id="4ae95-123">When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues.</span></span> <span data-ttu-id="4ae95-124">El tiempo de espera se restablece al principio de cada dominio de actualización.</span><span class="sxs-lookup"><span data-stu-id="4ae95-124">The timeout is reset at the start of each upgrade domain.</span></span> <span data-ttu-id="4ae95-125">Los valores válidos oscilan entre 0 y 42949672925, ambos inclusive.</span><span class="sxs-lookup"><span data-stu-id="4ae95-125">Valid values are between 0 and 42949672925 inclusive.</span></span>
+      <span data-ttu-id="4ae95-126">(entero de 32 bits sin signo).</span><span class="sxs-lookup"><span data-stu-id="4ae95-126">(unsigned 32-bit integer).</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeReplicaSetCheckTimeoutInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy'
+    name: ApplicationHealthPolicy
+    spec.typeScript:
+      - name: ApplicationHealthPolicy
+        fullName: ApplicationHealthPolicy
+        uid: '@azure/servicefabric.ApplicationHealthPolicy'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription'
+    name: MonitoringPolicyDescription
+    spec.typeScript:
+      - name: MonitoringPolicyDescription
+        fullName: MonitoringPolicyDescription
+        uid: '@azure/servicefabric.MonitoringPolicyDescription'
+  - uid: '@azure/servicefabric.ApplicationParameter[]'
+    name: 'ApplicationParameter[]'
+    spec.typeScript:
+      - name: ApplicationParameter
+        fullName: ApplicationParameter
+        uid: '@azure/servicefabric.ApplicationParameter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/servicefabric.UpgradeMode'
+  - uid: '@azure/servicefabric.UpgradeSortOrder'
+    name: UpgradeSortOrder
+    spec.typeScript:
+      - name: UpgradeSortOrder
+        fullName: UpgradeSortOrder
+        uid: '@azure/servicefabric.UpgradeSortOrder'
+  - uid: '@azure/servicefabric.UpgradeKind'
+    name: UpgradeKind
+    spec.typeScript:
+      - name: UpgradeKind
+        fullName: UpgradeKind
+        uid: '@azure/servicefabric.UpgradeKind'

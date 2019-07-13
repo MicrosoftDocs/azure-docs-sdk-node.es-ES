@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+    name: ServiceTypeHealthPolicy
+    fullName: ServiceTypeHealthPolicy
+    children:
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="c3c34-101">Representa la directiva de mantenimiento que se usa para evaluar el mantenimiento de los servicios que pertenecen a un tipo de servicio.</span><span class="sxs-lookup"><span data-stu-id="c3c34-101">Represents the health policy used to evaluate the health of services belonging to a service type.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+    name: maxPercentUnhealthyPartitionsPerService
+    fullName: maxPercentUnhealthyPartitionsPerService
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="c3c34-102">El porcentaje máximo permitido de particiones en mal estado por cada servicio.</span><span class="sxs-lookup"><span data-stu-id="c3c34-102">The maximum allowed percentage of unhealthy partitions per service.</span></span> <span data-ttu-id="c3c34-103">Los valores permitidos son los valores de Byte de cero a 100 el porcentaje máximo tolerado de representa el porcentaje de particiones que pueden ser incorrectas antes que el servicio se considere erróneo.</span><span class="sxs-lookup"><span data-stu-id="c3c34-103">Allowed values are Byte values from zero to 100 The percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.</span></span>
+      <span data-ttu-id="c3c34-104">Si se respeta el porcentaje, pero hay al menos una partición en mal estado, el estado se evalúa como Warning.</span><span class="sxs-lookup"><span data-stu-id="c3c34-104">If the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="c3c34-105">El porcentaje se calcula dividiendo el número de particiones en mal estado sobre el número total de particiones en el servicio.</span><span class="sxs-lookup"><span data-stu-id="c3c34-105">The percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.</span></span>
+      <span data-ttu-id="c3c34-106">El cálculo se redondea hacia arriba para tolerar un error en un número reducido de particiones.</span><span class="sxs-lookup"><span data-stu-id="c3c34-106">The computation rounds up to tolerate one failure on small numbers of partitions.</span></span> <span data-ttu-id="c3c34-107">El porcentaje predeterminado es cero.</span><span class="sxs-lookup"><span data-stu-id="c3c34-107">Default percentage is zero.</span></span> <span data-ttu-id="c3c34-108">Valor predeterminado: 0.</span><span class="sxs-lookup"><span data-stu-id="c3c34-108">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyPartitionsPerService?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+    name: maxPercentUnhealthyReplicasPerPartition
+    fullName: maxPercentUnhealthyReplicasPerPartition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="c3c34-109">El porcentaje máximo permitido de réplicas en mal estado por partición.</span><span class="sxs-lookup"><span data-stu-id="c3c34-109">The maximum allowed percentage of unhealthy replicas per partition.</span></span> <span data-ttu-id="c3c34-110">Los valores permitidos son valores de Byte de cero a 100.</span><span class="sxs-lookup"><span data-stu-id="c3c34-110">Allowed values are Byte values from zero to 100.</span></span>
+      <span data-ttu-id="c3c34-111">El porcentaje representa el porcentaje máximo tolerado de réplicas que pueden ser incorrectas antes de la partición se considere erróneo.</span><span class="sxs-lookup"><span data-stu-id="c3c34-111">The percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.</span></span>
+      <span data-ttu-id="c3c34-112">Si se respeta el porcentaje, pero hay al menos una réplica en mal estado, el estado se evalúa como Warning.</span><span class="sxs-lookup"><span data-stu-id="c3c34-112">If the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="c3c34-113">El porcentaje se calcula dividiendo el número de réplicas en mal estado sobre el número total de réplicas en la partición.</span><span class="sxs-lookup"><span data-stu-id="c3c34-113">The percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.</span></span>
+      <span data-ttu-id="c3c34-114">El cálculo se redondea hacia arriba para tolerar un error en un número reducido de las réplicas.</span><span class="sxs-lookup"><span data-stu-id="c3c34-114">The computation rounds up to tolerate one failure on small numbers of replicas.</span></span> <span data-ttu-id="c3c34-115">El porcentaje predeterminado es cero.</span><span class="sxs-lookup"><span data-stu-id="c3c34-115">Default percentage is zero.</span></span> <span data-ttu-id="c3c34-116">Valor predeterminado: 0.</span><span class="sxs-lookup"><span data-stu-id="c3c34-116">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyReplicasPerPartition?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    name: maxPercentUnhealthyServices
+    fullName: maxPercentUnhealthyServices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="c3c34-117">El porcentaje máximo permitido de servicios en mal estado.</span><span class="sxs-lookup"><span data-stu-id="c3c34-117">The maximum allowed percentage of unhealthy services.</span></span> <span data-ttu-id="c3c34-118">Los valores permitidos son valores de Byte de cero a 100.</span><span class="sxs-lookup"><span data-stu-id="c3c34-118">Allowed values are Byte values from zero to 100.</span></span>
+      <span data-ttu-id="c3c34-119">El porcentaje representa el porcentaje máximo tolerado de servicios que pueden ser incorrectas antes de que la aplicación se considere erróneo.</span><span class="sxs-lookup"><span data-stu-id="c3c34-119">The percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.</span></span>
+      <span data-ttu-id="c3c34-120">Si se respeta el porcentaje, pero hay al menos un servicio en mal estado, el estado se evalúa como Warning.</span><span class="sxs-lookup"><span data-stu-id="c3c34-120">If the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="c3c34-121">Esto se calcula dividiendo el número de servicios en mal estado del tipo de servicio específica sobre el número total de servicios del tipo de servicio específico.</span><span class="sxs-lookup"><span data-stu-id="c3c34-121">This is calculated by dividing the number of unhealthy services of the specific service type over the total number of services of the specific service type.</span></span>
+      <span data-ttu-id="c3c34-122">El cálculo se redondea hacia arriba para tolerar un error en un número reducido de servicios.</span><span class="sxs-lookup"><span data-stu-id="c3c34-122">The computation rounds up to tolerate one failure on small numbers of services.</span></span> <span data-ttu-id="c3c34-123">El porcentaje predeterminado es cero.</span><span class="sxs-lookup"><span data-stu-id="c3c34-123">Default percentage is zero.</span></span> <span data-ttu-id="c3c34-124">Valor predeterminado: 0.</span><span class="sxs-lookup"><span data-stu-id="c3c34-124">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyServices?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.NodeHealthStateFilter'
+    name: NodeHealthStateFilter
+    fullName: NodeHealthStateFilter
+    children:
+      - '@azure/servicefabric.NodeHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.NodeHealthStateFilter.nodeNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="92de8-101">Define los criterios de coincidencia para determinar si un nodo debe incluirse en los fragmentos de mantenimiento del clúster devuelta.</span><span class="sxs-lookup"><span data-stu-id="92de8-101">Defines matching criteria to determine whether a node should be included in the returned cluster health chunk.</span></span>
+      <span data-ttu-id="92de8-102">Un filtro puede hacer coincidir cero, uno o varios nodos, dependiendo de sus propiedades.</span><span class="sxs-lookup"><span data-stu-id="92de8-102">One filter can match zero, one or multiple nodes, depending on its properties.</span></span>
+      <span data-ttu-id="92de8-103">Se puede especificar en la descripción de la consulta de la salud fragmento clúster.</span><span class="sxs-lookup"><span data-stu-id="92de8-103">Can be specified in the cluster health chunk query description.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="92de8-104">El filtro para el estado de mantenimiento de los nodos.</span><span class="sxs-lookup"><span data-stu-id="92de8-104">The filter for the health state of the nodes.</span></span> <span data-ttu-id="92de8-105">Permite seleccionar los nodos si coinciden con los Estados de mantenimiento deseada.</span><span class="sxs-lookup"><span data-stu-id="92de8-105">It allows selecting nodes if they match the desired health states.</span></span>
+      <span data-ttu-id="92de8-106">Los valores posibles son el valor entero de uno de los siguientes estados de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="92de8-106">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="92de8-107">Se devuelven únicamente los nodos que coinciden con el filtro.</span><span class="sxs-lookup"><span data-stu-id="92de8-107">Only nodes that match the filter are returned.</span></span> <span data-ttu-id="92de8-108">Todos los nodos se utilizan para evaluar el estado de mantenimiento agregado del clúster.</span><span class="sxs-lookup"><span data-stu-id="92de8-108">All nodes are used to evaluate the cluster aggregated health state.</span></span>
+      <span data-ttu-id="92de8-109">Si no se especifica, valor predeterminado es None, a menos que se especifica el nombre del nodo.</span><span class="sxs-lookup"><span data-stu-id="92de8-109">If not specified, default value is None, unless the node name is specified.</span></span> <span data-ttu-id="92de8-110">Si el filtro tiene valor predeterminado y se especifica el nombre de nodo, se devuelve el nodo coincidente.</span><span class="sxs-lookup"><span data-stu-id="92de8-110">If the filter has default value and node name is specified, the matching node is returned.</span></span>
+      <span data-ttu-id="92de8-111">Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.</span><span class="sxs-lookup"><span data-stu-id="92de8-111">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="92de8-112">Por ejemplo, si el valor proporcionado es 6, detecta nodos con el valor de HealthState de OK (2) y Warning (4).</span><span class="sxs-lookup"><span data-stu-id="92de8-112">For example, if the provided value is 6, it matches nodes with HealthState value of OK (2) and Warning (4).</span></span>
+      - <span data-ttu-id="92de8-113">Default: valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="92de8-113">Default - Default value.</span></span> <span data-ttu-id="92de8-114">Coincide con cualquier HealthState.</span><span class="sxs-lookup"><span data-stu-id="92de8-114">Matches any HealthState.</span></span> <span data-ttu-id="92de8-115">El valor predeterminado es cero.</span><span class="sxs-lookup"><span data-stu-id="92de8-115">The value is zero.</span></span>
+      - <span data-ttu-id="92de8-116">None: filtro que no coincide con ningún valor de HealthState.</span><span class="sxs-lookup"><span data-stu-id="92de8-116">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="92de8-117">Se utiliza para no devolver ningún resultado en una determinada colección de estados.</span><span class="sxs-lookup"><span data-stu-id="92de8-117">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="92de8-118">El valor es 1.</span><span class="sxs-lookup"><span data-stu-id="92de8-118">The value is 1.</span></span>
+      - <span data-ttu-id="92de8-119">OK: filtro que asocia la entrada con el valor de HealthState de Ok.</span><span class="sxs-lookup"><span data-stu-id="92de8-119">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="92de8-120">El valor es 2.</span><span class="sxs-lookup"><span data-stu-id="92de8-120">The value is 2.</span></span>
+      - <span data-ttu-id="92de8-121">Warning: filtro que asocia la entrada con HealthState el valor de advertencia.</span><span class="sxs-lookup"><span data-stu-id="92de8-121">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="92de8-122">El valor es 4.</span><span class="sxs-lookup"><span data-stu-id="92de8-122">The value is 4.</span></span>
+      - <span data-ttu-id="92de8-123">Error: filtro que asocia la entrada con el valor de HealthState de Error.</span><span class="sxs-lookup"><span data-stu-id="92de8-123">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="92de8-124">El valor es 8.</span><span class="sxs-lookup"><span data-stu-id="92de8-124">The value is 8.</span></span>
+      - <span data-ttu-id="92de8-125">All: filtro que asocia la entrada con cualquier valor de HealthState.</span><span class="sxs-lookup"><span data-stu-id="92de8-125">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="92de8-126">El valor es 65535.</span><span class="sxs-lookup"><span data-stu-id="92de8-126">The value is 65535.</span></span> <span data-ttu-id="92de8-127">Valor predeterminado: 0.</span><span class="sxs-lookup"><span data-stu-id="92de8-127">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter.nodeNameFilter'
+    name: nodeNameFilter
+    fullName: nodeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="92de8-128">Nombre del nodo que coincide con el filtro.</span><span class="sxs-lookup"><span data-stu-id="92de8-128">Name of the node that matches the filter.</span></span> <span data-ttu-id="92de8-129">El filtro se aplica solo al nodo especificado, si existe.</span><span class="sxs-lookup"><span data-stu-id="92de8-129">The filter is applied only to the specified node, if it exists.</span></span>
+      <span data-ttu-id="92de8-130">Si el nodo no existe, no se devuelve ningún nodo en los fragmentos de mantenimiento del clúster según este filtro.</span><span class="sxs-lookup"><span data-stu-id="92de8-130">If the node doesn't exist, no node is returned in the cluster health chunk based on this filter.</span></span>
+      <span data-ttu-id="92de8-131">Si existe el nodo, se incluye en los fragmentos de mantenimiento del clúster si el estado de mantenimiento coincide con las propiedades del filtro.</span><span class="sxs-lookup"><span data-stu-id="92de8-131">If the node exists, it is included in the cluster health chunk if the health state matches the other filter properties.</span></span>
+      <span data-ttu-id="92de8-132">Si no se especifica, todos los nodos que coinciden con los filtros primario (si existe) se toma en consideración y se compara con los demás miembros de filtro, como filtro de estado de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="92de8-132">If not specified, all nodes that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatelessServiceInfo'
+    name: StatelessServiceInfo
+    fullName: StatelessServiceInfo
+    children:
+      - '@azure/servicefabric.StatelessServiceInfo.healthState'
+      - '@azure/servicefabric.StatelessServiceInfo.id'
+      - '@azure/servicefabric.StatelessServiceInfo.isServiceGroup'
+      - '@azure/servicefabric.StatelessServiceInfo.manifestVersion'
+      - '@azure/servicefabric.StatelessServiceInfo.name'
+      - '@azure/servicefabric.StatelessServiceInfo.serviceKind'
+      - '@azure/servicefabric.StatelessServiceInfo.serviceStatus'
+      - '@azure/servicefabric.StatelessServiceInfo.typeName'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="98854-101">Información acerca de un servicio sin estado de Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="98854-101">Information about a stateless Service Fabric service.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="98854-102">El estado de mantenimiento de una entidad de Service Fabric como clúster, nodo, aplicación, servicio, partición, réplica etcetera. Los valores posibles son: ''Invalid'', ''Aceptar'', ''Advertencia'', ''Error'', ''Unknown''.</span><span class="sxs-lookup"><span data-stu-id="98854-102">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="98854-103">La identidad del servicio.</span><span class="sxs-lookup"><span data-stu-id="98854-103">The identity of the service.</span></span> <span data-ttu-id="98854-104">Este identificador es una representación codificada del nombre del servicio.</span><span class="sxs-lookup"><span data-stu-id="98854-104">This ID is an encoded representation of the service name.</span></span> <span data-ttu-id="98854-105">Esto se utiliza en las API de REST para identificar el recurso del servicio.</span><span class="sxs-lookup"><span data-stu-id="98854-105">This is used in the REST APIs to identify the service resource.</span></span>
+      <span data-ttu-id="98854-106">A partir de la versión 6.0, los nombres jerárquicos se delimitan con el "\~" caracteres.</span><span class="sxs-lookup"><span data-stu-id="98854-106">Starting in version 6.0, hierarchical names are delimited with the "\~" character.</span></span> <span data-ttu-id="98854-107">Por ejemplo, si el nombre del servicio es "fabric: / myapp/app1/svc1", la identidad del servicio sería "myapp ~ app1\~svc1" en 6.0 + y "myapp/app1/svc1" en versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="98854-107">For example, if the service name is "fabric:/myapp/app1/svc1", the service identity would be "myapp~app1\~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.isServiceGroup'
+    name: isServiceGroup
+    fullName: isServiceGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="98854-108">Si el servicio está en un grupo de servicio.</span><span class="sxs-lookup"><span data-stu-id="98854-108">Whether the service is in a service group.</span></span>
+    optional: true
+    syntax:
+      content: 'isServiceGroup?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.manifestVersion'
+    name: manifestVersion
+    fullName: manifestVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="98854-109">La versión del manifiesto de servicio.</span><span class="sxs-lookup"><span data-stu-id="98854-109">The version of the service manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'manifestVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="98854-110">El nombre completo del servicio con "fabric:'' "fabric:"</span><span class="sxs-lookup"><span data-stu-id="98854-110">The full name of the service with ''fabric:'' URI scheme.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="98854-111">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="98854-111">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.serviceStatus'
+    name: serviceStatus
+    fullName: serviceStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="98854-112">El estado de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="98854-112">The status of the application.</span></span> <span data-ttu-id="98854-113">Los valores posibles son: ''Unknown'', ''Active'', ''Actualizar'', ''eliminar'', ''Crear'', ''Error''</span><span class="sxs-lookup"><span data-stu-id="98854-113">Possible values include: ''Unknown'', ''Active'', ''Upgrading'', ''Deleting'', ''Creating'', ''Failed''</span></span>'
+    optional: true
+    syntax:
+      content: 'serviceStatus?: ServiceStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="98854-114">Nombre del tipo de servicio como se especifica en el manifiesto de servicio.</span><span class="sxs-lookup"><span data-stu-id="98854-114">Name of the service type as specified in the service manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ServiceStatus'
+    name: ServiceStatus
+    spec.typeScript:
+      - name: ServiceStatus
+        fullName: ServiceStatus
+        uid: '@azure/servicefabric.ServiceStatus'

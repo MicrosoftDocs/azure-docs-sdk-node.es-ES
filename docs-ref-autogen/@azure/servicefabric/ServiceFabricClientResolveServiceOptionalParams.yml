@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="e572e-101">Parámetros opcionales.</span><span class="sxs-lookup"><span data-stu-id="e572e-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -27,7 +27,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="19201-101">La señal que se puede usar para anular las solicitudes.</span><span class="sxs-lookup"><span data-stu-id="19201-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="e572e-102">La señal que se puede usar para anular las solicitudes.</span><span class="sxs-lookup"><span data-stu-id="e572e-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -42,7 +42,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="19201-102">objeto de {} [customHeaders] Encabezados de solicitud personalizado que se aplicará antes de enviar la solicitud definido por el usuario.</span><span class="sxs-lookup"><span data-stu-id="19201-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="e572e-103">objeto de {} [customHeaders] Encabezados de solicitud personalizado que se aplicará antes de enviar la solicitud definido por el usuario.</span><span class="sxs-lookup"><span data-stu-id="e572e-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -57,7 +57,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="19201-103">Devolución de llamada que se desencadena al progreso de la descarga.</span><span class="sxs-lookup"><span data-stu-id="19201-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="e572e-104">Devolución de llamada que se desencadena al progreso de la descarga.</span><span class="sxs-lookup"><span data-stu-id="e572e-104">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -72,7 +72,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="19201-104">Devolución de llamada que se desencadena al progreso de carga.</span><span class="sxs-lookup"><span data-stu-id="19201-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="e572e-105">Devolución de llamada que se desencadena al progreso de carga.</span><span class="sxs-lookup"><span data-stu-id="e572e-105">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -87,7 +87,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="e572e-106">Tipo de clave para la partición.</span><span class="sxs-lookup"><span data-stu-id="e572e-106">Key type for the partition.</span></span> <span data-ttu-id="e572e-107">Este parámetro es obligatorio si el esquema de partición para el servicio es Int64Range o Named.</span><span class="sxs-lookup"><span data-stu-id="e572e-107">This parameter is required if the partition scheme for the service is Int64Range or Named.</span></span> <span data-ttu-id="e572e-108">Los valores posibles son los siguientes.</span><span class="sxs-lookup"><span data-stu-id="e572e-108">The possible values are following.</span></span>
+      - <span data-ttu-id="e572e-109">None (1): indica que no se especifica el parámetro PartitionKeyValue.</span><span class="sxs-lookup"><span data-stu-id="e572e-109">None (1) - Indicates that the PartitionKeyValue parameter is not specified.</span></span> <span data-ttu-id="e572e-110">Esto es válido para las particiones con el esquema de partición como Singleton.</span><span class="sxs-lookup"><span data-stu-id="e572e-110">This is valid for the partitions with partitioning scheme as Singleton.</span></span> <span data-ttu-id="e572e-111">Este es el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="e572e-111">This is the default value.</span></span> <span data-ttu-id="e572e-112">El valor es 1.</span><span class="sxs-lookup"><span data-stu-id="e572e-112">The value is 1.</span></span>
+      - <span data-ttu-id="e572e-113">Int64Range (2): indica que el parámetro PartitionKeyValue es una clave de partición int64.</span><span class="sxs-lookup"><span data-stu-id="e572e-113">Int64Range (2) - Indicates that the PartitionKeyValue parameter is an int64 partition key.</span></span>
+      <span data-ttu-id="e572e-114">Esto es válido para las particiones con el esquema de partición como Int64Range.</span><span class="sxs-lookup"><span data-stu-id="e572e-114">This is valid for the partitions with partitioning scheme as Int64Range.</span></span> <span data-ttu-id="e572e-115">El valor es 2.</span><span class="sxs-lookup"><span data-stu-id="e572e-115">The value is 2.</span></span>
+      - <span data-ttu-id="e572e-116">Con el nombre (3): indica que el parámetro PartitionKeyValue es un nombre de la partición.</span><span class="sxs-lookup"><span data-stu-id="e572e-116">Named (3) - Indicates that the PartitionKeyValue parameter is a name of the partition.</span></span> <span data-ttu-id="e572e-117">Esto es válido para las particiones con el esquema de partición como Named.</span><span class="sxs-lookup"><span data-stu-id="e572e-117">This is valid for the partitions with partitioning scheme as Named.</span></span> <span data-ttu-id="e572e-118">El valor es 3.</span><span class="sxs-lookup"><span data-stu-id="e572e-118">The value is 3.</span></span>
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +107,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="e572e-119">Clave de partición.</span><span class="sxs-lookup"><span data-stu-id="e572e-119">Partition key.</span></span> <span data-ttu-id="e572e-120">Es obligatorio si el esquema de partición para el servicio es Int64Range o Named.</span><span class="sxs-lookup"><span data-stu-id="e572e-120">This is required if the partition scheme for the service is Int64Range or Named.</span></span>
+      <span data-ttu-id="e572e-121">Esto no es el identificador de partición, sino el valor de clave entero o el nombre del identificador de partición.</span><span class="sxs-lookup"><span data-stu-id="e572e-121">This is not the partition ID, but rather, either the integer key value, or the name of the partition ID.</span></span>
+      <span data-ttu-id="e572e-122">Por ejemplo, si el servicio usa particiones por rangos de 0 a 10, PartitionKeyValue sería un entero en ese rango.</span><span class="sxs-lookup"><span data-stu-id="e572e-122">For example, if your service is using ranged partitions from 0 to 10, then they PartitionKeyValue would be an integer in that range.</span></span> <span data-ttu-id="e572e-123">Consulte la descripción del servicio para ver el rango o el nombre.</span><span class="sxs-lookup"><span data-stu-id="e572e-123">Query service description to see the range or name.</span></span>
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: <span data-ttu-id="e572e-124">El valor en el campo Versión de la respuesta que se recibió anteriormente.</span><span class="sxs-lookup"><span data-stu-id="e572e-124">The value in the Version field of the response that was received previously.</span></span> <span data-ttu-id="e572e-125">Es obligatorio si el usuario sabe que el resultado que se obtuvo anteriormente está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="e572e-125">This is required if the user knows that the result that was gotten previously is stale.</span></span>
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -132,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="19201-105">El número de milisegundos que una solicitud puede tomar antes de finalizar automáticamente.</span><span class="sxs-lookup"><span data-stu-id="19201-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="e572e-126">El número de milisegundos que una solicitud puede tomar antes de finalizar automáticamente.</span><span class="sxs-lookup"><span data-stu-id="e572e-126">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -147,7 +155,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="e572e-127">El tiempo de espera del servidor para realizar la operación en segundos.</span><span class="sxs-lookup"><span data-stu-id="e572e-127">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="e572e-128">Este tiempo de espera especifica la duración de tiempo que el cliente está dispuesto a esperar para que se complete la operación solicitada.</span><span class="sxs-lookup"><span data-stu-id="e572e-128">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="e572e-129">El valor predeterminado para este parámetro es de 60 segundos.</span><span class="sxs-lookup"><span data-stu-id="e572e-129">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="e572e-130">Valor predeterminado: 60.</span><span class="sxs-lookup"><span data-stu-id="e572e-130">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

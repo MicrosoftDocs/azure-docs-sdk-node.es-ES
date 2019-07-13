@@ -1,0 +1,685 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/keyvault-keys.KeysClient'
+    name: KeysClient
+    fullName: KeysClient
+    children:
+      - '@azure/keyvault-keys.KeysClient.backupKey'
+      - '@azure/keyvault-keys.KeysClient.createEcKey'
+      - '@azure/keyvault-keys.KeysClient.createKey'
+      - '@azure/keyvault-keys.KeysClient.createRsaKey'
+      - '@azure/keyvault-keys.KeysClient.deleteKey'
+      - '@azure/keyvault-keys.KeysClient.getDefaultPipeline'
+      - '@azure/keyvault-keys.KeysClient.getDeletedKey'
+      - '@azure/keyvault-keys.KeysClient.getKey'
+      - '@azure/keyvault-keys.KeysClient.importKey'
+      - '@azure/keyvault-keys.KeysClient.constructor'
+      - '@azure/keyvault-keys.KeysClient.listDeletedKeys'
+      - '@azure/keyvault-keys.KeysClient.listKeys'
+      - '@azure/keyvault-keys.KeysClient.listKeyVersions'
+      - '@azure/keyvault-keys.KeysClient.pipeline'
+      - '@azure/keyvault-keys.KeysClient.purgeDeletedKey'
+      - '@azure/keyvault-keys.KeysClient.recoverDeletedKey'
+      - '@azure/keyvault-keys.KeysClient.restoreKey'
+      - '@azure/keyvault-keys.KeysClient.updateKey'
+      - '@azure/keyvault-keys.KeysClient.vaultBaseUrl'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="af885-101">El cliente para interactuar con la funcionalidad de las claves de KeyVault</span><span class="sxs-lookup"><span data-stu-id="af885-101">The client to interact with the KeyVault keys functionality</span></span>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.backupKey'
+    name: 'backupKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-102">Solicitudes que se ha descargado una copia de seguridad de la clave especificada en el cliente.</span><span class="sxs-lookup"><span data-stu-id="af885-102">Requests that a backup of the specified key be downloaded to the client.</span></span> <span data-ttu-id="af885-103">Se descargarán todas las versiones de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-103">All versions of the key will be downloaded.</span></span> <span data-ttu-id="af885-104">Esta operación requiere el permiso keys/backup.</span><span class="sxs-lookup"><span data-stu-id="af885-104">This operation requires the keys/backup permission.</span></span>
+      <span data-ttu-id="af885-105">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-105">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let backupContents = await client.backupKey("MyKey");
+      ```
+    syntax:
+      content: 'function backupKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-106">El nombre de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-106">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Uint8Array | undefined>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.createEcKey'
+    name: 'createEcKey(string, CreateEcKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-107">La operación de creación clave puede utilizarse para crear cualquier tipo de clave en Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="af885-107">The create key operation can be used to create any key type in Azure Key Vault.</span></span> <span data-ttu-id="af885-108">Si ya existe la clave con nombre, Azure Key Vault crea una nueva versión de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-108">If the named key already exists, Azure Key Vault creates a new version of the key.</span></span> <span data-ttu-id="af885-109">Requiere el permiso keys/create.</span><span class="sxs-lookup"><span data-stu-id="af885-109">It requires the keys/create permission.</span></span>
+      <span data-ttu-id="af885-110">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-110">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let result = await client.createEcKey("MyKey", { curve: "P-256" });
+      ```
+    syntax:
+      content: 'function createEcKey(name: string, options?: CreateEcKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-111">El nombre de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-111">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.CreateEcKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.createKey'
+    name: 'createKey(string, JsonWebKeyType, CreateKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-112">La operación de creación clave puede utilizarse para crear cualquier tipo de clave en Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="af885-112">The create key operation can be used to create any key type in Azure Key Vault.</span></span> <span data-ttu-id="af885-113">Si ya existe la clave con nombre, Azure Key Vault crea una nueva versión de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-113">If the named key already exists, Azure Key Vault creates a new version of the key.</span></span> <span data-ttu-id="af885-114">Requiere el permiso keys/create.</span><span class="sxs-lookup"><span data-stu-id="af885-114">It requires the keys/create permission.</span></span>
+      <span data-ttu-id="af885-115">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-115">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      // Create an elliptic-curve key:
+      let result = await client.createKey("MyKey", "EC");
+      ```
+    syntax:
+      content: 'function createKey(name: string, keyType: JsonWebKeyType, options?: CreateKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-116">El nombre de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-116">The name of the key.</span></span>
+        - id: keyType
+          type:
+            - '@azure/keyvault-keys.JsonWebKeyType'
+          description: <span data-ttu-id="af885-117">El tipo de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-117">The type of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.CreateKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.createRsaKey'
+    name: 'createRsaKey(string, CreateRsaKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-118">La operación de creación clave puede utilizarse para crear cualquier tipo de clave en Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="af885-118">The create key operation can be used to create any key type in Azure Key Vault.</span></span> <span data-ttu-id="af885-119">Si ya existe la clave con nombre, Azure Key Vault crea una nueva versión de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-119">If the named key already exists, Azure Key Vault creates a new version of the key.</span></span> <span data-ttu-id="af885-120">Requiere el permiso keys/create.</span><span class="sxs-lookup"><span data-stu-id="af885-120">It requires the keys/create permission.</span></span>
+      <span data-ttu-id="af885-121">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-121">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let result = await client.createRsaKey("MyKey", { keySize: 2048 });
+      ```
+    syntax:
+      content: 'function createRsaKey(name: string, options?: CreateRsaKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-122">El nombre de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-122">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.CreateRsaKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.deleteKey'
+    name: 'deleteKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-123">La operación de eliminación se aplica a las claves almacenadas en Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="af885-123">The DELETE operation applies to any key stored in Azure Key Vault.</span></span> <span data-ttu-id="af885-124">DELETE no se puede aplicar a una versión individual de una clave.</span><span class="sxs-lookup"><span data-stu-id="af885-124">DELETE cannot be applied to an individual version of a key.</span></span> <span data-ttu-id="af885-125">Esta operación requiere el permiso keys/delete.</span><span class="sxs-lookup"><span data-stu-id="af885-125">This operation requires the keys/delete permission.</span></span>
+      <span data-ttu-id="af885-126">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-126">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let result = await client.deleteKey("MyKey");
+      ```
+    syntax:
+      content: 'function deleteKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-127">El nombre de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-127">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.DeletedKey>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.getDefaultPipeline'
+    name: 'getDefaultPipeline(ServiceClientCredentials | TokenCredential, NewPipelineOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="af885-128">Un método estático que se utiliza para crear un nuevo objeto de canalización con la credencial proporcionada.</span><span class="sxs-lookup"><span data-stu-id="af885-128">A static method used to create a new Pipeline object with the provided Credential.</span></span>
+    syntax:
+      content: 'static function getDefaultPipeline(credential: ServiceClientCredentials | TokenCredential, pipelineOptions?: NewPipelineOptions)'
+      parameters:
+        - id: credential
+          type:
+            - ServiceClientCredentials | TokenCredential
+          description: ''
+        - id: pipelineOptions
+          type:
+            - '@azure/keyvault-keys.NewPipelineOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - ServiceClientOptions
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.getDeletedKey'
+    name: 'getDeletedKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-129">La operación de obtención de eliminar la clave devuelve la clave especificada se eliminó junto con sus atributos.</span><span class="sxs-lookup"><span data-stu-id="af885-129">The Get Deleted Key operation returns the specified deleted key along with its attributes.</span></span>
+      <span data-ttu-id="af885-130">Esta operación requiere el permiso keys/get.</span><span class="sxs-lookup"><span data-stu-id="af885-130">This operation requires the keys/get permission.</span></span>
+      <span data-ttu-id="af885-131">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-131">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let key = await client.getDeletedKey("MyDeletedKey");
+      ```
+    syntax:
+      content: 'function getDeletedKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-132">El nombre de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-132">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.DeletedKey>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.getKey'
+    name: 'getKey(string, GetKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-133">La operación GET es aplicable a las claves almacenadas en Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="af885-133">The GET operation is applicable to any key stored in Azure Key Vault.</span></span> <span data-ttu-id="af885-134">Esta operación requiere el permiso keys/get.</span><span class="sxs-lookup"><span data-stu-id="af885-134">This operation requires the keys/get permission.</span></span>
+      <span data-ttu-id="af885-135">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-135">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let key = await client.getKey("MyKey");
+      ```
+    syntax:
+      content: 'function getKey(name: string, options?: GetKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-136">El nombre de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-136">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.importKey'
+    name: 'importKey(string, JsonWebKey, ImportKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-137">La operación de importación clave puede usarse para importar cualquier tipo de clave en Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="af885-137">The import key operation may be used to import any key type into an Azure Key Vault.</span></span> <span data-ttu-id="af885-138">Si ya existe la clave con nombre, Azure Key Vault crea una nueva versión de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-138">If the named key already exists, Azure Key Vault creates a new version of the key.</span></span> <span data-ttu-id="af885-139">Esta operación requiere el permiso keys/import.</span><span class="sxs-lookup"><span data-stu-id="af885-139">This operation requires the keys/import permission.</span></span>
+      <span data-ttu-id="af885-140">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-140">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      // Key contents in myKeyContents
+      let result = await client.importKey("MyKey", myKeyContents);
+      ```
+    syntax:
+      content: 'function importKey(name: string, key: JsonWebKey, options?: ImportKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-141">Nombre de la clave importada.</span><span class="sxs-lookup"><span data-stu-id="af885-141">Name for the imported key.</span></span>
+        - id: key
+          type:
+            - '@azure/keyvault-keys.JsonWebKey'
+          description: <span data-ttu-id="af885-142">La clave de web Json</span><span class="sxs-lookup"><span data-stu-id="af885-142">The Json web key</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.ImportKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.constructor'
+    name: 'KeysClient(string, ServiceClientCredentials | TokenCredential, ServiceClientOptions | NewPipelineOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-143">Crea una instancia de KeysClient.</span><span class="sxs-lookup"><span data-stu-id="af885-143">Creates an instance of KeysClient.</span></span>
+      <span data-ttu-id="af885-144">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-144">Example usage:</span></span>
+      ```ts
+      import { KeysClient } from "@azure/keyvault-keys";
+      import { EnvironmentCredential } from "@azure/identity";
+
+      let url = `https://<MY KEYVAULT HERE>.vault.azure.net`;
+      let credentials = new EnvironmentCredential();
+
+      let client = new KeysClient(url, credentials);
+      ```
+    syntax:
+      content: 'new KeysClient(url: string, credential: ServiceClientCredentials | TokenCredential, pipelineOrOptions?: ServiceClientOptions | NewPipelineOptions)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: <span data-ttu-id="af885-145">la dirección url base para el almacén de claves.</span><span class="sxs-lookup"><span data-stu-id="af885-145">the base url to the key vault.</span></span>
+        - id: credential
+          type:
+            - ServiceClientCredentials | TokenCredential
+          description: ''
+        - id: pipelineOrOptions
+          type:
+            - ServiceClientOptions | @azure/keyvault-keys.NewPipelineOptions
+          description: ''
+          optional: true
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.listDeletedKeys'
+    name: listDeletedKeys(GetKeysOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-146">Recorre en iteración las claves eliminadas en el almacén.</span><span class="sxs-lookup"><span data-stu-id="af885-146">Iterates the deleted keys in the vault.</span></span>  <span data-ttu-id="af885-147">El identificador de clave completo y atributos se muestran en la respuesta.</span><span class="sxs-lookup"><span data-stu-id="af885-147">The full key identifier and attributes are provided in the response.</span></span> <span data-ttu-id="af885-148">Se devuelve ningún valor para las claves.</span><span class="sxs-lookup"><span data-stu-id="af885-148">No values are returned for the keys.</span></span> <span data-ttu-id="af885-149">Esta operación requiere el permiso keys/list.</span><span class="sxs-lookup"><span data-stu-id="af885-149">This operations requires the keys/list permission.</span></span>
+      <span data-ttu-id="af885-150">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-150">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      for await (const keyAttr of client.listDeletedKeys()) {
+        const deletedKey = await client.getKey(keyAttr.name);
+        console.log("deleted key: ", deletedKey);
+      }
+      ```
+    syntax:
+      content: 'function listDeletedKeys(options?: GetKeysOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeysOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.listKeys'
+    name: listKeys(GetKeysOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-151">Recorre en iteración la versión más reciente de todas las claves en el almacén.</span><span class="sxs-lookup"><span data-stu-id="af885-151">Iterates the latest version of all keys in the vault.</span></span>  <span data-ttu-id="af885-152">El identificador de clave completo y atributos se muestran en la respuesta.</span><span class="sxs-lookup"><span data-stu-id="af885-152">The full key identifier and attributes are provided in the response.</span></span> <span data-ttu-id="af885-153">Se devuelve ningún valor para las claves.</span><span class="sxs-lookup"><span data-stu-id="af885-153">No values are returned for the keys.</span></span> <span data-ttu-id="af885-154">Esta operación requiere el permiso keys/list.</span><span class="sxs-lookup"><span data-stu-id="af885-154">This operations requires the keys/list permission.</span></span>
+      <span data-ttu-id="af885-155">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-155">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      for await (const keyAttr of client.listKeys()) {
+        const key = await client.getKey(keyAttr.name);
+        console.log("key: ", key);
+      }
+      ```
+    syntax:
+      content: 'function listKeys(options?: GetKeysOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeysOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.listKeyVersions'
+    name: 'listKeyVersions(string, GetKeysOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-156">Recorre en iteración todas las versiones de la clave especificada en el almacén.</span><span class="sxs-lookup"><span data-stu-id="af885-156">Iterates all versions of the given key in the vault.</span></span> <span data-ttu-id="af885-157">El identificador de clave completo, atributos y las etiquetas se proporcionan en la respuesta.</span><span class="sxs-lookup"><span data-stu-id="af885-157">The full key identifier, attributes, and tags are provided in the response.</span></span> <span data-ttu-id="af885-158">Esta operación requiere el permiso keys/list.</span><span class="sxs-lookup"><span data-stu-id="af885-158">This operation requires the keys/list permission.</span></span>
+      <span data-ttu-id="af885-159">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-159">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      for await (const keyAttr of client.listKeyVersions("MyKey")) {
+        const key = await client.getKey(keyAttr.name);
+        console.log("key version: ", key);
+      }
+      ```
+    syntax:
+      content: 'function listKeyVersions(name: string, options?: GetKeysOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-160">Nombre de la clave para capturar las versiones de</span><span class="sxs-lookup"><span data-stu-id="af885-160">Name of the key to fetch versions for</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeysOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.pipeline'
+    name: pipeline
+    fullName: pipeline
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af885-161">Las opciones para crear la conexión al servicio</span><span class="sxs-lookup"><span data-stu-id="af885-161">The options to create the connection to the service</span></span>
+    syntax:
+      content: 'pipeline: ServiceClientOptions'
+      return:
+        type:
+          - ServiceClientOptions
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.purgeDeletedKey'
+    name: 'purgeDeletedKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-162">La operación de purga Eliminar clave quita la clave de forma permanente, sin la posibilidad de recuperación.</span><span class="sxs-lookup"><span data-stu-id="af885-162">The purge deleted key operation removes the key permanently, without the possibility of recovery.</span></span> <span data-ttu-id="af885-163">Esta operación solo puede habilitarse en un almacén de eliminación temporal habilitado.</span><span class="sxs-lookup"><span data-stu-id="af885-163">This operation can only be enabled on a soft-delete enabled vault.</span></span> <span data-ttu-id="af885-164">Esta operación requiere el permiso de las claves y purga.</span><span class="sxs-lookup"><span data-stu-id="af885-164">This operation requires the keys/purge permission.</span></span>
+      <span data-ttu-id="af885-165">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-165">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      await client.deleteKey("MyKey");
+      // ...
+      await client.purgeDeletedKey("MyKey");
+      ```
+    syntax:
+      content: 'function purgeDeletedKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-166">El nombre de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-166">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.recoverDeletedKey'
+    name: 'recoverDeletedKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-167">Recupera la clave eliminada en el almacén especificado.</span><span class="sxs-lookup"><span data-stu-id="af885-167">Recovers the deleted key in the specified vault.</span></span> <span data-ttu-id="af885-168">Esta operación solo puede realizarse en un almacén de eliminación temporal habilitado.</span><span class="sxs-lookup"><span data-stu-id="af885-168">This operation can only be performed on a soft-delete enabled vault.</span></span> <span data-ttu-id="af885-169">Esta operación requiere el permiso o la recuperación de claves.</span><span class="sxs-lookup"><span data-stu-id="af885-169">This operation requires the keys/recover permission.</span></span>
+      <span data-ttu-id="af885-170">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-170">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      await client.deleteKey("MyKey");
+      // ...
+      await client.recoverDeletedKey("MyKey");
+      ```
+    syntax:
+      content: 'function recoverDeletedKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-171">El nombre de la clave eliminada.</span><span class="sxs-lookup"><span data-stu-id="af885-171">The name of the deleted key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.restoreKey'
+    name: 'restoreKey(Uint8Array, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-172">Restaura una copia de seguridad clave y todas sus versiones, en un almacén.</span><span class="sxs-lookup"><span data-stu-id="af885-172">Restores a backed up key, and all its versions, to a vault.</span></span> <span data-ttu-id="af885-173">Esta operación requiere el permiso keys/restore.</span><span class="sxs-lookup"><span data-stu-id="af885-173">This operation requires the keys/restore permission.</span></span>
+      <span data-ttu-id="af885-174">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-174">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let backupContents = await client.backupKey("MyKey");
+      // ...
+      let key = await client.restoreKey(backupContents);
+      ```
+    syntax:
+      content: 'function restoreKey(backup: Uint8Array, options?: RequestOptions)'
+      parameters:
+        - id: backup
+          type:
+            - Uint8Array
+          description: <span data-ttu-id="af885-175">El blob de copia de seguridad asociado con un paquete de claves.</span><span class="sxs-lookup"><span data-stu-id="af885-175">The backup blob associated with a key bundle.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.updateKey'
+    name: 'updateKey(string, string, UpdateKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="af885-176">La operación UPDATE cambia atributos específicos de una clave almacenada existente.</span><span class="sxs-lookup"><span data-stu-id="af885-176">The UPDATE operation changes specified attributes of an existing stored key.</span></span> <span data-ttu-id="af885-177">Los atributos que no se especifican en la solicitud se dejan sin cambios.</span><span class="sxs-lookup"><span data-stu-id="af885-177">Attributes that are not specified in the request are left unchanged.</span></span> <span data-ttu-id="af885-178">No se puede cambiar el valor de una clave.</span><span class="sxs-lookup"><span data-stu-id="af885-178">The value of a key itself cannot be changed.</span></span> <span data-ttu-id="af885-179">Esta operación requiere el permiso o conjunto de claves.</span><span class="sxs-lookup"><span data-stu-id="af885-179">This operation requires the keys/set permission.</span></span>
+      <span data-ttu-id="af885-180">Ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="af885-180">Example usage:</span></span>
+      ```ts
+      let keyName = "MyKey";
+      let client = new KeysClient(url, credentials);
+      let key = await client.getKey(keyName);
+      let result = await client.updateKey(keyName, key.version, { enabled: false });
+      ```
+    syntax:
+      content: 'function updateKey(name: string, keyVersion: string, options?: UpdateKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="af885-181">El nombre de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-181">The name of the key.</span></span>
+        - id: keyVersion
+          type:
+            - string
+          description: <span data-ttu-id="af885-182">La versión de la clave.</span><span class="sxs-lookup"><span data-stu-id="af885-182">The version of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.UpdateKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.vaultBaseUrl'
+    name: vaultBaseUrl
+    fullName: vaultBaseUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af885-183">La dirección URL base para el almacén</span><span class="sxs-lookup"><span data-stu-id="af885-183">The base URL to the vault</span></span>
+    syntax:
+      content: 'vaultBaseUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/keyvault-keys'
+references:
+  - uid: ServiceClientOptions | @azure/keyvault-keys.NewPipelineOptions
+    name: NewPipelineOptions
+    spec.typeScript:
+      - name: 'ServiceClientOptions | '
+        fullName: 'ServiceClientOptions | '
+      - name: NewPipelineOptions
+        fullName: NewPipelineOptions
+        uid: '@azure/keyvault-keys.NewPipelineOptions'
+  - uid: '@azure/keyvault-keys.RequestOptions'
+    name: RequestOptions
+    spec.typeScript:
+      - name: RequestOptions
+        fullName: RequestOptions
+        uid: '@azure/keyvault-keys.RequestOptions'
+  - uid: '@azure/keyvault-keys.CreateEcKeyOptions'
+    name: CreateEcKeyOptions
+    spec.typeScript:
+      - name: CreateEcKeyOptions
+        fullName: CreateEcKeyOptions
+        uid: '@azure/keyvault-keys.CreateEcKeyOptions'
+  - uid: Promise<@azure/keyvault-keys.Key>
+    name: Key>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Key
+        fullName: Key
+        uid: '@azure/keyvault-keys.Key'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/keyvault-keys.JsonWebKeyType'
+    name: JsonWebKeyType
+    spec.typeScript:
+      - name: JsonWebKeyType
+        fullName: JsonWebKeyType
+        uid: '@azure/keyvault-keys.JsonWebKeyType'
+  - uid: '@azure/keyvault-keys.CreateKeyOptions'
+    name: CreateKeyOptions
+    spec.typeScript:
+      - name: CreateKeyOptions
+        fullName: CreateKeyOptions
+        uid: '@azure/keyvault-keys.CreateKeyOptions'
+  - uid: '@azure/keyvault-keys.CreateRsaKeyOptions'
+    name: CreateRsaKeyOptions
+    spec.typeScript:
+      - name: CreateRsaKeyOptions
+        fullName: CreateRsaKeyOptions
+        uid: '@azure/keyvault-keys.CreateRsaKeyOptions'
+  - uid: Promise<@azure/keyvault-keys.DeletedKey>
+    name: DeletedKey>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: DeletedKey
+        fullName: DeletedKey
+        uid: '@azure/keyvault-keys.DeletedKey'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/keyvault-keys.GetKeyOptions'
+    name: GetKeyOptions
+    spec.typeScript:
+      - name: GetKeyOptions
+        fullName: GetKeyOptions
+        uid: '@azure/keyvault-keys.GetKeyOptions'
+  - uid: '@azure/keyvault-keys.JsonWebKey'
+    name: JsonWebKey
+    spec.typeScript:
+      - name: JsonWebKey
+        fullName: JsonWebKey
+        uid: '@azure/keyvault-keys.JsonWebKey'
+  - uid: '@azure/keyvault-keys.ImportKeyOptions'
+    name: ImportKeyOptions
+    spec.typeScript:
+      - name: ImportKeyOptions
+        fullName: ImportKeyOptions
+        uid: '@azure/keyvault-keys.ImportKeyOptions'
+  - uid: '@azure/keyvault-keys.GetKeysOptions'
+    name: GetKeysOptions
+    spec.typeScript:
+      - name: GetKeysOptions
+        fullName: GetKeysOptions
+        uid: '@azure/keyvault-keys.GetKeysOptions'
+  - uid: 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    name: 'KeyAttributes[]>'
+    spec.typeScript:
+      - name: PagedAsyncIterableIterator<
+        fullName: PagedAsyncIterableIterator<
+      - name: KeyAttributes
+        fullName: KeyAttributes
+        uid: '@azure/keyvault-keys.KeyAttributes'
+      - name: ', '
+        fullName: ', '
+      - name: KeyAttributes
+        fullName: KeyAttributes
+        uid: '@azure/keyvault-keys.KeyAttributes'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/keyvault-keys.UpdateKeyOptions'
+    name: UpdateKeyOptions
+    spec.typeScript:
+      - name: UpdateKeyOptions
+        fullName: UpdateKeyOptions
+        uid: '@azure/keyvault-keys.UpdateKeyOptions'
+  - uid: '@azure/keyvault-keys.NewPipelineOptions'
+    name: NewPipelineOptions
+    spec.typeScript:
+      - name: NewPipelineOptions
+        fullName: NewPipelineOptions
+        uid: '@azure/keyvault-keys.NewPipelineOptions'
