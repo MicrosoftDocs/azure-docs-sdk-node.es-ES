@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo'
+    name: DeployedServiceReplicaDetailInfo
+    fullName: DeployedServiceReplicaDetailInfo
+    children:
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.currentServiceOperation'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.partitionId'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.reportedLoad'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.serviceKind'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.serviceName'
+    langs:
+      - typeScript
+    type: interface
+    summary: Información acerca de una réplica de servicio de Service Fabric implementada en un nodo.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.currentServiceOperation'
+    name: currentServiceOperation
+    fullName: currentServiceOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica la operación de ciclo de vida activo actual en una instancia de servicio sin estado o réplicas del servicio con estado. Los valores posibles son: ''Unknown'', ''None'', ''Open'', ''ChangeRole'', ''Cierre'', ''Anular'''
+    optional: true
+    syntax:
+      content: 'currentServiceOperation?: ServiceOperationName'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceOperationName'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc'
+    name: currentServiceOperationStartTimeUtc
+    fullName: currentServiceOperationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La hora de inicio de la operación de servicio actual en formato UTC.
+    optional: true
+    syntax:
+      content: 'currentServiceOperationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un identificador interno usado por Service Fabric para identificar de forma única una partición. Esto es un GUID generado aleatoriamente cuando se creó el servicio. Id. de partición es único y no cambia durante la vigencia del servicio. Si el mismo servicio se ha eliminado y vuelto a crear los identificadores de sus particiones sería diferente.
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.reportedLoad'
+    name: reportedLoad
+    fullName: reportedLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de la carga notificada por réplica.
+    optional: true
+    syntax:
+      content: 'reportedLoad?: LoadMetricReportInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReportInfo[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: "DeployedServiceReplicaDetailInfo"'
+      return:
+        type:
+          - '"DeployedServiceReplicaDetailInfo"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nombre jerárquico completo del servicio en formato URI partir `fabric:`.'
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceOperationName'
+    name: ServiceOperationName
+    spec.typeScript:
+      - name: ServiceOperationName
+        fullName: ServiceOperationName
+        uid: '@azure/servicefabric.ServiceOperationName'
+  - uid: '@azure/servicefabric.LoadMetricReportInfo[]'
+    name: 'LoadMetricReportInfo[]'
+    spec.typeScript:
+      - name: LoadMetricReportInfo
+        fullName: LoadMetricReportInfo
+        uid: '@azure/servicefabric.LoadMetricReportInfo'
+      - name: '[]'
+        fullName: '[]'

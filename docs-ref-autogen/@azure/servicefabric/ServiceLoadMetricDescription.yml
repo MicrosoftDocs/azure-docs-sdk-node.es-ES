@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription'
+    name: ServiceLoadMetricDescription
+    fullName: ServiceLoadMetricDescription
+    children:
+      - '@azure/servicefabric.ServiceLoadMetricDescription.defaultLoad'
+      - '@azure/servicefabric.ServiceLoadMetricDescription.name'
+      - '@azure/servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad'
+      - '@azure/servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad'
+      - '@azure/servicefabric.ServiceLoadMetricDescription.weight'
+    langs:
+      - typeScript
+    type: interface
+    summary: Especifica una métrica para equilibrar la carga de un servicio en tiempo de ejecución.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.defaultLoad'
+    name: defaultLoad
+    fullName: defaultLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se usa solo para servicios sin estado. La cantidad predeterminada de carga, como un número, que crea este servicio para esta métrica.'
+    optional: true
+    syntax:
+      content: 'defaultLoad?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El nombre de la métrica. Si el servicio elige notificar la carga en tiempo de ejecución, el nombre de la métrica de carga debe coincidir con el nombre especificado en el nombre exactamente. Tenga en cuenta que los nombres de métrica distinguen mayúsculas de minúsculas.'
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad'
+    name: primaryDefaultLoad
+    fullName: primaryDefaultLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se usa solo para los servicios con estado. La cantidad predeterminada de carga, como un número, que este servicio se crea para esta métrica cuando se trata de una réplica principal.'
+    optional: true
+    syntax:
+      content: 'primaryDefaultLoad?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad'
+    name: secondaryDefaultLoad
+    fullName: secondaryDefaultLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se usa solo para los servicios con estado. La cantidad predeterminada de carga, como un número, que este servicio se crea para esta métrica cuando se trata de una réplica secundaria.'
+    optional: true
+    syntax:
+      content: 'secondaryDefaultLoad?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.weight'
+    name: weight
+    fullName: weight
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El servicio carga métrica peso relativo, en comparación con otras métricas configuradas para este servicio, como un número. Los valores posibles son: "Zero", "Low", "Medium", "High"'
+    optional: true
+    syntax:
+      content: 'weight?: ServiceLoadMetricWeight'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceLoadMetricWeight'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceLoadMetricWeight'
+    name: ServiceLoadMetricWeight
+    spec.typeScript:
+      - name: ServiceLoadMetricWeight
+        fullName: ServiceLoadMetricWeight
+        uid: '@azure/servicefabric.ServiceLoadMetricWeight'

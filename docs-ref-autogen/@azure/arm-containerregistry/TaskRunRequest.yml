@@ -5,9 +5,9 @@ items:
     fullName: TaskRunRequest
     children:
       - '@azure/arm-containerregistry.TaskRunRequest.isArchiveEnabled'
-      - '@azure/arm-containerregistry.TaskRunRequest.taskName'
+      - '@azure/arm-containerregistry.TaskRunRequest.overrideTaskStepProperties'
+      - '@azure/arm-containerregistry.TaskRunRequest.taskId'
       - '@azure/arm-containerregistry.TaskRunRequest.type'
-      - '@azure/arm-containerregistry.TaskRunRequest.values'
     langs:
       - typeScript
     type: interface
@@ -28,16 +28,31 @@ items:
         type:
           - undefined | false | true
     package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.TaskRunRequest.taskName'
-    name: taskName
-    fullName: taskName
+  - uid: '@azure/arm-containerregistry.TaskRunRequest.overrideTaskStepProperties'
+    name: overrideTaskStepProperties
+    fullName: overrideTaskStepProperties
     children: []
     langs:
       - typeScript
     type: property
-    summary: El nombre de tarea que se ejecutan tiene que ponerse en cola.
+    summary: Conjunto de parámetros reemplazables que puede pasarse al ejecutar una tarea.
+    optional: true
     syntax:
-      content: 'taskName: string'
+      content: 'overrideTaskStepProperties?: OverrideTaskStepProperties'
+      return:
+        type:
+          - '@azure/arm-containerregistry.OverrideTaskStepProperties'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.TaskRunRequest.taskId'
+    name: taskId
+    fullName: taskId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de recurso de la tarea que se ejecutan tiene que ponerse en cola.
+    syntax:
+      content: 'taskId: string'
       return:
         type:
           - string
@@ -56,27 +71,10 @@ items:
         type:
           - '"TaskRunRequest"'
     package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.TaskRunRequest.values'
-    name: values
-    fullName: values
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: La colección de valores que se puede invalidar que puede pasarse al ejecutar una tarea.
-    optional: true
-    syntax:
-      content: 'values?: SetValue[]'
-      return:
-        type:
-          - '@azure/arm-containerregistry.SetValue[]'
-    package: '@azure/arm-containerregistry'
 references:
-  - uid: '@azure/arm-containerregistry.SetValue[]'
-    name: 'SetValue[]'
+  - uid: '@azure/arm-containerregistry.OverrideTaskStepProperties'
+    name: OverrideTaskStepProperties
     spec.typeScript:
-      - name: SetValue
-        fullName: SetValue
-        uid: '@azure/arm-containerregistry.SetValue'
-      - name: '[]'
-        fullName: '[]'
+      - name: OverrideTaskStepProperties
+        fullName: OverrideTaskStepProperties
+        uid: '@azure/arm-containerregistry.OverrideTaskStepProperties'

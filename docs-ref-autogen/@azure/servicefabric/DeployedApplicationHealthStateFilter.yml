@@ -1,0 +1,91 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter'
+    name: DeployedApplicationHealthStateFilter
+    fullName: DeployedApplicationHealthStateFilter
+    children:
+      - '@azure/servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters'
+      - '@azure/servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Define los criterios de coincidencia para determinar si una aplicación implementada se debe incluir como elemento secundario de una aplicación en los fragmentos de mantenimiento del clúster.
+      Las aplicaciones implementadas solo se devuelven si la aplicación primaria coincide con un filtro especificado en la descripción de la consulta de la salud fragmento clúster.
+      Un filtro puede hacer coincidir cero, una o varias aplicaciones implementadas, dependiendo de sus propiedades.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters'
+    name: deployedServicePackageFilters
+    fullName: deployedServicePackageFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Define una lista de filtros que especifican qué servicio implementado los paquetes que se incluirán en los fragmentos de mantenimiento del clúster devuelto como elementos secundarios de la aplicación principal implementada. Los paquetes de servicio implementado se devuelven solo si el elemento primario implementa coincidencias de la aplicación de un filtro.
+      Si la lista está vacía, no se devuelve ningún paquete de servicio implementado. Implementan todos los paquetes de servicio implementados se utilizan para evaluar al elemento primario de estado de mantenimiento de la aplicación que se agregan, independientemente de los filtros de entrada.
+      El filtro de la aplicación implementada puede especificar varios filtros de paquetes de servicio implementado.
+      Por ejemplo, pueden especificar un filtro para devolver todos los paquetes de servicio implementado con el estado de Error y otro para incluir siempre un paquete de servicio implementado en un nodo.
+    optional: true
+    syntax:
+      content: 'deployedServicePackageFilters?: DeployedServicePackageHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedServicePackageHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      El filtro para el estado de mantenimiento de las aplicaciones implementadas. Permite seleccionar las aplicaciones implementadas si coinciden con los Estados de mantenimiento deseada.
+      Los valores posibles son el valor entero de uno de los siguientes estados de mantenimiento. Se devuelven solo las aplicaciones implementadas que coincidan con el filtro. Todas las aplicaciones implementadas se utilizan para evaluar el estado de mantenimiento agregado del clúster.
+      Si no se especifica, valor predeterminado es None, a menos que se especifica el nombre del nodo. Si el filtro tiene valor predeterminado y se especifica el nombre de nodo, se devuelve la aplicación implementada correspondiente.
+      Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.
+      Por ejemplo, si el valor proporcionado es 6, detecta las aplicaciones implementadas con el valor HealthState de OK (2) y Warning (4).
+      - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+      - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+      - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+      - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+      - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+      - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535. Valor predeterminado: 0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter'
+    name: nodeNameFilter
+    fullName: nodeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El nombre del nodo donde se implementa la aplicación para que coincida con el filtro.
+      Si se especifica, el filtro se aplica solo a la aplicación implementada en el nodo especificado.
+      Si la aplicación no se implementa en el nodo con el nombre especificado, no se devuelve ninguna aplicación implementada en los fragmentos de mantenimiento del clúster según este filtro.
+      En caso contrario, la aplicación implementada se incluye en los fragmentos de mantenimiento del clúster Si respeta las propiedades del filtro.
+      Si no se especifica, todos ellos implementadas aplicaciones que coinciden con los filtros primario (si existe) se toma en consideración y se compara con los demás miembros de filtro, como filtro de estado de mantenimiento.
+    optional: true
+    syntax:
+      content: 'nodeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter[]'
+    name: 'DeployedServicePackageHealthStateFilter[]'
+    spec.typeScript:
+      - name: DeployedServicePackageHealthStateFilter
+        fullName: DeployedServicePackageHealthStateFilter
+        uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

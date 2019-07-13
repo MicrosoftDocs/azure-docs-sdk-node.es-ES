@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription'
+    name: ApplicationMetricDescription
+    fullName: ApplicationMetricDescription
+    children:
+      - '@azure/servicefabric.ApplicationMetricDescription.maximumCapacity'
+      - '@azure/servicefabric.ApplicationMetricDescription.name'
+      - '@azure/servicefabric.ApplicationMetricDescription.reservationCapacity'
+      - '@azure/servicefabric.ApplicationMetricDescription.totalApplicationCapacity'
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe la información de capacidad para un métrica de equilibrio de recursos personalizados. Esto puede utilizarse para limitar el consumo total de la métrica por los servicios de esta aplicación.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.maximumCapacity'
+    name: maximumCapacity
+    fullName: maximumCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La capacidad máxima del nodo de la aplicación de Service Fabric.
+      Se trata de la carga máxima para una instancia de esta aplicación en un único nodo. Aunque la capacidad de nodo es mayor que este valor, Service Fabric limitará la carga total de servicios dentro de la aplicación en cada nodo para este valor.
+      Si se establece en cero, capacidad para esta métrica es ilimitado en cada nodo.
+      Al crear una nueva aplicación con capacidad de aplicación definida, el producto de MaximumNodes y este valor debe ser siempre menor o igual que TotalApplicationCapacity.
+      Al actualizar una aplicación existente con capacidad de aplicación, el producto de MaximumNodes y este valor debe ser siempre menor o igual que TotalApplicationCapacity.
+    optional: true
+    syntax:
+      content: 'maximumCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre de la métrica.
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.reservationCapacity'
+    name: reservationCapacity
+    fullName: reservationCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La capacidad de reserva del nodo de la aplicación de Service Fabric.
+      Se trata de la cantidad de carga que está reservado en los nodos con instancias de la aplicación.
+      Si se especifica el valor de MinimumNodes, el producto de estos valores será la capacidad reservada en el clúster para la aplicación.
+      Si se establece en cero, no hay ninguna capacidad se reserva para esta métrica.
+      Al establecer la capacidad de aplicación o al actualizar la capacidad de aplicación Este valor debe ser menor o igual que MaximumCapacity para cada métrica.
+    optional: true
+    syntax:
+      content: 'reservationCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationMetricDescription.totalApplicationCapacity'
+    name: totalApplicationCapacity
+    fullName: totalApplicationCapacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La capacidad total de métrica para la aplicación de Service Fabric.
+      Se trata de la capacidad total de métricas para esta aplicación en el clúster. Service Fabric intentará limitar la suma de las cargas de servicios en la aplicación a este valor.
+      Al crear una nueva aplicación con capacidad de aplicación definida, el producto de MaximumNodes y MaximumCapacity siempre debe ser menor o igual a este valor.
+    optional: true
+    syntax:
+      content: 'totalApplicationCapacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

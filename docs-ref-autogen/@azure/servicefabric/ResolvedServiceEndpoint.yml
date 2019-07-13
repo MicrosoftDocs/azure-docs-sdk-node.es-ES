@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ResolvedServiceEndpoint'
+    name: ResolvedServiceEndpoint
+    fullName: ResolvedServiceEndpoint
+    children:
+      - '@azure/servicefabric.ResolvedServiceEndpoint.address'
+      - '@azure/servicefabric.ResolvedServiceEndpoint.kind'
+    langs:
+      - typeScript
+    type: interface
+    summary: Punto de conexión de una partición de servicio resuelto.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ResolvedServiceEndpoint.address'
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La dirección del punto de conexión. Si el punto de conexión tiene varios agentes de escucha la dirección es un objeto JSON con una propiedad por el agente de escucha con el valor como la dirección de ese agente de escucha.
+    optional: true
+    syntax:
+      content: 'address?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ResolvedServiceEndpoint.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El rol de la réplica donde se notifica el punto de conexión. Los valores posibles son: ''Invalid'', ''estado'', ''StatefulPrimary'', ''StatefulSecondary'''
+    optional: true
+    syntax:
+      content: 'kind?: ServiceEndpointRole'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceEndpointRole'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceEndpointRole'
+    name: ServiceEndpointRole
+    spec.typeScript:
+      - name: ServiceEndpointRole
+        fullName: ServiceEndpointRole
+        uid: '@azure/servicefabric.ServiceEndpointRole'

@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parámetros opcionales.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -58,7 +58,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Permite filtrar los objetos de estado de mantenimiento de las aplicaciones implementadas devueltos en el resultado de la consulta de mantenimiento de las aplicaciones según su estado de mantenimiento.
+      Los valores posibles para este parámetro incluyen el valor entero de uno de los siguientes estados de mantenimiento. Solo se devolverán las aplicaciones implementadas que coincidan con el filtro.
+      Todas las aplicaciones implementadas se utilizan para evaluar el estado de mantenimiento agregado. Si no se especifica, se devuelven todas las entradas.
+      Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit "OR".
+      Por ejemplo, si el valor proporcionado es 6, se devuelve el estado de mantenimiento de las aplicaciones implementadas con el valor HealthState de Ok (2) y Warning (4).
+      - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+      - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+      - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+      - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+      - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+      - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535. Valor predeterminado: 0.
     optional: true
     syntax:
       content: 'deployedApplicationsHealthStateFilter?: undefined | number'
@@ -73,7 +84,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Permite filtrar la colección de objetos HealthEvent devueltos según el estado de mantenimiento.
+      Los valores posibles para este parámetro incluyen el valor entero de uno de los siguientes estados de mantenimiento.
+      Se devuelven únicamente los eventos que coinciden con el filtro. Todos los eventos se utilizan para evaluar el estado de mantenimiento agregado.
+      Si no se especifica, se devuelven todas las entradas. Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit "OR".
+      Por ejemplo, si el valor proporcionado es 6, se devuelven todos los eventos con el valor HealthState de Ok (2) y Warning (4).
+      - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+      - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+      - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+      - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+      - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+      - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535. Valor predeterminado: 0.
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -88,7 +110,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Indica si las estadísticas de mantenimiento se deben devolver como parte del resultado de la consulta. El valor predeterminado es false.
+      Las estadísticas muestran el número de entidades secundarias en estado de mantenimiento Ok, Warning y Error.
+      Valor predeterminado: false.
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -133,7 +158,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Permite filtrar los objetos de estado de mantenimiento de los servicios devueltos en el resultado del la consulta de mantenimiento de los servicios en función de su estado de mantenimiento.
+      Los valores posibles para este parámetro incluyen el valor entero de uno de los siguientes estados de mantenimiento.
+      Se devuelven únicamente los servicios que coinciden con el filtro. Todos los servicios se utilizan para evaluar el estado de mantenimiento agregado.
+      Si no se especifica, se devuelven todas las entradas. Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit "OR". Por ejemplo, si el valor proporcionado es 6, se devuelve el estado de mantenimiento de los servicios con el valor HealthState de Ok (2) y Warning (4).
+      - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+      - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+      - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+      - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+      - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+      - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535. Valor predeterminado: 0.
     optional: true
     syntax:
       content: 'servicesHealthStateFilter?: undefined | number'
@@ -163,7 +198,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'El tiempo de espera del servidor para realizar la operación en segundos. Este tiempo de espera especifica la duración de tiempo que el cliente está dispuesto a esperar para que se complete la operación solicitada. El valor predeterminado para este parámetro es de 60 segundos. Valor predeterminado: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter'
+    name: ReplicaHealthStateFilter
+    fullName: ReplicaHealthStateFilter
+    children:
+      - '@azure/servicefabric.ReplicaHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Define los criterios de coincidencia para determinar si una réplica se debe incluir como elemento secundario de una partición en los fragmentos de mantenimiento del clúster.
+      Las réplicas se devuelven solo si las entidades primarias coincide con un filtro especificado en la descripción de la consulta de la salud fragmento clúster. La partición primaria, el servicio y la aplicación deben incluirse en los fragmentos de mantenimiento del clúster.
+      Un filtro puede hacer coincidir cero, una o varias réplicas, dependiendo de sus propiedades.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      El filtro para el estado de mantenimiento de las réplicas. Permite la selección de réplicas si coinciden con los Estados de mantenimiento deseada.
+      Los valores posibles son el valor entero de uno de los siguientes estados de mantenimiento. Se devuelven únicamente las réplicas que coinciden con el filtro. Todas las réplicas se utilizan para evaluar el estado de mantenimiento agregado de partición primaria.
+      Si no se especifica, valor predeterminado es None, a menos que se especifica el identificador de réplica. Si el filtro tiene valor predeterminado y se especifica el Id. de réplica, se devuelve la réplica coincidente.
+      Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.
+      Por ejemplo, si el valor proporcionado es 6, detecta las réplicas con el valor de HealthState de OK (2) y Warning (4).
+      - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+      - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+      - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+      - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+      - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+      - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535. Valor predeterminado: 0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter'
+    name: replicaOrInstanceIdFilter
+    fullName: replicaOrInstanceIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Id. de la réplica de servicio con estado o la instancia de servicio sin estado que coincide con el filtro. El filtro se aplica solo a la réplica especificada, si existe.
+      Si la réplica no existe, no se devuelve ninguna réplica en los fragmentos de mantenimiento del clúster según este filtro.
+      Si la réplica no existe, se incluye en los fragmentos de mantenimiento del clúster Si respeta las propiedades del filtro.
+      Si no se especifica, se toma en consideración todas las réplicas que coinciden con los filtros primario (si existe) y se compara con los demás miembros de filtro, como filtro de estado de mantenimiento.
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
