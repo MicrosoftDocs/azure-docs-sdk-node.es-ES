@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth'
+    name: StatelessServiceInstanceHealth
+    fullName: StatelessServiceInstanceHealth
+    children:
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.aggregatedHealthState'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.healthEvents'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.healthStatistics'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.instanceId'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.partitionId'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.serviceKind'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="77fe4-101">Representa el estado de la instancia de servicio sin estado.</span><span class="sxs-lookup"><span data-stu-id="77fe4-101">Represents the health of the stateless service instance.</span></span>
+      <span data-ttu-id="77fe4-102">Contiene el estado de mantenimiento agregado de instancia, los eventos de estado y las evaluaciones en mal estado.</span><span class="sxs-lookup"><span data-stu-id="77fe4-102">Contains the instance aggregated health state, the health events and the unhealthy evaluations.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="77fe4-103">El HealthState que representa el estado de mantenimiento agregado de la entidad que se calcula mediante el Administrador de estado.</span><span class="sxs-lookup"><span data-stu-id="77fe4-103">The HealthState representing the aggregated health state of the entity computed by Health Manager.</span></span>
+      <span data-ttu-id="77fe4-104">La evaluación de mantenimiento de la entidad refleja todos los eventos notificados en la entidad y sus elementos secundarios (si existe).</span><span class="sxs-lookup"><span data-stu-id="77fe4-104">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>
+      <span data-ttu-id="77fe4-105">La agregación se realiza aplicando la directiva de estado deseado.</span><span class="sxs-lookup"><span data-stu-id="77fe4-105">The aggregation is done by applying the desired health policy.</span></span> <span data-ttu-id="77fe4-106">Los valores posibles son: 'Invalid', 'Aceptar', 'Advertencia', 'Error', 'Unknown'.</span><span class="sxs-lookup"><span data-stu-id="77fe4-106">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.healthEvents'
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="77fe4-107">La lista de eventos de estado notificados en la entidad.</span><span class="sxs-lookup"><span data-stu-id="77fe4-107">The list of health events reported on the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.healthStatistics'
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="77fe4-108">Muestra las estadísticas de estado para todos los tipos de elementos secundarios de la entidad consultada.</span><span class="sxs-lookup"><span data-stu-id="77fe4-108">Shows the health statistics for all children types of the queried entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - '@azure/servicefabric.HealthStatistics'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.instanceId'
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="77fe4-109">Identificador de una instancia de servicio sin estado.</span><span class="sxs-lookup"><span data-stu-id="77fe4-109">Id of a stateless service instance.</span></span> <span data-ttu-id="77fe4-110">InstanceId se usa Service fabric para identificar de forma exclusiva una instancia de una partición de un servicio sin estado.</span><span class="sxs-lookup"><span data-stu-id="77fe4-110">InstanceId is used by Service Fabric to uniquely identify an instance of a partition of a stateless service.</span></span> <span data-ttu-id="77fe4-111">Es único dentro de una partición y no cambia durante la vigencia de la instancia.</span><span class="sxs-lookup"><span data-stu-id="77fe4-111">It is unique within a partition and does not change for the lifetime of the instance.</span></span> <span data-ttu-id="77fe4-112">Si la instancia ha conmutado por error en el nodo de iguales o distintos, obtendrá un valor diferente para el identificador de instancia.</span><span class="sxs-lookup"><span data-stu-id="77fe4-112">If the instance has failed over on the same or different node, it will get a different value for the InstanceId.</span></span>'
+    optional: true
+    syntax:
+      content: 'instanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="77fe4-113">Identificador de la partición a la que pertenece esta réplica.</span><span class="sxs-lookup"><span data-stu-id="77fe4-113">Id of the partition to which this replica belongs.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="77fe4-114">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="77fe4-114">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="77fe4-115">Las evaluaciones en mal estado que se muestran por qué el estado actual de mantenimiento agregado se devuelve por el Administrador de estado.</span><span class="sxs-lookup"><span data-stu-id="77fe4-115">The unhealthy evaluations that show why the current aggregated health state was returned by Health Manager.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: '@azure/servicefabric.HealthStatistics'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

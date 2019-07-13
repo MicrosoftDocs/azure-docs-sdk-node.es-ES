@@ -8,6 +8,9 @@ items:
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.accounts'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.apiVersion'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.beginLongRunningRequest'
+      - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability'
+      - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_2'
+      - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_1'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.constructor'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.credentials'
@@ -76,14 +79,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="eba63-101">Enviar la solicitud inicial de un LRO (larga ejecución como operación) y obtener un HttpLongRunningOperationResponse que proporciona métodos para sondear el LRO y comprobar si el LRO finalizada.</span><span class="sxs-lookup"><span data-stu-id="eba63-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="2207e-101">Enviar la solicitud inicial de un LRO (larga ejecución como operación) y obtener un HttpLongRunningOperationResponse que proporciona métodos para sondear el LRO y comprobar si el LRO finalizada.</span><span class="sxs-lookup"><span data-stu-id="2207e-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="eba63-102">El objeto de solicitud</span><span class="sxs-lookup"><span data-stu-id="eba63-102">The request object</span></span>
+          description: <span data-ttu-id="2207e-102">El objeto de solicitud</span><span class="sxs-lookup"><span data-stu-id="2207e-102">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -92,6 +95,91 @@ items:
       return:
         type:
           - Promise<LROPoller>
+    package: '@azure/arm-cognitiveservices'
+  - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability'
+    name: 'checkDomainAvailability(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2207e-103">Compruebe si un dominio está disponible.</span><span class="sxs-lookup"><span data-stu-id="2207e-103">Check whether a domain is available.</span></span>
+    syntax:
+      content: 'function checkDomainAvailability(subdomainName: string, type: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: subdomainName
+          type:
+            - string
+          description: <span data-ttu-id="2207e-104">El nombre de subdominio que use.</span><span class="sxs-lookup"><span data-stu-id="2207e-104">The subdomain name to use.</span></span>
+        - id: type
+          type:
+            - string
+          description: <span data-ttu-id="2207e-105">El tipo del recurso.</span><span class="sxs-lookup"><span data-stu-id="2207e-105">The Type of the resource.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CheckDomainAvailabilityResponse>
+    package: '@azure/arm-cognitiveservices'
+  - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_2'
+    name: 'checkDomainAvailability(string, string, RequestOptionsBase, ServiceCallback<CheckDomainAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkDomainAvailability(subdomainName: string, type: string, options: RequestOptionsBase, callback: ServiceCallback<CheckDomainAvailabilityResult>)'
+      parameters:
+        - id: subdomainName
+          type:
+            - string
+          description: <span data-ttu-id="2207e-106">El nombre de subdominio que use.</span><span class="sxs-lookup"><span data-stu-id="2207e-106">The subdomain name to use.</span></span>
+        - id: type
+          type:
+            - string
+          description: <span data-ttu-id="2207e-107">El tipo del recurso.</span><span class="sxs-lookup"><span data-stu-id="2207e-107">The Type of the resource.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2207e-108">Los parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="2207e-108">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cognitiveservices.CheckDomainAvailabilityResult>
+          description: |
+            <span data-ttu-id="2207e-109">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="2207e-109">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CheckDomainAvailabilityResponse>
+    package: '@azure/arm-cognitiveservices'
+  - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_1'
+    name: 'checkDomainAvailability(string, string, ServiceCallback<CheckDomainAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkDomainAvailability(subdomainName: string, type: string, callback: ServiceCallback<CheckDomainAvailabilityResult>)'
+      parameters:
+        - id: subdomainName
+          type:
+            - string
+          description: <span data-ttu-id="2207e-110">El nombre de subdominio que use.</span><span class="sxs-lookup"><span data-stu-id="2207e-110">The subdomain name to use.</span></span>
+        - id: type
+          type:
+            - string
+          description: <span data-ttu-id="2207e-111">El tipo del recurso.</span><span class="sxs-lookup"><span data-stu-id="2207e-111">The Type of the resource.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cognitiveservices.CheckDomainAvailabilityResult>
+          description: |
+            <span data-ttu-id="2207e-112">La devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="2207e-112">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CheckDomainAvailabilityResponse>
     package: '@azure/arm-cognitiveservices'
   - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability'
     name: checkSkuAvailability
@@ -113,18 +201,18 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="eba63-103">Inicializa una nueva instancia de la clase CognitiveServicesManagementClient.</span><span class="sxs-lookup"><span data-stu-id="eba63-103">Initializes a new instance of the CognitiveServicesManagementClient class.</span></span>
+    summary: <span data-ttu-id="2207e-113">Inicializa una nueva instancia de la clase CognitiveServicesManagementClient.</span><span class="sxs-lookup"><span data-stu-id="2207e-113">Initializes a new instance of the CognitiveServicesManagementClient class.</span></span>
     syntax:
       content: 'new CognitiveServicesManagementClient(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.CognitiveServicesManagementClientOptions)'
       parameters:
         - id: credentials
           type:
             - ServiceClientCredentials
-          description: <span data-ttu-id="eba63-104">Credenciales necesarias para que el cliente para conectarse a Azure.</span><span class="sxs-lookup"><span data-stu-id="eba63-104">Credentials needed for the client to connect to Azure.</span></span>
+          description: <span data-ttu-id="2207e-114">Credenciales necesarias para que el cliente para conectarse a Azure.</span><span class="sxs-lookup"><span data-stu-id="2207e-114">Credentials needed for the client to connect to Azure.</span></span>
         - id: subscriptionId
           type:
             - string
-          description: <span data-ttu-id="eba63-105">Identificador de suscripción de Azure</span><span class="sxs-lookup"><span data-stu-id="eba63-105">Azure Subscription ID.</span></span>
+          description: <span data-ttu-id="2207e-115">Identificador de suscripción de Azure</span><span class="sxs-lookup"><span data-stu-id="2207e-115">Azure Subscription ID.</span></span>
         - id: options
           type:
             - Models.CognitiveServicesManagementClientOptions
@@ -152,7 +240,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="eba63-106">El tiempo de espera de reintento en segundos para las operaciones de ejecución larga.</span><span class="sxs-lookup"><span data-stu-id="eba63-106">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="eba63-107">El valor predeterminado es 30.</span><span class="sxs-lookup"><span data-stu-id="eba63-107">Default value is 30.</span></span>
+    summary: <span data-ttu-id="2207e-116">El tiempo de espera de reintento en segundos para las operaciones de ejecución larga.</span><span class="sxs-lookup"><span data-stu-id="2207e-116">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="2207e-117">El valor predeterminado es 30.</span><span class="sxs-lookup"><span data-stu-id="2207e-117">Default value is 30.</span></span>
     optional: true
     syntax:
       content: 'longRunningOperationRetryTimeout?: undefined | number'
@@ -194,7 +282,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="eba63-108">Restaurar un LROPoller desde el LROPollState proporcionado.</span><span class="sxs-lookup"><span data-stu-id="eba63-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="eba63-109">Este método puede utilizarse para volver a crear un LROPoller en una máquina o un proceso diferente.</span><span class="sxs-lookup"><span data-stu-id="eba63-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    summary: <span data-ttu-id="2207e-118">Restaurar un LROPoller desde el LROPollState proporcionado.</span><span class="sxs-lookup"><span data-stu-id="2207e-118">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="2207e-119">Este método puede utilizarse para volver a crear un LROPoller en una máquina o un proceso diferente.</span><span class="sxs-lookup"><span data-stu-id="2207e-119">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
     syntax:
       content: 'function restoreLROPoller(lroPollState: LROPollState)'
       parameters:
@@ -212,14 +300,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="eba63-110">Proporciona un mecanismo para realizar una solicitud que se sondean y proporcionará el resultado final.</span><span class="sxs-lookup"><span data-stu-id="eba63-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    summary: <span data-ttu-id="2207e-120">Proporciona un mecanismo para realizar una solicitud que se sondean y proporcionará el resultado final.</span><span class="sxs-lookup"><span data-stu-id="2207e-120">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
     syntax:
       content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="eba63-111">El objeto de solicitud</span><span class="sxs-lookup"><span data-stu-id="eba63-111">The request object</span></span>
+          description: <span data-ttu-id="2207e-121">El objeto de solicitud</span><span class="sxs-lookup"><span data-stu-id="2207e-121">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -235,22 +323,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="eba63-112">Enviar la solicitud inicial de un LRO (larga ejecución como operación) y obtener un LROPoller que proporciona métodos para sondear el LRO y comprobar si el LRO finalizada.</span><span class="sxs-lookup"><span data-stu-id="eba63-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="2207e-122">Enviar la solicitud inicial de un LRO (larga ejecución como operación) y obtener un LROPoller que proporciona métodos para sondear el LRO y comprobar si el LRO finalizada.</span><span class="sxs-lookup"><span data-stu-id="2207e-122">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="eba63-113">Los argumentos para la operación.</span><span class="sxs-lookup"><span data-stu-id="eba63-113">The arguments to the operation.</span></span>
+          description: <span data-ttu-id="2207e-123">Los argumentos para la operación.</span><span class="sxs-lookup"><span data-stu-id="2207e-123">The arguments to the operation.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="eba63-114">La especificación para la operación.</span><span class="sxs-lookup"><span data-stu-id="eba63-114">The specification for the operation.</span></span>
+          description: <span data-ttu-id="2207e-124">La especificación para la operación.</span><span class="sxs-lookup"><span data-stu-id="2207e-124">The specification for the operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="eba63-115">Opciones adicionales para enviarse al realizar la solicitud.</span><span class="sxs-lookup"><span data-stu-id="eba63-115">Additional options to be sent while making the request.</span></span>
+          description: <span data-ttu-id="2207e-125">Opciones adicionales para enviarse al realizar la solicitud.</span><span class="sxs-lookup"><span data-stu-id="2207e-125">Additional options to be sent while making the request.</span></span>
           optional: true
       return:
         type:
@@ -262,23 +350,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="eba63-116">Enviar una solicitud HTTP que se rellena con el OperationSpec proporcionado.</span><span class="sxs-lookup"><span data-stu-id="eba63-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    summary: <span data-ttu-id="2207e-126">Enviar una solicitud HTTP que se rellena con el OperationSpec proporcionado.</span><span class="sxs-lookup"><span data-stu-id="2207e-126">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
     syntax:
       content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="eba63-117">Los argumentos que se rellenarán los valores de la solicitud HTTP con plantillas de.</span><span class="sxs-lookup"><span data-stu-id="eba63-117">The arguments that the HTTP request's templated values will be populated from.</span></span>
+          description: <span data-ttu-id="2207e-127">Los argumentos que se rellenarán los valores de la solicitud HTTP con plantillas de.</span><span class="sxs-lookup"><span data-stu-id="2207e-127">The arguments that the HTTP request's templated values will be populated from.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="eba63-118">OperationSpec debe usar para rellenar la solicitud HTTP.</span><span class="sxs-lookup"><span data-stu-id="eba63-118">The OperationSpec to use to populate the httpRequest.</span></span>
+          description: <span data-ttu-id="2207e-128">OperationSpec debe usar para rellenar la solicitud HTTP.</span><span class="sxs-lookup"><span data-stu-id="2207e-128">The OperationSpec to use to populate the httpRequest.</span></span>
         - id: callback
           type:
             - ServiceCallback<any>
           description: |
-            <span data-ttu-id="eba63-119">La devolución de llamada cuando se recibe la respuesta.</span><span class="sxs-lookup"><span data-stu-id="eba63-119">The callback to call when the response is received.</span></span>
+            <span data-ttu-id="2207e-129">La devolución de llamada cuando se recibe la respuesta.</span><span class="sxs-lookup"><span data-stu-id="2207e-129">The callback to call when the response is received.</span></span>
           optional: true
       return:
         type:
@@ -290,7 +378,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="eba63-120">Enviar la solicitud HTTP proporcionada.</span><span class="sxs-lookup"><span data-stu-id="eba63-120">Send the provided httpRequest.</span></span>
+    summary: <span data-ttu-id="2207e-130">Enviar la solicitud HTTP proporcionada.</span><span class="sxs-lookup"><span data-stu-id="2207e-130">Send the provided httpRequest.</span></span>
     syntax:
       content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
       parameters:
@@ -347,3 +435,13 @@ references:
       - name: ResourceSkus
         fullName: ResourceSkus
         uid: '@azure/arm-cognitiveservices.ResourceSkus'
+  - uid: ServiceCallback<@azure/arm-cognitiveservices.CheckDomainAvailabilityResult>
+    name: CheckDomainAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckDomainAvailabilityResult
+        fullName: CheckDomainAvailabilityResult
+        uid: '@azure/arm-cognitiveservices.CheckDomainAvailabilityResult'
+      - name: '>'
+        fullName: '>'

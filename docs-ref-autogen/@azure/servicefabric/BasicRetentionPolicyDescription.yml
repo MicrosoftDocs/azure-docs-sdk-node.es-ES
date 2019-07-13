@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription'
+    name: BasicRetentionPolicyDescription
+    fullName: BasicRetentionPolicyDescription
+    children:
+      - '@azure/servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups'
+      - '@azure/servicefabric.BasicRetentionPolicyDescription.retentionDuration'
+      - '@azure/servicefabric.BasicRetentionPolicyDescription.retentionPolicyType'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="590f2-101">Describe la directiva de retención básica.</span><span class="sxs-lookup"><span data-stu-id="590f2-101">Describes basic retention policy.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups'
+    name: minimumNumberOfBackups
+    fullName: minimumNumberOfBackups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="590f2-102">Es el número mínimo de las copias de seguridad que se conservarán en cualquier momento.</span><span class="sxs-lookup"><span data-stu-id="590f2-102">It is the minimum number of backups to be retained at any point of time.</span></span> <span data-ttu-id="590f2-103">Si se especifica con una que no es el valor cero, las copias de seguridad no se eliminará incluso si las copias de seguridad fue más allá de la duración de retención y tienen el número de copias de seguridad menor o igual a él.</span><span class="sxs-lookup"><span data-stu-id="590f2-103">If specified with a non zero value, backups will not be deleted even if the backups have gone past retention duration and have number of backups less than or equal to it.</span></span>'
+    optional: true
+    syntax:
+      content: 'minimumNumberOfBackups?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription.retentionDuration'
+    name: retentionDuration
+    fullName: retentionDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="590f2-104">Es la duración mínima para el que una copia de seguridad creado, permanecerá almacenado en el almacenamiento y es posible que se eliminan después de que abarcan de tiempo.</span><span class="sxs-lookup"><span data-stu-id="590f2-104">It is the minimum duration for which a backup created, will remain stored in the storage and might get deleted after that span of time.</span></span> <span data-ttu-id="590f2-105">Se debe especificar en formato ISO8601.</span><span class="sxs-lookup"><span data-stu-id="590f2-105">It should be specified in ISO8601 format.</span></span>'
+    syntax:
+      content: 'retentionDuration: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription.retentionPolicyType'
+    name: retentionPolicyType
+    fullName: retentionPolicyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="590f2-106">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="590f2-106">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'retentionPolicyType: "Basic"'
+      return:
+        type:
+          - '"Basic"'
+    package: '@azure/servicefabric'

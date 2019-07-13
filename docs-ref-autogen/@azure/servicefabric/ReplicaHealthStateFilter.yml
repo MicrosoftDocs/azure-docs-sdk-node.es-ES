@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter'
+    name: ReplicaHealthStateFilter
+    fullName: ReplicaHealthStateFilter
+    children:
+      - '@azure/servicefabric.ReplicaHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="29c18-101">Define los criterios de coincidencia para determinar si una réplica se debe incluir como elemento secundario de una partición en los fragmentos de mantenimiento del clúster.</span><span class="sxs-lookup"><span data-stu-id="29c18-101">Defines matching criteria to determine whether a replica should be included as a child of a partition in the cluster health chunk.</span></span>
+      <span data-ttu-id="29c18-102">Las réplicas se devuelven solo si las entidades primarias coincide con un filtro especificado en la descripción de la consulta de la salud fragmento clúster.</span><span class="sxs-lookup"><span data-stu-id="29c18-102">The replicas are only returned if the parent entities match a filter specified in the cluster health chunk query description.</span></span> <span data-ttu-id="29c18-103">La partición primaria, el servicio y la aplicación deben incluirse en los fragmentos de mantenimiento del clúster.</span><span class="sxs-lookup"><span data-stu-id="29c18-103">The parent partition, service and application must be included in the cluster health chunk.</span></span>
+      <span data-ttu-id="29c18-104">Un filtro puede hacer coincidir cero, una o varias réplicas, dependiendo de sus propiedades.</span><span class="sxs-lookup"><span data-stu-id="29c18-104">One filter can match zero, one or multiple replicas, depending on its properties.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="29c18-105">El filtro para el estado de mantenimiento de las réplicas.</span><span class="sxs-lookup"><span data-stu-id="29c18-105">The filter for the health state of the replicas.</span></span> <span data-ttu-id="29c18-106">Permite la selección de réplicas si coinciden con los Estados de mantenimiento deseada.</span><span class="sxs-lookup"><span data-stu-id="29c18-106">It allows selecting replicas if they match the desired health states.</span></span>
+      <span data-ttu-id="29c18-107">Los valores posibles son el valor entero de uno de los siguientes estados de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="29c18-107">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="29c18-108">Se devuelven únicamente las réplicas que coinciden con el filtro.</span><span class="sxs-lookup"><span data-stu-id="29c18-108">Only replicas that match the filter are returned.</span></span> <span data-ttu-id="29c18-109">Todas las réplicas se utilizan para evaluar el estado de mantenimiento agregado de partición primaria.</span><span class="sxs-lookup"><span data-stu-id="29c18-109">All replicas are used to evaluate the parent partition aggregated health state.</span></span>
+      <span data-ttu-id="29c18-110">Si no se especifica, valor predeterminado es None, a menos que se especifica el identificador de réplica.</span><span class="sxs-lookup"><span data-stu-id="29c18-110">If not specified, default value is None, unless the replica ID is specified.</span></span> <span data-ttu-id="29c18-111">Si el filtro tiene valor predeterminado y se especifica el Id. de réplica, se devuelve la réplica coincidente.</span><span class="sxs-lookup"><span data-stu-id="29c18-111">If the filter has default value and replica ID is specified, the matching replica is returned.</span></span>
+      <span data-ttu-id="29c18-112">Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.</span><span class="sxs-lookup"><span data-stu-id="29c18-112">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="29c18-113">Por ejemplo, si el valor proporcionado es 6, detecta las réplicas con el valor de HealthState de OK (2) y Warning (4).</span><span class="sxs-lookup"><span data-stu-id="29c18-113">For example, if the provided value is 6, it matches replicas with HealthState value of OK (2) and Warning (4).</span></span>
+      - <span data-ttu-id="29c18-114">Default: valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="29c18-114">Default - Default value.</span></span> <span data-ttu-id="29c18-115">Coincide con cualquier HealthState.</span><span class="sxs-lookup"><span data-stu-id="29c18-115">Matches any HealthState.</span></span> <span data-ttu-id="29c18-116">El valor predeterminado es cero.</span><span class="sxs-lookup"><span data-stu-id="29c18-116">The value is zero.</span></span>
+      - <span data-ttu-id="29c18-117">None: filtro que no coincide con ningún valor de HealthState.</span><span class="sxs-lookup"><span data-stu-id="29c18-117">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="29c18-118">Se utiliza para no devolver ningún resultado en una determinada colección de estados.</span><span class="sxs-lookup"><span data-stu-id="29c18-118">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="29c18-119">El valor es 1.</span><span class="sxs-lookup"><span data-stu-id="29c18-119">The value is 1.</span></span>
+      - <span data-ttu-id="29c18-120">OK: filtro que asocia la entrada con el valor de HealthState de Ok.</span><span class="sxs-lookup"><span data-stu-id="29c18-120">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="29c18-121">El valor es 2.</span><span class="sxs-lookup"><span data-stu-id="29c18-121">The value is 2.</span></span>
+      - <span data-ttu-id="29c18-122">Warning: filtro que asocia la entrada con HealthState el valor de advertencia.</span><span class="sxs-lookup"><span data-stu-id="29c18-122">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="29c18-123">El valor es 4.</span><span class="sxs-lookup"><span data-stu-id="29c18-123">The value is 4.</span></span>
+      - <span data-ttu-id="29c18-124">Error: filtro que asocia la entrada con el valor de HealthState de Error.</span><span class="sxs-lookup"><span data-stu-id="29c18-124">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="29c18-125">El valor es 8.</span><span class="sxs-lookup"><span data-stu-id="29c18-125">The value is 8.</span></span>
+      - <span data-ttu-id="29c18-126">All: filtro que asocia la entrada con cualquier valor de HealthState.</span><span class="sxs-lookup"><span data-stu-id="29c18-126">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="29c18-127">El valor es 65535.</span><span class="sxs-lookup"><span data-stu-id="29c18-127">The value is 65535.</span></span> <span data-ttu-id="29c18-128">Valor predeterminado: 0.</span><span class="sxs-lookup"><span data-stu-id="29c18-128">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter'
+    name: replicaOrInstanceIdFilter
+    fullName: replicaOrInstanceIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="29c18-129">Id. de la réplica de servicio con estado o la instancia de servicio sin estado que coincide con el filtro.</span><span class="sxs-lookup"><span data-stu-id="29c18-129">Id of the stateful service replica or stateless service instance that matches the filter.</span></span> <span data-ttu-id="29c18-130">El filtro se aplica solo a la réplica especificada, si existe.</span><span class="sxs-lookup"><span data-stu-id="29c18-130">The filter is applied only to the specified replica, if it exists.</span></span>
+      <span data-ttu-id="29c18-131">Si la réplica no existe, no se devuelve ninguna réplica en los fragmentos de mantenimiento del clúster según este filtro.</span><span class="sxs-lookup"><span data-stu-id="29c18-131">If the replica doesn't exist, no replica is returned in the cluster health chunk based on this filter.</span></span>
+      <span data-ttu-id="29c18-132">Si la réplica no existe, se incluye en los fragmentos de mantenimiento del clúster Si respeta las propiedades del filtro.</span><span class="sxs-lookup"><span data-stu-id="29c18-132">If the replica exists, it is included in the cluster health chunk if it respects the other filter properties.</span></span>
+      <span data-ttu-id="29c18-133">Si no se especifica, se toma en consideración todas las réplicas que coinciden con los filtros primario (si existe) y se compara con los demás miembros de filtro, como filtro de estado de mantenimiento.</span><span class="sxs-lookup"><span data-stu-id="29c18-133">If not specified, all replicas that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
