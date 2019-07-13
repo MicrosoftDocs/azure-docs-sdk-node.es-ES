@@ -1,0 +1,209 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription'
+    name: ApplicationUpgradeDescription
+    fullName: ApplicationUpgradeDescription
+    children:
+      - '@azure/servicefabric.ApplicationUpgradeDescription.applicationHealthPolicy'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.forceRestart'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.monitoringPolicy'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.name'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.parameters'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.rollingUpgradeMode'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.sortOrder'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.targetApplicationTypeVersion'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.upgradeKind'
+      - '@azure/servicefabric.ApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Describe los parámetros de actualización de la aplicación. Tenga en cuenta que la descripción de la actualización reemplaza la descripción existente. Esto significa que, si no se especifican los parámetros, los que ya existen en la aplicación se sobrescribirán con la lista de parámetros vacía. Esto podría dar lugar a que la aplicación use el valor predeterminado de los parámetros del manifiesto de aplicación. Si no desea cambiar los valores de parámetro existentes, obtenga primero mediante la consulta GetApplicationInfo los parámetros de aplicación y, a continuación, proporcionar dichos valores como parámetros en esta ApplicationUpgradeDescription.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.applicationHealthPolicy'
+    name: applicationHealthPolicy
+    fullName: applicationHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Define una directiva de mantenimiento que se utilizan para evaluar el estado de una aplicación o uno de sus entidades de elementos secundarios.
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.forceRestart'
+    name: forceRestart
+    fullName: forceRestart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si es true, a continuación, se fuerza reiniciando los procesos durante la actualización incluso si no ha cambiado la versión del código (la configuración de actualización únicamente los cambios o los datos).'
+    optional: true
+    syntax:
+      content: 'forceRestart?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.monitoringPolicy'
+    name: monitoringPolicy
+    fullName: monitoringPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Describe los parámetros para la supervisión de una actualización en modo supervisado.
+    optional: true
+    syntax:
+      content: 'monitoringPolicy?: MonitoringPolicyDescription'
+      return:
+        type:
+          - '@azure/servicefabric.MonitoringPolicyDescription'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El nombre de la aplicación de destino, incluido el "fabric:'' "fabric:"'
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.parameters'
+    name: parameters
+    fullName: parameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de parámetros con valores invalidados desde sus valores predeterminados especificados en el manifiesto de aplicación de la aplicación.
+    optional: true
+    syntax:
+      content: 'parameters?: ApplicationParameter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationParameter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.rollingUpgradeMode'
+    name: rollingUpgradeMode
+    fullName: rollingUpgradeMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El modo usado para supervisar el mantenimiento durante una actualización gradual. Los valores son Monitored, UnmonitoredAuto y UnmonitoredManual. Los valores posibles son: ''Invalid'', ''UnmonitoredAuto'', ''UnmonitoredManual'', ''Supervisado''. Valor predeterminado: ''UnmonitoredAuto''.'
+    optional: true
+    syntax:
+      content: 'rollingUpgradeMode?: UpgradeMode'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.sortOrder'
+    name: sortOrder
+    fullName: sortOrder
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Define el orden en el que se realiza una actualización a través del clúster. Los valores posibles son: ''Invalid'', ''Default'', ''Numeric'', ''Lexicográfica'', ''ReverseNumeric'', ''ReverseLexicographical''. Valor predeterminado: ''Default''.'
+    optional: true
+    syntax:
+      content: 'sortOrder?: UpgradeSortOrder'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeSortOrder'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.targetApplicationTypeVersion'
+    name: targetApplicationTypeVersion
+    fullName: targetApplicationTypeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La versión del tipo de aplicación de destino (que se encuentra en el manifiesto de aplicación) para la actualización de la aplicación.
+    syntax:
+      content: 'targetApplicationTypeVersion: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.upgradeKind'
+    name: upgradeKind
+    fullName: upgradeKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El tipo de actualización fuera de los siguientes valores posibles. Los valores posibles son: ''Invalid'', ''Gradual''. Valor predeterminado: ''Gradual''.'
+    syntax:
+      content: 'upgradeKind: UpgradeKind'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeKind'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds'
+    name: upgradeReplicaSetCheckTimeoutInSeconds
+    fullName: upgradeReplicaSetCheckTimeoutInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El período de tiempo máximo para bloquear el procesamiento de un dominio de actualización y evitar la pérdida de disponibilidad cuando hay problemas inesperados. Cuando este tiempo de espera expire, el procesamiento del dominio de actualización se llevará a cabo independientemente de los problemas de pérdida de disponibilidad. El tiempo de espera se restablece al principio de cada dominio de actualización. Los valores válidos oscilan entre 0 y 42949672925, ambos inclusive.
+      (entero de 32 bits sin signo).
+    optional: true
+    syntax:
+      content: 'upgradeReplicaSetCheckTimeoutInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy'
+    name: ApplicationHealthPolicy
+    spec.typeScript:
+      - name: ApplicationHealthPolicy
+        fullName: ApplicationHealthPolicy
+        uid: '@azure/servicefabric.ApplicationHealthPolicy'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription'
+    name: MonitoringPolicyDescription
+    spec.typeScript:
+      - name: MonitoringPolicyDescription
+        fullName: MonitoringPolicyDescription
+        uid: '@azure/servicefabric.MonitoringPolicyDescription'
+  - uid: '@azure/servicefabric.ApplicationParameter[]'
+    name: 'ApplicationParameter[]'
+    spec.typeScript:
+      - name: ApplicationParameter
+        fullName: ApplicationParameter
+        uid: '@azure/servicefabric.ApplicationParameter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/servicefabric.UpgradeMode'
+  - uid: '@azure/servicefabric.UpgradeSortOrder'
+    name: UpgradeSortOrder
+    spec.typeScript:
+      - name: UpgradeSortOrder
+        fullName: UpgradeSortOrder
+        uid: '@azure/servicefabric.UpgradeSortOrder'
+  - uid: '@azure/servicefabric.UpgradeKind'
+    name: UpgradeKind
+    spec.typeScript:
+      - name: UpgradeKind
+        fullName: UpgradeKind
+        uid: '@azure/servicefabric.UpgradeKind'

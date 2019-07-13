@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parámetros opcionales.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -40,7 +40,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Describe las directivas de mantenimiento del clúster y la aplicación usadas para evaluar el estado del clúster y los filtros para seleccionar las entidades de clúster que va a devolver.
+      Si la directiva de mantenimiento del clúster está presente, sirve para evaluar los eventos de clúster y los nodos del clúster. Si no está presente, los usos de la evaluación de estado definido por la directiva de mantenimiento de clúster en el manifiesto de clúster o la directiva de mantenimiento del clúster de forma predeterminada.
+      De forma predeterminada, cada aplicación se evalúa mediante la directiva de mantenimiento de su aplicación específica, definido en el manifiesto de aplicación o la directiva de mantenimiento de forma predeterminada, si no hay ninguna directiva se define en el manifiesto.
+      Si se especifica la asignación de directiva de mantenimiento de aplicación y tiene una entrada para una aplicación, la directiva de mantenimiento de la aplicación especificada se utiliza para evaluar el estado de la aplicación.
+      Los usuarios pueden especificar filtros muy flexibles para seleccionar las entidades de clúster que desea incluir en la respuesta. La selección puede ser realiza basándose en el estado de mantenimiento de entidades y basándose en la jerarquía.
+      La consulta puede devolver a varios niveles secundarios de las entidades según los filtros especificados. Por ejemplo, puede devolver una aplicación con el nombre especificado y para esta aplicación, devolver sólo los servicios que se encuentran en Error o advertencia y todas las particiones y réplicas en uno de estos servicios.
     optional: true
     syntax:
       content: 'clusterHealthChunkQueryDescription?: ClusterHealthChunkQueryDescription'
@@ -115,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'El tiempo de espera del servidor para realizar la operación en segundos. Este tiempo de espera especifica la duración de tiempo que el cliente está dispuesto a esperar para que se complete la operación solicitada. El valor predeterminado para este parámetro es de 60 segundos. Valor predeterminado: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState'
+    name: StatefulServiceReplicaHealthState
+    fullName: StatefulServiceReplicaHealthState
+    children:
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.aggregatedHealthState'
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.partitionId'
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.replicaId'
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa el estado de mantenimiento de la réplica de servicio con estado, que contiene el identificador de réplica y el estado de mantenimiento agregado.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de mantenimiento de una entidad de Service Fabric como clúster, nodo, aplicación, servicio, partición, réplica etcetera. Los valores posibles son: ''Invalid'', ''Aceptar'', ''Advertencia'', ''Error'', ''Unknown''.'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El identificador de la partición a la que pertenece esta réplica.
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Id. de una réplica de servicio con estado. ReplicaId sirve para identificar de forma exclusiva una réplica de una partición de Service fabric. Es único dentro de una partición y no cambia durante la vigencia de la réplica. Si se quita una réplica y otra réplica se crea en el mismo nodo de la misma partición, obtendrá un valor diferente para el id. A veces, el identificador de una instancia de servicio sin estado también se conoce como un identificador de réplica.'
+    optional: true
+    syntax:
+      content: 'replicaId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceInfo'
+    name: ServiceInfo
+    fullName: ServiceInfo
+    children:
+      - '@azure/servicefabric.ServiceInfo.healthState'
+      - '@azure/servicefabric.ServiceInfo.id'
+      - '@azure/servicefabric.ServiceInfo.isServiceGroup'
+      - '@azure/servicefabric.ServiceInfo.manifestVersion'
+      - '@azure/servicefabric.ServiceInfo.name'
+      - '@azure/servicefabric.ServiceInfo.serviceKind'
+      - '@azure/servicefabric.ServiceInfo.serviceStatus'
+      - '@azure/servicefabric.ServiceInfo.typeName'
+    langs:
+      - typeScript
+    type: interface
+    summary: Información acerca de un servicio de Service Fabric.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de mantenimiento de una entidad de Service Fabric como clúster, nodo, aplicación, servicio, partición, réplica etcetera. Los valores posibles son: ''Invalid'', ''Aceptar'', ''Advertencia'', ''Error'', ''Unknown''.'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La identidad del servicio. Este identificador es una representación codificada del nombre del servicio. Esto se utiliza en las API de REST para identificar el recurso del servicio.
+      A partir de la versión 6.0, los nombres jerárquicos se delimitan con el "\~" caracteres. Por ejemplo, si el nombre del servicio es "fabric: / myapp/app1/svc1", la identidad del servicio sería "myapp ~ app1\~svc1" en 6.0 + y "myapp/app1/svc1" en versiones anteriores.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceInfo.isServiceGroup'
+    name: isServiceGroup
+    fullName: isServiceGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Si el servicio está en un grupo de servicio.
+    optional: true
+    syntax:
+      content: 'isServiceGroup?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceInfo.manifestVersion'
+    name: manifestVersion
+    fullName: manifestVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La versión del manifiesto de servicio.
+    optional: true
+    syntax:
+      content: 'manifestVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El nombre completo del servicio con "fabric:'' "fabric:"'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: "ServiceInfo"'
+      return:
+        type:
+          - '"ServiceInfo"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceInfo.serviceStatus'
+    name: serviceStatus
+    fullName: serviceStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de la aplicación. Los valores posibles son: ''Unknown'', ''Active'', ''Actualizar'', ''eliminar'', ''Crear'', ''Error'''
+    optional: true
+    syntax:
+      content: 'serviceStatus?: ServiceStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre del tipo de servicio como se especifica en el manifiesto de servicio.
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ServiceStatus'
+    name: ServiceStatus
+    spec.typeScript:
+      - name: ServiceStatus
+        fullName: ServiceStatus
+        uid: '@azure/servicefabric.ServiceStatus'

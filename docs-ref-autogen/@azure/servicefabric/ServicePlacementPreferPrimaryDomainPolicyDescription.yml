@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription'
+    name: ServicePlacementPreferPrimaryDomainPolicyDescription
+    fullName: ServicePlacementPreferPrimaryDomainPolicyDescription
+    children:
+      - '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName'
+      - '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Describe la directiva que se usará para la selección de ubicación de un servicio de Service Fabric donde réplicas principales del servicio óptimamente deben colocarse en un dominio determinado.
+      Normalmente se utiliza esta directiva de colocación con dominios de error en escenarios donde el clúster de Service Fabric se distribuye geográficamente con el fin de indicar que la réplica principal de un servicio debe estar en un dominio de error concreto, lo que en distribuidos geográficamente escenarios normalmente se alinea con los límites de configuración regional o centro de datos. Tenga en cuenta que, puesto que esta es una optimización es posible que la réplica principal puede que no terminen ubicado en este dominio debido a errores, los límites de capacidad u otras restricciones.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName'
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre del dominio que debe usar para la ubicación según esta directiva.
+    optional: true
+    syntax:
+      content: 'domainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'type: "PreferPrimaryDomain"'
+      return:
+        type:
+          - '"PreferPrimaryDomain"'
+    package: '@azure/servicefabric'

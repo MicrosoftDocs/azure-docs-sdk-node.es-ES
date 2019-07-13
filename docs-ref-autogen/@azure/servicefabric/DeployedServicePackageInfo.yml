@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageInfo'
+    name: DeployedServicePackageInfo
+    fullName: DeployedServicePackageInfo
+    children:
+      - '@azure/servicefabric.DeployedServicePackageInfo.name'
+      - '@azure/servicefabric.DeployedServicePackageInfo.servicePackageActivationId'
+      - '@azure/servicefabric.DeployedServicePackageInfo.status'
+      - '@azure/servicefabric.DeployedServicePackageInfo.version'
+    langs:
+      - typeScript
+    type: interface
+    summary: Información sobre el paquete de servicio implementado en un nodo de Service Fabric.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre del paquete de servicio como se especifica en el manifiesto de servicio.
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageInfo.servicePackageActivationId'
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ActivationId de un paquete de servicio implementado. Si ServicePackageActivationMode especificado en el momento de crear el servicio es ''SharedProcess'' (o si no se especifica, en cuyo caso el valor predeterminado es ''SharedProcess''), el valor de ServicePackageActivationId es siempre una cadena vacía.'
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageInfo.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica el estado de un paquete de servicio o aplicación implementada en un nodo de Service Fabric.
+      Los valores posibles son: 'Invalid', 'Descargar', 'Activar', 'Active', 'Actualizar', 'Desactivar'
+    optional: true
+    syntax:
+      content: 'status?: DeploymentStatus'
+      return:
+        type:
+          - '@azure/servicefabric.DeploymentStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageInfo.version'
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La versión del paquete de servicio especificado en el manifiesto de servicio.
+    optional: true
+    syntax:
+      content: 'version?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeploymentStatus'
+    name: DeploymentStatus
+    spec.typeScript:
+      - name: DeploymentStatus
+        fullName: DeploymentStatus
+        uid: '@azure/servicefabric.DeploymentStatus'

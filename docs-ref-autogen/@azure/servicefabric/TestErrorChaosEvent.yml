@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.TestErrorChaosEvent'
+    name: TestErrorChaosEvent
+    fullName: TestErrorChaosEvent
+    children:
+      - '@azure/servicefabric.TestErrorChaosEvent.kind'
+      - '@azure/servicefabric.TestErrorChaosEvent.reason'
+      - '@azure/servicefabric.TestErrorChaosEvent.timeStampUtc'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Describe un evento de caos que se genera cuando se produce un evento inesperado en el motor de Chaos.
+      Por ejemplo, debido a la instantánea de clúster que se va a incoherente, mientras que se produzca un error de una entidad, Chaos encontró que la entidad se ha habido un error, lo que sería un evento inesperado.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TestErrorChaosEvent.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: "TestError"'
+      return:
+        type:
+          - '"TestError"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TestErrorChaosEvent.reason'
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Describe por qué se ha generado TestErrorChaosEvent. Por ejemplo, Chaos trata de una partición de error, pero encuentra que la partición ya no es tolerante a errores, a continuación, se genera un TestErrorEvent con el motivo que indique que la partición no es tolerante a errores.'
+    optional: true
+    syntax:
+      content: 'reason?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TestErrorChaosEvent.timeStampUtc'
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La marca de tiempo de UTC cuando se generó este evento de Chaos.
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'

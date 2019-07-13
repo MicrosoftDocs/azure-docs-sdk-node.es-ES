@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+    name: ServiceTypeHealthPolicy
+    fullName: ServiceTypeHealthPolicy
+    children:
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    langs:
+      - typeScript
+    type: interface
+    summary: Representa la directiva de mantenimiento que se usa para evaluar el mantenimiento de los servicios que pertenecen a un tipo de servicio.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+    name: maxPercentUnhealthyPartitionsPerService
+    fullName: maxPercentUnhealthyPartitionsPerService
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      El porcentaje máximo permitido de particiones en mal estado por cada servicio. Los valores permitidos son los valores de Byte de cero a 100 el porcentaje máximo tolerado de representa el porcentaje de particiones que pueden ser incorrectas antes que el servicio se considere erróneo.
+      Si se respeta el porcentaje, pero hay al menos una partición en mal estado, el estado se evalúa como Warning.
+      El porcentaje se calcula dividiendo el número de particiones en mal estado sobre el número total de particiones en el servicio.
+      El cálculo se redondea hacia arriba para tolerar un error en un número reducido de particiones. El porcentaje predeterminado es cero. Valor predeterminado: 0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyPartitionsPerService?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+    name: maxPercentUnhealthyReplicasPerPartition
+    fullName: maxPercentUnhealthyReplicasPerPartition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      El porcentaje máximo permitido de réplicas en mal estado por partición. Los valores permitidos son valores de Byte de cero a 100.
+      El porcentaje representa el porcentaje máximo tolerado de réplicas que pueden ser incorrectas antes de la partición se considere erróneo.
+      Si se respeta el porcentaje, pero hay al menos una réplica en mal estado, el estado se evalúa como Warning.
+      El porcentaje se calcula dividiendo el número de réplicas en mal estado sobre el número total de réplicas en la partición.
+      El cálculo se redondea hacia arriba para tolerar un error en un número reducido de las réplicas. El porcentaje predeterminado es cero. Valor predeterminado: 0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyReplicasPerPartition?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    name: maxPercentUnhealthyServices
+    fullName: maxPercentUnhealthyServices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      El porcentaje máximo permitido de servicios en mal estado. Los valores permitidos son valores de Byte de cero a 100.
+      El porcentaje representa el porcentaje máximo tolerado de servicios que pueden ser incorrectas antes de que la aplicación se considere erróneo.
+      Si se respeta el porcentaje, pero hay al menos un servicio en mal estado, el estado se evalúa como Warning.
+      Esto se calcula dividiendo el número de servicios en mal estado del tipo de servicio específica sobre el número total de servicios del tipo de servicio específico.
+      El cálculo se redondea hacia arriba para tolerar un error en un número reducido de servicios. El porcentaje predeterminado es cero. Valor predeterminado: 0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyServices?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

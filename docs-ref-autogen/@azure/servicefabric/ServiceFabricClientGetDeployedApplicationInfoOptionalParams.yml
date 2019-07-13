@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parámetros opcionales.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Incluir el estado de mantenimiento de una entidad.
+      Si este parámetro es falso o no se especifica, el estado de mantenimiento devuelto es "Unknown".
+      Cuando se establece en true, la consulta va en paralelo al nodo y al servicio del sistema de mantenimiento antes de que los resultados se combinen.
+      Como resultado, la consulta es más costosa y puede tardar más tiempo. Valor predeterminado: false.
     optional: true
     syntax:
       content: 'includeHealthState?: undefined | false | true'
@@ -115,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'El tiempo de espera del servidor para realizar la operación en segundos. Este tiempo de espera especifica la duración de tiempo que el cliente está dispuesto a esperar para que se complete la operación solicitada. El valor predeterminado para este parámetro es de 60 segundos. Valor predeterminado: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

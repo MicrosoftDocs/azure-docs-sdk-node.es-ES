@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo'
+    name: DeployedStatefulServiceReplicaDetailInfo
+    fullName: DeployedStatefulServiceReplicaDetailInfo
+    children:
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperation'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.partitionId'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.reportedLoad'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceKind'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceName'
+      - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Información acerca de una réplica con estado que se ejecuta en un paquete de código. Nota DeployedServiceReplicaQueryResult contendrá datos duplicados, como ServiceKind, ServiceName, PartitionId y replicaId.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation'
+    name: currentReplicatorOperation
+    fullName: currentReplicatorOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica la operación que se está ejecutando actualmente el replicador. Los valores posibles son: ''Invalid'', ''None'', ''Open'', ''ChangeRole'', ''UpdateEpoch'', ''Close'', ''Abort'', ''OnDataLoss'', ''WaitForCatchup'', ''Build'''
+    optional: true
+    syntax:
+      content: 'currentReplicatorOperation?: ReplicatorOperationName'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicatorOperationName'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperation'
+    name: currentServiceOperation
+    fullName: currentServiceOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica la operación de ciclo de vida activo actual en una instancia de servicio sin estado o réplicas del servicio con estado. Los valores posibles son: ''Unknown'', ''None'', ''Open'', ''ChangeRole'', ''Cierre'', ''Anular'''
+    optional: true
+    syntax:
+      content: 'currentServiceOperation?: ServiceOperationName'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceOperationName'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc'
+    name: currentServiceOperationStartTimeUtc
+    fullName: currentServiceOperationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La hora de inicio de la operación de servicio actual en formato UTC.
+    optional: true
+    syntax:
+      content: 'currentServiceOperationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult'
+    name: deployedServiceReplicaQueryResult
+    fullName: deployedServiceReplicaQueryResult
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Información acerca de una réplica de servicio con estado implementada en un nodo.
+    optional: true
+    syntax:
+      content: 'deployedServiceReplicaQueryResult?: DeployedStatefulServiceReplicaInfo'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedStatefulServiceReplicaInfo'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un identificador interno usado por Service Fabric para identificar de forma única una partición. Esto es un GUID generado aleatoriamente cuando se creó el servicio. Id. de partición es único y no cambia durante la vigencia del servicio. Si el mismo servicio se ha eliminado y vuelto a crear los identificadores de sus particiones sería diferente.
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus'
+    name: readStatus
+    fullName: readStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica el estado de acceso de la partición. Los valores posibles son: ''Invalid'', ''concede'', ''ReconfigurationPending'', ''NotPrimary'', ''NoWriteQuorum'''
+    optional: true
+    syntax:
+      content: 'readStatus?: PartitionAccessStatus'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionAccessStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Id. de una réplica de servicio con estado. ReplicaId sirve para identificar de forma exclusiva una réplica de una partición de Service fabric. Es único dentro de una partición y no cambia durante la vigencia de la réplica. Si se quita una réplica y otra réplica se crea en el mismo nodo de la misma partición, obtendrá un valor diferente para el id. A veces, el identificador de una instancia de servicio sin estado también se conoce como un identificador de réplica.'
+    optional: true
+    syntax:
+      content: 'replicaId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus'
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Almacén de clave-valor relacionados con la información de la réplica.
+    optional: true
+    syntax:
+      content: 'replicaStatus?: KeyValueStoreReplicaStatus'
+      return:
+        type:
+          - '@azure/servicefabric.KeyValueStoreReplicaStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus'
+    name: replicatorStatus
+    fullName: replicatorStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Representa una clase base para el estado del replicador principal o secundaria.
+      Contiene información sobre el Replicador de service fabric, como el uso de la cola de replicación o copiar, última marca de tiempo de confirmación recibida, etcetera.
+    optional: true
+    syntax:
+      content: 'replicatorStatus?: ReplicatorStatusUnion'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicatorStatusUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.reportedLoad'
+    name: reportedLoad
+    fullName: reportedLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de la carga notificada por réplica.
+    optional: true
+    syntax:
+      content: 'reportedLoad?: LoadMetricReportInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReportInfo[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nombre jerárquico completo del servicio en formato URI partir `fabric:`.'
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus'
+    name: writeStatus
+    fullName: writeStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica el estado de acceso de la partición. Los valores posibles son: ''Invalid'', ''concede'', ''ReconfigurationPending'', ''NotPrimary'', ''NoWriteQuorum'''
+    optional: true
+    syntax:
+      content: 'writeStatus?: PartitionAccessStatus'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionAccessStatus'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicatorOperationName'
+    name: ReplicatorOperationName
+    spec.typeScript:
+      - name: ReplicatorOperationName
+        fullName: ReplicatorOperationName
+        uid: '@azure/servicefabric.ReplicatorOperationName'
+  - uid: '@azure/servicefabric.ServiceOperationName'
+    name: ServiceOperationName
+    spec.typeScript:
+      - name: ServiceOperationName
+        fullName: ServiceOperationName
+        uid: '@azure/servicefabric.ServiceOperationName'
+  - uid: '@azure/servicefabric.DeployedStatefulServiceReplicaInfo'
+    name: DeployedStatefulServiceReplicaInfo
+    spec.typeScript:
+      - name: DeployedStatefulServiceReplicaInfo
+        fullName: DeployedStatefulServiceReplicaInfo
+        uid: '@azure/servicefabric.DeployedStatefulServiceReplicaInfo'
+  - uid: '@azure/servicefabric.PartitionAccessStatus'
+    name: PartitionAccessStatus
+    spec.typeScript:
+      - name: PartitionAccessStatus
+        fullName: PartitionAccessStatus
+        uid: '@azure/servicefabric.PartitionAccessStatus'
+  - uid: '@azure/servicefabric.KeyValueStoreReplicaStatus'
+    name: KeyValueStoreReplicaStatus
+    spec.typeScript:
+      - name: KeyValueStoreReplicaStatus
+        fullName: KeyValueStoreReplicaStatus
+        uid: '@azure/servicefabric.KeyValueStoreReplicaStatus'
+  - uid: '@azure/servicefabric.ReplicatorStatusUnion'
+    name: ReplicatorStatusUnion
+    spec.typeScript:
+      - name: ReplicatorStatusUnion
+        fullName: ReplicatorStatusUnion
+        uid: '@azure/servicefabric.ReplicatorStatusUnion'
+  - uid: '@azure/servicefabric.LoadMetricReportInfo[]'
+    name: 'LoadMetricReportInfo[]'
+    spec.typeScript:
+      - name: LoadMetricReportInfo
+        fullName: LoadMetricReportInfo
+        uid: '@azure/servicefabric.LoadMetricReportInfo'
+      - name: '[]'
+        fullName: '[]'

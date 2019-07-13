@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedReplicaInfoList'
+    name: PagedReplicaInfoList
+    fullName: PagedReplicaInfoList
+    children:
+      - '@azure/servicefabric.PagedReplicaInfoList.continuationToken'
+      - '@azure/servicefabric.PagedReplicaInfoList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: La lista de réplicas del clúster para una partición determinada. La lista se pagina cuando todos los resultados no caben en un único mensaje. El siguiente conjunto de resultados puede obtenerse mediante la ejecución de la misma consulta con el token de continuación proporcionado en esta lista.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedReplicaInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El parámetro continuation token se utiliza para obtener el siguiente conjunto de resultados. El token de continuación se incluye en la respuesta de la API cuando los resultados del sistema no caben en una sola respuesta. Cuando este valor se pasa a la siguiente llamada de la API, la API devuelve el siguiente conjunto de resultados.
+      Si no hay ningún resultado más, el token de continuación no se incluye en la respuesta.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedReplicaInfoList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de información de réplica.
+    optional: true
+    syntax:
+      content: 'items?: ReplicaInfoUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaInfoUnion[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicaInfoUnion[]'
+    name: 'ReplicaInfoUnion[]'
+    spec.typeScript:
+      - name: ReplicaInfoUnion
+        fullName: ReplicaInfoUnion
+        uid: '@azure/servicefabric.ReplicaInfoUnion'
+      - name: '[]'
+        fullName: '[]'

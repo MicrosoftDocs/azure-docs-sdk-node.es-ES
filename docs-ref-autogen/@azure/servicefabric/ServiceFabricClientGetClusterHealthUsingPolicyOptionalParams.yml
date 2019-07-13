@@ -19,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parámetros opcionales.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -45,7 +45,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Permite el filtrado de los objetos de estado de mantenimiento de aplicaciones devueltos en el resultado de la consulta de mantenimiento del clúster en función de su estado de mantenimiento.
+      Los valores posibles para este parámetro incluyen un valor entero obtenido de los miembros u operaciones bit a bit en miembros de la enumeración HealthStateFilter. Solo se devuelven las aplicaciones que coinciden con el filtro.
+      Todas las aplicaciones se usan para evaluar el estado de mantenimiento agregado. Si no se especifica, se devuelven todas las entradas.
+      Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.
+      Por ejemplo, si el valor proporcionado es 6, se devuelve el estado de mantenimiento de las aplicaciones con el valor HealthState de Ok (2) y Warning (4).
+      - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+      - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+      - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+      - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+      - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+      - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535. Valor predeterminado: 0.
     optional: true
     syntax:
       content: 'applicationsHealthStateFilter?: undefined | number'
@@ -60,7 +71,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Describe las directivas de mantenimiento que se utilizan para evaluar el estado del clúster.
+      Si no está presente, los usos de la evaluación de estado definido por la directiva de mantenimiento de clúster en el manifiesto de clúster o la directiva de mantenimiento del clúster de forma predeterminada.
+      De forma predeterminada, cada aplicación se evalúa mediante la directiva de mantenimiento de su aplicación específica, definido en el manifiesto de aplicación o la directiva de mantenimiento de forma predeterminada, si no hay ninguna directiva se define en el manifiesto.
+      Si se especifica la asignación de directiva de mantenimiento de aplicación y tiene una entrada para una aplicación, la directiva de mantenimiento de la aplicación especificada se utiliza para evaluar el estado de la aplicación.
     optional: true
     syntax:
       content: 'clusterHealthPolicies?: ClusterHealthPolicies'
@@ -90,7 +105,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Permite filtrar la colección de objetos HealthEvent devueltos según el estado de mantenimiento.
+      Los valores posibles para este parámetro incluyen el valor entero de uno de los siguientes estados de mantenimiento.
+      Se devuelven únicamente los eventos que coinciden con el filtro. Todos los eventos se utilizan para evaluar el estado de mantenimiento agregado.
+      Si no se especifica, se devuelven todas las entradas. Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit "OR".
+      Por ejemplo, si el valor proporcionado es 6, se devuelven todos los eventos con el valor HealthState de Ok (2) y Warning (4).
+      - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+      - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+      - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+      - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+      - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+      - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535. Valor predeterminado: 0.
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -105,7 +131,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Indica si las estadísticas de mantenimiento se deben devolver como parte del resultado de la consulta. El valor predeterminado es false.
+      Las estadísticas muestran el número de entidades secundarias en estado de mantenimiento Ok, Warning y Error.
+      Valor predeterminado: false.
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -120,7 +149,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Indica si las estadísticas de estado deben incluir el fabric: / estadísticas de estado de aplicación del sistema. El valor predeterminado es false.
+      Si IncludeSystemApplicationHealthStatistics se establece en true, las estadísticas de estado incluyen las entidades que pertenecen a la aplicación fabric:/System.
+      En caso contrario, el resultado de la consulta incluye las estadísticas de estado solo para las aplicaciones de usuario.
+      Las estadísticas de mantenimiento deben incluirse en el resultado de la consulta para que se aplique este parámetro.
+      Valor predeterminado: false.
     optional: true
     syntax:
       content: 'includeSystemApplicationHealthStatistics?: undefined | false | true'
@@ -135,7 +169,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Permite filtrar los objetos de estado de mantenimiento de nodos devueltos en el resultado de la consulta de mantenimiento del clúster en función de su estado de mantenimiento. Los valores posibles para este parámetro incluyen el valor entero de uno de los siguientes estados de mantenimiento. Se devuelven únicamente los nodos que coinciden con el filtro. Todos los nodos se utilizan para evaluar el estado de mantenimiento agregado.
+      Si no se especifica, se devuelven todas las entradas.
+      Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.
+      Por ejemplo, si el valor proporcionado es 6, se devuelve el estado de mantenimiento de los nodos con el valor HealthState de Ok (2) y Warning (4).
+      - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+      - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+      - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+      - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+      - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+      - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535. Valor predeterminado: 0.
     optional: true
     syntax:
       content: 'nodesHealthStateFilter?: undefined | number'
@@ -195,7 +239,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'El tiempo de espera del servidor para realizar la operación en segundos. Este tiempo de espera especifica la duración de tiempo que el cliente está dispuesto a esperar para que se complete la operación solicitada. El valor predeterminado para este parámetro es de 60 segundos. Valor predeterminado: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

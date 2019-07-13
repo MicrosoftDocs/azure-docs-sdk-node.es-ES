@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject'
+    name: ClusterUpgradeHealthPolicyObject
+    fullName: ClusterUpgradeHealthPolicyObject
+    children:
+      - '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentDeltaUnhealthyNodes'
+      - '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentUpgradeDomainDeltaUnhealthyNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: Define una directiva de mantenimiento que se utiliza para evaluar el estado del clúster durante una actualización de clúster.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentDeltaUnhealthyNodes'
+    name: maxPercentDeltaUnhealthyNodes
+    fullName: maxPercentDeltaUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El porcentaje máximo permitido de degradación del mantenimiento de los nodos durante las actualizaciones del clúster.
+      El delta se mide entre el estado de los nodos al principio de la actualización y el estado de los nodos en el momento de la evaluación de mantenimiento. La comprobación se realiza después de que finaliza la actualización de cada dominio de actualización para asegurarse de que el estado global del clúster está dentro de los límites permitidos. El valor predeterminado es 10%.
+    optional: true
+    syntax:
+      content: 'maxPercentDeltaUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentUpgradeDomainDeltaUnhealthyNodes'
+    name: maxPercentUpgradeDomainDeltaUnhealthyNodes
+    fullName: maxPercentUpgradeDomainDeltaUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El porcentaje máximo permitido de degradación del mantenimiento de los nodos de dominio de actualización durante las actualizaciones del clúster. El delta se mide entre el estado de los nodos del dominio de actualización al principio de la actualización y el estado de los nodos del dominio de actualización en el momento de la evaluación de mantenimiento. La comprobación se realiza después de que finaliza la actualización de cada dominio de actualización en todos los dominios de actualización completados para asegurarse de que el estado global del clúster está dentro de los límites permitidos. El valor predeterminado es 15%.
+    optional: true
+    syntax:
+      content: 'maxPercentUpgradeDomainDeltaUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

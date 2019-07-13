@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parámetros opcionales.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -87,7 +87,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Tipo de clave para la partición. Este parámetro es obligatorio si el esquema de partición para el servicio es Int64Range o Named. Los valores posibles son los siguientes.
+      - None (1): indica que no se especifica el parámetro PartitionKeyValue. Esto es válido para las particiones con el esquema de partición como Singleton. Este es el valor predeterminado. El valor es 1.
+      - Int64Range (2): indica que el parámetro PartitionKeyValue es una clave de partición int64.
+      Esto es válido para las particiones con el esquema de partición como Int64Range. El valor es 2.
+      - Con el nombre (3): indica que el parámetro PartitionKeyValue es un nombre de la partición. Esto es válido para las particiones con el esquema de partición como Named. El valor es 3.
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +107,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Clave de partición. Es obligatorio si el esquema de partición para el servicio es Int64Range o Named.
+      Esto no es el identificador de partición, sino el valor de clave entero o el nombre del identificador de partición.
+      Por ejemplo, si el servicio usa particiones por rangos de 0 a 10, PartitionKeyValue sería un entero en ese rango. Consulte la descripción del servicio para ver el rango o el nombre.
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: El valor en el campo Versión de la respuesta que se recibió anteriormente. Es obligatorio si el usuario sabe que el resultado que se obtuvo anteriormente está obsoleto.
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -147,7 +155,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'El tiempo de espera del servidor para realizar la operación en segundos. Este tiempo de espera especifica la duración de tiempo que el cliente está dispuesto a esperar para que se complete la operación solicitada. El valor predeterminado para este parámetro es de 60 segundos. Valor predeterminado: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

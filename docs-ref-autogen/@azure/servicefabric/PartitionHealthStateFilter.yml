@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter'
+    name: PartitionHealthStateFilter
+    fullName: PartitionHealthStateFilter
+    children:
+      - '@azure/servicefabric.PartitionHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.PartitionHealthStateFilter.partitionIdFilter'
+      - '@azure/servicefabric.PartitionHealthStateFilter.replicaFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Define los criterios de coincidencia para determinar si se debe incluir como elemento secundario de un servicio en los fragmentos de mantenimiento del clúster en una partición.
+      Solo se devuelven las particiones si las entidades primarias coincide con un filtro especificado en la descripción de la consulta de la salud fragmento clúster. El servicio principal y la aplicación deben incluirse en los fragmentos de mantenimiento del clúster.
+      Un filtro puede hacer coincidir cero, una o varias particiones, dependiendo de sus propiedades.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      El filtro para el estado de mantenimiento de las particiones. Permite seleccionar las particiones si coinciden con los Estados de mantenimiento deseada.
+      Los valores posibles son el valor entero de uno de los siguientes estados de mantenimiento. Se devuelven únicamente las particiones que coinciden con el filtro. Todas las particiones se utilizan para evaluar el estado de mantenimiento agregado del clúster.
+      Si no se especifica, valor predeterminado es None, a menos que se especifica el Id. de partición. Si el filtro tiene valor predeterminado y se especifica el Id. de partición, se devuelve la partición correspondiente.
+      Los valores de estado se marcan según la enumeración, por lo que el valor puede ser una combinación de estos valores obtenidos mediante el operador bit a bit 'OR'.
+      Por ejemplo, si el valor proporcionado es 6, coincide con las particiones con el valor de HealthState de OK (2) y Warning (4).
+      - Default: valor predeterminado. Coincide con cualquier HealthState. El valor predeterminado es cero.
+      - None: filtro que no coincide con ningún valor de HealthState. Se utiliza para no devolver ningún resultado en una determinada colección de estados. El valor es 1.
+      - OK: filtro que asocia la entrada con el valor de HealthState de Ok. El valor es 2.
+      - Warning: filtro que asocia la entrada con HealthState el valor de advertencia. El valor es 4.
+      - Error: filtro que asocia la entrada con el valor de HealthState de Error. El valor es 8.
+      - All: filtro que asocia la entrada con cualquier valor de HealthState. El valor es 65535. Valor predeterminado: 0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter.partitionIdFilter'
+    name: partitionIdFilter
+    fullName: partitionIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Id. de la partición que coincide con el filtro. El filtro se aplica solo a la partición especificada, si existe.
+      Si no existe la partición, no se devuelve ninguna partición en los fragmentos de mantenimiento del clúster según este filtro.
+      Si no existe la partición, se incluye en los fragmentos de mantenimiento del clúster Si respeta las propiedades del filtro.
+      Si no se especifica, se toma en consideración todas las particiones que coinciden con los filtros primario (si existe) y se compara con los demás miembros de filtro, como filtro de estado de mantenimiento.
+    optional: true
+    syntax:
+      content: 'partitionIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter.replicaFilters'
+    name: replicaFilters
+    fullName: replicaFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Define una lista de filtros que especifican qué réplicas que se incluirán en el estado del clúster devuelto fragmento como elementos secundarios de la partición primaria. Las réplicas se devuelven solo si la partición primaria coincide con un filtro.
+      Si la lista está vacía, no se devuelven réplicas. Todas las réplicas se utilizan para evaluar el estado de mantenimiento de partición agregada primario, independientemente de los filtros de entrada.
+      El filtro de partición puede especificar varios filtros de réplica.
+      Por ejemplo, pueden especificar un filtro para devolver todas las réplicas con el estado de Error y otro para incluir siempre una réplica identificada por su Id. de réplica.
+    optional: true
+    syntax:
+      content: 'replicaFilters?: ReplicaHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter[]'
+    name: 'ReplicaHealthStateFilter[]'
+    spec.typeScript:
+      - name: ReplicaHealthStateFilter
+        fullName: ReplicaHealthStateFilter
+        uid: '@azure/servicefabric.ReplicaHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription'
+    name: ClusterHealthChunkQueryDescription
+    fullName: ClusterHealthChunkQueryDescription
+    children:
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationFilters'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationHealthPolicies'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.clusterHealthPolicy'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.nodeFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'La descripción de consulta de clúster mantenimiento fragmento, que puede especificar las directivas de mantenimiento para evaluar el estado del clúster y muy expresivos filtros para seleccionar las entidades de clúster que desea incluir en la respuesta.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationFilters'
+    name: applicationFilters
+    fullName: applicationFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Define una lista de filtros que especifican qué aplicaciones se incluirán en los fragmentos de mantenimiento del clúster devuelta.
+      Si se especifica ningún filtro, no se devuelve ninguna aplicación. Todas las aplicaciones se utilizan para evaluar el estado de mantenimiento agregado del clúster, independientemente de los filtros de entrada.
+      La consulta de fragmentos de mantenimiento de clúster puede especificar varios filtros de aplicación.
+      Por ejemplo, pueden especificar un filtro para devolver todas las aplicaciones con el estado de Error y otro para incluir siempre las aplicaciones de un tipo de aplicación especificada.
+    optional: true
+    syntax:
+      content: 'applicationFilters?: ApplicationHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationHealthPolicies'
+    name: applicationHealthPolicies
+    fullName: applicationHealthPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Define la asignación de directiva de mantenimiento de aplicación utilizada para evaluar el mantenimiento de una aplicación o uno de sus entidades de elementos secundarios.
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicies?: ApplicationHealthPolicies'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicies'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.clusterHealthPolicy'
+    name: clusterHealthPolicy
+    fullName: clusterHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Define una directiva de mantenimiento que se utilizan para evaluar el estado del clúster o de un nodo de clúster.
+    optional: true
+    syntax:
+      content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.nodeFilters'
+    name: nodeFilters
+    fullName: nodeFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Define una lista de filtros que especifican qué nodos que se incluirán en los fragmentos de mantenimiento del clúster devuelta.
+      Si se especifica ningún filtro, no se devuelve ningún nodo. Todos los nodos se utilizan para evaluar el estado de mantenimiento agregado del clúster, independientemente de los filtros de entrada.
+      La consulta de fragmentos de mantenimiento de clúster puede especificar varios filtros de nodo.
+      Por ejemplo, pueden especificar un filtro para devolver todos los nodos con el estado de Error y otro para incluir siempre un nodo identificado por su NodeName.
+    optional: true
+    syntax:
+      content: 'nodeFilters?: NodeHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.NodeHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter[]'
+    name: 'ApplicationHealthStateFilter[]'
+    spec.typeScript:
+      - name: ApplicationHealthStateFilter
+        fullName: ApplicationHealthStateFilter
+        uid: '@azure/servicefabric.ApplicationHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicies'
+    name: ApplicationHealthPolicies
+    spec.typeScript:
+      - name: ApplicationHealthPolicies
+        fullName: ApplicationHealthPolicies
+        uid: '@azure/servicefabric.ApplicationHealthPolicies'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    spec.typeScript:
+      - name: ClusterHealthPolicy
+        fullName: ClusterHealthPolicy
+        uid: '@azure/servicefabric.ClusterHealthPolicy'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter[]'
+    name: 'NodeHealthStateFilter[]'
+    spec.typeScript:
+      - name: NodeHealthStateFilter
+        fullName: NodeHealthStateFilter
+        uid: '@azure/servicefabric.NodeHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

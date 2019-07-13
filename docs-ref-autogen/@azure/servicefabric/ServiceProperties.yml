@@ -1,0 +1,172 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceProperties'
+    name: ServiceProperties
+    fullName: ServiceProperties
+    children:
+      - '@azure/servicefabric.ServiceProperties.autoScalingPolicies'
+      - '@azure/servicefabric.ServiceProperties.description'
+      - '@azure/servicefabric.ServiceProperties.healthState'
+      - '@azure/servicefabric.ServiceProperties.identityRefs'
+      - '@azure/servicefabric.ServiceProperties.replicaCount'
+      - '@azure/servicefabric.ServiceProperties.status'
+      - '@azure/servicefabric.ServiceProperties.statusDetails'
+      - '@azure/servicefabric.ServiceProperties.unhealthyEvaluation'
+    langs:
+      - typeScript
+    type: interface
+    summary: Describe las propiedades de un recurso de servicio.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceProperties.autoScalingPolicies'
+    name: autoScalingPolicies
+    fullName: autoScalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Directivas de escalado automático
+    optional: true
+    syntax:
+      content: 'autoScalingPolicies?: AutoScalingPolicy[]'
+      return:
+        type:
+          - '@azure/servicefabric.AutoScalingPolicy[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceProperties.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descripción legible de usuario del servicio.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceProperties.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Describe el estado de mantenimiento de un recurso de aplicación. Los valores posibles son: ''Invalid'', ''Aceptar'', ''Advertencia'', ''Error'', ''Desconocido'' **Nota: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceProperties.identityRefs'
+    name: identityRefs
+    fullName: identityRefs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La lista de identidades de servicio.
+    optional: true
+    syntax:
+      content: 'identityRefs?: ServiceIdentity[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceIdentity[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceProperties.replicaCount'
+    name: replicaCount
+    fullName: replicaCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El número de réplicas del servicio que se va a crear. El valor predeterminado es 1 si no se especifica.
+    optional: true
+    syntax:
+      content: 'replicaCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceProperties.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Estado del servicio. Los valores posibles son: ''Unknown'', ''Listo'', ''Actualizar'', '''', ''Deleting'', ''no se pudo crear'' **Nota: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**'
+    optional: true
+    syntax:
+      content: 'status?: ResourceStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ResourceStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceProperties.statusDetails'
+    name: statusDetails
+    fullName: statusDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Proporciona información adicional sobre el estado actual del servicio.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'statusDetails?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceProperties.unhealthyEvaluation'
+    name: unhealthyEvaluation
+    fullName: unhealthyEvaluation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Cuando el estado del servicio no es 'Aceptar', este detalles adicionales de service fabric Administrador de estado para el usuario para saber por qué el servicio está marcado en mal estado.
+      **NOTA: Esta propiedad no se serializarán. Solo se pueden rellenar por el servidor.**
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.AutoScalingPolicy[]'
+    name: 'AutoScalingPolicy[]'
+    spec.typeScript:
+      - name: AutoScalingPolicy
+        fullName: AutoScalingPolicy
+        uid: '@azure/servicefabric.AutoScalingPolicy'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ServiceIdentity[]'
+    name: 'ServiceIdentity[]'
+    spec.typeScript:
+      - name: ServiceIdentity
+        fullName: ServiceIdentity
+        uid: '@azure/servicefabric.ServiceIdentity'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ResourceStatus'
+    name: ResourceStatus
+    spec.typeScript:
+      - name: ResourceStatus
+        fullName: ResourceStatus
+        uid: '@azure/servicefabric.ResourceStatus'

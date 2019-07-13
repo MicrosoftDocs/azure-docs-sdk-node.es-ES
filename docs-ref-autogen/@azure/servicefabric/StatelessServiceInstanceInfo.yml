@@ -1,0 +1,135 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo'
+    name: StatelessServiceInstanceInfo
+    fullName: StatelessServiceInstanceInfo
+    children:
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.address'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.healthState'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.instanceId'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.lastInBuildDurationInSeconds'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.nodeName'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.replicaStatus'
+      - '@azure/servicefabric.StatelessServiceInstanceInfo.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa una instancia de servicio sin estado. Esto incluye información acerca de la identidad, estado, estado, nombre de nodo, el tiempo de actividad y otros detalles acerca de la instancia.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.address'
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La dirección de la réplica está escuchando.
+    optional: true
+    syntax:
+      content: 'address?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de mantenimiento de una entidad de Service Fabric como clúster, nodo, aplicación, servicio, partición, réplica etcetera. Los valores posibles son: ''Invalid'', ''Aceptar'', ''Advertencia'', ''Error'', ''Unknown''.'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.instanceId'
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Identificador de una instancia de servicio sin estado. InstanceId se usa Service fabric para identificar de forma exclusiva una instancia de una partición de un servicio sin estado. Es único dentro de una partición y no cambia durante la vigencia de la instancia. Si la instancia ha conmutado por error en el nodo de iguales o distintos, obtendrá un valor diferente para el identificador de instancia.'
+    optional: true
+    syntax:
+      content: 'instanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.lastInBuildDurationInSeconds'
+    name: lastInBuildDurationInSeconds
+    fullName: lastInBuildDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El último de la duración de la compilación de la réplica en segundos.
+    optional: true
+    syntax:
+      content: 'lastInBuildDurationInSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.nodeName'
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre de un nodo de Service Fabric.
+    optional: true
+    syntax:
+      content: 'nodeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.replicaStatus'
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'El estado de una réplica de un servicio. Los valores posibles son: ''Invalid'', ''InBuild'', ''En espera'', ''listo'', ''Abajo'', ''Quitar'''
+    optional: true
+    syntax:
+      content: 'replicaStatus?: ReplicaStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ReplicaStatus'
+    name: ReplicaStatus
+    spec.typeScript:
+      - name: ReplicaStatus
+        fullName: ReplicaStatus
+        uid: '@azure/servicefabric.ReplicaStatus'

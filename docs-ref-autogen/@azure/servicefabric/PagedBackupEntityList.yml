@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedBackupEntityList'
+    name: PagedBackupEntityList
+    fullName: PagedBackupEntityList
+    children:
+      - '@azure/servicefabric.PagedBackupEntityList.continuationToken'
+      - '@azure/servicefabric.PagedBackupEntityList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: La lista de entidades de copia de seguridad que se copian periódicamente. La lista se pagina cuando todos los resultados no caben en un único mensaje. El siguiente conjunto de resultados puede obtenerse mediante la ejecución de la misma consulta con el token de continuación proporcionado en esta lista.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedBackupEntityList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      El parámetro continuation token se utiliza para obtener el siguiente conjunto de resultados. El token de continuación se incluye en la respuesta de la API cuando los resultados del sistema no caben en una sola respuesta. Cuando este valor se pasa a la siguiente llamada de la API, la API devuelve el siguiente conjunto de resultados.
+      Si no hay ningún resultado más, el token de continuación no se incluye en la respuesta.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedBackupEntityList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de información de entidad de reserva.
+    optional: true
+    syntax:
+      content: 'items?: BackupEntityUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.BackupEntityUnion[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupEntityUnion[]'
+    name: 'BackupEntityUnion[]'
+    spec.typeScript:
+      - name: BackupEntityUnion
+        fullName: BackupEntityUnion
+        uid: '@azure/servicefabric.BackupEntityUnion'
+      - name: '[]'
+        fullName: '[]'

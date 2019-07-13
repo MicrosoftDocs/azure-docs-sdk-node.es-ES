@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.CheckExistsPropertyBatchOperation'
+    name: CheckExistsPropertyBatchOperation
+    fullName: CheckExistsPropertyBatchOperation
+    children:
+      - '@azure/servicefabric.CheckExistsPropertyBatchOperation.exists'
+      - '@azure/servicefabric.CheckExistsPropertyBatchOperation.kind'
+      - '@azure/servicefabric.CheckExistsPropertyBatchOperation.propertyName'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Representa un PropertyBatchOperation que compara la existencia de una propiedad con el argumento Exists booleano.
+      Se produce un error en la operación PropertyBatchOperation si la existencia de la propiedad no es igual al argumento Exists.
+      El CheckExistsPropertyBatchOperation suele utilizarse como una condición previa para las operaciones de escritura en el lote.
+      Tenga en cuenta que si se produce un error en uno PropertyBatchOperation en un PropertyBatch, el lote completo produce un error y no se pueden confirmar de forma transaccional.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.CheckExistsPropertyBatchOperation.exists'
+    name: exists
+    fullName: exists
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Si la propiedad debe existir para que pase la operación.
+    syntax:
+      content: 'exists: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.CheckExistsPropertyBatchOperation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: "CheckExists"'
+      return:
+        type:
+          - '"CheckExists"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.CheckExistsPropertyBatchOperation.propertyName'
+    name: propertyName
+    fullName: propertyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: El nombre de la propiedad de Service Fabric.
+    syntax:
+      content: 'propertyName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
